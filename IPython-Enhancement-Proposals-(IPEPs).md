@@ -1,5 +1,4 @@
 
-
 This page serves to index the various IPython Enhancement Proposals that we have sed and are using to guide IPython development.  Developers are encouraged to author IPEPs for any development in IPython that the community needs to discuss *before* code is written.  Currently, our protocol for IPEPs is relatively simple.  
 
 The IPEP author should:

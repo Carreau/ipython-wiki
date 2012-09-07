@@ -27,3 +27,4 @@ Here is a rough sketch of the main design points:
 * By default kernels and notebooks will not be shared with other users.
 * Users will have the ability to "publish" notebooks to other users. This will allow the other users to download the notebook in different formats.
 * Users will have the ability to "live share" notebooks and their kernels. When a user clicks "live share" they will get a private and secure URL they can share with other users. These other users can then edit the notebook and run code on the kernel in a Google Docs like manner.
+* Users collaborating in live share mode should be able to chat with either other.

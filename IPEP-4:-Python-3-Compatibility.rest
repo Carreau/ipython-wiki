@@ -10,7 +10,8 @@ IPEP-4: Python 3 Compatibility
     2012-10-01
 :Updated:
     2012-10-01
-
+:Issue:
+    `ipython/ipython#2440 <https://github.com/ipython/ipython/issues/2440>`_
 
 Abstract
 ========
@@ -19,7 +20,7 @@ IPython currently natively supports Python 2.6 and 2.7.  In addition,
 Python 3.2 and 3.3 are supported by running the source code through
 the automated 2to3 fixer. With the reintroduction of unicode literals
 in Python 3.3 it is possible to create a unified code base which could
-run (without the use of 2to3) in Python 2.6, 2.7 and 3.3.
+run in Python 2.6, 2.7 and 3.3 *without the use of 2to3*.
 
 Python 3.2 support would be maintained by continuing to use the 2to3
 fixer.

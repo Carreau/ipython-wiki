@@ -44,6 +44,10 @@ been converted using 2to3 and backporting any fixes, or running
 Python 3.3 reintroduced unicode literals (``u"..."``) which eliminated a
 major hurdle in creating a Python 2 & 3 jointly compatible sourcecode.
 
+Lastly, it would restore our "instant running" promise::
+
+    $ python3.3 ipython.py
+
 
 Requited Code Changes
 =====================

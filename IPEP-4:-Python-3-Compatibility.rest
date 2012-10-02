@@ -49,7 +49,7 @@ Lastly, it would restore our "instant running" promise::
     $ python3.3 ipython.py
 
 
-Requited Code Changes
+Required Code Changes
 =====================
 
 The following changes reference the six_ module, a Python 2 and 3

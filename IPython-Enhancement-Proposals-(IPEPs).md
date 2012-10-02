@@ -23,3 +23,7 @@ https://github.com/ipython/ipython/issues/2293
 IPEP 3: Multiuser support in the notebook
 
 https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook
+
+IPEP 4: Python 3 Compatibility
+
+https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility

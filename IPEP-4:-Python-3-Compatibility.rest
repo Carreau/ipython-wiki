@@ -1,0 +1,287 @@
+******************************
+IPEP-4: Python 3 Compatibility
+******************************
+
+:Author:
+    Bradley Froehle <brad.froehle@gmail.com>
+:Status:
+    Draft
+:Created:
+    2012-10-01
+:Updated:
+    2012-10-01
+
+
+Abstract
+========
+
+IPython currently natively supports Python 2.6 and 2.7.  In addition,
+Python 3.2 and 3.3 are supported by running the source code through
+the automated 2to3 fixer. With the reintroduction of unicode literals
+in Python 3.3 it is possible to create a unified code base which could
+run (without the use of 2to3) in Python 2.6, 2.7 and 3.3.
+
+Python 3.2 support would be maintained by continuing to use the 2to3
+fixer.
+
+
+Motivation
+==========
+
+Python 3 is the future of Python. While currently only a minority of
+users use Python 3 as their default version of Python, there is a
+growing push to provide native Python 3 support.
+
+Most major scientific computing packages, with the notable exception
+of matplotlib support Python 3 in their latest stable release.
+
+The IPython development experience for users currently using Python 3
+is sub-optimal, requiring either developing off of a branch which has
+been converted using 2to3 and backporting any fixes, or running
+``python setup.py build`` after every source code change.
+
+Python 3.3 reintroduced unicode literals (``u"..."``) which eliminated a
+major hurdle in creating a Python 2 & 3 jointly compatible sourcecode.
+
+
+Requited Code Changes
+=====================
+
+The following changes reference the six_ module, a Python 2 and 3
+compatibility library, and which currenly forms the basis of the
+``IPython.utils.py3compat`` module. Instead of requiring the ``six`` module,
+any necessary features could be included in the ``py3compat`` module.
+
+.. _six: http://packages.python.org/six/
+
+
+``__future__`` Imports
+----------------------
+
+As they are the defaults in Python 3k, the ``absolute_import``,
+``division`` and ``print_function`` futures should be included in all
+modules. The ``unicode_literals`` future may optionally be included, but
+it is not strictly required since the ``u"..."`` syntax is supported in
+Python 3.3.
+
+It is suggested that each module begin as::
+
+  """One-liner
+
+  Long description.
+  """
+  from __future__ import absolute_import, division, print_function
+  #-----------------------------------------------------------------------------
+  #       Copyright (C) <year> The IPython Development Team
+  #
+  #  Distributed under the terms of the BSD License.  The full license is in
+  #  the file COPYING, distributed as part of this software.
+  #-----------------------------------------------------------------------------
+
+
+
+Syntax Changes
+--------------
+
+_`import`
+  Unqualified ``import`` statements are no longer relative by
+  default. All unqualified relative imports will need to be converted
+  using the ``2to3 -f import`` fixer.
+
+_`print`
+  The ``print`` statement was replaced with a ``print(...)`` function
+  in Python 3.  Replace::
+
+    print "Hello",
+    print 1, 2, 3
+
+  with::
+
+    from __future__ import print_function
+    print("Hello", end=' ')
+    print(1, 2, 3)
+
+  This can be completely automated using the ``2to3 -f print`` fixer.
+
+_`exec`
+  The ``exec`` statement was replaced with an ``exec(...)`` function in
+  Python 3.  Replace::
+
+    exec code in globals, locals
+
+  With::
+
+    import six
+    six.exec_(code, globals, locals)``
+
+_`long`
+  The ``long`` and ``int`` types were unified in Python 3. Replace::
+
+    0L
+
+  With::
+
+    six.long(0)
+
+_`reraise`
+  The syntax for raising an exception with a specified
+  traceback was changed in Python 3. Replace::
+
+    # Python 2
+    raise E, V, T
+
+    # Python 3
+    raise E(V).with_traceback(T)
+
+  with::
+
+    import six
+    six.reraise(E, V, T)
+
+_`raw unicode`
+  Replace ``ru"..."`` with ``u""+r"..."``, if necessary.
+
+
+Attribute Name Changes
+----------------------
+
+_`funcattrs`
+  The attribute name for function code was changed from ``func_code`` to
+  ``__code__``.  Replace::
+
+    f.func_code
+
+  with::
+
+    import six
+    getattr(f, six._func_code)
+
+  or::
+
+    import six
+    six.get_function_code(f)
+
+  Similar changes are required for ``func_name``, ``func_defaults``, and
+  ``func_globals``.
+
+_`metaclass`
+  The ``__metaclass__ = meta`` syntax was replaced by a
+  ``metaclass`` keyword argument.  Replace::
+
+    # Python 2
+    class A(bases):
+        __metaclass__ = meta
+
+    # Python 3
+    class A(bases, metaclass=meta):
+        pass
+
+  with::
+
+    class A(meta("_A", bases, {})):
+        pass
+
+  or::
+
+    import six
+    class A(six.with_metaclass(meta, bases)):
+        pass
+
+_`dict`
+  Run the ``2to3 -f dict`` automated fixer.  This means replacing::
+
+    for k, v in d.iteritems():
+        pass
+
+  with::
+
+    for k, v in d.items():
+        pass
+
+  If this has a noticable performance impact, use::
+
+    import six
+    for k, v, in six.iteritems(d):
+        pass
+
+_`string_types`
+  Replace::
+
+    isinstance(..., basestring)
+
+  with::
+
+    import six
+    isinstance(..., six.string_types)
+
+_`text_type`
+  Replace::
+
+    unicode
+
+  with::
+
+    import six
+    six.text_type
+
+
+Module Name Changes
+-------------------
+
+Many module name changes are easily handled using the ``six.moves``
+functionality.
+
+======================================== ===================================
+Existing Import                          New Import
+======================================== ===================================
+``from StringIO import StringIO``        ``from six import StringIO``
+``import pickle`` or ``import cPickle``  ``from six.moves import pickle``
+``import ConfigParser``                  ``from six.moves import configparser``
+``import copy_reg``                      ``from six.moves import copyreg``
+``import __builtin__ as builtin_mod``    ``from six.moves import builtins as builtin_mod``
+======================================== ===================================
+
+
+Additional moves which will need to be added in our ``six.moves``
+implementation.
+
+==================================== ===================================
+Existing Import                      New Import
+==================================== ===================================
+``from urllib2 import urlopen``      ``from six.moves import urlopen``
+``from urllib import urlretrieve``   ``from six.moves import urlretrieve``
+``from urlparse import urlparse``    ``from six.moves import urlparse``
+``from os import getcwdu``           ``from six.moves import getcwdu``
+==================================== ===================================
+
+
+Automatation
+============
+
+Many of these changes can be applied automatically, by using the
+existing or new 2to3_ fixers.
+
+For example, an automated fixer for the long_ task could be
+implemented as::
+
+    from lib2to3.pgetn2 import token
+    from lib2to3.fixer_base import BaseFix
+    from lib2to3.fixer_util import Call, Name, Number, touch_import
+
+    class FixLongLiterals(BaseFix):
+        """0L -> six.long(0)"""
+        _accept_type = token.NUMBER
+
+        def match(self, node):
+            # Override
+            return node.value[-1] in u"Ll"
+
+        def transform(self, node, results):
+            val = node.value
+            if val[-1] in u'Ll':
+                val = val[:-1]
+
+            touch_import(None, u'six', node)
+            return Call(Name(u'six.long'), [Number(val)], prefix=node.prefix)
+
+.. _2to3: http://docs.python.org/library/2to3.html

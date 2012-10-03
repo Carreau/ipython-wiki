@@ -260,7 +260,7 @@ Existing Import                      New Import
 ==================================== ===================================
 
 
-Automatation
+Automation
 ============
 
 Many of these changes can be applied automatically, by using the

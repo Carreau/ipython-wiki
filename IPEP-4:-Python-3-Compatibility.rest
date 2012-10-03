@@ -261,7 +261,7 @@ Existing Import                      New Import
 
 
 Automation
-============
+==========
 
 Many of these changes can be applied automatically, by using the
 existing or new 2to3_ fixers.

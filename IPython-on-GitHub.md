@@ -1,4 +1,4 @@
-# IPEP 5: IPython on GitHub
+# IPython on GitHub
 
 Notes on working with GitHub
 

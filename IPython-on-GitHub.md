@@ -47,7 +47,7 @@ The `doc` and `quickfix` labels are the best places for new contributors to star
 
 * All work is submitted via Pull Requests.
 * Pull Requests can be submitted as soon as there is code worth discussing.  Pull Requests track the branch, so you can continue to work after the PR is submitted.  Review and discussion can begin well before the work is complete, and the more discussion the better.  The worse case is that the PR is closed.
-* Pull Requests that have stalled should be closed, and a new issue opened marked with the 'ClosedPR' label.  PRs can always be reopened if work is to continue.
+* Pull Requests that have stalled should be closed (see [Policy: Closing Pull Requests](https://github.com/ipython/ipython/wiki/Policy:-Closing-pull-requests).
 * Pull requests should always be made against master (backporting PRs is described below).
 * Pull Requests should be tested, if feasible:
     - bugfixes should include regression tests

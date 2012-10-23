@@ -24,7 +24,8 @@ but to increase readability and ease of writing.
 
 A good candidate id [CoffeScript](http://coffeescript.org/) which is supported in many framework.
 
-## Advantages
+Advantages
+----------
 
  * Much more compact than javascript. 
  * Most of the time more readable.
@@ -34,7 +35,8 @@ A good candidate id [CoffeScript](http://coffeescript.org/) which is supported i
  * compilation can merge all coffe files into one and minify it.
  * can be used side-by-side with js.
 
-## Drawbacs
+Drawbacs
+--------
 
  * Syntax sometime too close to python which leads to stupid mistake
    * no `:` after for
@@ -42,7 +44,8 @@ A good candidate id [CoffeScript](http://coffeescript.org/) which is supported i
  * might need extra compile time
  * line error number does not match ( but generated js is perfectly readable)
    
-## Proposed Usage
+Proposed Usage
+--------------
 
   * use a coffescript foolder
   * a javascript folder
@@ -52,17 +55,21 @@ General Javascript Structure
 ============================
 To force better reusability and testability of JS, this IPEP proposes the use of `require` (equivalent of python import), as well as the stronger distinction between model and view. Especially the use of jQuery should be avoided as much as possible in model part. This would allow separate testing of each component.
 
-## use BackBone/underscore
+use BackBone/underscore
+-----------------------
 [Backbone](http://backbonejs.org/) and [underscore](http://underscorejs.org/) are respectively a MVC framework and utility belt for javascript (first require the second). They have the advantage over jQuery that they are not made to work with the DOM and can be used server side in [node](http://nodejs.org/) for example. This should allow to move/replicate the notebook document model from the client to the server side without recoding it. And allow Headless testing.
 
-## Use of require
+Use of require
+--------------
 Backbone seem to already make assumption about the project file structure to enforce model and view separation. To better force reusability this IPEP suggest the systematic use of require.
 
-### CommonJS require
+CommonJS require
+~~~~~~~~~~~~~~~~
 CommonJS require take the form `myvar = require('mymodule')`, mainly use in server-side script. 
 It is the equivalent of python `import mymodule as myvar`. It is synchrone meaning that call will block on the line until mymodule is loaded. 
 
-### RequireJS require
+RequireJS require
+~~~~~~~~~~~~~~~~~
 This require takes a callbacks and does not return `require('mymodule', function(...){....})`. It is both compatible with server side and client side libraries, and is asynchronous (better for clien side). Though it is a little more complex to use, and does not always work out of the box with all library. 
 
 Require ships with a tool that seem to be able to convert from commonJS to RequireJS version, as well as concatenate and minifies the given script.

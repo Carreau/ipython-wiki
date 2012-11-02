@@ -9,7 +9,7 @@ IPEP-4: Python 3 Compatibility
 :Created:
     2012-10-01
 :Updated:
-    2012-10-01
+    2012-11-01
 :Issue:
     `ipython/ipython#2440 <https://github.com/ipython/ipython/issues/2440>`_
 
@@ -290,3 +290,22 @@ implemented as::
             return Call(Name(u'six.long'), [Number(val)], prefix=node.prefix)
 
 .. _2to3: http://docs.python.org/library/2to3.html
+
+
+Alternatives
+============
+
+Runtime 2to3 Conversion
+-----------------------
+
+A runtime 2to3 converter could be utilized to automatically convert
+the IPython source to a Python 3 compatible syntax on import. For
+example, rt2to3_, could be installed and then activated by creating a
+``ipython3dev.pth`` file (in your Python 3 path) which contains::
+
+  /home/user/projects/ipython
+  import rt2to3; rt2to3.Runtime2to3Installer(nofix=['apply', 'except', 'has_key', 'next', 'repr', 'tuple_params']).install('/home/user/projects/ipython')
+
+The list of excluded fixers is taken from ``setup.py``.
+
+.. _rt2to3: https://github.com/bfroehle/rt2to3

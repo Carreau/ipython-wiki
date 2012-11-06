@@ -14,6 +14,18 @@ Qt GUI sure offers much more...
 	
 > I call it 'sidecar' - a second pane on the Qt console, like the pager, but able to display help, HTML documentation, plots, data - and, as you suggest, store and edit code snippets. In that sense, the Qt console effectively becomes a sort of lightweight IDE, with the focus on the shell rather than the editor. What I envisage would be quite different from the notebook, though.
 
+* Collapsible side pane
+* Simple to shuttle code and results between the console and the sidecar
+  - Drag and drop?
+  - Run buttons for code?
+  - This makes it kind of like the clipboard, but visible and editable
+* Possible interfaces:
+  - Simple: just a text editor component
+  - Tabbed
+  - Stack: you can push items onto it, pop them off, and reorder them
+  - Linked to the console: items in the sidecar correspond to cell where they were created, and they scroll together
+* Integration with matplotlib, so you can get the interactive plot interface inside the sidecar
+  - I suspect this might be technically difficult, but it can't hurt to dream.
 
 **2. Qt Console pane with Notebook interaction**
 

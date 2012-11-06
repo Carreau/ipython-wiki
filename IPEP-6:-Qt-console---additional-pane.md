@@ -32,12 +32,11 @@ Qt GUI sure offers much more...
 Here are some thoughts about it, abstracting without knowledge about Qt Console internals:
 
 * Lightweight IPython Notebook file format reader/writer, basically JSON parser. (Auto-generated scheme from `00_notebook_tour.ipynb`, hopefully to gather all supported elements, as a reference, can be seen here: <http://i.imgur.com/Z0jSc.png>)
-
  - Could be able to open Notebook files, perhaps restricted only on one (first) worksheet, and without output cells. 
  - Could not overwrite Notebook with output cells or multiple worksheets.  
  - User could be able to type code or markdown in something like editable boxes made simplest as possible. Code boxes could be parsed with pygments (like in main Qt Console pane) and markdown boxes with module responsible for that.  
   
-* Same as help side pane (one instance) 
+* Same as help side pane (one instance)
  - If this pane is opened, then help will page bellow the code in main Qt Console pane. 
  - `Esc` could close it.   
   

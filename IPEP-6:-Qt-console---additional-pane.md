@@ -8,7 +8,7 @@ For example, while working in Qt Console user can't (or can't easily) store note
 Another example could be newly introduced concept in IPython Notebook - reusable cells. IMHO that concept is so attractive, that when I go from Notebook to Qt Console I feel like missing something obvious.
 Qt GUI sure offers much more...
 
-### Current raw suggestions:
+### Current raw suggestions
 
 **1. Additional Qt Console specific pane, suggested by _Thomas Kluyver_:**
 	

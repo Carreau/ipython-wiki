@@ -17,3 +17,4 @@ The IPEP author should:
 * [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook)
 * [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility)
 * [IPEP 5: Javascript structure and testing](https://github.com/ipython/ipython/wiki/IPEP-5:-Javascript-structure-and-testing)
+* [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane)

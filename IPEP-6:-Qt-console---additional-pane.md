@@ -4,7 +4,7 @@
 Further extending IPython Qt Console, beyond Qt wrapper to traditional console, we invite you to discuss the idea of enhancing it with additional side pane.
 
 Couple of reasons can led to this idea.
-For example, while working in Qt Console user can't (or can't easily) store notes or save the snippet for future reuse, or build idea based on work in current Qt session or extend with work from previous sessions. I usually do this in separate editor by side.
+For example, while working in Qt Console user can't (or can't easily) store notes or save the snippet for future reuse, or build idea based on work in current Qt session or extend with work from previous sessions. I usually do this in a separate editor by side.
 Another example could be newly introduced concept in IPython Notebook - reusable cells. IMHO that concept is so attractive, that when I go from Notebook to Qt Console I feel like missing something obvious.
 Qt GUI sure offers much more...
 
@@ -17,7 +17,7 @@ Qt GUI sure offers much more...
 
 **2. Qt Console pane with Notebook interaction**
 
-Here are some thought about it, abstracting without knowledge about Qt Console internals:
+Here are some thoughts about it, abstracting without knowledge about Qt Console internals:
 
 This pane could be lightweight IPython Notebook file format reader/writer, basically JSON parser.  
 Auto-generated scheme from `00_notebook_tour.ipynb`, hopefully to gather all supported elements, can be seen here: <http://i.imgur.com/Z0jSc.png>

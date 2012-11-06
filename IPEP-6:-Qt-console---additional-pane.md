@@ -41,7 +41,7 @@ Here are some thoughts about it, abstracting without knowledge about Qt Console 
  - `Esc` could close it.   
   
 * New menu function
- - in a manner similar to favorites - worksheets could be saved in IPython home folder, then Qt Console menu could list all "Notebooks" from this folder automatically based on file name. 
+ - in a manner similar to favorites - notebooks could be saved in IPython home folder, then Qt Console menu could list all notebooks from this folder automatically based on file name. 
  - New menu functions to create new, manually open, and save notebooks.  
   
 * Selecting code box and being able to launch the code in main Qt Console pane, would be nifty

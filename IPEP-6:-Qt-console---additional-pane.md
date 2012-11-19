@@ -48,3 +48,5 @@ Here are some thoughts about it, abstracting without knowledge about Qt Console 
 
 
 **3. Other user ideas?**
+
+* B. Granger: I would like to make sure that the core QtConsole widget is still simple like it is today. I am not even sure I would want the proposed side pane to be on by default.  Part of what is wonderful about IPython is its simple UI and I don't want us to loose that.

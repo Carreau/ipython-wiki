@@ -269,7 +269,7 @@ existing or new 2to3_ fixers.
 For example, an automated fixer for the long_ task could be
 implemented as::
 
-    from lib2to3.pgetn2 import token
+    from lib2to3.pgen2 import token
     from lib2to3.fixer_base import BaseFix
     from lib2to3.fixer_util import Call, Name, Number, touch_import
 

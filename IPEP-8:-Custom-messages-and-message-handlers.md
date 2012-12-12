@@ -38,4 +38,4 @@ Jason Grout has some experiments he has been doing with custom messages and impl
 
 Brian Granger has worked on adding custom message handlers for a javascript client: https://github.com/ipython/ipython/pull/2518.  Some discussion about server-side custom message handlers happened on that ticket.
 
-Jason Grout submitted a pull request for custom message handlers: https://github.com/ipython/ipython/pull/1700.  A lot of discussion there informed some of the options presented in this IPEP.
+Jason Grout submitted a (now closed) pull request for custom message handlers: https://github.com/ipython/ipython/pull/1700.  A lot of discussion there informed some of the options presented in this IPEP.

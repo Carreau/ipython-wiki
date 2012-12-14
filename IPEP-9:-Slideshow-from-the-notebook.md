@@ -45,7 +45,24 @@ to render slideshow from uploaded ipy notebooks.
 * You can not put all you want in one slide, you have a limited space to put content. If you want to put more content, you have to add another slide.
 * Until now, there is no support for markdown in fragments, so inside fragments you can only put plain text (I open an issue in reveal.js proyect, I hope we can have soon this support). 
 
-As you can see, with @Carriau and @ellisonbg we have proposed to use the same type of delimiter for the slides (metadata), so we can create a notebook to show as *live* slideshow, that can be *nbconverted* to a *static* one based in reveal without minimal (we hope, any) changes.
+As you can see, with @Carreau and @ellisonbg we have proposed to use the same type of delimiter for the slides (metadata), so we can create a notebook to show as *live* slideshow, that can be *nbconverted* to a *static* one based in reveal without minimal (we hope, any) changes.
+
+#### Metadata structure. 
+
+As those are metadata all attributes are optional and implementation relying on it should check their existance.
+
+```
+metadata :{
+    slideshow :{
+        new_section: [true|false|undefined],
+        new_subsection: [true|false|undefined],
+        new_fragment: [true|false|undefined]
+    }
+}
+```
+
+
+
 
 Ok, I have opened a issue to follow the discussion [here](https://github.com/ipython/ipython/issues/2680)
 

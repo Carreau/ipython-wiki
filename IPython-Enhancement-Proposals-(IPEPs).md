@@ -20,4 +20,4 @@ The IPEP author should:
 * [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane)
 * [IPEP 7: Notebook dependent frontends](https://github.com/ipython/ipython/wiki/IPEP-7:-Notebook-dependent-frontends)
 * [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]]
-* [IPEP 9:](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook)
+* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook)

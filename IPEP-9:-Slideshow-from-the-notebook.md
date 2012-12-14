@@ -12,17 +12,17 @@ Up to now, we have two implementation being developed to generate slideshow view
 
 The first one has been developed by @Carreau, and I called *live* slideshow, because **is** an active notebook with a different template to provide the feel like a slideshow. To delimit each slide, the last implementation use metadata attributes for each cell.
 
-There are several adventages and contrains about this *live* mode:
+There are several advantages and constraints about this *live* mode:
 
-#### Adventages:
+#### Advantages:
 
 * You have a slideshow with editing capabilities and this interactivity can be useful presenting some ideas.
 * Because you use metadata delimiters, you do not have to rewrite the notebook to be slideshow-friendly.
 * You can put all the information you want in the slides because you have the possiblity to get this content with a lateral bar as a *normal* webpage.
 
-#### Constrains:
+#### Constraints:
 
-* The *live* slideshow is a notebook currently communicating with one IPython server, so you need IPython to present it. This can be akward when you want to share your slideshow with someone else.
+* The *live* slideshow is a notebook currently communicating with one IPython server, so you need IPython to present it. This can be awkward when you want to share your slideshow with someone else.
 * You do not have a easy way to get a pdf view from the slideshow.
 * You get a notebook style in you slides that can be great for some audience but boring for others (and all of you know that you have to get the people awake... he he).
 
@@ -30,7 +30,7 @@ There are several adventages and contrains about this *live* mode:
 
 The second one has been developed by @damianavila (hey, I hate talking in third person of myself... he he), and I called *static* slideshow, because this is not a notebook, it is just html + css + js parsing the notebook contents and representing them in a nice way. The last implementation is also using metadata attributes to delimit the slides. In this case, you have new_section (new horizontal slide), new_subsection (new nested/vertical slide) and new_fragment (new fragment in the current slide) - thanks to @Carrieu for support this format (derived from reveal.js library) in his metaui branch. This implementation is currently a PR for nbconvert. You can see an example slideshow from a notebook [here](http://www.slideviper.oquanta.info/nbcreveal/example_slide_slides.html)
 
-#### Adventages:
+#### Advantages:
 
 * This is a *static* presentation, so you do not need IPython running to use it.
 * Because you use metadata delimiters, you do not have to rewrite the notebook to be slideshow-friendly.
@@ -39,7 +39,7 @@ to render slideshow from uploaded ipy notebooks.
 * You get all the slyling (very nice) and power (lot of plugins) of reveal.js library.
 * You can also get a pdf from the slides to share and publish.
 
-#### Contrains:
+#### Constraints:
 
 * You do not have editing in *live*, maybe necessary for some audience.
 * You can not put all you want in one slide, you have a limited space to put content. If you want to put more content, you have to add another slide.

@@ -28,7 +28,7 @@ There are several adventages and contrains about this *live* mode:
 
 ### *Static* slideshow
 
-The second one has been developed by @damianavila (hey, I hate talking in third person of myself... he he), and I called *static* slideshow, because this is not a notebook, it is just html + css + js parsing the notebook contents and representing them in a nice way. The last implementation is also using metadata attributes to delimit the slides. In this case, you have new_section (new horizontal slide), new_subsection (new nested/vertical slide) and new_fragment (new fragment in the current slide) - thanks to @Carrieu for support this format (derived from reveal.js library) in his metaui branch. This implementation is currently a PR for nbconvert.
+The second one has been developed by @damianavila (hey, I hate talking in third person of myself... he he), and I called *static* slideshow, because this is not a notebook, it is just html + css + js parsing the notebook contents and representing them in a nice way. The last implementation is also using metadata attributes to delimit the slides. In this case, you have new_section (new horizontal slide), new_subsection (new nested/vertical slide) and new_fragment (new fragment in the current slide) - thanks to @Carrieu for support this format (derived from reveal.js library) in his metaui branch. This implementation is currently a PR for nbconvert. You can see an example slideshow from a notebook [here](http://www.slideviper.oquanta.info/nbcreveal/example_slide_slides.html)
 
 #### Adventages:
 

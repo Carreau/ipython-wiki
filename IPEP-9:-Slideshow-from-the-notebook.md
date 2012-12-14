@@ -61,6 +61,12 @@ metadata :{
 }
 ```
 
+The Proposed UI to change those value are label+checkbox representing the state of current metadata.
+Ticked checkbox for `true` value of corresponding metadata. Unticked for `false`,`undefined`.
+
+Respective Labels are `New Section`,`New Subsection`, `New Fragment`.
+
+Of course the UI can be change independently from the metadata.
 
 
 

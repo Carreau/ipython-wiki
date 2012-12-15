@@ -74,10 +74,10 @@ This proposed structure is in accordance with reveal.js structure to easily rend
 All the cells, whatever their contents can be metadata-applied. 
 
 * **New_section** (alternative name: **new_slide**) is the fundamental unit of content: you have to use it on a cell that begins new units of content (that will appear on the screen at one time, ignoring transitions within the slides). You can add new cells to this slide, but they can only be marked as **New_Fragment** or **None** (see them later).
-* **New_subsection** (alternative name: **new_second**) begins a new group of cells that, logically, belong together. This have to be applied to all the cells of the group, but the first cell also must have **New_section** (**new_slide**) applied. In reveal.js, these are vertically oriented groups of slides.
-**Note**: In the current implementation, we can detect if the user did not apply **New_section** (**new_slide**) to the first cell and "make" it for him. 
+* **New_subsection** (alternative name: **new_second**) begins a new group of cells that, logically, belong together. This have to be applied to all the cells of the group, but the first cell also must have **New_section** ( **new_slide** ) applied. In reveal.js, these are vertically oriented groups of slides.
+**Note**: In the current implementation, we can detect if the user did not apply **New_section** ( **new_slide** ) to the first cell and "make" it for him. 
 * **New_fragment** are used to highlight individual elements on a slide. Every element with the **New_fragment** will be stepped through before moving on to the next slide. You can applied **New_fragment** to any cell to highlight it.
-* When you do not applied any label, we assumed this cell is **None**, so these are the mainly the "content" of the slides and can be part of a **New_section** (**new_slide**) or **New_subsection** (**new_second**).
+* When you do not applied any label, we assumed this cell is **None**, so these are the mainly the "content" of the slides and can be part of a **New_section** ( **new_slide** ) or **New_subsection** ( **new_second** ).
 
 Ok, I have opened a issue to follow the discussion [here](https://github.com/ipython/ipython/issues/2680)
 

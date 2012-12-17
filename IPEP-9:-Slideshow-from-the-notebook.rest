@@ -120,7 +120,7 @@ Main references
 https://github.com/ipython/ipython/pull/2127 # First implementation of *live* slideshow mode to demo js toolbar by @Carreau
 https://github.com/ipython/ipython/pull/2193 # Brainstorming for *live* slideshow extension and implementation by @Carreau
 https://github.com/ipython/ipython/pull/2333 # Discussion about user interface for metadata and implementation by @Carreau
-https://github.com/ipython/ipython/issues/2680 # Current discussion
+https://github.com/ipython/ipython/issues/2680 # Current discussion about this IPEP and structure and names for the slideshow
 https://github.com/ipython/ipython/pull/2687 # MetaUI slideshow discussion
 
 * In nbconvert:

@@ -12,6 +12,8 @@ IPEP 9 - Slideshow from the notebook.
     2012-12-17
 :Code:
     `Live_slideshow <https://github.com/ipython/ipython/pull/2333>`_ - `Static_slideshow <https://github.com/ipython/nbconvert/pull/63/>`_. 
+:Discussion:
+    `Issue_2680 <https://github.com/ipython/ipython/issues/2680>`_
 
 Introduction
 ************

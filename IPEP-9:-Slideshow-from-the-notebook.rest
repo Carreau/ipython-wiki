@@ -88,7 +88,8 @@ Respective Labels are `New Section`,`New Subsection`, `New Fragment`.
 
 Of course the UI can be change independently from the metadata.
 
-#### Structure behind the static slideshow
+Structure behind the *static* slideshow
+***************************************
 
 This proposed structure is in accordance with reveal.js structure to easily render as html slideshow.
 All the cells, whatever their contents can be metadata-applied. 
@@ -105,21 +106,24 @@ I hope you join us!
 
 Damián.
 
-NOTE:
+Note:
+*****
 
 For more detailed information, can see relevant links about the discussion in several issues listed below:
 
-#### Main references
+Main references
++++++++++++++++
 
-##### In IPython main repository:
+* In IPython main repository:
 https://github.com/ipython/ipython/pull/2127 # First implementation of *live* slideshow mode to demo js toolbar by @Carreau
 https://github.com/ipython/ipython/pull/2193 # Brainstorming for *live* slideshow extension and implementation by @Carreau
 https://github.com/ipython/ipython/pull/2333 # Discussion about user interface for metadata and implementation by @Carreau
+https://github.com/ipython/ipython/pull/2687 # MetaUI slideshow discussion
 
-##### In nbconvert:
+* In nbconvert:
 https://github.com/ipython/nbconvert/pull/63 # New *reveal* option in nbconvert to get a *static* html-based slideshow powered by reveal.js. Implementation by @damianavila
 
-##### Minor references
+* Minor references
 
 https://github.com/ipython/ipython/issues/977
 https://github.com/ipython/ipython/pull/2199

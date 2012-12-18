@@ -9,7 +9,7 @@ IPEP 9 - Slideshow from the notebook.
 :Created:
     2012-12-14
 :Updated:
-    2012-12-17
+    2012-12-18
 :Code:
     `Live_slideshow <https://github.com/ipython/ipython/pull/2333>`_ - `Static_slideshow <https://github.com/ipython/nbconvert/pull/63/>`_. 
 :Discussion:
@@ -100,19 +100,19 @@ All the cells, whatever their contents can be metadata-applied.
 **Skip** can be applied to any cell to skip it from the slideshow.
 **-** is just do nothing to this cell.
 
-In the next graph (thanks @Carriau) you can see a representation of these different kind of cells.
+In the next graph (thanks @Carreau) you can see a representation of these different kind of cells.
 
 .. image:: https://f.cloud.github.com/assets/335567/14873/23005ba6-46b5-11e2-83ed-57a3912f938f.png
 
 To get this structure, cells marked as:
+
 * 1, 4, 10, 13 have to be **Header slide**
 * 6, 8, 16a, 19 have to be **Slide**
 * 2, 3, 5, 7, 9, 11, 12, 14, 15, 20 have to be "-"
 * 17b, 18c have to be **Fragment**
 * Additionally, if you want to skip any of these cells, they have to be **Skip** 
 
-Ok, I have opened a issue to follow the discussion [here](https://github.com/ipython/ipython/issues/2680)
-
+Ok, I have opened a issue to follow the discussion `here <https://github.com/ipython/ipython/issues/2680>`_
 I hope you join us!
 
 Damián.

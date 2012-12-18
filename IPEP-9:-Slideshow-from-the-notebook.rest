@@ -135,7 +135,8 @@ https://github.com/ipython/ipython/issues/2680 # Current discussion about this I
 https://github.com/ipython/ipython/pull/2687 # MetaUI slideshow discussion
 
 * In nbconvert:
-https://github.com/ipython/nbconvert/pull/63 # (Deprecated and closed) New *reveal* option in nbconvert to get a *static* html-based slideshow powered by reveal.js. Implementation by @damianavila
+https://github.com/ipython/nbconvert/pull/63 # (Deprecated and closed) New *reveal* option in nbconvert to get a *static* html-based slideshow powered by reveal.js. Implementation by @damianavila.
+
 https://github.com/ipython/nbconvert/pull/69 # Improved reveal* option in nbconvert to get a *static* html-based slideshow powered by reveal.js.
 
 * Minor references

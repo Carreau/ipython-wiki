@@ -35,7 +35,7 @@ Pros:
 ~~~~~
 * You have a slideshow with editing capabilities and this interactivity can be useful presenting some ideas.
 * Because you use metadata delimiters, you do not have to rewrite the notebook to be slideshow-friendly.
-* You can put all the information you want in the slides because you have the possiblity to get this content with a lateral bar as a *normal* webpage.
+* You can put all the information you want in the slides because you have the possibility to get this content with a lateral bar as a *normal* webpage.
 
 Cons:
 ~~~~~
@@ -46,13 +46,13 @@ Cons:
 *Static* slideshow
 ++++++++++++++++++
 
-The second one has been developed by @damianavila (hey, I hate talking in third person of myself... he he), and I called *static* slideshow, because this is not a notebook, it is just html + css + js parsing the notebook contents and representing them in a nice way. The last implementation is also using metadata attributes to delimit the slides. In this case, you have new_section (new horizontal slide), new_subsection (new nested/vertical slide) and new_fragment (new fragment in the current slide) - thanks to @Carrieu for support this format (derived from reveal.js library) in his metaui branch. This implementation is currently a PR for nbconvert. You can see an example slideshow from a notebook [here](http://www.slideviper.oquanta.info/nbcreveal/example_slide_slides.html)
+The second one has been developed by @damianavila (hey, I hate talking in third person of myself... he he), and I called *static* slideshow, because this is not a notebook, it is just html + css + js parsing the notebook contents and representing them in a nice way. The last implementation is also using metadata attributes to delimit the slides. This implementation is currently a PR for nbconvert. You can see an example slideshow from a notebook [here].(http://www.slideviper.oquanta.info/nbcreveal/example_nb_tour_slides.html)
 
 Pros:
 ~~~~~
 * This is a *static* presentation, so you do not need IPython running to use it.
 * Because you use metadata delimiters, you do not have to rewrite the notebook to be slideshow-friendly.
-* You can upload as a webpage to a free host, such as github pages, dropbox, even it could be part of nbviewer
+* You can upload as a webpage to a free host, such as github pages, dropbox, even it could be part of nbviewer.
 to render slideshow from uploaded ipy notebooks.
 * You get all the slyling (very nice) and power (lot of plugins) of reveal.js library.
 * You can also get a pdf from the slides to share and publish.
@@ -61,7 +61,6 @@ Cons:
 ~~~~~
 * You do not have editing in *live*, maybe necessary for some audience.
 * You can not put all you want in one slide, you have a limited space to put content. If you want to put more content, you have to add another slide.
-* Until now, there is no support for markdown in fragments, so inside fragments you can only put plain text (I open an issue in reveal.js proyect, I hope we can have soon this support). 
 
 Design and Rational
 *******************
@@ -71,24 +70,23 @@ As you can see, with @Carreau and @ellisonbg we have discussed and finally propo
 Metadata structure 
 ******************
 
-As those are metadata all attributes are optional and implementation relying on it should check their existance.
+As those are metadata all attributes are optional and mutually exclusive. The implementation relying on it should check their existance.
 
 ```
 metadata :{
     slideshow :{
-        new_section: [true|false|undefined],
-        new_subsection: [true|false|undefined],
-        new_fragment: [true|false|undefined]
+        slide_type: header_slide or
+        slide_type: slide or
+        slide_type: fragment or
+        slide_type: skip
     }
 }
+
+if (metadata.slideshow == undefined){metadata.slideshow = {}}
 ```
 
-The Proposed UI to change those value are label+checkbox representing the state of current metadata.
-Ticked checkbox for `true` value of corresponding metadata. Unticked for `false`,`undefined`.
-
-Respective Labels are `New Section`,`New Subsection`, `New Fragment`.
-
-Of course the UI can be change independently from the metadata.
+The Proposed UI to change those value is a dropdown menu representing the state of current metadata.
+You have 5 options "-", "Header slide", "Slide", "Fragment", "Skip". All these options will be explained in the next section (Structure behind...). Of course the UI can be change independently from the metadata.
 
 Structure behind the *static* slideshow
 ***************************************
@@ -96,11 +94,22 @@ Structure behind the *static* slideshow
 This proposed structure is in accordance with reveal.js structure to easily render as html slideshow.
 All the cells, whatever their contents can be metadata-applied. 
 
-* **new_slide** is the fundamental unit of content: you have to use it on a cell that begins new units of content (that will appear on the screen at one time, ignoring transitions within the slides). You can add new cells to this slide, but they can only be marked as **new_fragment** or **none** (see them later).
-* **new_section** begins a new group of cells that, logically, belong together. This have to be applied to all the cells of the group, but the first cell also must have **new_slide** applied. In reveal.js, these are vertically oriented groups of slides.
-**Note**: In the current implementation, we can detect if the user did not apply **new_slide** to the first cell and "make" it for him. 
-* **new_fragment** are used to highlight individual elements on a slide. Every element with the **new_fragment** will be stepped through before moving on to the next slide. You can applied **new_fragment** to any cell to highlight it.
-* When you do not applied any label, we assumed this cell is **none**, so these are the mainly the "content" of the slides and can be part of a **new_slide or **new_section**.
+* **Header slide** is the fundamental unit of content: you have to use it on a cell that begins new units of content. You can add new content to this slide with **"-"** cells, **Fragment** cells or **Skip** cells, labeling accordingly. Also, this kind of cell must have the first one in a group of nested slides (see below). 
+* **Slide** add a slide to a pre-existent cell or group of cells that, logically, belong together (nested slides). This option have to be applied to all the cells of the group except the first one which must have **Header slide** applied. In reveal.js, these are vertically oriented groups of slides.
+* **Fragment** are used to highlight individual elements on a **Header slide** or on a**Slide**. Every element with the **Fragment** will be stepped through before moving on to the next slide. You can applied **Fragment** to any cell to highlight it.
+**Skip** can be applied to any cell to skip it from the slideshow.
+**-** is just do nothing to this cell.
+
+In the next graph (thanks @Carriau) you can see a representation of these different kind of cells.
+
+.. image:: https://f.cloud.github.com/assets/335567/14873/23005ba6-46b5-11e2-83ed-57a3912f938f.png
+
+To get this structure, cells marked as:
+1, 4, 10, 13 have to be **Header slide**
+6, 8, 16a, 19 have to be **Slide**
+2, 3, 5, 7, 9, 11, 12, 14, 15, 20 have to be "-"
+17b, 18c have to be **Fragment**
+Additionally, if you want to skip any of these cells, they have to be **Skip** 
 
 Ok, I have opened a issue to follow the discussion [here](https://github.com/ipython/ipython/issues/2680)
 

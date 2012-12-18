@@ -105,11 +105,11 @@ In the next graph (thanks @Carriau) you can see a representation of these differ
 .. image:: https://f.cloud.github.com/assets/335567/14873/23005ba6-46b5-11e2-83ed-57a3912f938f.png
 
 To get this structure, cells marked as:
-1, 4, 10, 13 have to be **Header slide**
-6, 8, 16a, 19 have to be **Slide**
-2, 3, 5, 7, 9, 11, 12, 14, 15, 20 have to be "-"
-17b, 18c have to be **Fragment**
-Additionally, if you want to skip any of these cells, they have to be **Skip** 
+* 1, 4, 10, 13 have to be **Header slide**
+* 6, 8, 16a, 19 have to be **Slide**
+* 2, 3, 5, 7, 9, 11, 12, 14, 15, 20 have to be "-"
+* 17b, 18c have to be **Fragment**
+* Additionally, if you want to skip any of these cells, they have to be **Skip** 
 
 Ok, I have opened a issue to follow the discussion [here](https://github.com/ipython/ipython/issues/2680)
 

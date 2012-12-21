@@ -34,7 +34,7 @@ I see little reason to provide a message handler with more than the content and 
 
 # Previous work
 
-Jason Grout has some experiments he has been doing with custom messages and implementing Sage interacts, available in his custom-message branch: https://github.com/jasongrout/ipython/tree/custom-message.
+Jason Grout has some experiments he has been doing with custom messages and implementing Sage interacts, available in his custom-message branch: https://github.com/jasongrout/ipython/tree/messagehandlers.
 
 Brian Granger has worked on adding custom message handlers for a javascript client: https://github.com/ipython/ipython/pull/2518.  Some discussion about server-side custom message handlers happened on that ticket.
 

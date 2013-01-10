@@ -1,0 +1,67 @@
+
+
+Some detailed feedback provided by Gaël Varoquaux on the scikits-learn list regarding areas where the current apis are either insufficient or not convenient enough for use of our parallel machinery in cluster environments where engine launch is controlled by PBS/SGE type systems, and system use is billed accordingly.
+
+
+Now let me expose the technical problem, as far as I understand it. This
+may be outdated if there have been major changes since the scipy
+conference. I may also be slightly incorrect with the details. But this
+is the big picture as I get it.
+
+* Our jobs are typically data processing jobs that require no
+  communication, grab large data as an input, run on it, and spit out the
+  result. In the configuration that we were discussing in the
+  original thread there might be a large spread in the computing time
+  between the different jobs (for instance due to varying parameters
+  during a cross-validation).
+
+* Our clusters bill per total run time of all the jobs. Some have a
+  scheduling service that knows how to dispatch jobs where the data is.
+  The pattern of usage is to queue the jobs in the execution queue. The
+  data is then be uploaded to the cluster by the cluster engine, or even
+  to the right node of the cluster if the cluster is asymmetric. Once the
+  data is available for one job, and CPU is available, the cluster engine
+  launches the job and starts billing. Once the job is finished, the
+  billing for this job ends.
+
+* As far as I know, IPython does not really use this scheduling service,
+  and uses the launcher queue to start workers, that then need to be fed the
+  jobs. By itself, this does not optimize very well the data transfer. In
+  addition, if various jobs have different run times, it can very easily
+  lead to extra time being billed on the cluster for two reasons. One is
+  that some jobs may finish much earlier than others, and the workers
+  should really die as soon as the job is done. The other reason is that as
+  jobs become available, workers come up asynchronously. As a user, I can
+  choose to wait for all my workers to come up, but this might take a while.
+  If I want to dispatch jobs with a greedy strategy, as workers come up, it
+  seems to me that I have to write some not completely trivial boiler plate
+  code.
+
+* Finally, an extra pain point is that some of the clusters that we work
+  on simply kill a job if it take too long. This means that if I bypass
+  the cluster's scheduler and try to use long running workers, and
+  IPython's scheduler to dispatch job to them, I will most probably have
+  my workers killed after they accomplish a few of the jobs.
+
+I lot of the impedance mismatches that I describe above can most probably
+be worked around by writing code to make a clever use of IPython and of
+the cluster engine together. I am sure that IPython exposes all the right
+primitives for this. However, it is a significant investment, and it
+seems much easier for me, at the time being, to simply use the queuing
+engine as it is meant to be used.
+
+One thing that Min seemed to agree with me, is that an easy feature to
+add to IPython that would make our lives easier would be the ability of
+workers to commit suicide cleanly once they are done, to avoid consuming
+billable resources. It's probably not hard to do, and he seemed to have
+this in mind.
+
+The lack of understanding between you and I, if there is any, may come
+from different usage pattern. As far as I know, physicists that use
+clusters for massive simulations typical have processing going together
+with a lot of communication and the setup/tear down is simultaneous
+across the grid, and fairly costless. The typical data processing
+situation is quite different. This is why we have seen tools like Hadoop
+or Disco (http://discoproject.org/) been developed in addition to things
+like MPI that answer a different usage pattern. The cluster configuration
+that I am describing above is quite common. I have seen it in many labs.

@@ -1,0 +1,5 @@
+Distribute the following script with your framework/library/... and your users will get a binary "my_framework_tutorial"/"my_framework_tutorial.exe", that will start '''a notebook with optionally changed templates and static files''' like your framework/library logo, that already comes with the notebook files, that you distribute with your package.
+
+[https://gist.github.com/1497850 Github: Gist 1497850]
+
+The script contains further documentation on how to prepare everything and setting setuptools up to create the binary.

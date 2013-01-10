@@ -1,0 +1,186 @@
+=Introduction=
+
+Using IPython via ssh with X-forwarding is a really great way to work, but it can be a pain with the DISPLAY settings. The tricks outlined below have been really helpful for me and are now a part of my standard 'workflow'. For the most part, I assume Ubuntu (or some 'deb' package OS variant) and bash in my descriptions below. YMMV.
+
+=A way to preserve your DISPLAY environment=
+
+When working via ssh (and X forwarding) on IPython, sometimes your DISPLAY environment variable gets mangled. One approach to deal with this is outlined below, but recently I found a new approach.
+
+There is a program called xpra which creates a virtual monitor (x 
+server) to which you can point your DISPLAY variable.
+
+You can start a screen session with the DISPLAY setting pointing to this 
+virtual display. Then when you run IPython (inside screen) anything sent 
+to X-display is sent to the virtual environment. You can attach and 
+detach to this environment and your GUIs / matplotlib windows, etc will 
+remain alive.
+
+To install xpra:
+
+<pre>
+sudo apt-get install xpra
+</pre>
+
+Then a session:
+
+First, start a screen session pointing to a virtual display
+<pre>
+xpra start :100
+DISPLAY=:100 screen
+</pre>
+
+Now you've started screen and should be "inside" screen with all your X display sent to :100. You can start Ipython in the screen session:
+
+<pre>
+ipython
+</pre>
+
+In another terminal, attach to the xpra display to 'see' the X programs:
+
+<pre>
+xpra attach :100
+</pre>
+
+You can detach from both these sessions, and they'll keep running, get 
+home or wherever... reattach to screen and also reattach to your xpra 
+virtual display. Good luck!
+ 
+
+=Another approach for working with SSH and GNU screen (helpful for IPython)=
+
+Often you'll want to ssh to a server, start a job and leave. Knowing that you want the job to stay alive after you log out, you can just use:
+
+<pre>
+nohup myjob.sh > nohup_output.nh
+</pre>
+
+But sometimes you'd rather have an actual term or shell session stay alive. This is often the case when working with IPython. The problem is that your $DISPLAY environment variable may change, so that when you log into the machine later, what screen thinks is the present $DISPLAY variable will no longer be current and you'll get errors.
+
+My workaround for this has been the following:
+
+1 On the ''host'' machine, that is the one you are logging into, in your <code>.bash_profile </code> (which gets read when you log in via ssh) you should add the line:
+  <pre>
+   echo "export DISPLAY=$DISPLAY" > .display.`whoami`.`hostname`
+  </pre>
+
+2 Again, on your ''host'' machine,make sure the following is in your .bashrc:
+  <pre>
+   ## set the prompt command to read the .disply file
+   export PROMPT_COMMAND=". ~/.display.`whoami`.`hostname`"
+  </pre>
+
+
+What is happening here is that everytime you log in, the .bash_profile file creates a new file in your home directory, specific to your user, and the hostname. Whenever you log out and log back in, that file is updated with the appropriate DISPLAY information. In the .bashrc file, we've created a PROMPT_COMMAND that will read that file everytime you hit return in your shell. This can cause some annoyances if the file does not exist, for example if you use the 'su' command to become another user. However, overall it works quite well, such that when you return to a running ''screen'' session, the DISPLAY variable will be updated and you'll be able to send X-display windows back to your client machine.
+
+=A script for keeping track of screens=
+
+Often you may have several <code>screen</code> sessions running. It is recommended to start <code>screen</code> with the following command:
+<pre>
+screen -S my_description
+</pre>
+
+Where ''my_description'' is some string that has meaning to you as a 'session' identifier. If only one <code>screen</code> session is running then simply <code>screen -r</code> will reconnect. However, if you have more, things can get complicated. The following script is helpful in such a case:
+<source lang='bash'>
+#!/bin/bash
+
+# filters the screen -ls output to show the sesssions
+sessions=`screen -ls | sed -ne 's/[[:space:]]//' -ne 's/\((Attached)\|(Detached)\|(Multi, detached)\|(Multi, attached)\)// p'`
+#echo $sessions
+#echo $sessions | wc -w
+res=`echo "$sessions" | wc -w`
+
+if [[ "$res" != "0" ]]
+then
+
+        echo ''
+        echo "  CURRENT SESSIONS"
+        echo "  ------------------------"
+        #screen -ls | sed -ne 's/[[:space:]]//' -ne 's/\((Attached)\|(Detached)\)// p' | cat -n
+        echo "$sessions" | cat -n
+        echo "  ------------------------"
+        echo ''
+
+        #prompt for the session to join
+        echo -n "  Reattach to session, or ENTER for None: "
+        read session
+
+        if [[ $session != 0 ]]
+        then
+
+            #attach to specified session
+            linenum=0
+            name=`screen -ls | sed -ne 's/[[:space:]]//' -ne 's/\((Attached)\|(Detached)\|(Multi, detached)\|(Multi, attached)\)// p' |
+            while read line
+            do
+             let "linenum += 1"
+             if [[ "$linenum" -eq "$session" ]]
+             then
+                    echo $line
+                    break
+             fi
+            done`
+            shrtname=`echo $name | sed -e 's/[[:space:]]//' -e 's/(.*)//' -e 's/\t//g'`
+
+
+            echo "Reattaching to: " $shrtname
+            if [[ "$name" != "" ]]; then
+                if  
+                    #echo $shrtname
+                    screen -r "$shrtname"
+                then
+                    echo -n " Bye bye screen.. Exit?[y] "
+                    read nbye
+                        if [[ "$nbye" == "" ]]
+                        then 
+                            exit
+                        else
+                            goodbye=$nbye
+                        fi  
+                        if [[ "$goodbye" == "y" ]]
+                        then
+                            exit
+                        else
+                            echo "What's next?"
+                        fi  
+                else
+                    if  
+                        # try multiuser connect
+                        screen -Ax "$shrtname"
+                    then
+                        echo "Hope that was fun!"
+                    else
+                        echo "Trying to Force connection"
+                        screen -D -r "$shrtname"
+                    fi  
+                fi  
+            else
+               echo "Could not reattach to $session"
+            fi  
+        else
+            echo " Have fun..."
+        fi  
+else
+        echo "  No existing SCREEN session to reattach to..."
+
+fi
+
+</source>
+
+
+Save this file in your $HOME/bin directory as 'screenlist' and make it executable: <code>chmod +x screenlist</code>. Then at the command prompt you can type:
+<pre>
+[user@host ~]$screenlist 
+</pre>
+
+and you should get some output similar to:
+<pre>
+  CURRENT SESSIONS
+  ------------------------
+     1  3841.coding     (09/26/2011 11:35:01 PM)
+     2  3791.Ipython    (09/26/2011 11:34:42 PM)
+     3  17716.test3     (09/26/2011 10:12:15 PM)
+  ------------------------
+
+  Reattach to session, or ENTER for None: 
+
+</pre>

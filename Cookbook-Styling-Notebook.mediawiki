@@ -1,0 +1,47 @@
+If you want to add a bit of color to IPython Notebook appearance, it can be done easily in couple of simple steps:
+
+
+* Visit [http://jqueryui.com/themeroller/ ThemeRoller gallery] and either roll your own theme by adjusting available elements or download ready made theme:
+
+
+:[[File:themeroller-scr-1.png]]          [[File:themeroller-scr-2.png]]
+
+
+:then copy just the theme folder (it's subfolder in css folder in downloaded theme archive), and put it in your <code>..\IPython\frontend\html\notebook\static\jquery\css\themes</code> local folder. Following the screenshots we have created <code>..\IPython\frontend\html\notebook\static\jquery\css\themes\redmond</code> folder.
+
+
+* In this newly created theme folder (<code>..\redmond</code>) copy this file: [http://dl.dropbox.com/u/6735093/ipython_notebook_styling/jquery-ui.min.css jquery-ui.min.css] [[#Notes|<sup>[1]</sup>]]
+
+* Now edit the first line in jquery-ui.min.css to match the release of the downloaded theme (current release 1.8.22):
+<code>
+:  <strike>@import url("jquery-ui-1.8.21.custom.css");</strike><br/>
+:  @import url("jquery-ui-1.8.22.custom.css");
+:  ...
+</code>
+
+* Finally edit line 9 in <code>..\IPython\frontend\html\notebook\templates\page.html</code> and set new theme for IPython Notebook:
+<code>
+:    ...<br />
+:    <strike><link rel="stylesheet" href="{{static_url("jquery/css/themes/base/jquery-ui.min.css") }}" type="text/css" /></strike><br />
+:    <link rel="stylesheet" href="{{static_url("jquery/css/themes/redmond/jquery-ui.min.css") }}" type="text/css" /><br />
+:    ...
+</code>
+
+
+==Screenshots==
+
+Redmond Theme:
+:[[File:Chrome-theme-1.png]]
+
+
+Hot-Sneaks Theme:
+:[[File:Chrome-theme-2.png]]
+
+
+Voila!
+
+
+==Notes==
+<div style="font-size:89%">
+: <small>[1]</small> - This CSS file includes custom theme's CSS file and tries to provide missing elements which are IPython specific styles. It has been tested on IPython 0.13, and it may not work properly on other version.
+</div>

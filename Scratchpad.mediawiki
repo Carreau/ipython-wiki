@@ -1,0 +1,3 @@
+Thoughts on future development:
+
+* [[Scratchpad/Persistence]]

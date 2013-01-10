@@ -1,0 +1,9 @@
+Leo's ipython plugin provides two-way interaction between IPython and Leo.
+
+This plugin is now essentially complete. For complete user-level documentation, see: http://webpages.charter.net/edreamleo/IPythonBridge.html
+
+Executive summary:
+
+* Executing the start-ipython command (in Leo) starts IPython in Leo's console.  The start-ipython command also injects an object called leox (for Leo Interface) that gives IPython scripts access to Leo's g and c objects.
+
+* Using these g and c objects, IPython scripts can do *anything* that Leo scripts can do!  They can access data in Leo files, including Leo settings, insert and delete nodes, open or delete .leo files, etc. Thus, the leox object is clearly the simplest, most general, most powerful interface between Leo and IPython.

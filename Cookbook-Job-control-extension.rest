@@ -1,0 +1,143 @@
+Import module 'jobctrl' to launch and interact with background processes by
+prepending system commands with '&', or to kill foreground tasks that are preventing
+you from continuing with your work and are just too stubborn to die with the usual ctrl+C.
+
+Killing foreground tasks
+------------------------
+
+Launch IPython instance, run a blocking command::
+
+    [Q:/ipython]|1> import jobctrl
+    [Q:/ipython]|2> cat
+
+Observe that it starts blocking.
+
+Now launch a new IPython prompt and kill the 'cat' process::
+
+    IPython 0.8.3.svn.r2919   [on Py 2.5]
+    [Q:/ipython]|1> import jobctrl
+    [Q:/ipython]|2> %tasks
+    6020: 'cat ' (Q:\ipython)
+    [Q:/ipython]|3> %kill
+    SUCCESS: The process with PID 6020 has been terminated.
+    [Q:/ipython]|4>
+
+(you don't need to specify PID for %kill if only one task is running)
+
+Note that only the processes that are launched when 'jobctrl' is enabled are affected.
+
+Background jobs
+---------------
+
+See the example below. "IPython job" object is just a very thin wrapper over
+subprocess.Popen object, with an added __repr__ and "go" method.
+
+::
+
+    [ipython]|1> import jobctrl
+    [ipython]|2> &ls C*
+             <2> <IPython job "ls C*">
+    [ipython]|3> &ls e*
+             <3> <IPython job "ls e*">
+    [ipython]|4> &ls e*
+             <4> <IPython job "ls e*">
+    [ipython]|5> &ls RE*
+             <5> <IPython job "ls RE*">
+
+    [ipython]|7> _2.go
+    -----------> _2.go()
+    ChangeLog
+    [ipython]|8> _3.go
+    -----------> _3.go()
+    eggsetup.py
+    [ipython]|9> _5.go
+    -----------> _5.go()
+    README
+    README_Windows.txt
+    [ipython]|10> _4.go
+    ------------> _4.go()
+    eggsetup.py
+
+Note how "jobs" are just objects in the output history. You can use all the
+subprocess.Popen methods on the object, but this example just uses "go".
+
+See http://docs.python.org/library/subprocess.html#popen-objects
+
+Net radio example
+-----------------
+
+Here's another example: I want to make a macro radio_trance that launches VLC on
+a net radio stream. I have the "vlc" alias that points to the actual binary of
+vlc, so I launch it via the alias::
+
+    [ipython]|1> import jobctrl
+    [ipython]|2> vlc http://di.fm/mp3/trance.pls
+
+But this blocks the ipython window, while I want to listen to it on the background!
+
+I check out the command history to get the expanded version of the command::
+
+    [ipython]|3> hist
+    1: import jobctrl
+    2: _ip.system("q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls")
+    3: _ip.magic("hist ")
+
+I copy-paste the command string from line #2 (and add '&' to make it a background process::
+
+    [ipython]|4> &q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls
+             <4> <IPython job "q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls">
+
+(''' Note that this is unnecessarily hard'''. In fact, with the new recursive
+alias expansion, you can do this simply with aliases without having to resort to
+manual copy-paste)
+
+So far so good, I can hear the music playing in the background! Now I'll make a
+macro that both imports jobctrl and launches vlc (lines 1 and 4), and %store it::
+
+    [ipython]|5> hist
+    1: import jobctrl
+    2: _ip.system("q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls")
+    3: _ip.magic("hist ")
+    4: _ip.startjob("q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls")
+    5: _ip.magic("hist ")
+
+    [ipython]|6> macro radio_trance 1 4
+    Macro `radio_trance` created. To execute, type its name (without quotes).
+    Macro contents:
+    import jobctrl
+    _ip.startjob("q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls")
+
+    [ipython]|7> store radio_trance
+    Stored 'radio_trance' (Macro)
+
+Now I restart ipython and try the macro::
+
+    Q:\ipython>python IPython.py -p sh
+    Py 2.5 (r25:51908, Sep 19 2006, 09:52:17) [MSC v.1310 32 bit (Intel)] IPy 0.7.3.svn
+    [ipython]|1> radio_trance
+             <1> Executing Macro...
+             <3> <IPython job "q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls">
+    [ipython]|4> hist
+    1: radio_trance
+    2: import jobctrl
+    3: _ip.startjob("q:/opt/VLC/vlc.exe http://di.fm/mp3/trance.pls")
+    4: _ip.magic("hist ")
+
+And verify that it works.
+
+Killing jobs
+------------
+
+::
+
+    [ipython]|1> &rad_trance
+             <1> <IPython job "q:/opt/VLC/vlc.exe http://di.fm/mp3/harddance.pls " PID=196>
+    [ipython]|2> # this music is boring me.... I want it to stop right now!
+    [ipython]|3> _1.kill
+    -----------> _1.kill()
+    SUCCESS: The process with PID 196 has been terminated.
+
+Finding out more
+----------------
+
+See the source of `jobctrl.py <https://github.com/ipython/ipython/blob/0.10.2/IPython/Extensions/jobctrl.py>`_

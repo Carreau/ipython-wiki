@@ -1,0 +1,26 @@
+Persistence refers to any way of maintaining state between IPython sessions.
+
+== Methods of persistence ==
+
+* '''Daemon''' - The interpreter is run by a separate process which stays running when you close the frontend. This is coming in 0.11 in the form of the ZMQ kernel.
+** pros: Can keep full interpreter state, and restore it very quickly
+** cons: Doesn't survive if the computer is shut down, can't move between machines (although different machines can connect to it)
+** development: Make it easier to reconnect to a session - e.g. store port numbers in a JSON file in profile directory, so they're not needed at the command line.
+
+* '''Object''' - Objects in the interpreter session are saved to disk, i.e. using pickle; see also [http://dev.danse.us/trac/pathos/wiki/dill dill], which extends pickle to allow serialising important things like functions.
+** pros: Flexible & intuitive. Can readily be moved between computers.
+** cons: Some things can't be saved, e.g. open file handles. Big objects may use up disk space (but disk space is cheap)
+** notes: We previously had a %store magic - see IPython/quarantine/pspersistence.py
+
+* '''Replay''' - Record commands, and replay them in the interpreter to recreate a certain state.
+** pros: Small disk space. Can be moved between computers unless commands won't work on the destination (e.g. filesystem access)
+** cons: Long-running commands have to be rerun.
+** notes: Previously we've offered this with explicitly recorded logs. We could now replay a session from the SQLite history (which records everything by default)
+
+== Other questions ==
+
+How automatic should persistence be? Should we save the whole namespace or selected parts? Should we automatically restore state when the interpreter loads? Two extremes:
+* The eternal session: when the config option is set, we try to save and restore as much state as possible, so you can close IPython, start it again, and carry on where you left off.
+* Fully manual: We only save what the user specifies, and only restore variables when they explicitly load them.
+
+Should the data on disk be visible (i.e. in the working directory, easy to move or delete), or hidden in the profile folders?

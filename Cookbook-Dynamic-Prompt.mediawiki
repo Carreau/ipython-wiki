@@ -1,0 +1,120 @@
+'''This assumes IPython 0.12'''
+
+I used IPython to create a custom shell for a project at work.  I wanted the prompt to show some status information about the state of the system it was controlling.
+
+''ED: I've changed these examples to use the config system. You can do the same things with an [http://ipython.org/ipython-doc/stable/interactive/reference.html#embedding-ipython embedded instance of IPython] .''
+
+First, we change the default ipython_config.py file, adding these lines:
+<syntaxhighlight>
+# _foobar will be the part of the prompt we control
+c.PromptManager.in_template = "[{_foobar}]\n[\#]>>> "
+c.PromptManager.in2_template = ".\D.>>> "
+c.PromptManager.out_template = "[\#]<<< "
+</syntaxhighlight>
+
+Next, we prepare our variable, ensuring it has a <tt>__str__()</tt> method for the prompt formatter to call:
+
+This code goes in a startup file - create a file such as foobar_prompt.py in profile_default/startup/
+<syntaxhighlight>
+class FoobarPrompt(object):
+    var = "foo"
+    def __str__(self):
+        if self.var.lower() in ["foo", "bar"]:
+            return self.var
+        else:
+            return "UNKNOWN"
+_foobar = FoobarPrompt()
+
+del FoobarPrompt
+</syntaxhighlight>
+
+Expected output:
+<pre>
+$ ipython 
+
+[foo]
+[1]>>> _foobar.var = "blah"
+
+[UNKNOWN]
+[2]>>> _foobar.var = "BAR"
+
+[BAR]
+[3]>>> _foobar
+[3]<<< <__main__.FoobarPrompt at 0x25c2f90>
+
+[BAR]
+[4]>>> 
+</pre>
+
+You can also automatically set the state from the <tt>pre_run_code_hook</tt> (gets run every time code is executed) or the <tt>pre_prompt_hook</tt> (gets run just before the prompt is printed).
+<syntaxhighlight>
+def update_prompt(self):
+    "Switch prompt between 'foo' and 'bar'."
+    _foobar = self.user_ns['_foobar']
+    _foobar.var = "foo" if (_foobar.var != "foo") else "bar"
+
+get_ipython().set_hook("pre_prompt_hook", update_prompt)
+</syntaxhighlight>
+
+Finally, there are a number of built in prompt variables:
+{| class="wikitable" border="1" cellpadding="2" cellspacing="0" width="90%" style="text-align:center"
+|+Built in prompt templates
+|-
+! Short !! Long !! Notes
+|-
+| %n, \# || {color.number}{count}{color.prompt} || history counter with bolding
+|-
+| \N || {count} || history counter without bolding
+|-
+| \D || {dots} || series of dots the same width as the history counter
+|-
+| \T || {time} || current time
+|-
+| \w || {cwd} || current working directory
+|-
+| \W || {cwd_last} || basename of CWD
+|-
+| \X''n'' || {cwd_x[''n'']} || Show the last ''n'' terms of the CWD.  ''n''=0 means show all.
+|-
+| \Y''n'' || {cwd_y[''n'']} || Like \X''n'', but show '~' for $HOME
+|- 
+| \h || N/A || hostname, up to the first '.'
+|-
+| \H || N/A || full hostname
+|-
+| \u || N/A || username (from the $USER environment variable)
+|-
+| \v || N/A || IPython version
+|- 
+| \$ || N/A || root symbol ("$" for normal user or "#" for root)
+|-
+| \\ || N/A || escaped '\'
+|- 
+| \n || N/A || newline
+|- 
+| \r || N/A || carriage return
+|-
+|}
+
+On terminals supporting ANSI color switching, you can also use the following color variables:
+<pre>
+# attributes of IPython.utils.coloransi.InputTermColors
+{color.Black}           {color.Green}
+{color.BlinkBlack}      {color.LightBlue}
+{color.BlinkBlue}       {color.LightCyan}
+{color.BlinkCyan}       {color.LightGray}
+{color.BlinkGreen}      {color.LightGreen}
+{color.BlinkLightGray}  {color.LightPurple}
+{color.BlinkPurple}     {color.LightRed}
+{color.BlinkRed}        {color.Purple}
+{color.BlinkYellow}     {color.Red}
+{color.Blue}            {color.White}
+{color.Brown}           {color.Yellow}
+{color.Cyan}            {color.Normal} (resets to terminal default)
+{color.DarkGray}                       (try {color.normal} if above doesn't work)
+</pre>
+so
+<syntaxhighlight>
+c.PromptManager.in_template = "{color.LightGreen} \T {color.Yellow} \Y2 "
+</syntaxhighlight>
+will produce a prompt with green time and yellow CWD.

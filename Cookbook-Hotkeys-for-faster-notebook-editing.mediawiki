@@ -1,0 +1,18 @@
+
+When working with the HMTL notebook, it is hard to quickly navigate when editing a cell, as Page up/down Pos1 and End keys
+only work inside the current cell. Jumping between cells requires the mouse. This can be especially annoying, because outside of code cells (no cell selected or a markdown cell), the keys work as is usual in the
+browser.
+
+Currently hotkeys are not configurable, so this patch for codecell.js and notebook.js gives the following behavior:
+
+<pre>
+Page up    - move one cell up
+Page down  - move one cell down
+Ctrl. Pos1 - jump to first cell
+Ctrl. End  - jumo to last cell
+</pre>
+
+The changes are available here:
+https://github.com/juhasch/ipython/compare/cell-hotkeys
+
+The patched files can be installed in the static/js directory of the user profile, so the IPython installation is not modified.

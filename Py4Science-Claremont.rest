@@ -1,0 +1,37 @@
+
+Installation instructions for the Claremont Py4Science workshops
+================================================================
+
+Web browser
+-----------
+
+For this workshop, you will *need* to use a reasonably recent web browser.  You can use either Google Chrome or Firefox (version 6 or newer).  In case you don't have one of these, you can download them for free from the links below:
+
+* `Google Chrome <http://www.google.com/chrome>`_.
+* `Firefox <http://www.mozilla.org/en-US/firefox/new>`_.
+
+Python tools
+------------
+
+In order to get a complete installation of the necessary Python tools on your own computer, the easiest route is to grab an `Academic download of the Enthought Python Distribution <http://www.enthought.com/products/edudownload.php>`_.  
+
+Once you have installed the correct version for your operating system, you will need to update a couple of things as per the instructions below.
+
+For Windows users
+~~~~~~~~~~~~~~~~~
+
+Download the following two installers and run them:
+
+* `Tornado Windows Installer <http://archive.ipython.org/claremont/tornado-2.1.1.win32.exe>`_
+* `IPython Windows Installer <http://archive.ipython.org/claremont/ipython-0.12.dev.win32.exe>`_.
+
+You should then be all set.
+
+For Mac OSX and Linux users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open a new Terminal and run the following commands::
+
+   sudo easy_install tornado
+   sudo easy_install https://github.com/ipython/ipython/zipball/master
+

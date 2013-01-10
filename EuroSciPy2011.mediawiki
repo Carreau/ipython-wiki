@@ -1,0 +1,9 @@
+We'll use this page to coordinate IPython-related activities at EuroSciPy2011 in Paris.
+
+Arrival dates:
+
+- Jörgen: Monday August 22nd. (mobile phone: +46-730-915708)
+
+- Fernando: Wed. August 24th, 9am (at the airport, around noon in the city).
+
+- Thomas: Friday August 26th.

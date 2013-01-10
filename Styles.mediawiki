@@ -1,0 +1,61 @@
+I love iPython but really enjoy IDE syntax highlighting and custom colors. This functionality is now available with the qtconsole in iPython 0.11! 
+
+Here are basic instructions to create a custom style theme for iPython. 
+
+Happy theming! :)
+
+----
+
+Syntax highlighting depends on the [http://pygments.org Pygments] package.
+ 
+Styles are a .py file stored in: site-packages/pygments/styles/
+
+The element you want to color is called a "token".
+See the list of available [http://pygments.org/docs/tokens/ tokens]
+
+Make sure to include all the tokens in a line:
+from pygments.token import <your tokens>
+
+The name of the style class is particular. Use the same name as your file name, first letter capitalized + "Style"
+Example:
+- darkblue.py, class DarkblueStyle(Style)
+
+CAUTION!
+I don't think all file names work. Using underscores gave me problems. I don't know what else may be prohibited.
+This doesn't work: dark_blue.py, class Dark_blueStyle(Style)
+
+Example:
+Create file:
+  mycolors.py 
+
+
+Stored in:
+  site-packages/pygments/styles/
+
+
+
+  from pygments.style import Style
+  from pygments.token import Text, Number
+  # You could also use:
+  # from pygments.token import *
+  
+  class MycolorsStyle(Style):
+  
+    background_color = '#000'
+    highlight_color = '#ffff55'
+  
+    styles = {
+        Text: "#A7ADDB",
+        Number.Float: "#2200FF",
+        Number.Integer: "#E5FF00"
+    }
+
+Run the style with this line:
+
+  ipython qtconsole --style=mycolors
+
+Or, you set the style in ipython_qtconsole_config.py. Set the style name in the following line and uncomment it:
+
+  # If not empty, use this Pygments style for syntax highlighting. Otherwise, the
+  # style sheet is queried for Pygments style information.
+  c.IPythonWidget.syntax_style = u'mycolors'

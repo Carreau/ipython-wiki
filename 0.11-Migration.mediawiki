@@ -1,0 +1,1 @@
+#REDIRECT [[Cookbook/Updating_code_that_uses_IPython_for_0.11]]

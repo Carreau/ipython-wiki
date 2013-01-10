@@ -1,0 +1,95 @@
+If you have Python code that imports IPython to start a REPL, you'll need to update it for version 0.11.
+
+If you want to still support older versions, a <code>try: except:</code> block is probably the best way. The version number as a string is available as <code>IPython.__version__</code>.
+
+If you're having trouble, talk to us on IRC or the mailing lists (links on the [http://ipython.org/ homepage]).
+
+== Namespace reorganization ==
+Many functions and attributes previously available directly in IPython have been moved to IPython.core or IPython.lib
+
+== Starting IPython ==
+
+embedded IPython does not load all configuration, and is often not what many users who use <code>IPython.embed()</code> actually want.  Specifically, embedded IPython skips the namespace initialization steps (running startup files, etc.).
+If you want to start a regular IPython session, that has changed:
+
+Old code:
+
+<syntaxhighlight>
+from IPython.Shell import make_IPython
+shell = make_IPython()
+shell()
+</syntaxhighlight>
+
+New code:
+
+<syntaxhighlight>
+from IPython.frontend.terminal.ipapp import TerminalIPythonApp
+app = TerminalIPythonApp.instance()
+app.initialize(argv=[]) # argv=[] instructs IPython to ignore sys.argv
+app.start()
+</syntaxhighlight>
+
+== Embedding API ==
+
+Embedding IPython means putting IPython into a particular namespace (like a debugger).
+This is often not actually what people want, and you may want to check out the above code for starting 'regular' IPython.
+
+* <code>IPython.Shell.IPShellEmbed</code> moved to <code>IPython.frontend.terminal.embed.InteractiveShellEmbed</code>, <code>embed</code> is accessible from <code>IPython</code> too.
+
+Old code:
+
+<syntaxhighlight>
+import IPython
+argv = ["-prompt_in1", "myprompt [\\#]> ",
+        "-prompt_out", "myprompt [\\#]: ",
+        "-profile", ipythonprofile]
+shell = IPython.Shell.IPShellEmbed(argv=argv, user_ns=namespace)
+shell.set_banner(shell.IP.BANNER + '\n\n' + banner)
+shell.IP.user_ns = {}
+shell()
+</syntaxhighlight>
+
+New code:
+
+<syntaxhighlight>
+import IPython
+from IPython.config.loader import Config
+cfg = Config()
+cfg.InteractiveShellEmbed.prompt_in1="myprompt [\\#]> "
+cfg.InteractiveShellEmbed.prompt_out="myprompt [\\#]: "
+cfg.InteractiveShellEmbed.profile=ipythonprofile
+# directly open the shell
+IPython.embed(config=cfg, user_ns=namespace, banner2=banner)
+# or get shell object and open it later
+from IPython.frontend.terminal.embed import InteractiveShellEmbed
+shell = InteractiveShellEmbed(config=cfg, user_ns=namespace, banner2=banner)
+shell.user_ns = {}
+shell()
+</syntaxhighlight>
+
+=== Custom interact loop ===
+* see ipythons interact loop: [https://github.com/ipython/ipython/blob/master/IPython/frontend/terminal/interactiveshell.py#L258]
+** <code>IPython.iplib.raw_input_original</code> -> <code>IPython.frontend.terminal.interactiveshell.raw_input_original</code>
+** <code>ipshell.IP.outputcache.prompt1</code> -> <code>ipshell.IP.displayhook.prompt1</code>
+** <code>IPython.utils.io.Term</code> -> <code>IPython.utils.io</code>, must be placed after instantiating the terminal
+
+== Parallel ==
+
+The parallel processing features have a completely new api. See the [http://ipython.org/ipython-doc/stable/parallel/index.html documentation] for details
+
+== IPython directive ==
+There is a new version in the ipython source: [https://github.com/ipython/ipython/blob/master/docs/sphinxext/ipython_directive.py docs/sphinxext/ipython_directive.py] but it may still contain bugs.
+
+== Example patches with < 0.11 compatibility ==
+* embedded API:
+** [https://github.com/Pylons/pylons/pull/7 pylons]
+** [https://github.com/vincentbernat/snimpy/pull/4 snimpy]
+** [https://github.com/drkjam/netaddr/pull/13 netaddr]
+** [https://github.com/mitsuhiko/werkzeug/pull/85 werkzeug]
+** [https://github.com/Pylons/pyramid/pull/242 pyramid]
+** [https://bugs.launchpad.net/griffith/+bug/815421 griffith]
+** [http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=636719 scrapy]
+** [http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=636726 spyder]
+** [http://git.gnome.org/browse/accerciser/commit/?id=2745ef95d6a4f99702f3d50c8fcb3ed8c58b490e accerciser]
+* misc:
+** AutoFormatedTB [http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=635289 sugar-base]

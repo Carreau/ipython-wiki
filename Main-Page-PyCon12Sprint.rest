@@ -1,0 +1,3 @@
+
+Notes for planning a joint ipython/sklearn sprint during PyCon 2012, given that several ipython developers will be presenting a tutorial and that at least Olivier Grisel from sklearn will also be doing the same.
+

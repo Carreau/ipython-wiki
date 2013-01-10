@@ -1,0 +1,33 @@
+
+Possible projects for the SciPy 2012 Sprints
+============================================
+
+* `nbconvert <https://github.com/ipython/nbconvert>`_: very high value, not too difficult, self-contained code.
+
+* website: reorganize the main page a little for clarity and include prominent links to all the new 'ipython ecosystem' projects (`Paul's vim client <https://github.com/ivanov/vim-ipython>`_, the `emacs notebook client <http://tkf.github.com/emacs-ipython-notebook/>`_, `viper <https://github.com/damianavila/vIPer>`_, `Carl's NotebookCloud App <https://github.com/carlsmith/notebookcloud>`_, `Dale Young ipcli <https://github.com/dalejung/ipycli>`_, ...).  It would also be nice to make a clean page for each of the major features of IPython (console, qtconsole, notebook, parallel, etc), so the initial features list has links to each of these major parts that summarize what each of them do.
+
+* magics : plop magic , see `ML <http://mail.scipy.org/pipermail/ipython-dev/2012-July/009902.html>`_ and `dropbox tech blog <http://tech.dropbox.com/?p=272>`_ . Add a magic to upload file into cwd for notebook, `see ML <http://mail.scipy.org/pipermail/ipython-dev/2012-June/009802.html>`_ . 
+
+* PR Review: less glamorous, but the *best* way to get really involved with IPython is to dig into the current `open PR queue <https://github.com/ipython/ipython/pulls>`_ and test and review as many as you can.  Ideally, we'll finish the SciPy sprints with *less* open PRs than we start (knowing that we're likely to open quite a few new ones during the sprint).
+
+
+Some other Project idea
+============================
+
+Write a small script that allows to spawn multiple notebook servers in different directory with different profiles/ passwd.
+Typical use case, you get a group of N student and one physical server. Each student have to  work on a bunch of files.
+You should be able to create quickly N directory and N profiles with password, with one server started in each directory with corresponding profile.
+
+Output should contain dirname/port/password.
+
+Bonus if it allows to create dir from a template dir, or if it's a webapp that spawn the server on demand. It would be great if you can supply the list of dirname or pwd, 
+easily reuse one configuration from one week to another, generate a static webpage with dirname <-> url to log in..., ability to execute the webserver as someone else and 
+chroot the student in their home directory...
+
+Apparently this has already been done :
+https://github.com/Midnighter/Notebooks-Launcher
+http://mail.scipy.org/pipermail/ipython-user/2012-July/010633.html
+but might be improved
+
+Build the same as http://bl.ocks.org/ (gist visualizer for d3.js file) , but for ipynb gist.
+

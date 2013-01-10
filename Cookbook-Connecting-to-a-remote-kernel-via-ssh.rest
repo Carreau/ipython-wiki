@@ -1,0 +1,67 @@
+
+
+This recipe explains how to set up a kernel on a remote machine (server), and interact with the kernel on a local machine (client) via a qtconsole. This is done by setting up a series of ssh tunnels between the machines to securely carry messages between the console and kernel. 
+
+=========================================== 
+When server is visible from the client
+=========================================== 
+Start a kernel on machine `server`, using either *ipython kernel* or *ipython qtconsole*:
+
+::
+
+    server > ipython kernel
+    [IPKernelApp] To connect another client to this kernel, use:
+    [IPKernelApp] --existing --shell=55460 --iopub=55461 --stdin=55462 --hb=55463
+
+Which is now listening on localhost by default. 
+
+Now on machine `client`, set up tunnels to loopback on server:
+
+::
+
+    client > ssh server -f -N -L 55460:127.0.0.1:55460
+    client > ssh server -f -N -L 55461:127.0.0.1:55461
+    client > ssh server -f -N -L 55462:127.0.0.1:55462
+    client > ssh server -f -N -L 55463:127.0.0.1:55463
+
+(the `-f -N` just mean "run in the background, and don't to anything but tunnel")
+
+That is to say, if *on client* you now try to connect to localhost:55460, the connection will be forwarded to localhost:55460 *on server*, etc.
+So now you can just copy-paste the connection line to the client:
+
+::
+
+    client > ipython qtconsole --existing --shell=55460 --iopub=55461 --stdin=55462 --hb=55463
+
+and you will have a qtconsole that is using the same kernel as the one on the server.
+
+=========================================== 
+When server is not visible from the client
+=========================================== 
+The one extra step is that you might want to connect to a machine that is not visible from client.  Let's say there is now a machine `login` that has direct access to server, and login is visible on the internet, but server is not.
+
+The change on server is to listen on an external IP, either 0.0.0.0 or a specific interface:
+
+::
+
+    server > ipython qtconsole --ip=0.0.0.0
+    [IPKernelApp] To connect another client to this kernel, use:
+    [IPKernelApp] --existing --shell=55460 --iopub=55461 --stdin=55462 --hb=55463
+
+Now you need to tunnel slightly differently, because you want local ports on client to point to `server` via `login`, rather than `127.0.0.1` via `server`:
+
+::
+
+    client > ssh login -f -N -L 55460:server:55460
+    client > ssh login -f -N -L 55461:server:55461
+    client > ssh login -f -N -L 55462:server:55462
+    client > ssh login -f -N -L 55463:server:55463
+
+That is, when client asks for these ports on localhost, they will actually get the ports on server, using login as an intermediary.
+
+Now, once again, you can connect the client to what it thinks is a local Kernel:
+
+::
+
+  client > ipython qtconsole --existing --shell=55460 --iopub=55461 --stdin=55462 --hb=55463
+

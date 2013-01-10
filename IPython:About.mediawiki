@@ -1,0 +1,1 @@
+This is a wiki for IPython. For more details about IPython, see the [http://ipython.org/ main site].

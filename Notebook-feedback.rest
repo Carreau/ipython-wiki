@@ -1,0 +1,41 @@
+
+A place to gather feedback on ideas and improvements to the notebook.  As we distill these, they'll get gradually turned into proper issues on our tracker, but often feedback comes in from blogs, emails, etc, in a way that's not quite ready yet to make a specific issue for it.  But we don't want it to be lost by virtue of being scattered, so this serves as a place to collect it.
+
+* Reorganize the UI so new users more easily find the key actions they need to get started (cell execution, notebook saving).  J. Hunter gave it a fresh try without any explanation, and missed the help at the bottom on cell execution because it fell below the edge of a laptop screen, and also failed to notice the save area at the top, as he was reading the notebook actions on the left.  If one user reports this experience, others are likely to face similar issues.
+
+* Request: auto-save option. For some reason, the web gui makes it feel it should automatically save after every action. This would also give it a much more notebooky feel.
+
+ * In addition to the previous user's comment, I often find myself accidentally closing the terminal from which I launched the notebook, without having saved the contents, and thus losing all recent changes. Automatically saving every time a cell is evaluated would solve that problem nicely.
+
+* A way to permanently link to a notebook (provided its stays in the same place in the filesystem). At the very least, this could be implemented in 3rd-party code, if there were an ipython command-line option to open a specific notebook directly. The benefit is that notebooks can be integrated into users' existing note-taking and writing workflows.
+
+* A way to specify a different notebook save or open location while in the notebook.
+
+* Allowing folders in the initial Dashboard. I believe other people's requests to have access to other directories would implement this request almost automatically.
+
+* An option to hide cells (usefull for printing notebooks or hiding cells with to much lines of code
+
+* An option to display python input expressions with LaTeX. This would make it sort of wysiwyg like Mathcad.
+
+* A command line option to specify which browser to launch with would be great. My default system browser doesn't support websockets, so I would like to be able to tell notebook at the terminal to launch in Safari or Chrome instead.
+
+
+Notebook utils
+===============
+
+Here are some useful utilities which currently exist as gists, but which could benefit from be wrapped up and folded into IPython commnadline tools, such as nbconvert.
+
+https://gist.github.com/2620876 - simple example script for running notebooks and reporting exceptions. 
+
+https://gist.github.com/2620735 - simple example script for running and testing notebooks. Each cell is submitted to the kernel, and the outputs are compared with those stored in the notebook.
+
+https://gist.github.com/3719849 - remove all outputs from a notebook
+
+https://gist.github.com/3836889 - *selectively* replacing code cells based on their contents. Example: cells which start off with "# Solution" get replaced with "# Solution goes here"
+
+https://gist.github.com/3869182 - Example configuration file for using the IPython Notebook with a random password
+
+https://gist.github.com/1935808 - Downgrade v3 .ipynb files to v2 (for use with older versions of IPython)
+
+https://github.com/ipython/ipython-in-depth/blob/master/tools/nbmerge.py - Concatenate multiple notebooks into a new one.
+

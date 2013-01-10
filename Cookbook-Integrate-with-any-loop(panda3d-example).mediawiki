@@ -1,0 +1,27 @@
+<syntaxhighlight>
+from direct.showbase.ShowBase import ShowBase
+from IPython.lib import inputhook
+
+class MyApp(ShowBase):
+    def __init__(self):
+        ShowBase.__init__(self)
+        self.m = loader.loadModel("frowney")
+        self.m.reparentTo(render)
+
+    def stepMe(self):
+        taskMgr.step()              # manual step trough Panda3D loop
+        return 0  
+
+if __name__ == "__main__":  
+    app = MyApp()  
+    inputhook.set_inputhook(app.stepMe)
+</syntaxhighlight>
+
+open terminal and cd to directory where file is located, then enter following commands :
+(you may want to zoom out panda window a bit so you can actually see frowney)
+
+#  ipython
+#  run file.py
+#  app.m.setPos(1,1,1)
+
+Question: How can i improve speed of execution, from what i can see, panda is running at steady rate of 100 ms per frame. Is that tick rate of readline? Can i somehow increase that speed?

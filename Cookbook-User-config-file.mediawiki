@@ -1,0 +1,9 @@
+[http://ipython.org/ipython-doc/dev/config IPython configuration documentation]
+
+IPython 0.11 loads user configuration from profiles.  To start configuring IPython, create the default profile:
+
+<code>ipython profile create</code>
+
+This will create the file <code>IPYTHON_DIR/profile_default/ipython_config.py</code>, which will have all of the default configuration commented-out.  Approximately everything you can configure in IPython will be in that file, so browsing it is really the best place to start learning about configuring IPython.
+
+Older versions of IPython used a different configuration system, with files such as <code>IPYTHON_DIR/ipy_user_conf.py</code> or <code>IPYTHON_DIR/ipythonrc</code>.  It would be a great help if users who have done significant configuration of IPython would [[Special:Upload|upload]] their old configuration files and their equivalent <code>ipython_config.py</code>.  Users who would like help migrating to 0.11 can just post the old config and developers can help with the corresponding ipython_config.py.

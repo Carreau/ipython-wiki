@@ -1,0 +1,36 @@
+=Integrating IPython with pythonnet python.exe=
+
+These are the steps I used to create a working instance of IPython that launches the python.exe from pythonnet and allows import of the clr module. With the clr module imported, one is able to access .NET assemblies within Python.
+
+==Steps==
+0) Install Vanilla Python and modules of choice -- here, the only external requirements are:
+distribute
+pyreadline
+nose
+numpy
+IPython
+
+I installed these using binaries available from [http://www.lfd.uci.edu/~gohlke/pythonlibs/|Christoph Gohlke]
+
+1) Build pythonnet with the VS compiler of your choice (I used VS2012 .NET 4) Be sure to go to the properties for the Python.Runtime and change the "Build" options -> Python27,UCS2
+
+2) Use mt.exe to set the manifest (I created the following batch script as this is where I found mt.exe on my system. It may be located elsewhere. It is part of the MSSDK. Be sure to use the appropriate bit version (32 v. 64).
+
+<pre>
+set path="C:\Program Files (x86)\Windows Kits\8.0\bin\x64";%path%
+mt.exe -manifest msvcr90.manifest -outputresource:python.exe;#1
+</pre>
+
+''Thanks Christoph for this tip!
+''
+
+3) You are done! Now, however, the point of #2 above was to get IPython working with pythonnet (and the audience here is probably interested in that issue too). I had to do #2 above because of the errors I was getting from pyreadline (discussed earlier in this [http://mail.scipy.org/pipermail/ipython-user/2012-November/011483.html|thread]). Once that was resolved with the manifest, I was able to use the following batch script to run IPython using the pythonnet python.exe. Place this into a file called ipythonnet.bat and put it in the same directory as the pythonnet python.exe. You should be able to call it from there and 'import clr'.
+
+<pre>
+
+@echo off
+set path="C:\pythonnet\";%path%
+set PYTHONPATH="C:\Python27\Lib\;C:\Python27\Lib\site-packages\;C:\pythonnet\";%pythonpath%
+python.exe -c "import sys; from IPython.frontend.terminal.ipapp import launch_new_instance; sys.exit(launch_new_instance())" %*
+exit /B %ERRORLEVEL%
+</pre>

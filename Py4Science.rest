@@ -1,0 +1,77 @@
+
+This is the information page for the **UC Berkeley Py4Science series**, a series of informal lectures centered around the use of the Python programming language and open source tools for scientific research.  
+
+
+Next meeting: Wednesday February 22th, 2012
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**NOTE: Change of room:** for *this time only*, we'll meet in Evans 597.
+
+Open space for questions at 2:30, presentation 3-4pm.  
+
+Topic: image processing in Python using the `scikits-image toolkit <http://scikits-image.org>`_.
+
+
+Time/location (Spring 2012)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We hold our meetings every two weeks on Wednesdays at *560 Evans Hall*, as follows:
+
+- A 2:30-3pm optional 'open space' session intended to answer any questions you may have related to computing in research (including topics beyond Python, such as how to write a makefile, use basic Unix tools, configure SSH to access your cluster conveniently, compile packages in your personal directory in a shared computing facility, etc).  The topics of the lectures will not be covered in advance in these sessions.
+
+- A 3-4pm informal lecture, focused on a specific topic such as data analysis, visualization, version control, etc.  These lectures are meant to be very interactive with hands-on exercises, so please bring your laptop configured as indicated in the 'starter kit' page linked below.  If you have any installation problems, the open space session is the perfect time to get help.
+
+*Berkeley time:* we start the actual lectures promptly at 3pm, breaking with the Berkeley tradition of starting everything 10min past the hour.
+
+*Mailing list:* You can sign up for announcements from our (low traffic) `mailing list <https://calmail.berkeley.edu/manage/list/listinfo/py4science@lists.berkeley.edu>`_.
+
+*Calendar*: this Google calendar_ has the listings for each meetings.  Canceled meetings will be removed from the calendar.
+
+.. _calendar: https://www.google.com/calendar/b/0/embed?src=moeh9ilpdjicogfaav9jtplh28@group.calendar.google.com&ctz=America/Los_Angeles
+
+Resources
+~~~~~~~~~
+
+Here's a short list of useful links to educational materials about using Python as a research tool.  Please note that we haven't extensively tested some of these courses, so any feedback you can provide on their quality (good or bad) will be very useful to others.
+
+* A `"Starter Kit" <http://fperez.org/py4science/starter_kit.html>`_.  Contains the basic links to downloads and minimal reading materials.
+
+* UC Berkeley's `Python Bootcamp <http://sites.google.com/site/pythonbootcamp>`_: led by `Josh Bloom <http://astro.berkeley.edu/~jbloom>`_, will be periodically repeated on campus.  I think the next one is planned for Spring 2012, will inform about it during lectures.
+
+* `SciPy Lectures <http://scipy-lectures.github.com>`_ (and their `source code <https://github.com/scipy-lectures/scipy-lecture-notes>`_). Excellent lecture note materials, prepared over the last few years for the teaching sessions at the EuroSciPy conferences.
+
+* Kurt Schwehr's `Python Research Tools <http://vislab-ccom.unh.edu/~schwehr/Classes/2011/esci895-researchtools>`_ lecture materials.  Great videos and notes, very much in the spirit of our meetings.
+
+* An `introductory Python course aimed at biologists <http://www.pasteur.fr/formation/infobio/python>`_ from the Institut Pasteur.
+
+If you are completely new to Python, you may find this `introductory video series <http://ontwik.com/python/python-training-getting-started-with-python>`_ useful. *Note:* at the bottom of the page is a link to a book that accompanies the video series.
+
+Previous Meetings
+~~~~~~~~~~~~~~~~~
+
+* Feb 8 2012 - Matplotlib - basics and beyond!
+* Dec 14 2011 - arrays in more than two dimensions and basic image processing tasks.
+* Nov 30 - 2d arrays.
+* Nov 9  - (Day 3) - ipython's %timeit, rec arrays, matplotlib's mlab.csv2rec (24 attendees)
+* Oct 26 - (Day 2) - Introduction to matplotlib, ipython (41 attendees!)
+* Oct 19 - (Day 1.5 - offweek) - Interactive IPython (6 attendees)
+
+  session ``%hist`` highlights::
+        
+        a = 'hey guys'
+        a?
+        a??
+        a.<tab>
+        np.matix?
+        import some_module
+        reload(some_module)
+        run some_module
+        %whos
+        %debug
+        %pdb
+
+* Oct 12 - (Day 1) - Basic numpy, lists vs arrays (11 attendees)
+* Oct 5 - (Day 0) - installation help (5 attendees)
+
+
+

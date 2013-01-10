@@ -1,0 +1,20 @@
+'''The PyMAD project and IPython'''
+
+A brief description, by Frédéric Mantegazza
+
+At the French research institutes CEA-Grenoble (Commissariat à l'Energie Atomique de Grenoble), and ILL (Institut Laue Langevin), which is the biggest neutrons reactor for scientific experiments, we use big instruments, called spectrometers. These instruments have several motors, encoders and I/O to move around the neutron beam, and to set the diffraction direction. All these motors are controlled by python software called PyMAD, which is responsible for transforming energy, wavelength, and all physical values into motor positions, power supply values and so on.
+
+PyMAD is mainly console-oriented. Although there is a GUI to configure or watch spectrometer state, all commands are sent through a command-line interpreter. This is much more efficient, and gives the user the ability to write batch files to send thousands of commands, and so have the spectrometer work all night or weekend without interaction.
+
+This console is based on IPython, which already gives all the features we need:
+
+* history (even through different sessions)
+* completion
+* magic commands
+* user profiles
+* embeddable
+* access to python interpreter
+
+The last point is very important, as users control the spectrometer directly through python objects (magic commands are only shortcuts on this objects). Users can also build complex commands to prototype some unsupported actions, or to automatically take decisions according to the previous commands' results.
+
+So, IPython is really the heart of the client-side PyMAD project, and is the end-user visible part. It is so powerful, that we would be crazy to choose another solution.

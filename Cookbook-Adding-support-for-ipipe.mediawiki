@@ -1,0 +1,111 @@
+== Automatically invoking an ipipe display for iterables ==
+
+You can add support for ipipe to your own classes too. Anything that is
+iterable can be displayed by piping it into an ipipe enabled object, but
+if you want an ipipe display to ''automatically'' display your object, you have
+to subclass <code>ipipe.Table</code> and implement an <code>__iter__</code> method. For example an
+ipipe enabled version of range might look like this:
+
+<syntaxhighlight>
+from IPython.Extensions import ipipe
+
+class irange(ipipe.Table):
+    def __init__(self, *args):
+        self.args = args
+
+    def __iter__(self):
+        return iter(xrange(*self.args))
+</syntaxhighlight>
+
+If you want to implement a "filter" (i.e. something that transforms an input
+pipe), you have to subclass <code>ipipe.Pipe</code>. This gives you automatic handling
+of the | operator. In your <code>__iter__</code> method you can access the input pipe
+as the <code>input</code> attribute. For example the following pipe will skip every second
+item:
+
+<syntaxhighlight>
+from IPython.Extensions import ipipe
+
+class ieven(ipipe.Pipe):
+    def __iter__(self):
+        for (i, item) in enumerate(self.input):
+            if not i % 2:
+                yield item
+</syntaxhighlight>
+
+Now you can user your new classes like this:
+
+<pre>In   [1:] irange(100) | ieven</pre>
+
+== Specifying attributes for the ipipe display ==
+
+You can specify which attributes should be displayed in an ipipe listing by implementing the <code>__xattrs__</code> method:
+
+<syntaxhighlight>
+class Person:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+
+    def __xattrs__(self, mode="default"):
+        return ("firstname", "lastname")
+</syntaxhighlight>
+
+(If <code>__xattrs__()</code> isn't defined the ipipe display will simply use the <code>repr()</code> result for the object itself)
+
+The `mode` attribute has two possible values:
+
+* "default": The default list mode of the ibrowse display;
+* "detail": The detail mode, where each attribute of an object is displayed as a separate row (activated by pressing the `d` key in `ibrowse`). 
+
+<code>__xattrs__()</code> must return an iterable with "attribute descriptors". These attribute descriptors can be:
+
+* <code>None</code>: this will display the object itself;
+* "foo": this will display the attribute named "foo";
+* "foo()": this will call the method foo and will display the return value;
+* "-foo": The attribute named "foo" must be iterable. It's value will not be displayed, but it can be entered;
+* "-foo()": The foo method must return an iterable. The return value will not be displayed, but it can be entered;
+* Instances of the `ipipe.Descriptor` class.
+
+For each of the above variants there's a subclass of <code>ipipe.Descriptor</code> implementing the specific behaviour: <code>SelfDescriptor()</code> is the same as <code>None</code>, <code>AttributeDescriptor("foo")</code> the same as "foo", <code>IterAttributeDescriptor("foo")</code> the same as "-foo", <code>MethodDescriptor("foo")</code> the same as "foo()" and <code>IterMethodDescriptor("foo")</code> the same as "-foo()". Finally there's <code>FunctionDescriptor(foo)</code>, where foo must be callable (with the object as an argument) that returns the attribute value.
+
+For example we can add contact information to the above <code>Person</code> class:
+
+<syntaxhighlight>
+class Person:
+    def __init__(self, firstname, lastname):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.contacts = []
+
+    def addcontact(self, type, value):
+        self.contacts.append(Contact(type, value))
+
+    def __xattrs__(self, mode="default"):
+        if mode == "detail":
+            return ("firstname", "lastname", "-contacts")
+        else:
+            return ("firstname", "lastname")
+
+class Contact:
+    def __init__(self, type, value):
+        self.type = type
+        self.value = value
+
+    def __xattrs__(self, mode="default"):
+        return ("type", "value")
+
+p1 = Person("John", "Doe")
+p1.addcontact("email", "john@example.com")
+p1.addcontact("phone", "555-0123")
+
+p2 = Person("Jane", "Doe")
+p2.addcontact("email", "jane@example.com")
+p2.addcontact("phone", "555-0321")
+
+persons = [p1, p2]
+</syntaxhighlight>
+
+With these objects you can then browse them like this:
+
+<pre>In  [1]: persons | ibrowse</pre>

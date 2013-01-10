@@ -1,0 +1,30 @@
+IPython's %pinfo (?) and %pinfo2 (??) interactive help commands
+use the pager to avoid flooding the shell with long blocks of
+text.
+
+Here is a magic command to give the same behavior to Python's
+built-in (pydoc) help command:
+
+<syntaxhighlight>
+from IPython.core import page
+def magic_help(self, s):
+    """Retrieve the pydoc help for an object and display it through a pager.
+    """
+    info = self._ofind(s)
+    if info['found']:
+        import pydoc
+        page.page(pydoc.plain(pydoc.render_doc(info["obj"])))
+    else:
+        print 'Object `%s` not found' % s
+
+ip = get_ipython()
+ip.define_magic("help",magic_help)
+</syntaxhighlight>
+
+After running this code from the interactive prompt or via your
+local config settings, you can send help through the pager like so:
+
+<syntaxhighlight>
+import re
+%help re
+</syntaxhighlight>

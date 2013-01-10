@@ -1,0 +1,446 @@
+
+The ipipe extension provides a handy way to browse and manipulate tabular data,
+e.g. groups of files or environment variables.
+
+Activating ipipe
+================
+As the directory `IPython/Extensions` is on the path, you can simply import ipipe's content to activate it::
+
+    In [1]: from ipipe import *
+
+If you want to have it active every time you start IPython, put something like the
+following into your IPython configuration script (`~/.ipython/ipy_user_conf.py`
+(on Linux/Mac) or `~/_ipython/ipy_user_conf.py` (on Windows))::
+
+    from IPython import ipapi
+    ipapi.get().ex("from ipipe import *")
+
+Basic usage
+===========
+
+ipipe provides several "pipes", for example ``ils`` gives you a directory listing::
+
+    In [1]: ils
+
+If you have a working `curses` (i.e. on Linux or a Mac), you'll get an interactive
+browser where you can scroll around with the cursor keys, enter directories by
+pressing RETURN and leave them again by pressing BACKSPACE (or "x"). If you want
+to know more about the available keyboard commands, press "h" (for 0.7.2; for 0.7.3
+this is "?" (changed in r1367)). Press "q" to leave the browser and get back to
+the IPython prompt. If you have wxPython installed (but no curses), you'll get a
+wx-based browser. If you don't have wx installed either, you'll get a simple
+"dump" of the data.
+
+It's possible to specify the starting directory simply by passing an argument to ils:
+``ils("~")`` will list your home directory (``ils`` is equivalent to ``ils()``
+and ``ils(".")``).
+
+`iwalk` gives you a recursive directory listing::
+
+    In [1]: iwalk("~/checkouts/IPython/current", dirs=False)
+
+(``dirs=False`` hides all directories.)
+
+All the files emitted by ``ils`` and ``iwalk`` are legal "path" objects (from 
+``path.py``) (actually they are ``ifile`` objects. ``ifile`` is a subclass of
+path, which adds the attributes relevant for ``ipipe``).
+
+Other output formats
+====================
+
+``ipipe`` installs a displayhook to detect pipes that it can display in the browser.
+But you can also explicitly pipe something into an output object (either because
+it's an iterable which doesn't get displayed automatically in the browser, or you
+want to use a different output format). ``idump`` is such an output format. It
+simply dumps the table to the screen (which is the default on Windows).
+(Another one is ``igrid``, which is the wx-based browser)::
+
+    In [1]: ils | idump
+    Out[1]:
+    _                           |type         |size   |modestr  |owner |group|mdate
+    ..                          |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:15.589658
+    .svn                        |dir          |   153L|rwxrwxr-x|walter|users|2006-05-03 15:27:00.101580
+    ChangeLog                   |file, symlink|215191L|rw-rw-r--|walter|users|2006-05-02 09:51:33.054260
+    IPython                     |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-03 15:20:42.756658
+    MANIFEST.in                 |file         |   571L|rw-rw-r--|walter|users|2006-05-02 09:51:34.737318
+    README                      |file         |   482L|rw-rw-r--|walter|users|2006-05-02 09:51:34.384305
+    README_Windows.txt          |file         |  1631L|rw-rw-r--|walter|users|2006-05-02 09:51:34.380305
+    debian                      |dir          |   126L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.166747
+    doc                         |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:33.837287
+    eggsetup.py                 |file         |   524L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.454308
+    ipython.py                  |file         |   415L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.235300
+    scripts                     |dir          |    79L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.305752
+    setup.py                    |file         |  6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    setup_bdist_egg.py          |file         |   468L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.385306
+    setupext                    |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.034742
+    test                        |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:17.477723
+    tools                       |dir          |   103L|rwxrwxr-x|walter|users|2006-05-02 09:51:28.145091
+    win32_manual_post_install.py|file         |  4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+
+::
+
+    In [1]: import sys
+    In [2]: sys.path | idump
+    Out[2]:
+    _
+    /var/home/walter/checkouts/IPython/current
+    /var/home/walter/dist-py
+    /var/home/walter/checkouts/IPython/current
+    /var/home/walter/pythonroot
+    /usr/local/lib/svn-python
+    /usr/local/lib/python24.zip
+    /usr/local/lib/python2.4
+    /usr/local/lib/python2.4/plat-linux2
+    /usr/local/lib/python2.4/lib-tk
+    /usr/local/lib/python2.4/lib-dynload
+    /usr/local/lib/python2.4/site-packages
+    /usr/local/lib/python2.4/site-packages/PIL
+    /var/usr/local/lib/python2.4/site-packages/Django-0.91-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/pysqlite-2.1.3-py2.4-linux-i686.egg
+    /var/usr/local/lib/python2.4/site-packages/setuptools-0.6a10-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/Cheetah-1.0-py2.4-linux-i686.egg
+    /var/usr/local/lib/python2.4/site-packages/RhubarbTart-0.6dev_r4814-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/PasteDeploy-0.4-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/Paste-0.5dev_r4832-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/PasteScript-0.5dev_r4834-py2.4.egg
+    /var/usr/local/lib/python2.4/site-packages/SQLAlchemy-0.1.3-py2.4.egg
+    /var/home/walter/checkouts/IPython/current/IPython/Extensions
+    /var/home/walter/.ipython
+
+Dictionaries, modules and multiline strings get special treatment by ``ibrowse``,
+``igrid`` and ``idump``, so you can do the following::
+
+    In [1]: import keyword
+    In [2]: keyword | idump
+    Out[2]:
+    key         |value
+    __all__     |['iskeyword', 'kwlist']
+    __builtins__|{'IndexError': <class exceptions.IndexError at 0xb7c468fc>, 'help': Type help() for interactive help, or help(object) for help about object., 'vars': <built-in function vars>, 'SyntaxError': <class exceptions.SyntaxError at 0xb7c4677c>...
+    __doc__     |Keywords (from "graminit.c")\n\nThis file is automatically generated; please don\'t muck it up!\n\nTo update the symbols in this file, \'cd\' to the top directory of\nthe python source tree after building the interpreter and run:\n\n    python Lib/keyword.py\n
+    __file__    |/usr/local/lib/python2.4/keyword.pyc
+    __name__    |keyword
+    iskeyword   |<built-in method __contains__ of frozenset object at 0xb7a4030c>
+    kwlist      |['and', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'not', 'or', 'pass', 'print', ...
+    main        |<function main at 0xb7a2e8ec>
+
+::
+
+    In [1]: import mimetypes
+    In [2]: mimetypes.common_types | idump
+    Out[2]:
+    key  |value
+    .xul |text/xul
+    .pict|image/pict
+    .pic |image/pict
+    .jpg |image/jpg
+    .mid |audio/midi
+    .rtf |application/rtf
+    .pct |image/pict
+    .midi|audio/midi
+
+::
+
+    In [1]: import os
+    In [2]: os.__doc__ | idump
+    Out[2]:
+    _
+    OS routines for Mac, DOS, NT, or Posix depending on what system we're on.
+    This exports:
+      - all functions from posix, nt, os2, mac, or ce, e.g. unlink, stat, etc.
+      - os.path is one of the modules posixpath, ntpath, or macpath
+      - os.name is 'posix', 'nt', 'os2', 'mac', 'ce' or 'riscos'
+      - os.curdir is a string representing the current directory ('.' or ':')
+      - os.pardir is a string representing the parent directory ('..' or '::')
+      - os.sep is the (or a most common) pathname separator ('/' or ':' or '\\\\')
+      - os.extsep is the extension separator ('.' or '/')
+      - os.altsep is the alternate pathname separator (None or '/')
+      - os.pathsep is the component separator used in $PATH etc
+      - os.linesep is the line separator in text files ('\\r' or '\\n' or '\\r\\n')
+      - os.defpath is the default search path for executables
+      - os.devnull is the file path of the null device ('/dev/null', etc.)
+    Programs that import and use 'os' stand a better chance of being
+    portable between different platforms.  Of course, they must then
+    only use functions that are defined by all platforms (e.g., unlink
+    and opendir), and leave all pathname manipulation to os.path
+    (e.g., split and join).
+
+Using ``idump`` for docstrings doesn't look too useful, but if you're using
+``ibrowse`` or ``igrid`` you can scroll around in the docstring.
+
+Filters
+=======
+
+You can pipe the output of ``ils`` and ``iwalk`` (and anything else that is
+iterable) into all sorts of filters.
+
+ifilter
+-------
+``ifilter`` can be used to drop some objects from the result. For example, the
+following will give you all `.pyc` files::
+
+    In [1]: iwalk | ifilter("_.endswith('.pyc')") | idump
+    Out[1]:
+    _                                     |type|size   |modestr  |owner |group|mdate
+    IPython/ColorANSI.pyc                 |file|  6340L|rw-rw-r--|walter|users|2006-05-03 15:20:42.756658
+    IPython/ConfigLoader.pyc              |file|  3746L|rw-rw-r--|walter|users|2006-05-02 10:28:18.059960
+    IPython/CrashHandler.pyc              |file|  3958L|rw-rw-r--|walter|users|2006-05-02 10:28:19.540010
+    IPython/DPyGetOpt.pyc                 |file| 16498L|rw-rw-r--|walter|users|2006-05-02 10:28:17.256932
+    IPython/Debugger.pyc                  |file|  8186L|rw-rw-r--|walter|users|2006-05-02 10:28:17.710948
+    IPython/FakeModule.pyc                |file|  1687L|rw-rw-r--|walter|users|2006-05-02 10:28:18.629979
+    IPython/Itpl.pyc                      |file| 10913L|rw-rw-r--|walter|users|2006-05-02 10:28:17.187930
+    IPython/Logger.pyc                    |file|  6324L|rw-rw-r--|walter|users|2006-05-02 10:28:18.644980
+    IPython/Magic.pyc                     |file| 99434L|rw-rw-r--|walter|users|2006-05-02 10:28:18.728983
+    IPython/OInspect.pyc                  |file| 12843L|rw-rw-r--|walter|users|2006-05-02 10:28:18.553977
+    IPython/OutputTrap.pyc                |file|  7789L|rw-rw-r--|walter|users|2006-05-02 10:28:18.086961
+    IPython/Prompts.pyc                   |file| 15985L|rw-rw-r--|walter|users|2006-05-02 10:28:19.080995
+    IPython/PyColorize.pyc                |file|  6345L|rw-rw-r--|walter|users|2006-05-02 10:28:17.884954
+    IPython/Release.pyc                   |file|  2353L|rw-rw-r--|walter|users|2006-05-02 10:28:16.802917
+    IPython/Shell.pyc                     |file| 30596L|rw-rw-r--|walter|users|2006-05-02 10:28:18.113962
+    IPython/__init__.pyc                  |file|  2524L|rw-rw-r--|walter|users|2006-05-02 10:28:16.735914
+    IPython/background_jobs.pyc           |file| 16823L|rw-rw-r--|walter|users|2006-05-02 10:28:19.410006
+    IPython/completer.pyc                 |file| 16190L|rw-rw-r--|walter|users|2006-05-02 10:28:23.144134
+    IPython/deep_reload.pyc               |file|  4945L|rw-rw-r--|walter|users|2006-05-02 10:28:16.787916
+    IPython/excolors.pyc                  |file|  1687L|rw-rw-r--|walter|users|2006-05-02 10:28:17.942956
+    IPython/genutils.pyc                  |file| 56346L|rw-rw-r--|walter|users|2006-05-02 10:28:16.842918
+    IPython/hooks.pyc                     |file|  6712L|rw-rw-r--|walter|users|2006-05-02 10:28:17.950956
+    IPython/ipapi.pyc                     |file|  6522L|rw-rw-r--|walter|users|2006-05-02 10:28:17.958956
+    IPython/iplib.pyc                     |file| 56367L|rw-rw-r--|walter|users|2006-05-02 12:21:24.756600
+    IPython/ipmaker.pyc                   |file| 13750L|rw-rw-r--|walter|users|2006-05-02 10:28:19.486009
+    IPython/ipstruct.pyc                  |file| 14869L|rw-rw-r--|walter|users|2006-05-02 10:28:17.474940
+    IPython/macro.pyc                     |file|   825L|rw-rw-r--|walter|users|2006-05-02 10:28:18.870988
+    IPython/platutils.pyc                 |file|   975L|rw-rw-r--|walter|users|2006-05-02 10:28:18.903989
+    IPython/platutils_dummy.pyc           |file|   706L|rw-rw-r--|walter|users|2006-05-02 10:28:19.520010
+    IPython/platutils_posix.pyc           |file|  1147L|rw-rw-r--|walter|users|2006-05-02 10:28:19.016993
+    IPython/platutils_win32.pyc           |file|   713L|rw-rw-r--|walter|users|2006-05-02 10:28:19.498009
+    IPython/rlineimpl.pyc                 |file|  1441L|rw-rw-r--|walter|users|2006-05-02 10:28:17.341935
+    IPython/ultraTB.pyc                   |file| 26927L|rw-rw-r--|walter|users|2006-05-02 10:28:17.498941
+    IPython/usage.pyc                     |file| 30562L|rw-rw-r--|walter|users|2006-05-02 10:28:19.473008
+    IPython/wildcard.pyc                  |file|  5292L|rw-rw-r--|walter|users|2006-05-02 10:28:18.599978
+    IPython/Extensions/__init__.pyc       |file|   574L|rw-rw-r--|walter|users|2006-05-02 10:28:19.676015
+    IPython/Extensions/clearcmd.pyc       |file|  1525L|rw-rw-r--|walter|users|2006-05-02 10:28:22.987128
+    IPython/Extensions/ext_rehashdir.pyc  |file|  3126L|rw-rw-r--|walter|users|2006-05-02 10:28:22.013095
+    IPython/Extensions/ext_rescapture.pyc |file|  2016L|rw-rw-r--|walter|users|2006-05-02 10:28:22.049096
+    IPython/Extensions/ipipe.pyc          |file|106531L|rw-rw-r--|walter|users|2006-05-03 15:56:47.122835
+    IPython/Extensions/ipy_system_conf.pyc|file|   657L|rw-rw-r--|walter|users|2006-05-02 10:28:21.830089
+    IPython/Extensions/path.pyc           |file| 27434L|rw-rw-r--|walter|users|2006-05-02 10:28:21.302071
+    IPython/Extensions/pickleshare.pyc    |file|  9252L|rw-rw-r--|walter|users|2006-05-02 10:28:18.530976
+    IPython/Extensions/pspersistence.pyc  |file|  5482L|rw-rw-r--|walter|users|2006-05-02 10:28:22.438110
+
+The code string passed to the ``ifilter`` constructor can reference each object from
+the input pipe as ``_``. You can also reference attributes of this object directly::
+
+    In [1]: ils | ifilter("_.isfile() and size>1000") | idump
+    Out[1]:
+    _                           |type         |size   |modestr  |owner |group|mdate
+    ChangeLog                   |file, symlink|215191L|rw-rw-r--|walter|users|2006-05-02 09:51:33.054260
+    README_Windows.txt          |file         |  1631L|rw-rw-r--|walter|users|2006-05-02 09:51:34.380305
+    setup.py                    |file         |  6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    win32_manual_post_install.py|file         |  4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+
+It's also possible to pass callables to the ``ifilter`` constructor::
+
+    In [1]: iwalk | ifilter(lambda _:_.isfile() and _.size>1000)
+
+
+isort
+-----
+Another useful filter is ``isort``. It sorts the input. You can pass the sort key as a code string (or a callable)::
+
+    In [1]: ils | isort("len(_)") | idump
+    Out[1]:
+    _                           |type         |size   |modestr  |owner |group|mdate
+    ..                          |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:15.589658
+    doc                         |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:33.837287
+    .svn                        |dir          |   153L|rwxrwxr-x|walter|users|2006-05-03 15:52:34.104150
+    test                        |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:17.477723
+    tools                       |dir          |   103L|rwxrwxr-x|walter|users|2006-05-02 09:51:28.145091
+    README                      |file         |   482L|rw-rw-r--|walter|users|2006-05-02 09:51:34.384305
+    debian                      |dir          |   126L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.166747
+    IPython                     |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-03 15:20:42.756658
+    scripts                     |dir          |    79L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.305752
+    setup.py                    |file         |  6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    setupext                    |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.034742
+    ChangeLog                   |file, symlink|215191L|rw-rw-r--|walter|users|2006-05-02 09:51:33.054260
+    ipython.py                  |file         |   415L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.235300
+    MANIFEST.in                 |file         |   571L|rw-rw-r--|walter|users|2006-05-02 09:51:34.737318
+    eggsetup.py                 |file         |   524L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.454308
+    README_Windows.txt          |file         |  1631L|rw-rw-r--|walter|users|2006-05-02 09:51:34.380305
+    setup_bdist_egg.py          |file         |   468L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.385306
+    win32_manual_post_install.py|file         |  4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+
+Reverse sorting is available too::
+
+    In [1]: ils | isort("size", reverse=True) | idump
+    Out[1]:
+    _                           |type         |size   |modestr  |owner |group|mdate
+    ChangeLog                   |file, symlink|215191L|rw-rw-r--|walter|users|2006-05-02 09:51:33.054260
+    setup.py                    |file         |  6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    win32_manual_post_install.py|file         |  4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+    IPython                     |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-03 15:20:42.756658
+    doc                         |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:33.837287
+    test                        |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:17.477723
+    README_Windows.txt          |file         |  1631L|rw-rw-r--|walter|users|2006-05-02 09:51:34.380305
+    MANIFEST.in                 |file         |   571L|rw-rw-r--|walter|users|2006-05-02 09:51:34.737318
+    eggsetup.py                 |file         |   524L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.454308
+    README                      |file         |   482L|rw-rw-r--|walter|users|2006-05-02 09:51:34.384305
+    setup_bdist_egg.py          |file         |   468L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.385306
+    ipython.py                  |file         |   415L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.235300
+    .svn                        |dir          |   153L|rwxrwxr-x|walter|users|2006-05-03 15:52:34.104150
+    debian                      |dir          |   126L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.166747
+    tools                       |dir          |   103L|rwxrwxr-x|walter|users|2006-05-02 09:51:28.145091
+    scripts                     |dir          |    79L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.305752
+    ..                          |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:15.589658
+    setupext                    |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.034742
+
+ieval
+-----
+Finally there's ``ieval``, which evaluates an expression on each input object.
+For example you can turn the entries from ``sys.path`` into real ifile objects like this::
+
+    In [1]: import sys
+    In [2]: sys.path | ieval(ifile) | idump
+    Out[2]:
+    _                                                                             |type        |size   |modestr  |owner  |group  |mdate
+    .                                                                             |OSError     |OSError|OSError  |OSError|OSError|OSError
+    /var/home/walter/checkouts/IPython/current                                    |dir         |  4096L|rwxrwxr-x|walter |users  |2006-05-03 15:52:34.104150
+    /var/home/walter/dist-py                                                      |dir         |    41L|rwxrwxr-x|walter |users  |2005-07-05 12:04:28.676697
+    /var/home/walter/checkouts/IPython/current                                    |dir         |  4096L|rwxrwxr-x|walter |users  |2006-05-03 15:52:34.104150
+    /var/home/walter/pythonroot                                                   |dir, symlink|    56L|rwxrwxr-x|walter |users  |2006-03-14 12:20:02.379872
+    /usr/local/lib/svn-python                                                     |OSError     |OSError|OSError  |OSError|OSError|OSError
+    /usr/local/lib/python24.zip                                                   |OSError     |OSError|OSError  |OSError|OSError|OSError
+    /usr/local/lib/python2.4                                                      |dir         | 16384L|rwxr-xr-x|root   |staff  |2005-10-17 14:54:32.928771
+    /usr/local/lib/python2.4/plat-linux2                                          |dir         |  4096L|rwxr-xr-x|root   |staff  |2005-10-03 14:02:51.373131
+    /usr/local/lib/python2.4/lib-tk                                               |dir         |  4096L|rwxr-xr-x|root   |staff  |2005-10-03 14:02:48.697041
+    /usr/local/lib/python2.4/lib-dynload                                          |dir         |  4096L|rwxr-xr-x|root   |staff  |2005-10-03 14:03:17.854024
+    /usr/local/lib/python2.4/site-packages                                        |dir         |  4096L|rwxr-xr-x|root   |staff  |2006-05-02 10:28:12.022753
+    /usr/local/lib/python2.4/site-packages/PIL                                    |dir         |  8192L|rwxr-xr-x|root   |staff  |2005-08-09 09:47:07.166087
+    /var/usr/local/lib/python2.4/site-packages/Django-0.91-py2.4.egg              |dir         |    34L|rwxr-xr-x|root   |staff  |2006-02-23 18:07:07.730865
+    /var/usr/local/lib/python2.4/site-packages/pysqlite-2.1.3-py2.4-linux-i686.egg|dir         |    57L|rwxr-xr-x|root   |staff  |2006-02-23 18:53:35.671621
+    /var/usr/local/lib/python2.4/site-packages/setuptools-0.6a10-py2.4.egg        |dir         |  4096L|rwxr-xr-x|root   |staff  |2006-03-06 16:56:11.203583
+    /var/usr/local/lib/python2.4/site-packages/Cheetah-1.0-py2.4-linux-i686.egg   |dir         |    35L|rwxr-xr-x|root   |staff  |2006-03-06 16:56:45.921711
+    /var/usr/local/lib/python2.4/site-packages/RhubarbTart-0.6dev_r4814-py2.4.egg |dir         |    39L|rwxr-xr-x|root   |staff  |2006-03-06 16:57:08.293438
+    /var/usr/local/lib/python2.4/site-packages/PasteDeploy-0.4-py2.4.egg          |dir         |    33L|rwxr-xr-x|root   |staff  |2006-03-06 16:57:10.143499
+    /var/usr/local/lib/python2.4/site-packages/Paste-0.5dev_r4832-py2.4.egg       |dir         |    33L|rwxr-xr-x|root   |staff  |2006-03-06 16:57:30.387157
+    /var/usr/local/lib/python2.4/site-packages/PasteScript-0.5dev_r4834-py2.4.egg |dir         |    33L|rwxr-xr-x|root   |staff  |2006-03-06 16:57:38.582423
+    /var/usr/local/lib/python2.4/site-packages/SQLAlchemy-0.1.3-py2.4.egg         |dir         |    38L|rwxr-xr-x|root   |staff  |2006-03-07 15:20:13.822043
+    /var/home/walter/checkouts/IPython/current/IPython/Extensions                 |dir         |  4096L|rwxrwxr-x|walter |users  |2006-05-03 15:56:47.119835
+    /var/home/walter/.ipython                                                     |dir         |  4096L|rwxrwxr-x|walter |users  |2006-05-03 16:04:30.605747
+
+Or you can get absolute paths for the output of ``ils`` like this::
+
+    In [1]: ils | ieval("_.abspath()") | idump
+    Out[1]:
+    _                                                                      |type         |size   |modestr  |owner |group|mdate
+    /var/home/walter/checkouts/IPython                                     |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:15.589658
+    /var/home/walter/checkouts/IPython/current/.svn                        |dir          |   153L|rwxrwxr-x|walter|users|2006-05-03 15:52:34.104150
+    /var/home/walter/checkouts/IPython/current/ChangeLog                   |file, symlink|215191L|rw-rw-r--|walter|users|2006-05-02 09:51:33.054260
+    /var/home/walter/checkouts/IPython/current/IPython                     |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-03 15:20:42.756658
+    /var/home/walter/checkouts/IPython/current/MANIFEST.in                 |file         |   571L|rw-rw-r--|walter|users|2006-05-02 09:51:34.737318
+    /var/home/walter/checkouts/IPython/current/README                      |file         |   482L|rw-rw-r--|walter|users|2006-05-02 09:51:34.384305
+    /var/home/walter/checkouts/IPython/current/README_Windows.txt          |file         |  1631L|rw-rw-r--|walter|users|2006-05-02 09:51:34.380305
+    /var/home/walter/checkouts/IPython/current/debian                      |dir          |   126L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.166747
+    /var/home/walter/checkouts/IPython/current/doc                         |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:33.837287
+    /var/home/walter/checkouts/IPython/current/eggsetup.py                 |file         |   524L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.454308
+    /var/home/walter/checkouts/IPython/current/ipython.py                  |file         |   415L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.235300
+    /var/home/walter/checkouts/IPython/current/scripts                     |dir          |    79L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.305752
+    /var/home/walter/checkouts/IPython/current/setup.py                    |file         |  6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    /var/home/walter/checkouts/IPython/current/setup_bdist_egg.py          |file         |   468L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.385306
+    /var/home/walter/checkouts/IPython/current/setupext                    |dir          |    61L|rwxrwxr-x|walter|users|2006-05-02 09:51:18.034742
+    /var/home/walter/checkouts/IPython/current/test                        |dir          |  4096L|rwxrwxr-x|walter|users|2006-05-02 09:51:17.477723
+    /var/home/walter/checkouts/IPython/current/tools                       |dir          |   103L|rwxrwxr-x|walter|users|2006-05-02 09:51:28.145091
+    /var/home/walter/checkouts/IPython/current/win32_manual_post_install.py|file         |  4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+
+Other pipes
+===========
+
+iglob
+-----
+
+You can use `iglob` for getting files that match a certain pattern (it uses `glob.glob()` internally)::
+
+    In [1]: iglob("*.py") | idump
+    Out[1]:
+    _                           |type|size |modestr  |owner |group|mdate
+    win32_manual_post_install.py|file|4477L|rw-rw-r--|walter|users|2006-05-02 09:51:34.061294
+    ipython.py                  |file| 415L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.235300
+    setup.py                    |file|6675L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.381305
+    setup_bdist_egg.py          |file| 468L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.385306
+    eggsetup.py                 |file| 524L|rwxrwxr-x|walter|users|2006-05-02 09:51:34.454308
+
+ienv
+----
+
+``ienv`` will give you the environment variables::
+
+    In [1]: ienv | isort("key") | ifilter("'PY' in key") | idump
+    Out[1]:
+    key          |value
+    PYTHONPATH   |/var/home/walter/dist-py:.:/var/home/walter/pythonroot:/usr/local/lib/svn-python
+    PYTHONSTARTUP|/var/home/walter/.pythonrc.py
+
+ipwd
+----
+
+If you have a working pwd module, ``ipwd`` will give you the Unix password database::
+
+    In [1]: ipwd | ifilter("uid < 10") | idump
+    Out[1]:
+    name  |passwd|uid|gid  |gecos |dir            |shell
+    root  |x     |  0|    0|root  |/root          |/bin/bash
+    daemon|x     |  1|    1|daemon|/usr/sbin      |/bin/sh
+    bin   |x     |  2|    2|bin   |/bin           |/bin/sh
+    sys   |x     |  3|    3|sys   |/dev           |/bin/sh
+    sync  |x     |  4|65534|sync  |/bin           |/bin/sync
+    games |x     |  5|   60|games |/usr/games     |/bin/sh
+    man   |x     |  6|   12|man   |/var/cache/man |/bin/sh
+    lp    |x     |  7|    7|lp    |/var/spool/lpd |/bin/sh
+    mail  |x     |  8|    8|mail  |/var/mail      |/bin/sh
+    news  |x     |  9|    9|news  |/var/spool/news|/bin/sh
+
+igrp
+----
+
+``igrp`` will give you the Unix group database::
+
+    In [1]: igrp | ifilter("gid < 10") | idump
+    Out[1]:
+    name  |passwd|gid|mem
+    root  |x     |  0|[]
+    daemon|x     |  1|[]
+    bin   |x     |  2|[]
+    sys   |x     |  3|[]
+    adm   |x     |  4|[]
+    tty   |x     |  5|[]
+    disk  |x     |  6|['backup']
+    lp    |x     |  7|[]
+    mail  |x     |  8|[]
+    news  |x     |  9|[]
+
+Using pipes in loops
+====================
+
+A pipe is iterable, so it's possible to use a pipe in a loop::
+
+    In [1]: for f in iwalk("~/checkouts/IPython/current", dirs=False) | ifilter("_.endswith('.pyc')")
+       ...:     f.remove()
+
+Pipes support `__getitem__`, so to get the last `.pyc` file can you do::
+
+    In [1]: (iwalk("~/checkouts/IPython/current", dirs=False) | ifilter("_.endswith('.pyc')"))[-1]
+    Out[1]: ifile('/var/home/walter/checkouts/IPython/current/IPython/Extensions/pspersistence.pyc')
+
+It's possible to add [:SupportingIPipe:support for ipipe] to your own classes too.
+
+Creating Field Tables
+=====================
+
+It's easy to create custom one-off tables by using the FieldTable class, like this::
+
+    [tools]|37> f = ipipe.FieldTable('name','addr')
+    [tools]|38> f.add(name = 'Aku Ankka', addr = 'elm street')
+    [tools]|39> f.add(name = 'Iines Ankka', addr = 'some street')
+    [tools]|40> f
+           <40>
+    name       |addr
+    Aku Ankka  |elm street
+    Iines Ankka|some street

@@ -1,0 +1,55 @@
+Please join us in creating a cookbook for IPython.
+
+See also: [http://ipython.org/ipython-doc/stable/interactive/tips.html IPython tips & tricks] in the documentation.
+
+* [[Cookbook/Hotkeys for faster notebook editing|Hotkeys for faster notebook editing]]
+* [[Cookbook/Updating code that uses IPython for 0.11|Updating code that uses IPython for 0.11]]
+* [[Cookbook/Moving config to IPython 0.11|Moving config to IPython 0.11]]
+* [[Cookbook/Connecting to a remote kernel via ssh|Connecting to a remote kernel via ssh]]
+* [[Cookbook/Running Screen|using screen and saving your DISPLAY variable]]
+* [[Cookbook/python.NET|Integration with python.NET python.exe]]
+* [[Cookbook/Integrate_with_any_loop(panda3d_example) | Integrate IPython with any eventloop (panda3d)]]
+* [[Cookbook/Custom_magic_examples|Custom magic examples]]
+* [[Cookbook/Sending built-in help to the pager|Sending built-in help to the pager]]
+* [[Cookbook/Ignoring some commands in history|Ignoring some commands in history]]
+* [[Cookbook/Styles | Styles]] - Create custom stylesheets for iPython qtconsole.
+* [[Cookbook/Styling_Notebook | Styling Notebook]] - How to use custom stylesheets from ThemeRoller for IPython Notebook
+* [[Cookbook/Branded_Notebook_Interactive_Tutorial|Offering a branded Notebook as an interactive tutorial]]
+* [[Cookbook/Dynamic_Prompt]] - Update the prompt at runtime, every time it's printed.
+* [[Cookbook/DatedLog]] - Automatically appends to a dated log file whenever a session is started.
+* [[Cookbook/PyTestNotebook | Collecting ipython notebooks in py.test]]
+
+== Older recipes ==
+
+Note that these examples may need to be updated to work with IPython 0.11 or newer.
+
+* [[Cookbook/The sh profile|The 'sh' profile documentation]]
+* [[Cookbook/String list processing|String lists allow you to use IPython for awk-like purposes with great ease]]
+* [[Cookbook/envpersist|envpersist.py - %env that allows persistent environment variable modifications]]
+* [[Cookbook/ipy_exportdb|ipy_exportdb.py - exporting %store'd macros, aliases etc. for distribution and reuse]]
+* [[Cookbook/ipy_render|ipy_render.py - rendering templates to clipboard (win32)]]
+* [[Cookbook/Shadow History|Shadow History and %rep]]
+* [[Cookbook/Macro arguments|Passing arguments to macros]]
+* Supporting CTRL-C in threads - [[Cookbook/Interrupting threads|Interrupting Threads]]
+* [[Cookbook/Storing aliases|Storing aliases]]
+* [[Cookbook/Job control extension|Job control extension]] (jobctrl.py)
+* The [[Cookbook/User config file|User config file]] is a good place to load your favourite extensions.
+* [[Cookbook/Custom completers|Custom completers]] make the user experience quick and smooth.
+* [[Cookbook/Running a file in the background|Running a file in the background]]
+* [[Cookbook/Defining prompts via hooks|Defining prompts via hooks]]
+* [[Old Embedding/GTK|Embedding IPython in a GTK widget using PyGTK]]
+* [[Old Embedding/Tkinter|Embedding IPython in a Tkinter widget]]
+* [[Cookbook/Using IPython with TextMate|IPython/TextMate integration]]
+* [[Cookbook/Using IPython with Console2|IPython/Console2 integration]]
+* [[Cookbook/Saving the session on exit|Saving the session on exit like the R shell]]
+* [[Cookbook/Leo IPython Bridge|Creating a two-way bridge between IPython and Leo]]
+* [[Cookbook/IPythonEmacs23|Using IPython in Emacs 23]]
+* [[Cookbook/GVim integration|Using IPython with GVim]]
+* [[Cookbook/Logging|Logging to a file with time-stamps]]
+* [[Cookbook/Standalone executable zip|IPython in a self-contained executable zip file]]
+
+=== Using ipipe ===
+ipipe is a handy extension contributed by Walter Dörwald. It allows "piping" generators to produce shell pipeline like behaviour with python data.
+
+* See [[Using ipipe]] for information about how to activate and use ipipe.
+* See [[Cookbook/Adding support for ipipe]] for information about how to add support for ipipe to your own classes.

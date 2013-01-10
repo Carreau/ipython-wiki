@@ -1,0 +1,44 @@
+Make sure python is referenced in your Path: <code>< my python path >\python.exe</code>
+(where < my python path > is the directory where you installed python, such as "C:\Python26")
+
+Make sure IPython is installed ([http://ipython.org/download.html downloads]), as well as PyReadline (https://launchpad.net/pyreadline/+download)
+
+== Adding an IPython tab ==
+
+In Console2, right-click go to Edit --> Settings... --> Tabs
+
+Add new tab with
+  Title: IPython
+  Icon: < my python path >\DLLs\py.ico
+  Shell: cmd.exe /k "< my python path >\Scripts\ipython.py -p sh"
+  Startup dir: C:\ (or wherever)
+
+Hit ok and in your Console just go to File --> New Tab --> IPython and you're off and running!
+
+If the upper does not work, try this:
+
+Add new tab with
+  Title: IPython
+  Icon: < my python path >\DLLs\py.ico
+  Shell: < my python path >\Scripts\ipython.exe (C:\Python27\Scripts\ipython.exe)
+  Startup dir: C:\ (or wherever)
+
+If the above does not work, try this:
+
+Add new tab with
+  Title: IPython
+  Icon: < my python path >\DLLs\py.ico
+  Shell: cmd.exe /k "< my python path >\Scripts\ipython.exe"
+  Startup dir: C:\ (or wherever)
+
+== Creating a shortcut ==
+
+To create a shortcut, Create a shortcut to console.exe, right-click -> properties. Set target to e.g. <pre>C:\opt\Console\console.exe -c "/k python c:\python25\scripts\ipython.py -p sh"</pre>
+
+For Console2, you'll need to use the <code>-r</code> option in place of <code>-c</code>. You could also use [http://vvtools.googlecode.com/svn/trunk/config/console.xml this Console2 example config file].
+
+For newer version of ipython, user:
+<pre>C:\opt\Console\console.exe -c "/k python c:\python27\scripts\ipython-script.py"</pre>
+
+
+If you have problems with ctrl+C killing Console2 immediately, launch ipython from a normal Console2 session manually.

@@ -1,0 +1,36 @@
+The configuration system has been rewritten for IPython 0.11, and the config files for previous versions will no longer work. To start configuring, you will need to use the command ``ipython profile create``. This will create default config files, and tell you where they have been placed. The location depends on the system, but is typically ``~/.ipython/profile_default/ipython_config.py``.
+
+These files are loaded as Python code, so they can contain arbitrary expressions.
+
+A key variable is ``c.InteractiveShellApp.exec_lines``. This is a list of strings of IPython code which will be executed in your shell before the first prompt.
+
+To create other profiles, type ``ipython profile create <name>``. The bundled profiles (cluster, math, pylab, pysh and sympy) will automatically be created the first time you start IPython using them.
+
+**Note:** This page is a work in progress. If you've already upgraded your configuration to the 0.11 system, please add any useful information.
+
+
+One User's Experience
+=====================
+
+Here is how I upgraded my config on Linux. I was unable to determine any automated process and since the system was new with 0.11, I just started from scratch.
+
+I used the ``profile create`` command within ipython, which created ``~/.ipython/profile_default`` and created some history files and other files I know nothing about in that directory.  Then I created a new file, ``ipython_config.py`` in the same directory. This is where the configuration commands go.
+
+Now, the documentation on configuration in *IPython Documentation* (singular PDF file) could use some revision. I grabbed some things and started creating a self-documenting ipython_config.py. One item of confusion in that documentation is that it suggests that your configuration file must not have spaces around the equals sign in the attribute=value statements. This doesn't seem to be the case, and would seem to be irregular with python syntax.
+
+My main concern was to get emacs going as my editor (for %edit) using the emacs server mechanism. The code to set this up on emacs end is documented but the statement to invoke it from ipython was not covered. Here is a minimal config file to set that up::
+
+    c=get_config()  # get the Config instance
+    c.InteractiveShell.editor='emacsclient -c -a=emacs'
+
+Then it works for terminal ipython. If you use the qtconsole, then this should be added::
+
+    c.IPythonWidget.editor = 'emacsclient -c -a=emacs'
+
+These also might be useful::
+
+    c.InteractiveShell.autoindent=True
+    c.InteractiveShell.colors='LightBG'
+
+**Note:** if you copy code out of the documentation, you should be aware that someone used the funky non-ASCII quotes and other characters. If you copy/paste into an editor and save those characters, ipython will die bitterly and complain about the syntax error and no coding chosen.
+

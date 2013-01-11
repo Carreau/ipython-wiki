@@ -2,8 +2,8 @@ Using this conftest.py, you can collect ipynb files to be run.
 
 For each ipynb file, a kernel is started, all cells are executed in order and exceptions occuring in the cells will show up as failed tests.
 
-https://gist.github.com/2621679
+[https://gist.github.com/2621679]
 
 minrk made some example code to compare the output values of the cells to the values stored in the notebook file instead. It can be used in a very similar manner in the code above. It can be found here:
 
-https://gist.github.com/2620735
+[https://gist.github.com/2620735]

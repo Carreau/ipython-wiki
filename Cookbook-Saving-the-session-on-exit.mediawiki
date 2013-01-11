@@ -4,7 +4,7 @@ the session before exit.
 
 Here is a simple code to transform the IPython shell logger like the R one. Just copy the code below in <code>~/.ipython/logger.py</code> (or whatever you want) and append <code>ip.ex("import logger")</code> to <code>~/.ipython/ipy_user_conf.py</code>
 
-<syntaxhighlight>
+<pre>
 import IPython.ipapi
 import sys, os
 
@@ -44,4 +44,4 @@ def shutdown_logger(self):
 
 ip.set_hook('late_startup_hook', startup_logger)    
 ip.set_hook('shutdown_hook', shutdown_logger)
-</syntaxhighlight>
+</pre>

@@ -7,7 +7,7 @@ Happy theming! :)
 ----
 
 Syntax highlighting depends on the [http://pygments.org Pygments] package.
- 
+
 Styles are a .py file stored in: site-packages/pygments/styles/
 
 The element you want to color is called a "token".

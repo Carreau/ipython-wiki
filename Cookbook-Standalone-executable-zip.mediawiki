@@ -4,7 +4,7 @@ With the code below, you can make a standalone executable zip file that contains
 
 -----
 
-<syntaxhighlight>
+<pre>
 ## Author:  Lisandro Dalcin
 ## Contact: dalcinl@gmail.com
 
@@ -112,4 +112,4 @@ try:
     os.chmod(target, mode)
 except:
     pass
-</syntaxhighlight>
+</pre>

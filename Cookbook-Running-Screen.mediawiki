@@ -44,7 +44,7 @@ xpra attach :100
 You can detach from both these sessions, and they'll keep running, get 
 home or wherever... reattach to screen and also reattach to your xpra 
 virtual display. Good luck!
- 
+
 
 =Another approach for working with SSH and GNU screen (helpful for IPython)=
 
@@ -59,15 +59,15 @@ But sometimes you'd rather have an actual term or shell session stay alive. This
 My workaround for this has been the following:
 
 1 On the ''host'' machine, that is the one you are logging into, in your <code>.bash_profile </code> (which gets read when you log in via ssh) you should add the line:
-  <pre>
-   echo "export DISPLAY=$DISPLAY" > .display.`whoami`.`hostname`
-  </pre>
+<pre>
+echo "export DISPLAY=$DISPLAY" > .display.`whoami`.`hostname`
+</pre>
 
 2 Again, on your ''host'' machine,make sure the following is in your .bashrc:
-  <pre>
-   ## set the prompt command to read the .disply file
-   export PROMPT_COMMAND=". ~/.display.`whoami`.`hostname`"
-  </pre>
+<pre>
+## set the prompt command to read the .disply file
+export PROMPT_COMMAND=". ~/.display.`whoami`.`hostname`"
+</pre>
 
 
 What is happening here is that everytime you log in, the .bash_profile file creates a new file in your home directory, specific to your user, and the hostname. Whenever you log out and log back in, that file is updated with the appropriate DISPLAY information. In the .bashrc file, we've created a PROMPT_COMMAND that will read that file everytime you hit return in your shell. This can cause some annoyances if the file does not exist, for example if you use the 'su' command to become another user. However, overall it works quite well, such that when you return to a running ''screen'' session, the DISPLAY variable will be updated and you'll be able to send X-display windows back to your client machine.
@@ -80,7 +80,7 @@ screen -S my_description
 </pre>
 
 Where ''my_description'' is some string that has meaning to you as a 'session' identifier. If only one <code>screen</code> session is running then simply <code>screen -r</code> will reconnect. However, if you have more, things can get complicated. The following script is helpful in such a case:
-<source lang='bash'>
+<pre>
 #!/bin/bash
 
 # filters the screen -ls output to show the sesssions
@@ -164,7 +164,7 @@ else
 
 fi
 
-</source>
+</pre>
 
 
 Save this file in your $HOME/bin directory as 'screenlist' and make it executable: <code>chmod +x screenlist</code>. Then at the command prompt you can type:

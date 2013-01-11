@@ -4,7 +4,7 @@ If you want to add a bit of color to IPython Notebook appearance, it can be done
 * Visit [http://jqueryui.com/themeroller/ ThemeRoller gallery] and either roll your own theme by adjusting available elements or download ready made theme:
 
 
-:[[File:themeroller-scr-1.png]]          [[File:themeroller-scr-2.png]]
+:[[File/Themeroller-scr-1.png]]          [[File/Themeroller-scr-2.png]]
 
 
 :then copy just the theme folder (it's subfolder in css folder in downloaded theme archive), and put it in your <code>..\IPython\frontend\html\notebook\static\jquery\css\themes</code> local folder. Following the screenshots we have created <code>..\IPython\frontend\html\notebook\static\jquery\css\themes\redmond</code> folder.
@@ -31,11 +31,11 @@ If you want to add a bit of color to IPython Notebook appearance, it can be done
 ==Screenshots==
 
 Redmond Theme:
-:[[File:Chrome-theme-1.png]]
+:[[File/Chrome-theme-1.png]]
 
 
 Hot-Sneaks Theme:
-:[[File:Chrome-theme-2.png]]
+:[[File/Chrome-theme-2.png]]
 
 
 Voila!

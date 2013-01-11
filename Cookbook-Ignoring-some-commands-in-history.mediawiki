@@ -1,6 +1,6 @@
 This hack emulates the HISTIGNORE functionality in bash. It only hides relevant commands in the readline UI, not the internal history file. To use, run it at startup via c.InteractiveShellApp.exec_files in your ipython_config.py
 
-<syntaxhighlight>
+<pre>
 # our history_ignore predicate
 history_ignore = lambda str: str.startswith("cd")
 
@@ -17,4 +17,4 @@ get_ipython().readline.add_history = my_add_history
 #This is up to date Oct 2011, but may change in the future.
 get_ipython().readline.clear_history()
 get_ipython().refill_readline_hist()
-</syntaxhighlight>
+</pre>

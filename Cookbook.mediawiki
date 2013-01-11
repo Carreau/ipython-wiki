@@ -8,14 +8,14 @@ See also: [http://ipython.org/ipython-doc/stable/interactive/tips.html IPython t
 * [[Cookbook/Connecting to a remote kernel via ssh|Connecting to a remote kernel via ssh]]
 * [[Cookbook/Running Screen|using screen and saving your DISPLAY variable]]
 * [[Cookbook/python.NET|Integration with python.NET python.exe]]
-* [[Cookbook/Integrate_with_any_loop(panda3d_example) | Integrate IPython with any eventloop (panda3d)]]
-* [[Cookbook/Custom_magic_examples|Custom magic examples]]
+* [[Cookbook/Integrate with any loop(panda3d example) | Integrate IPython with any eventloop (panda3d)]]
+* [[Cookbook/Custom magic examples|Custom magic examples]]
 * [[Cookbook/Sending built-in help to the pager|Sending built-in help to the pager]]
 * [[Cookbook/Ignoring some commands in history|Ignoring some commands in history]]
 * [[Cookbook/Styles | Styles]] - Create custom stylesheets for iPython qtconsole.
-* [[Cookbook/Styling_Notebook | Styling Notebook]] - How to use custom stylesheets from ThemeRoller for IPython Notebook
-* [[Cookbook/Branded_Notebook_Interactive_Tutorial|Offering a branded Notebook as an interactive tutorial]]
-* [[Cookbook/Dynamic_Prompt]] - Update the prompt at runtime, every time it's printed.
+* [[Cookbook/Styling Notebook | Styling Notebook]] - How to use custom stylesheets from ThemeRoller for IPython Notebook
+* [[Cookbook/Branded Notebook Interactive Tutorial|Offering a branded Notebook as an interactive tutorial]]
+* [[Cookbook/Dynamic Prompt]] - Update the prompt at runtime, every time it's printed.
 * [[Cookbook/DatedLog]] - Automatically appends to a dated log file whenever a session is started.
 * [[Cookbook/PyTestNotebook | Collecting ipython notebooks in py.test]]
 

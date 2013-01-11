@@ -16,12 +16,10 @@ Where you can examine event.line (whole line), event.symbol (the symbol under co
 
 After that, you need to hook the completer with IPython by doing:
 
-<syntaxhighlight>
-ip = get_ipython()
-ip.set_hook('complete_command', apt_completers, re_key = '.*apt-get')
-
-# or instead of re_key, do str_key = 'apt-get' which is quicker but doesn't handle 'sudo apt-get'.
-</syntaxhighlight>
+ ip = get_ipython()
+ ip.set_hook('complete_command', apt_completers, re_key = '.*apt-get')
+ 
+ # or instead of re_key, do str_key = 'apt-get' which is quicker but doesn't handle 'sudo apt-get'.
 
 There are some completers already in place.
 

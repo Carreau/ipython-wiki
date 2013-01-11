@@ -29,7 +29,7 @@ Suggestions for improvement very much appreciated! If you find bugs in the ipyth
 
 Here is a simple example showing how the IPython console can be embedded in a short Python/PyGTK script to give a basic scrolling terminal window.
 
-[[File:ipython-in-pygtk.png]]
+[[File/Ipython-in-pygtk.png]]
 
 Here is the code:
 

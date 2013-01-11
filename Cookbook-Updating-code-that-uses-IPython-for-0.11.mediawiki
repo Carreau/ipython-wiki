@@ -14,20 +14,20 @@ If you want to start a regular IPython session, that has changed:
 
 Old code:
 
-<syntaxhighlight>
+<pre>
 from IPython.Shell import make_IPython
 shell = make_IPython()
 shell()
-</syntaxhighlight>
+</pre>
 
 New code:
 
-<syntaxhighlight>
+<pre>
 from IPython.frontend.terminal.ipapp import TerminalIPythonApp
 app = TerminalIPythonApp.instance()
 app.initialize(argv=[]) # argv=[] instructs IPython to ignore sys.argv
 app.start()
-</syntaxhighlight>
+</pre>
 
 == Embedding API ==
 
@@ -38,7 +38,7 @@ This is often not actually what people want, and you may want to check out the a
 
 Old code:
 
-<syntaxhighlight>
+<pre>
 import IPython
 argv = ["-prompt_in1", "myprompt [\\#]> ",
         "-prompt_out", "myprompt [\\#]: ",
@@ -47,11 +47,11 @@ shell = IPython.Shell.IPShellEmbed(argv=argv, user_ns=namespace)
 shell.set_banner(shell.IP.BANNER + '\n\n' + banner)
 shell.IP.user_ns = {}
 shell()
-</syntaxhighlight>
+</pre>
 
 New code:
 
-<syntaxhighlight>
+<pre>
 import IPython
 from IPython.config.loader import Config
 cfg = Config()
@@ -65,7 +65,7 @@ from IPython.frontend.terminal.embed import InteractiveShellEmbed
 shell = InteractiveShellEmbed(config=cfg, user_ns=namespace, banner2=banner)
 shell.user_ns = {}
 shell()
-</syntaxhighlight>
+</pre>
 
 === Custom interact loop ===
 * see ipythons interact loop: [https://github.com/ipython/ipython/blob/master/IPython/frontend/terminal/interactiveshell.py#L258]

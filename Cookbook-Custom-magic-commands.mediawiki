@@ -1,1 +1,1 @@
-#REDIRECT [[Cookbook/Custom_magic_examples]]
+#REDIRECT [[Cookbook/Custom magic examples]]

@@ -5,7 +5,7 @@ All of these code snippets should be entered into the "Command(s)" field of a ne
 I've added the following commands to the Python bundle in my copy of TextMate and found them to be useful:
 
 == Run the current file using IPython's %run ==
-<syntaxhighlight lang="applescript">
+<pre>
 #!/bin/bash
     
 osascript <<- APPLESCRIPT
@@ -20,10 +20,10 @@ osascript <<- APPLESCRIPT
 		do script "%run -e -i -n '$TM_FILEPATH'" in currentTab
 	end tell
 APPLESCRIPT
-</syntaxhighlight>
+</pre>
 
 == Toggle IPython's %pdb state ==
-<syntaxhighlight lang="applescript">
+<pre>
 #!/bin/bash
 
 osascript <<- APPLESCRIPT
@@ -38,12 +38,12 @@ osascript <<- APPLESCRIPT
 		do script "%pdb" in currentTab
 	end tell
 APPLESCRIPT
-</syntaxhighlight>
+</pre>
 
 == Add a pdb breakpoint at the current line ==
 You must be in pdb/ipdb
 
-<syntaxhighlight lang="applescript">
+<pre>
 #!/bin/bash
 
 osascript  <<- APPLESCRIPT
@@ -58,11 +58,11 @@ osascript  <<- APPLESCRIPT
 		do script "break $TM_FILEPATH:$TM_LINE_NUMBER" in currentTab
 	end tell
 APPLESCRIPT
-</syntaxhighlight>
+</pre>
 
 == Clear breakpoint for the current line ==
 
-<syntaxhighlight lang="applescript">
+<pre>
 #!/bin/bash
 
 osascript  <<- APPLESCRIPT
@@ -77,4 +77,4 @@ osascript  <<- APPLESCRIPT
 		do script "clear $TM_FILEPATH:$TM_LINE_NUMBER" in currentTab
 	end tell
 APPLESCRIPT
-</syntaxhighlight>
+</pre>

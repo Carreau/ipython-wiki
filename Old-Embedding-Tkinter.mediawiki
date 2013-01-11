@@ -1,6 +1,6 @@
 This is just an extension of the very useful code posted on this cookbook to embed IPython in a GTK text widget to enable IPython to be used within Tkinter.
 
-The original GTK code can be found [:Cookbook/EmbeddingInGTK: here].
+The original GTK code can be found [[Old Embedding GTK|here]].
 
 The GTK code was re-written in Tkinter http://wiki.python.org/moin/TkInter in oder to allow IPython to be embedded in the [http://www.cse.scitech.ac.uk/ccg/software/ccp1gui CCP1GUI] chemistry GUI.
 

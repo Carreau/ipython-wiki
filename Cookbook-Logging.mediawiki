@@ -2,7 +2,7 @@ Here is an alternative logging solution that lets you record your sessions in a 
 
 Add the following lines to your <code>.ipython/ipy_user_conf.py</code>:
 
-<syntaxhighlight>
+<pre>
 from time import strftime
 
 def main():
@@ -24,4 +24,4 @@ def main():
       
     except RuntimeError:
         print " Already logging to "+ip.IP.logger.logfname
-</syntaxhighlight>
+</pre>

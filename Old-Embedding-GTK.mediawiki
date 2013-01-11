@@ -33,7 +33,7 @@ Here is a simple example showing how the IPython console can be embedded in a sh
 
 Here is the code:
 
-<syntaxhighlight>
+<pre>
 import gtk
 from ipython_view import *
 import pango
@@ -60,15 +60,15 @@ W.show()
 W.connect('delete_event',lambda x,y:False)
 W.connect('destroy',lambda x:gtk.main_quit())
 gtk.main()
-</syntaxhighlight>
+</pre>
 
 == Exposing variables to the shell ==
 
 If you have variables you want to expose in the shell, use the following syntax. Also look at the files in the Accerciser source code for how to synchronise other aspects of your GUI with the actions inthe IPython prompt.
 
-<syntaxhighlight>
+<pre>
 V.updateNamespace({'myvar': myvar})
-</syntaxhighlight>
+</pre>
 
 == ipython_view.py ==
 
@@ -78,7 +78,7 @@ Changes relative to the copy in Subversion:
 * throw an exception on failed import, instead of remaining silent.
 * added ''if argv is None: argv = []'' to fix case of Python being called with commandline args not intended for ipython
 
-<syntaxhighlight>
+<pre>
 """
 Backend to the console plugin.
 
@@ -379,4 +379,4 @@ class IPythonView(ConsoleView, IterableIPShell):
     if rv: rv = rv.strip('\n')
     self.showReturned(rv)
     self.cout.truncate(0)
-</syntaxhighlight>
+</pre>

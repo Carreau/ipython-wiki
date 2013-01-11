@@ -4,17 +4,15 @@ Both readline history and standard IPython history are fragile beasts - readline
 
 In shadow history, however, all the commands (well, most - the ones starting at the beginning of input line) are stored forever. You can search through shadow history by running the command <code>%hist -g</code> (g is for grep):
 
-<pre>
-[d:ipython/dist]|38> hist -g change
-0720: svn revert doc/ChangeLog
-0721: svn ci -m "whitespace cleanup changelog"
-0766: hist -g change
-===
-^shadow history ends, fetch by %rep <number> (must start with 0)
-=== start of normal history ===
-38: _ip.magic("hist -g change")
-[d:ipython/dist]|39>
-</pre>
+ [d:ipython/dist]|38> hist -g change
+ 0720: svn revert doc/ChangeLog
+ 0721: svn ci -m "whitespace cleanup changelog"
+ 0766: hist -g change
+ ===
+ ^shadow history ends, fetch by %rep <number> (must start with 0)
+ === start of normal history ===
+ 38: _ip.magic("hist -g change")
+ [d:ipython/dist]|39>
 
 Note how the command greps through the shadow and normal history. Shadow history entries have the 0 as prefix (e.g. 0721) to tell them apart from normal history entries.
 

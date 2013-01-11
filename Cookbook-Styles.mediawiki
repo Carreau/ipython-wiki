@@ -15,7 +15,7 @@ The element you want to color is called a "token".
 See the list of available [http://pygments.org/docs/tokens/ tokens]
 
 Make sure to include all the tokens in a line:
-from pygments.token import <your tokens>
+ from pygments.token import <your tokens>
 
 The name of the style class is particular. Use the same name as your file name, first letter capitalized + "Style"
 Example:

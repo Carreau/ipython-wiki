@@ -1,14 +1,14 @@
-http://www.emacswiki.org/emacs/PythonMode#toc10
+[http://www.emacswiki.org/emacs/PythonMode#toc10]
 
 rileyrgdev AT gmail DOT net
 
 I found this which got me up and running with IPython integrated nicely into emacs 23.
 
-http://lists.ipython.scipy.org/pipermail/ipython-user/2008-September/005791.html
+[http://lists.ipython.scipy.org/pipermail/ipython-user/2008-September/005791.html]
 
 my python integration is now like this:
 
-<syntaxhighlight lang="lisp">
+<pre>
 (setq load-path
       (append (list nil
                     "~/.emacs.d/python-mode-1.0/"
@@ -30,6 +30,6 @@ my python integration is now like this:
 (pymacs-load "ropemacs" "rope-")
 
 (provide 'python-programming)
-</syntaxhighlight>
+</pre>
 
 Note the defadvice to return focus to the python buffer you py-execute-buffer from: it does not work. Can anyone explain why not?

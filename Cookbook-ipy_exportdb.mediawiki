@@ -28,7 +28,7 @@ Now, we have it in our IPython database, but it's not really easy to distribute 
 
 This prints out the "export file" (which is legal python), the relevant portions of which are:
 
-<syntaxhighlight>
+<pre>
 import IPython.ipapi
 ip = IPython.ipapi.get()
 
@@ -44,7 +44,7 @@ ip.defmacro('foo',
 ...
 ip.defalias('bar', 'hubba')
 ...
-</syntaxhighlight>
+</pre>
 
 You can also provide the output file name to exportdb().
 

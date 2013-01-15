@@ -20,13 +20,13 @@ http://mail.scipy.org/pipermail/ipython-dev/2012-August/010025.html
 Example Message:
 ================
 
-```
+```text
 Hi, 
 This PR is without activities for 1 month now, 
 I'm going to close it and open an issue to reference it. 
 This does not mean than we refuse the code that is here, but that we try to keep the number of opened Pull request as low as possible to have better bird view of active code.
 
-Fell free to reopen this PR whenever you want or contact us if you have any questions.
+Feel free to reopen this PR whenever you want or contact us if you have any questions.
 
 Thanks for contributing.
 

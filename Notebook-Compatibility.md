@@ -1,4 +1,4 @@
-Officially, IPython Notebook works with the following browsers:
+Officially, IPython Notebook works with the following browsers (some version my need websocket to be activated):
 
 - Safari ≥ 5
 - Firefox ≥ 6

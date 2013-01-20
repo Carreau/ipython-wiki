@@ -44,6 +44,8 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * The [http://tw.rpi.edu/web/project/ECOOP ECOOP] project is using IPython to develop the software library for its [http://tw.rpi.edu/web/doc/ICES_2012 use-case] .
 
+* The [http://www.ampl.com/ AMPL] modeling system for large-scale mathematical optimization can integrate with IPython with the help of AMPL magics provided by the [https://github.com/vitaut/iampl IAMPL] project.
+
 == In teaching ==
 
 * The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/2012/10/transitioning-to-the-ipython-notebook uses the IPython Notebook as one of its core technologies].

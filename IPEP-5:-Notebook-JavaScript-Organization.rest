@@ -65,7 +65,15 @@ Currently our JS code is a bunch of files that we include by hand on each page. 
 CommonJS
 --------
 
-CommonJS (http://www.commonjs.org/) is an API created to add package management and importing to JavaScript. It uses the form: `mymod = require('mymodule')` which is the equivalent of `import mymodule as mymod` in Python. The CommonJS API is synchronous and ignores the realities of browsers.  Because of this it is primarily used in server side JS code (Node.js).
+CommonJS (http://www.commonjs.org/) is an API created to add package management and importing to JavaScript. It uses the form::
+
+    mymod = require('mymodule')
+
+which is the equivalent of::
+
+    import mymodule as mymod
+
+in Python. The CommonJS API is synchronous and ignores the realities of browsers.  Because of this it is primarily used in server side JS code (Node.js).
 
 RequireJS
 ---------

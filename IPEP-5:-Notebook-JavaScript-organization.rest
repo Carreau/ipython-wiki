@@ -1,6 +1,3 @@
-****************************************
-IPEP-5: Javascript structure and testing
-****************************************
 
 :Author:
     Bussonnier matthias <bussonniermatthias@gmail.com>

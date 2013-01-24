@@ -78,7 +78,7 @@ in Python. The CommonJS API is synchronous and ignores the realities of browsers
 RequireJS
 ---------
 
-RequireJS is a JavaScript library that attempts to bring the features of CommonJs into the asynchronous context of browsers. It is gaining lots of traction, but is no small dependency - if you but into it, you have to completely reorganize your JS code.
+RequireJS (http://requirejs.org/) is a JavaScript library that attempts to bring the features of CommonJs into the asynchronous context of browsers. It is gaining lots of traction, but is no small dependency - if you but into it, you have to completely reorganize your JS code.
 
 Advantages:
 
@@ -94,4 +94,10 @@ Disadvantages:
 * Anyone who wants to use our JS code would have to buy into using RequireJS. This is huge...
 * It is a little painful to integrate Js libraries (jQuery, Bootstrap, etc.) that don't use RequireJS.
 
-Recommendation: We should build a sample project that uses RequireJS to explore its features. This sample project should include jQuery, Bootstrap and organize JS code in a way similar to what we would need.
+Recommendation: We should build a sample project that uses RequireJS to explore its features. This sample project should include jQuery, Bootstrap and organize JS code in a way similar to what we would need. We should use this sample project as a test to see how we should organize our JS code.
+
+Some points to consider during this reorganization:
+
+* We probably want to organize our code into different subdirs, maybe by which page it goes with.
+* Keep in mind that we may end up rewriting our JS code using CoffeeScript and/or Backbone in the future.  We need a structure that is flexible enough for that.
+* We want it to be easy for people to reuse our JavaScript.

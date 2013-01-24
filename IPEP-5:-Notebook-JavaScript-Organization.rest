@@ -1,0 +1,89 @@
+****************************************
+IPEP-5: Javascript structure and testing
+****************************************
+
+:Author:
+    Bussonnier matthias <bussonniermatthias@gmail.com>
+:Status:
+    Draft
+:Created:
+    2012-10-23
+:Updated:
+    2012-10-23
+
+Abstract
+========
+
+The Notebook's JavaScript implementation is growing more and more complex. This is making it difficult to scale its development and write good clean code. Some specific problems we are having:
+
+* Lots of JS files with complex, implicit dependencies.
+* Painful management of all of those files in our HTML templates.
+* All JS files are in a single directory. As we add more pages and JS files, this becomes unmanageable.
+* No minimization/build logic for deployment.
+* Difficult to grab some of the JS and reuse it in other projects.
+* Model and view logic is welded together.
+
+This is a proposal to explore what we might do about these problems.
+
+CoffeeScript
+===========
+
+CoffeeScript (http://coffeescript.org/) is a mini-language that sits on top of JavaScript and compiles into it. It is praised for having a more compact syntax than JavaScript and fixing a lot of the design issues of JavaScript.
+
+Advantages
+----------
+
+* Much more compact syntax than JavaScript. 
+* Depending on who you ask, it may or may not be more readable.
+* List comprehensions, iterables, default function arguments.
+* A nice Pythonic class model with inheritance.
+* Can be compiled to JavaScript on the server or optionally be loaded into the browser as `text/coffescript` and interpreted on the fly.
+* Can be used side-by-side with JavaScript so our transition could be gradual.
+
+Drawbacks
+---------
+
+* Syntax is almost a linear combination of JavaScript and Python, making it a bit difficult to keep things straight.
+* Either we have to translate in the browser (slow) or add a bulid step to our dev process.
+* Because CoffeeScript compiles down to JavaScript, debugging requires a developer to muck through generated JavaScript. This means developers will have to be very good at JavaScript. This means CS is not a simple replacement for JS in the dev brain.
+* It adds complexity with a questionable benefit.
+
+Recommendation: Don't use CoffeeScript yet, but continue to learn more and discuss it.
+
+Backbone
+========
+
+Backbone (http://backbonejs.org/) is a very popular MVC library for JavaScript. It allows you to create JS models and synchronize them with DOM based views and backend server storage. It might help us to write cleaner JS code, especially in separating our model data from our view logic. It looks very nice, but its notion of a model is very limited and flat. For example, our data model for the notebook is very nested and Backbone doesn't have a way to build models that contain models that contain models. It only has models with attributes and those models can be organized into collections. However, this design probably reflects the reality of talking to restful web services and we would probably be fine.  Using Backbone would basically amount to a complete rewrite of the JS code for the notebook. This would also involve rewriting the notebook web service.
+
+Recommendation: It is too much to undertake at this point. But let's continue to learn more about Backbone and clean up our JavaScript code to prepare for a possible future transition.
+
+JavaScript file organization and packaging
+==========================================
+
+Currently our JS code is a bunch of files that we include by hand on each page. We keep these files in a single directory and don't have the ability to track dependencies. This makes it difficult to manage and the situation is getting worse as the code base grows. It would be like developing in Python without a package/module structure. Painful.
+
+CommonJS
+--------
+
+CommonJS (http://www.commonjs.org/) is an API created to add package management and importing to JavaScript. It uses the form: `mymod = require('mymodule')` which is the equivalent of `import mymodule as mymod` in Python. The CommonJS API is synchronous and ignores the realities of browsers.  Because of this it is primarily used in server side JS code (Node.js).
+
+RequireJS
+---------
+
+RequireJS is a JavaScript library that attempts to bring the features of CommonJs into the asynchronous context of browsers. It is gaining lots of traction, but is no small dependency - if you but into it, you have to completely reorganize your JS code.
+
+Advantages:
+
+* Would allow us to organize our JS code into clean modules and subdirs.
+* Modules could explicitly declare which modules they depend on.
+* Would greatly simplify our HTML templates - we would only need to include 1 or 2 JS files.
+* Works with browser and server side code.
+* Has a tool for producing production/deployment minimized code.
+
+Disadvantages:
+
+* It is not simple at all. Everything is based on callbacks.
+* Anyone who wants to use our JS code would have to buy into using RequireJS. This is huge...
+* It is a little painful to integrate Js libraries (jQuery, Bootstrap, etc.) that don't use RequireJS.
+
+Recommendation: We should build a sample project that uses RequireJS to explore its features. This sample project should include jQuery, Bootstrap and organize JS code in a way similar to what we would need.

@@ -1,5 +1,7 @@
 :Author:
-    Bussonnier matthias <bussonniermatthias@gmail.com>
+    Bussonnier Matthias <bussonniermatthias@gmail.com>
+:Author:
+    Brian Granger <ellisonbg@gmail.com>
 :Status:
     Draft
 :Created:

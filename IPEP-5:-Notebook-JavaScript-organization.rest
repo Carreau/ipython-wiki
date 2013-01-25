@@ -1,4 +1,3 @@
-
 :Author:
     Bussonnier matthias <bussonniermatthias@gmail.com>
 :Status:
@@ -98,3 +97,27 @@ Some points to consider during this reorganization:
 * We probably want to organize our code into different subdirs, maybe by which page it goes with.
 * Keep in mind that we may end up rewriting our JS code using CoffeeScript and/or Backbone in the future.  We need a structure that is flexible enough for that.
 * We want it to be easy for people to reuse our JavaScript.
+
+Bower
+=====
+
+Bower (http://twitter.github.com/bower/) is a simple JS+CSS package management tool that is written in node.js. Packages are simply git repos with a special `component.json` file. This file is optional, but can be used to declare dependencies. By default bower installs in the `component` subdirectory of cwd. So the following commands::
+
+    bower install bootstrap
+    bower install codemirror
+
+would result in the directories::
+
+    /components/jquery
+    /components/bootstrap
+    /components/codemirror
+
+Notice that I didn't have to install jQuery - Bootstrap declares jQuery as a dependency and bower automatically finds and installs it.  Bower knows about versions of packages by looking at the tags on github. It does have some constraints on the format of version strings it can handle (it fails on tags like "v1.0").
+
+Recommendation: I think we should embrace the bower vision of JS+CSS assets and use it in a number of ways:
+
+* We should organize our static dir in a manner that matches bower's approach. This would mean putting all of the IPython css+js under `static/ipython` and putting a `component.json` file in that directory to declare our dependencies.
+
+* We should start to replace our external dependencies with versions that can be installed using bower. This would include jQuery, Bootstrap, jQueryUI, CodeMirror, etc. If we need to change their code, we should do so by money patching so we can always use the originals.  This will greatly improve the situation for packagers as the packages come with a component.json file that has all of the information about where the package came from (git repo, branch, head, version).
+
+* We should adopt bower as the tool for installing JS plugins for the notebook. This means that each JS plugin should simply be a git repo with a `component.json` file.  This will enable plugins to depend on other plugins and installation will be simple. Because JS plugins can also include Python code, they optionally include a top level `setup.py` file to install included Python packages/modules. It is important that this script is top-level so things like easy_install can find it.

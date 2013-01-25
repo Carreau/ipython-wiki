@@ -123,3 +123,78 @@ Recommendation: I think we should embrace the bower vision of JS+CSS assets and 
 * We should start to replace our external dependencies with versions that can be installed using bower. This would include jQuery, Bootstrap, jQueryUI, CodeMirror, etc. If we need to change their code, we should do so by money patching so we can always use the originals.  This will greatly improve the situation for packagers as the packages come with a component.json file that has all of the information about where the package came from (git repo, branch, head, version).
 
 * We should adopt bower as the tool for installing JS plugins for the notebook. This means that each JS plugin should simply be a git repo with a `component.json` file.  This will enable plugins to depend on other plugins and installation will be simple. Because JS plugins can also include Python code, they optionally include a top level `setup.py` file to install included Python packages/modules. It is important that this script is top-level so things like easy_install can find it.
+
+File and directory organization
+===============================
+
+There are a couple of different approaches we could take for organizing our files.
+
+Page Oriented
+-------------
+
+In this model, the top level directories are associated with a single page::
+
+    page1/
+    page1/js
+    page1/less
+
+    page2/
+    page2/js
+    page2/less
+
+The problem with this approach is that there are assets we use on multiple pages. We could start to separate these out like this::
+
+    base/
+    base/js
+    base/less
+
+    kernel/
+    kernel/js
+
+But you can probably see where this is heading...
+
+Component oriented
+------------------
+
+In this model, the top level directories are associated with a small unit, something like a module or set of modules::
+
+    /cell
+    /cell/js
+    /cell/less
+
+    /notebooklist
+    /notebooklist/js
+    /notebooklist/less
+
+    /toolbar
+    /toolbar/js
+    /toolbar/less
+
+This too has problems.  How many classes/modules do we put into each directory.  Is it one class per directory?  A set of classes?  If we move to an MVC based approach, where do we put our models and view?  In each subdir?
+
+MVC oriented
+------------
+
+In this approach, were would have separate directories for models, views and controllers::
+
+    /models
+    /models/toolbar.js
+    /models/cell.js
+
+    /views
+    /views/toolbarview.js
+    /views/cellview.js
+
+Here, I am not quite sure where to put our css files...
+
+Templates and main scripts
+--------------------------
+
+There are two other types of static assets we have to handle:
+
+1. HTML templates. These come in two flavors: a) Jinja2 templates that our server needs to render and b) JS rendered templates handled by something like Mustache or Underscore.
+2. Main scripts for each page. Each page is going to have a script where requirejs is configured, `require` is called and that pages objects are instantiated.
+
+
+
+

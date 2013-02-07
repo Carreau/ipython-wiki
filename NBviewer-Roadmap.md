@@ -15,9 +15,11 @@ Finish nbconvert, probably have it merge into ipython or self installable.
 
 ## Actual things to do in order. 
 
- - 1/2 - Use the new NBconvert class
- - 1/2 move to mongodb (free postgres is too limited) 
- - 3 Write a new jinja template for nbconvert.
+ - 0 - Fix the annoying bugs (404/500 cached) 
+ - 1 - move to mongodb (free postgres is too limited) 
+ - 2 - Use the new NBconvert class
+
+ - 3 - Write a new jinja template for nbconvert.
     - that does only include notebook body
     - include the notebook css in the header of nbviewer itself
  - 4 Include boostrap menubar with different actions

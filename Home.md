@@ -17,4 +17,4 @@ This wiki contains:
   - [PyCon 2012](wiki/Sprints:-PyCon2012)
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
 * The IPython [Extensions Index](wiki/Extensions-Index)
-* A list of [Projects using IPython](Projects-using-IPython)
+* A list of [Projects using IPython](wiki/Projects-using-IPython)

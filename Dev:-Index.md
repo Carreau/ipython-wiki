@@ -3,4 +3,4 @@ IPython does all of its development using GitHub. All of our development informa
 * A [description](./Dev:-IPython-on-GitHub) of our workflow on GitHub.
 * Our policy on [closing pull requests](./Dev:-Closing-pull-requests)
 * A description of the [perfect pull request](./Dev:-The-perfect-pull-request)
-* General [developer information](./Dev:-Developer-information)
+* General [developer information](./Dev:-General-information)

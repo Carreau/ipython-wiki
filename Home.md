@@ -19,7 +19,7 @@ You may also want to look at the official [project documentation](http://ipython
 
 This wiki contains:
 
-* The IPython [Cookbook](wiki/Cookbook)
+* The IPython [Cookbook](wiki/Cookbook:-Index)
 * [Development information](wiki/Dev:-Index)
 * [Installation information](wiki/Install:-Index)
 * [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs:-IPython-Enhancement-Proposals)

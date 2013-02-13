@@ -9,7 +9,7 @@ This wiki contains:
 * The IPython [Cookbook](wiki/Cookbook)
 * [Development information](wiki/Development-information)
 * [Installation information](wiki/Installation-information)
-* [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs-(IPython-Enhancement-Proposals))
+* [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs:-IPython-Enhancement-Proposals)
 * IPython roadmaps and development plans:
   - [Roadmap for IPython](wiki/Roadmap:-IPython)
   - [Roadmap for NBviewer](wiki/Roadmap:-NBviewer)

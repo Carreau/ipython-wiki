@@ -34,7 +34,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * The [http://pymerase.sourceforge.net/ Pymerase] project for microarray gene expression databases, exposes an IPython shell in its iPymerase mode.
 
-* The [wiki/Projects-using-IPython:-PyMAD PyMAD] project, where IPython is used to control a neutron spectrometer at the CEA-Grenoble and the Institut Laue Langevin in France.  A [http://projects.scipy.org/ipython/ipython/wiki/NewDesign/API Wiki] is available detailing some of the new features introduced in IPython to support PyMAD (as well as PyRAF).  This may be of interest to those who wish to embed IPython in complex environments.
+* The PyMAD project, where IPython is used to control a neutron spectrometer at the CEA-Grenoble and the Institut Laue Langevin in France.  See [[Projects-using-IPython:-PyMAD]] for details.
 
 * The [http://www.ska.ac.za Square Kilometre Array South Africa] project uses IPython as an advanced user interface to their radio telescopes, including the currently operational KAT-7 precursor array and the future MeerKAT telescope. A live demonstration of the interface can be seen in [http://pycon.blip.tv/file/4881233 Maciej Fijalkowski's talk] at PyCon 2011.
 

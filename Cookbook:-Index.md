@@ -1,12 +1,11 @@
 Here is a list of our cookbook pages:
 
 * [Branding the IPython notebook](./Cookbook:-Branding-the-IPython-notebook)
-* [nnecting to a remote kernel via ssh](./Cookbook:-Connecting-to-a-remote-kernel-via-ssh)
+* [Connecting to a remote kernel via ssh](./Cookbook:-Connecting-to-a-remote-kernel-via-ssh)
 * [Dated logging](./Cookbook:-Dated-logging)
 * [Dynamic prompt](./Cookbook:-Dynamic-prompt)
 * [Hotkeys for faster notebook editing](./Cookbook:-Hotkeys-for-faster-notebook-editing)
 * [Ignoring some commands in history](./Cookbook:-Ignoring-some-commands-in-history)
-* [Index](./Cookbook:-Index)
 * [IPython and Emacs](./Cookbook:-IPython-and-Emacs)
 * [IPython and Python.NET](./Cookbook:-IPython-and-Python.NET)
 * [Job control extension](./Cookbook:-Job-control-extension)

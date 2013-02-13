@@ -8,7 +8,7 @@ This wiki contains:
 
 * The IPython [Cookbook](wiki/Cookbook)
 * [Development information](wiki/Dev:-Index)
-* [Installation information](wiki/Installation-information)
+* [Installation information](wiki/Install:-Index)
 * [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs:-IPython-Enhancement-Proposals)
 * IPython roadmaps and development plans:
   - [Roadmap for IPython](wiki/Roadmap:-IPython)

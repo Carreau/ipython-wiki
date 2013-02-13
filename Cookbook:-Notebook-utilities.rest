@@ -3,6 +3,8 @@ Notebook utilities
 
 Here are some useful utilities which currently exist as gists, but which could benefit from be wrapped up and folded into IPython commnadline tools, such as nbconvert.
 
+https://gist.github.com/2621679 - For each ipynb file, a kernel is started, all cells are executed in order and exceptions occuring in the cells will show up as failed tests.
+
 https://gist.github.com/2620876 - simple example script for running notebooks and reporting exceptions. 
 
 https://gist.github.com/2620735 - simple example script for running and testing notebooks. Each cell is submitted to the kernel, and the outputs are compared with those stored in the notebook.
@@ -16,4 +18,3 @@ https://gist.github.com/3869182 - Example configuration file for using the IPyth
 https://gist.github.com/1935808 - Downgrade v3 .ipynb files to v2 (for use with older versions of IPython)
 
 https://github.com/ipython/ipython-in-depth/blob/master/tools/nbmerge.py - Concatenate multiple notebooks into a new one.
-

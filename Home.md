@@ -2,8 +2,8 @@ Welcome to the wiki for the [IPython project](http://ipython.org).
 
 This wiki contains:
 
-* The IPython [Cookbook](Cookbook.mediawiki)
-* The [Extensions Index](Extensions-Index.rest)
+* The IPython [Cookbook](wiki/Cookbook.mediawiki)
+* The [Extensions Index](wiki/Extensions-Index.rest)
 * [[IPython for mobile OS]]
 * Some [[Developer Info]]
 * [[IPython Enhancement Proposals (IPEPs)]]

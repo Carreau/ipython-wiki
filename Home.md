@@ -1,10 +1,9 @@
-Welcome to the wiki for the [http://ipython.org IPython project].
-
-How IPython works on GitHub: [[IPython-on-GitHub]].
+Welcome to the wiki for the [IPython project](http://ipython.org).
 
 This wiki contains:
-* The IPython [[Cookbook]]
-* The [[Extensions Index]]
+
+* The IPython [Cookbook](Cookbook.mediawiki)
+* The [Extensions Index](Extensions-Index.rest)
 * [[IPython for mobile OS]]
 * Some [[Developer Info]]
 * [[IPython Enhancement Proposals (IPEPs)]]

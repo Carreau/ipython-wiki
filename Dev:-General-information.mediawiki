@@ -66,3 +66,33 @@ We are fully committed to having the core of IPython depend on nothing outside o
 
 * IPython needs to run on Jython and IronPython
 * IPython ships on the OLPC. Space is a huge concern on this platform.
+
+
+Commit messages
+===============
+
+Good commit messages are very important; they provide a verbal account of what
+happened that is often invaluable for anyone trying to undestand the intent of
+a commit later on (including the original author!).  And git's log command is a
+very versatile and powerful tool, capable of extracting a lot of information
+from the commit logs, so it's important that these logs actually have useful
+information in them.
+
+In short, a commit message should have the form::
+
+  One line summary.
+        <THIS LINE MUST BE LEFT BLANK>
+  More detailed description of what was done, using multiple lines and even
+  more than one paragraph if needed.  For very simple commits this may not be
+  necessary, but non-trivial ones should always have it.
+
+  Closes gh-NNN.  # if the commit closes issue NNN on github.
+
+This format is understood by many git tools that expect a *single line*
+summary, so please do respect it.
+
+An excellent reference on commits message is `this blog post`_, please take a
+moment to read it (it's short but very informative).
+
+.. _this blog post: http://who-t.blogspot.com/2009/12/on-commit-messages.html
+.. _Github IPython Repository: ipython_github_

@@ -1,4 +1,4 @@
-.. _ipython_directive:
+
 
 ========================
 IPython Sphinx Directive

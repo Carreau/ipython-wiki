@@ -15,14 +15,18 @@ IPython has to work on:
 
 Much of our code base deals with strings and unicode. This needs to be done in a manner that is unicode aware and works on Python 2 and 3. [This article] (http://www.joelonsoftware.com/articles/Unicode.html) is a good intro to unicode.
 
-## 4. Clean & commented
+## 4. Adheres to our coding style
+
+Coding style refers to how source code is formatted and how variables, functions, methods and classes are named.  Your code you follow our coding style, which is described [[here|Dev: Coding style]].
+
+## 5. Clean & commented
 
 The code should be well organized, and have inline comments where appropriate. When we look at the code, it should be clear what it's doing and why. It should not break abstractions that we have established in the project.  
 
-## 5. Tested
+## 6. Tested
 
 If it fixes a bug, the pull request should ideally add an automated test that fails without the fix, and passes with it. Normally it should be sufficient to copy an existing test and tweak it. New functionality should come with its own tests as well.
 
-## 6. Well documented
+## 7. Well documented
 
 Don't forget to update docstrings, and any relevant parts of [the official documentation](http://ipython.org/ipython-doc/stable/index.html). New features or significant changes warrant an entry in the *What's New* section too.

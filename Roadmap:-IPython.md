@@ -1,43 +1,50 @@
-This document describes the broad goals, vision and direction of the IPython project.  IPython
-is a large code base with many different areas of functionality. With development ramping up
-it is critically important that we focus our efforts in a disciplined manner. Can simply can't do 
+This document describes the goals, vision and direction of the IPython project.  IPython
+is a large project with many different areas of functionality. With development ramping up
+it is critically important that we focus our efforts in a disciplined manner. We simply can't do 
 everything at once.
 
 To provide direction and focus to the project, the core IPython developers have started to meet
 every six months, mostly in person, at UC Berkeley. These meetings are being funded through the
 Sloan Foundation. Along with these meetings, we plan to have a major release every six months (July / December).  The meetings will happen right after each release, to provide focus and direction
-for work on the next six months of work. Our first meeting was in January 2013, to plan for the 
-1.0 release in July and this document is a direct result of that meeting. 
+for the next six months of work. Our first meeting was in January 2013, to plan for the 
+1.0 release in July and this document is a direct result of that meeting. Each meeting will
+result in this document being updated with a roadmap for each release.
 
-The gist of our goals for 2013-2014 is to spend 2013 really solidifying
-the single-user notebook experience, which is principally in two
-major areas:
+Below you will find our upcoming releases and a list of the tasks we will focus
+our development efforts on for that release. These tasks categorized by difficulty / 
+amount of work (Easy, Medium, Hard), and priority (0-3, with 0 being most important).
+Where relevant, the developers leading the work are also noted. This is not to say
+they will be the only contributors, only that they will be responsible for moving
+the task forward. If you are interested in working on one of these tasks, please coordinate
+with these individuals.
+
+For the most part, we would like developers to focus on the top priority tasks, before
+moving on to the lower priority ones. This is not to say that things will never be done
+out of order, but our priorities have been chosen carefully, taking into account dependencies
+between different tasks. If developers contribute new features outside the focus of the current
+release, it is likely that we will ignore their contributions until a later release.
+Work on bug fixes will always be given high priority.
+
+## Overview of 2013-2014
+
+Our work for 2013-2014 is being driven by our grant from the Sloan Foundation. 
+More details of this grant can be found [here](http://ipython.org/sloan-grant.html).
+For 2013, we are going to focus on really solidifying the single-user notebook experience, 
+which is principally in two major areas:
 
 - Working with the notebook document, and interacting with other formats (nbconvert)
 - Interactive and dynamic content in the notebook (Javascript plugins / widgets)
 
-Following that, we will begin in earnest the development
-of the multi-user notebook.  This multi-user notebook will
-be very much like the single-user notebook,
-but the server will map directly onto Linux users of a single
-environment, so that you only need to run a single server
-for all users of your system (be it a local shared machine, EC2 image, etc.).
-
-We plan to have a major release every six months (July / December),
-hitting some milestones along the way.
-Obviously, there are many other enhancements to add and bugs to fix
-that we will make along the way that are not described here.
-But this is the gist of our plans and priorities for the immediate term.
+Following that, in 2014, we will begin the development of the multi-user notebook.
+This multi-user notebook will be similar to the single-user notebook, but the server will
+map directly onto Linux users on a single environment, so that you only need to run a single server
+for all users of your system (be it a local shared machine, EC2 image, etc.). This multi-user notebook
+server will be focus on the usage case of small-medium sized groups of trusted users. It will not
+have features that allow it to scale to large numbers of users on the open internet.
 
 ## Release 1.0, July 15, 2013
 
-Milestones for IPython 1.0
-
-Categorized by difficulty / amount of work (Easy, Medium, Hard),
-and priority (0-3, with 0 being most important).
-Where relevant, the principal leaders are also noted.
-This is not to say they will be the only contributors,
-only that they will be responsible for moving the task forward / making decisions.
+Development focus for IPython 1.0:
 
 - (H,0) Main work on nbconvert (Fernando, Matthias, Jonathan, Damian)
   - This is the main milestone for IPython 1.0 - the integration of nbconvert.
@@ -112,7 +119,7 @@ only that they will be responsible for moving the task forward / making decision
 
 ## Release 2.0, December 25, 2013
 
-Second major release milestone
+Development focus for IPython 2.0:
 
 - Polish work on nbconvert, started in 1.0
 - Work on interactive widgets, and the JSON/handler messages,
@@ -120,27 +127,19 @@ Second major release milestone
 
 ## Release 3.0, July 15, 2014
 
-Third major milestone
+Development focus for IPython 3.0:
 
 - Further develop Interactive widgets and non-Python kernels
 - Initial multi-user notebook
   - The multi-user IPython Notebook will map 1:1 to a Linux user environment
     with existing, trusted users.
-    The notebook server will be run as root,
-    and kernels run as individual users,
+  - The notebook server will be run as root, and kernels run as individual users,
     with the full rights, access, and privileges of those users on the system.
 
 
 ## Release 4.0, December 25, 2014
 
-This marks the end of the Sloan Foundation funding,
-by which point we should have a pretty solid multi-user
-IPython Notebook server with interactive widgets,
-and powerful utilities for interacting with other formats,
-such as generating Sphinx / HTML or LaTeX / PDF documents
-from IPython Notebooks, and running code in
-at least a few languages (Python, Ruby, R, etc.).
-
-Obviously, we will never run out of things to do on IPython,
-but this is our current plan,
-and we are excited to see where IPython takes us.
+This marks the end of the Sloan Foundation funding, by which point we should have a
+solid multi-user IPython Notebook server with interactive widgets, and powerful utilities
+for interacting with other formats, such as generating Sphinx / HTML or LaTeX / PDF documents
+from IPython Notebooks, and running code in at least a few languages (Python, Ruby, R, etc.).

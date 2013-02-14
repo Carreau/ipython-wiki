@@ -14,7 +14,7 @@ Further development information:
 
 * Details about [[testing IPython|Dev: Testing]]
 * Steps for [[releasing IPython|Dev: Releasing IPython]]
-* Documentation on the [IPython Sphinx directive](./Dev:-IPython-Sphinx-directive.md)
-* Information about our [py3compat](./Dev:-Py3compat-module.md) module
+* Documentation on the [[IPython Sphinx directive|Dev: IPython Sphinx directive]]
+* Information about our [[py3compat|Dev: Py3compat module]] module
 
 A template for new Python files in IPython: [template.py](./template.py)

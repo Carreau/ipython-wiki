@@ -209,7 +209,6 @@ these; for reference here is how to use `# random`:
 	   'ranfunc'
 	"""
 	return 'ranfunc'
-
 ```
 
 and an example of `# all-random`:

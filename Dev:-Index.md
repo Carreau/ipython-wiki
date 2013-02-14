@@ -12,8 +12,8 @@ Some development policies we have created:
 
 Further development information:
 
-* Details about [testing](./Dev:-Testing) IPython
-* Steps for [releasing](./Dev:-Release) IPython
+* Details about [[testing IPython|Dev: Testing]]
+* Steps for [[releasing IPython|Dev: Releasing IPython]]
 * Documentation on the [IPython Sphinx directive](./Dev:-IPython-Sphinx-directive.md)
 * Information about our [py3compat](./Dev:-Py3compat-module.md) module
 

@@ -39,22 +39,29 @@ In order to run the test suite, you must at least be able to import IPython,
 even if you haven't fully installed the user-facing scripts yet (common in a
 development environment).  You can then run the tests with:
 
+```bash
   python -c "import IPython; IPython.test()"
+```
 
 Once you have installed IPython either via a full install or using:
 
+```bash
   python setup.py develop
+```
 
 you will have available a system-wide script called `iptest` that runs
 the full test suite.  You can then run the suite with:
 
+```bash
    iptest  [args]
+```
 
 By default, this excludes the relatively slow tests for `IPython.parallel`. To
 run these, use `iptest --all`.
 
 Regardless of how you run things, you should eventually see something like:
 
+```text
    **********************************************************************
    Test suite completed for system with the following information:
    {'commit_hash': '144fdae',
@@ -74,13 +81,14 @@ Regardless of how you run things, you should eventually see something like:
 
    Status:
    OK
-
+```
 
 If not, there will be a message indicating which test group failed and how to
 rerun that group individually.  For example, this tests the
 `IPython.utils` subpackage, the `-v` option shows progress
 indicators:
 
+```/bash
    $ iptest -v IPython.utils
    ..........................SS..SSS............................S.S...
    .........................................................
@@ -88,13 +96,14 @@ indicators:
    Ran 125 tests in 0.119s
 
    OK (SKIP=7)
-
+```
 
 Because the IPython test machinery is based on nose, you can use all nose
 options and syntax, typing `iptest -h` shows all available options.  For
 example, this lets you run the specific test `test_rehashx` inside the
 `test_magic` module:
 
+```bash
    $ iptest -vv IPython.core.tests.test_magic:test_rehashx
    IPython.core.tests.test_magic.test_rehashx(True,) ... ok
    IPython.core.tests.test_magic.test_rehashx(True,) ... ok
@@ -103,6 +112,7 @@ example, this lets you run the specific test `test_rehashx` inside the
    Ran 2 tests in 0.100s
 
    OK
+```
 
 When developing, the `--pdb` and `--pdb-failures` of nose are
 particularly useful, these drop you into an interactive pdb session at the
@@ -112,8 +122,10 @@ The system information summary printed above is accessible from the top
 level package.  If you encounter a problem with IPython, it's useful to
 include this information when reporting on the mailing list; use::
 
+```python
     from IPython import sys_info
     print sys_info()
+```
 
 and include the resulting information in your query.
 
@@ -124,7 +136,9 @@ and runs the test suite on different versions of Python. This uses a separate
 copy of the repository, so you can keep working on the code while it runs. To
 run it:
 
+```bash
     python tools/test_pr.py -p 1234
+```
 
 The number is the pull request number from Github; the `-p` flag makes it post
 the results to a comment on the pull request. Any further arguments are passed
@@ -166,6 +180,7 @@ checked, you can use the `# all-random` marker.  The
 `IPython.testing.plugin.dtexample` module contains examples of how to use
 these; for reference here is how to use `# random`:
 
+```python
     def ranfunc():
 	"""A function with some random output.
 
@@ -195,8 +210,11 @@ these; for reference here is how to use `# random`:
 	"""
 	return 'ranfunc'
 
+```
+
 and an example of `# all-random`:
-	
+
+```python
     def random_all():
 	"""A function where we ignore the output of ALL examples.
 
@@ -222,7 +240,7 @@ and an example of `# all-random`:
 	Out[9]: 'iprand'
 	"""
 	return 'iprand'
-
+```
 
 When writing docstrings, you can use the `@skip_doctest` decorator to
 indicate that a docstring should *not* be treated as a doctest at all.  The
@@ -235,6 +253,7 @@ If a given docstring fails under certain conditions but otherwise is a good
 doctest, you can use code like the following, that relies on the 'null'
 decorator to leave the docstring intact where it works as a test:
 
+```python
   # The docstring for full_path doctests differently on win32 (different path
   # separator) so just skip the doctest there, and use a null decorator
   # elsewhere:
@@ -246,6 +265,7 @@ decorator to leave the docstring intact where it works as a test:
       """Make full paths for all the listed files, based on startPath..."""
 
       # function body follows...
+```
 
 With our nose plugin that understands IPython syntax, an extremely effective
 way to write tests is to simply copy and paste an interactive session into a
@@ -255,13 +275,15 @@ its body *absolutely empty* other than the docstring.  In
 `IPython.core.tests.test_magic` you can find several examples of this, but
 for completeness sake, your code should look like this (a simple case):
 
+```python
     def doctest_time():
 	"""
 	In [10]: %time None
 	CPU times: user 0.00 s, sys: 0.00 s, total: 0.00 s
 	Wall time: 0.00 s
 	"""
-	
+```
+
 This function is only analyzed for its docstring but it is not considered a
 separate test, which is why its body should be empty.
 
@@ -276,6 +298,7 @@ easier.  For example, these are some parametric tests both in class form and as
 a standalone function (choose in each situation the style that best fits the
 problem at hand, since both work):
 
+```python
   from IPython.testing import decorators as dec
 
   def is_smaller(i,j):
@@ -293,7 +316,7 @@ problem at hand, since both work):
       yield is_smaller(3, 4)
       x, y = 1, 2
       yield is_smaller(x, y)
-      
+```
 
 ## Testing system design notes
 

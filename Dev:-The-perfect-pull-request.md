@@ -29,4 +29,4 @@ If it fixes a bug, the pull request should ideally add an automated test that fa
 
 ## 7. Well documented
 
-Don't forget to update docstrings, and any relevant parts of [the official documentation](http://ipython.org/ipython-doc/stable/index.html). New features or significant changes warrant an entry in the *What's New* section too.
+Don't forget to update docstrings, and any relevant parts of [the official documentation](http://ipython.org/ipython-doc/stable/index.html). New features or significant changes warrant an entry in the *What's New* section too.  Details about documenting IPython can be found [[here|Dev: Documenting IPython]].

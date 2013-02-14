@@ -1,63 +1,71 @@
+Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
-Extensions you can install for IPython are listed here. To create a new extension, please refer to the `extension docs <http://ipython.org/ipython-doc/dev/config/extensions/index.html>`_.
+## physics
 
-physics
--------
+Enables calculations involving units, such as `(5 m/s) * (3 s)`. It also defines a range of physical constants, such as the speed of light in a vacuum, and the mass of an electron.
 
-Enables calculations involving units, such as ``(5 m/s) * (3 s)``. It also defines a range of physical constants, such as the speed of light in a vacuum, and the mass of an electron. `Homepage <https://bitbucket.org/birkenfeld/ipython-physics>`__
+[Homepage](https://bitbucket.org/birkenfeld/ipython-physics).
 
-::
+To install:
 
+```
     %install_ext https://bitbucket.org/birkenfeld/ipython-physics/raw/default/physics.py
+```
 
-Note: In the latest version, quantities with uncertainties are supported if the ``uncertainties`` module is installed.
+Note: In the latest version, quantities with uncertainties are supported if the 
+`uncertainties` module is installed.
 
-`%hierarchy` and `%%dot` magics
--------------------------------
+## `%hierarchy` and `%%dot` magics
 
-The ``%hierarchy`` magic command draws an inheritance diagram of the given class or object.  With the ``%%dot`` cell magic, you can write
-graphiz dot language in a cell. `Homepage <https://github.com/tkf/ipython-hierarchymagic>`__
+The `%hierarchy` magic command draws an inheritance diagram of the given class or object.
+With the `%%dot` cell magic, you can write graphiz dot language in a cell.
 
-::
+[Homepage](https://github.com/tkf/ipython-hierarchymagic).
 
+To install:
+
+```
   %install_ext https://raw.github.com/tkf/ipython-hierarchymagic/master/hierarchymagic.py
+```
 
-`%importfile` magic
--------------------
+## `%importfile` magic
 
 `%importfile` tries to import Python file in most "natural way". For
-example, if you have ``spam/egg/module.py``, ``spam/egg/__init__.py``
-and ``spam/__init__.py``, you would want import ``module.py`` as
-``spam.egg.module``, not as ``module`` or ``egg.module``.
+example, if you have `spam/egg/module.py`, `spam/egg/__init__.py`
+and `spam/__init__.py`, you would want import `module.py` as
+`spam.egg.module`, not as `module` or `egg.module`.
 `%importfile` tries several heuristics to find the best "module path".
 
-`Homepage <https://github.com/tkf/ipython-importfilemagic>`_
+[Homepage](https://github.com/tkf/ipython-importfilemagic)
 
+To install:
 
-Install::
-
+```
   %install_ext https://raw.github.com/tkf/ipython-importfilemagic/master/importfilemagic.py
+```
 
-Usage::
+Usage:
 
+```
   %importfile PATH/TO/SOME/FILE.py
+```
 
+## Divers
 
-Divers
----------
+Interactive plotting in notebook using the [flot library](http://code.google.com/p/flot/),
+use the `ipython-flot` package.
 
-Interactive plotting in notebook using the `flot library <http://code.google.com/p/flot/>`_, use `ipython-flot  package <https://github.com/crbates/ipython-flot/>`_
-with a `notebook example <https://gist.github.com/3015819>`_ . This is not an extension, so it does not need `%install_ext` nor `%load_ext` to work.
+[Homepage](https://github.com/crbates/ipython-flot/)
 
+A Notebook example can be found [here](https://gist.github.com/3015819). This is not an extension, so it does not need `%install_ext` nor `%load_ext` to work.
 
-Mathematica
-------------
+## Mathematica
 
-Mathematica can be integrated into notebooks using the `IPython-mathematicamagic-extension <https://github.com/bjedwards/IPython-mathematicamagic-extension>`_. Install instructions and examples are included in a notebook on the github page. Requires the mathlink python module distributed with Mathematica to function.
+Mathematica can be integrated into notebooks using the `IPython-mathematicamagic-extension`. Install instructions and examples are included in a notebook on the GitHub page. Requires the mathlink python module distributed with Mathematica.
 
+[Homepage](https://github.com/bjedwards/IPython-mathematicamagic-extension)
 
-Bitey
------
+## Bitey
 
 The `Bitey magic <https://raw.github.com/gist/3458310/biteymagic.py>`_ extension adds a ``%%bitey`` cell magic for automatically compiling C (or C++) code into LLVM bitcode and loading the bitcode with `Bitey <https://github.com/dabeaz/bitey>`_.  See also a `sample notebook <http://nbviewer.ipython.org/3458310/Bitey%20Magic.ipynb>`_ (`source <https://raw.github.com/gist/3458310/Bitey%20Magic.ipynb>`_).
 
@@ -95,4 +103,3 @@ ipy_table
 Create richly formatted data tables in IPython Notebooks.  `Homepage <http://epmoyer.github.com/ipy_table/>`__
 
 For examples, see: `Introduction <http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Introduction.ipynb>`_  and   `Reference Guide <http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Reference.ipynb>`_ 
-

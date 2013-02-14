@@ -1,18 +1,14 @@
-.. _releasing_ipython:
 
-=================
-Releasing IPython
-=================
-
-This section contains notes about the process that is used to release IPython.
+This document contains notes about the process that is used to release IPython.
 Our release process is currently not very formal and could be improved.
 
-Most of the release process is automated by the :file:`release` script in the
-:file:`tools` directory.  This is just a handy reminder for the release manager.
+Most of the release process is automated by the `release` script in the `tools`
+directory of our main repository.  This document is just a handy reminder for
+the release manager.
 
 #. For writing release notes, this will cleanly show who contributed as author
    of commits (get the previous release name from the tag list with ``git
-   tag``)::
+   tag``):
 
         git log --format="* %aN" $PREV_RELEASE... | sort -u
 
@@ -24,7 +20,7 @@ Most of the release process is automated by the :file:`release` script in the
         
         To find duplicates and update :file:`.mailmap`
 
-#. Run :file:`build_release`, which does all the file checking and building
+#. Run `build_release`, which does all the file checking and building
    that the real release script will do.  This will let you do test
    installations, check that the build procedure runs OK, etc.  You may want to
    disable a few things like multi-version RPM building while testing, because
@@ -37,7 +33,7 @@ Most of the release process is automated by the :file:`release` script in the
    in html form. Remember to put a short note on the news page of the site.
    
 #. Drafting a short release announcement with i) highlights and ii) a link to
-   the html version of the :ref:`Whats new <whatsnew_index>` section of the 
+   the html version of the *Whats new* section of the 
    documentation.
 
 #. Make sure that the released version of the docs is live on the site.  For

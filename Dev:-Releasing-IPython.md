@@ -18,7 +18,7 @@ You can use:
 
 To find duplicates and update `.mailmap`.
 
-# 2. Run `build_release`
+# 2. Run the `build_release` script
 
 This does all the file checking and building that the real release script will do.
 This will let you do test installations, check that the build procedure runs OK, etc.

@@ -2,8 +2,6 @@ Welcome to the wiki for the IPython project. This is a community maintained and 
 
 # Index
 
-[[_TOC_]]
-
 This wiki contains:
 
 * The IPython [[Cookbook|Cookbook: Index]]

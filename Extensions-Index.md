@@ -4,7 +4,7 @@ Extensions you can install for IPython are listed here. To create a new extensio
 
 Enables calculations involving units, such as `(5 m/s) * (3 s)`. It also defines a range of physical constants, such as the speed of light in a vacuum, and the mass of an electron.
 
-[Homepage](https://bitbucket.org/birkenfeld/ipython-physics).
+[Homepage](https://bitbucket.org/birkenfeld/ipython-physics)
 
 To install:
 
@@ -20,11 +20,11 @@ Note: In the latest version, quantities with uncertainties are supported if the
 The `%hierarchy` magic command draws an inheritance diagram of the given class or object.
 With the `%%dot` cell magic, you can write graphiz dot language in a cell.
 
-[Homepage](https://github.com/tkf/ipython-hierarchymagic).
+[Homepage](https://github.com/tkf/ipython-hierarchymagic)
 
 To install:
 
-```
+```text
   %install_ext https://raw.github.com/tkf/ipython-hierarchymagic/master/hierarchymagic.py
 ```
 
@@ -40,13 +40,13 @@ and `spam/__init__.py`, you would want import `module.py` as
 
 To install:
 
-```
+```text
   %install_ext https://raw.github.com/tkf/ipython-importfilemagic/master/importfilemagic.py
 ```
 
 Usage:
 
-```
+```text
   %importfile PATH/TO/SOME/FILE.py
 ```
 
@@ -67,39 +67,63 @@ Mathematica can be integrated into notebooks using the `IPython-mathematicamagic
 
 ## Bitey
 
-The `Bitey magic <https://raw.github.com/gist/3458310/biteymagic.py>`_ extension adds a ``%%bitey`` cell magic for automatically compiling C (or C++) code into LLVM bitcode and loading the bitcode with `Bitey <https://github.com/dabeaz/bitey>`_.  See also a `sample notebook <http://nbviewer.ipython.org/3458310/Bitey%20Magic.ipynb>`_ (`source <https://raw.github.com/gist/3458310/Bitey%20Magic.ipynb>`_).
+The Bitey extension adds a `%%bitey` cell magic for automatically compiling C (or C++) code into LLVM bitcode and loading the bitcode with [Bitey](https://github.com/dabeaz/bitey).  See also a [sample notebook](http://nbviewer.ipython.org/3458310/Bitey%20Magic.ipynb).
 
+[Homepage](https://raw.github.com/gist/3458310/biteymagic.py)
 
-Matlab 
-------
+To install:
 
-The `Python matlab bridge <https://github.com/arokem/python-matlab-bridge>`_  enables calling of Matlab code and functions from an IPython session and adds a `%%matlab` cell magic, which allows embedding matlab code in IPython notebooks. For examples, see: `pymatbridge <http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/pymatbridge.ipynb>`_  and   `matlab magic <http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/matlab_magic.ipynb>`_ 
+```text
+    %install_ext https://raw.github.com/gist/3458310/biteymagic.py
+```
 
+## Matlab 
 
-py2tex
-------
-Enables conversion of simple expressions to a nice Tex Representation. See `example <http://nbviewer.ipython.org/urls/gist.github.com/raw/4040388/ee224a8e0875fad241cea4492b4408f1f72a1d8d/Example_py2tex.ipynb>`__
+The [Python MATLAB bridge](https://github.com/arokem/python-matlab-bridge)  enables calling of MATLAB code and functions from an IPython session and adds a `%%matlab` cell magic, which allows embedding matlab code in IPython notebooks. 
 
-::
+[Homepage](https://github.com/arokem/python-matlab-bridge)
 
+Examples:
+
+* [pymatbridge](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/pymatbridge.ipynb)
+* [matlab magic](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/matlab_magic.ipynb) 
+
+## py2tex
+
+Enables conversion of simple expressions to a nice Tex Representation.
+
+[Homepage](https://gist.github.com/4032651)
+
+To install:
+
+```text
     %install_ext https://raw.github.com/gist/4032651/c33b92cade4e899c81d03e1573a6f8107c7d470f/py2tex.py
+```
 
-Note:
-- `Unum class <https://bitbucket.org/kiv/unum/src>`_ supported for unit-aware calculation
-- source: https://gist.github.com/4032651
+An example is provided [here](http://nbviewer.ipython.org/urls/gist.github.com/raw/4040388/ee224a8e0875fad241cea4492b4408f1f72a1d8d/Example_py2tex.ipynb).
+
+The [Unum class](https://bitbucket.org/kiv/unum/src>) is supported for unit-aware calculation.
 
 
-inumpy
-------
-numpy extension for IPython. Autocomplete recarray. `Homepage <https://github.com/piti118/inumpy>`__
+## inumpy
 
-::
+A numpy extension for IPython. Autocomplete recarray.
 
+[Homepage](https://github.com/piti118/inumpy)
+
+To install:
+
+```text
     %install_ext https://raw.github.com/piti118/inumpy/master/inumpy.py
+```
 
+##ipy_table
 
-ipy_table
----------
-Create richly formatted data tables in IPython Notebooks.  `Homepage <http://epmoyer.github.com/ipy_table/>`__
+Create richly formatted data tables in IPython Notebooks.
 
-For examples, see: `Introduction <http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Introduction.ipynb>`_  and   `Reference Guide <http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Reference.ipynb>`_ 
+[Homepage](http://epmoyer.github.com/ipy_table/)
+
+Examples:
+
+* [Introduction](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Introduction.ipynb)
+* [Reference Guide](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Reference.ipynb)

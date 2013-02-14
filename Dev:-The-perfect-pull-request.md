@@ -25,7 +25,7 @@ The code should be well organized, and have inline comments where appropriate. W
 
 ## 6. Tested
 
-If it fixes a bug, the pull request should ideally add an automated test that fails without the fix, and passes with it. Normally it should be sufficient to copy an existing test and tweak it. New functionality should come with its own tests as well.
+If it fixes a bug, the pull request should ideally add an automated test that fails without the fix, and passes with it. Normally it should be sufficient to copy an existing test and tweak it. New functionality should come with its own tests as well. Details about testing IPython can be found [[here|Dev: Testing]].
 
 ## 7. Well documented
 

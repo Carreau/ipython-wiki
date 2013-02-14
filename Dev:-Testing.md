@@ -243,7 +243,7 @@ and an example of `# all-random`:
 
 When writing docstrings, you can use the `@skip_doctest` decorator to
 indicate that a docstring should *not* be treated as a doctest at all.  The
-difference between `# all-random`` and `@skip_doctest` is that the former
+difference between `# all-random` and `@skip_doctest` is that the former
 executes the example but ignores output, while the latter doesn't execute any
 code.  `@skip_doctest` should be used for docstrings whose examples are
 purely informational.
@@ -330,49 +330,49 @@ like `%magics` and `!system commands`.
 
 We basically need to be able to test the following types of code:
 
-1. Pure Python files containing normal tests.  These are not a problem, since
-   Nose will pick them up as long as they conform to the (flexible) conventions
-   used by nose to recognize tests.
+* (1) Pure Python files containing normal tests.  These are not a problem, since
+  Nose will pick them up as long as they conform to the (flexible) conventions
+  used by nose to recognize tests.
 
-2. Python files containing doctests. Here, we have two possibilities:
+* (2) Python files containing doctests. Here, we have two possibilities:
    
-   - The prompts are the usual `>>>` and the input is pure Python.
-   - The prompts are of the form `In [1]:` and the input can contain extended
+  - The prompts are the usual `>>>` and the input is pure Python.
+  - The prompts are of the form `In [1]:` and the input can contain extended
      IPython expressions.
 
-   In the first case, Nose will recognize the doctests as long as it is called
-   with the `--with-doctest` flag.  But the second case will likely require
-   modifications or the writing of a new doctest plugin for Nose that is
-   IPython-aware.
+  In the first case, Nose will recognize the doctests as long as it is called
+  with the `--with-doctest` flag.  But the second case will likely require
+  modifications or the writing of a new doctest plugin for Nose that is
+  IPython-aware.
 
-3. ReStructuredText files that contain code blocks.  For this type of file, we
-   have three distinct possibilities for the code blocks:
+* (3) ReStructuredText files that contain code blocks.  For this type of file, we
+  have three distinct possibilities for the code blocks:
    
-   - They use `>>>` prompts.
-   - They use `In [1]:` prompts.
-   - They are standalone blocks of pure Python code without any prompts.
+  - They use `>>>` prompts.
+  - They use `In [1]:` prompts.
+  - They are standalone blocks of pure Python code without any prompts.
 
-   The first two cases are similar to the situation #2 above, except that in
-   this case the doctests must be extracted from input code blocks using
-   docutils instead of from the Python docstrings.
+  The first two cases are similar to the situation #2 above, except that in
+  this case the doctests must be extracted from input code blocks using
+  docutils instead of from the Python docstrings.
 
-   In the third case, we must have a convention for distinguishing code blocks
-   that are meant for execution from others that may be snippets of shell code
-   or other examples not meant to be run.  One possibility is to assume that
-   all indented code blocks are meant for execution, but to have a special
-   docutils directive for input that should not be executed.
+  In the third case, we must have a convention for distinguishing code blocks
+  that are meant for execution from others that may be snippets of shell code
+  or other examples not meant to be run.  One possibility is to assume that
+  all indented code blocks are meant for execution, but to have a special
+  docutils directive for input that should not be executed.
 
-   For those code blocks that we will execute, the convention used will simply
-   be that they get called and are considered successful if they run to
-   completion without raising errors.  This is similar to what Nose does for
-   standalone test functions, and by putting asserts or other forms of
-   exception-raising statements it becomes possible to have literate examples
-   that double as lightweight tests.
+  For those code blocks that we will execute, the convention used will simply
+  be that they get called and are considered successful if they run to
+  completion without raising errors.  This is similar to what Nose does for
+  standalone test functions, and by putting asserts or other forms of
+  exception-raising statements it becomes possible to have literate examples
+  that double as lightweight tests.
 
-4. Extension modules with doctests in function and method docstrings.
-   Currently Nose simply can't find these docstrings correctly, because the
-   underlying doctest DocTestFinder object fails there.  Similarly to #2 above,
-   the docstrings could have either pure python or IPython prompts.
+* (4) Extension modules with doctests in function and method docstrings.
+  Currently Nose simply can't find these docstrings correctly, because the
+  underlying doctest DocTestFinder object fails there.  Similarly to #2 above,
+  the docstrings could have either pure python or IPython prompts.
 
 Of these, only 3-c (reST with standalone code blocks) is not implemented at
 this point.

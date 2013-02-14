@@ -8,7 +8,7 @@ Enables calculations involving units, such as `(5 m/s) * (3 s)`. It also defines
 
 To install:
 
-```
+```text
     %install_ext https://bitbucket.org/birkenfeld/ipython-physics/raw/default/physics.py
 ```
 

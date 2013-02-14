@@ -2,7 +2,7 @@ IPython does all of its development using GitHub. All of our development informa
 
 Here are the core documents describing IPython development:
 
-* A description of our [[workflow on GitHub|Dev: GitHub workflow]
+* A description of our [[workflow on GitHub|Dev: GitHub workflow]]
 * A description of the [[perfect pull request|Dev: The perfect pull request]]
 * General [developer information](./Dev:-General-information)
 * Our [coding style](./Dev:-Coding-style)

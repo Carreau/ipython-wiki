@@ -1,4 +1,3 @@
-
 The ``IPython.utils.py3compat`` module provides a number of functions to make it easier to write code for Python 2 and 3. We also use 2to3 in the setup process to change syntax, and the ``io.open()`` function, which is essentially the built in open function from Python 3.
 
 The names provided are:

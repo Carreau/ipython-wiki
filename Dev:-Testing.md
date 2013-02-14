@@ -1,4 +1,3 @@
-
 # Testing IPython for users and developers
 
 ## Overview
@@ -32,7 +31,9 @@ verbatim IPython sessions and test them as doctests, which is extremely importan
 You can run IPython from the source download directory without even installing
 it system-wide or having configure anything, by typing at the terminal:
 
+```bash
    python ipython.py
+```
 
 In order to run the test suite, you must at least be able to import IPython,
 even if you haven't fully installed the user-facing scripts yet (common in a

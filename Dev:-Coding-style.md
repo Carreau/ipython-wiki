@@ -21,8 +21,8 @@ Other general comments:
 
 ## Naming conventions
 
-For naming conventions, we also follow the guidelines of PEP 8 [PEP 8](http://www.python.org/dev/peps/pep-0008/).  Some of the existing code doesn't honor this perfectly, but for all new
-IPython code (and much existing code is being refactored), we'll use:
+For naming conventions, we also follow the guidelines of [PEP 8](http://www.python.org/dev/peps/pep-0008/).  Some of the existing code doesn't honor this perfectly, but for all new and refactored
+IPython code, we'll use:
 
 * All `lowercase` module names. Long module names can have words separated by underscores (`really_long_module_name.py`), but this is not required. Try to use the convention of nearby files.
 

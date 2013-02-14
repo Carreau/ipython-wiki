@@ -1,4 +1,14 @@
-This document describes the broad goals of the IPython project.
+This document describes the broad goals, vision and direction of the IPython project.  IPython
+is a large code base with many different areas of functionality. With development ramping up
+it is critically important that we focus our efforts in a disciplined manner. Can simply can't do 
+everything at once.
+
+To provide direction and focus to the project, the core IPython developers have started to meet
+every six months, mostly in person, at UC Berkeley. These meetings are being funded through the
+Sloan Foundation. Along with these meetings, we plan to have a major release every six months (July / December).  The meetings will happen right after each release, to provide focus and direction
+for work on the next six months of work. Our first meeting was in January 2013, to plan for the 
+1.0 release in July and this document is a direct result of that meeting. 
+
 The gist of our goals for 2013-2014 is to spend 2013 really solidifying
 the single-user notebook experience, which is principally in two
 major areas:

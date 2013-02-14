@@ -25,9 +25,9 @@ Notes on working with GitHub
 In general: When in doubt, mark with **next release**.  We can always push back when we have more specific plans for a given release.
 
 
-## Labels
+## Labels and issues
 
-Issues should always be labeled once they are confirmed (not necessary for Issues that are still being clarified, or may be duplicates or not Issues at all).
+Issues should always be labeled once they are confirmed (not necessary for issues that are still being clarified, or may be duplicates or not Issues at all).
 
 Some significant labels:
 
@@ -39,7 +39,7 @@ Some significant labels:
 * `ClosedPR`: This issue is a reminder for a PR that was closed for going stale.
 * `quickfix`: Obvious or easy fixes.
 
-All confirmed Issues should at least have a `type-foo` label, and be marked with any affected components (e.g `parallel`, `qtconsole`, `htmlnotebook`), or particular sources of error (e.g. `py3k` or `unicode`).
+All confirmed issues should at least have a `type-foo` label, and be marked with any affected components (e.g `parallel`, `qtconsole`, `htmlnotebook`), or particular sources of error (e.g. `py3k` or `unicode`).
 
 The `doc` and `quickfix` labels are the best places for new contributors to start.
 
@@ -48,7 +48,7 @@ The `doc` and `quickfix` labels are the best places for new contributors to star
 
 * All work is submitted via Pull Requests.
 * Pull Requests can be submitted as soon as there is code worth discussing.  Pull Requests track the branch, so you can continue to work after the PR is submitted.  Review and discussion can begin well before the work is complete, and the more discussion the better.  The worse case is that the PR is closed.
-* Pull Requests that have stalled should be closed (see [Policy: Closing Pull Requests](https://github.com/ipython/ipython/wiki/Policy:-Closing-pull-requests)).
+* Pull Requests that have stalled should be closed (see [[our policy on closing PRs|Dev: Closing Pull Requests]]
 * Pull requests should always be made against master (backporting PRs is described below).
 * Pull Requests should be tested, if feasible:
     - bugfixes should include regression tests

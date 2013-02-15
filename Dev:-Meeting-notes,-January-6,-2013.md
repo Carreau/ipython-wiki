@@ -284,9 +284,8 @@ And main third party projects that build on top of IPython:
     -   Deal with JS embedded in tag event handlers
     -   Why are tables stripped in pagedown (seems to be layout)?
     -   investigate the minimum set of tag that need to be sanitized for \*security-only\*
-    -   Contact folks at GitHub and MathJax about MathJax security issues
+    -   Contact folks at GitHub and MathJax about MathJax security issues see https://github.com/github/gollum/issues/288
 *   Future answer to restoring lost functionality:
     -   Our only answer will be custom.js 1.0
     -   JS Plugins (server-side only at first)
     -   Add JS or plugin info to metadata with ‘do you trust...’ dialog.
-

@@ -39,7 +39,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/exploring_r_formula.ipynb).  By Matthew Brett.
 
-* [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](https://github.com/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb)
+* [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](https://github.com/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
 
 
 ### Pandas for data analysis

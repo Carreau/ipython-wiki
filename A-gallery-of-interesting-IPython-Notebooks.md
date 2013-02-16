@@ -33,7 +33,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining sympy and matplotlib.
 
-* [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  Another Numba example, this time with [self-organizing maps](http://nbviewer.ipython.org/3407544).
+* [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/3407544).
 
 * [IPython Parallel Push/Execute/Pull Demo](http://nbviewer.ipython.org/3866987) by Justin Riley.
 
@@ -82,6 +82,6 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Van Gogh's Starry Night with ipythonblocks](http://nbviewer.ipython.org/urls/github.com/jiffyclub/ipythonblocks/raw/master/demos/starry_night_to_text.ipynb), part of Matt Davis' [ipythonblocks](https://github.com/jiffyclub/ipythonblocks). This is a teaching tool for use with the IPython notebook that provides visual elements to understand programming concepts.
 
-* [Conway's Game of Life](http://nbviewer.ipython.org/3778422)
+* [Conway's Game of Life](http://nbviewer.ipython.org/3778422).
 
 * ["People plots"](http://nbviewer.ipython.org/4544012), whimsical stick figures generated with matplotlib.

@@ -120,7 +120,7 @@ Recommendation: I think we should embrace the bower vision of JS+CSS assets and 
 
 * We should organize our static dir in a manner that matches bower's approach. This would mean putting all of the IPython css+js under `static/ipython` and putting a `component.json` file in that directory to declare our dependencies.
 
-* We should start to replace our external dependencies with versions that can be installed using bower. This would include jQuery, Bootstrap, jQueryUI, CodeMirror, etc. If we need to change their code, we should do so by money patching so we can always use the originals.  This will greatly improve the situation for packagers as the packages come with a component.json file that has all of the information about where the package came from (git repo, branch, head, version).
+* We should start to replace our external dependencies with versions that can be installed using bower. This would include jQuery, Bootstrap, jQueryUI, CodeMirror, etc. If we need to change their code, we should do so by monkey patching so we can always use the originals.  This will greatly improve the situation for packagers as the packages come with a component.json file that has all of the information about where the package came from (git repo, branch, head, version).
 
 * We should adopt bower as the tool for installing JS plugins for the notebook. This means that each JS plugin should simply be a git repo with a `component.json` file.  This will enable plugins to depend on other plugins and installation will be simple. Because JS plugins can also include Python code, they optionally include a top level `setup.py` file to install included Python packages/modules. It is important that this script is top-level so things like easy_install can find it.
 

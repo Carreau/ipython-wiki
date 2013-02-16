@@ -4,7 +4,7 @@ Note that Matt Davis has conveniently written a set of [bookmarklets and extensi
 
 ## Entire books or other large collections of notebooks on a topic
 
-* [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book on the subject by Jose Unpingco, available also as a [blog](http://python-for-signal-processing.blogspot.com).
+* [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
 * A [beautiful matplotlib tutorial](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb), that includes animations and 3d plots.  This is part of a complete set of [Lectures on scientific computing with Python](https://github.com/jrjohansson/scientific-python-lectures).  By J.R. Johansson.
 
@@ -49,6 +49,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 * [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
 
 ### Social data
+
+* A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/urls/github.com/jseabold/538model/raw/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).
 
 * [An analysis of the Gaza-Israel 2012 crisis](http://nbviewer.ipython.org/4121857).
 

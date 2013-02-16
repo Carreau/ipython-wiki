@@ -76,7 +76,7 @@ in Python. The CommonJS API is synchronous and ignores the realities of browsers
 RequireJS
 ---------
 
-RequireJS (http://requirejs.org/) is a JavaScript library that attempts to bring the features of CommonJs into the asynchronous context of browsers. It is gaining lots of traction, but is no small dependency - if you but into it, you have to completely reorganize your JS code.
+RequireJS (http://requirejs.org/) is a JavaScript library that attempts to bring the features of CommonJs into the asynchronous context of browsers. It is gaining lots of traction, but is no small dependency - if you buy into it, you have to completely reorganize your JS code.
 
 Advantages:
 

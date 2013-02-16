@@ -17,7 +17,7 @@ Much of our code base deals with strings and unicode. This needs to be done in a
 
 ## 4. Adheres to our coding style
 
-Coding style refers to how source code is formatted and how variables, functions, methods and classes are named.  Your code you follow our coding style, which is described [[here|Dev: Coding style]].
+Coding style refers to how source code is formatted and how variables, functions, methods and classes are named.  Your code should follow our coding style, which is described [[here|Dev: Coding style]].
 
 ## 5. Clean & commented
 

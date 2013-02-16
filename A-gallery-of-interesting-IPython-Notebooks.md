@@ -50,13 +50,15 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/urls/github.com/jseabold/538model/raw/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).
 
+* [A detailed analysis of the Sandy Hook massacre in Newtown, Conneticut](http://nbviewer.ipython.org/url/www.brianckeegan.com/data/Shootings/Shootings.ipynb), which accompanies a more detailed [blog post on the subject](http://www.brianckeegan.com/2012/12/sandy-hook-school-massacre/). Here are the [notebook and accompanying data](http://www.brianckeegan.com/data/Shootings/Shootings.ipynb).  By Brian Keegan.
+
+* More on [gun violence analysis with Wikipedia data](http://nbviewer.ipython.org/4358066).
+
 * [An analysis of the Gaza-Israel 2012 crisis](http://nbviewer.ipython.org/4121857).
 
 * [Ranking NFL Teams](http://nbviewer.ipython.org/urls/raw.github.com/seanjtaylor/NFLRanking/master/NFL%2520Rankings.ipynb). The [full repo](https://github.com/seanjtaylor/NFLRanking) also includes an explanatory slideshow. By Sean Taylor.
 
 * [Automated processing of news media and generation of associated imagery](http://nbviewer.ipython.org/url/mhermans.net/files/tmp/demo_rdf_HLN.ipynb). 
-
-* [Gun violence analysis with Wikipedia data](http://nbviewer.ipython.org/4358066).
 
 * [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish).
 

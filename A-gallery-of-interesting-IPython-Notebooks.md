@@ -4,6 +4,8 @@ Note that Matt Davis has conveniently written a set of [bookmarklets and extensi
 
 ## Entire books or other large collections of notebooks on a topic
 
+* First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/urls/github.com/ipython/ipython/raw/master/examples/notebooks/Part%25201%2520-%2520Running%2520Code.ipynb), this is one of IPython's official [notebook example collection](https://github.com/ipython/ipython/tree/master/examples/notebooks).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/urls/github.com/ipython/ipython/raw/master/examples/notebooks/Part%25205%2520-%2520Rich%2520Display%2520System.ipynb).
+
 * [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
 * A [beautiful matplotlib tutorial](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb), that includes animations and 3d plots.  This is part of a complete set of [Lectures on scientific computing with Python](https://github.com/jrjohansson/scientific-python-lectures).  By J.R. Johansson.

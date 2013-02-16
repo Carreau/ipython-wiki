@@ -86,6 +86,6 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Van Gogh's Starry Night with ipythonblocks](http://nbviewer.ipython.org/urls/github.com/jiffyclub/ipythonblocks/raw/master/demos/starry_night_to_text.ipynb), part of Matt Davis' [ipythonblocks](https://github.com/jiffyclub/ipythonblocks). This is a teaching tool for use with the IPython notebook that provides visual elements to understand programming concepts.
 
-* [Conway's Game of Life](http://nbviewer.ipython.org/3778422).
+* [Conway's Game of Life](http://nbviewer.ipython.org/3778422). Interesting use of convolution operation to calculate the next state of game board, instead of obvious find neighbors and filter the board for next state.
 
 * ["People plots"](http://nbviewer.ipython.org/4544012), whimsical stick figures generated with matplotlib.

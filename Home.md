@@ -16,6 +16,7 @@ This wiki contains:
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
 * The IPython [Extensions Index](wiki/Extensions-Index)
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
+* [[A gallery of interesting IPython Notebooks]]
 
 # Editing the wiki
 

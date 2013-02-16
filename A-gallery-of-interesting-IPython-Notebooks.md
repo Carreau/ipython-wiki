@@ -15,6 +15,10 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
+* [Introduction to Python Data Structures](http://nbviewer.ipython.org/urls/github.com/profjsb/python-bootcamp/raw/master/DataFiles_and_Notebooks/02_AdvancedDataStructures/data_structures.ipynb), part of the [UC Berkeley Scientific Python Bootcamp](https://sites.google.com/site/pythonbootcamp), led by Josh Bloom ([repo](https://github.com/profjsb/python-bootcamp)).
+
+* [Bayesian Inference for the Mining Disaster Data Set](http://nbviewer.ipython.org/urls/github.com/profjsb/python-seminar/raw/master/DataFiles_and_Notebooks/10_MCMC_and_Symbolic/mcmc_lecture.ipynb): part of the [UC Berkeley Python Computing for Science course](https://github.com/profjsb/python-seminar) by Josh Bloom.
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing

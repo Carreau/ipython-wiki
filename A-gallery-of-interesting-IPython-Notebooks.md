@@ -25,8 +25,6 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/url/epi.whoi.edu/esr/GIS_GRASS-R_Example.ipynb). This embeds a slideshow and google Earth in the notebook.  By Massimo Di Stefano.
 
-* [Sparse Graphs in Python: Playing With Word Ladders](http://nbviewer.ipython.org/urls/github.com/jakevdp/jakevdp.github.com/blob/master/downloads/notebooks/sparse-graph.ipynb), also by Jake van der Plas and available as a [blog post](http://jakevdp.github.com/blog/2012/10/14/scipy-sparse-graph-module-word-ladders/).  Other [notebooks by Jake](https://github.com/jakevdp/jakevdp.github.com/tree/master/downloads/notebooks) contain many more great examples of doing interesting work with the scientific Python stack.
-
 * [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining sympy and matplotlib.
 
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  Another Numba example, this time with [self-organizing maps](http://nbviewer.ipython.org/3407544).
@@ -64,7 +62,9 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 
-* [How to blog on Blogger with the notebook](http://nbviewer.ipython.org/urls/raw.github.com/fperez/blog/master/120907-Blogging%20with%20the%20IPython%20Notebook.ipynb).
+* [Blogging With IPython in Blogger](http://nbviewer.ipython.org/urls/raw.github.com/fperez/blog/master/120907-Blogging%20with%20the%20IPython%20Notebook.ipynb), also available in [blog post form](http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html), [full repo here](https://github.com/fperez/blog). By Fernando Perez.
+
+* [Blogging With IPython in Octopress](http://nbviewer.ipython.org/urls/github.com/jakevdp/jakevdp.github.com/raw/master/downloads/notebooks/nb_in_octopress.ipynb), by Jake van der Plas and available as a [blog post](http://jakevdp.github.com/blog/2012/10/04/blogging-with-ipython/).  Other [notebooks by Jake](https://github.com/jakevdp/jakevdp.github.com/tree/master/downloads/notebooks) contain many more great examples of doing interesting work with the scientific Python stack.
 
 * [Custom CSS control of the notebook](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/Blog1.ipynb), this is part of a [blog repo](https://github.com/Carreau/posts) by Matthias Bussionier.
 
@@ -74,6 +74,6 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Van Gogh's Starry Night with ipythonblocks](http://nbviewer.ipython.org/urls/github.com/jiffyclub/ipythonblocks/raw/master/demos/starry_night_to_text.ipynb), part of Matt Davis' [ipythonblocks](https://github.com/jiffyclub/ipythonblocks). This is a teaching tool for use with the IPython notebook that provides visual elements to understand programming concepts.
 
-* Conway's Game of Life](http://nbviewer.ipython.org/3778422)
+* [Conway's Game of Life](http://nbviewer.ipython.org/3778422)
 
 * ["People plots"](http://nbviewer.ipython.org/4544012), whimsical stick figures generated with matplotlib.

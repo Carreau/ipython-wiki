@@ -93,3 +93,5 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 * [Conway's Game of Life](http://nbviewer.ipython.org/3778422). Interesting use of convolution operation to calculate the next state of game board, instead of obvious find neighbors and filter the board for next state.
 
 * ["People plots"](http://nbviewer.ipython.org/4544012), whimsical stick figures generated with matplotlib.
+
+* [Reveal converter mini-tutorial](http://nbviewer.ipython.org/url/www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.ipynb), also available in [blog post form](http://www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.html). Do you want to make static html/css slideshow straight from the IPython notebook? OK, now you can do it with the *reveal* converter (nbconvert). [Demo](http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html) by Damián Avila.  

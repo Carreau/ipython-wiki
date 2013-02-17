@@ -33,7 +33,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/url/epi.whoi.edu/esr/GIS_GRASS-R_Example.ipynb). This embeds a slideshow and google Earth in the notebook.  By Massimo Di Stefano.
 
-* [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining sympy and matplotlib.
+* [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
 
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/3407544).
 
@@ -73,7 +73,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Automated processing of news media and generation of associated imagery](http://nbviewer.ipython.org/url/mhermans.net/files/tmp/demo_rdf_HLN.ipynb). 
 
-* [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish).
+* [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish). By [Javier Moreno](http://finiterank.com).
 
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 
@@ -93,6 +93,6 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Conway's Game of Life](http://nbviewer.ipython.org/3778422). Interesting use of convolution operation to calculate the next state of game board, instead of obvious find neighbors and filter the board for next state.
 
-* ["People plots"](http://nbviewer.ipython.org/4544012), whimsical stick figures generated with matplotlib.
+* ["People plots"](http://nbviewer.ipython.org/4544012), stick figures generated with matplotlib.
 
 * [Reveal converter mini-tutorial](http://nbviewer.ipython.org/url/www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.ipynb), also available in [blog post form](http://www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.html). Do you want to make static html/css slideshow straight from the IPython notebook? OK, now you can do it with the *reveal* converter (nbconvert). [Demo](http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html) by Damián Avila.  

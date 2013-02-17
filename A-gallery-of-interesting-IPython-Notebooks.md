@@ -43,6 +43,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](https://github.com/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
 
+* [Comparing different approaches to evolutionary simulations](http://slideviewer.herokuapp.com/urls/raw.github.com/yoavram/ipython-notebooks/master/simulation%2520frameworks.ipynb). The notebook was converted to an HTML presentation using Damián Avila's [nbconvert](https://github.com/damianavila/nbconvert) fork. By Yoav Ram.
+
 
 ### Pandas for data analysis
 

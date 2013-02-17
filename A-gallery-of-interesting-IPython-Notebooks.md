@@ -49,7 +49,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
 
-* [Fitting psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb)
+* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
 
 ### Pandas for data analysis
 

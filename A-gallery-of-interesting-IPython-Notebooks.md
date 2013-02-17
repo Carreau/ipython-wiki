@@ -78,6 +78,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Blogging With IPython in Octopress](http://nbviewer.ipython.org/urls/github.com/jakevdp/jakevdp.github.com/raw/master/downloads/notebooks/nb_in_octopress.ipynb), by Jake van der Plas and available as a [blog post](http://jakevdp.github.com/blog/2012/10/04/blogging-with-ipython/).  Other [notebooks by Jake](https://github.com/jakevdp/jakevdp.github.com/tree/master/downloads/notebooks) contain many more great examples of doing interesting work with the scientific Python stack.
 
+* [Blogging With IPython in Nikola](http://nbviewer.ipython.org/url/www.damian.oquanta.info/posts/blogging-with-nikola-and-ipython.ipynb), also available in [blog post form](http://www.damian.oquanta.info/posts/blogging-with-nikola-and-ipython.html) by Damián Avila.
+
 * [Custom CSS control of the notebook](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/Blog1.ipynb), this is part of a [blog repo](https://github.com/Carreau/posts) by Matthias Bussonnier.
 
 ## Whimscal notebooks

@@ -43,7 +43,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](https://github.com/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
 
-* [Comparing different approaches to evolutionary simulations](http://slideviewer.herokuapp.com/urls/raw.github.com/yoavram/ipython-notebooks/master/simulation%2520frameworks.ipynb). The notebook was converted to an HTML presentation using [nbconvert](https://github.com/damianavila/nbconvert)'s new `reveal` converter. By Yoav Ram.
+* [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%2520frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/raw.github.com/yoavram/ipython-notebooks/master/simulation%2520frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 
 
 ### Pandas for data analysis

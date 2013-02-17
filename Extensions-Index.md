@@ -127,3 +127,40 @@ Examples:
 
 * [Introduction](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Introduction.ipynb)
 * [Reference Guide](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Reference.ipynb)
+
+
+## SQLite magics
+
+IPython magics to run SQL and see the result in table format.
+
+[Homepage](https://github.com/tkf/ipython-sqlitemagic)
+
+```text
+%install_ext https://raw.github.com/tkf/ipython-sqlitemagic/master/sqlitemagic.py
+```
+
+
+## Doctest magics
+
+Run and debug doctest in IPython.
+
+[Homepage](https://github.com/tkf/ipython-doctestmagic)
+
+```text
+%install_ext https://raw.github.com/tkf/ipython-doctestmagic/master/doctestmagic.py
+```
+
+
+## Magics for temporary workspace
+
+- `%cdtemp` -- Creates a temporary directory that is magically cleaned up
+  when you exit IPython session.
+
+- `%%with_temp_dir` -- Run Python code in a temporary directory and
+  clean up it after the execution.
+
+[Homepage](https://github.com/tkf/ipython-tempmagic)
+
+```text
+%install_ext https://raw.github.com/tkf/ipython-tempmagic/master/tempmagic.py
+```

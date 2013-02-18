@@ -17,6 +17,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 * [An introduction to Bayesian inference](http://nbviewer.ipython.org/urls/github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/raw/master/Chapter1_Introduction/Chapter1_Introduction.ipynb), this is just chapter 1 in an ongoing book titled [Probabilistic Programming and Bayesian Methods for Hackers
 Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers), by [Cameron Davidson-Pilon](http://camdp.com/).
 
+* [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
+
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
 * [Introduction to Python Data Structures](http://nbviewer.ipython.org/urls/github.com/profjsb/python-bootcamp/raw/master/DataFiles_and_Notebooks/02_AdvancedDataStructures/data_structures.ipynb), part of the [UC Berkeley Scientific Python Bootcamp](https://sites.google.com/site/pythonbootcamp), led by Josh Bloom ([repo](https://github.com/profjsb/python-bootcamp)).
@@ -47,9 +49,9 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
 
-* [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
-
 * [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
+
+* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
 
 ### Pandas for data analysis
 

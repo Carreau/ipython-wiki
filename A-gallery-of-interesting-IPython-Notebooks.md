@@ -25,7 +25,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Bayesian Inference for the Mining Disaster Data Set](http://nbviewer.ipython.org/urls/github.com/profjsb/python-seminar/raw/master/DataFiles_and_Notebooks/10_MCMC_and_Symbolic/mcmc_lecture.ipynb): part of the [UC Berkeley Python Computing for Science course](https://github.com/profjsb/python-seminar) by Josh Bloom.
 
-* [Working with Reactions](http://nbviewer.ipython.org/4316430), one of a [collection of tutorials on cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
+* [Working with Reactions](http://nbviewer.ipython.org/4316430), part of a set of tutorials on [cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
 
 ## Scientific computing and data analysis with the SciPy Stack
 

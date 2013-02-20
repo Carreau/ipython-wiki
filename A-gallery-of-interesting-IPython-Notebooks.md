@@ -95,7 +95,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Custom CSS control of the notebook](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/Blog1.ipynb), this is part of a [blog repo](https://github.com/Carreau/posts) by Matthias Bussonnier.
 
-## Reproducible academic publications
+## <a id="reproducible"></a> Reproducible academic publications
 
 This section contains academic papers that have been published in the peer-reviewed literature or pre-print sites such as the [ArXiv](http://arxiv.org) that include one or more notebooks that enable (even if only partially) readers to reproduce the results of the publication.  If you include a publication here, please link to the journal article as well as providing the nbviewer notebook link (and any other relevant resources associated with the paper).
 

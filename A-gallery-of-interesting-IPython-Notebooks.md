@@ -95,6 +95,14 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Custom CSS control of the notebook](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/Blog1.ipynb), this is part of a [blog repo](https://github.com/Carreau/posts) by Matthias Bussonnier.
 
+## Reproducible academic publications
+
+This section contains academic papers that have been published in the peer-reviewed literature or pre-print sites such as the [ArXiv](http://arxiv.org) that include one or more notebooks that enable (even if only partially) readers to reproduce the results of the publication.  If you include a publication here, please link to the journal article as well as providing the nbviewer notebook link (and any other relevant resources associated with the paper).
+
+* [Collaborative cloud-enabled tools allow rapid, reproducible biological insights, by B. Ragan-Kelley et al.](http://www.nature.com/ismej/journal/v7/n3/full/ismej2012123a.html). The [main notebook](http://nbviewer.ipython.org/3693491/cloud_demo_complete.ipynb), the [full collection of related notebooks](http://nbviewer.ipython.org/3693491) and the [companion site](http://qiime.org/home_static/nih-cloud-apr2012) with the Amazon AMI information for reproducing the full paper.
+
+* [A Reference-Free Algorithm for Computational Normalization of Shotgun Sequencing Data, by C.T. Brown et al.](http://ged.msu.edu/papers/2012-diginorm). [Full notebook](http://nbviewer.ipython.org/urls/github.com/ged-lab/2012-paper-diginorm/raw/master/notebook/diginorm.ipynb), [ArXiv link](http://arxiv.org/abs/1203.4802) and [project repository](https://github.com/ged-lab/2012-paper-diginorm).
+
 ## Whimscal notebooks
 
 * [XKCD-styled plots created with Matplotlib](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb). Here is the [blog post version](http://jakevdp.github.com/blog/2012/10/07/xkcd-style-plots-in-matplotlib/) with discussion.  By Jake van der Plas.

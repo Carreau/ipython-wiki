@@ -17,6 +17,7 @@ This wiki contains:
 * The IPython [Extensions Index](wiki/Extensions-Index)
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
 * [[A gallery of interesting IPython Notebooks]]
+* [[Frequently asked questions]]
 
 # Editing the wiki
 

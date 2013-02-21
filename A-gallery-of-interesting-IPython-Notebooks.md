@@ -41,6 +41,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/3407544).
 
+* [Numpy performance tricks](http://nbviewer.ipython.org/4645217/), and [blog post](http://cyrille.rossant.net/numpy-performance-tricks/), by [Cyrille Rossant](http://cyrille.rossant.net/).
+
 * [IPython Parallel Push/Execute/Pull Demo](http://nbviewer.ipython.org/3866987) by Justin Riley.
 
 * [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/urls/raw.github.com/fperez/nipy-notebooks/master/exploring_r_formula.ipynb).  By Matthew Brett.

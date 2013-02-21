@@ -3,11 +3,9 @@ FAQ
 
 This is the IPython Frequently Asked Questions page.
 
-.. note::
-
-    We are in the process of moving these types of questions/answers over to the IPython tag on
-    [stackoverflow](http://stackoverflow.com/questions/tagged/ipython). Please use stackoverflow
-    for all future Q&A of this type.
+We are in the process of moving this type of Q&A to the IPython tag on
+`stackoverflow http://stackoverflow.com/questions/tagged/ipython`_. Please post any new questions
+there.
 
 .. contents::
    :local:

@@ -1,4 +1,3 @@
-
 Installation instructions for the Claremont Py4Science workshops
 ================================================================
 

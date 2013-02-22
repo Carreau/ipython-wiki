@@ -4,4 +4,3 @@ Installation instructions for different contexts and platforms:
 
 * [Mobile](./Install:-Mobile)
 * [Python 3](./Install:-Python-3)
-* [Windows](./Install:-Windows)

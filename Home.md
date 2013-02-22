@@ -6,7 +6,6 @@ This wiki contains:
 
 * The [[IPython Cookbook|Cookbook: Index]]
 * [Development information](wiki/Dev:-Index)
-* [Installation information](wiki/Install:-Index)
 * [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs:-IPython-Enhancement-Proposals)
 * IPython roadmaps and development plans:
   - [Roadmap for IPython](wiki/Roadmap:-IPython)
@@ -18,6 +17,7 @@ This wiki contains:
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
 * [[A gallery of interesting IPython Notebooks]]
 * [[Frequently asked questions]]
+* [Supplementary installation information](wiki/Install:-Index)
 
 # Editing the wiki
 

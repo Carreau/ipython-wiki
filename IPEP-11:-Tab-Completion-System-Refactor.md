@@ -29,11 +29,10 @@ The `merge_completions` configurable will be removed, and instead the completers
 
 ### Proposal :: More Specifics
 - Scrap the `IPython.core.completer.Completer` class. This is just a copy of the readline completer that's in the stdlib's `rlcompleter.py`. It's not necessary that IPython's actual completer subclass that.
-- Pay careful attention to the difference between splitting on RL delimiters and tokenizing. The behavior is different for things like string literals. For most purposes, the split on RL delimiters is sufficient. Tokenization using the stdlib's `tokenize` is more flexible though. Perhaps both should be provided in the `Event`.
-- Every matcher will subclass a new `BaseMatcher` abstract base class.
+- Pay careful attention to the difference between splitting on RL delimiters and tokenizing. The behavior is different for things like string literals. For most purposes, the split on RL delimiters is sufficient. Tokenization using the stdlib's `tokenize` is more flexible though. Both types of splits will be performed on the input line and passed to each of the matchers by way of an `Event` instance.
+- Every matcher will subclass a new `BaseMatcher` abstract base class. The matchers may or may not be `Configurable` as well (see questions).
 - Both the individual matchers and the `Completer` class will return a list of dicts. Each dict shall contain the keys 'match' and 'type'. Later on, it is possible that this API could be extended to support additional metadata.
-
-Here is a sketch of the `BaseMatcher`:
+- Here is a sketch of the `BaseMatcher`, which each matcher will extend:
 ```
 class BaseMatcher(object):
     __metaclass__ = abc.ABCMeta
@@ -72,7 +71,7 @@ class BaseMatcher(object):
         pass
 ```
 
-Each matcher is passed an `Event` instance, which encapsulates the state of the line and any preprocessing done.
+- Each matcher is passed an `Event` instance, which encapsulates the state of the line and any preprocessing done.
 ```
 class Event(object):
     """Container for information about a tab completion event
@@ -91,7 +90,7 @@ class Event(object):
     """
 ```
 
-Here is a sketch for the `Completer`, which is the replacement for `IPython.core.completer.IPCompleter`:
+- The new `Completer`, is a replacement for `IPython.core.completer.IPCompleter`:
 ```
 class Completer(object):
     def register_matcher(self, matcher):
@@ -119,9 +118,7 @@ class Completer(object):
         """
         pass
 ```
-
-
-GNU Readline clients can use a subclass of `Completer`:
+- GNU Readline clients can use a subclass of `Completer`:
 ```
 class ReadlineCompleter(Completer):
     def rlcomplete(self, text, state):
@@ -133,6 +130,9 @@ class ReadlineCompleter(Completer):
          """
          pass
 ```
+
+### Shim between old API and new API
+There is currently code in the wild in external 3rd party libraries that relies on the "custom completer" API. Thus, a shim should be created that allows that code to interact with the new system with no change. The documentation on the "custom completer" API will be changed, however, to reflect the new API and the shim will not be advertised as the recommended way to interact with the tab completion system. 
 
 ### Questions
 - Should the individual builtin matchers be `Configurable`?

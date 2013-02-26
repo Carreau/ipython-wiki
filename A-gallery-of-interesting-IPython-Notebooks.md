@@ -33,6 +33,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [First few lectures of the UW/Coursera course on Data Analysis](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/ComputationalMethodsCourse/master/Coursera%2520Data%2520Analysis.ipynb). ([Repo](https://github.com/fonnesbeck/ComputationalMethodsCourse)) by Chris Fonnesbeck.
 
+* [Linear algebra with Cython](http://nbviewer.ipython.org/urls/raw.github.com/carljv/cython_testing/master/cython_linalg.ipynb).  A tutorial that styles the notebook differently to show that you can produce high-quality typography online with the Notebook.  By Carl Vogel.
+
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/urls/raw.github.com/twiecki/CythonGSL/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/url/epi.whoi.edu/esr/GIS_GRASS-R_Example.ipynb). This embeds a slideshow and google Earth in the notebook.  By Massimo Di Stefano.

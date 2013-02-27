@@ -41,9 +41,9 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
 
-* [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904/).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/3407544).
+* [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/3914904).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/3407544).
 
-* [Numpy performance tricks](http://nbviewer.ipython.org/4645217/), and [blog post](http://cyrille.rossant.net/numpy-performance-tricks/), by [Cyrille Rossant](http://cyrille.rossant.net/).
+* [Numpy performance tricks](http://nbviewer.ipython.org/4645217), and [blog post](http://cyrille.rossant.net/numpy-performance-tricks/), by [Cyrille Rossant](http://cyrille.rossant.net/).
 
 * [IPython Parallel Push/Execute/Pull Demo](http://nbviewer.ipython.org/3866987) by Justin Riley.
 
@@ -67,7 +67,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Time-series analysis with Pandas](http://nbviewer.ipython.org/urls/raw.github.com/changhiskhan/talks/master/pydata2012/pandas_timeseries.ipynb).
 
-* [Financial data analysis with Pandas](http://nbviewer.ipython.org/3962843/).
+* [Financial data analysis with Pandas](http://nbviewer.ipython.org/3962843).
 
 * [Data clustering, using pandas, scipy and the R magic](http://nbviewer.ipython.org/4751490).
 

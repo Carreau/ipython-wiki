@@ -23,3 +23,4 @@ The IPEP author should:
 * [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook)
 * [[IPEP 10: kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]]
 * [[IPEP 11: Tab Completion System Refactor|IPEP-11:-Tab-Completion-System-Refactor]]
+* [[IPEP 12: Splitting KernelManager and KernelClient]]

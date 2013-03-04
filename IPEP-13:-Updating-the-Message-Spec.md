@@ -53,3 +53,8 @@ or objects for which multiple components *should* be displayed (e.g. LaTeX + PNG
 For all of these cases, the only option is to do the entire HTML rendering kernel-side,
 and use raw HTML-reprs.  This sucks quite a bit, but I don't have a good answer for it.
 Perhaps the JSON reprs / jsplugins are going to be the only way to do this sort of thing.
+
+## payload keys
+
+Currently, display payloads list the full object path of the source, which doesn't make any sense.
+It should be a simple identifier, so that moving the implementation does not need to be reflected in the frontend.

@@ -162,3 +162,10 @@ In addition you have to:
 Your HOME environment variable must be set.
 
 You have to provide either -X:Frames or -X:FullFrames as ipy.exe parameter
+
+Q. I'm really interested still but my question isn't here... where can I get support for specific problems?
+---------------
+As mentioned at the top: 
+We are in the process of moving this type of Q&A to the IPython tag on
+`stackoverflow <http://stackoverflow.com/questions/tagged/ipython>`_. Please post any new questions
+there.

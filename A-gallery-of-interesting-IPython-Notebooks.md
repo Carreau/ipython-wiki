@@ -51,6 +51,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](https://github.com/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
 
+* [Physical quantities (numerical value with units)](http://nbviewer.ipython.org/url/www.southampton.ac.uk/~fangohr/blog/Python/physics-module.ipynb). By Hans Fangohr, also available as a [blog post](http://www.southampton.ac.uk/~fangohr/blog/physical-quantities-numerical-value-with-units-in-python.html).
+
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%2520frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/raw.github.com/yoavram/ipython-notebooks/master/simulation%2520frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 
 * [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.

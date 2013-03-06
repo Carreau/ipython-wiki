@@ -125,6 +125,15 @@ Development focus for IPython 2.0:
 - Work on interactive widgets, and the JSON/handler messages,
   necessary for rich interactive content.
 
+While we haven't really begun this work, there are some things we are thinking about that will affect users of the Notebook, in particular people who are already developing JavaScript widgets for the Notebook.
+
+- A number of people have written JavaScript widgets that startup an additional server that talks to the JavaScript side using WebSockets.  Using additional server logic as you have done is not officially
+supported.  The notebook architecture may change in a way that makes it impossible to do this type of thing.
+The problem is that these additional servers make some strong assumptions about where the notebook server, kernel and your server are running.  The preferred way of getting data back and forth between python and the
+browser is to use our message channels.  Currently these channels are not sufficient for many interactive widgets, but after the 2.0 release, they will be.
+- Because of security issues are are moving away from the notebook being able to execute dynamically generated JavaScript code.  This removal will actually happen in the 1.0 release (see above), but the full replacement with a JavaScript plugin system won't happen until 2.0.
+- Because of these changes developers who are writing JavaScript widgets that work with the current IPython should expect to rewrite them for the 2.0 release.
+
 ## Release 3.0, July 15, 2014
 
 Development focus for IPython 3.0:

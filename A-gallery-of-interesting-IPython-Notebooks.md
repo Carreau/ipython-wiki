@@ -94,6 +94,10 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish). By [Javier Moreno](http://finiterank.com).
 
+## General Python Programming
+
+* [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).
+
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 
 * [Blogging With IPython in Blogger](http://nbviewer.ipython.org/urls/raw.github.com/fperez/blog/master/120907-Blogging%20with%20the%20IPython%20Notebook.ipynb), also available in [blog post form](http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html), [full repo here](https://github.com/fperez/blog). By Fernando Perez.

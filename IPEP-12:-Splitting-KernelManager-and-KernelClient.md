@@ -63,6 +63,29 @@ which in turn starts the actual kernel.
 This will allow things like ^C to halt the Kernel,
 without having to send shutdown messages from Clients.
 
+### Module layout
+
+With the kernel modules no longer in `IPython.zmq` next to disparate,
+their current `IPython.kernel.kernelmanager` names are super annoying and redundant.
+The layout will be changes, to reflect the new organization and reduced ambiguity:
+
+```
+IPython/kernel/manager.py \
+IPython/kernel/client.py   | - these three files will contain what used to be in kernelmanager.py
+IPython/kernel/channels.py /
+IPython/blocking/client.py - what used to be blockingkernelmanager.py
+```
+
+etc.
+
+### Base channels shouldn't be threads
+
+I haven't quite decided what this should look like,
+but the base channel classes should *not* be Thread subclasses.
+This adds far too much unnecessary complexity,
+and is totally inappropriate for cases like the BlockingKernelClient.
+It may be that the Qt case will still want threads,
+but this should be handled there, rather than in the base class.
 
 ## Stage two: remote signal / restart
 

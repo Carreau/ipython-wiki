@@ -1,10 +1,10 @@
 ### Abstract
 The IPython tab completion machinery is messy, complicated, and difficult to extend. The IPython pull request [2701](https://github.com/ipython/ipython/pull/2701), for instance, envisioned a feature -- tab completion based on function-specific annotations -- which, because of the current sub-optimal completion API, required a quite a bit of hacking into the core completer logic to execute. This proposal envisions a refactoring of the IPython tab completion machinery -- largely `IPython/core/completer.py`, `IPython/core/completerlib.py`, and a little bit of `IPython/core/interactiveshell.py` -- in a way that simplifies and unifies the codebase while providing a powerful and flexible public-facing API, enabling its extensibility in 3rd party projects.
 
-### History of the Tab Completion Machinery
+In addition, we want to extend the functionality of the completion system for non-readline frontends like the notebook. Instead of simply providing a flat list of matches (which is all that the terminal frontend can handle), we will instead provide a system where each completion string is associated with a 'kind'. These 'kind's might include, but are not limited to files, directories, objects and object attributes. By providing the completions, organized by kind, to rich frontends, we hope to enable a richer UX than is currently available without this attached metadata.
 
-- Started closely tied to GNU readline, and to the stdlib's `rlcompleter.py` module
-- Hacked to be able to work with non-readline frontends, like the notebook and qtconsole.
+### History of the Tab Completion Machinery
+The tab completion system started closely tied to GNU readline, and to the stdlib's `rlcompleter.py` module. It was extended to be able to work with non-readline frontends, like the notebook and qtconsole. But its internal architecture and external API is still conceptually based on the abilities of GNU readline. 
 
 ### Current State of the Tab Completion Machinery
 The completer machinery is architected as follows: there are a variety (roughly 1 dozen) of "matchers" or "completers", each of which, in essence, is supplied with a string containing the current state of the input line and responds with a list of possible matches. When the tab event is triggered, some or all of these completers are called, and the lists they produce may or may not be merged together. Regardless, a "master list" of completions is produced -- it may correspond to the results from simply one completer or to a merged list -- which is then supplied to either GNU readline (terminal frontend), or to the frontend itself (zmq frontends) for display to the user.
@@ -148,7 +148,7 @@ class CompletionEvent(object):
 ```
 
 ### Proposal :: Changes to Messaging Protocol
-In order to provide the 'kind' information about each of the completions to rich frontends, the messaging protocol needs to be extended. The current messaging protocol for completions is described here: http://ipython.org/ipython-doc/dev/development/messaging.html#complete. The `complete_reply` message type
+In order to provide the 'kind' information about each of the completions to rich frontends, the messaging protocol needs to be extended. The current messaging protocol for completions is described [here](http://ipython.org/ipython-doc/dev/development/messaging.html#complete). The `complete_reply` message type
 will need to be extended to return not just a list of matches, but a dict mapping strings ('kind') to lists of strings (the matches). This follows from the return type of `CompletionManager.complete()`.
 
 Furthermore, the specification of the `complete_request` message type needs to change, in order to really maintain kernel and language agnosticism in the frontend. By providing `text` and `line` in addition to `block`, the current messaging spec requires frontends to split the cell on newlines and, problematically, to split the last line on a set of python delimiters, such that `text` is assigned to be the last element of the line after splitting on these delimiters. This is problematic because it leaks python semantics into the frontend. A native Ruby, R, or Matlab kernel might use different delimiters (e.g. the dollar sign in R), and it should not be the place of the frontend to perform preprocessing on the block of text which is actually language specific and really best left for the kernel.

@@ -27,21 +27,67 @@ This proposal envisions changes to the three majors aspects of the completion sy
 
 The `merge_completions` configurable will be removed, and instead the completers themselves will register themselves as exclusive or non-exclusive. (The `merge_completions` configurable really doesn't make much sense, because it relies on the rather arbitrary ordering of the current core matchers.)
 
-### Proposal :: More Specifics
+### Proposal :: Changes to `IPython.core.completer`
+The current `Completer` and `IPCompleter` classes will be removed, and replaced with a new class, `CompletionManager`. The `CompletionManager` orchestrates and controls the dispatch of the individual completers available in IPython. It provides the API for registering new completers as well.
 
-#### Changes to `IPython.core.completer`
+The `CompletionManager` will look something like this:
 
+```
+class CompletionManager(Configurable):
+    def register_completer(self, completer):
+        """Register a new completer
+        """
+        pass
 
-- Scrap the `IPython.core.completer.Completer` class. This is just a copy of the readline completer that's in the stdlib's `rlcompleter.py`. It's not necessary that IPython's actual completer subclass that.
-- Pay careful attention to the difference between splitting on RL delimiters and tokenizing. The behavior is different for things like string literals. For most purposes, the split on RL delimiters is sufficient. Tokenization using the stdlib's `tokenize` is more flexible though. Both types of splits will be performed on the input line and passed to each of the matchers by way of an `Event` instance.
-- Every matcher will subclass a new `BaseMatcher` abstract base class. The matchers may or may not be `Configurable` as well (see questions).
-- Both the individual matchers and the `Completer` class will return a list of dicts. Each dict shall contain the keys 'match' and 'type'. Later on, it is possible that this API could be extended to support additional metadata.
-- Here is a sketch of the `BaseMatcher`, which each matcher will extend:
+    def complete(self, block, cursor_position=None):
+        """Recommend possible completions for a given input block
+        
+        Parameters
+        ----------
+        block : str
+            Either a line of text or an entire block of text (e.g. a cell)
+            providing the current completion context.
+        cursor_position : int, optional
+            The position of the cursor within the line, at the time that
+            the completion key was activated. If not supplied, the cursor
+            will be assumed to have been at the end of the line.
+       
+        Returns
+        -------
+        completions : dict, {str -> list(str)}
+            The keys of the completions dict are the 'kind' of the completion,
+            which may be displayed in rich frontends. Example 'kinds' might be,
+            but are not limited to 'file', 'directory', 'object', 'keyword argument'.
+        """
+        # preprocess line to create a CompletionEvent
+        # call all of the matchers
+        # merge their results, and for each merged set of completions, listify and sort
+        # it before returning it.
+        pass
+```
+
+### Proposal :: `Matcher` API
+Each kind of completion, such as files, directories, objects and object attributes, will
+generally be computed by a separate matcher, as in the current system. However, instead
+of these matchers being methods on a single monolithic class, they will each be a class
+of their own, whose dispatch is controlled by the `CompletionManager`.
+
+On the recommendation of Fernando, and following the example set by the magics system, there
+will be two ways, from a user perspective, of registering new matchers. The first will
+follow an object oriented design. The second will be a functional wrapper over this OO system.
+Using the OO matchers system, the user will define a subclass of the to-be-provided `BaseMatcher`
+abstract base class. The key method of this class, `match(self, event)` will take as input a
+preprocessed version of the current line, and will return zero or more matches. This object will
+then need to be registered with the `CompletionManager`. The functional wrapper over this system
+will provide a function decorator that can be used to dynamically define a class with the supplied
+function as the `match` method, and register it.
+
+Here is a sketch of the `BaseMatcher`, which each matcher will extend:
+
 ```
 class BaseMatcher(object):
     __metaclass__ = abc.ABCMeta
 
-    @abc.abstractproperty
     def exclusive(self):
         """Should the completions returned by this matcher be the *exclusive* matches
         displayed to the user?
@@ -59,89 +105,58 @@ class BaseMatcher(object):
         
         Parameters
         ----------
-        event : Event
+        event : CompletionEvent
             The event contains information about the context, including
             the current line, etc.
         
         Returns
         -------
-        completions : list, None
-            The returned completions shall be a list of dicts, containing the keys 'match',
-            and 'type'. The value for 'match', a string, gives the matched text. The value
-            for 'type', a string, gives information about the type of the object being
-            suggested to the user, suitable for display by rich frontends. If this matcher fails
-            to match any results, it shall return None.
+        completions : dict, {str -> set(str)}
+            The returned completions shall be a dict, mapping the 'kind' of the completion
+            to a set of the recommend strings.
         """
         pass
 ```
 
-- Each matcher is passed an `Event` instance, which encapsulates the state of the line and any preprocessing done.
+Each matcher is passed an `Event` instance, which encapsulates the state of the line and any preprocessing
+done. To the extent that there is common preprocessing done on the line by multiple matchers, it is
+desirable to only do that computation once. For this reason, the `CompletionEvent` will contain a
+`tokens` property, which will return the results of running the python stdlib's tokenizer on the input line.
+If no matchers request this information, it will not be computed. On the other hand, if many matchers request this information, it will not be recomputed, since the `CompletionEvent` will be able to cache the tokens internally.
+
 ```
-class Event(object):
+class CompletionEvent(object):
     """Container for information about a tab completion event
     
     Attributes
     ----------
-    line : str
-        The complete input line, to to the cursor position.
+    block : str
+        The complete input block, upto the cursor position.
+    lines : list
+        The block, after splitting on newlines.
     split : list
-        A list of strings, formed by splitting `line` on all readline delimiters.
+        A list of strings, formed by splitting `block` on all readline delimiters.
     text : str
-        The last element in split. For readline clients, all matches are expected
+        The last element in `split`. For readline clients, all matches are expected
         to start with `text`.
+    
+    Properties
+    ----------
     tokens : list
         A list of tokens formed by running the python tokenizer on `line`.
     """
 ```
 
-- The new `Completer`, is a replacement for `IPython.core.completer.IPCompleter`:
-```
-class Completer(object):
-    def register_matcher(self, matcher):
-        """Register a matcher (instance of `BaseMatcher`) for recommending tab-completion matches.
-        """
-        pass
+### Proposal :: Changes to Messaging Protocol
+In order to provide the 'kind' information about each of the completions to rich frontends, the messaging protocol needs to be extended. The current messaging protocol for completions is described here: http://ipython.org/ipython-doc/dev/development/messaging.html#complete. The `complete_reply` message type
+will need to be extended to return not just a list of matches, but a dict mapping strings ('kind') to lists of strings (the matches). This follows from the return type of `CompletionManager.complete()`.
 
-    def complete(self, line, cursor_location, ...):
-        """Find completions for the current line
-        
-        Parameters
-        ----------
-        line : str
-            The current line
-        cursor_location : int
-            The index of the cursor in the line
-      
-        Returns
-        -------
-        completions : list
-            The returned completions are a list of dicts, containing the keys 'match', and 'type'.
-            The value for 'match', a string, gives the matched text. The value for 'type',
-            a string, gives information about the type of the object being suggested to the user,
-            suitable for display by rich frontends.
-        """
-        pass
-```
-- GNU Readline clients can use a subclass of `Completer`:
-```
-class ReadlineCompleter(Completer):
-    def rlcomplete(self, text, state):
-         """Get the state-th possible completion for 'text'. 
-
-         This is called successively with state == 0, 1, 2, ... 
-         by GNU Readline clients until it returns None.
-         The completion should begin with 'text'.
-         """
-         pass
-```
+Furthermore, the specification of the `complete_request` message type needs to change, in order to really maintain kernel and language agnosticism in the frontend. By providing `text` and `line` in addition to `block`, the current messaging spec requires frontends to split the cell on newlines and, problematically, to split the last line on a set of python delimiters, such that `text` is assigned to be the last element of the line after splitting on these delimiters. This is problematic because it leaks python semantics into the frontend. A native Ruby, R, or Matlab kernel might use different delimiters (e.g. the dollar sign in R), and it should not be the place of the frontend to perform preprocessing on the block of text which is actually language specific and really best left for the kernel.
 
 ### Shim between old API and new API
-There is currently code in the wild in external 3rd party libraries that relies on the "custom completer" API. Thus, a shim should be created that allows that code to interact with the new system with no change. The documentation on the "custom completer" API will be changed, however, to reflect the new API and the shim will not be advertised as the recommended way to interact with the tab completion system. 
-
-### Questions
-- Should the individual builtin matchers be `Configurable`?
+There is currently code in the wild in external 3rd party libraries that relies on the "custom completer" API. Thus, a shim should be created that allows that code to interact with the new system with no change. The documentation on the "custom completer" API will be changed, however, to reflect the new API and the shim will not be advertised as the recommended way to interact with the tab completion system. Because the old API does not contain a "kind" field for each match, some default must be chosen (e.g. "match") or something.
 
 ### Potential Implementation Issues
-- Careful attention needs to be paid to properly dealing with filenames, especially those containing spaces on both windows and *nix. There are a number of subtleties here.
+- Careful attention needs to be paid to properly dealing with filenames, especially those containing spaces on both windows and *nix. There are a number of subtleties here. The solution is extensive unit testing.
 - Many of the completers involve interaction with the filesystem (`%cd` completer, etc), so care should be taken to avoid code duplication.
 - Error handling within the matchers is a pain. Currently, the matchers are run within a `try matcher(); except: pass` block to ensure that a misbehaving mather doesn't negatively impact the user experience. But this negatively impacts the development workflow, making it difficult to track down bugs. Instead, perhaps this behavior can be set by some kind of a `debug` configurable that will default to False.

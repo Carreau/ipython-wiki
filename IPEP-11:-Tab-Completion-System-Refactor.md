@@ -34,8 +34,8 @@ The `CompletionManager` will look something like this:
 
 ```
 class CompletionManager(Configurable):
-    def register_completer(self, completer):
-        """Register a new completer
+    def register_matcher(self, matcher):
+        """Register a new matcher
         """
         pass
 

@@ -120,7 +120,7 @@ This section contains academic papers that have been published in the peer-revie
 
 * [A Reference-Free Algorithm for Computational Normalization of Shotgun Sequencing Data, by C.T. Brown et al.](http://ged.msu.edu/papers/2012-diginorm). [Full notebook](http://nbviewer.ipython.org/urls/github.com/ged-lab/2012-paper-diginorm/raw/master/notebook/diginorm.ipynb), [ArXiv link](http://arxiv.org/abs/1203.4802) and [project repository](https://github.com/ged-lab/2012-paper-diginorm).
 
-* [The kinematics of the Local Group in a cosmological context, by J.E. Forero-Romero et al.](http://arxiv.org/abs/1303.2690). [Full notebook](http://nbviewer.ipython.org/urls/raw.github.com/forero/LG_Kinematics/master/code/main_analysis.ipynb)
+* [The kinematics of the Local Group in a cosmological context](http://arxiv.org/abs/1303.2690) by [J.E. Forero-Romero et al.](http://wwwprof.uniandes.edu.co/~je.forero/). The [Full notebook](http://nbviewer.ipython.org/urls/raw.github.com/forero/LG_Kinematics/master/code/main_analysis.ipynb) and also all the data in a [github repo](https://github.com/forero/LG_Kinematics).
 
 ## Whimsical notebooks
 

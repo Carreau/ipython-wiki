@@ -13,19 +13,17 @@ If you want to add a bit of color to IPython Notebook appearance, it can be done
 * In this newly created theme folder (<code>..\redmond</code>) copy this file: [http://dl.dropbox.com/u/6735093/ipython_notebook_styling/jquery-ui.min.css jquery-ui.min.css] [[#Notes|<sup>[1]</sup>]]
 
 * Now edit the first line in jquery-ui.min.css to match the release of the downloaded theme (current release 1.8.22):
-<code>
-:  <strike>@import url("jquery-ui-1.8.21.custom.css");</strike><br/>
-:  @import url("jquery-ui-1.8.22.custom.css");
-:  ...
-</code>
+
+<del><code>@import url("jquery-ui-1.8.21.custom.css");</code></del><br/>
+<code>@import url("jquery-ui-1.8.22.custom.css");</code><br/>
+<code>...</code>
 
 * Finally edit line 9 in <code>..\IPython\frontend\html\notebook\templates\page.html</code> and set new theme for IPython Notebook:
-<code>
-:    ...<br />
-:    <strike><link rel="stylesheet" href="{{static_url("jquery/css/themes/base/jquery-ui.min.css") }}" type="text/css" /></strike><br />
-:    <link rel="stylesheet" href="{{static_url("jquery/css/themes/redmond/jquery-ui.min.css") }}" type="text/css" /><br />
-:    ...
-</code>
+
+<code>...</code><br />
+<del><code><link rel="stylesheet" href="{{static_url("jquery/css/themes/base/jquery-ui.min.css") }}" type="text/css" /></code></del><br />
+<code><link rel="stylesheet" href="{{static_url("jquery/css/themes/redmond/jquery-ui.min.css") }}" type="text/css" /></code><br />
+<code>...</code>
 
 
 ==Screenshots==

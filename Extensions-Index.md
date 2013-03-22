@@ -164,3 +164,15 @@ Run and debug doctest in IPython.
 ```text
 %install_ext https://raw.github.com/tkf/ipython-tempmagic/master/tempmagic.py
 ```
+
+
+## Magics for activity, block, network and sequence diagrams
+
+Create activity, block, network and sequence diagrams using text definitions similar to graphwiz.
+The extension uses blockdiag modules from http://blockdiag.com
+
+[Homepage](https://bitbucket.org/vladf/ipython-diags)
+
+```text
+%install_ext https://bitbucket.org/vladf/ipython-diags/raw/default/diagmagic.py
+```

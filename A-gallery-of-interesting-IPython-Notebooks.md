@@ -78,7 +78,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Financial data analysis with Pandas](http://nbviewer.ipython.org/3962843).
 
-* [Data clustering, using pandas, scipy and the R magic](http://nbviewer.ipython.org/4751490).
+* [Clustering of smartphone sensor data for human activity detection using pandas and scipy](http://nbviewer.ipython.org/urls/raw.github.com/herrfz/dataanalysis/master/week4/clustering_example.ipynb), part of Coursera data analysis course, done in Python ([repo](https://github.com/herrfz/dataanalysis)).
 
 * [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
 

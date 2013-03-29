@@ -176,3 +176,16 @@ The extension uses blockdiag modules from http://blockdiag.com
 ```text
 %install_ext https://bitbucket.org/vladf/ipython-diags/raw/default/diagmagic.py
 ```
+
+## sql
+
+Passes SQL statements to any database reachable by SQLAlchemy, and renders results as tabular HTML or pretty text tables, where possible.
+
+[Homepage](https://pypi.python.org/pypi/ipython-sql)
+
+[Usage sample](http://nbviewer.ipython.org/5272681)
+
+To install (from command line):
+
+```pip install ipython-sql```
+

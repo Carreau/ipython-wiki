@@ -35,7 +35,7 @@ Customize whether to run tests in Firefox, Chrome, Internet Explorer, etc.
 
 Make the tests aware of a notebook server's URL
 
-- Run a notebook server in a subprocess, and write the port to the test process?
+- Run a notebook server in a subprocess, and write the port to the test process? This is straightforward with `multiprocessing`.
 
 ## QUnit
 

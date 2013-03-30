@@ -7,6 +7,8 @@ Features to test:
 - User interface: toolbars, keyboard shortcuts
 - JavaScript code
 - Code cell execution
+- Code output event handling / rendering
+- Text cell (Markdown / LaTeX) rendering
 
 # Test Frameworks
 

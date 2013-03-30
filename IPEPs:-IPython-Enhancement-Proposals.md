@@ -24,3 +24,5 @@ The IPEP author should:
 * [[IPEP 10: kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]]
 * [[IPEP 11: Tab Completion System Refactor|IPEP-11:-Tab-Completion-System-Refactor]]
 * [[IPEP 12: Splitting KernelManager and KernelClient]]
+* [[IPEP 13: Updating the Message Spec]]
+* [[IPEP 14: Regression Tests]]

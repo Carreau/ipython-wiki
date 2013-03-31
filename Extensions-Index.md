@@ -189,3 +189,15 @@ To install (from command line):
 
 ```pip install ipython-sql```
 
+## grasp
+
+A set of python functions to help with interactive object
+inspection and discovery.
+
+ * %gist -- object inspection
+ * %rtype -- recursive type, deep object inspection
+ * %apropos -- deep search for things with a given name, value, etc.
+
+Source code: http://launchpad.net/grasp
+
+More info: http://pypi.python.org/pypi/grasp/

@@ -201,3 +201,16 @@ inspection and discovery.
 Source code: http://launchpad.net/grasp
 
 More info: http://pypi.python.org/pypi/grasp/
+
+## breakpoint
+
+Run code cells in an iPython notebook until a breakpoint is encountered
+
+Extension download: https://gist.github.com/juhasch/5241322
+
+Demo notebook: https://gist.github.com/juhasch/5287081
+
+(You can't see the breakpoints using the nbviewer: http://nbviewer.ipython.org/5287081 )
+
+
+

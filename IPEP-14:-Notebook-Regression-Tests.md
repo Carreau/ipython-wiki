@@ -12,6 +12,20 @@ Features to test:
 
 # Test Frameworks
 
+## CasperJS
+
+[CasperJS](http://casperjs.org/) is a JavaScript test utility built on top of [PhantomJS](http://phantomjs.org/), a headless WebKit implementation.
+
+### Pros
+
+- Can test code cell execution from JavaScript
+- Multi-page navigation
+- xUnit-friendly output option
+
+### Cons
+
+- Extra software dependencies
+
 ## Selenium
 
 Selenium is a web browser automation library with [Python bindings](https://pypi.python.org/pypi/selenium). It can be installed with `pip`.

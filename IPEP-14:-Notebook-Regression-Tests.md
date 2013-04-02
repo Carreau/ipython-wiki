@@ -95,9 +95,11 @@ Similar to QUnit.
 # Recommendations
 
 The notebook's regression tests should check that code cell execution works,
-which is a vote for Selenium.
+which is a vote for either CasperJS or Selenium.
 
-One question is whether the JavaScript API or the HTML UI is intended to be stable.
-Selenium uses HTML elements and tags as its interface; QUnit uses JavaScript objects.
+CasperJS has less of an impedance mismatch for testing JavaScript - Selenium tests have to write JavaScript code as strings.
 
-The two frameworks aren't mutually exclusive. Selenium can even load a page of QUnit tests, and check for text that indicates success or failure.
+# Related discussions
+
+- https://github.com/ipython/ipython/pull/1493
+- https://github.com/ipython/ipython/issues/2292

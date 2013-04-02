@@ -198,6 +198,10 @@ inspection and discovery.
  * %rtype -- recursive type, deep object inspection
  * %apropos -- deep search for things with a given name, value, etc.
 
+Install: ```pip install grasp```
+
+Use: ```%load_ext grasp```
+
 Source code: http://launchpad.net/grasp
 
 More info: http://pypi.python.org/pypi/grasp/
@@ -211,6 +215,5 @@ Extension download: https://gist.github.com/juhasch/5241322
 Demo notebook: https://gist.github.com/juhasch/5287081
 
 (You can't see the breakpoints using the nbviewer: http://nbviewer.ipython.org/5287081 )
-
 
 

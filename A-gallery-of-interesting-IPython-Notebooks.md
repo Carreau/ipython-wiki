@@ -142,3 +142,4 @@ Of course the first thing you might try is searching for videos about Ipython (1
 
 * This video shows IPython being used in the scikit project  http://www.youtube.com/watch?v=4ONBVNm3isI
 
+* He doesn't show IPython in use but his IPython sticker is clear for the entire video: http://www.youtube.com/watch?v=op61s-QHryk

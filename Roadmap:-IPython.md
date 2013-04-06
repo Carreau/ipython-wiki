@@ -54,6 +54,7 @@ Development focus for IPython 1.0:
   - We need to work out a sensible solution to sanitizing HTML and Javascript
     in notebooks.  In the long-term, the answer is going to be js plugins,
     but that work will not be ready for this release.
+  - [PR #3101](https://github.com/ipython/ipython/pull/3101)
 - (H,1) Notebook toolset changes (bootstrap, less, require, ACE, CM3).
 - (M,1) Organization of JS/CSS (Brian)
 - (M,1) General CSS cleanup (Brian, Matthias)
@@ -83,6 +84,7 @@ Development focus for IPython 1.0:
     KM will be split into two objects, and a Control channel added, enabling
     signaling / interrupting / restarting of kernels from remote clients.
     This will extend to Engines in the long term, but not 1.0.
+  - [PR 3011](https://github.com/ipython/ipython/pull/3011)
 - (E,1) Emacs/VIM modes for CodeMirror (Fernando)
   - codemirror has emacs/vim bindings. Let's allow users to use them.
 - (E,1) Implement Notebook autosave (Min)
@@ -92,18 +94,23 @@ Development focus for IPython 1.0:
     so that you don't need to keep restarting the NB Server for every notebook directory.
 - (M,2) raw_input (Fernando)
   - The notebook needs a basic implementation of a handler for raw_input messages.
+  - [PR #3089](https://github.com/ipython/ipython/pull/3089)
 - (M,2) Fixing random UUID issue
-  - Every restart of the notebook
+  - Every restart of the notebook, notebooks get new UUIDs
+  - [PR #3140](https://github.com/ipython/ipython/pull/3140)
 - (M,2) JS Testing
   - We have lots of javascript, and we need to learn about testing it.
 - (E,2) Kernel autorestarting (Brian)
   - Kernels need to automatically restart without any intervention from the UI.
+  - [PR #3011](https://github.com/ipython/ipython/pull/3011)
 - (H,3) Config UI
   - Some aspects of the Javascript ought to be configurable
 - (H,3) No scroll on mouse click
 - (E,3) HTML Anchors
   - if we put simple HTML anchors on cells,
     it will be easy to link to a specific cell in a notebook.
+  - [PR #3064](https://github.com/ipython/ipython/pull/3064)
+  - [PR #3058](https://github.com/ipython/ipython/pull/3058)
 - (E,3) Notebook format changes
   - There are some changes to the notebook format needed,
     most notably, perhaps, being the removal of worksheets.

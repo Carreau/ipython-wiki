@@ -24,13 +24,26 @@ should it still be desired.
 
 ## Proposed implementation
 
-- Add a `DisplayFormatter.active_types` list (configurable).
+- Add a `DisplayFormatter.active_types` list (configurable) as a proxy to `Formatter.enabled`.
 
+<del>
 `DisplayFormatter.format` already has an `include` argument for specifying
 which formats should be displayed.
 The default behavior is to use every formatter in `DisplayFormatter.formatters`.
 The proposed change is to use `active_types` as the default value for `include`,
 with the effect of a global default whitelist of displayed formats.
+</del>
+
+`Formatter` already has an `enabled` attribute, for skipping individual formatters.
+The default behavior is to enable all formatters.
+Setting `active_types = ['typeA', 'typeB']` will result in
+
+```python
+formatters['typeA'].enabled = True
+formatters['typeB'].enabled = True
+formatters['typeC'].enabled = False # etc. for all other formatters
+```
+
 
 - Limit terminal IPython to `text/plain`
 
@@ -60,6 +73,10 @@ which only *implies* this sort of information.
 
 ### Disadvantages
 
+**Note: this disadvantage no-longer applies to the `enabled` approach,
+as there is no redundant storage**
+
+<del>
 The duplication of mime-type storage makes adding new mime-types more difficult.
 
 Right now, if someone wants to register a PDF formatter,
@@ -74,7 +91,7 @@ But adding `active_types` means this is a two-call process:
 
 This can be mitigated by adding a `register_formatter` API that makes these two actions,
 and adds any related logic as may arrive in the future (standard setter argument).
-
+</del>
 
 ## Alternate approach
 

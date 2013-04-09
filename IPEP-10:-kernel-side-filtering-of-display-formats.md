@@ -24,7 +24,7 @@ should it still be desired.
 
 ## Proposed implementation
 
-- Add a `DisplayFormatter.active_types` list (configurable) as a proxy to `Formatter.enabled`.
+- Add a `DisplayFormatter.active_types` list (configurable) as a proxy to `Formatter.enabled` for each individual formatter.
 
 <del>
 `DisplayFormatter.format` already has an `include` argument for specifying

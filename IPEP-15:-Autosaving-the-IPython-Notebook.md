@@ -133,3 +133,26 @@ The following URLs are added to the notebook server:
 
 - Should **restore** / **delete** be at `/notebooks/notebook-id/checkpoints/checkpoint-id`, or just at `/notebooks/notebook-id/checkpoints`, taking checkpoint-id as a request parameter?
 - In general, all **create** calls should be preceded by a **save**, and all **restores** should be followed by a **load**.  Should this be included in the requests themselves, such that a `create` request results in a save and create action on the server, and a **restore** request results in a restore and a load action?  Or should these actions be kept separate, so that every save&checkpoint and restore&load is actually two HTTP requests?
+
+## UI changes
+
+We currently have the following UI for save:
+
+- cmd/ctrl-s
+- ctrl-M-s
+- File Menu / Save
+- Menu Bar / Save Button
+
+I am not 100% clear on what the UI should be for creating a checkpoint versus plain save.  Should *all* user-initiated saves be checkpoints?  Or should plain save be kept in most of the places it currently resides? Or somewhere in-between?
+
+My current thought:
+
+- cmd/ctrl-s: **plain save**
+- ctrl-M-s: **checkpoint**
+- File / Save: **plain save**
+- *new* File / Save Checkpoint: **checkpoint**
+- Menu Bar / Save Button: **checkpoint**
+
+That is, most user-initiated saves are checkpoints, excluding the unconscious reflect cmd-S, and the unambiguous File Menu choices, where both are next to each other.
+
+100% of user-initiated saves being checkpoints is perhaps the cleanest, though.

@@ -125,7 +125,7 @@ The following URLs are added to the notebook server:
 | HTTP verb | URI | Action |
 |:---:|:---:|:---|
 | `GET` | /notebooks/ **notebook-id** /checkpoints | return checkpoint **list** as JSON |
-| `PUT` | /notebooks/ **notebook-id** /checkpoints | **create** new checkpoint, return new checkpoint ID |
+| `POST` | /notebooks/ **notebook-id** /checkpoints | **create** new checkpoint, return new checkpoint ID |
 | `POST` | /notebooks/ **notebook-id** /checkpoints/ **checkpoint-id** | **restore** the notebook to checkpoint_id |
 | `DELETE` | /notebooks/ **notebook-id** /checkpoints/ **checkpoint-id** | **delete** checkpoint `checkpoint-id` |
 

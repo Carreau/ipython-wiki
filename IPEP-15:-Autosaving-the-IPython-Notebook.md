@@ -102,3 +102,34 @@ The reasons not to do this in IPython (by default, anyway):
 1. we don't want the notebook to depend on git (or any other VCS)
 2. I wouldn't want to support any VCS other than git
 3. creating a checkpoint when a commit may be in the middle of staging could be messy
+
+# Implementation
+
+## Python Implementation
+
+NotebookManager objects add the following methods:
+
+- `create_checkpoint(notebook_id)` - creates a checkpoint for the current state of the notebook and returns the `checkpoint_id`
+- `restore_checkpoint(notebook_id, checkpoint_id)` - restores a notebook to the state of a given `checkpoint_id`
+- `delete_checkpoint(notebook_id, checkpoint_id)` - deletes a particular checkpoint for a given notebook
+- `list_checkpoints(notebook_id)` - list checkpoints for a given notebook.
+
+### Questions remaining
+
+- What should `list_checkpoints` return?  A list of checkpoint IDs? A list of dicts with checkpoint information? If a dict, what sort of information? Presumably at least last-modified date.
+
+## URL scheme
+
+The following URLs are added to the notebook server:
+
+| HTTP verb | URI | Action |
+|:---:|:---:|:---|
+| `GET` | /notebooks/ **notebook-id** /checkpoints | return checkpoint **list** as JSON |
+| `PUT` | /notebooks/ **notebook-id** /checkpoints | **create** new checkpoint, return new checkpoint ID |
+| `POST` | /notebooks/ **notebook-id** /checkpoints/ **checkpoint-id** | **restore** the notebook to checkpoint_id |
+| `DELETE` | /notebooks/ **notebook-id** /checkpoints/ **checkpoint-id** | **delete** checkpoint `checkpoint-id` |
+
+### URL questions
+
+- Should **restore** / **delete** be at `/notebooks/notebook-id/checkpoints/checkpoint-id`, or just at `/notebooks/notebook-id/checkpoints`, taking checkpoint-id as a request parameter?
+- In general, all **create** calls should be preceded by a **save**, and all **restores** should be followed by a **load**.  Should this be included in the requests themselves, such that a `create` request results in a save and create action on the server, and a **restore** request results in a restore and a load action?  Or should these actions be kept separate, so that every save&checkpoint and restore&load is actually two HTTP requests?

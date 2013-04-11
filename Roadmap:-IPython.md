@@ -89,6 +89,8 @@ Development focus for IPython 1.0:
   - codemirror has emacs/vim bindings. Let's allow users to use them.
 - (E,1) Implement Notebook autosave (Min)
   - The notebook desperately needs autosave
+  - [IPEP 15](IPEP-15%3A-Autosaving-the-IPython-Notebook)
+  - [PR 3158](https://github.com/ipython/ipython/pull/3158)
 - (H,2) Filesystem navigation from the dashboard
   - We need UI for navigating the dashboard around the filesystem,
     so that you don't need to keep restarting the NB Server for every notebook directory.

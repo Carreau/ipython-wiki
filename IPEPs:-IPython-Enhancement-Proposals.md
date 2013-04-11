@@ -27,3 +27,4 @@ The IPEP author should:
 * [[IPEP 13: Updating the Message Spec]]
 * [[IPEP 14: Notebook Regression Tests]]
 * [[IPEP 15: Autosaving the IPython Notebook]]
+* [[IPEP 16: Notebook multi directory dashboard and URL mapping]]

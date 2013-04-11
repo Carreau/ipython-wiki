@@ -23,9 +23,9 @@ The chart below shows the new proposed URL scheme for web-services in the notebo
 
 | HTTP verb | New URL | Action |
 |:---:|:---:|:---|
-| ```GET``` | /notebooks/foo/bar | returns list of dicts with notebook info for "foo/bar"| 
+| ```GET``` | /notebooks/foo/bar | returns list of dicts with information about the sub-directories, files, notebooks and path for "foo/bar"| 
 | ```POST``` | /notebooks/foo/bar | if sending a body, saving that body as a new notebook in "foo/bar"; if no body, create a new notebook in "foo/bar" | 
-| ```GET``` | /notebooks/foo/bar/\<notebook_id\> | returns list of notebook data in the directory path "foo/bar" |
+| ```GET``` | /notebooks/foo/bar/\<notebook_id\> | returns the json data for the notebook with the given ID in "foo/bar" |
 | ```PUT``` | /notebooks/foo/bar/\<notebook_id\> | saves an existing notebook with body data in "foo/bar" |
 | ```DELETE``` | /notebooks/foo/bar/\<notebook_id\> | deletes the notebook with the given ID in "foo/bar" | 
 
@@ -35,10 +35,10 @@ Along side the IPython web-services, there are other website URL's that will nee
 
 | HTTP verb | URL | Action |
 |:---:|:---:|:---|
-| ```GET``` | /app | navigates user to the top level directory of the notebook |
+| ```GET``` | /app | navigates user to dashboard at the top level directory of the notebook |
 | ```GET``` | / | redirects to "/app" URL |
 | ```GET``` | /app/foo/bar/\<notebook_id\> | go to webpage for that notebook |
-| ```GET``` | /app/foo/bar | navigates user to the subdirectory "foo/bar" |
+| ```GET``` | /app/foo/bar | navigates user to dashboard for the "foo/bar" directory |
 | ```GET``` | /app/foo/bar/new | creates a new notebook with profile (or default, if no profile exists) settings in"foo/bar" |
 | ```GET``` | /app/foo/bar/\<notebook_id\>/copy | copies notebook of given ID to "foo/bar" directory |
 | ```GET``` | /app/foo/bar/\<notebook_id\>/print | prints the notebook with the given ID; if notebook ID doesn't exist, displays error message |

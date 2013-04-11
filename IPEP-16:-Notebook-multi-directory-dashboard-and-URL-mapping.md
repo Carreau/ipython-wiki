@@ -23,11 +23,18 @@ The chart below shows the new proposed URL scheme for web-services in the notebo
 
 | HTTP verb | New URL | Action |
 |:---:|:---:|:---|
-| ```GET``` | /notebooks/foo/bar | returns list of dicts with information about the sub-directories, files, notebooks and path for "foo/bar"| 
+| ```GET``` | /notebooks/foo/bar | returns a dict with the "foo/bar" dashboard's sub-directories, files, notebooks and path ** | 
 | ```POST``` | /notebooks/foo/bar | if sending a body, saving that body as a new notebook in "foo/bar"; if no body, create a new notebook in "foo/bar" | 
 | ```GET``` | /notebooks/foo/bar/\<notebook_id\> | returns the json data for the notebook with the given ID in "foo/bar" |
 | ```PUT``` | /notebooks/foo/bar/\<notebook_id\> | saves an existing notebook with body data in "foo/bar" |
 | ```DELETE``` | /notebooks/foo/bar/\<notebook_id\> | deletes the notebook with the given ID in "foo/bar" | 
+
+** *This is an example dictionary returned from "/notebooks/foo/bar" web service.*
+<pre><code>{   "path": "foo/bar", 
+    "notebooks":[{"kernel_id":"###","name":"Notebook1","notebook_id":"###"},{...}], 
+    "directories": ["sub-directory1", "sub-directory2", ...],
+    "files":["file1","file2",...]
+    }</code></pre>
 
 Along side the IPython web-services, there are other website URL's that will need to change as well. The chart below shows the proposed changes for the new website URL scheme of the notebook.
 

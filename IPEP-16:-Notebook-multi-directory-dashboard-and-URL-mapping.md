@@ -61,3 +61,7 @@ The difficulty with changing the URL to filenames rather than IDs, however, is f
 
 1. If a notebook is being shared, and it is renamed or changed by user#1, those changes are not made on user#2's notebook page. If they save their unchanged notebook, all progress is lost for the user#1. User#2 would need to reload the page to avoid losing the progress of user#1. 
 2. The URL needs to change for both users if a notebook is renamed. The notebook ID style URL stays consistent despite any changes made.
+
+## See Discussion about this IPEP ##
+
+Go to the IPEP 16 ~ issue #3166 [[here| https://github.com/ipython/ipython/issues/3166]].

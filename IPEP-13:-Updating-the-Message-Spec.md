@@ -33,8 +33,31 @@ But there would need to be *implementation* changes.
 Proposal: extend Python display spec,
 such that `repr_foo` can *either* return raw mime-type data or a tuple of length 2.
 If it is a tuple, the first element is the raw data,
-and the second is its metadata.
+and the second is its metadata. This metadata will be added to the display_data message's metadata with the same mime-type key, for example:
 
+```python
+def png_with_shape(img, w, h):
+    md = dict(width=w, height=h)
+    return png_image_data(img), md
+```
+
+would result in the display_data message:
+
+```json
+{
+    "data" : {
+        "image/png" : "iVBOR...",
+        ...
+    },
+    "metadata" : {
+        "image/png" : {
+            "height": 4,
+            "width": 10
+        }
+        ...
+    }
+}
+```
 
 ## user\_expressions / user\_variables
 

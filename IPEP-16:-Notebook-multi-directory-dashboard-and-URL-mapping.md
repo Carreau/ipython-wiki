@@ -11,7 +11,7 @@ Updated: 2013-4-10
 The current notebook dashboard only allows the user to open notebooks in their current directory location. It does not allow you to navigate through or open notebooks in subdirectories. This proposal describes a new URL mapping scheme to adjust for a multi-directory dashboard system and explores the possibility of implementing such a system. 
 
 ## Motivation ##
-If you have notebooks saved or would like to start new notebooks in subdirectories, you have to reopen the IPython dashboard in that subdirectory. It would be convenient if you could click a button on your current dashboard and have it do the work for you. Then, you could pass back and forth through directories without starting up a new dashboard everytime. This would help with organizing a project and relieve frustration. 
+If you have notebooks saved or would like to start new notebooks in subdirectories, you have to either restart the current IPython notebook server in that subdirectory, or start a new notebook server ther. It would be convenient if you could click a button on your current dashboard and have it do the work for you. Then, you could pass back and forth through directories without starting up a new servers everytime. This would help with organizing a project and relieve frustration.
 
 ## Proposed URL Mapping ##
 

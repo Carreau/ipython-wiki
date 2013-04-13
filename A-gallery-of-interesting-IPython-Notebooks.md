@@ -98,6 +98,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish). By [Javier Moreno](http://finiterank.com).
 
+* [Getting started with GDELT](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad/GDELT_Intro). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.
+
 ## General Python Programming
 
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).

@@ -96,6 +96,6 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * The [http://www.getwindmill.com/ Windmill testing framework] uses IPython for its shell control.
 
-* [https://github.com/cwsoft/WSPPDE#readme WSPPDE] provides a portable Python 2.7.4 development environment for MS Windows&trade; including IPython 0.13.2, Numpy, Scipy, Matplotlib and Pandas in a one click installer.
+* [https://github.com/cwsoft/WSPPDE#readme WSPPDE] provides a portable Python 2.7.4 development environment for MS Windows&trade; including IPython 0.13.2, Numpy, Scipy, Matplotlib and Pandas in a one click package.
 
 * [https://notebookcloud.appspot.com NotebookCloud] is a free and open source web service for creating and managing IPython Notebook servers on Amazon's EC2.

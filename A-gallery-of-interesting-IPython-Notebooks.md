@@ -82,6 +82,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
 
+* [Analyzing and visualizing sun spot data with Pandas](http://nbviewer.ipython.org/4569783), by [Josh Hemann](https://github.com/jhemann). An enlightening discussion of how naive plotting choices subtly influence our interpretation of data.
+
 ### Social data
 
 * A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/urls/github.com/jseabold/538model/raw/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).

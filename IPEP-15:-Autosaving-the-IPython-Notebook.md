@@ -8,7 +8,7 @@ There are two basic notions of autosave:
 2. modern / webapp-style: autosave is *real* save, but user may explicitly save a checkpoint or version, which will can be restored later (All webapps, really, OS X Versions, etc.).
 
 This proposal is an implementation of the latter style,
-which is more appropriate for a webapp like the notebook.
+which is more appropriate for a (sometimes) webapp like the notebook.
 
 ## Autosaving
 
@@ -16,14 +16,26 @@ The notebook should be automatically saved periodically.
 These are real, regular saves, overwriting the file on the filesystem,
 exactly as save is implemented today.
 
+- The autosave period will be limited by a minimum save interval, and by the time of each save.
+- The interval will be the higher of the minimum interval and ten times the last save duration.
+- The current default minimum interval is two minutes.
+- Autosave will only happen when the `dirty` flag is set.
+- Closing the notebook triggers autosave (there is no 'are you sure?' dialog on close).
+
 ## Checkpointing
 
 The user can manually 'save a version' that will never be clobbered by autosave.
 In a primitive file-based implementation,
 this amounts to a regular save, plus a copy to another location.
-To avoid implementing a full VCS, a simple implementation would only support one user-specified checkpoint.
+To avoid implementing a full VCS, a simple implementation would **only support one user-specified checkpoint**.
 The checkpoint should be in a location that is discoverable from the notebook,
 and consistent across notebook server sessions (i.e. keyed by notebook_id will not work for FileNB).
+
+The proposed location for checkpoints is a `.ipynbcheckpoints` directory inside the notebook directory.
+Alternatives include:
+
+- inside the profile directory (would result in different checkpoints available per profile, which seems weird)
+- non-hidden directory (not ideal since, unlike autosave-backup, these files *will* exist under normal circumstances).
 
 If we ever implement multiple checkpoints and history navigation,
 this should probably just use git, and require that the project be a repo.
@@ -143,8 +155,9 @@ We currently have the following UI for save:
 - File Menu / Save
 - Menu Bar / Save Button
 
-I am not 100% clear on what the UI should be for creating a checkpoint versus plain save.  Should *all* user-initiated saves be checkpoints?  Or should plain save be kept in most of the places it currently resides? Or somewhere in-between?
+I am not 100% clear on what the UI should be for creating a checkpoint versus plain save.  Should *all* user-initiated saves be checkpoints?  Or should plain save be kept in most of the places it currently resides? Or somewhere in-between?  Currently all user-initiated saves create a checkpoint.
 
+<del>
 My current thought:
 
 - cmd/ctrl-s: **plain save**
@@ -154,5 +167,11 @@ My current thought:
 - Menu Bar / Save Button: **checkpoint**
 
 That is, most user-initiated saves are checkpoints, excluding the unconscious reflect cmd-S, and the unambiguous File Menu choices, where both are next to each other.
+</del>
 
-100% of user-initiated saves being checkpoints is perhaps the cleanest, though.
+### `%autosave` magic
+
+There is no javascript UI for changing the autosave interval, but there is an `%autosave` magic, which can set the interval in seconds:
+
+    %autosave 300 # autosave at most every 5 minutes
+

@@ -104,6 +104,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [Bioinformatic Approaches to the Computation of Poetic Meter](http://nbviewer.ipython.org/urls/raw.github.com/asp49/meter/graph/Shared%2520Horizons%2520Presentation.ipynb), by [A. Sean Pue](https://github.com/asp49/meter), [C. Titus Brown](https://github.com/ctb) and [Tracy Teal](https://github.com/tracyteal).
 
+* [Replication of the highly-contentious analysis of economic growth by Reinhart and Rogoff](http://nbviewer.ipython.org/urls/raw.github.com/vincentarelbundock/Reinhart-Rogoff/master/reinhart-rogoff.ipynb), by [Vincent Arel-Bundock](http://umich.edu/~varel), [full repo here](https://github.com/vincentarelbundock/Reinhart-Rogoff). This is based on the [widely-publicized critique of the original analysis done by Herndon, Ash, and Pollin](http://www.peri.umass.edu/236/hash/31e2ff374b6377b2ddec04deaa6388b1/publication/566).
+
 ## General Python Programming
 
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).

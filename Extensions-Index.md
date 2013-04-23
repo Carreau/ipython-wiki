@@ -59,12 +59,6 @@ use the `ipython-flot` package.
 
 A Notebook example can be found [here](https://gist.github.com/3015819). This is not an extension, so it does not need `%install_ext` nor `%load_ext` to work.
 
-## Mathematica
-
-Mathematica can be integrated into notebooks using the `IPython-mathematicamagic-extension`. Install instructions and examples are included in a notebook on the GitHub page. Requires the mathlink python module distributed with Mathematica.
-
-[Homepage](https://github.com/bjedwards/IPython-mathematicamagic-extension)
-
 ## Bitey
 
 The Bitey extension adds a `%%bitey` cell magic for automatically compiling C (or C++) code into LLVM bitcode and loading the bitcode with [Bitey](https://github.com/dabeaz/bitey).  See also a [sample notebook](http://nbviewer.ipython.org/3458310/Bitey%20Magic.ipynb).
@@ -76,6 +70,11 @@ To install:
 ```text
     %install_ext https://raw.github.com/gist/3458310/biteymagic.py
 ```
+## Mathematica
+
+Mathematica can be integrated into notebooks using the `IPython-mathematicamagic-extension`. Install instructions and examples are included in a notebook on the GitHub page. Requires the mathlink python module distributed with Mathematica.
+
+[Homepage](https://github.com/bjedwards/IPython-mathematicamagic-extension)
 
 ## Matlab 
 
@@ -87,6 +86,18 @@ Examples:
 
 * [pymatbridge](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/pymatbridge.ipynb)
 * [matlab magic](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/matlab_magic.ipynb) 
+
+## IDL
+
+Provides magics for embedding [IDL](http://www.exelisvis.com/ProductsServices/IDL.aspx) and [GDL](http://gnudatalanguage.sourceforge.net/) code using [pIDLy](https://github.com/anthonyjsmith/pIDLy).
+
+[Homepage](https://github.com/ebellm/ipython-idlmagic)
+
+To install:
+
+```text
+%install_ext https://raw.github.com/ebellm/ipython-idlmagic/master/idlmagic.py
+```
 
 ## py2tex
 

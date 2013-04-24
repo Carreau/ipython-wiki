@@ -94,12 +94,13 @@ Development focus for IPython 1.0:
 - (H,2) Filesystem navigation from the dashboard
   - We need UI for navigating the dashboard around the filesystem,
     so that you don't need to keep restarting the NB Server for every notebook directory.
-- (M,2) raw_input (Fernando)
+- (M,2) raw_input (Min)
   - The notebook needs a basic implementation of a handler for raw_input messages.
   - [PR #3089](https://github.com/ipython/ipython/pull/3089)
 - (M,2) Fixing random UUID issue
   - Every restart of the notebook, notebooks get new UUIDs
   - [PR #3140](https://github.com/ipython/ipython/pull/3140)
+  - [IPEP 16](IPEP-16%3A-Notebook-multi-directory-dashboard-and-URL-mapping)
 - (M,2) JS Testing
   - We have lots of javascript, and we need to learn about testing it.
 - (E,2) Kernel autorestarting (Brian)
@@ -116,7 +117,7 @@ Development focus for IPython 1.0:
 - (E,3) Notebook format changes
   - There are some changes to the notebook format needed,
     most notably, perhaps, being the removal of worksheets.
-    We have a model in mind for heirarchical (including tabbed)
+    We have a model in mind for hierarchical (including tabbed)
     views of a single notebook based on Sections,
     denoted by Header cells.
     This will be much more flexible than hard-coded worksheets,

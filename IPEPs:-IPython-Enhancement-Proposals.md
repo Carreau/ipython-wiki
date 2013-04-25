@@ -14,10 +14,15 @@ The IPEP author should:
 Each IPEP should have a table/area at the top with the following information:
 
 Author: Your Name <your.email@gmail.com>
+
 Status: Active, Deferred, Accepted, Rejected
+
 Created: 2012-10-01
+
 Updated: 2013-01-10
+
 Issue: URL to the issue where the IPEP is being discussed
+
 Implementation: URL to the pull requests where the IPEP is being implemented
 
 # Index of IPEPs

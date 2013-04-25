@@ -11,6 +11,21 @@ The IPEP author should:
 6. At that point, a pull request or issue should be opened to track the actual implementation.
 7. The IPEP wiki page should be updated with information about the discussion and implementation.
 
+Each IPEP should have a table at the top with the following format:
+
+:Author:
+    Your Name <your.email@gmail.com>
+:Status:
+    Active, Deferred, Accepted, Rejected
+:Created:
+    2012-10-01
+:Updated:
+    2013-01-10
+:Issue:
+    URL to the issue where the IPEP is being discussed
+:Implementation:
+    URL to the pull requests where the IPEP is being implemented
+
 # Index of IPEPs
 
 * [IPEP 1: Cleanup and extension of the Magic system in IPython]( https://github.com/ipython/ipython/issues/1611)

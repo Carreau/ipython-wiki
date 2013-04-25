@@ -4,8 +4,9 @@ The IPEP author should:
 
 1. Create a new wiki page with the title "IPEP N: Title" where "N" is the next consecutive IPEP number and "Title" is an appropriate title for the IPEP.
 2. Link to that wiki page from this page.
-3. Post to ipython-dev to open the IPEP for discussion.
-4. Post to ipython-user to notify the larger community about the discussion on ipython-dev.
+3. Create a GitHub issue for the IPEP.
+3. Notify ipython-dev that you have created the IPEP and inform them that discussion is taking place
+   on this issue (provide links to the IPEP and issue).
 5. Discussion should continue until consensus is reached.
 6. At that point, a pull request or issue should be opened to track the actual implementation.
 7. The IPEP wiki page should be updated with information about the discussion and implementation.

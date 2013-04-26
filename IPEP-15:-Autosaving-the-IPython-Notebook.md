@@ -151,8 +151,8 @@ The following URLs are added to the notebook server:
 
 ### URL questions
 
-- Should **restore** / **delete** be at `/notebooks/notebook-id/checkpoints/checkpoint-id`, or just at `/notebooks/notebook-id/checkpoints`, taking checkpoint-id as a request parameter?
-- In general, all **create** calls should be preceded by a **save**, and all **restores** should be followed by a **load**.  Should this be included in the requests themselves, such that a `create` request results in a save and create action on the server, and a **restore** request results in a restore and a load action?  Or should these actions be kept separate, so that every save&checkpoint and restore&load is actually two HTTP requests?
+- Should **restore** / **delete** be at `/notebooks/notebook-id/checkpoints/checkpoint-id`, or just at `/notebooks/notebook-id/checkpoints`, taking checkpoint-id as a request parameter? Comment by B. Granger: I think the RESTful thing to do is put the checkpoint-id in the URL.
+- In general, all **create** calls should be preceded by a **save**, and all **restores** should be followed by a **load**.  Should this be included in the requests themselves, such that a `create` request results in a save and create action on the server, and a **restore** request results in a restore and a load action?  Or should these actions be kept separate, so that every save&checkpoint and restore&load is actually two HTTP requests? Comment by B. Granger: my initial instinct is to keep them separate. Combining them into one call would require repeating the save/load logic in another place.
 
 ## UI changes
 

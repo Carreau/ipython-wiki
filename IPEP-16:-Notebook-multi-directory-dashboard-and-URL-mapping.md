@@ -1,12 +1,12 @@
 # A Multi-directory IPython notebook dashboard
 
-Author: Zach Sailer <<zachsailer@gmail.com>>
-  
-Created: 2013-4-10
-
-Updated: 2013-4-18
-
-Issue: [3166](https://github.com/ipython/ipython/issues/3166)
+<table>
+<tr><td> Author </td><td> Zach Sailer &lt;zachsailer@gmail.com&gt;</td></tr>
+<tr><td> Status </td><td> Active|Deferred|Accepted|Rejected </td></tr>
+<tr><td> Created </td><td> April 4, 2013</td></tr>
+<tr><td> Updated </td><td> April 26, 2013</td></tr>
+<tr><td> Discussion </td><td> [3166](https://github.com/ipython/ipython/issues/3166) </td></tr>
+</table>
 
 ## Abstract ##
 The current notebook dashboard only allows the user to open notebooks in their current directory location. It does not allow you to navigate through or open notebooks in subdirectories. This proposal describes a new URL mapping scheme to adjust for a multi-directory dashboard system and explores the possibility of implementing such a system. 

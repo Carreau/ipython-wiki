@@ -1,4 +1,12 @@
-Autosave in the IPython Notebook
+## Autosave in the IPython Notebook
+
+<table>
+<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
+<tr><td> Created </td><td> April 6, 2013</td></tr>
+<tr><td> Updated </td><td> April 26, 2013</td></tr>
+<tr><td> Implementation </td><td> <a href="https://github.com/ipython/pull/3158">PR #3158</a></td></tr>
+</table>
 
 This is a proposal for simple autosave in the IPython Notebook.
 
@@ -174,4 +182,3 @@ That is, most user-initiated saves are checkpoints, excluding the unconscious re
 There is no javascript UI for changing the autosave interval, but there is an `%autosave` magic, which can set the interval in seconds:
 
     %autosave 300 # autosave at most every 5 minutes
-

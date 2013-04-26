@@ -2,10 +2,10 @@
 
 <table>
 <tr><td> Author </td><td> Zach Sailer &lt;zachsailer@gmail.com&gt;</td></tr>
-<tr><td> Status </td><td> Active|Deferred|Accepted|Rejected </td></tr>
+<tr><td> Status </td><td> Active </td></tr>
 <tr><td> Created </td><td> April 4, 2013</td></tr>
 <tr><td> Updated </td><td> April 26, 2013</td></tr>
-<tr><td> Discussion </td><td> [3166](https://github.com/ipython/ipython/issues/3166) </td></tr>
+<tr><td> Discussion </td><td> <a href=https://github.com/ipython/ipython/issues/3166>#3166</a> </td></tr>
 </table>
 
 ## Abstract ##

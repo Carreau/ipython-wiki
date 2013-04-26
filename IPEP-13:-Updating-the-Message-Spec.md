@@ -7,7 +7,7 @@ A few names need to change, because they are Python-specific, and our message sp
 ## `pyin`
 
 When an `execute_request` arrives, a `pyin` message is published with the code about to be run.
-This should not be a Python-specific name, such as `input` or `code` or ``.
+This should not be a Python-specific name.
 
 - `pyin` should be renamed to something more generic,
   such as `input` or `code`, or `execute_content` or `execute_notification` or some such.

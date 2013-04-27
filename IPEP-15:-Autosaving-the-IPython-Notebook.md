@@ -5,7 +5,7 @@
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
 <tr><td> Updated </td><td> April 26, 2013</td></tr>
-<tr><td> Implementation </td><td> <a href="https://github.com/ipython/pull/3158">PR #3158</a></td></tr>
+<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3158">PR #3158</a></td></tr>
 </table>
 
 This is a proposal for simple autosave in the IPython Notebook.

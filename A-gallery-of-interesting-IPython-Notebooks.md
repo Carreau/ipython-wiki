@@ -151,3 +151,5 @@ Of course the first thing you might try is searching for videos about Ipython (1
 * This video shows IPython being used in the scikit project  http://www.youtube.com/watch?v=4ONBVNm3isI
 
 * He doesn't show IPython in use but his IPython sticker is clear for the entire video: http://www.youtube.com/watch?v=op61s-QHryk
+
+* http://youtu.be/qbYYamU42Sw?t=5m9s Wes McKinney's speech on Python and data analysis features IPython as does his book [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)

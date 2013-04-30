@@ -100,7 +100,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [An analysis of national school standardized test data in Colombia using Pandas](http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb) (in Spanish). By [Javier Moreno](http://finiterank.com).
 
-* [Getting started with GDELT](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad/GDELT_Intro). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.
+* [Getting started with GDELT](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad/GDELT_Intro). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.  Another GDELT example from David, that nicely [integrates mapping visualizations](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/GDELT_Mapping.ipynb).
 
 * [Bioinformatic Approaches to the Computation of Poetic Meter](http://nbviewer.ipython.org/urls/raw.github.com/asp49/meter/graph/Shared%2520Horizons%2520Presentation.ipynb), by [A. Sean Pue](https://github.com/asp49/meter), [C. Titus Brown](https://github.com/ctb) and [Tracy Teal](https://github.com/tracyteal).
 

@@ -1,7 +1,7 @@
 ## Autosave in the IPython Notebook
 
 <table>
-<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Status </td><td> <a href=https://github.com/ipython/ipython/commit/b69eb67e69fd0ca9ec7840181a1baf50ab26a0ad>Merged</a> </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
 <tr><td> Updated </td><td> April 26, 2013</td></tr>

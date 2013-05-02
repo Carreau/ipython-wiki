@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
-<tr><td> Updated </td><td> April 28, 2013</td></tr>
+<tr><td> Updated </td><td> May 2, 2013</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3190">PR 3190</a> </td></table>
 
 
@@ -12,23 +12,13 @@ But we didn't get everything right, and we want to clean some things up prior to
 
 A few names need to change, because they are Python-specific, and our message spec is not.
 
-## `pyin`
+- `pyin` will become `execute_input`
+- `pyout` will become `execute_output`
 
-When an `execute_request` arrives, a `pyin` message is published with the code about to be run.
-This should not be a Python-specific name.
+## `pyout` vs `display_data`
 
-- `pyin` should be renamed to something more generic,
-  such as `input` or `code`, or `execute_content` or `execute_notification` or some such.
-
-
-## `pyout`
-
-`pyout` is also Python-specific, but has a more pressing issue - it is identical to `display_data`,
-except with the addition of a `prompt_number` field. I propose *removing* `pyout`,
-and adding the necessary information as a flag in `display_data`.
-One possible implementation is to just add `prompt_number` to `display_data`,
-where `prompt_number` is generally null, but has a value for current `pyout` cases.
-
+`pyout` and `display_data` are identical messages, with `pyout` having an additional `prompt_number` field.
+It was proposed to merge these two, but preserving the distinction between `result` and `side effect` at the message level is desirable.
 
 ## display metadata
 
@@ -185,6 +175,9 @@ These should simply use the display protocol, and the `status: error` behavior u
 
 ## multiple objects
 
+**Nothing will be done on this issue for this IPEP**
+
+<del>
 We currently have no native mechanism for presenting containers of objects (e.g. a list of images).
 The only thing we can do is display each individual image via `map(display, list_of_images)`.
 Nor can we have any representation of an object that might contain multiple elements
@@ -192,6 +185,8 @@ Nor can we have any representation of an object that might contain multiple elem
 or objects for which multiple components *should* be displayed (e.g. LaTeX + PNG).
 For all of these cases, the only option is to do the entire HTML rendering kernel-side,
 and use raw HTML-reprs.  This sucks quite a bit, but I don't have a good answer for it.
+</del>
+
 Perhaps the JSON reprs / jsplugins are going to be the only way to do this sort of thing.
 
 ## payload keys

@@ -14,7 +14,7 @@ The IPEP author should:
 Each IPEP should have a table/area at the top with the following information:
 
 <table>
-<tr><td> Status </td><td> Active|Deferred|Accepted|Rejected </td></tr>
+<tr><td> Status </td><td> Active|Deferred|Accepted|Rejected|Implemented </td></tr>
 <tr><td> Author </td><td> Full Name &lt;full.name@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
 <tr><td> Updated </td><td> April 26, 2013</td></tr>

@@ -39,7 +39,7 @@ To avoid implementing a full VCS, a simple implementation would **only support o
 The checkpoint should be in a location that is discoverable from the notebook,
 and consistent across notebook server sessions (i.e. keyed by notebook_id will not work for FileNB).
 
-The proposed location for checkpoints is a `.ipynbcheckpoints` directory inside the notebook directory.
+The proposed location for checkpoints is a `.ipynbcheckpoints` (`.ipynb_checkpoints` in current implementation) directory inside the notebook directory.
 Alternatives include:
 
 - inside the profile directory (would result in different checkpoints available per profile, which seems weird)

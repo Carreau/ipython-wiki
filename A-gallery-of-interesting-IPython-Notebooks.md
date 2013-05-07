@@ -108,9 +108,13 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Getting started with GDELT](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad/GDELT_Intro). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.  Another GDELT example from David, that nicely [integrates mapping visualizations](http://nbviewer.ipython.org/urls/raw.github.com/dmasad/GDELT_Intro/master/GDELT_Mapping.ipynb).
 
+* A geographic analysis of [Indonesian conflicts in 2012](http://nbviewer.ipython.org/urls/raw.github.com/herrfz/gdelt/master/indn_connection.ipynb) with GDELT, by [herrfz](https://github.com/herrfz).
+
 * [Bioinformatic Approaches to the Computation of Poetic Meter](http://nbviewer.ipython.org/urls/raw.github.com/asp49/meter/graph/Shared%2520Horizons%2520Presentation.ipynb), by [A. Sean Pue](https://github.com/asp49/meter), [C. Titus Brown](https://github.com/ctb) and [Tracy Teal](https://github.com/tracyteal).
 
 * [Replication of the highly-contentious analysis of economic growth by Reinhart and Rogoff](http://nbviewer.ipython.org/urls/raw.github.com/vincentarelbundock/Reinhart-Rogoff/master/reinhart-rogoff.ipynb), by [Vincent Arel-Bundock](http://umich.edu/~varel), [full repo here](https://github.com/vincentarelbundock/Reinhart-Rogoff). This is based on the [widely-publicized critique of the original analysis done by Herndon, Ash, and Pollin](http://www.peri.umass.edu/236/hash/31e2ff374b6377b2ddec04deaa6388b1/publication/566).
+
+* Analyzing the [Vélib dataset from Paris](http://nbviewer.ipython.org/5520933), by [Cyrille Rossant](https://github.com/rossant) (Vélib is Paris' [bicycle-sharing program](http://en.wikipedia.org/wiki/V%C3%A9lib')).
 
 ## General Python Programming
 

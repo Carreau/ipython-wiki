@@ -14,7 +14,7 @@ A few names need to change, because they are Python-specific, and our message sp
 
 - `pyin` will become `execute_input`
 - `pyout` will become `execute_output`
-- `pyerr` will become `traceback`
+- `pyerr` will become `error`
 
 ## `pyout` vs `display_data`
 

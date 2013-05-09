@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
-<tr><td> Updated </td><td> May 2, 2013</td></tr>
+<tr><td> Updated </td><td> May 9, 2013</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3190">PR 3190</a> </td></table>
 
 
@@ -14,6 +14,7 @@ A few names need to change, because they are Python-specific, and our message sp
 
 - `pyin` will become `execute_input`
 - `pyout` will become `execute_output`
+- `pyerr` will become `traceback`
 
 ## `pyout` vs `display_data`
 

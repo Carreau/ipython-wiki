@@ -116,6 +116,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * Analyzing the [Vélib dataset from Paris](http://nbviewer.ipython.org/5520933), by [Cyrille Rossant](https://github.com/rossant) (Vélib is Paris' [bicycle-sharing program](http://en.wikipedia.org/wiki/V%C3%A9lib')).
 
+* [Using Python to see how the Times writes about men and women](http://nbviewer.ipython.org/5105037), by [Neal Caren](https://twitter.com/HaphazardSoc).
+
 ## General Python Programming
 
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).

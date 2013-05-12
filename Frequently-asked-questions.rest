@@ -152,12 +152,16 @@ Q. Can IPython run under IronPython? It would be great to have access to all of 
 
 
 At the moment it is a bit of effort. You have to:
-* compile IronPython from https://github.com/IronLanguages/main/tree/ipy-2.7-maint
-* install pyreadline from https://github.com/paweljasinski/pyreadline
-* install ipython from https://github.com/ipython/ipython
+
+- compile IronPython from https://github.com/IronLanguages/main/tree/ipy-2.7-maint
+
+- install pyreadline from https://github.com/paweljasinski/pyreadline
+
+- install ipython from https://github.com/ipython/ipython
 
 In addition you have to:
-* replace _pyexpect.py with https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py
+
+- replace _pyexpect.py with https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py
 
 Your HOME environment variable must be set.
 

@@ -147,25 +147,25 @@ Now you can reactivate ipython's displayhook if you want::
 You could wrap this little sys.displayhook dance in a utility function to ease things up.
 
 
-Q. Can IPython run under IronPython? It would be great to have access to all of the .Net libraries via IPython. If not are there any plans to make this possible?
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q. Can IPython run under IronPython?
+------------------------------------
 
+**Answer**: Yes but at the moment it is a bit of effort.
 
-At the moment it is a bit of effort. You have to:
+- download `IronPython 2.7.4 Alpha 1`_
+- add your ``C:/Program Files/IronPython 2.7`` folder into PATH
+- download pyreadline from here_, install from source: ``ipy setup.py install``
+- download latest *development* version of ipython_, install from source: ``ipy setup.py install``
+- replace ``C:/Program Files/IronPython/Lib/site-packages/IPython/external/pexpect/_pyexpect.py`` with one from ``https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py``
+- make sure you HOME environment variable is set to something reasonable
+- start: ``ipy.exe -X:Frames "c:/Program Files/IronPython 2.7/Scripts/ipython"``
 
-- compile IronPython from https://github.com/IronLanguages/main/tree/ipy-2.7-maint
+Note: it does not work with cygwin terminal
 
-- install pyreadline from https://github.com/paweljasinski/pyreadline
+.. _IronPython 2.7.4 Alpha 1: https://ironpython.codeplex.com/releases/view/106471
+.. _here: https://github.com/paweljasinski/pyreadline/archive/master.zip
+.. _ipython: https://github.com/ipython/ipython/archive/master.zip
 
-- install ipython from https://github.com/ipython/ipython
-
-In addition you have to:
-
-- replace _pyexpect.py with https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py
-
-Your HOME environment variable must be set.
-
-You have to provide either -X:Frames or -X:FullFrames as ipy.exe parameter
 
 Q. I'm really interested still but my question isn't here... where can I get support for specific problems?
 ---------------

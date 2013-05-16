@@ -16,4 +16,4 @@ Actually implementing an editor should be pretty straight forwards, so why hasn'
 
 - While ACE and CodeMirror seem to be the only real choices regarding which editor to use, we still need to pick one of them.
 - The Web API still needs specifying.
-- The extension to the Notebook interface needs to be discussed. For starters, should `%%edit` open the cell in the editor? Should the magic be called `edit` at all?
+- The extension to the Notebook interface needs to be discussed. For starters, should `%%edit` open the cell in the editor? Should the magic be called edit at all?

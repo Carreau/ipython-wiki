@@ -4,7 +4,7 @@ The proposed solution is to allow the Notebook to open a text editor in a new ta
 
 ## A Rough Sketch
 
-The user would have a magic, say `edit`, which would take a path to the file they wanted to hack on, so running `%edit script.py` would open the editor in a new tab, with `script.py` open. Each time `edit` was called, a new instance of the editor would be created in a new browser tab.
+The user would have a magic, say 'edit', which would take a path to the file they wanted to hack on, so running `%edit script.py` would open the editor in a new tab, with `script.py` open. Each time the magic was called, a new instance of the editor would be created in a new browser tab.
 
 Each editor instance will display the file name in the browser tab using the `<title>` element, and display the state of the editor (think saved/unsaved changes) by updating the favicon. This allows the browser's native tabs to be used to manage multiple instances of the editor (and Notebook).
 

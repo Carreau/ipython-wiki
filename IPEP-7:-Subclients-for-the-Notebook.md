@@ -1,4 +1,4 @@
-**NOTE** This IPEP is stale and has been replaced by [IPEP18: Text Editor for the Notebook](https://github.com/ipython/ipython/wiki/IPEP18:-Text-Editor-for-the-Notebook), along with another IPEP regarding a HTML terminal, which will be written up shortly. This IPEP is no longer being discussed.
+**NOTE** *This IPEP is stale and has been replaced by [IPEP18: Text Editor for the Notebook](https://github.com/ipython/ipython/wiki/IPEP18:-Text-Editor-for-the-Notebook), along with another IPEP regarding a HTML terminal, which will be written up shortly. This IPEP is no longer being discussed.*
 
 This IPEP advances the idea of subclients.
 

@@ -11,7 +11,3 @@ We welcome and encourage help from others in updating these minutes during the m
 Below are the videos of prior meetings, in reverse chronological order
 
 * [May 23, 2013](http://youtu.be/vSSL4jJYpu4)
-
-<div align="center"> <iframe title="YouTube video player2" width="550"
-height="350" src="http://www.youtube.com/embed/vSSL4jJYpu4" frameborder="0"
-allowfullscreen></iframe></div><br>

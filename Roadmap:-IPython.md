@@ -55,7 +55,16 @@ Development focus for IPython 1.0:
     in notebooks.  In the long-term, the answer is going to be js plugins,
     but that work will not be ready for this release.
   - [PR #3101](https://github.com/ipython/ipython/pull/3101)
-- (H,1) Notebook toolset changes (bootstrap, less, require, ACE, CM3).
+- (H,1) Notebook toolset changes
+  - [PR #3240](https://github.com/ipython/ipython/pull/3240)
+  - bootstrap
+    - [PR #3232](https://github.com/ipython/ipython/pull/3232)
+  - less
+    - [PR #3325](https://github.com/ipython/ipython/pull/3325)
+  - CodeMirror3
+    - [PR #3232](https://github.com/ipython/ipython/pull/3232)
+  - require.js
+  - ACE
 - (M,1) Organization of JS/CSS (Brian)
   - [PR #3321](https://github.com/ipython/ipython/pull/3321)
   - [PR #3325](https://github.com/ipython/ipython/pull/3325)

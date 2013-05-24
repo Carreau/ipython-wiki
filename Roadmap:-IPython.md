@@ -57,11 +57,14 @@ Development focus for IPython 1.0:
   - [PR #3101](https://github.com/ipython/ipython/pull/3101)
 - (H,1) Notebook toolset changes (bootstrap, less, require, ACE, CM3).
 - (M,1) Organization of JS/CSS (Brian)
+  - [PR #3321](https://github.com/ipython/ipython/pull/3321)
+  - [PR #3325](https://github.com/ipython/ipython/pull/3325)
 - (M,1) General CSS cleanup (Brian, Matthias)
   - These three are really one big project of cleaning up and reorganizing
     the non-Python code.  We are going to adopt some new tools
     for managing js installation and dependencies,
     and start to make the IPython js more reusable outside of IPython.
+  - [PR #3325](https://github.com/ipython/ipython/pull/3325)
 - (M,1) Message protocol changes (Min)
   - Our first go at the message protocol has gotten us pretty far,
     but we have found a few places we need to make some changes

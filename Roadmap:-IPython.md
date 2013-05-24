@@ -58,11 +58,11 @@ Development focus for IPython 1.0:
 - (H,1) Notebook toolset changes
   - [PR #3240](https://github.com/ipython/ipython/pull/3240)
   - bootstrap
-    - [PR #3232](https://github.com/ipython/ipython/pull/3232)
+      - [PR #3232](https://github.com/ipython/ipython/pull/3232)
   - less
-    - [PR #3325](https://github.com/ipython/ipython/pull/3325)
+      - [PR #3325](https://github.com/ipython/ipython/pull/3325)
   - CodeMirror3
-    - [PR #3232](https://github.com/ipython/ipython/pull/3232)
+      - [PR #3232](https://github.com/ipython/ipython/pull/3232)
   - require.js
   - ACE
 - (M,1) Organization of JS/CSS (Brian)

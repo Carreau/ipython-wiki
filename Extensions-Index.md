@@ -233,8 +233,4 @@ The AnyBody extension adds an `%%anybody` cell magic to run AnyScript macros dir
 
 [Homepage](https://github.com/melund/anybodymagic)
 
-To install:
-
-```text
-    %install_ext https://raw.github.com/melund/anybodymagic/master/anybodymagic.py
-```
+To install: ``` %install_ext https://raw.github.com/melund/anybodymagic/master/anybodymagic.py ```

@@ -227,4 +227,14 @@ Demo notebook: https://gist.github.com/juhasch/5287081
 
 (You can't see the breakpoints using the nbviewer: http://nbviewer.ipython.org/5287081 )
 
+## The AnyBody Modeling System
 
+The AnyBody extension adds an `%%anybody` cell magic to run AnyScript macros directly from the IPython Notebook. The [AnyBody Modeling System](www.anybodytech.com) is a multibody modelling system for musculoskeletal biomechanics.
+
+[Homepage](https://github.com/melund/anybodymagic)
+
+To install:
+
+```text
+    %install_ext https://raw.github.com/melund/anybodymagic/master/anybodymagic.py
+```

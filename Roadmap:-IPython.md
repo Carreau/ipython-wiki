@@ -78,13 +78,12 @@ Development focus for IPython 1.0:
   - Our first go at the message protocol has gotten us pretty far,
     but we have found a few places we need to make some changes
     for the long term.
-    Specific examples:
+  - image size metadata ([PR #3190](https://github.com/ipython/ipython/pull/3190))
+  - `user_expressions` / `user_variables` should use rich display system ([PR #3319](https://github.com/ipython/ipython/pull/3319))
+  - some planned changes are tied to the notebook document format, which we won't change until 2.0:
       - remove the few python-specific idioms (`pyin`)
       - remove `pyout` in favor of adding necessary info to nearly-identical `display_data`
-      - image size metadata
-      - multiple entities in a single message (e.g. display list of images)?
-      - adjust format of results of user-expressions/variables queries to better represent errors.
-      - JSON messages (probably won't be ready for this release)
+      - JSON messages
 - (M,1) Documentation (Paul)
   - Our documentation is in need of a lot of work,
     and Paul is going to help develop a fresh view of how we should
@@ -127,6 +126,7 @@ Development focus for IPython 1.0:
   - [PR #3064](https://github.com/ipython/ipython/pull/3064)
   - [PR #3058](https://github.com/ipython/ipython/pull/3058)
 - (E,3) Notebook format changes
+  - **This has been moved to 2.0**
   - There are some changes to the notebook format needed,
     most notably, perhaps, being the removal of worksheets.
     We have a model in mind for hierarchical (including tabbed)

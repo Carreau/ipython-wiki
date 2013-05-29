@@ -12,6 +12,8 @@ But we didn't get everything right, and we want to clean some things up prior to
 
 A few names need to change, because they are Python-specific, and our message spec is not.
 
+**NOTE: Since these names have notebook format implications, they will not be changed until 2.0**
+
 - `pyin` will become `execute_input`
 - `pyout` will become `execute_output`
 - `pyerr` will become `error`

@@ -44,7 +44,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/url/epi.whoi.edu/esr/GIS_GRASS-R_Example.ipynb). This embeds a slideshow and google Earth in the notebook.  By Massimo Di Stefano.
 
 * [Data and visualization integration via web based resources]
-(http://nbviewer.ipython.org/url/www.geofemengineering.it/The_Perfect_Storm_1991.ipynb). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
+(http://nbviewer.ipython.org/url/geofemengineering.it/The_Perfect_Storm_1991.ipynb). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
 
 * [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
 

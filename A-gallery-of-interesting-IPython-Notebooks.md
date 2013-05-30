@@ -74,6 +74,9 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
 
+
+* [Manipulation and display of chemical structures](http://nbviewer.ipython.org/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
@@ -89,6 +92,8 @@ Note that in the 'collections' section above there are also pandas-related links
 * [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
 
 * [Analyzing and visualizing sun spot data with Pandas](http://nbviewer.ipython.org/4569783), by [Josh Hemann](https://github.com/jhemann). An enlightening discussion of how naive plotting choices subtly influence our interpretation of data.
+
+* [Advanced analysis of Apache logs](http://nbviewer.ipython.org/urls/github.com/koldunovn/nk_public_notebooks/raw/master/Apache_log.ipynb), by [Nikolay Koldunov](github.com/koldunovn).
 
 ### Social data
 

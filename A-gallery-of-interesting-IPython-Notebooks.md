@@ -165,7 +165,7 @@ This section contains academic papers that have been published in the peer-revie
 
 * [Reveal converter mini-tutorial](http://nbviewer.ipython.org/url/www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.ipynb), also available in [blog post form](http://www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.html). Do you want to make static html/css slideshow straight from the IPython notebook? OK, now you can do it with the *reveal* converter (nbconvert). [Demo](http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html) by Damián Avila.  
 
-## Videos of Ipython being used in the wild
+## Videos of IPython being used in the wild
 
 Of course the first thing you might try is searching for videos about Ipython (1900 or so by last count on Youtube) but there are demonstrations of other applications using the power of Ipython but are not mentioned is the descriptions. Below are a few such:
 

@@ -30,13 +30,30 @@ This page is to help us to plan and record the development meeting that the IPyt
 
 # Schedule
 
-## Monday
+Monday
 
-## Tuesday
+* AM: review 1.0 roadmap and release
+* AM/PM: develop roadmap for next release
 
-## Wednesday
+Tuesday
 
-## Thursday
+* AM/PM: nbconvert design discussion
+* PM: Multidirectory capabilities
 
-## Friday
+Wednesday
 
+
+* AM: Overview of interactive widgets, scope, goals
+* AM: 15 minute mini-talks by stake holders about their usage cases
+* PM: Low level message spec aspects
+* PM: Security and plugin approach
+
+Thursday
+
+* AM: Low level Python/JavaScript APIs
+* PM: Traits-like API
+
+Friday
+
+* AM: Manipulate/interact API
+* PM: Convert design ideas into a concrete roadmap

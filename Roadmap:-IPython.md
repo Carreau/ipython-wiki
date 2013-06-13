@@ -64,7 +64,7 @@ Development focus for IPython 1.0:
   - CodeMirror3
       - [PR #3232](https://github.com/ipython/ipython/pull/3232)
   - require.js
-  - ACE
+      - [PR #3364](https://github.com/ipython/ipython/pull/3364)
 - (M,1) Organization of JS/CSS (Brian)
   - [PR #3321](https://github.com/ipython/ipython/pull/3321)
   - [PR #3325](https://github.com/ipython/ipython/pull/3325)
@@ -80,10 +80,6 @@ Development focus for IPython 1.0:
     for the long term.
   - image size metadata ([PR #3190](https://github.com/ipython/ipython/pull/3190))
   - `user_expressions` / `user_variables` should use rich display system ([PR #3319](https://github.com/ipython/ipython/pull/3319))
-  - some planned changes are tied to the notebook document format, which we won't change until 2.0:
-      - remove the few python-specific idioms (`pyin`)
-      - remove `pyout` in favor of adding necessary info to nearly-identical `display_data`
-      - JSON messages
 - (M,1) Documentation (Paul)
   - Our documentation is in need of a lot of work,
     and Paul is going to help develop a fresh view of how we should
@@ -102,42 +98,23 @@ Development focus for IPython 1.0:
   - The notebook desperately needs autosave
   - [IPEP 15](IPEP-15%3A-Autosaving-the-IPython-Notebook)
   - [PR 3158](https://github.com/ipython/ipython/pull/3158)
-- (H,2) Filesystem navigation from the dashboard
-  - We need UI for navigating the dashboard around the filesystem,
-    so that you don't need to keep restarting the NB Server for every notebook directory.
 - (M,2) raw_input (Min)
   - The notebook needs a basic implementation of a handler for raw_input messages.
   - [PR #3089](https://github.com/ipython/ipython/pull/3089)
-- (M,2) Fixing random UUID issue
-  - Every restart of the notebook, notebooks get new UUIDs
-  - [PR #3140](https://github.com/ipython/ipython/pull/3140)
-  - [IPEP 16](IPEP-16%3A-Notebook-multi-directory-dashboard-and-URL-mapping)
 - (M,2) JS Testing
   - We have lots of javascript, and we need to learn about testing it.
 - (E,2) Kernel autorestarting (Brian)
   - Kernels need to automatically restart without any intervention from the UI.
   - [PR #3011](https://github.com/ipython/ipython/pull/3011)
-- (H,3) Config UI
-  - Some aspects of the Javascript ought to be configurable
-- (H,3) No scroll on mouse click
+- (H,3) No scroll on mouse click (Brian)
 - (E,3) HTML Anchors
   - if we put simple HTML anchors on cells,
     it will be easy to link to a specific cell in a notebook.
   - [PR #3064](https://github.com/ipython/ipython/pull/3064)
   - [PR #3058](https://github.com/ipython/ipython/pull/3058)
-- (E,3) Notebook format changes
-  - **This has been moved to 2.0**
-  - There are some changes to the notebook format needed,
-    most notably, perhaps, being the removal of worksheets.
-    We have a model in mind for hierarchical (including tabbed)
-    views of a single notebook based on Sections,
-    denoted by Header cells.
-    This will be much more flexible than hard-coded worksheets,
-    which have still received no support in the HTML UI,
-    despite being in the document format since the beginning.
 - (E,3) Column width (after bootstrap)
   - The notebook currently fills the width of the screen
-
+  - [PR #3393](https://github.com/ipython/ipython/pull/3393)
 
 ## Release 2.0, December 25, 2013
 
@@ -146,6 +123,34 @@ Development focus for IPython 2.0:
 - Polish work on nbconvert, started in 1.0
 - Work on interactive widgets, and the JSON/handler messages,
   necessary for rich interactive content.
+- rework URL scheme to split REST api requests from human HTML pages
+
+
+### Moved from 1.0
+
+- (H,3) Config UI
+  - Some aspects of the Javascript ought to be configurable
+- (H,2) Filesystem navigation from the dashboard
+  - We need UI for navigating the dashboard around the filesystem,
+    so that you don't need to keep restarting the NB Server for every notebook directory.
+- (M,2) Fixing random UUID issue
+  - Every restart of the notebook, notebooks get new UUIDs
+  - [PR #3140](https://github.com/ipython/ipython/pull/3140)
+  - [IPEP 16](IPEP-16%3A-Notebook-multi-directory-dashboard-and-URL-mapping)
+- (M, 1) Message spec changes
+  - some message spec changes proposed in 1.0 have nbformat implications, and will be held until those changes are made
+  - remove the few python-specific idioms (`pyin`, `pyout`)
+  - JSON messages
+- (E,3) Notebook format changes
+  - There are some changes to the notebook format needed,
+    most notably, perhaps, being the removal of worksheets.
+    We have a model in mind for hierarchical (including tabbed)
+    views of a single notebook based on Sections,
+    denoted by Header cells.
+    This will be much more flexible than hard-coded worksheets,
+    which have still received no support in the HTML UI,
+    despite being in the document format since the beginning.
+
 
 While we haven't really begun this work, there are some things we are thinking about that will affect users of the Notebook, in particular people who are already developing JavaScript widgets for the Notebook.
 

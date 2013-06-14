@@ -76,6 +76,7 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
 
+* [Face Recognition on a subset of the Labeled Faces in the Wild dataset](http://nbviewer.ipython.org/urls/raw.github.com/ogrisel/notebooks/master/Labeled%2520Faces%2520in%2520the%2520Wild%2520recognition.ipynb), by [Olivier Grisel](http://github.com/ogrisel).
 
 * [Manipulation and display of chemical structures](http://nbviewer.ipython.org/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
 

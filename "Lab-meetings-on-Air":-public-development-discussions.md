@@ -15,6 +15,7 @@ We welcome and encourage help from others in updating these minutes during the m
 
 Videos of prior meetings, in reverse chronological order:
 
+* [June 13, 2013](http://youtu.be/UUjTAq8cCcs)
 * [June 6, 2013](http://youtu.be/5zyvJYX0vj8)
 * [May 30, 2013](http://youtu.be/9tel25TGqws)
 * [May 23, 2013](http://youtu.be/vSSL4jJYpu4)

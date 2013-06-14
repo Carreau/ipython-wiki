@@ -13,12 +13,14 @@ We welcome and encourage help from others in updating these minutes during the m
 
 ## Prior meetings
 
-Videos of prior meetings, in reverse chronological order:
-
-* [June 13, 2013](http://youtu.be/UUjTAq8cCcs)
-* [June 6, 2013](http://youtu.be/5zyvJYX0vj8)
-* [May 30, 2013](http://youtu.be/9tel25TGqws)
-* [May 23, 2013](http://youtu.be/vSSL4jJYpu4)
-* [April 26, 2013](http://youtu.be/Yb35M8cW7o4) (not scheduled in advance)
+Videos of prior meetings, in reverse chronological order.
 
 **Note:** some of these may have not been announced in advance but instead happened impromptu after a discussion taking place on our dev chat room needed the bandwidth of face-to-face conversation.  Whenever that happens, if at all possible try to move your chat room conversation to a public hangout and leave a link here afterwards.  That will allow others to catch up on the discussion later on from the video recording.
+
+### 2013
+
+* [June 13](http://youtu.be/UUjTAq8cCcs)
+* [June 6](http://youtu.be/5zyvJYX0vj8)
+* [May 30](http://youtu.be/9tel25TGqws)
+* [May 23](http://youtu.be/vSSL4jJYpu4)
+* [April 26](http://youtu.be/Yb35M8cW7o4) (not scheduled in advance)

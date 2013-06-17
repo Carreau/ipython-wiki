@@ -52,8 +52,17 @@ Thursday
 
 * AM: Low level Python/JavaScript APIs
 * PM: Traits-like API
+* "Open house" for campus community (could be moved to any other day).
 
 Friday
 
 * AM: Manipulate/interact API
 * PM: Convert design ideas into a concrete roadmap
+
+# Attending
+
+* Fernando Perez
+* Brian Granger
+* Min Ragan-Kelley
+* Paul Ivanov
+* Matthias Bussonnier

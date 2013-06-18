@@ -98,7 +98,7 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Analyzing and visualizing sun spot data with Pandas](http://nbviewer.ipython.org/4569783), by [Josh Hemann](https://github.com/jhemann). An enlightening discussion of how naive plotting choices subtly influence our interpretation of data.
 
-* [Advanced analysis of Apache logs](http://nbviewer.ipython.org/urls/github.com/koldunovn/nk_public_notebooks/raw/master/Apache_log.ipynb), by [Nikolay Koldunov](github.com/koldunovn).
+* [Advanced analysis of Apache logs](http://nbviewer.ipython.org/urls/github.com/koldunovn/nk_public_notebooks/raw/master/Apache_log.ipynb), by [Nikolay Koldunov](https://github.com/koldunovn).
 
 ### Social data
 

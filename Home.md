@@ -12,6 +12,7 @@ This wiki contains:
   - [Roadmap for NBviewer](wiki/Roadmap:-NBviewer)
 * Our ["lab meetings on air"](wiki/"Lab-meetings-on-Air":-public-development-discussions)
 * Pages for specific developers sprints
+  - [IPython all-hands summer 2013](wiki/Dev:-Meeting,-July-2013)
   - [PyCon 2012](wiki/Sprints:-PyCon2012)
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
 * The IPython [Extensions Index](wiki/Extensions-Index)

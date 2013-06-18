@@ -115,6 +115,17 @@ An example is provided [here](http://nbviewer.ipython.org/urls/gist.github.com/r
 
 The [Unum class](https://bitbucket.org/kiv/unum/src>) is supported for unit-aware calculation.
 
+## duster
+
+Reset namespace and automatically (re)load several modules immediately thereafter.
+
+[Homepage](https://gist.github.com/lebedov/5806583)
+
+To install:
+
+```text
+    %install_ext https://gist.github.com/lebedov/5806583/raw/13f04b3fb1b7d3963a6ab05aa244d82931914391/duster_ext.py
+```
 
 ## inumpy
 

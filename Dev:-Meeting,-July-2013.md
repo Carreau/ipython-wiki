@@ -66,3 +66,4 @@ Friday
 * Min Ragan-Kelley
 * Paul Ivanov
 * Matthias Bussonnier
+* David Wolever

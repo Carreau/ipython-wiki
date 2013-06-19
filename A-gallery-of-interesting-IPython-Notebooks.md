@@ -33,6 +33,8 @@ Using Python and PyMC](https://github.com/CamDavidsonPilon/Probabilistic-Program
 
 * Astrophysical simulations and analysis with [yt](http://yt-project.org): a collection of example notebooks on using various codes that yt interfaces with: [Enzo](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/ac275ee8a462425c93b36e330e243705.ipynb), [Gadget](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/e209c55b6aaa4a9ab12c55422bb3afdc.ipynb), [RAMSES](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb), [PKDGrav](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb) and [Gasoline](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb). *Note:* the yt site currently throws an SSL warning, they seem to have an outdated or self-signed certificate.
 
+* [The Kaggle bulldozers competition example](http://danielfrg.github.io/blog/2013/03/07/kaggle-bulldozers-basic-cleaning), one of a set on tutorials on exploratory data analysis with the [copper toolkit](https://github.com/danielfrg/copper#copper) by [Daniel Rodríguez](http://danielfrg.github.io).
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing
@@ -137,6 +139,8 @@ Note that in the 'collections' section above there are also pandas-related links
 ## General Python Programming
 
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).
+
+* [Python Descriptors Demystified](http://nbviewer.ipython.org/urls/gist.github.com/ChrisBeaumont/5758381/raw/descriptor_writeup.ipynb), an in-depth discussion of the descriptor protocol in Python, by [Chris Beaumont](http://chrisbeaumont.org).
 
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 

@@ -61,9 +61,14 @@ Friday
 
 # Attending
 
-* Fernando Perez
-* Brian Granger
-* Min Ragan-Kelley
-* Paul Ivanov
-* Matthias Bussonnier
-* David Wolever
+1. Fernando Perez
+2. Brian Granger
+3. Min Ragan-Kelley
+4. Paul Ivanov
+5. Matthias Bussonnier
+6. David Wolever
+7. Zach Sailer
+8. Jonathan Frederic
+9. Steven Johnson
+10. Jeff Bezanson
+11. Stephan Karpinski

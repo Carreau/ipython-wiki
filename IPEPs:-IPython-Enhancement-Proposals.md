@@ -41,4 +41,5 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 15: Autosaving the IPython Notebook]]
 * [[IPEP 16: Notebook multi directory dashboard and URL mapping]]
 * [[IPEP 17: Notebook Format 4]]
-* [IPEP 18: Text Editor for the Notebook](https://github.com/ipython/ipython/wiki/IPEP18:-Text-Editor-for-the-Notebook)
+* [[IPEP 18: Text Editor for the Notebook]]
+* [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]]

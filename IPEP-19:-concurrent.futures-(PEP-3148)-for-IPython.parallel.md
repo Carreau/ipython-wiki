@@ -1,8 +1,8 @@
 <table>
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
-<tr><td> Created </td><td> April 29, 2013</td></tr>
-<tr><td> Updated </td><td> May 14, 2013</td></tr>
+<tr><td> Created </td><td> June 28, 2013</td></tr>
+<tr><td> Updated </td><td> June 28, 2013</td></tr>
 </table>
 
 There are two pieces to [PEP 3148](http://www.python.org/dev/peps/pep-3148/):

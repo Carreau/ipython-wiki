@@ -69,7 +69,7 @@ Friday
 6. David Wolever
 7. Zach Sailer
 8. Jonathan Frederic
-9. Steven Johnson
+9. Steven Johnson (arrives Monday at noon, departs Friday morning)
 10. Jeff Bezanson
 11. Stephan Karpinski
 12. Ana Nelson

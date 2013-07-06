@@ -94,6 +94,7 @@ Development focus for IPython 1.0:
   - [PR 3011](https://github.com/ipython/ipython/pull/3011)
 - (E,1) Emacs/VIM modes for CodeMirror (Fernando)
   - codemirror has emacs/vim bindings. Let's allow users to use them.
+  - temporary solution [for custom.js](https://gist.github.com/minrk/5940801)
 - (E,1) Implement Notebook autosave (Min)
   - The notebook desperately needs autosave
   - [IPEP 15](IPEP-15%3A-Autosaving-the-IPython-Notebook)

@@ -245,3 +245,13 @@ The AnyBody extension adds an `%%anybody` cell magic to run AnyScript macros dir
 [Homepage](https://github.com/melund/anybodymagic)
 
 To install: ``` %install_ext https://raw.github.com/melund/anybodymagic/master/anybodymagic.py ```
+
+## Module version information: `%version_information`
+
+The `%version_information` magic extension displays a table with version information for selected Python modules. Use it in a notebook keep a record of exactly which versions of dependency modules were used to run the notebook.
+
+[Homepage](https://github.com/jrjohansson/version_information)
+
+[Example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/version_information/master/example.ipynb)
+
+

@@ -73,3 +73,4 @@ Friday
 10. Jeff Bezanson
 11. Stephan Karpinski
 12. Ana Nelson
+13. Clayton Allen Davis

@@ -27,6 +27,8 @@ This page is to help us to plan and record the development meeting that the IPyt
   - Typography
   - Spacing of heading cells
   - Do we want to create an area for global widgets
+* Other topics
+  - Format of JavaScript docstrings
 
 # Schedule
 

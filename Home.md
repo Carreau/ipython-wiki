@@ -10,7 +10,7 @@ This wiki contains:
 * IPython roadmaps and development plans:
   - [Roadmap for IPython](wiki/Roadmap:-IPython)
   - [Roadmap for NBviewer](wiki/Roadmap:-NBviewer)
-* Our ["lab meetings on air"](wiki/Dev:-Lab-meetings-on-Air)
+* Our [lab meetings on air](wiki/Dev:-Lab-meetings-on-Air)
 * Pages for specific developers sprints
   - [IPython all-hands summer 2013](wiki/Dev:-Meeting,-July-2013)
   - [PyCon 2012](wiki/Sprints:-PyCon2012)

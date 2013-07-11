@@ -19,6 +19,9 @@ Videos of prior meetings, in reverse chronological order.
 
 ### 2013
 
+
+
+* [July 11](http://youtu.be/5xWdyCR4hUs)
 * [June 13](http://youtu.be/UUjTAq8cCcs)
 * [June 6](http://youtu.be/5zyvJYX0vj8)
 * [May 30](http://youtu.be/9tel25TGqws)

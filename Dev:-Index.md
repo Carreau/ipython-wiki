@@ -6,7 +6,7 @@ Here are the core documents describing IPython development:
 * A description of the [[perfect pull request|Dev: The perfect pull request]]
 * Our [coding style](./Dev:-Coding-style)
 
-Our [[Dev: Lab meetings on Air]]
+A page that describes our weekly [[lab meetings on air|Dev: Lab meetings on Air]]
 
 Some development policies we have created:
 

@@ -73,7 +73,7 @@ Friday
 8. Jonathan Frederic
 9. Steven Johnson (arrives Monday at noon, departs Friday morning)
 10. Jeff Bezanson
-11. Stephan Karpinski
+11. Stefan Karpinski (arrives Sunday evening, departs Thursday evening)
 12. Ana Nelson
 13. Clayton Allen Davis (Wed-Fri)
 14. Matthew Brett

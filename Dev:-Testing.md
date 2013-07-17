@@ -32,7 +32,13 @@ You can run IPython from the source download directory without even installing
 it system-wide or having configure anything, by typing at the terminal:
 
 ```bash
-   python ipython.py
+   python2 -c "import IPython; IPython.start_ipython();"
+```
+
+To start the webbased notebook you can use:
+
+```bash
+   python2 -c "import IPython; IPython.start_ipython(["notebook"]);"
 ```
 
 In order to run the test suite, you must at least be able to import IPython,

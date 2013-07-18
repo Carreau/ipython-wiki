@@ -50,7 +50,7 @@ Wednesday
 * AM: 15 minute mini-talks by stake holders about their usage cases
 * PM: Low level message spec aspects
 * PM: Security and plugin approach
-* "Open house" for campus community (could be moved to any other day).
+* 4-6pm: "Open house" for Berkeley campus community.
 
 Thursday
 

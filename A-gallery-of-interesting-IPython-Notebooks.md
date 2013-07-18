@@ -136,6 +136,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Exploring graph properties of the Twitter stream with twython and NetworkX](http://nbviewer.ipython.org/5681541/TwitterGraphs.ipynb), by [F. Perez](http://fperez.org) (complete [gist repo with utilities here](https://gist.github.com/fperez/5681541).)
 
+* [Kaggle Competition: Titanic Machine Learning from Disaster](http://nbviewer.ipython.org/urls/raw.github.com/agconti/kaggle-titanic/master/Titanic.ipynb). By [Andrew Conti](https://github.com/agconti).
+
 ### Natural Language Processing
 
 * [Python Programming for the Humanities](http://fbkarsdorp.github.io/python-course/) by Folgert Karsdorp & Maarten van Gompel.
@@ -157,6 +159,8 @@ Note that in the 'collections' section above there are also pandas-related links
 * [Custom CSS control of the notebook](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/Blog1.ipynb), this is part of a [blog repo](https://github.com/Carreau/posts) by Matthias Bussonnier.
 
 * [IPython display hookery: tools to help display visual output from various sources](http://nbviewer.ipython.org/5162445), a gist by [@deeplook](https://github.com/deeplook).
+
+* [Importing IPython Notebooks as Modules](http://nbviewer.ipython.org/6011986) by [Min RK](http://github.com/minrk).
 
 ## <a id="reproducible"></a> Reproducible academic publications
 

@@ -1,5 +1,13 @@
 This page is to help us to plan and record the development meeting that the IPython team will have the week of July 22nd, 2013 at UC Berkeley.
 
+Note that this is not meant to be an open sprint for newcomers to IPython interested in learning about the project, instead it is a technical meeting to finish up the work from the first semester and plan out the next round.  But if you are interested in participating in that kind of in-depth discussion centered on design and implementation questions, we obviously welcome your participation.
+
+If you are interested in learning more about IPython in general, meeting the team or bringing up new ideas about the project, we will hold an 'open house' on Wednesday, 4-6pm.  Feel free to stop by at that time for snacks and fun discussions.  If you have your own projects using IPython, by all means bring a short demo for all to see, as well as any feedback you may have for us.
+
+# Logistics
+
+The meeting will be held in [5101 Tolman Hall](http://www.berkeley.edu/map/maps/AB23.html), and we will start every day at 10am, working til we drop.
+
 # Topics to be covered
 
 * Review the 1.0 roadmap and release and discuss items that didn't get done

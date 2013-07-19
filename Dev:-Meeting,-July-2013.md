@@ -47,24 +47,23 @@ Monday
 
 Tuesday
 
+* 10 AM: google hangout with Prabhu and other members of the India team.
 * AM/PM: nbconvert design discussion
 * PM: Multidirectory capabilities
-* first thing AM or last thing PM: google hangout with Prabhu and other members of the India team.
 
 Wednesday
 
-
 * AM: Overview of interactive widgets, scope, goals
-* AM: 15 minute mini-talks by stake holders about their usage cases
+* AM: 10 minute **max** mini-talks by stake holders about their usage cases
 * PM: Low level message spec aspects
 * PM: Security and plugin approach
 * 4-6pm: "Open house" for Berkeley campus community.
 
 Thursday
 
+* 10 AM: If required, second google hangout with Prabhu and other members of the India team.
 * AM: Low level Python/JavaScript APIs
 * PM: Traits-like API
-* first thing AM or last thing PM: google hangout with Prabhu and other members of the India team.
 
 Friday
 

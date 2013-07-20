@@ -87,4 +87,7 @@ Friday
 13. Clayton Allen Davis (Wed-Fri)
 14. Matthew Brett
 15. Bob Dougherty (Thursday, maybe Wednesday)
-16. Prabhu Ramachandran (remote from India, GMT+530)
+16. David Sanders (Tues-Fri).
+
+Attending remotely:
+1. Prabhu Ramachandran (India, GMT+530)

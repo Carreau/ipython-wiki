@@ -48,6 +48,7 @@ Monday
 
 * Review 1.0 roadmap and release (Min)
 * Outline work for 2.0, without trying to go into too much detail yet.
+* Introduction to/overview of Dexi
 * Other-language kernels: Julia integration (FP)
 
 Tuesday

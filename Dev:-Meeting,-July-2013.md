@@ -6,7 +6,7 @@ If you are interested in learning more about IPython in general, meeting the tea
 
 # Logistics
 
-The meeting will be held in [5101 Tolman Hall](http://www.berkeley.edu/map/maps/AB23.html) [Google Maps](http://goo.gl/maps/crBRT), and we will start every day at 10am, working til we drop.
+The meeting will be held in [5101 Tolman Hall](http://www.berkeley.edu/map/maps/AB23.html) ([Google Maps](http://goo.gl/maps/crBRT)), and we will start every day at 10am, working til we drop.
 
 # Topics to be covered
 

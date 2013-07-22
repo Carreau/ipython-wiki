@@ -42,14 +42,14 @@ The meeting will be held in [5101 Tolman Hall](http://www.berkeley.edu/map/maps/
 
 Monday
 
-* AM: review 1.0 roadmap and release
-* AM/PM: develop roadmap for next release
+* Review 1.0 roadmap and release (Min)
+* Outline work for 2.0, without trying to go into too much detail yet.
+* Other-language kernels: Julia integration (FP)
 
 Tuesday
 
-* 10 AM: google hangout with Prabhu and other members of the India team.
-* AM/PM: nbconvert design discussion
-* PM: Multidirectory capabilities
+* AM/PM: nbconvert design discussion (Brian/Jonathan)
+* PM: Multidirectory capabilities (Brian/Zach)
 
 Wednesday
 
@@ -61,14 +61,14 @@ Wednesday
 
 Thursday
 
-* 10 AM: If required, second google hangout with Prabhu and other members of the India team.
+* 10 AM: google hangout with Prabhu and other members of the India team.
 * AM: Low level Python/JavaScript APIs
 * PM: Traits-like API
 
 Friday
 
 * AM: Manipulate/interact API
-* PM: Convert design ideas into a concrete roadmap
+* PM: Convert design ideas into a concrete roadmap for 2.0, with tasks, people and priorities (like we did for 1.0).
 
 # Attending
 

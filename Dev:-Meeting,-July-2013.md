@@ -66,6 +66,7 @@ Wednesday
 Thursday
 
 * 10 AM: google hangout with Prabhu and other members of the India team.
+* 11a AM: google hangout with Michael Droetboom about matplotlib/web.
 * AM: Low level Python/JavaScript APIs
 * PM: Traits-like API
 

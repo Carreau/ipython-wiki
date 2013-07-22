@@ -88,6 +88,7 @@ Friday
 14. Matthew Brett
 15. Bob Dougherty (Thursday, maybe Wednesday)
 16. David Sanders (Tues-Fri).
+17. Steve Chan (drop in Mon-Fri)
 
 Attending remotely:
 1. Prabhu Ramachandran (India, GMT+530)

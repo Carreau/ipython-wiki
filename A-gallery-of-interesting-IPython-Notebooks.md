@@ -39,6 +39,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
 
+* [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembeled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing

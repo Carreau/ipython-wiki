@@ -97,6 +97,7 @@ Friday
 17. Steve Chan (drop in Mon-Fri)
 18. Raymond Yee (Wed)
 19. Annette Greiner (Wed)
+20. Matt Henderson (Wed-Fri)
 
 Attending remotely:
 1. Prabhu Ramachandran (India, GMT+530)

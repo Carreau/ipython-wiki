@@ -38,7 +38,7 @@ it system-wide or having configure anything, by typing at the terminal:
 To start the webbased notebook you can use:
 
 ```bash
-   python2 -c "import IPython; IPython.start_ipython(["notebook"]);"
+   python2 -c "import IPython; IPython.start_ipython(['notebook']);"
 ```
 
 In order to run the test suite, you must at least be able to import IPython,

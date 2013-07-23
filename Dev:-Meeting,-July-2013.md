@@ -98,6 +98,7 @@ Friday
 18. Raymond Yee (Wed)
 19. Annette Greiner (Wed)
 20. Matt Henderson (Wed-Fri)
+21. Sarah Poon (Wed)
 
 Attending remotely:
 1. Prabhu Ramachandran (India, GMT+530)

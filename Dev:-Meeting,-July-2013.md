@@ -92,7 +92,7 @@ Friday
 12. Ana Nelson
 13. Clayton Allen Davis (Wed-Fri)
 14. Matthew Brett
-15. Bob Dougherty (Thursday, maybe Wednesday)
+15. Bob Dougherty (Thursday)
 16. David Sanders (Tues-Fri).
 17. Steve Chan (drop in Mon-Fri)
 18. Raymond Yee (Wed)

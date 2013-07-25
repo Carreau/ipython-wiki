@@ -1,5 +1,20 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## ipyBibtex
+
+With this extension you can use LATEX style references within IPython (Notebook) while still using markdown for formatting.
+
+[Homepage](https://gist.github.com/z-m-k/6080008)
+
+[Example Notebook](http://nbviewer.ipython.org/6080008/ipyBibtex.ipynb)
+
+To install:
+
+```text
+%install_ext https://gist.github.com/z-m-k/6080008/raw/7611cb869b5ff162d00e95856054b887b0b0d095/ipyBibtex.py
+```
+
+
 ## physics
 
 Enables calculations involving units, such as `(5 m/s) * (3 s)`. It also defines a range of physical constants, such as the speed of light in a vacuum, and the mass of an electron.

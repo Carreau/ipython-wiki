@@ -24,23 +24,23 @@ Each IPEP should have a table/area at the top with the following information:
 
 # Index of IPEPs
 
-* [IPEP 1: Cleanup and extension of the Magic system in IPython]( https://github.com/ipython/ipython/issues/1611) -- *Done*
-* [IPEP 2: Input transformations](https://github.com/ipython/ipython/issues/2293) -- *Done*
-* [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook) -- *Planned for 3.0*
-* [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility) -- *Done*. Will drop support for 3.2?
-* [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization) -- *Planned for 2.0*
-* [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane) -- *Open*
-* [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook) -- Replaced by [[IPEP 18]]
-* [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]] -- *Progress planned for 2.0*
-* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) -- Reveal and LiveNotebook are usable. *Stable in 2.0*
-* [[IPEP 10: Kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]] -- *???*
-* [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]] -- *A lot of work; planned for 3.0*
-* [[IPEP 12: Splitting KernelManager and KernelClient]] -- *???*
-* [[IPEP 13: Updating the Message Spec]] -- *Planned for 2.0*
-* [[IPEP 14: Notebook Regression Tests]] -- *Planned for 2.0*
-* [[IPEP 15: Autosaving the IPython Notebook]] -- *Done*
-* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Done; will be in 2.0*
-* [[IPEP 17: Notebook format 4]] -- *Planned for 3.0*
-* [[IPEP 18: Text editor for the Notebook]] -- *???*
-* [[IPEP 19: `concurrent.futures` (PEP 3148) for `IPython.parallel`]]
-* [[IPEP 20: Refactor magics into thin wrappers around Python API available from elsewhere]]
+* [IPEP 1: Cleanup and extension of the Magic system in IPython]( https://github.com/ipython/ipython/issues/1611) -- *Implemented*
+* [IPEP 2: Input transformations](https://github.com/ipython/ipython/issues/2293) -- *Implemented*
+* [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook) -- *Deferred*
+* [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility) -- *Implemented*
+* [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization) -- *Active*
+* [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane) -- *Implemented?*
+* [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook) -- *Replaced by* [[IPEP 18]]
+* [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]] -- *Active*
+* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) -- Reveal and LiveNotebook are usable. *Implemented*
+* [[IPEP 10: Kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]] -- *Implemented*
+* [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]] -- *Deferred*
+* [[IPEP 12: Splitting KernelManager and KernelClient]] -- *Active*
+* [[IPEP 13: Updating the Message Spec]] -- *Active*
+* [[IPEP 14: Notebook Regression Tests]] -- *Active*
+* [[IPEP 15: Autosaving the IPython Notebook]] -- *Implemented*
+* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Accepted*
+* [[IPEP 17: Notebook format 4]] -- *Deferred*
+* [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
+* [[IPEP 19: `concurrent.futures` (PEP 3148) for `IPython.parallel`]] -- *Deferred*
+* [[IPEP 20: Refactor magics into thin wrappers around Python API available from elsewhere]] -- *Deferred*

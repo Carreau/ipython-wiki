@@ -25,12 +25,12 @@ Each IPEP should have a table/area at the top with the following information:
 # Index of IPEPs
 
 * [IPEP 1: Cleanup and extension of the Magic system in IPython]( https://github.com/ipython/ipython/issues/1611) -- *Done*
-* [IPEP 2: Input transformations](https://github.com/ipython/ipython/issues/2293)
-* [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook)
-* [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility)
-* [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization)
-* [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane)
-* [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook)
+* [IPEP 2: Input transformations](https://github.com/ipython/ipython/issues/2293) -- *Done*
+* [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook) -- *Planned for 3.0*
+* [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility) -- *Done*. Will drop support for 3.2?
+* [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization) -- *Planned for 2.0*
+* [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane) -- *Open*
+* [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook) -- Replaced by [[IPEP 18]]
 * [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]]
 * [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook)
 * [[IPEP 10: kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]]

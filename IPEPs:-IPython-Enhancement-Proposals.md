@@ -37,10 +37,10 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]] -- *A lot of work; planned for 3.0*
 * [[IPEP 12: Splitting KernelManager and KernelClient]] -- *???*
 * [[IPEP 13: Updating the Message Spec]] -- *Planned for 2.0*
-* [[IPEP 14: Notebook Regression Tests]] -- *???*
+* [[IPEP 14: Notebook Regression Tests]] -- *Planned for 2.0*
 * [[IPEP 15: Autosaving the IPython Notebook]] -- *Done*
-* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]]
-* [[IPEP 17: Notebook format 4]]
+* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Done; will be in 2.0*
+* [[IPEP 17: Notebook format 4]] -- 
 * [[IPEP 18: Text editor for the Notebook]]
 * [[IPEP 19: `concurrent.futures` (PEP 3148) for `IPython.parallel`]]
 * [[IPEP 20: Refactor magics into thin wrappers around Python libraries]]

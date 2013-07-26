@@ -32,7 +32,8 @@ Each IPEP should have a table/area at the top with the following information:
 * [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane) -- *Implemented?*
 * [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook) -- *Replaced by* [[IPEP 18]]
 * [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]] -- *Active*
-* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) -- Reveal and LiveNotebook are usable. *Implemented*
+* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) --
+*Implemented*
 * [[IPEP 10: Kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]] -- *Implemented*
 * [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]] -- *Deferred*
 * [[IPEP 12: Splitting KernelManager and KernelClient]] -- *Active*

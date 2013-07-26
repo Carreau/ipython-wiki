@@ -40,7 +40,7 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 14: Notebook Regression Tests]] -- *Planned for 2.0*
 * [[IPEP 15: Autosaving the IPython Notebook]] -- *Done*
 * [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Done; will be in 2.0*
-* [[IPEP 17: Notebook format 4]] -- 
-* [[IPEP 18: Text editor for the Notebook]]
+* [[IPEP 17: Notebook format 4]] -- *Planned for 3.0*
+* [[IPEP 18: Text editor for the Notebook]] -- *???*
 * [[IPEP 19: `concurrent.futures` (PEP 3148) for `IPython.parallel`]]
 * [[IPEP 20: Refactor magics into thin wrappers around Python API available from elsewhere]]

@@ -34,7 +34,7 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]] -- *Progress planned for 2.0*
 * [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) -- Reveal and LiveNotebook are usable. *Stable in 2.0*
 * [[IPEP 10: Kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]] -- *???*
-* [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]]
+* [[IPEP 11: Tab-completion system refactor|IPEP-11:-Tab-Completion-System-Refactor]] -- *A lot of work; planned for 3.0*
 * [[IPEP 12: Splitting KernelManager and KernelClient]]
 * [[IPEP 13: Updating the Message Spec]]
 * [[IPEP 14: Notebook Regression Tests]]

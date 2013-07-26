@@ -44,4 +44,3 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 17: Notebook format 4]] -- *Deferred*
 * [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Deferred*
-* [[IPEP 20: Refactor magics into thin wrappers around Python API available from elsewhere]] -- *Deferred*

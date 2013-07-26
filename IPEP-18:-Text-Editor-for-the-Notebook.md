@@ -2,7 +2,7 @@ The Notebook interface was never designed to function as a text editor. That sai
 
 The proposed solution is to allow the Notebook to open a text editor in a new tab.
 
-## A Rough Sketch
+## Rough sketch
 
 The user would have a magic, say 'edit', which would take a path to the file they wanted to hack on, so running `%edit script.py` would open the editor in a new tab, with `script.py` open. Each time the magic was called, a new instance of the editor would be created in a new browser tab.
 

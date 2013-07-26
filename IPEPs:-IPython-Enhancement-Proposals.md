@@ -31,15 +31,16 @@ Each IPEP should have a table/area at the top with the following information:
 * [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization) -- *Planned for 2.0*
 * [IPEP 6: Qt console - additional pane](https://github.com/ipython/ipython/wiki/IPEP-6:-Qt-console---additional-pane) -- *Open*
 * [IPEP 7: Subclients for the Notebook](https://github.com/ipython/ipython/wiki/IPEP-7:-Subclients-for-the-Notebook) -- Replaced by [[IPEP 18]]
-* [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]]
-* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook)
+* [[IPEP 8: Custom messages and message handlers|IPEP 8: Custom messages and message handlers]] -- *Progress planned for 2.0*
+* [IPEP 9: Slideshow from the notebook](https://github.com/ipython/ipython/wiki/IPEP-9:-Slideshow-from-the-notebook) -- *Reveal* and *LiveNotebook* are usable
 * [[IPEP 10: kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]]
 * [[IPEP 11: Tab Completion System Refactor|IPEP-11:-Tab-Completion-System-Refactor]]
 * [[IPEP 12: Splitting KernelManager and KernelClient]]
 * [[IPEP 13: Updating the Message Spec]]
 * [[IPEP 14: Notebook Regression Tests]]
 * [[IPEP 15: Autosaving the IPython Notebook]]
-* [[IPEP 16: Notebook multi directory dashboard and URL mapping]]
-* [[IPEP 17: Notebook Format 4]]
-* [[IPEP 18: Text Editor for the Notebook]]
-* [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]]
+* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]]
+* [[IPEP 17: Notebook format 4]]
+* [[IPEP 18: Text editor for the Notebook]]
+* [[IPEP 19: `concurrent.futures` (PEP 3148) for `IPython.parallel`]]
+* [[IPEP 20: Refactor magics into thin wrappers around Python libraries]]

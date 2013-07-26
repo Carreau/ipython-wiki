@@ -3,7 +3,7 @@
 Currently, there is no mechanism to determine the display capabilities of the kernel,
 and display formatters are all on by default in all circumstances.
 This has the undesirable effect of suggesting that library code
-check whether they are running in plain terminal IPython vs a Kernel
+check whether they are running in plain terminal IPython vs a kernel
 in order to make decisions about registering formatters.
 
 For example, sympy [checks](https://github.com/sympy/sympy/blob/sympy-0.7.2/sympy/interactive/printing.py#L232)

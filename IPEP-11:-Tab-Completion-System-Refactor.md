@@ -153,6 +153,19 @@ will need to be extended to return not just a list of matches, but a dict mappin
 
 Furthermore, the specification of the `complete_request` message type needs to change, in order to really maintain kernel and language agnosticism in the frontend. By providing `text` and `line` in addition to `block`, the current messaging spec requires frontends to split the cell on newlines and, problematically, to split the last line on a set of python delimiters, such that `text` is assigned to be the last element of the line after splitting on these delimiters. This is problematic because it leaks python semantics into the frontend. A native Ruby, R, or Matlab kernel might use different delimiters (e.g. the dollar sign in R), and it should not be the place of the frontend to perform preprocessing on the block of text which is actually language specific and really best left for the kernel.
 
+### Proposal :: Learn from history
+If there are several completion options, the ones presented first should be the "most common" ones, where "most common"
+refers to the current environment, e.g. the currently-open notebook. 
+For example, doing:
+    
+    from sympy import symbols
+    sy<TAB>
+
+gives first `symbol`, even if `sympy` has been used several times in the document but `symbol` has not.
+
+This could be determined just by counting the number of occurrences of each in the current notebook using a dictionary.
+
+
 ### Shim between old and new custom completer API
 There is currently code in the wild in external 3rd party libraries that relies on the "custom completer" API. Thus, a shim should be created that allows that code to interact with the new system with no change. The documentation on the "custom completer" API will be changed, however, to reflect the new API and the shim will not be advertised as the recommended way to interact with the tab completion system. Because the old API does not contain a "kind" field for each match, some default must be chosen (e.g. "match") or something.
 

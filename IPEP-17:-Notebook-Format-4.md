@@ -27,3 +27,10 @@ Following [IPEP 13](IPEP-13:-Updating-the-Message-Spec), Python-specific keys in
 
 - `pyout` will become `execute_output`
 - `pyerr` will become `error`
+
+## metadata changes
+
+- remote notebook name from metadata
+- move `language` key from code cells to top-level notebook metadata
+- add kernel info to top-level notebook metadata in some form
+

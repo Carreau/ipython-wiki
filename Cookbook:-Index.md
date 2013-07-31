@@ -22,3 +22,4 @@ Here is a list of our cookbook pages:
 * [Updating code for use with IPython 0.11 and later](./Cookbook:-Updating-code-for-use-with-IPython-0.11-and-later)
 * [Using IPython with Console2](./Cookbook:-Using-IPython-with-Console2)
 * [Using IPython with TextMate](./Cookbook:-Using-IPython-with-TextMate)
+* [Launching IPython on OSX](./Cookbook:-Launching-IPython-on-OSX)

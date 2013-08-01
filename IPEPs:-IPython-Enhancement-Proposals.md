@@ -25,7 +25,7 @@ Each IPEP should have a table/area at the top with the following information:
 # Index of IPEPs
 
 * [IPEP 1: Cleanup and extension of the Magic system in IPython](https://github.com/ipython/ipython/wiki/IPEP-1:-Cleanup-and-extension-of-the-Magic-system-in-IPython) -- *Implemented*
-* [IPEP 2: Input transformations](https://github.com/ipython/ipython/issues/2293) -- *Implemented*
+* [IPEP 2: Input transformations](https://github.com/ipython/ipython/wiki/IPEP-2:-Input-transformations) -- *Implemented*
 * [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook) -- *Deferred*
 * [IPEP 4: Python 3 Compatibility](https://github.com/ipython/ipython/wiki/IPEP-4:-Python-3-Compatibility) -- *Implemented*
 * [IPEP 5: Notebook JavaScript organization](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization) -- *Active*

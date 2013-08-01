@@ -19,6 +19,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
 
+* [An overview of Linear Regression](http://nbviewer.ipython.org/urls/raw.github.com/nborwankar/LearnDataScience/master/notebooks/A1.%20Linear%20Regression%20-%20Overview.ipynb), part of an entire [self-directed course in data science](http://nborwankar.github.io/LearnDataScience) by [Nitin Borwankar](https://github.com/nborwankar).
+
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
 * [Introduction to Python Data Structures](http://nbviewer.ipython.org/urls/github.com/profjsb/python-bootcamp/raw/master/DataFiles_and_Notebooks/02_AdvancedDataStructures/data_structures.ipynb), part of the [UC Berkeley Scientific Python Bootcamp](https://sites.google.com/site/pythonbootcamp), led by Josh Bloom ([repo](https://github.com/profjsb/python-bootcamp)).
@@ -39,7 +41,7 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
 
-* [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembeled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
+* [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
 
 ## Scientific computing and data analysis with the SciPy Stack
 

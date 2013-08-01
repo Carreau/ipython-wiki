@@ -1,8 +1,8 @@
 <table>
 <tr><td> Status </td><td> Implemented </td></tr>
 <tr><td> Author </td><td> Fernando Perez &lt;fernando.perez@berkeley.edu &gt;</td></tr>
-<tr><td> Created </td><td> year ago </td></tr>
-<tr><td> Updated </td><td> year ago </td></tr>
+<tr><td> Created </td><td> October 8th, 2011 </td></tr>
+<tr><td> Updated </td><td> August 1st, 2013 </td></tr>
 <tr><td> Discussion </td><td> <a href='https://gist.github.com/fperez/2396341'>here</a> </td></tr>
 <tr><td> Implementation </td><td> PR <a href='https://github.com/ipython/ipython/pull/1732'>#1732</a> </td></tr>
 </table>

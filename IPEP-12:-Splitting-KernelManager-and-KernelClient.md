@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Author </td><td> @minrk &lt;benjaminrk@gmail.com&gt;</td></tr>
+<tr><td> Created </td><td> March 2013</td></tr>
+<tr><td> Updated </td><td> March 2013</td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 The KernelManager is really in charge of two separate tasks,
 and should be two separate classes.
 First, the KernelManager is the object in charge of creating and monitoring

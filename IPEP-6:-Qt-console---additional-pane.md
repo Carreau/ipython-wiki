@@ -1,4 +1,12 @@
-  
+<table>
+<tr><td> Status </td><td> Deferred </td></tr>
+<tr><td> Author </td><td> @klonuo </td></tr>
+<tr><td> Created </td><td> November 2012 </td></tr>
+<tr><td> Updated </td><td> November 2012 </td></tr>
+<tr><td> Discussion </td><td>  </td></tr>
+<tr><td> Implementation </td><td>  </td></tr>
+</table>
+
 ### Introduction
 
 Further extending IPython Qt Console, beyond Qt wrapper to traditional console, we invite you to discuss the idea of enhancing it with additional side pane.

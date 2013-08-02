@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Implemented </td></tr>
+<tr><td> Author </td><td> @minrk, &lt;benjaminrk@gmail.com&gt; </td></tr>
+<tr><td> Created </td><td> April 2013</td></tr>
+<tr><td> Updated </td><td> April 2013</td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 ## The issue
 
 Currently, there is no mechanism to determine the display capabilities of the kernel,

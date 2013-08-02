@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Deferred </td></tr>
+<tr><td> Author </td><td> @rmcgibbo </td></tr>
+<tr><td> Created </td><td> March 2013</td></tr>
+<tr><td> Updated </td><td> March 2013</td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 ### Abstract
 The IPython tab completion machinery is messy, complicated, and difficult to extend. The IPython pull request [2701](https://github.com/ipython/ipython/pull/2701), for instance, envisioned a feature -- tab completion based on function-specific annotations -- which, because of the current sub-optimal completion API, required a quite a bit of hacking into the core completer logic to execute. This proposal envisions a refactoring of the IPython tab completion machinery -- largely `IPython/core/completer.py`, `IPython/core/completerlib.py`, and a little bit of `IPython/core/interactiveshell.py` -- in a way that simplifies and unifies the codebase while providing a powerful and flexible public-facing API, enabling its extensibility in 3rd party projects.
 

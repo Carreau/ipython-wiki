@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Deferred </td></tr>
+<tr><td> Author </td><td> </td></tr>
+<tr><td> Created </td><td> June 2012</td></tr>
+<tr><td> Updated </td><td> June 2012 </td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 # Overview
 
 The IPython Notebook is currently a single user web application.  We are planning to add multiuser capabilities to the Notebook and the purpose of this IPEP is to work out the design.

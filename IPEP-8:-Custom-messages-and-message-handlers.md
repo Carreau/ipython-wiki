@@ -1,5 +1,14 @@
 # DRAFT
 
+<table>
+<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Author </td><td> @jasongrout </td></tr>
+<tr><td> Created </td><td> December 2012 </td></tr>
+<tr><td> Updated </td><td> December 2012 </td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td>  </td></tr>
+</table>
+
 # Introduction
 
 The IPython spec allows for a very restricted set of messages, and particularly one for executing a string of code.  This requires that for any communication to change the state of the user namespace on the server, or to perform a computation and receive output, the client must form a valid python string of code.  This is error-prone and ignores the richer facilities we have for passing data back and forth between the client and the server.

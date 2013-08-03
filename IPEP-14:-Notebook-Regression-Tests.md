@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Author </td><td> @dwyde</td></tr>
+<tr><td> Created </td><td> April 2013</td></tr>
+<tr><td> Updated </td><td> April 2013</td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 # Introduction
 
 The HTML notebook currently lacks unit or integration tests. Regression tests would help with potential [refactoring](https://github.com/ipython/ipython/wiki/IPEP-5:-Notebook-JavaScript-organization), and are generally good to have.

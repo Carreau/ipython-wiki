@@ -1,3 +1,12 @@
+<table>
+<tr><td> Status </td><td> Deferred </td></tr>
+<tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
+<tr><td> Created </td><td> July 2013</td></tr>
+<tr><td> Updated </td><td> July 2013</td></tr>
+<tr><td> Discussion </td><td> </td></tr>
+<tr><td> Implementation </td><td> </td></tr>
+</table>
+
 The Notebook interface was never designed to function as a text editor. That said, Notebook users do need to edit text files, and will often try to subvert the interface to do so.
 
 The proposed solution is to allow the Notebook to open a text editor in a new tab.

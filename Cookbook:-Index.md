@@ -23,4 +23,4 @@ Here is a list of our cookbook pages:
 * [Using IPython with Console2](./Cookbook:-Using-IPython-with-Console2)
 * [Using IPython with TextMate](./Cookbook:-Using-IPython-with-TextMate)
 * [Launching IPython on OSX](./Cookbook:-Launching-IPython-on-OSX)
-* [Deploying IPython Notebook to a server](./Cookbook:-Deploying-IPython)
+* [Deploying IPython Notebooks + Clusters](./Cookbook:-Deploying-IPython)

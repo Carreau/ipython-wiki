@@ -1,6 +1,6 @@
 ## Deploying IPython notebook
 
-[Chef Cookbook for the IPython Notebook](https://github.com/rgbkrk/ipynb-cookbook)
+[Chef Cookbook for the IPython Notebook](https://github.com/rgbkrk/ipynb-cookbook) - also has simple setup on Vagrant to deploy an IPython notebook via Vagrant.
 
 ## IPython Notebook storage on Cloud Object Storage
 

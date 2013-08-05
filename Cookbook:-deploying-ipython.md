@@ -1,6 +1,6 @@
 ## Deploying IPython notebook
 
-[Chef Cookbook for IPython Notebook](https://github.com/rgbkrk/ipynb-cookbook)
+[Chef Cookbook for the IPython Notebook](https://github.com/rgbkrk/ipynb-cookbook)
 
 ## IPCluster
 

@@ -23,7 +23,7 @@ Each IPEP should have a table/area at the top with the following information:
 </table>
 
 # Index of IPEPs
-
+* [IPEP 0: IPEP Template](https://github.com/ipython/ipython/wiki/IPEP-0:-IPEP-Template)
 * [IPEP 1: Cleanup and extension of the Magic system in IPython](https://github.com/ipython/ipython/wiki/IPEP-1:-Cleanup-and-extension-of-the-Magic-system-in-IPython) -- *Implemented*
 * [IPEP 2: Input transformations](https://github.com/ipython/ipython/wiki/IPEP-2:-Input-transformations) -- *Implemented*
 * [IPEP 3: Multiuser support in the notebook](https://github.com/ipython/ipython/wiki/IPEP-3:-Multiuser-support-in-the-notebook) -- *Deferred*
@@ -44,3 +44,4 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 17: Notebook format 4]] -- *Deferred*
 * [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Deferred*
+* [[IPEP 20: Unformal structure Of Metadata 1|IPEP-20:-Unformal-structure-Of-Metadata-1]] -- *Implemented*

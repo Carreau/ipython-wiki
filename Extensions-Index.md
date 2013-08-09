@@ -139,7 +139,7 @@ Reset namespace and automatically (re)load several modules immediately thereafte
 To install:
 
 ```text
-    %install_ext https://gist.github.com/lebedov/5806583/raw/13f04b3fb1b7d3963a6ab05aa244d82931914391/duster.py
+    %install_ext https://gist.github.com/lebedov/5806583/raw/9839c148c563d2d24790c09204a3d6ea8a07c57f/duster.py
 ```
 
 ## inumpy

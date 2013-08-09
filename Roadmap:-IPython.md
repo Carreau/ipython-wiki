@@ -5,7 +5,7 @@ everything at once.
 
 To provide direction and focus to the project, the core IPython developers have started to meet
 every six months, mostly in person, at UC Berkeley. These meetings are being funded through the
-Sloan Foundation. Along with these meetings, we plan to have a major release every six months (July / December).  The meetings will happen right after each release, to provide focus and direction
+Sloan Foundation. Along with these meetings, we plan to have a major release every six months (roughly July / December).  The meetings will happen around each release, to provide focus and direction
 for the next six months of work. Our first meeting was in January 2013, to plan for the 
 1.0 release in July and this document is a direct result of that meeting. Each meeting will
 result in this document being updated with a roadmap for each release.
@@ -117,7 +117,7 @@ Development focus for IPython 1.0:
   - The notebook currently fills the width of the screen
   - [PR #3393](https://github.com/ipython/ipython/pull/3393)
 
-## Release 2.0, December 25, 2013
+## Release 2.0, Winter, 2013/14
 
 Development focus for IPython 2.0:
 
@@ -162,7 +162,7 @@ browser is to use our message channels.  Currently these channels are not suffic
 - Because of security issues are are moving away from the notebook being able to execute dynamically generated JavaScript code.  This removal will actually happen in the 1.0 release (see above), but the full replacement with a JavaScript plugin system won't happen until 2.0.
 - Because of these changes developers who are writing JavaScript widgets that work with the current IPython should expect to rewrite them for the 2.0 release.
 
-## Release 3.0, July 15, 2014
+## Release 3.0, Summer, 2014
 
 Development focus for IPython 3.0:
 
@@ -174,7 +174,7 @@ Development focus for IPython 3.0:
     with the full rights, access, and privileges of those users on the system.
 
 
-## Release 4.0, December 25, 2014
+## Release 4.0, Winter, 2014
 
 This marks the end of the Sloan Foundation funding, by which point we should have a
 solid multi-user IPython Notebook server with interactive widgets, and powerful utilities

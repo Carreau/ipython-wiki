@@ -42,7 +42,7 @@ for all users of your system (be it a local shared machine, EC2 image, etc.). Th
 server will be focus on the usage case of small-medium sized groups of trusted users. It will not
 have features that allow it to scale to large numbers of users on the open internet.
 
-## Release 1.0, July 15, 2013
+## Release 1.0, August 8, 2013
 
 Development focus for IPython 1.0:
 

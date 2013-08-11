@@ -15,7 +15,7 @@ and their structure.
 # Metadata are optional
 
 Unlike the rest of the fields of the `.ipynb` format, which should be strictly
-defined, metadata can support an arbitrary JSON structure. Hence, it is difficult
+defined, metadata can support arbitrary JSON structures. Hence, it is difficult
 for third-party plugins to know what they can write/read and what the
 expected structure of data is that they are supposed to handle.
 

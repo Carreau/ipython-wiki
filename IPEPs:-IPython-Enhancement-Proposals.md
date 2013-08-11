@@ -44,4 +44,4 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 17: Notebook format 4]] -- *Deferred*
 * [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Deferred*
-* [[IPEP 20: Unformal structure Of Metadata 1|IPEP-20:-Unformal-structure-Of-Metadata-1]] -- *Active*
+* [[IPEP 20: Informal structure of cell metadata|IPEP-20:-Informal-structure-of-metadata]] -- *Active*

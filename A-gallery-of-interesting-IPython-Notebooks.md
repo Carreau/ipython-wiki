@@ -150,6 +150,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Kaggle Competition: Titanic Machine Learning from Disaster](http://nbviewer.ipython.org/urls/raw.github.com/agconti/kaggle-titanic/master/Titanic.ipynb). By [Andrew Conti](https://github.com/agconti).
 
+* [How clean are San Francisco's restaurants?](http://nbviewer.ipython.org/urls/raw.github.com/Jay-Oh-eN/happy-healthy-hungry/master/h3.ipynb), a data science tutorial that accompanies a [blog post](http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection) from [Zipfian Academy](http://zipfianacademy.com/).
+
 ### Natural Language Processing
 
 * [Python Programming for the Humanities](http://fbkarsdorp.github.io/python-course/) by Folgert Karsdorp & Maarten van Gompel.

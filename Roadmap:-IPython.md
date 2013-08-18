@@ -152,6 +152,156 @@ Development focus for IPython 2.0:
     which have still received no support in the HTML UI,
     despite being in the document format since the beginning.
 
+### JS widget/plugins
+- (E,0) Implement prototype of message spec (Min)
+  - Decide on the proper naming of things
+  - update state, create widget, destroy widget
+  - With toy examples
+- (M,0) Implement high-level Python UI (Paul, Matthias, Brian)
+  - `interact` and `interactive`
+  - Python classes for UI controls
+- (M,0) Basic UI controls in JS (slider, checkbox, textarea, dropdown, button, radio) (Jon, Matthias, Brian)
+- (M,1) Installation: find a consistent place for people to put JavaScript code (.ipython/static) (Min)
+- (M,1) Figure out how to get JavaScript code on the page for widgets (Min)
+- (M,1) Design API for widgets that use JSON embedded in Notebook without a running kernel. This will help us solve the persistence problem (Jon)
+
+### Security
+- (H,0) Sanitize Markdown cells always (Brian)
+- (H,0) Sanitize all output on page load (Brian)
+- (H,3) Think about removing the ability to execute dynamically generated JavaScript code?
+
+### Core
+- (E,0) Drop 2.6 support (Thomas)
+- (E,0) Drop 3.2 support (Thomas)
+- (M,1) Remove language magics from ipython/ipython (Min)
+- (E,2) Removal of unused code (Thomas)
+- (M,2) Represent exception with JSON, working with Julia devs and message spec (Fernando)
+- (M,2) config: append/extend/update (Min)
+- (M,2) Get rid of aliases (Fernando, Thomas)
+- (H,2) get rid of 2to3 (Thomas)
+- (M,3) Remove all hardcoding ANSI coloring and replace with semantic markup that is interpreted by frontends (Carlos)
+
+### Testing
+- (M,0) Add tests for notebook web services (Zach, Min)
+- (M,0) Add Phantom/Casper based Notebook tests (Paul, Brian)
+- (M,0) JavaScript unit tests (Paul, Brian)
+  - Coverage reports
+- (M,1) Integrating coverage reports into iptest (Thomas)
+  - Integrated coverage report of the entire test suite, not just the components
+- (M,1) Coverage into Travis for PRs (Thomas)
+- (M,2) Refactor/cleanup iptest (Jon vs Thomas vs Paul)
+  - Turn iptest into subcommand
+- (M,2) Validate notebooks to make sure they adhere to our JSON spec (Matthias)
+- (M,2) Improve testing of message spec (Min)
+  - clients
+  - kernels
+    - wrapper script to use the test suite as an instrumented probe against a kernel. Can be subcommand
+  - zmq man-in-the-middle validator for messaging traffic.
+
+### Docs
+- (M,1) Build conceptual framework for documentation (Brian, David S.)
+  - Outline the overall structure
+  - Identify Notebooks that are the leaves of the tree/outline
+  - Develop spec for each Notebook
+- (E,2) Change filename extension from `.txt` to `.rst` (Paul)
+- (M,2) How do we document our JavaScript code? (Brian)
+- (HHH,2) Write Notebook based documentation as Notebooks in IPython source tree
+- (E,3) Defining vocabulary
+  - Server, Web application, Document
+  - "Notebook" versus "notebook"?
+  - What do we call the "interactive computing protocol", "interactive computing kernel", etc
+- (H,3) Provide search and indexing for our Notebook documentation. As an MVP just export to Sphinx and allow searching through that
+- (H,3) Expose our documentation as directories in Notebook Dashboard
+- (H,3) Develop semantics for copy on write saving of documentation Notebooks
+- What will be do about API documentation and how will we integrate that into our Notebook document
+
+### Message Spec
+- (E,1) Rename `pyout` and `pyin` (Min)
+- (E,1) Remove `user_variables` from the `execute_request` message?  Make sure `user_expressions` returns a dict.  We currently have no policy for error handling of these requests. (Min)
+- (M,1) Review the message spec in light of the Julia kernel work
+  - The `complete_request` message could likely be simplified (ex, does it need the `text` key?) (Min)
+- (E,2) Consistently represent empty fields in the message spec, especially docstrings (Min)
+- (E,2)  In Python code the JSON repr should be a dict, not a string.  In the message spec, JSON reprs should be live JSON objects, not JSON strings. (Jess, Zach)
+
+### nbconvert
+- (E,0) Communicate to everyone that nbconvert is completely unstable, especially at the API level (Jon)
+- (E,2) Work with Dexy to improve the integration with nbconvert (Paul)
+  - Making sure our utilities for formatting are available in dexy
+  - Converting input/ouput to HTML/LaTeX in the IPython style
+- (M,2) Develop web service API for nbconvert (Jon, Matthias, Zach)
+- (M,3) Expose nbconvert UI in Notebook that uses the nbconvert web service
+- (M,3) Move .py export to nbconvert and remove `--script`
+
+### nbviewer
+- (E,0) Rewrite using tornado to improve performance (Min)
+  - Our current bottleneck is waiting for GitHub API requests for Notebook contents
+- (E,0) Rewrite to use the latest nbconvert and nbformat (Jon)
+- (E,2) Add support for CSS metadata to nbviewer (Matthias)
+- (H,2) Add reveal.js slideshow mode to nbviewer (Damian)
+- (H,3) Allow Notebooks to be downloaded in other formats 
+- (H,3) Create nbconvert as a JSON based web service
+  - Ex: post a .ipynb, get a page back
+- (H,3) Change hosting to Rackspace
+  - in a PersonalCloud VM easy to deploy ?
+
+### nbformat
+- (E,0) Document how we write the JSON data structure on-disk, including our homebrew "multiline strings in JSON" which we store as a list of strings (Min)
+- (E,1) Encode language/kernel information in main notebook metadata (Jess, Matthias)
+  - Remove language from cell-level metadata
+- (E,1) Remove name from metadata (Jess, Matthias)
+- (E,1) Removal of worksheets (Jess, Matthias)
+  - We have a model in mind for hierarchical (including tabbed) views of a single notebook based on Sections, denoted by Header cells. This will be much more flexible than hard-coded worksheets, which have still received no support in the HTML UI, despite being in the document format since the beginning.
+- (H,1) Version conversions done right (Jon, Matthias)
+- Arbitrary mimetypes in output:
+  - (E,1) Having notebook output cells reflect raw mimetype info from kernels (Min)
+  - (M,2) In python api, we have mimetype formatters: better expose an api for python objects to publish arbitrary mimetypes (Min)
+- Notebok validation: 
+  - (H,2) propagation of error info (Jon, Jess, Matthias)
+  - (H,3) the ability to get a notebook that is at least valid JSON as an object.
+- (E,3) Think about changing the file extension from `.ipynb` to something else.  We like the name `.inb`.
+
+### Notebook
+- (E,0) Standardize on cell level metadata: name, tags. Document this. (Paul, Matthias)
+- (H,0) Dual mode UX (Brian)
+- Multi-directory support
+  - (M,0) Review Zach's PR (Thomas, Brian)
+  - (M,0) Add navigation UI (Zach, Matthias)
+- UI to edit Notebook metadata
+  - (E,2) MVP: raw edit mode with check for valid JSON (Matthias)
+- CSS
+  - (E,2) Create Notebook level CSS metadata that points to the URL of CSS files to load (Jon, Matthias)
+  - (E,2) Create UI to refresh the notebook style (Jon, Matthias)
+  - (H,2) Clean up our CSS classes. Use names like `ipy-cell-input`. This should be done to create a "public" API for styling notebooks (Jon)
+- (M,2) Notebook config (Jon)
+  - Represent settings in a JSON data structure, maybe in a cookie
+  - Write UI code to r/w the settings
+- (H,2) Design and typography (Brian, Zach, Jess, David S.)
+  - Reduce vertical size of dashboard item
+  - Reduce vertical size of heading cells
+  - Think about increasing font size of Markdown cells
+  - Think about pager layout and side panels
+  - (side note: http://www.amazon.com/Design-Hackers-Reverse-Engineering-Beauty/dp/1119998956/ )
+- (E,3) Make notebooks importable
+- Multi-kernel support
+  - (E,3) Add kernel selection to /api/kernels web service
+  - (E,3) Add kernel selecction logic to MultiKernelManager
+  - (M,3) Ability to select the kernel type of a new or existing notebook
+  - (M,3) Ability to change the kernel type of a running notebook
+- (M,3) Notebook should highlight code cells accordiing to the kernel language
+- (M,3) Command line entry point: `ipython notebook mynotebook.ipynb` that links to existing server if available, otherwise starts a new one.
+- (H,3) Think more about Notebooks connecting to existing, active, kernels
+- (H,3) Finish IPEP 12
+- (H,3) Literate programming as kernel variables in Markdown cells
+  - Better pipeline for adding hooks to Markdown rendering
+  - What syntax do we use?
+
+### Parallel
+- (E,2) python -m (Min)
+- (M,2) Application refactoring (Min)
+- (M,3) Futures
+- (H,3) Add node-to-node communicators and channels
+- (H,3) Distributed objects
+
 
 While we haven't really begun this work, there are some things we are thinking about that will affect users of the Notebook, in particular people who are already developing JavaScript widgets for the Notebook.
 

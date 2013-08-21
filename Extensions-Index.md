@@ -136,7 +136,7 @@ Reset namespace and automatically (re)load several modules immediately thereafte
 
 [Homepage](https://github.com/lebedov/duster)
 
-To install (from the command line:
+To install (from the command line):
 
 ```text
     pip install duster

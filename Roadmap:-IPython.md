@@ -173,7 +173,7 @@ Development focus for IPython 2.0:
 ### Core
 - (E,0) Drop 2.6 support (Thomas)
 - (E,0) Drop 3.2 support (Thomas)
-- (M,1) Remove language magics from ipython/ipython (Min)
+- (M,1) Remove language magics from ipython/ipython (Paul)
 - (E,2) Removal of unused code (Thomas)
 - (M,2) Represent exception with JSON, working with Julia devs and message spec (Fernando)
 - (M,2) config: append/extend/update (Min)

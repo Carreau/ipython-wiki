@@ -8,9 +8,7 @@ If you are interested in learning more about IPython in general, meeting the tea
 
 The meeting will be held in [5101 Tolman Hall](http://www.berkeley.edu/map/maps/AB23.html) ([Google Maps](http://goo.gl/maps/crBRT)), and we will start every day at 10am, working til we drop.
 
-We have a hackpad for the meeting notes:
-
-https://hackpad.com/Summer-2013-Development-Meeting-D1UR23usGnA
+We have a [hackpad](https://hackpad.com/Summer-2013-Development-Meeting-D1UR23usGnA) for the meeting notes.
 
 # Topics to be covered
 

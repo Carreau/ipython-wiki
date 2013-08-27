@@ -13,7 +13,7 @@ This is a proposal for simple autosave in the IPython Notebook.
 There are two basic notions of autosave:
 
 1. old desktop-style: autosave only creates backups, user action is the only way to create a 'real' save, but can restore from autosave if newer than last 'real' save (emacs, MS Word, etc.).
-2. modern / webapp-style: autosave is *real* save, but user may explicitly save a checkpoint or version, which will can be restored later (All webapps, really, OS X Versions, etc.).
+2. modern / webapp-style: autosave is *real* save, but user may explicitly save a checkpoint or version, which can be restored later (All webapps, really, OS X Versions, etc.).
 
 This proposal is an implementation of the latter style,
 which is more appropriate for a (sometimes) webapp like the notebook.

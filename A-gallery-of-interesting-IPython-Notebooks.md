@@ -19,7 +19,9 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
 
-* [An overview of Linear Regression](http://nbviewer.ipython.org/urls/raw.github.com/nborwankar/LearnDataScience/master/notebooks/A1.%20Linear%20Regression%20-%20Overview.ipynb), part of an entire [self-directed course in data science](http://nborwankar.github.io/LearnDataScience) by [Nitin Borwankar](https://github.com/nborwankar).
+* [Learn Data Science](http://learnds.com), an entire self-directed course by [Nitin Borwankar](https://github.com/nborwankar).
+
+* [Python for Developers](http://ricardoduarte.github.io/python-for-developers), a complete book on Python programming by [Ricardo Duarte](https://github.com/ricardoduarte). Note the book also exists [in Portuguese](http://ricardoduarte.github.io/python-para-desenvolvedores).
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
@@ -96,6 +98,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Function minimization with iminuit](http://nbviewer.ipython.org/urls/raw.github.com/iminuit/iminuit/master/tutorial/tutorial.ipynb), an introductory companion to their [hard core tutorial](http://nbviewer.ipython.org/urls/raw.github.com/iminuit/iminuit/master/tutorial/hard-core-tutorial.ipynb). By the [iminuit project](http://iminuit.github.io/iminuit).
 
+* [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle/raw/d046b2bcf473503fa356094cfe4cff774d1aaefc/270D.ipynb), by [Greg Surges](http://gregsurges.com).
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
@@ -145,6 +149,8 @@ Note that in the 'collections' section above there are also pandas-related links
 * [Exploring graph properties of the Twitter stream with twython and NetworkX](http://nbviewer.ipython.org/5681541/TwitterGraphs.ipynb), by [F. Perez](http://fperez.org) (complete [gist repo with utilities here](https://gist.github.com/fperez/5681541).)
 
 * [Kaggle Competition: Titanic Machine Learning from Disaster](http://nbviewer.ipython.org/urls/raw.github.com/agconti/kaggle-titanic/master/Titanic.ipynb). By [Andrew Conti](https://github.com/agconti).
+
+* [How clean are San Francisco's restaurants?](http://nbviewer.ipython.org/urls/raw.github.com/Jay-Oh-eN/happy-healthy-hungry/master/h3.ipynb), a data science tutorial that accompanies a [blog post](http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection) from [Zipfian Academy](http://zipfianacademy.com/).
 
 ### Natural Language Processing
 

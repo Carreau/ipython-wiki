@@ -45,6 +45,9 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
 
+* [Sound Analysis with the Fourier Transform](https://github.com/calebmadrigal/FourierTalkOSCON).
+A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to explain what the Fourier Transform is and how to use it for basic audio processing applications.
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing

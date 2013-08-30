@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 29, 2013</td></tr>
-<tr><td> Updated </td><td> May 14, 2013</td></tr>
+<tr><td> Updated </td><td> August 30, 2013</td></tr>
 </table>
 
 There are a few changes we need to make to the notebook that will not be backward compatible.

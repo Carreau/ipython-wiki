@@ -283,6 +283,7 @@ To install:
     %install_ext https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering
 
 To use:
+
     %load_ext secnum
     %secnum
 

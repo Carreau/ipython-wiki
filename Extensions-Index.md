@@ -273,7 +273,7 @@ The `%version_information` magic extension displays a table with version informa
 
 Provides automatic section numbering for IPython notebooks
 
-<https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering>
+[Homepage](https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering)
 
 To install:
 

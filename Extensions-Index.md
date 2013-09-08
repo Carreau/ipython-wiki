@@ -271,15 +271,20 @@ The `%version_information` magic extension displays a table with version informa
 
 ## Section numbering: `%secnum`
 
-Provides automatic section numbering for IPython notebooks
+Provides automatic section numbering for IPython notebooks.
+
+Currently, level-1 headings are labelled like "1. First" and level-2 headings "1.1. Second".
+The section numbers are automatically updated every time any cell changes type (e.g. from a Markdown cell to a heading cell).
 
 [Homepage](https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering)
 
 To install:
 
-    %install_ext https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering```
+    %install_ext https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering
 
-Currently, level-1 headings are labelled like "1. First" and level-2 headings "1.1. Second".
-The section numbers are automatically updated every time any cell changes type (e.g. from a Markdown cell to a heading cell).
+To use:
+    %load_ext secnum
+    %secnum
 
+(Updates are automatic; `%secnum` only needs to be run once per session.)
 

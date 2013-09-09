@@ -1,5 +1,17 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## ferret
+
+ferret, the Data Visualisation and Analysis software from NOAA/PMEL, can now be integrated into notebooks using the `ipython-ferretmagic extension`. Install instructions and examples are included in notebooks on the GitHub page.
+
+[Homepage](https://github.com/PBrockmann/ipython-ferretmagic)
+
+To install:
+
+```text
+%install_ext https://raw.github.com/PBrockmann/ipython-ferretmagic/master/ferretmagic.py
+```
+
 ## ipyBibtex
 
 With this extension you can use LATEX style references within IPython (Notebook) while still using markdown for formatting.

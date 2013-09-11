@@ -42,3 +42,39 @@ There is no reason for the two cell types to have a different name for their con
 - add kernel info to top-level notebook metadata in some form
 - add `format` key to raw_cell metadata
 
+# Implementation and Coordination
+
+Tasks involved in creating nbformat v4:
+
+- thoroughly define the v4 spec
+- update message spec keys (pyout, pyerr, etc.)
+- mime-type keys for output (affects nbconvert, nbformat, javascript)
+- remove worksheets, move cells to top-level list
+- add conversions to nbformat: v3->v2, v4->v3, v3->v4
+- metadata changes
+- widget-related changes (TBD)
+- we will need v4->v4 to track changes to v4 during development. If so, this should probably not be included in release, right?
+
+I think this is the logical order of these tasks:
+
+1. Define v4 in a doc (not just changes, full spec - v3 was never fully defined)
+2. add downgrade API to nbformat (or nbconvert, unclear which), and implement v3->v2
+3. copy v3 to v4, adding empty v4->v3 and v3->v4, removing the py/json distinction (nbconvert is responsible for .py now)
+4. remove worksheet in v4
+5. update msg spec keys that are reflected in notebook
+6. use mime-type output keys
+7. update various metadata keys (this mainly affects javascript code)
+
+v2<->v3 conversion APIs can be done while v4 is being defined, but no part of v4 should be implemented until the spec is documented.
+Incremental implementations of v4 features, starting with 4. can be implemented in discrete PRs,
+probably on a v4 feature branch. Their order relative to each other isn't critically important.
+
+Each time a change is made to the in-development v4 spec:
+
+- update spec doc
+- update nbformat.v4
+- update v4->v3 and v3->v4
+- update v4->v4?
+- update javascript, if affected
+- update nbconvert, if affected
+- **TEST EVERY NEW CHANGE**

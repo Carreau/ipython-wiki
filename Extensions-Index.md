@@ -1,5 +1,17 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## ferret
+
+ferret, the Data Visualisation and Analysis software from NOAA/PMEL, can now be integrated into notebooks using the `ipython-ferretmagic extension`. Install instructions and examples are included in notebooks on the GitHub page.
+
+[Homepage](https://github.com/PBrockmann/ipython-ferretmagic)
+
+To install:
+
+```text
+%install_ext https://raw.github.com/PBrockmann/ipython-ferretmagic/master/ferretmagic.py
+```
+
 ## ipyBibtex
 
 With this extension you can use LATEX style references within IPython (Notebook) while still using markdown for formatting.
@@ -134,12 +146,12 @@ The [Unum class](https://bitbucket.org/kiv/unum/src>) is supported for unit-awar
 
 Reset namespace and automatically (re)load several modules immediately thereafter.
 
-[Homepage](https://gist.github.com/lebedov/5806583)
+[Homepage](https://github.com/lebedov/duster)
 
-To install:
+To install (from the command line):
 
 ```text
-    %install_ext https://gist.github.com/lebedov/5806583/raw/13f04b3fb1b7d3963a6ab05aa244d82931914391/duster_ext.py
+    pip install duster
 ```
 
 ## inumpy
@@ -269,4 +281,23 @@ The `%version_information` magic extension displays a table with version informa
 
 [Example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/version_information/master/example.ipynb)
 
+## Section numbering: `%secnum`
+
+Provides automatic section numbering for IPython notebooks.
+
+Currently, level-1 headings are labelled like "1. First" and level-2 headings "1.1. Second".
+The section numbers are automatically updated every time any cell changes type (e.g. from a Markdown cell to a heading cell).
+
+[Homepage](https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering)
+
+To install:
+
+    %install_ext https://github.com/dpsanders/ipython_extensions/tree/master/section_numbering
+
+To use:
+
+    %load_ext secnum
+    %secnum
+
+(Updates are automatic; `%secnum` only needs to be run once per session.)
 

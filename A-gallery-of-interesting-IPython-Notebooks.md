@@ -19,7 +19,9 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
 
-* [An overview of Linear Regression](http://nbviewer.ipython.org/urls/raw.github.com/nborwankar/LearnDataScience/master/notebooks/A1.%20Linear%20Regression%20-%20Overview.ipynb), part of an entire [self-directed course in data science](http://nborwankar.github.io/LearnDataScience) by [Nitin Borwankar](https://github.com/nborwankar).
+* [Learn Data Science](http://learnds.com), an entire self-directed course by [Nitin Borwankar](https://github.com/nborwankar).
+
+* [Python for Developers](http://ricardoduarte.github.io/python-for-developers), a complete book on Python programming by [Ricardo Duarte](https://github.com/ricardoduarte). Note the book also exists [in Portuguese](http://ricardoduarte.github.io/python-para-desenvolvedores).
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
@@ -42,6 +44,9 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 * [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
 
 * [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
+
+* [Sound Analysis with the Fourier Transform](https://github.com/calebmadrigal/FourierTalkOSCON).
+A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to explain what the Fourier Transform is and how to use it for basic audio processing applications.
 
 ## Scientific computing and data analysis with the SciPy Stack
 
@@ -147,6 +152,8 @@ Note that in the 'collections' section above there are also pandas-related links
 * [Exploring graph properties of the Twitter stream with twython and NetworkX](http://nbviewer.ipython.org/5681541/TwitterGraphs.ipynb), by [F. Perez](http://fperez.org) (complete [gist repo with utilities here](https://gist.github.com/fperez/5681541).)
 
 * [Kaggle Competition: Titanic Machine Learning from Disaster](http://nbviewer.ipython.org/urls/raw.github.com/agconti/kaggle-titanic/master/Titanic.ipynb). By [Andrew Conti](https://github.com/agconti).
+
+* [How clean are San Francisco's restaurants?](http://nbviewer.ipython.org/urls/raw.github.com/Jay-Oh-eN/happy-healthy-hungry/master/h3.ipynb), a data science tutorial that accompanies a [blog post](http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection) from [Zipfian Academy](http://zipfianacademy.com/).
 
 ### Natural Language Processing
 

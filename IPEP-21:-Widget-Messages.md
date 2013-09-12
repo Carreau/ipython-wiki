@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> September 11, 2013</td></tr>
-<tr><td> Updated </td><td> September 11, 2013</td></tr>
+<tr><td> Updated </td><td> September 12, 2013</td></tr>
 </table>
 
 Adding communication for use in interactive widgets.

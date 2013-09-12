@@ -22,8 +22,6 @@ Before this new dashboard can be implemented, the URL mapping of IPython noteboo
 
 This proposal outlines the URL mapping scheme for this new multi-directory dashboard. It will follow Github's style, where a standard JSON model is created for each HTTP request and sent between the server and client. Each request will follow a RESTful design and offer an easy, practical URL path navigation. This does not change anything drastically for the user experience; it simply takes it a step further to provide access to subdirectories in the dashboard and uses less bandwidth with each HTTP request. Therefore, you will see similar design in the IPython Development wiki pages. 
 
-Foreshadowing the future implementation of a *projects page* (see "Things to Consider"), this proposes to restructure the web-services side of the notebook to be contained in an API. The new URL scheme will reflect this by including ```/api``` as the top-level URL. 
-
 The chart below shows the new proposed URL scheme for web-services in the notebook, where "foo/bar" is a path to a subdirectory: 
 
 | HTTP verb | New URL | Action |

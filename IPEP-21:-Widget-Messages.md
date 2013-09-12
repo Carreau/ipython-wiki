@@ -11,7 +11,7 @@ IPython has a message specification for the frontend (Javascript, etc.)
 to communicate with the Kernel and vice versa.
 We want developers to be able to build their own interactive tools on top of IPython
 by providing an API for creating a pair of objects - one Kernel-side, one Frontend-side -
-and facilitating their communication.
+and facilitating their communication, and a messaging specification, so that these can be implemented in kernels other than the one provided in IPython.
 
 ## Widget Messages
 
@@ -64,7 +64,11 @@ Message type: `widget_destroy`:
       'data' : {}
     }
 
-## API
+# Python and Javascript Implementations
+
+This includes specification for the API of the Python and Javascript implementations of this message specification.
+It is recommended that any Kernel implementation follow suit as appropriate for the language,
+but only the message specification is necessary.
 
 Both the Javascript and Python sides have two basic objects:
 
@@ -83,9 +87,9 @@ Each widget has four primary methods:
 - `create()`, which sends a `widget_create` message
 - `update(data)`, which sends a `widget_update` message
 - `destroy()`, which sends a `widget_destroy` message
-- `handle_create(data)`, which handles `widget_create` messages
-- `handle_update(data)`, which handles `widget_update` messages
-- `handle_destroy(data)`, which handles `widget_destroy` messages
+- `handle_create(data)`, called when a `widget_create` message arrives
+- `handle_update(data)`, called when a `widget_update` message arrives
+- `handle_destroy(data)`, called when a `widget_destroy` message arrives
 
 This is the basic encapsulation of widget communication.
 

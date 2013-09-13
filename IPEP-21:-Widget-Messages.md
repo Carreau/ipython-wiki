@@ -97,16 +97,28 @@ Each widget has four primary methods:
 - `open(data?)`, which sends a `comm_open` message
 - `send(data)`, which sends a `widget_msg` message
 - `close(data?)`, which sends a `widget_close` message
-- `handle_open(data)`, called when a `comm_open` message arrives, after 
+- `handle_open(data)`, called when a `comm_open` message arrives
 - `handle_msg(data)`, called when a `widget_msg` message arrives
 - `handle_close(data)`, called when a `widget_close` message arrives
 
-This is the basic encapsulation of widget communication.
+The `handle_foo` methods trigger callbacks, registered via methods:
+
+Python:
+```Python
+comm.on_msg(callback)
+```
+
+or Javascript:
+```Javascript
+$([comm]).on("comm_msg", callback);
+```
+
+This is the basic encapsulation of communication.
 
 **Question:** the handle_foo messages get the `data` dict, not the full message.
 This means they don't have access to metadata, etc.  Should the handlers get the full message instead?
 
-**Another Question:** Should open/close get a `data` method? When I have implemented these,
+**Another Question:** Should open/close get a `data` key? When I have implemented these,
 open and close are called by `__init__` and `__del__`, which means there is no easy mechanism
 to pass arguments to open and close (other than private attributes).
 
@@ -150,7 +162,8 @@ and the Frontend manager registers them on the IOPub channel.
 
 Any time a `comm` message arrives, it is dispatched to the appropriate Comm instance
 in the mapping, identified by the `comm_id` key in the message content.
-The Comm's `handle_foo` method is then called with the `data` dict from the message contents.
+The Comm's `handle_foo` method then dispatches the `data` dict from the message to the registered callback,
+if any.
 
 
 ## Creating Comms

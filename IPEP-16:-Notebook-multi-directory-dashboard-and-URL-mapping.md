@@ -89,8 +89,9 @@ Creates a new notebook and names it "Untitled#.ipynb" with an incremented number
 	POST /api/foo/bar/notebooks
 	
 ##### Response #####
-Status: <font color="red">201  Created</font>
-Location: http://<localhost\>/notebooks/foo/bar/Untitled0.ipynb
+Status: <font color="red">201  Created</font> 
+
+Location: http://\<localhost\>/notebooks/foo/bar/Untitled0.ipynb
 
 	{
 		"name": "Untitled0.ipynb",
@@ -158,7 +159,8 @@ This requests renames the notebook and returns the adjusted standard model.
 
 ##### Response #####
 Status: <font color="red">200  OK</font>
-Location: http://<localhost\>/notebooks/foo/bar/Untitled0.ipynb
+
+Location: http://\<localhost\>/notebooks/foo/bar/Untitled0.ipynb
 
 	{
 		"name": "notebook1.ipynb",
@@ -174,7 +176,9 @@ Takes the current notebook representation and saves it. Returns the standard mod
 
 ##### Input #####
 *name:* notebook name.
+
 *path:* relative path to the notebook.
+
 *modified:* new time and date for this save.
 
     {
@@ -254,7 +258,9 @@ Creates a session (with a UUID) for the named notebook. Requires a JSON standard
 
 ##### Input #####
 *name:* name of the notebook.
+
 *path:* relative path to the notebook.
+
 *modified:* time and date the the notebook was last modified.
 
 	{
@@ -302,7 +308,9 @@ This can be used to rename the notebook, or move a file to a new directory.
 
 ##### Input #####
 *name:* name of the notebook.
+
 *path:* relative path to the notebook.
+
 *modified:* time and date the the notebook was last modified.
 
     {

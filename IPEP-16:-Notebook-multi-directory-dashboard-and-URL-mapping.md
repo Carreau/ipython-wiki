@@ -91,7 +91,7 @@ Creates a new notebook and names it "Untitled#.ipynb" with an incremented number
 ##### Response #####
 Status: <font color="red">201  Created</font> 
 
-Location: http://\<localhost\>/notebooks/foo/bar/Untitled0.ipynb
+Location: /api/notebooks/foo/bar/Untitled0.ipynb
 
 	{
 		"name": "Untitled0.ipynb",
@@ -160,7 +160,7 @@ This requests renames the notebook and returns the adjusted standard model.
 ##### Response #####
 Status: <font color="red">200  OK</font>
 
-Location: http://\<localhost\>/notebooks/foo/bar/Untitled0.ipynb
+Location: /api/notebooks/foo/bar/Untitled0.ipynb
 
 	{
 		"name": "notebook1.ipynb",
@@ -181,10 +181,18 @@ Takes the current notebook representation and saves it. Returns the standard mod
 
 *modified:* new time and date for this save.
 
-    {
+*content:* the notebook's body.
+
+        {
 		"name": "notebook1.ipynb",
 		"path": "/foo/bar/",
 		"modified": "new_date"
+		"content":{
+			"metadata":{},
+			"nbformat": 3,
+			"nbformat_minor": 0,
+			"worksheets": []
+		}
 	}
 
 ##### Response #####

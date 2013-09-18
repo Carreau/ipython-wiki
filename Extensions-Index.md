@@ -1,5 +1,20 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## fortran magic
+
+Compile and import everything from a Fortran code cell, using f2py.
+
+The contents of the cell are written to a .f90 file in the directory IPYTHONDIR/fortran using a filename with the hash of the code. This file is then compiled. The resulting module is imported and all of its symbols are injected into the user's namespace.
+
+[Homepage](https://github.com/mgaitan/fortran_magic)
+[Example Notebook](http://nbviewer.ipython.org/urls/raw.github.com/mgaitan/fortran_magic/master/example_notebook.ipynb)
+
+To install :
+
+```
+%install_ext https://raw.github.com/mgaitan/fortran_magic/master/fortranmagic.py
+```
+
 ## ferret
 
 ferret, the Data Visualisation and Analysis software from NOAA/PMEL, can now be integrated into notebooks using the `ipython-ferretmagic extension`. Install instructions and examples are included in notebooks on the GitHub page.

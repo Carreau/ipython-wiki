@@ -39,7 +39,7 @@ and doing so produces produces a `comm_open` message.
 When one of these messages is received, the recipient should create a new Comm with matching `comm_id`.
 The `target` key is used to trigger some event when the Comm is created,
 such as instantiating a peer Widget.
-If comm creation fails, a `comm_destroy` message should be sent,
+If comm creation fails, a `comm_close` message should be sent,
 because no Comm should exist without its peer.
 
 Every Comm has a unique ID, shared only with its counterpart.
@@ -52,7 +52,7 @@ Comm messages are one-way communications, which can be used to update widget sta
 either on the Kernel or the frontend side. Both sides can send these messages.
 
 The kernel sends these messages on the IOPub channel, and the frontend sends them on the Shell channel.
-There are no expected replies (of course, one side can send another `widget_msg` in reply).
+There are no expected replies (of course, one side can send another `comm_msg` in reply).
 
 Message type: `comm_msg`:
 
@@ -92,7 +92,7 @@ Each Comm instance has a `comm_id`, and a counterpart on the other side.
 When an object creates a Comm, it should pass a `target` argument,
 a string key used to identify the handler for the other side.
 
-Each widget has four primary methods:
+Each widget has six primary methods:
 
 - `open(data?)`, which sends a `comm_open` message
 - `send(data)`, which sends a `widget_msg` message

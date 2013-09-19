@@ -2,16 +2,18 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> September 11, 2013</td></tr>
-<tr><td> Updated </td><td> September 12, 2013</td></tr>
+<tr><td> Updated </td><td> September 19, 2013</td></tr>
 </table>
 
 Adding communication for use in interactive widgets.
+Note that this does not specify anything about widgets themselves,
+it only creates the basic plumbing for communication.
 
 IPython has a message specification for the Frontend (Javascript, etc.)
 to communicate with the Kernel and vice versa.
 We want developers to be able to build their own interactive tools on top of IPython
 by providing an API for creating a pair of objects - one Kernel-side, one Frontend-side -
-and facilitating their communication, and a messaging specification, so that these can be implemented in kernels other than the one provided in IPython.
+and facilitating their communication, and a messaging specification, so that these can be implemented in Kernels other than the one provided in IPython.
 
 This proposal includes message types for dispatching messages to particular communicators,
 each of which has a unique ID. This should allow developers to set up communication
@@ -36,20 +38,20 @@ and doing so produces produces a `comm_open` message.
       'data' : {}
     }
 
-When one of these messages is received, the recipient should create a new Comm with matching `comm_id`.
-The `target` key is used to trigger some event when the Comm is created,
+When one of these messages is received, the recipient should open a new Comm with matching `comm_id`.
+The `target` key is used to trigger some event when the Comm is opened,
 such as instantiating a peer Widget.
 If comm creation fails, a `comm_close` message should be sent,
 because no Comm should exist without its peer.
 
 Every Comm has a unique ID, shared only with its counterpart.
-The `data` key can be any extra JSON information used in initialization of the widget.
+The `data` key can be any extra JSON information used in initialization of the Comm.
 
 ### Sending messages with Comms
 
 This is the primary method for peers to communicate.
-Comm messages are one-way communications, which can be used to update widget state,
-either on the Kernel or the frontend side. Both sides can send these messages.
+Comm messages are one-way communications, which can be used to update state,
+either on the Kernel or the frontend side. Both sides can send these messages to the other.
 
 The kernel sends these messages on the IOPub channel, and the frontend sends them on the Shell channel.
 There are no expected replies (of course, one side can send another `comm_msg` in reply).
@@ -74,9 +76,20 @@ Message type: `comm_close`:
       'data' : {}
     }
 
+## Display Logic
+
+Since these messages allow the execution of arbitrary third party code,
+they should have some similarity in their context to the handling of executions.
+In particular:
+
+- When entering a `comm_` handler, a `busy` status message should be published.
+- When finishing a `comm_` handler, an `idle` status message should be published.
+- Display messages sent as a result of the `comm_msg` should have the `comm_msg` header
+  as the parent.
+
 # Python and Javascript Implementations
 
-This includes specification for the API of the Python and Javascript implementations of this message specification.
+This includes specification for the API of the Python and Javascript implementations of these messages.
 It is recommended that any Kernel implementation follow suit as appropriate for the language,
 but only the message specification is necessary.
 
@@ -89,19 +102,23 @@ Both the Javascript and Python sides have two basic objects:
 
 There will be a base class for Comms on both sides.
 Each Comm instance has a `comm_id`, and a counterpart on the other side.
-When an object creates a Comm, it should pass a `target` argument,
+When an object opens a Comm, it should pass a `target` argument,
 a string key used to identify the handler for the other side.
 
-Each widget has six primary methods:
+Each Comm has six primary methods:
 
 - `open(data?)`, which sends a `comm_open` message
-- `send(data)`, which sends a `widget_msg` message
-- `close(data?)`, which sends a `widget_close` message
-- `handle_open(data)`, called when a `comm_open` message arrives
-- `handle_msg(data)`, called when a `widget_msg` message arrives
-- `handle_close(data)`, called when a `widget_close` message arrives
+- `send(data)`, which sends a `comm_msg` message
+- `close(data?)`, which sends a `comm_close` message
+- `on_open(callback)`, register a callback for when a `comm_open` message arrives
+- `on_msg(callback)`, register a callback for when a `comm_msg` message arrives
+- `on_close(callback)`, register a callback for when a `comm_close` message arrives
 
-The `handle_foo` methods trigger callbacks, registered via methods:
+Note that the callbacks you register will receive the **full message**,
+while the sending methods only accept the data key,
+allowing the Comm object to construct the rest of the message.
+
+To register a callback for handling messages in Python:
 
 Python:
 ```Python
@@ -110,15 +127,22 @@ comm.on_msg(callback)
 
 or Javascript:
 ```Javascript
-$([comm]).on("comm_msg", callback);
+comm.on_msg(callback);
+// or to bind a method as a callback
+comm.on_msg($.proxy(obj.callback_method, obj));
 ```
 
-This is the basic encapsulation of communication.
+This is the basic encapsulation of communication between the Frontend and the Kernel.
 
-**Question:** the handle_foo messages get the `data` dict, not the full message.
-This means they don't have access to metadata, etc.  Should the handlers get the full message instead?
+On the Javascript side, `comm.send` accepts callbacks, just like `kernel.execute`,
+which allows dispatch of display messages:
 
-**Another Question:** Should open/close get a `data` key? When I have implemented these,
+```Javascript
+comm.send({key: value}, {output: $.proxy(some_output_area.handle_output, some_output_area)});
+```
+
+
+**Question:** Should open/close get a `data` key? When I have implemented these,
 open and close are called by `__init__` and `__del__`, which means there is no easy mechanism
 to pass arguments to open and close (other than private attributes).
 
@@ -135,7 +159,7 @@ for handling the creation of a new comm.
 Typically, these would be constructors for Comm objects.
 The callback will be passed only one argument: the connected Comm instance.
 `Comm.handle_open()` will be called after the handler,
-so event listeners for on_open registered by the callback will be called.
+so event listeners registered by the callback with `comm.on_open` will be called.
 
 To register a callback with a target key, use:
 
@@ -174,9 +198,16 @@ So as soon as you have a Comm instance, it is ready to use.
 
 ## Caveats
 
-Since we do not have a mechanism for storing this kind of state in the notebook document,
+Since we do not yet have a mechanism for storing this kind of state in the notebook document,
 reloading the page will close the Javascript-side instances of all comms,
 but the Kernel-side instances will all remain without their peers.
 Restarting the Kernel does the same, in reverse.
 Re-sending `comm_open` messages for all extant Comms should re-establish connections,
 so perhaps there should be an API call on either side that does this.
+
+Since this is inherently reply-less and asynchronous, 
+one pattern that may be desirable that will not be easily implemented with this architecture
+is the Kernel asking the Frontend a question and waiting for the response.
+For instance, `raw_input` could not easily be implemented with this architecture,
+because if the Python call is blocking waiting for a reply,
+the reply will never come because it is blocking the handler that will receive the reply.

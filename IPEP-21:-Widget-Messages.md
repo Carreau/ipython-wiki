@@ -126,13 +126,13 @@ to pass arguments to open and close (other than private attributes).
 ### CommManager
 
 The CommManager maintains a mapping of comm_id to Comm instance.
-To add a widget to the mapping, use:
+To add a comm to the mapping, use:
 
-    comm_id = CommManager.register_widget(widget)
+    comm_id = CommManager.register_comm(comm)
 
 CommManagers also maintain a mapping of `target` to callbacks,
 for handling the creation of a new comm.
-Typically, these would be constructors for Widget objects.
+Typically, these would be constructors for Comm objects.
 The callback will be passed only one argument: the connected Comm instance.
 `Comm.handle_open()` will be called after the handler,
 so event listeners for on_open registered by the callback will be called.
@@ -144,19 +144,19 @@ To register a callback with a target key, use:
 This mechanism determines what objects can be created from the other side,
 and functions as a whitelist.
 
-For instance, a Javascript plugin that defines a new widget will need to call this before
-any widgets can be instantiated:
+For instance, a Javascript plugin that defines a new comm will need to call this before
+any comms can be instantiated:
 
-    IPython.widget_manager.register_target('mywidget', my_js_func);
+    IPython.comm_manager.register_target('mycomm', my_js_func);
 
 The IPython Kernel equivalent is
 
-    get_ipython().widget_manager.register_target('mywidget', MyPythonWidget)
+    get_ipython().comm_manager.register_target('mycomm', MyPythonWidget)
 
 #### handlers
 
 The CommManager has a method for each message type registered as a handler
-(`CommManager.widget_msg(msg)`, etc.).
+(`CommManager.comm_msg(msg)`, etc.).
 The Kernel-side manager registers them on the Shell channel,
 and the Frontend manager registers them on the IOPub channel.
 

@@ -4,10 +4,8 @@ Extensions you can install for IPython are listed here. To create a new extensio
 
 Compile and import everything from a Fortran code cell, using f2py.
 
-The contents of the cell are written to a .f90 file in the directory IPYTHONDIR/fortran using a filename with the hash of the code. This file is then compiled. The resulting module is imported and all of its symbols are injected into the user's namespace.
-
-[Homepage](https://github.com/mgaitan/fortran_magic)
-[Example Notebook](http://nbviewer.ipython.org/urls/raw.github.com/mgaitan/fortran_magic/master/example_notebook.ipynb)
+* [Homepage](https://github.com/mgaitan/fortran_magic)
+* [Documentation](http://nbviewer.ipython.org/urls/raw.github.com/mgaitan/fortran_magic/master/documentation.ipynb)
 
 To install :
 

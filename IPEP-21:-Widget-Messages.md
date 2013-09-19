@@ -151,7 +151,7 @@ any comms can be instantiated:
 
 The IPython Kernel equivalent is
 
-    get_ipython().comm_manager.register_target('mycomm', MyPythonWidget)
+    get_ipython().comm_manager.register_target('mycomm', MyPythonComm)
 
 #### handlers
 

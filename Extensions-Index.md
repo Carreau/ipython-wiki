@@ -314,3 +314,18 @@ To use:
 
 (Updates are automatic; `%secnum` only needs to be run once per session.)
 
+## .zip, .tar.gz, .tgz extensions support: `%zip_extensions`
+
+* [Homepage](https://github.com/mksenzov/ipython_zip_extensions)
+* [Documentation](https://github.com/mksenzov/ipython_zip_extensions/blob/master/README.md)
+
+To install:
+
+    %install_ext https://raw.github.com/mksenzov/ipython_zip_extensions/master/zip_extensions.py
+
+If for example you want to load/start using extension called `grasp` (described above) without using pip do:
+    
+    %load_ext zip_extensions
+
+    %install_zip_ext https://pypi.python.org/packages/source/g/grasp/grasp-0.3.2.tar.gz
+    %load_zip_ext grasp

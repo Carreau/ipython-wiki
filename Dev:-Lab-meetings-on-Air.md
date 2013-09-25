@@ -19,6 +19,10 @@ Videos of prior meetings, in reverse chronological order.
 
 ### 2013
 
+* [September 19](http://youtu.be/aIEiybD8hdE)
+* [September 12](http://youtu.be/rOlQ_hYbhB4)
+* [September 5](http://youtu.be/oFaNB_FSZmo)
+* [August 29](http://youtu.be/Z_i8P0KyRkc)
 * [August 22](http://www.youtube.com/watch?v=1xg94gYVqLk) 
 * [August 15](http://www.youtube.com/watch?v=ZVha4wW_jw4) 
 * [August 8](http://youtu.be/7-paPjv430Q)

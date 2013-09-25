@@ -27,18 +27,19 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
 
-
-* [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
-
 * [Introduction to Python Data Structures](http://nbviewer.ipython.org/urls/github.com/profjsb/python-bootcamp/raw/master/DataFiles_and_Notebooks/02_AdvancedDataStructures/data_structures.ipynb), part of the [UC Berkeley Scientific Python Bootcamp](https://sites.google.com/site/pythonbootcamp), led by Josh Bloom ([repo](https://github.com/profjsb/python-bootcamp)).
+
+* [An introduction to Pandas](http://nbviewer.ipython.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/01%20-%20Lesson.ipynb), part of an [11-lesson tutorial on Pandas](https://bitbucket.org/hrojas/learn-pandas), by [Hernán Rojas](https://bitbucket.org/hrojas).
 
 * [Bayesian Inference for the Mining Disaster Data Set](http://nbviewer.ipython.org/urls/github.com/profjsb/python-seminar/raw/master/DataFiles_and_Notebooks/10_MCMC_and_Symbolic/mcmc_lecture.ipynb): part of the [UC Berkeley Python Computing for Science course](https://github.com/profjsb/python-seminar) by Josh Bloom.
 
-* [Working with Reactions](http://nbviewer.ipython.org/4316430), part of a set of tutorials on [cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
+* [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
+
+* [Desperately Seeking Silver](http://nbviewer.ipython.org/urls/raw.github.com/cs109/content/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
 * [Find graffitis close to NY subway entrances](http://nbviewer.ipython.org/urls/raw.github.com/invisibleroads/crosscompute-tutorials/master/300%20Count%20graffiti%20sightings%20within%20100%20feet%20of%20a%20subway%20entrance.ipynb), one of a rich [collection of notebooks on large-scale data analysis](https://github.com/invisibleroads/crosscompute-tutorials), by [Roy Hyunjin Han](https://github.com/invisibleroads).
 
-* [An introduction to Pandas](http://nbviewer.ipython.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/01%20-%20Lesson.ipynb), part of an [11-lesson tutorial on Pandas](https://bitbucket.org/hrojas/learn-pandas), by [Hernán Rojas](https://bitbucket.org/hrojas).
+* [Working with Reactions](http://nbviewer.ipython.org/4316430), part of a set of tutorials on [cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
 
 * Astrophysical simulations and analysis with [yt](http://yt-project.org): a collection of example notebooks on using various codes that yt interfaces with: [Enzo](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/ac275ee8a462425c93b36e330e243705.ipynb), [Gadget](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/e209c55b6aaa4a9ab12c55422bb3afdc.ipynb), [RAMSES](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb), [PKDGrav](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb) and [Gasoline](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb). *Note:* the yt site currently throws an SSL warning, they seem to have an outdated or self-signed certificate.
 
@@ -46,10 +47,10 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [CFD Python: 12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes). A complete set of lectures on CFD, from 1-d linear waves to full 2-d Navier-Stokes, by [Lorena Barba](http://lorenabarba.com).
 
-* [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
-
 * [Sound Analysis with the Fourier Transform](https://github.com/calebmadrigal/FourierTalkOSCON).
 A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to explain what the Fourier Transform is and how to use it for basic audio processing applications.
+
+* [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
 ## Scientific computing and data analysis with the SciPy Stack
 

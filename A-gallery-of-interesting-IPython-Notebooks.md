@@ -8,18 +8,20 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/urls/github.com/ipython/ipython/raw/master/examples/notebooks/Part%25201%2520-%2520Running%2520Code.ipynb), this is one of IPython's official [notebook example collection](https://github.com/ipython/ipython/tree/master/examples/notebooks#a-collection-of-notebooks-for-using-ipython-effectively).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/urls/github.com/ipython/ipython/raw/master/examples/notebooks/Part%25205%2520-%2520Rich%2520Display%2520System.ipynb).
 
-* A [beautiful matplotlib tutorial](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb), part of the fantastic [Lectures on Scientific Computing with Python](https://github.com/jrjohansson/scientific-python-lectures#online-read-only-versions) by [J.R. Johansson](https://github.com/jrjohansson).
+* A [great matplotlib tutorial](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/scientific-python-lectures/master/Lecture-4-Matplotlib.ipynb), part of the fantastic [Lectures on Scientific Computing with Python](https://github.com/jrjohansson/scientific-python-lectures#online-read-only-versions) by [J.R. Johansson](https://github.com/jrjohansson).
 
 * A [single-atom laser model](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/qutip-lectures/master/Lecture-2B-Single-Atom-Lasing.ipynb). This is one of a complete set of [lectures on quantum mechanics and quantum optics using QuTiP](https://github.com/jrjohansson/qutip-lectures#online-read-only-versions) by [J.R. Johansson](https://github.com/jrjohansson).
-
-* [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
 * [An introduction to Bayesian inference](http://nbviewer.ipython.org/urls/github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/raw/master/Chapter1_Introduction/Chapter1_Introduction.ipynb), this is just chapter 1 in an ongoing book titled [Probabilistic Programming and Bayesian Methods for Hackers
 Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers), by [Cameron Davidson-Pilon](http://camdp.com/).
 
-* [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
+* [Desperately Seeking Silver](http://nbviewer.ipython.org/urls/raw.github.com/cs109/content/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
 * [Learn Data Science](http://learnds.com), an entire self-directed course by [Nitin Borwankar](https://github.com/nborwankar).
+
+* [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/urls/raw.github.com/temporaer/tutorial_ml_gkbionics/master/2%2520-%2520KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
+
+* [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
 * [Introduction to Programming (using Python)](http://nbviewer.ipython.org/urls/raw.github.com/ehmatthes/intro_programming/master/notebooks/intro_programming_index.ipynb), an entire introductory Python course written by [Eric Matthes](http://peak5390.wordpress.com/about). [This post](http://peak5390.wordpress.com/2013/09/22/how-ipython-notebook-and-github-have-changed-the-way-i-teach-python/) explains the educational context in an Alaskan high school where Eric is a teacher.
 
@@ -27,25 +29,19 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
 
-* [Introduction to Python Data Structures](http://nbviewer.ipython.org/urls/github.com/profjsb/python-bootcamp/raw/master/DataFiles_and_Notebooks/02_AdvancedDataStructures/data_structures.ipynb), part of the [UC Berkeley Scientific Python Bootcamp](https://sites.google.com/site/pythonbootcamp), led by Josh Bloom ([repo](https://github.com/profjsb/python-bootcamp)).
-
 * [An introduction to Pandas](http://nbviewer.ipython.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/01%20-%20Lesson.ipynb), part of an [11-lesson tutorial on Pandas](https://bitbucket.org/hrojas/learn-pandas), by [Hernán Rojas](https://bitbucket.org/hrojas).
-
-* [Bayesian Inference for the Mining Disaster Data Set](http://nbviewer.ipython.org/urls/github.com/profjsb/python-seminar/raw/master/DataFiles_and_Notebooks/10_MCMC_and_Symbolic/mcmc_lecture.ipynb): part of the [UC Berkeley Python Computing for Science course](https://github.com/profjsb/python-seminar) by Josh Bloom.
 
 * [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
 
-* [Desperately Seeking Silver](http://nbviewer.ipython.org/urls/raw.github.com/cs109/content/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
-
 * [Find graffitis close to NY subway entrances](http://nbviewer.ipython.org/urls/raw.github.com/invisibleroads/crosscompute-tutorials/master/300%20Count%20graffiti%20sightings%20within%20100%20feet%20of%20a%20subway%20entrance.ipynb), one of a rich [collection of notebooks on large-scale data analysis](https://github.com/invisibleroads/crosscompute-tutorials), by [Roy Hyunjin Han](https://github.com/invisibleroads).
-
-* [Working with Reactions](http://nbviewer.ipython.org/4316430), part of a set of tutorials on [cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
 
 * Astrophysical simulations and analysis with [yt](http://yt-project.org): a collection of example notebooks on using various codes that yt interfaces with: [Enzo](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/ac275ee8a462425c93b36e330e243705.ipynb), [Gadget](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/e209c55b6aaa4a9ab12c55422bb3afdc.ipynb), [RAMSES](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb), [PKDGrav](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb) and [Gasoline](http://nbviewer.ipython.org/url/hub.yt-project.org/notebooks/9fe5b4bc68ce48d5aa665edbc4ec3aa3.ipynb). *Note:* the yt site currently throws an SSL warning, they seem to have an outdated or self-signed certificate.
 
+* [CFD Python: 12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes). A complete set of lectures on CFD, from 1-d linear waves to full 2-d Navier-Stokes, by [Lorena Barba](http://lorenabarba.com).
+
 * [The Kaggle bulldozers competition example](http://danielfrg.github.io/blog/2013/03/07/kaggle-bulldozers-basic-cleaning), one of a set on tutorials on exploratory data analysis with the [copper toolkit](https://github.com/danielfrg/copper#copper) by [Daniel Rodríguez](http://danielfrg.github.io).
 
-* [CFD Python: 12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes). A complete set of lectures on CFD, from 1-d linear waves to full 2-d Navier-Stokes, by [Lorena Barba](http://lorenabarba.com).
+* [Working with Reactions](http://nbviewer.ipython.org/4316430), part of a set of tutorials on [cheminformatics and machine learning with the rdkit project](http://code.google.com/p/rdkit/wiki/UGM2012Tutorials), by Greg Landrum.
 
 * [Sound Analysis with the Fourier Transform](https://github.com/calebmadrigal/FourierTalkOSCON).
 A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to explain what the Fourier Transform is and how to use it for basic audio processing applications.

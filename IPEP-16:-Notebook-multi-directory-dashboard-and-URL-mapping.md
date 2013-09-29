@@ -6,7 +6,7 @@
 <tr><td> Created </td><td> April 4, 2013</td></tr>
 <tr><td> Updated </td><td> September 13, 2013</td></tr>
 <tr><td> Discussion </td><td> <a href=https://github.com/ipython/ipython/issues/3166>#3166</a> </td></tr>
-<tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/3619>#3619</a> </td></tr>
+<tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/4303>#4303</a> </td></tr>
 
 </table>
 

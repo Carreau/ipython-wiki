@@ -220,8 +220,10 @@ A session maps a notebook to a kernel. When a notebook is opened, a session is c
 
 	{
 		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "notebook1.ipynb", 
-		"path": "/foo/bar/",
+		"notebook": {
+			"name": "notebook1.ipynb", 
+			"path": "/foo/bar/",
+		}
 		"kernel": {
 			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
 			"ws_url": ""
@@ -240,8 +242,10 @@ Status: <font color="red">200  OK</font>
 	[
 		{
 			"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-			"name": "notebook1.ipynb", 
-			"path": "/foo/bar/",
+			"notebook": {
+				"name": "notebook1.ipynb", 
+				"path": "/foo/bar/",
+			}
 			"kernel": {
 				"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
 				"ws_url": ""
@@ -249,8 +253,10 @@ Status: <font color="red">200  OK</font>
 		},
 		{
 			"id": "b4dfa62c-0e91-4111-9d1f-0c59069c6602",
-			"name": "notebook1.ipynb", 
-			"path": "/foo/bar/",
+			"notebook": {
+				"name": "notebook1.ipynb", 
+				"path": "/foo/bar/",
+			}
 			"kernel": {
 				"id": "4adcb1a3-2e7f-4e82-af2e-d76f5815467a",
 				"ws_url": ""
@@ -282,8 +288,10 @@ Status: <font color="red">201  Created</font>
 
 	{
 		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "Untitled0.ipynb", 
-		"path": "/foo/bar/",
+		"notebook": {
+			"name": "Untitled0.ipynb", 
+			"path": "/foo/bar/",
+		},
 		"kernel": {
 			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
 			"ws_url": ""
@@ -298,15 +306,18 @@ Status: <font color="red">201  Created</font>
 ##### Response #####
 Status: <font color="red">200  OK</font>
 
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "notebook1.ipynb", 
+{
+	"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+	"notebook": {
+		"name": "Untitled0.ipynb", 
 		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
+	},
+	"kernel": {
+		"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+		"ws_url": ""
 	}
+}
+
 
 <span id='change_session'></span>
 #### Change session ####
@@ -322,23 +333,27 @@ This can be used to rename the notebook, or move a file to a new directory.
 *modified:* time and date the the notebook was last modified.
 
     {
-		"name": "Untitled0.ipynb",
-		"path": "/foo/bar/",
-		"modified": "date"
+		"notebook": {
+			"name": "Untitled0.ipynb",
+			"path": "/foo/bar/",
+		}
 	}
 
 ##### Response #####
 Status: <font color="red">200  OK</font>
 
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+{
+	"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+	"notebook": {
 		"name": "new_name.ipynb", 
 		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
+	},
+	"kernel": {
+		"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+		"ws_url": ""
 	}
+}
+
 
 <span id='delete_session'></span>
 #### Delete a session and kill the kernel ####

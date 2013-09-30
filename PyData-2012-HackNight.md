@@ -1,4 +1,4 @@
-MULTI-USER NOTEBOOK & OTHER IPYTHON DISCUSSION AT PYDATA HACKNIGHT
+Multi-user notebook & other IPython discussion at PyData hacknight
 ------------------------------------------------------------------
 
 **Note** this was originally [a gist](https://gist.github.com/ivanov/05d9bd382c9216f614e8), moved here for reference.

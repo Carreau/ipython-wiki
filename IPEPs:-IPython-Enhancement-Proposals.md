@@ -45,3 +45,4 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Active*
 * [[IPEP 20: Informal structure of cell metadata]] -- *Active*
 * [[IPEP 21: Widget Messages]] -- *Active*
+* [[IPEP 22: Notebook, new cell type "Comment"]] -- *Active*

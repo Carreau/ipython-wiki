@@ -67,6 +67,8 @@ This documentation describes the JSON messaging structures for the multidirector
 
 * Notebooks
     * [Create new notebook](#create_new_notebook)
+    * [Upload a notebook](#upload_notebook)
+    * [Copy a notebook](#copy_notebook)
     * [List notebooks](#list_notebooks_in_dir)
     * [Open an existing notebook](#open_named_nb)
     * [Rename notebook](#change_nb_model)
@@ -92,8 +94,8 @@ This web-service handles all HTTP requests on ".ipynb" files. The notebooks mode
 {
     "name": "My Notebook.ipynb",
     "path": "foo/bar",
-    "modified": "2013-10-01T14:22:36.123456",
-    "modified": "2013-10-02T11:29:27.616675",
+    "modified": "2013-10-01T14:22:36.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00",
     "content":{
         "metadata":{},
         "nbformat": 3,
@@ -114,9 +116,13 @@ The path SHALL BE unicode, not url-escaped.
 <span id='create_new_notebook'></span>
 #### Create new notebook
 
+POST always creates a new notebook. There are a few ways to create notebooks:
+[simple creation](#create_new_notebook), [uploading](#upload_notebook),
+and [copying existing notebooks](#copy_notebook).
+
 Creates a new notebook and names it `"Untitled#.ipynb"` with the lowest number not already taken.
 
-    POST /api/notebooks/[:path]/[:name]
+    POST /api/notebooks/[:path]
 
 ##### Response
 
@@ -127,15 +133,82 @@ Creates a new notebook and names it `"Untitled#.ipynb"` with the lowest number n
 {
     "name": "Untitled0.ipynb",
     "path": "foo/bar",
-    "created": "2013-09-01T09:15:14.12345",
-    "modified": "2013-10-02T11:29:27.616675"
+    "created": "2013-09-01T09:15:14.12345+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+}
+```
+
+<span id='upload_notebook'></span>
+#### Upload a notebook
+
+Uploads a new notebook with `name` in directory `path`.
+If you don't specify `content`, a new empty notebook will be created with the specified name.
+
+    POST /api/notebooks/[:path]/[:name.ipynb]
+
+##### Input
+
+<dl>
+    <dt>content</dt>
+    <dd>The actual notebook structure</dd>
+</dl>
+
+Example:
+
+```json
+{
+    "content": {
+        "metadata":{},
+        "nbformat": 3,
+        "nbformat_minor": 0,
+        "worksheets": []
+    }
+}
+```
+
+##### Response
+
+    status: 200 OK
+    Location: /api/notebooks/foo/bar/MyNotebook.ipynb
+
+```json
+{
+    "name": "MyNotebook.ipynb",
+    "path": "foo/bar",
+    "created": "2013-09-01T09:15:14.12345+00:00",
+    "modified": "2013-09-01T09:15:14.12345+00:00"
+}
+```
+
+
+<span id='copy_notebook'></span>
+#### Copy a notebook
+
+Create a new notebook from a copy of the notebook with `name` in `path`.
+The new notebook will have a name of the form `name-Copy#.ipynb`,
+with the first available integer.
+
+    POST /api/notebooks/[:path]/[:name.ipynb]/copy
+
+
+##### Response
+
+    status: 200 OK
+    Location: /api/notebooks/foo/bar/MyNotebook-Copy0.ipynb
+
+```json
+{
+    "name": "MyNotebook-Copy0.ipynb",
+    "path": "foo/bar",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-09-01T09:15:14.12345+00:00"
 }
 ```
 
 <span id='list_notebooks_in_dir'></span>
 #### List notebooks
 
-Returns a list of standard notebook models in the `path` directory.
+Returns a list of notebook models in the directory `path`.
 
     GET /api/notebooks/[:path]
 
@@ -148,14 +221,14 @@ Returns a list of standard notebook models in the `path` directory.
     {
         "name": "notebook1.ipynb",
         "path": "foo/bar",
-        "modified": "2013-10-02T11:29:27.616675",
-        "created": "2013-10-01T12:21:20.123456"
+        "created": "2013-10-01T12:21:20.123456+00:00",
+        "modified": "2013-10-02T11:29:27.616675+00:00"
     },
     {
         "name": "notebook2.ipynb",
         "path": "foo/bar",
-        "modified": "2013-10-02T11:29:27.616675",
-        "created": "2013-10-01T12:21:20.123456"
+        "created": "2013-10-01T12:21:20.123456+00:00",
+        "modified": "2013-10-02T11:29:27.616675+00:00"
     }
 ]
 ```
@@ -165,7 +238,7 @@ Returns a list of standard notebook models in the `path` directory.
 
 Returns the notebook model for a given notebook path, including the full document content.
 
-    GET /api/notebooks/[:path]/[:name]
+    GET /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Response
 
@@ -175,8 +248,8 @@ Returns the notebook model for a given notebook path, including the full documen
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
-    "modified": "2013-10-02T11:29:27.616675",
-    "created": "2013-10-01T12:21:20.123456",
+    "modified": "2013-10-02T11:29:27.616675+00:00",
+    "created": "2013-10-01T12:21:20.123456+00:00",
     "content":{
         "metadata": {},
         "nbformat": 3,
@@ -191,35 +264,40 @@ Returns the notebook model for a given notebook path, including the full documen
 
 This request renames the notebook and returns the updated model without content.
 
-    PATCH /api/notebooks/[:path]/[:name]
+    PATCH /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Input
 
 <dl>
     <dt>name</dt>
-    <dd>The notebook filename (e.g. `notebook.ipynb`)</dd>
+    <dd>The new notebook filename (e.g. `notebook.ipynb`)</dd>
+    <dt>path</dt>
+    <dd>The new notebook path (e.g. `foo/bar`)</dd>
 </dl>
 
 ##### Response
 
     status: 200 OK
-    Location: /api/notebooks/foo/bar/Untitled0.ipynb
+    Location: /api/notebooks/foo/bar/notebook1.ipynb
 
 ```json
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
-    "created": "2013-10-01T12:21:20.123456",
-    "modified": "2013-10-04T14:32:19.123456"
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
 
 <span id='save_notebook'></span>
 #### Save Notebook
 
-Takes the current notebook representation and saves it. Returns the standard model without content.
+Update an existing notebook in-place. This is how standard saves are performed.
 
-    PUT /api/notebooks/[:path]/[:name]
+Returns the updated notebook model without content.
+
+
+    PUT /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Input
 <dl>
@@ -254,14 +332,14 @@ Example:
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
-    "created": "2013-10-01T12:21:20.123456",
-    "modified": "2013-10-04T14:32:19.123456"
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
 <span id='delete_nb'></span>
 #### Delete notebook
 
-Deletes A notebook the notebook's standard model from the named location.
+Deletes a notebook from the specified location.
 
     DELETE /api/notebooks/[:path]/[:name]
 
@@ -272,7 +350,7 @@ Deletes A notebook the notebook's standard model from the named location.
 
 ### Kernels API
 
-This webservice managers all running kernels. The kernel model in JSON is shown below:
+This webservice manages all running kernels. The kernel model in JSON is shown below:
 
 ```json
 {

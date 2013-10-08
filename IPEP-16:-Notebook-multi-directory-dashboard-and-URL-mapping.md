@@ -126,7 +126,7 @@ Creates a new notebook and names it `"Untitled#.ipynb"` with the lowest number n
 
 ##### Response
 
-    status: 200 OK
+    status: 201 Created
     Location: /api/notebooks/foo/bar/Untitled0.ipynb
 
 ```json
@@ -168,7 +168,7 @@ Example:
 
 ##### Response
 
-    status: 200 OK
+    status: 201 Created
     Location: /api/notebooks/foo/bar/MyNotebook.ipynb
 
 ```json
@@ -193,7 +193,7 @@ with the first available integer.
 
 ##### Response
 
-    status: 200 OK
+    status: 201 Created
     Location: /api/notebooks/foo/bar/MyNotebook-Copy0.ipynb
 
 ```json

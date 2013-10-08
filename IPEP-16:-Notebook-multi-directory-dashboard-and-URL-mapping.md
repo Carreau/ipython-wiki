@@ -489,6 +489,7 @@ Creates a new Session for a given notebook.
     </dd>
 </dl>
 
+Example:
 
 ```json
 {
@@ -549,11 +550,28 @@ This can be used to rename the notebook, or move it to a new directory.
 ##### Input
 
 <dl>
-    <dt>name</dt>
-    <dd>The new filename of the notebook</dd>
-    <dt>path</dt>
-    <dd>The new notebook's path</dd>
+    <dt>notebook</dt>
+    <dd>
+        <dl>
+            <dt>name</dt>
+            <dd>The new filename of the notebook</dd>
+            <dt>path</dt>
+            <dd>Path to the notebook's new directory</dd>
+        </dl>
+    </dd>
 </dl>
+
+Example:
+
+```json
+{
+    "notebook" : {
+        "name": "Untitled0.ipynb",
+        "path": "foo/bar"
+    }
+}
+```
+
 
 ##### Response
 

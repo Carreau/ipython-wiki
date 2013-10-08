@@ -478,17 +478,24 @@ Creates a new Session for a given notebook.
 
 ##### Input
 <dl>
-    <dt>name</dt>
-    <dd>The filename of the notebook</dd>
-    <dt>path</dt>
-    <dd>Path to the notebook's directory</dd>
+    <dt>notebook</dt>
+    <dd>
+        <dl>
+            <dt>name</dt>
+            <dd>The filename of the notebook</dd>
+            <dt>path</dt>
+            <dd>Path to the notebook's directory</dd>
+        </dl>
+    </dd>
 </dl>
 
 
 ```json
 {
-    "name": "Untitled0.ipynb",
-    "path": "foo/bar"
+    "notebook" : {
+        "name": "Untitled0.ipynb",
+        "path": "foo/bar"
+    }
 }
 ```
 

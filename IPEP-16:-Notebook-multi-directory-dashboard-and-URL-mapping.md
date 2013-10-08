@@ -76,8 +76,11 @@ This documentation describes the JSON messaging structures for the multidirector
     * [Delete notebook](#delete_nb)
 * Kernels
     * [List active kernels](#list_kernels)
+    * [Get kernel information](#get_kernel)
     * [Start a kernel](#start_kernel)
     * [Shutdown a kernel](#shutdown_kernel)
+    * [Interrupt a kernel](#interrupt_kernel)
+    * [Restart a kernel](#restart_kernel)
 * Sessions
     * [List sessions](#list_sessions)
     * [Create session](#create_session)
@@ -384,6 +387,21 @@ Lists the JSON data for all kernels currently running.
     }
 ]
 ```
+<span id='get_kernel'></span>
+#### Get kernel information
+
+    GET /api/kernels/[:kernel_id]
+
+##### Response
+
+    status: 200 OK
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
 
 <span id='start_kernel'></span>
 #### Start a kernel
@@ -412,6 +430,33 @@ Kills the kernel and deletes the ID.
 
     status: 204 No Content
 
+<span id='interrupt_kernel'></span>
+#### Interrupt a kernel
+Send a SIGINT to the kernel process.
+
+    POST /api/kernels/[:kernel_id]/interrupt
+
+##### Response
+
+    status: 204 No Content
+
+<span id='restart_kernel'></span>
+#### Restart a kernel
+Kill and restart a kernel, preserving the ID.
+
+    POST /api/kernels/[:kernel_id]/restart
+
+##### Response
+
+    status: 200 OK
+    Location
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
 
 ### Sessions API
 

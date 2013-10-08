@@ -4,7 +4,7 @@
 <tr><td> Author </td><td> Zach Sailer &lt;zachsailer@gmail.com&gt;</td></tr>
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Created </td><td> April 4, 2013</td></tr>
-<tr><td> Updated </td><td> October 2, 2013</td></tr>
+<tr><td> Updated </td><td> October 8, 2013</td></tr>
 <tr><td> Discussion </td><td> <a href=https://github.com/ipython/ipython/issues/3166>#3166</a> </td></tr>
 <tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/4303>#4303</a> </td></tr>
 

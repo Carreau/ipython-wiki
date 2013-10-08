@@ -449,7 +449,7 @@ Kill and restart a kernel, preserving the ID.
 ##### Response
 
     status: 200 OK
-    Location
+    Location: /api/kernels/b7e1a137-a434-4598-846e-ee51fb06c306
 
 ```json
 {

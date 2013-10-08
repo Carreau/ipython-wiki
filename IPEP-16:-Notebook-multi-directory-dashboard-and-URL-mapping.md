@@ -293,18 +293,20 @@ This request renames the notebook and returns the updated model without content.
 #### Save Notebook
 
 Update an existing notebook in-place. This is how standard saves are performed.
+If the path and/or name of the notebook are specified in the model,
+the notebook will be saved to the new location specified in the model.
+After doing this, future PUT requests must use the URL for the new path.
 
 Returns the updated notebook model without content.
-
 
     PUT /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Input
 <dl>
     <dt>name</dt>
-    <dd>The notebook name (`my notebook.ipynb`)</dd>
+    <dd>The new notebook name (`my notebook.ipynb`), if changed</dd>
     <dt>path</dt>
-    <dd>relative path to the notebook</dd>
+    <dd>The new path for the notebook, if changed</dd>
     <dt>content</dt>
     <dd>The actual body of the notebook document<dd>
 </dl>

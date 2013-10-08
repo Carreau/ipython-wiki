@@ -432,7 +432,7 @@ a session is created and a kernel is started. The model for a session:
 }
 ```
 
-<span id='list_session'></span>
+<span id='list_sessions'></span>
 #### List sessions
 Returns a list of all currently running sessions.
 

@@ -3,7 +3,7 @@
 <tr><td> Author </td><td> Jonathan Frederic &lt;jon.freder@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> October 9, 2013</td></tr>
 <tr><td> Updated </td><td> October 9, 2013</td></tr>
-<tr><td> Implementation </td><td>  [https://github.com/ipython/ipython/pull/4374](#4374) </td></tr>
+<tr><td> Implementation </td><td>  <a href="https://github.com/ipython/ipython/pull/4374">#4374</a> </td></tr>
 </table>
 
 # Abstract

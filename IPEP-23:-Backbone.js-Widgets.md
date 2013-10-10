@@ -28,7 +28,7 @@ The models created with backbone.js are automatically synchronized by backbone.j
 
 In the Python back-end (other back-ends discussed later in this IPEP), `traitlets` are used to define each property of the model.  The `traitlets` machinery listens for the properties to change.  When a property is changed, the modified state of the model is sent to the front-end via the same comm. 
 
-The *view* and *controller* are combined in our architecture since widgets both display and accept input.  The combined view and controller are simply referred to as a **view** in our architecture.  The view **only exists on the front-end**.  
+The *view* and *controller* are combined in our architecture since widgets both display and accept input.  The combined view and controller are simply referred to as a **view** in our architecture.  The view **only exists in the front-end**.  
 
 This raises the first design question; How can users specify when and how a view should be displayed on the front-end via the back-end?  The solution is a `model.show(...)` method in the back-end.  When the `model.show(...)` method is called, a message is sent to the front-end instructing it to instanciate a view for the model (as seen in Figure 3).
  

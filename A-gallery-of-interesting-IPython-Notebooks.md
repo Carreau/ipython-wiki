@@ -175,6 +175,12 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * [The Design Impact of Multiple Dispatch](http://nbviewer.ipython.org/b8fe9dbb36c1427b9f22), a detailed explanation of Julia's multiple dispatch design, by [Stefan Karpinski](https://github.com/StefanKarpinski).
 
+## Ruby notebooks
+
+Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.
+
+* [IRuby Demo Notebook](http://nbviewer.ipython.org/urls/raw.github.com/minad/iruby/master/IRuby-Example.ipynb)
+
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 
 * [Blogging With IPython in Blogger](http://nbviewer.ipython.org/urls/raw.github.com/fperez/blog/master/120907-Blogging%20with%20the%20IPython%20Notebook.ipynb), also available in [blog post form](http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html), [full repo here](https://github.com/fperez/blog). By Fernando Perez.

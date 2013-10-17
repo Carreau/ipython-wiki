@@ -2,9 +2,17 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Jonathan Frederic &lt;jon.freder@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> October 9, 2013</td></tr>
-<tr><td> Updated </td><td> October 10, 2013</td></tr>
+<tr><td> Updated </td><td> October 17, 2013</td></tr>
 <tr><td> Implementation </td><td>  <a href="https://github.com/ipython/ipython/pull/4374">#4374</a> </td></tr>
 </table>
+
+
+
+-----
+
+**! This document needs to be updated to reflect the latest design !** 
+
+-----
 
 # Abstract
 Typical scientific computing suites live within a hard-coded GUI (graphical user interface).  This stereotype can be broken by exposing an API that allows the user to generate and manipulate their GUI.  By adding this functionality to the IPython Notebook, users will be able to define the environment in which their code is executed.  Prior to the addition of comms ([[IPEP 21: Widget Messages]]) this was not possible.

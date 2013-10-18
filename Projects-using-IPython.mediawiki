@@ -48,7 +48,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 == In teaching ==
 
-* The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/2012/10/transitioning-to-the-ipython-notebook uses the IPython Notebook as one of its core technologies].
+* The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/blog/2013/03/using-notebook-as-a-teaching-tool.html uses the IPython Notebook as one of its core technologies].
 
 * The [http://ged.msu.edu/angus/beacon-2012/ BEACON course for computational biologists], taught by [http://ged.msu.edu/ Titus Brown at Michigan State University].
 

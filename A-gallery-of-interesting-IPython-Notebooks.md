@@ -48,11 +48,15 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
+* [EarthPy](http://earthpy.org), a collection of IPython notebooks with a focus on Earth Sciences, from [whale tracks](http://earthpy.org/analyzing-whale-tracks.html) to the [flow of the Amazon](http://earthpy.org/earthpy-basemap-amazon.html).
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing
 
 * [A Crash Course in Python for Scientists](http://nbviewer.ipython.org/5920182), by Sandia's [Rick Muller](http://www.cs.sandia.gov/~rmuller).
+
+* [A gentle introduction to scientific programming in Python, biased towards biologists](http://nbviewer.ipython.org/url/atwallab.cshl.edu/teaching/QBbootcamp3.ipynb), by [Mickey Atwal, Cold Spring Harbor Laboratory](http://atwallab.cshl.edu).
 
 * [First few lectures of the UW/Coursera course on Data Analysis](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/ComputationalMethodsCourse/master/Coursera%2520Data%2520Analysis.ipynb). ([Repo](https://github.com/fonnesbeck/ComputationalMethodsCourse)) by Chris Fonnesbeck.
 
@@ -83,12 +87,6 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
 
-* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
-
-* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
-
-* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/urls/raw.github.com/jonasnick/ReceptiveFields/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
-
 * [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
@@ -106,6 +104,14 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 * [Chebfun in Python](http://nbviewer.ipython.org/6724986), a demo of [PyChebfun](https://github.com/cswiercz/pychebfun), by [Olivier Verdier](http://www.olivierverdier.com). PyChebfun is a pure-python implementation of the celebrated [Chebfun package by Battles and Trefethen](http://people.maths.ox.ac.uk/trefethen/publication/PDF/2004_107.pdf). 
 
 * [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/multilevel_modeling/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
+
+* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
+
+* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/urls/raw.github.com/jonasnick/ReceptiveFields/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
+
+* [The Traveling Salesperson Problem](http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb) by [Peter Norvig](http://norvig.com).
+
+* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
 
 ### Pandas for data analysis
 

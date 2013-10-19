@@ -4,7 +4,7 @@
 <tr><td> Author </td><td> Zach Sailer &lt;zachsailer@gmail.com&gt;</td></tr>
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Created </td><td> April 4, 2013</td></tr>
-<tr><td> Updated </td><td> October 8, 2013</td></tr>
+<tr><td> Updated </td><td> October 18, 2013</td></tr>
 <tr><td> Discussion </td><td> <a href=https://github.com/ipython/ipython/issues/3166>#3166</a> </td></tr>
 <tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/4303>#4303</a> </td></tr>
 
@@ -74,6 +74,10 @@ This documentation describes the JSON messaging structures for the multidirector
     * [Rename notebook](#change_nb_model)
     * [Save notebook](#save_notebook)
     * [Delete notebook](#delete_nb)
+    * [List checkpoints](#list_cp)
+    * [Create a checkpoint](#create_cp)
+    * [Restore from a checkpoint](#restore_cp)
+    * [Delete a checkpoint](#delete_cp)
 * Kernels
     * [List active kernels](#list_kernels)
     * [Get kernel information](#get_kernel)
@@ -91,13 +95,13 @@ This documentation describes the JSON messaging structures for the multidirector
 <span id='list_notebook_root'></span>
 ### Notebooks API
 
-This web-service handles all HTTP requests on ".ipynb" files. The notebooks model in JSON is shown below. The `content` field is not always included in the notebook model because of the weight it can carry. It is typically included when the client makes a request for a particular notebook.
+This web-service handles all HTTP requests on ".ipynb" files. The full notebook model in JSON is shown below. The `content` field is not always included in the notebook model because of the weight it can carry. It is typically included when the client makes a request for a particular notebook.
 
 ```json
 {
     "name": "My Notebook.ipynb",
     "path": "foo/bar",
-    "modified": "2013-10-01T14:22:36.123456+00:00",
+    "created": "2013-10-01T14:22:36.123456+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00",
     "content":{
         "metadata":{},
@@ -116,16 +120,38 @@ In requests to the server, it SHOULD NOT start or end with '/'.
 The path separator MUST BE '/', it is not platform dependent.
 The path SHALL BE unicode, not url-escaped.
 
+Some requests (notably resource creation via POST / PUT requests) set a Location header.
+This value will be the url-escaped path, not the unicode path.
+
+#### Only the server will provide a complete model
+
+Client requests will never specify a whole model.
+They will only specify those values that should indicate a change.
+
+The timestamps in the notebook model are read-only.
+A request to the server to update or upload a notebook model
+should never contain the timestamp keys (they will be ignored).
+
+Since the `path` and `name` are specified in the URL,
+these keys are generally omitted from requests as well.
+The one exception being saving an existing notebook to a new location,
+in which case the *new* name and path are given in the model,
+and the current name and path are in the URL.
+
 <span id='create_new_notebook'></span>
-#### Create new notebook
+#### Create new notebooks
 
 POST always creates a new notebook. There are a few ways to create notebooks:
 [simple creation](#create_new_notebook), [uploading](#upload_notebook),
 and [copying existing notebooks](#copy_notebook).
+In each case, POST requests are always made to a directory URL,
+in which case the server picks the new notebook's name.
+If you want to specify the new notebook's name, make a PUT request to the full path URL.
 
-Creates a new notebook and names it `"Untitled#.ipynb"` with the lowest number not already taken.
+Creates a new notebook. If a POST, the name will be the first unused name of the form `"Untitled#.ipynb"`, with the first available integer.
 
     POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Response
 
@@ -144,10 +170,10 @@ Creates a new notebook and names it `"Untitled#.ipynb"` with the lowest number n
 <span id='upload_notebook'></span>
 #### Upload a notebook
 
-Uploads a new notebook with `name` in directory `path`.
-If you don't specify `content`, a new empty notebook will be created with the specified name.
+Uploads a new notebook to `path`. If a POST, the name will be the first unused name of the form `"Untitled#.ipynb"`.
 
-    POST /api/notebooks/[:path]/[:name.ipynb]
+    POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
 
 ##### Input
 
@@ -187,12 +213,27 @@ Example:
 <span id='copy_notebook'></span>
 #### Copy a notebook
 
-Create a new notebook from a copy of the notebook with `name` in `path`.
-The new notebook will have a name of the form `name-Copy#.ipynb`,
+Create a new notebook from a copy of an existing notebook.
+If POST, the new notebook will have a name of the form `{copy_from}-Copy#.ipynb`,
 with the first available integer.
 
-    POST /api/notebooks/[:path]/[:name.ipynb]/copy
+    POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
 
+##### Input
+
+<dl>
+    <dt>copy_from</dt>
+    <dd>The notebook name to copy from</dd>
+</dl>
+
+Example:
+
+```json
+{
+    "copy_from" : "MyNotebook.ipynb"
+}
+```
 
 ##### Response
 
@@ -346,7 +387,71 @@ Example:
 
 Deletes a notebook from the specified location.
 
-    DELETE /api/notebooks/[:path]/[:name]
+    DELETE /api/notebooks/[:path]/[:name.ipynb]
+
+##### Response
+
+    status: 204 No Content
+
+
+<span id='list_cp'></span>
+#### List Checkpoints
+
+List checkpoints for a given notebook. There will typically be zero or one results.
+
+    GET /api/notebooks/[:path]/[:name.ipynb]/checkpoints
+
+##### Response
+
+    status: 200 OK
+
+```json
+[
+    {
+        "id" : "checkpoint-id",
+        "last_modified" : "2013-10-18T23:54:40+00:00"
+    }
+]
+```
+
+<span id='create_cp'></span>
+#### Create a Checkpoint
+
+Create a new checkpoint with the current state of a notebook.
+With the default FileNotebookManager, only one checkpoint is supported,
+so creating new checkpoints clobbers existing ones.
+
+    POST /api/notebooks/[:path]/[:name.ipynb]/checkpoints
+
+##### Response
+
+    status: 201 Created
+
+```json
+{
+    "id" : "checkpoint-id",
+    "last_modified" : "2013-10-18T23:54:40+00:00"
+}
+```
+
+<span id='restore_cp'></span>
+#### Restore to a Checkpoint
+
+Restore a notebook to a particular checkpointed state.
+
+    POST /api/notebooks/[:path]/[:name.ipynb]/checkpoints/[checkpoint_id]
+
+##### Response
+
+    status: 204 No Content
+
+
+<span id='delete_cp'></span>
+#### Delete a Checkpoint
+
+Delete a checkpoint.
+
+    DELETE /api/notebooks/[:path]/[:name.ipynb]/checkpoints/[checkpoint_id]
 
 ##### Response
 

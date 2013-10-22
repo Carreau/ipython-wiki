@@ -113,6 +113,9 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
 
+* Particle physics at the Large Hadron Collider (LHC):  using [ROOT in an LHCb masterclass](http://root.cern.ch/drupal/content/ipython-notebooks-and-root-0):  [Notebook 1](http://nbviewer.ipython.org/urls/raw.github.com/mazurov/webfest2013/master/notebooks/MasterClassD0-ex1.ipynb) and [Notebook 2](http://nbviewer.ipython.org/urls/raw.github.com/mazurov/webfest2013/master/notebooks/MasterClassD0-ex2%2Cex3.ipynb)
+  notebooks by Alexander Mazurov and Andrey Ustyuzhanin at CERN.
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
@@ -237,6 +240,6 @@ Of course the first thing you might try is searching for videos about Ipython (1
 
 * This video shows IPython being used in the scikit project  http://www.youtube.com/watch?v=4ONBVNm3isI
 
-* He doesn't show IPython in use but his IPython sticker is clear for the entire video: http://www.youtube.com/watch?v=op61s-QHryk
+* He doesn't show IPython in use but his IPython sticker is clear for the entire video: [Planning and Tending the Garden: The Future of Early Childhood Python Education](http://www.youtube.com/watch?v=op61s-QHryk)
 
 * http://youtu.be/qbYYamU42Sw?t=5m9s Wes McKinney's speech on Python and data analysis features IPython as does his book [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)

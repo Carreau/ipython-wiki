@@ -28,6 +28,8 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * The [http://ganga.web.cern.ch/ganga Ganga] system, developed at CERN for Grid job control for the [http://lhcb.web.cern.ch/lhcb LHCb] and [http://atlas.web.cern.ch/Atlas/index.html ATLAS] experiments, uses IPython for its [http://ganga.web.cern.ch/ganga/user/v4/CLIP CLIP interface].
 
+* The [http://root.cern.ch/drupal/content/discovering-root ROOT project]: a framework for data processing, born at CERN, at the heart of the research on high-energy physics. See for example [http://root.cern.ch/drupal/content/ipython-notebooks-and-root-0 this post].
+
 * [http://www.sagemath.org/ SAGE], a system for algebraic number theory and arithmetic geometry, uses IPython for its interactive command-line interface.
 
 * [http://www.singular.uni-kl.de/ Singular], another computer algebra system, also offers an IPython interface (Singular is also accessible as a SAGE subsystem).
@@ -48,7 +50,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 == In teaching ==
 
-* The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/2012/10/transitioning-to-the-ipython-notebook uses the IPython Notebook as one of its core technologies].
+* The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/blog/2013/03/using-notebook-as-a-teaching-tool.html uses the IPython Notebook as one of its core technologies].
 
 * The [http://ged.msu.edu/angus/beacon-2012/ BEACON course for computational biologists], taught by [http://ged.msu.edu/ Titus Brown at Michigan State University].
 

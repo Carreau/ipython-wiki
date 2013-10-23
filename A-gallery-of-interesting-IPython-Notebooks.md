@@ -23,7 +23,7 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
-* [Introduction to Programming (using Python)](http://nbviewer.ipython.org/urls/raw.github.com/ehmatthes/intro_programming/master/notebooks/intro_programming_index.ipynb), an entire introductory Python course written by [Eric Matthes](http://peak5390.wordpress.com/about). [This post](http://peak5390.wordpress.com/2013/09/22/how-ipython-notebook-and-github-have-changed-the-way-i-teach-python/) explains the educational context in an Alaskan high school where Eric is a teacher.
+* [Introduction to Programming (using Python)](http://nbviewer.ipython.org/urls/raw.github.com/ehmatthes/intro_programming/master/notebooks/index.ipynb), an entire introductory Python course written by [Eric Matthes](http://peak5390.wordpress.com/about). [This post](http://peak5390.wordpress.com/2013/09/22/how-ipython-notebook-and-github-have-changed-the-way-i-teach-python/) explains the educational context in an Alaskan high school where Eric is a teacher.
 
 * [Python for Developers](http://ricardoduarte.github.io/python-for-developers), a complete book on Python programming by [Ricardo Duarte](https://github.com/ricardoduarte). Note the book also exists [in Portuguese](http://ricardoduarte.github.io/python-para-desenvolvedores).
 
@@ -48,11 +48,15 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/urls/raw.github.com/carljv/Will_it_Python/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
+* [EarthPy](http://earthpy.org), a collection of IPython notebooks with a focus on Earth Sciences, from [whale tracks](http://earthpy.org/analyzing-whale-tracks.html) to the [flow of the Amazon](http://earthpy.org/earthpy-basemap-amazon.html).
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing
 
 * [A Crash Course in Python for Scientists](http://nbviewer.ipython.org/5920182), by Sandia's [Rick Muller](http://www.cs.sandia.gov/~rmuller).
+
+* [A gentle introduction to scientific programming in Python, biased towards biologists](http://nbviewer.ipython.org/url/atwallab.cshl.edu/teaching/QBbootcamp3.ipynb), by [Mickey Atwal, Cold Spring Harbor Laboratory](http://atwallab.cshl.edu).
 
 * [First few lectures of the UW/Coursera course on Data Analysis](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/ComputationalMethodsCourse/master/Coursera%2520Data%2520Analysis.ipynb). ([Repo](https://github.com/fonnesbeck/ComputationalMethodsCourse)) by Chris Fonnesbeck.
 
@@ -60,7 +64,7 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/urls/raw.github.com/twiecki/CythonGSL/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/5888428). This embeds a slideshow and google Earth in the notebook.  By Massimo Di Stefano.
+* [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/7123965). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
 
 * [Data and visualization integration via web based resources]
 (http://nbviewer.ipython.org/5678081). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
@@ -83,12 +87,6 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
 
-* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
-
-* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
-
-* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/urls/raw.github.com/jonasnick/ReceptiveFields/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
-
 * [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
@@ -104,6 +102,19 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 * [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle/raw/d046b2bcf473503fa356094cfe4cff774d1aaefc/270D.ipynb), by [Greg Surges](http://gregsurges.com).
 
 * [Chebfun in Python](http://nbviewer.ipython.org/6724986), a demo of [PyChebfun](https://github.com/cswiercz/pychebfun), by [Olivier Verdier](http://www.olivierverdier.com). PyChebfun is a pure-python implementation of the celebrated [Chebfun package by Battles and Trefethen](http://people.maths.ox.ac.uk/trefethen/publication/PDF/2004_107.pdf). 
+
+* [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/multilevel_modeling/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
+
+* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
+
+* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/urls/raw.github.com/jonasnick/ReceptiveFields/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
+
+* [The Traveling Salesperson Problem](http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb) by [Peter Norvig](http://norvig.com).
+
+* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/urls/github.com/fperez/reprosw/raw/master/Version%2520Control.ipynb) by Fernando Perez.
+
+* Particle physics at the Large Hadron Collider (LHC):  using [ROOT in an LHCb masterclass](http://root.cern.ch/drupal/content/ipython-notebooks-and-root-0):  [Notebook 1](http://nbviewer.ipython.org/urls/raw.github.com/mazurov/webfest2013/master/notebooks/MasterClassD0-ex1.ipynb) and [Notebook 2](http://nbviewer.ipython.org/urls/raw.github.com/mazurov/webfest2013/master/notebooks/MasterClassD0-ex2%2Cex3.ipynb)
+  notebooks by Alexander Mazurov and Andrey Ustyuzhanin at CERN.
 
 ### Pandas for data analysis
 
@@ -175,6 +186,12 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * [The Design Impact of Multiple Dispatch](http://nbviewer.ipython.org/b8fe9dbb36c1427b9f22), a detailed explanation of Julia's multiple dispatch design, by [Stefan Karpinski](https://github.com/StefanKarpinski).
 
+## Ruby notebooks
+
+Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.
+
+* [IRuby Demo Notebook](http://nbviewer.ipython.org/urls/raw.github.com/minad/iruby/master/IRuby-Example.ipynb)
+
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 
 * [Blogging With IPython in Blogger](http://nbviewer.ipython.org/urls/raw.github.com/fperez/blog/master/120907-Blogging%20with%20the%20IPython%20Notebook.ipynb), also available in [blog post form](http://blog.fperez.org/2012/09/blogging-with-ipython-notebook.html), [full repo here](https://github.com/fperez/blog). By Fernando Perez.
@@ -223,6 +240,6 @@ Of course the first thing you might try is searching for videos about Ipython (1
 
 * This video shows IPython being used in the scikit project  http://www.youtube.com/watch?v=4ONBVNm3isI
 
-* He doesn't show IPython in use but his IPython sticker is clear for the entire video: http://www.youtube.com/watch?v=op61s-QHryk
+* He doesn't show IPython in use but his IPython sticker is clear for the entire video: [Planning and Tending the Garden: The Future of Early Childhood Python Education](http://www.youtube.com/watch?v=op61s-QHryk)
 
 * http://youtu.be/qbYYamU42Sw?t=5m9s Wes McKinney's speech on Python and data analysis features IPython as does his book [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)

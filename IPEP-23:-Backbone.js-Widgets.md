@@ -44,7 +44,7 @@ In the Python back-end (other back-ends discussed later in this IPEP), `traitlet
 The backbone views have no counterpart in the back-end.  This raises the first design question; How can users specify when and how a view should be displayed on the front-end via the back-end?  The solution is to use `IPython.display.display(...)`.  When the `IPython.display.display(...)` method is called, a message is sent to the front-end instructing it to instanciate a backbone model and view (as seen in Figure 3).
  
 <center><table><tr><td><center>[[/File/IPEP-23/Show.png]]  
-</center></td></tr><tr><td><center>*Figure 3: Result of calling `model.show(...)`*</center></td></tr></table></center>  
+</center></td></tr><tr><td><center>*Figure 3: Result of calling `IPython.display.display(...)`*</center></td></tr></table></center>  
 
 The IPython Notebook is designed so code is executed on a cell by cell basis.  It would not be unusual to desire the same Widget to be available in more than one cell’s output.  By calling `IPython.display.display(...)` again, the user can create another view linked to the same model (as seen in Figure 4).
 

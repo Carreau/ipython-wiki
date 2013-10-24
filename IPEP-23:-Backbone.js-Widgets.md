@@ -13,10 +13,12 @@
 **! This document is incomplete !** 
 
 Missing:
-- Usage examples
-- Message description
-- Throttling description
-- Message diff details
+- Usage examples  
+- Message description  
+- Throttling description  
+- Message diff details  
+
+
 -----
 
 # Abstract

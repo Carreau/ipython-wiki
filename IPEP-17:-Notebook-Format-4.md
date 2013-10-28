@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 29, 2013</td></tr>
-<tr><td> Updated </td><td> August 30, 2013</td></tr>
+<tr><td> Updated </td><td> September 27, 2013</td></tr>
 </table>
 
 There are a few changes we need to make to the notebook that will not be backward compatible.
@@ -41,6 +41,7 @@ There is no reason for the two cell types to have a different name for their con
 - move `language` key from code cells to top-level notebook metadata
 - add kernel info to top-level notebook metadata in some form
 - add `format` key to raw_cell metadata
+- add state for show/hide (already have) and auto-scroll.
 
 # Implementation and Coordination
 

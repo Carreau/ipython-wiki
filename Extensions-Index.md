@@ -1,5 +1,18 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## ipythonPexpect magic
+
+A magic that allows IPython notebooks to interface with other programs via Pexpect (written by Adam Lyon).
+ 
+* [Example notebook](http://nbviewer.ipython.org/url/home.fnal.gov/~lyon/ipython_ext/ipythonPexpect_example.ipynb) - including interfacing with bash, R, and CERN's ROOT system.
+
+To install :
+
+```
+%install_ext https://cdcvs.fnal.gov/redmine/projects/ipython_ext/repository/revisions/master/raw/ipythonPexpect.py
+```
+
+
 ## fortran magic
 
 Compile and import everything from a Fortran code cell, using f2py.

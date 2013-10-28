@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> September 11, 2013</td></tr>
-<tr><td> Updated </td><td> September 19, 2013</td></tr>
+<tr><td> Updated </td><td> September 25, 2013</td></tr>
 </table>
 
 Adding communication for use in interactive widgets.
@@ -19,6 +19,7 @@ This proposal includes message types for dispatching messages to particular comm
 each of which has a unique ID. This should allow developers to set up communication
 between their own Kernel and Frontend-side objects.
 
+
 ## Messages
 
 In general, these messages are one-way with no reply.
@@ -34,12 +35,12 @@ and doing so produces produces a `comm_open` message.
 
     {
       'comm_id' : 'u-u-i-d',
-      'target' : 'some_key',
+      'target_name' : 'some_key',
       'data' : {}
     }
 
 When one of these messages is received, the recipient should open a new Comm with matching `comm_id`.
-The `target` key is used to trigger some event when the Comm is opened,
+The `target_name` key is used to trigger some event when the Comm is opened,
 such as instantiating a peer Widget.
 If comm creation fails, a `comm_close` message should be sent,
 because no Comm should exist without its peer.
@@ -102,7 +103,7 @@ Both the Javascript and Python sides have two basic objects:
 
 There will be a base class for Comms on both sides.
 Each Comm instance has a `comm_id`, and a counterpart on the other side.
-When an object opens a Comm, it should pass a `target` argument,
+When an object opens a Comm, it should pass a `target_name` argument,
 a string key used to identify the handler for the other side.
 
 Each Comm has six primary methods:
@@ -110,7 +111,6 @@ Each Comm has six primary methods:
 - `open(data?)`, which sends a `comm_open` message
 - `send(data)`, which sends a `comm_msg` message
 - `close(data?)`, which sends a `comm_close` message
-- `on_open(callback)`, register a callback for when a `comm_open` message arrives
 - `on_msg(callback)`, register a callback for when a `comm_msg` message arrives
 - `on_close(callback)`, register a callback for when a `comm_close` message arrives
 
@@ -154,28 +154,33 @@ To add a comm to the mapping, use:
 
     comm_id = CommManager.register_comm(comm)
 
-CommManagers also maintain a mapping of `target` to callbacks,
-for handling the creation of a new comm.
-Typically, these would be constructors for Comm objects.
-The callback will be passed only one argument: the connected Comm instance.
-`Comm.handle_open()` will be called after the handler,
-so event listeners registered by the callback with `comm.on_open` will be called.
+CommManagers also maintain a mapping of `target_name` to functions,
+used for handling the creation of user objects attached to the new comm.
+Typically, these would be constructors for Widget counterparts.
+In general, a comm that is created directly by user code is called **primary**,
+and its counterpart whose creation is triggered by a `comm_open` message
+is called **secondary**.
 
-To register a callback with a target key, use:
+The target function will be passed two arguments: the connected Comm instance,
+and the `comm_open` message that opened the Comm.
 
-    CommManager.register_target('target', MyCommClass)
+To register a target function, use:
 
-This mechanism determines what objects can be created from the other side,
+    CommManager.register_target('target_name', MyCommClass)
+
+This mechanism determines what objects can be created from the other side via secondary comms,
 and functions as a whitelist.
 
-For instance, a Javascript plugin that defines a new comm will need to call this before
-any comms can be instantiated:
+For instance, a Javascript plugin that defines a new widget will need to call this before
+anything can be hooked up:
 
-    IPython.comm_manager.register_target('mycomm', my_js_func);
+    IPython.comm_manager.register_target('mywidget', my_js_func);
 
-The IPython Kernel equivalent is
+The IPython Kernel equivalent where the Kernel-side object is secondary would be:
 
-    get_ipython().comm_manager.register_target('mycomm', MyPythonComm)
+    get_ipython().comm_manager.register_target('mywidget', MyWidget)
+    
+Where MyWidget is just a class, whose constructor takes exactly two arguments.
 
 #### handlers
 
@@ -195,6 +200,10 @@ if any.
 In IPython, instantiating a Comm automatically registers the instance with the CommManager,
 and sends the `comm_open` message on the IOPub channel.
 So as soon as you have a Comm instance, it is ready to use.
+
+Each Widget HAS A Comm. Comms are simple and generic - when you develop a Widget,
+it should HAVE A Comm, and use it for communicating with its counterpart on the other side.
+Comms are not subclassed.
 
 ## Caveats
 

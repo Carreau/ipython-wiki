@@ -4,21 +4,30 @@
 <tr><td> Author </td><td> Zach Sailer &lt;zachsailer@gmail.com&gt;</td></tr>
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Created </td><td> April 4, 2013</td></tr>
-<tr><td> Updated </td><td> September 13, 2013</td></tr>
+<tr><td> Updated </td><td> October 18, 2013</td></tr>
 <tr><td> Discussion </td><td> <a href=https://github.com/ipython/ipython/issues/3166>#3166</a> </td></tr>
-<tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/3619>#3619</a> </td></tr>
+<tr><td> PR </td><td> <a href=https://github.com/ipython/ipython/pull/4303>#4303</a> </td></tr>
 
 </table>
 
-## Abstract ##
-This proposes a new web service API design which supports multi-directory navigation for the IPython Notebook. It frees the user to open notebooks in a different location than the server.
+## Abstract
 
-## Motivation ##
-Currently, it is not possible to open a notebooks in different directories under a single server. A notebook must be in the same location as the server if the user wants to open it. This prevents users from the ability to organize their notebooks into different subdirectories. It should be possible navigate to any notebook in a subdirectory under a single server.
+This proposes a new web service API design which supports multi-directory navigation for the
+IPython Notebook. It frees the user to open notebooks in a different location than the server.
 
-On the development side of things, the current Notebook web service needs some standardizationand reorganization. Providing consistent messaging and error handling between the client and server will simplify the web services and make future development/growth easier.
+## Motivation
+
+Currently, it is not possible to open a notebooks in different directories under a single server. A
+notebook must be in the same location as the server if the user wants to open it. This prevents
+users from the ability to organize their notebooks into different subdirectories. It should be
+possible navigate to any notebook in a subdirectory under a single server.
+
+On the development side of things, the current Notebook web service needs some standardization and
+reorganization. Providing consistent messaging and error handling between the client and server
+will simplify the web services and make future development/growth easier.
 
 ## Summary of the changes
+
 The following list describes a quick overview of the changes made by this proposal.
 
 * Notebooks are no longer identified by an immutable UUID. Instead, they are tracked by their name and file-system path (relative to server's location). 
@@ -29,393 +38,752 @@ The following list describes a quick overview of the changes made by this propos
 * The URL mapping is adjusted to reflect the new APIs and multidirectory support.
 
 ## IPython URL Mapping
-The URL is adjusted for the removal of the notebook IDs. It will display the name and path (relative to server's location) of the notebook. With the reorganization of the web services, new arguments are added to the URL to call the correct API. The API URLs can be seen in the [IPython web services](#ipython_web_service) section below. This new mapping to a specific notebook is dynamic and can change with notebook rename. The current URL mapping for IPython notebook can be found [here]( https://github.com/ipython/ipython/wiki/Dev%3A-URL-mapping-of-IPython-notebook). 
 
-The chart below shows the new URL scheme for the dashboard and notebooks (seen by users). Notice the leading arguments ```tree``` (for the dashboard) and ```notebooks``` (for notebooks).
+The URL is adjusted for the removal of the notebook IDs. It will display the name and path
+(relative to server's location) of the notebook. With the reorganization of the web services, new
+arguments are added to the URL to call the correct API. The API URLs can be seen in the [IPython
+web services](#ipython_web_service) section below. This new mapping to a specific notebook is
+dynamic and can change with notebook rename. The current URL mapping for IPython notebook can be
+found [here]( https://github.com/ipython/ipython/wiki/Dev%3A-URL-mapping-of-IPython-notebook).
+
+The chart below shows the new URL scheme for the dashboard and notebooks (seen by users).
+Note the first element `tree` (for the dashboard) and `notebooks` (for notebooks).
 
 | HTTP verb | URL | Action |
 |:---:|:---:|:---|
 | ```GET``` | / | redirects to "/tree" URL |
 | ```GET``` | /tree | navigates user to dashboard at the top level directory of the current file system |
 | ```GET``` | /tree/foo/bar | navigates user to dashboard for the "foo/bar" directory |
-| ```GET``` | /tree/login | navigates to login page; if no user profile is defined, it navigates user to dashboard |
-| ```GET``` | /tree/logout | logs out of current profile, and navigates user to login page |
-| ```GET``` | /notebooks/foo/bar/\<notebook_name\> | go to live notebook view of the named notebook |
+| ```GET``` | /login | navigates to login page; if no user profile is defined, it navigates user to dashboard |
+| ```GET``` | /logout | logs out of current profile, and navigates user to login page |
+| ```GET``` | /notebooks/foo/bar/[:notebook_name] | go to live notebook view of the named notebook |
 
 <span id="ipython_web_service"></span>
 ## IPython web services
+
 The Notebook web service is organized into the APIs listed below. Each service handles all requests and returns the proper status code, JSON data, and URL redirects. 
 
 This documentation describes the JSON messaging structures for the multidirectory IPython Notebook. In handling HTTP request, we pass all information between the server and client using JSON standard models. Each standard model is shown at the beginning of the sections below. This format follows to the principles described in RESTful web-services.
 
 * Notebooks
     * [Create new notebook](#create_new_notebook)
-	* [List notebooks](#list_notebooks_in_dir)
-	* [Open an existing notebook](#open_named_nb)
-	* [Rename notebook](#change_nb_model)
+    * [Upload a notebook](#upload_notebook)
+    * [Copy a notebook](#copy_notebook)
+    * [List notebooks](#list_notebooks_in_dir)
+    * [Open an existing notebook](#open_named_nb)
+    * [Rename notebook](#change_nb_model)
     * [Save notebook](#save_notebook)
-	* [Delete notebook](#delete_nb)
-* Sessions
-	* [List sessions](#list_sessions)
-	* [Create session](#create_session)
-	* [Get session information](#get_session)
-	* [Change session](#change_session)
-	* [Delete a session/kill kernel](#delete_session)
+    * [Delete notebook](#delete_nb)
+    * [List checkpoints](#list_cp)
+    * [Create a checkpoint](#create_cp)
+    * [Restore from a checkpoint](#restore_cp)
+    * [Delete a checkpoint](#delete_cp)
 * Kernels
-	* [List active kernels](#list_kernels)
-	* [Start a kernel](#start_kernel)
-	* [Shutdown a kernel](#shutdown_kernel)
+    * [List active kernels](#list_kernels)
+    * [Get kernel information](#get_kernel)
+    * [Start a kernel](#start_kernel)
+    * [Shutdown a kernel](#shutdown_kernel)
+    * [Interrupt a kernel](#interrupt_kernel)
+    * [Restart a kernel](#restart_kernel)
+* Sessions
+    * [List sessions](#list_sessions)
+    * [Create session](#create_session)
+    * [Get session information](#get_session)
+    * [Change session](#change_session)
+    * [Delete a session/kill kernel](#delete_session)
 
 <span id='list_notebook_root'></span>
 ### Notebooks API
-This web-service handles all HTTP requests on ".ipynb" files. The standard notebooks model in JSON is shown below. The `content` field is not always included in the notebook model because of the weight it can carry. It is typically included when the client makes a request for a particular notebook.
 
-	{
-		"name": "Untitled0.ipynb",
-		"path": "/",
-		"modified": "date",
-        "content":{
-			"metadata":{},
-			"nbformat": 3,
-			"nbformat_minor": 0,
-			"worksheets": []
-		}
-	}	
+This web-service handles all HTTP requests on ".ipynb" files. The full notebook model in JSON is shown below. The `content` field is not always included in the notebook model because of the weight it can carry. It is typically included when the client makes a request for a particular notebook.
+
+```json
+{
+    "name": "My Notebook.ipynb",
+    "path": "foo/bar",
+    "created": "2013-10-01T14:22:36.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00",
+    "content":{
+        "metadata":{},
+        "nbformat": 3,
+        "nbformat_minor": 0,
+        "worksheets": []
+    }
+}
+```
+
+**Note about paths:** When a `path` key appears in the RESTful API,
+it is always the path relative to the root notebook server directory.
+In replies from the notebook server, this path SHALL NOT start with '/',
+and SHALL NOT end with '/'.
+In requests to the server, it SHOULD NOT start or end with '/'.
+The path separator MUST BE '/', it is not platform dependent.
+The path SHALL BE unicode, not url-escaped.
+
+Some requests (notably resource creation via POST / PUT requests) set a Location header.
+This value will be the url-escaped path, not the unicode path.
+
+#### Only the server will provide a complete model
+
+Client requests will never specify a whole model.
+They will only specify those values that should indicate a change.
+
+The timestamps in the notebook model are read-only.
+A request to the server to update or upload a notebook model
+should never contain the timestamp keys (they will be ignored).
+
+Since the `path` and `name` are specified in the URL,
+these keys are generally omitted from requests as well.
+The one exception being saving an existing notebook to a new location,
+in which case the *new* name and path are given in the model,
+and the current name and path are in the URL.
 
 <span id='create_new_notebook'></span>
-#### Create new notebook ####
-Creates a new notebook and names it "Untitled#.ipynb" with an incremented number.
+#### Create new notebooks
 
-	POST /api/foo/bar/notebooks
-	
-##### Response #####
-Status: <font color="red">201  Created</font> 
+POST always creates a new notebook. There are a few ways to create notebooks:
+[simple creation](#create_new_notebook), [uploading](#upload_notebook),
+and [copying existing notebooks](#copy_notebook).
+In each case, POST requests are always made to a directory URL,
+in which case the server picks the new notebook's name.
+If you want to specify the new notebook's name, make a PUT request to the full path URL.
 
-Location: /api/notebooks/foo/bar/Untitled0.ipynb
+Creates a new notebook. If a POST, the name will be the first unused name of the form `"Untitled#.ipynb"`, with the first available integer.
 
-	{
-		"name": "Untitled0.ipynb",
-		"path": "/foo/bar/",
-		"modified": "date"
-	}
+    POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
+
+##### Response
+
+    status: 201 Created
+    Location: /api/notebooks/foo/bar/Untitled0.ipynb
+
+```json
+{
+    "name": "Untitled0.ipynb",
+    "path": "foo/bar",
+    "created": "2013-09-01T09:15:14.12345+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+}
+```
+
+<span id='upload_notebook'></span>
+#### Upload a notebook
+
+Uploads a new notebook to `path`. If a POST, the name will be the first unused name of the form `"Untitled#.ipynb"`.
+
+    POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
+
+##### Input
+
+<dl>
+    <dt>content</dt>
+    <dd>The actual notebook structure</dd>
+</dl>
+
+Example:
+
+```json
+{
+    "content": {
+        "metadata":{},
+        "nbformat": 3,
+        "nbformat_minor": 0,
+        "worksheets": []
+    }
+}
+```
+
+##### Response
+
+    status: 201 Created
+    Location: /api/notebooks/foo/bar/MyNotebook.ipynb
+
+```json
+{
+    "name": "MyNotebook.ipynb",
+    "path": "foo/bar",
+    "created": "2013-09-01T09:15:14.12345+00:00",
+    "modified": "2013-09-01T09:15:14.12345+00:00"
+}
+```
+
+
+<span id='copy_notebook'></span>
+#### Copy a notebook
+
+Create a new notebook from a copy of an existing notebook.
+If POST, the new notebook will have a name of the form `{copy_from}-Copy#.ipynb`,
+with the first available integer.
+
+    POST /api/notebooks/[:path]
+    PUT /api/notebooks/[:path]/[:name.ipynb]
+
+##### Input
+
+<dl>
+    <dt>copy_from</dt>
+    <dd>The notebook name to copy from</dd>
+</dl>
+
+Example:
+
+```json
+{
+    "copy_from" : "MyNotebook.ipynb"
+}
+```
+
+##### Response
+
+    status: 201 Created
+    Location: /api/notebooks/foo/bar/MyNotebook-Copy0.ipynb
+
+```json
+{
+    "name": "MyNotebook-Copy0.ipynb",
+    "path": "foo/bar",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-09-01T09:15:14.12345+00:00"
+}
+```
 
 <span id='list_notebooks_in_dir'></span>
-#### List notebooks ####
-Returns a list of standard notebook models in the "/foo/bar/" directory.
+#### List notebooks
 
-	GET /api/notebooks/foo/bar/
+Returns a list of notebook models in the directory `path`.
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+    GET /api/notebooks/[:path]
 
+##### Response
 
-	[	
-		{
-			"name": "notebook1.ipynb",
-			"path": "/foo/bar/",
-			"modified": "date"
-		},
-		{
-			"name": "notebook2.ipynb",
-			"path": "/foo/bar/",
-			"modified": "date"
-		}
-	]
+    status: 200 OK
+
+```json
+[
+    {
+        "name": "notebook1.ipynb",
+        "path": "foo/bar",
+        "created": "2013-10-01T12:21:20.123456+00:00",
+        "modified": "2013-10-02T11:29:27.616675+00:00"
+    },
+    {
+        "name": "notebook2.ipynb",
+        "path": "foo/bar",
+        "created": "2013-10-01T12:21:20.123456+00:00",
+        "modified": "2013-10-02T11:29:27.616675+00:00"
+    }
+]
+```
 
 <span id='open_named_nb'></span>
-#### Open an existing notebook ####
-Returns the standard notebook model for that named notebook and "content" value is used to display the html representation of the notebook:
+#### Open an existing notebook
 
-	GET /api/notebooks/foo/bar/notebook1.ipynb
+Returns the notebook model for a given notebook path, including the full document content.
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+    GET /api/notebooks/[:path]/[:name.ipynb]
 
-	{
-		"name": "notebook1.ipynb",
-		"path": "/foo/bar/",
-		"modified": "date",
-		"created": "date",
-		"content":{
-			"metadata":{},
-			"nbformat": 3,
-			"nbformat_minor": 0,
-			"worksheets": []
-		}
-	}
+##### Response
+
+    status: 200 OK
+
+```json
+{
+    "name": "notebook1.ipynb",
+    "path": "foo/bar",
+    "modified": "2013-10-02T11:29:27.616675+00:00",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "content":{
+        "metadata": {},
+        "nbformat": 3,
+        "nbformat_minor": 0,
+        "worksheets": []
+    }
+}
+```
 
 <span id='change_nb_model'></span>
-#### Rename notebook ####
-This requests renames the notebook and returns the adjusted standard model.
+#### Rename notebook
 
-	PATCH /api/notebooks/foo/bar/notebook1.ipynb
+This request renames the notebook and returns the updated model without content.
 
-##### Input ####
-*name:* new name to be used for rename.
+    PATCH /api/notebooks/[:path]/[:name.ipynb]
 
-    {
-        "name": new_name.ipynb
-    }
+##### Input
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+<dl>
+    <dt>name</dt>
+    <dd>The new notebook filename (e.g. `notebook.ipynb`)</dd>
+    <dt>path</dt>
+    <dd>The new notebook path (e.g. `foo/bar`)</dd>
+</dl>
 
-Location: /api/notebooks/foo/bar/Untitled0.ipynb
+##### Response
 
-	{
-		"name": "notebook1.ipynb",
-		"path": "/foo/bar/",
-		"modified": "new_date"
-	}
+    status: 200 OK
+    Location: /api/notebooks/foo/bar/notebook1.ipynb
+
+```json
+{
+    "name": "notebook1.ipynb",
+    "path": "foo/bar",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-04T14:32:19.123456+00:00"
+}
+```
 
 <span id='save_notebook'></span>
-#### Save Notebook ####
-Takes the current notebook representation and saves it. Returns the standard model (without content field).
+#### Save Notebook
 
-	PUT /api/notebooks/foo/bar/notebook1.ipynb
+Update an existing notebook in-place. This is how standard saves are performed.
+If the path and/or name of the notebook are specified in the model,
+the notebook will be saved to the new location specified in the model.
+After doing this, future PUT requests must use the URL for the new path.
 
-##### Input #####
-*name:* notebook name.
+Returns the updated notebook model without content.
 
-*path:* relative path to the notebook.
+    PUT /api/notebooks/[:path]/[:name.ipynb]
 
-*modified:* new time and date for this save.
+##### Input
+<dl>
+    <dt>name</dt>
+    <dd>The new notebook name (`my notebook.ipynb`), if changed</dd>
+    <dt>path</dt>
+    <dd>The new path for the notebook, if changed</dd>
+    <dt>content</dt>
+    <dd>The actual body of the notebook document<dd>
+</dl>
 
-*content:* the notebook's body.
+Example:
 
-        {
-		"name": "notebook1.ipynb",
-		"path": "/foo/bar/",
-		"modified": "new_date"
-		"content":{
-			"metadata":{},
-			"nbformat": 3,
-			"nbformat_minor": 0,
-			"worksheets": []
-		}
-	}
+```json
+{
+    "name": "notebook1.ipynb",
+    "path": "foo/bar",
+    "content": {
+        "metadata":{},
+        "nbformat": 3,
+        "nbformat_minor": 0,
+        "worksheets": []
+    }
+}
+```
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+##### Response
 
-	{
-		"name": "notebook1.ipynb",
-		"path": "/foo/bar/",
-		"modified": "new_date"
-	}
+    status: 200 OK
 
+```json
+{
+    "name": "notebook1.ipynb",
+    "path": "foo/bar",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-04T14:32:19.123456+00:00"
+}
+```
 <span id='delete_nb'></span>
-#### Delete notebook ####
-Deletes the notebook's standard model from the named location.
+#### Delete notebook
 
-	DELETE /api/notebooks/foo/bar/notebook1.ipynb
+Deletes a notebook from the specified location.
 
-##### Response #####
-Status: <font color="red">204  No Content</font>
+    DELETE /api/notebooks/[:path]/[:name.ipynb]
+
+##### Response
+
+    status: 204 No Content
 
 
-### Sessions API ###
+<span id='list_cp'></span>
+#### List Checkpoints
 
-A session maps a notebook to a kernel. When a notebook is opened, a session is created and a kernel is started. The standard model for a session is shown below:
+List checkpoints for a given notebook. There will typically be zero or one results.
 
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "notebook1.ipynb", 
-		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
-	}
+    GET /api/notebooks/[:path]/[:name.ipynb]/checkpoints
 
-<span id='list_session'></span>
-#### List sessions ####
-Returns a list of standard session models for all currently running sessions.
+##### Response
 
-	GET /api/sessions
+    status: 200 OK
 
-##### Response #####
-Status: <font color="red">200  OK</font>
-
-	[
-		{
-			"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-			"name": "notebook1.ipynb", 
-			"path": "/foo/bar/",
-			"kernel": {
-				"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-				"ws_url": ""
-			}
-		},
-		{
-			"id": "b4dfa62c-0e91-4111-9d1f-0c59069c6602",
-			"name": "notebook1.ipynb", 
-			"path": "/foo/bar/",
-			"kernel": {
-				"id": "4adcb1a3-2e7f-4e82-af2e-d76f5815467a",
-				"ws_url": ""
-			}
-		}
-	]
-
-<span id='create_session'></span>
-#### Create session ####
-Creates a session (with a UUID) for the named notebook. Requires a JSON standard notebook model to be sent to the server before a session is created.
-
-	POST /api/sessions
-
-##### Input #####
-*name:* name of the notebook.
-
-*path:* relative path to the notebook.
-
-*modified:* time and date the the notebook was last modified.
-
-	{
-		"name": "Untitled0.ipynb",
-		"path": "/foo/bar/",
-		"modified": "date"
-	}
-
-##### Response #####
-Status: <font color="red">201  Created</font>
-
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "Untitled0.ipynb", 
-		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
-	}
-
-<span id='get_session'></span>
-#### Get Session information ####
-
-	GET /api/sessions/d7753a2c-14da-4ae9-95b8-7b96b11aebe7
-
-##### Response #####
-Status: <font color="red">200  OK</font>
-
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "notebook1.ipynb", 
-		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
-	}
-
-<span id='change_session'></span>
-#### Change session ####
-This can be used to rename the notebook, or move a file to a new directory.
-
-	PATCH /api/sessions/d7753a2c-14da-4ae9-95b8-7b96b11aebe7
-
-##### Input #####
-*name:* name of the notebook.
-
-*path:* relative path to the notebook.
-
-*modified:* time and date the the notebook was last modified.
-
+```json
+[
     {
-		"name": "Untitled0.ipynb",
-		"path": "/foo/bar/",
-		"modified": "date"
-	}
+        "id" : "checkpoint-id",
+        "last_modified" : "2013-10-18T23:54:40+00:00"
+    }
+]
+```
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+<span id='create_cp'></span>
+#### Create a Checkpoint
 
-	{
-		"id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
-		"name": "new_name.ipynb", 
-		"path": "/foo/bar/",
-		"kernel": {
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		}
-	}
+Create a new checkpoint with the current state of a notebook.
+With the default FileNotebookManager, only one checkpoint is supported,
+so creating new checkpoints clobbers existing ones.
 
-<span id='delete_session'></span>
-#### Delete a session and kill the kernel ####
-Deletes the sessions and kills the kernel held in the session.
+    POST /api/notebooks/[:path]/[:name.ipynb]/checkpoints
 
-	DELETE /api/sessions/d7753a2c-14da-4ae9-95b8-7b96b11aebe7
-	
-##### Response #####
-Status: <font color="red">204  No Content</font>
+##### Response
 
-### Kernels API ###
-This webservice managers all running kernels. The standard kernel model in JSON is shown below:
+    status: 201 Created
 
-	{
-		"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-		"ws_url": ""
-	}
+```json
+{
+    "id" : "checkpoint-id",
+    "last_modified" : "2013-10-18T23:54:40+00:00"
+}
+```
+
+<span id='restore_cp'></span>
+#### Restore to a Checkpoint
+
+Restore a notebook to a particular checkpointed state.
+
+    POST /api/notebooks/[:path]/[:name.ipynb]/checkpoints/[checkpoint_id]
+
+##### Response
+
+    status: 204 No Content
+
+
+<span id='delete_cp'></span>
+#### Delete a Checkpoint
+
+Delete a checkpoint.
+
+    DELETE /api/notebooks/[:path]/[:name.ipynb]/checkpoints/[checkpoint_id]
+
+##### Response
+
+    status: 204 No Content
+
+
+### Kernels API
+
+This webservice manages all running kernels. The kernel model in JSON is shown below:
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
 
 <span id='list_kernels'></span>
-#### List kernels ####
+#### List kernels
+
 Lists the JSON data for all kernels currently running.
 
-	GET /api/kernels
+    GET /api/kernels
 
-##### Response #####
-Status: <font color="red">200  OK</font>
+##### Response
 
-	[
-		{
-			"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-			"ws_url": ""
-		},
-		{
-			"id": "4f567fb0-2455-4bc9-a137-69daac27e9a2",
-			"ws_url": ""
-		}
-	]
+    status: 200 OK
+
+```json
+[
+    {
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+        "ws_url": ""
+    },
+    {
+        "id": "4f567fb0-2455-4bc9-a137-69daac27e9a2",
+        "ws_url": ""
+    }
+]
+```
+<span id='get_kernel'></span>
+#### Get kernel information
+
+    GET /api/kernels/[:kernel_id]
+
+##### Response
+
+    status: 200 OK
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
 
 <span id='start_kernel'></span>
-#### Start a kernel ####
+#### Start a kernel
 Start an IPython kernel and create a UUID for the kernel. 
 
-	POST /api/kernels
+    POST /api/kernels
 
-##### Response #####
-Status: <font color="red">201  Created</font>
+##### Response
 
-	{
-		"id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-		"ws_url": ""
-	}
+    status: 201 Created
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
 
 <span id='shutdown_kernel'></span>
-#### Shutdown the kernel ####
+#### Shutdown the kernel
 Kills the kernel and deletes the ID. 
 
-	DELETE /api/kernels/0899e220-ab81-43c2-a97a-ff1af4118598
+    DELETE /api/kernels/[:kernel-id]
 
-##### Response #####
-Status: <font color="red">204  No Content</font>
+##### Response
+
+    status: 204 No Content
+
+<span id='interrupt_kernel'></span>
+#### Interrupt a kernel
+Send a SIGINT to the kernel process.
+
+    POST /api/kernels/[:kernel_id]/interrupt
+
+##### Response
+
+    status: 204 No Content
+
+<span id='restart_kernel'></span>
+#### Restart a kernel
+Kill and restart a kernel, preserving the ID.
+
+    POST /api/kernels/[:kernel_id]/restart
+
+##### Response
+
+    status: 200 OK
+    Location: /api/kernels/b7e1a137-a434-4598-846e-ee51fb06c306
+
+```json
+{
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+    "ws_url": ""
+}
+```
+
+### Sessions API
+
+A session maps a notebook to a kernel. When a notebook is opened in the Web Notebook,
+a session is created and a kernel is started. The model for a session:
+
+```json
+{
+    "id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+    "notebook": {
+        "name": "notebook1.ipynb", 
+        "path": "foo/bar",
+    }
+    "kernel": {
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+        "ws_url": ""
+    }
+}
+```
+
+<span id='list_sessions'></span>
+#### List sessions
+Returns a list of all currently running sessions.
+
+    GET /api/sessions
+
+##### Response
+
+    status: 200 OK
+    
+```json
+[
+    {
+        "id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+        "notebook": {
+            "name": "notebook1.ipynb", 
+            "path": "foo/bar",
+        }
+        "kernel": {
+            "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+            "ws_url": ""
+        }
+    },
+    {
+        "id": "b4dfa62c-0e91-4111-9d1f-0c59069c6602",
+        "notebook": {
+            "name": "notebook1.ipynb", 
+            "path": "foo/bar",
+        }
+        "kernel": {
+            "id": "4adcb1a3-2e7f-4e82-af2e-d76f5815467a",
+            "ws_url": ""
+        }
+    }
+]
+```
+
+<span id='create_session'></span>
+#### Create a Session
+
+Creates a new Session for a given notebook.
+
+    POST /api/sessions
+
+##### Input
+<dl>
+    <dt>notebook</dt>
+    <dd>
+        <dl>
+            <dt>name</dt>
+            <dd>The filename of the notebook</dd>
+            <dt>path</dt>
+            <dd>Path to the notebook's directory</dd>
+        </dl>
+    </dd>
+</dl>
+
+Example:
+
+```json
+{
+    "notebook" : {
+        "name": "Untitled0.ipynb",
+        "path": "foo/bar"
+    }
+}
+```
+
+##### Response
+
+    status: 201 Created
+
+```json
+{
+    "id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+    "notebook": {
+        "name": "Untitled0.ipynb", 
+        "path": "foo/bar",
+    },
+    "kernel": {
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+        "ws_url": ""
+    }
+}
+```
+
+<span id='get_session'></span>
+#### Get Session information
+
+    GET /api/sessions/[:session_id]
+
+##### Response
+
+    status: 200 OK
+
+```json
+{
+    "id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+    "notebook": {
+        "name": "Untitled0.ipynb",
+        "path": "foo/bar",
+    },
+    "kernel": {
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+        "ws_url": ""
+    }
+}
+```
+
+<span id='change_session'></span>
+#### Change session
+This can be used to rename the notebook, or move it to a new directory.
+
+    PATCH /api/sessions/[:session_id]
+
+##### Input
+
+<dl>
+    <dt>notebook</dt>
+    <dd>
+        <dl>
+            <dt>name</dt>
+            <dd>The new filename of the notebook</dd>
+            <dt>path</dt>
+            <dd>Path to the notebook's new directory</dd>
+        </dl>
+    </dd>
+</dl>
+
+Example:
+
+```json
+{
+    "notebook" : {
+        "name": "Untitled0.ipynb",
+        "path": "foo/bar"
+    }
+}
+```
+
+
+##### Response
+
+    status: 200 OK
+
+```json
+{
+    "id": "d7753a2c-14da-4ae9-95b8-7b96b11aebe7",
+    "notebook": {
+        "name": "new_name.ipynb", 
+        "path": "foo/bar",
+    },
+    "kernel": {
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
+        "ws_url": ""
+    }
+}
+```
+
+
+<span id='delete_session'></span>
+#### Delete a session
+
+Deleting a session terminates the session's kernel, and removes the session mapping.
+
+    DELETE /api/sessions/[:session_id]
+    
+##### Response
+
+    status: 204 No Content
 
 ## Things to Consider for the future
 
 ### "Contents"
-The notebook dashboard only shows '.ipynb' files. In the future, we'd like to show all files in a current directory and open them in an editor-like environment. Also, we need a web service which handles all creation and deletion of folders. This IPEP doesn't include these capabilites yet, but it is something we'd like to do. 
+
+The notebook dashboard only shows '.ipynb' files. In the future, we'd like to show all files in a
+current directory and open them in an editor-like environment. Also, we need a web service which
+handles all creation and deletion of folders. This IPEP doesn't include these capabilities yet, but
+it is something we'd like to do.
 
 ### "Projects" 
 
-The second thing to consider is the notion of ```projects```. A project is analogous to a repository on Github, where all files, notebooks, and sub-directores are located inside the project's file system. This IPEP only proposes implementing the ability to navigate through a hierarchical file system within a single project. When the server launches under this implementation, a dashboard opens at the top-level directory of a project (i.e. $HOME). The user can move through parent directories and sub-directories within this project, but cannot switch projects in the current server. They must relauch a server in the new project's location on their file system.
+The second thing to consider is the notion of ```projects```. A project is analogous to a
+repository on Github, where all files, notebooks, and sub-directories are located inside the
+project's file system. This IPEP only proposes implementing the ability to navigate through a
+hierarchical file system within a single project. When the server launches under this
+implementation, a dashboard opens at the top-level directory of a project (i.e. $HOME). The user
+can move through parent directories and sub-directories within this project, but cannot switch
+projects in the current server. They must relaunch a server in the new project's location on their
+file system.
 
-In the future, we would like to give the notebook the ability to switch between and create new projects on a single server. This will require small adjustments to this proposed URL scheme. The goal would be to create a new top-level "projects page" where the user's projects are listed. When one is clicked, the page is directed to the normal dashboard described above, with the project's file system of notebooks, sub-directories, and other files. 
+In the future, we would like to give the notebook the ability to switch between and create new
+projects on a single server. This will require small adjustments to this proposed URL scheme. The
+goal would be to create a new top-level "projects page" where the user's projects are listed. When
+one is clicked, the page is directed to the normal dashboard described above, with the project's
+file system of notebooks, sub-directories, and other files.
 
 
-## See the PR for this IPEP ##
+## See the PR for this IPEP
 
-Go to the PR [#3619](https://github.com/ipython/ipython/pull/3619).
+Go to the PR [#4303](https://github.com/ipython/ipython/pull/4303).
 
-## See discussion about this IPEP ##
+## See discussion about this IPEP
 
-Go to the IPEP 16 ~ issue #3166 [here](https://github.com/ipython/ipython/issues/3166).
+Go to the IPEP 16 discussion issue [#3166](https://github.com/ipython/ipython/issues/3166).

@@ -15,6 +15,7 @@ This wiki contains:
   - [Summer 2013 development meeting](wiki/Dev:-Meeting,-July-2013)
   - [PyCon 2012](wiki/Sprints:-PyCon2012)
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
+  - [PyData 2012 HackNight](wiki/PyData-2012-HackNight)
 * The IPython [Extensions Index](wiki/Extensions-Index)
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
 * [[A gallery of interesting IPython Notebooks]]

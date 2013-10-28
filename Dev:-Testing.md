@@ -323,6 +323,91 @@ problem at hand, since both work):
       yield is_smaller(x, y)
 ```
 
+### JavaScript Tests
+
+We currently use [casperjs](http://casperjs.org/) for testing the notebook
+javascript user interface.
+
+To run the JS test suite by itself, you can either use ``iptest js``, which will
+start up a new notebook server and test against it, or you can open up a
+notebook server yourself, and then:
+
+    cd IPython/html/tests/casperjs;
+    casperjs test --includes=util.js test_cases
+
+If your testing notebook server uses something other than the default port
+(8888), you will have to pass that as a parameter to the test suite as well.
+    
+    casperjs test --includes=util.js --port=8889 test_cases
+
+#### Running individual tests
+
+To speed up development, you usually are working on getting one test passing at
+a time. To do this, just pass the filename directly to the ``casperjs test``
+command like so:
+
+    casperjs test --includes=util.js  test_cases/execute_code_cell.js
+
+#### Wrapping your head around the javascript within javascript:
+
+CasperJS is a browser that's written in javascript, so we write javascript code
+to drive it. The Casper browser itself also has a javascript implementation
+(like the ones that come with Firefox and Chrome), and in the test suite we get
+access to those using `this.evaluate`, and it's cousins (`this.theEvaluate`,
+etc). Additionally, because of the asynchronous / callback nature of everything,
+there are plenty of ``this.then`` calls which define steps in test suite. Part
+of the reason for this is that each step has a timeout (default of 5 or 10
+seconds). Additionally, there are already convenience functions in ``util.js``
+to help you wait for output in a given cell, etc. In our javascript tests, if
+you see functions which ``look_like_pep8_naming_convention``, those are probably
+coming from ``util.js``, whereas functions that come with casper
+``haveCamelCaseNamingConvention``
+
+Each file in ``test_cases``  looks something like this (this is
+``test_cases/check_interrupt.js``):
+
+    casper.notebook_test(function () {
+        this.evaluate(function () {
+            var cell = IPython.notebook.get_cell(0);
+            cell.set_text('import time\nfor x in range(3):\n    time.sleep(1)');
+            cell.execute();
+        });
+
+
+        // interrupt using menu item (Kernel -> Interrupt)
+        this.thenClick('li#int_kernel');
+
+        this.wait_for_output(0);
+
+        this.then(function () {
+            var result = this.get_output_cell(0);
+            this.test.assertEquals(result.ename, 'KeyboardInterrupt', 'keyboard interrupt (mouseclick)');
+        });
+
+        // run cell 0 again, now interrupting using keyboard shortcut
+        this.thenEvaluate(function () {
+            cell.clear_output();
+            cell.execute();
+        });
+
+        // interrupt using Ctrl-M I keyboard shortcut
+        this.thenEvaluate( function() {
+            IPython.utils.press_ghetto(IPython.utils.keycodes.I)
+        });
+        
+        this.wait_for_output(0);
+        
+        this.then(function () {
+            var result = this.get_output_cell(0);
+            this.test.assertEquals(result.ename, 'KeyboardInterrupt', 'keyboard interrupt (shortcut)');
+        });
+    });
+
+For an example of how to pass parameters to the client-side javascript from
+casper test suite, see the ``casper.wait_for_output`` implementation in
+``IPython/html/tests/casperjs/util.js``
+
+
 ## Testing system design notes
 
 This section is a set of notes on the key points of the IPython testing needs,

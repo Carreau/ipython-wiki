@@ -24,7 +24,7 @@ This wiki contains:
 
 # Editing the wiki
 
-Here are a some general guidelines on editing this wiki:
+Here are some general guidelines on editing this wiki:
 
 * **All new pages should use Markdown.**
 * We are using pseudo-namespaces to organize pages.  This is accomplished by using prefixes for the page names, such as "Dev: The perfect pull request". Example prefixes are: "Dev", "Cookbook", "Install", "Roadmap", "Sprints", "IPEP", etc. **Please use appropriate prefixes for the pages you create.**

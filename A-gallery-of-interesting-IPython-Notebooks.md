@@ -35,6 +35,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Understanding model reliability](http://nbviewer.ipython.org/urls/raw.github.com/mwaskom/Psych216/master/week6_tutorial.ipynb), part of a complete [course on statistics and data analysis for psychologists](https://github.com/mwaskom/Psych216) by [Mike Waskom](https://github.com/mwaskom).
 
+* [Neural Networks](http://nbviewer.ipython.org/urls/raw.github.com/masinoa/machine_learning/master/04_Neural_Networks.ipynb), part of a collection on [machine learning](https://github.com/masinoa/machine_learning) by [Aaron Masino](https://github.com/masinoa).
+
 * [Mining the Social Web (2nd Edition)](https://github.com/ptwobrussell/Mining-the-Social-Web-2nd-Edition). A complete collection of notebooks accompanying [Matthew Russel's book](http://shop.oreilly.com/product/0636920030195.do) by O'Reilly.
 
 * [Find graffitis close to NY subway entrances](http://nbviewer.ipython.org/urls/raw.github.com/invisibleroads/crosscompute-tutorials/master/300%20Count%20graffiti%20sightings%20within%20100%20feet%20of%20a%20subway%20entrance.ipynb), one of a rich [collection of notebooks on large-scale data analysis](https://github.com/invisibleroads/crosscompute-tutorials), by [Roy Hyunjin Han](https://github.com/invisibleroads).
@@ -44,6 +46,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 * [CFD Python: 12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes). A complete set of lectures on CFD, from 1-d linear waves to full 2-d Navier-Stokes, by [Lorena Barba](http://lorenabarba.com).
 
 * [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), a tutorial series aimed at the Earth Sciences community, by [Nikolay Koldunov](http://earthpy.org/author/nikolay-koldunov.html).
+
+* [Python for Data Science](https://github.com/ResearchComputing/Meetup-Fall-2013), an introductory collection from the [CU Boulder Research Computing Group](https://github.com/ResearchComputing).
 
 * [The Kaggle bulldozers competition example](http://danielfrg.github.io/blog/2013/03/07/kaggle-bulldozers-basic-cleaning), one of a set on tutorials on exploratory data analysis with the [copper toolkit](https://github.com/danielfrg/copper#copper) by [Daniel Rodríguez](http://danielfrg.github.io).
 

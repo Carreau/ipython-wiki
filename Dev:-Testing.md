@@ -293,36 +293,6 @@ This function is only analyzed for its docstring but it is not considered a
 separate test, which is why its body should be empty.
 
 
-### Parametric tests done right
-
-If you need to run multiple tests inside the same standalone function or method
-of a `unittest.TestCase` subclass, IPython provides the `parametric`
-decorator for this purpose.  This is superior to how test generators work in
-nose, because IPython's keeps intact your stack, which makes debugging vastly
-easier.  For example, these are some parametric tests both in class form and as
-a standalone function (choose in each situation the style that best fits the
-problem at hand, since both work):
-
-```python
-  from IPython.testing import decorators as dec
-
-  def is_smaller(i,j):
-      assert i<j,"%s !< %s" % (i,j)
-
-  class Tester(ParametricTestCase):
-
-      def test_parametric(self):
-	  yield is_smaller(3, 4)
-	  x, y = 1, 2
-	  yield is_smaller(x, y)
-
-  @dec.parametric
-  def test_par_standalone():
-      yield is_smaller(3, 4)
-      x, y = 1, 2
-      yield is_smaller(x, y)
-```
-
 ### JavaScript Tests
 
 We currently use [casperjs](http://casperjs.org/) for testing the notebook

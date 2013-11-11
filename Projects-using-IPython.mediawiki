@@ -48,6 +48,8 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * The [http://www.ampl.com/ AMPL] modeling system for large-scale mathematical optimization can integrate with IPython with the help of AMPL magics provided by the [https://github.com/vitaut/iampl IAMPL] project.
 
+* [http://www.qiime.org QIIME] (canonically pronounced "chime") stands for Quantitative Insights Into Microbial Ecology. QIIME is an open source software package for comparison and analysis of microbial communities, primarily based on high-throughput amplicon sequencing data (such as SSU rRNA) generated on a variety of platforms, but also supporting analysis of other types of data (such as shotgun metagenomic data).
+
 == In teaching ==
 
 * The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/blog/2013/03/using-notebook-as-a-teaching-tool.html uses the IPython Notebook as one of its core technologies].
@@ -58,7 +60,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * Tom Softbaugh's [http://www.softbaugh.com/courses/python1/ Software development in Python] course.
 
-
+* [http://www.qiime.org QIIME] [https://docs.google.com/spreadsheet/ccc?key=0AvglGXLayhG7dDB2UFBXcW5Vd1VFT25fWWRtVUprclE&usp=drive_web#gid=0 Workshops] are taught using tutorials written to run using IPython Notebooks.
 
 == Web frameworks and other systems ==
 

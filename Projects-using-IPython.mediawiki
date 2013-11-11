@@ -50,6 +50,9 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * [http://www.qiime.org QIIME] (canonically pronounced "chime") stands for Quantitative Insights Into Microbial Ecology. QIIME is an open source software package for comparison and analysis of microbial communities, primarily based on high-throughput amplicon sequencing data (such as SSU rRNA) generated on a variety of platforms, but also supporting analysis of other types of data (such as shotgun metagenomic data).
 
+* [https://github.com/klusta-team/klustaviewa KlustaViewa] is a Python GUI software for the manual step of spike sorting, which aims at extracting spiking activity from raw extracellular multielectrode recordings. An IPython console can be opened in the program to let the user perform his own analyses on the data.
+
+
 == In teaching ==
 
 * The Software Carpentry Project, led by Greg Wilson, [http://software-carpentry.org/blog/2013/03/using-notebook-as-a-teaching-tool.html uses the IPython Notebook as one of its core technologies].

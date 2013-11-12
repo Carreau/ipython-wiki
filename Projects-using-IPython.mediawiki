@@ -63,7 +63,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 
 * Tom Softbaugh's [http://www.softbaugh.com/courses/python1/ Software development in Python] course.
 
-* [http://www.qiime.org QIIME] [https://docs.google.com/spreadsheet/ccc?key=0AvglGXLayhG7dDB2UFBXcW5Vd1VFT25fWWRtVUprclE&usp=drive_web#gid=0 Workshops] are taught using tutorials written to run using IPython Notebooks.
+* [http://www.qiime.org QIIME] Workshops are taught using tutorials written to run using IPython Notebooks.
 
 == Web frameworks and other systems ==
 

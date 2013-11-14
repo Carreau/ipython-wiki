@@ -5,6 +5,7 @@
 <tr><td> Updated </td><td> November 13, 2013</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3190">PR 3190</a> </td></table>
 
+See also: [[IPEP 24: completion and object_info]] for updates to completion and object_info
 
 We've learned a lot in our first 18 months with the message spec,
 and we got a remarkable amount right.
@@ -171,10 +172,12 @@ gracefully degrade, simply losing some layout information, but no data.
 
 ## user\_expressions / user\_variables
 
+Since variable names are expressions, user_variables will be removed,
+and only user_expressions remaining.
+
 The `user_expressions` and `user_variables` keys in an `execute_request`
 currently only support plaintext reprs, and have bad custom representations of errors.
 These should simply use the display protocol, and the `status: error` behavior used everywhere else.
-
 
 ## multiple objects
 
@@ -194,5 +197,14 @@ Perhaps the JSON reprs / jsplugins are going to be the only way to do this sort 
 
 ## payload keys
 
+payload keys
 Currently, display payloads list the full object path of the source, which doesn't make any sense.
 It should be a simple identifier, so that moving the implementation does not need to be reflected in the frontend.
+
+## headers
+
+message headers will have the protocol version (5.0 as of IPython 2.0) as a string.
+
+## kernel_info
+
+version keys in `kernel_info_reply` messages will be strings, not `version_info`-style lists.

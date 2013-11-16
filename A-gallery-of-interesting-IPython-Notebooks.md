@@ -117,6 +117,8 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/urls/raw.github.com/fonnesbeck/multilevel_modeling/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
 
+* [Bayesian data analysis with PyMC3](http://nbviewer.ipython.org/urls/raw.github.com/twiecki/pymc3_talk/master/bayesian_pymc3.ipynb) by [Thomas Wiecki](https://github.com/twiecki).
+
 * [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/urls/raw.github.com/arokem/teach_optimization/master/optimization.ipynb) by Ariel Rokem.
 
 * [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/urls/raw.github.com/jonasnick/ReceptiveFields/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.

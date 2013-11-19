@@ -150,22 +150,25 @@ You could wrap this little sys.displayhook dance in a utility function to ease t
 Q. Can IPython run under IronPython?
 ------------------------------------
 
-**Answer**: Yes but at the moment it is a bit of effort.
+**Answer**: Yes it is still a bit of effort.
 
-- download `IronPython 2.7.4 Alpha 1`_
+- download `IronPython 2.7.4`_
 - add your ``C:/Program Files/IronPython 2.7`` folder into PATH
-- download pyreadline from here_, install from source: ``ipy setup.py install``
-- download latest *development* version of ipython_, install from source: ``ipy setup.py install``
+- download `modified pyreadline`_ install from source: ``ipy setup.py install``
+- download ipython_ (1.0 or 1.1), install from source: ``ipy setup.py install``
 - replace ``C:/Program Files/IronPython/Lib/site-packages/IPython/external/pexpect/_pyexpect.py`` with one from ``https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py``
 - make sure you HOME environment variable is set to something reasonable
 - start: ``ipy.exe -X:Frames "c:/Program Files/IronPython 2.7/Scripts/ipython"``
 
 Note: it does not work with cygwin terminal
 
-.. _IronPython 2.7.4 Alpha 1: https://ironpython.codeplex.com/releases/view/106471
-.. _here: https://github.com/paweljasinski/pyreadline/archive/master.zip
-.. _ipython: https://github.com/ipython/ipython/archive/master.zip
+There is also a bug fix which didn't make to the 2.7.4. Either you need to rebuild `2.7.4 from sources`_ or modify ipython as suggested_.
 
+.. _IronPython 2.7.4: http://ironpython.codeplex.com/downloads/get/723206
+.. _modified pyreadline: https://github.com/paweljasinski/pyreadline/archive/master.zip
+.. _ipython: https://github.com/ipython/ipython/archive/master.zip
+.. _suggested: https://github.com/ipython/ipython/issues/4062
+.. _2.7.4 from sources: https://github.com/IronLanguages/main/tree/ipy-2.7-maint
 
 Q. I'm really interested still but my question isn't here... where can I get support for specific problems?
 ---------------

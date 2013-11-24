@@ -205,6 +205,8 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * [The Design Impact of Multiple Dispatch](http://nbviewer.ipython.org/b8fe9dbb36c1427b9f22), a detailed explanation of Julia's multiple dispatch design, by [Stefan Karpinski](https://github.com/StefanKarpinski).
 
+* A demonstration and tutorial on making [interactive graphs with Plotly and Julia](http://nbviewer.ipython.org/7551139).
+
 ## Ruby notebooks
 
 Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.

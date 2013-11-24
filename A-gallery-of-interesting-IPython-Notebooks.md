@@ -76,9 +76,9 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/urls/raw.github.com/twiecki/CythonGSL/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* A [Plotly tutorial](http://nbviewer.ipython.org/7628933) on using the [Plotly graphing API](https://plot.ly/api/Python) to graphs with multiple axes, subplots, and insets. 
+* A [Plotly tutorial](http://nbviewer.ipython.org/7576511) on using the [Plotly graphing API](https://plot.ly/api/Python) to graphs with multiple axes, subplots, and insets. 
 
-* A [Plotly demo](http://nbviewer.ipython.org/7576511) on using the [Plotly graphing API](https://plot.ly/api/Python) to make interactive, collaborative, publication-quality graphs, explained more fully by this [talk](https://www.youtube.com/watch?v=zG8FYPFU9n4).
+* A [Plotly demo](http://nbviewer.ipython.org/7628933) on using the [Plotly graphing API](https://plot.ly/api/Python) to make interactive, collaborative, publication-quality graphs, explained more fully by this [talk](https://www.youtube.com/watch?v=zG8FYPFU9n4).
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
 

@@ -76,8 +76,6 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/urls/raw.github.com/twiecki/CythonGSL/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* A [Plotly tutorial](http://nbviewer.ipython.org/7576511) on using the [Plotly graphing API](https://plot.ly/api/Python) to graphs with multiple axes, subplots, and insets. 
-
 * A [Plotly demo](http://nbviewer.ipython.org/7628933) on using the [Plotly graphing API](https://plot.ly/api/Python) to make interactive, collaborative, publication-quality graphs, explained more fully by this [talk](https://www.youtube.com/watch?v=zG8FYPFU9n4).
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
@@ -110,6 +108,8 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 * [Face Recognition on a subset of the Labeled Faces in the Wild dataset](http://nbviewer.ipython.org/urls/raw.github.com/ogrisel/notebooks/master/Labeled%2520Faces%2520in%2520the%2520Wild%2520recognition.ipynb), by [Olivier Grisel](http://github.com/ogrisel).
 
 * [Manipulation and display of chemical structures](http://nbviewer.ipython.org/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
+
+* A [Plotly tutorial](http://nbviewer.ipython.org/7576511) on using the [Plotly graphing API](https://plot.ly/api/Python) to make graphs with multiple axes, subplots, and insets. 
 
 * [The sound of Hydrogen](http://nbviewer.ipython.org/urls/raw.github.com/Carreau/posts/master/07-the-sound-of-hydrogen.ipynb), visualizing and listening to the quantum-mechanical spectrum of Hydrogen. By [Matthias Bussonnier](http://github.com/Carreau).
 

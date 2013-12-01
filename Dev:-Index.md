@@ -15,6 +15,7 @@ Some development policies we have created:
 Further development information:
 
 * Details about [[testing IPython|Dev: Testing]]
+* Details about [[compiling .less files for UI changes|Dev: Compiling .LESS files]]
 * Steps for [[releasing IPython|Dev: Releasing IPython]]
 * Documentation on the [[IPython Sphinx directive|Dev: IPython Sphinx directive]]
 * Information about our [[py3compat|Dev: Py3compat module]] module

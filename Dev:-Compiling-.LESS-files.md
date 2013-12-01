@@ -15,4 +15,4 @@ Alternatively, go to the repository root of ipython:
 
 ```
 python setup.py css
-``
+```

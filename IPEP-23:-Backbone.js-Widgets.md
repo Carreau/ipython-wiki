@@ -15,7 +15,6 @@
 Missing:
 - Usage examples  
 - Throttling description  
-- Message diff details  
 
 -----
 
@@ -70,7 +69,7 @@ Display a view for the model.  Optionally contains a parent, the comm id of the 
 ```
 
 **update**  
-Update the model's state or a frament of the model's state.  The message structure follows:
+Update the model's state or a frament of the model's state.  To reduce latency and bandwidth usage, the widget framework only sends the changes made to the widget's state when the information is available.  The message structure follows:
 
 ```python
 {
@@ -118,7 +117,7 @@ There are 2 different methods that the front-end can send:
 - custom
 
 **backbone**  
-Backbone.js initiated sync.  Update the widget's state or a fragment of the widget's state.  The message structure follows:
+Backbone.js initiated sync.  Update the widget's state or a fragment of the widget's state.  To reduce latency and bandwidth usage, the widget framework only sends the changes made to the model's state when the information is available.  The message structure follows:
 
 ```python
 {
@@ -137,3 +136,4 @@ Custom message to be handled by the widget or any registered listeners.  The mes
     custom_content: dict,
 }
 ```
+# Message throttling

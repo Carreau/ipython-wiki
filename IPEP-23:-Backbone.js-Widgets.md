@@ -14,7 +14,6 @@
 
 Missing:
 - Usage examples  
-- Message description  
 - Throttling description  
 - Message diff details  
 
@@ -39,10 +38,7 @@ If a view was displayed, the comm for a widget will exists as long as at least o
 One or more views can exist for one model in one or more output areas.  A model can be represented by more than one type of view.  Backbone.js will automatically syncronize all of the views with eachother and the corresponding model.  In the Notebook, new views are appended to the `widget_subarea` associated with the *executing cell* unless specified using the optional `display(..., parent=)` keyword argument.  The executing cell is either the cell that executed the code or the cell associated with the widget that executed the code.  Standard IPython output will always be mapped to the executing cell when available.  The only instance where an executing cell won't exist is when the code is triggered by a widget without any associated views (see Life Cycle section above).  If no executing cell exists, the output will not display.
 
 # Comm messages
-Since the widget architecture is asymetric, the message protocal used by the architecture is also asymetric.  All messages are sent as JSON.  
-
-## Back-end to front-end
-Every message sent from the back-end to the front-end is of the form
+Since the widget architecture is asymetric, the message protocal used by the architecture is also asymetric.  All messages are sent as JSON.  A symetric API is provided on top of the widgets that allow for custom messages to be sent (see **custom** in the message spec below).  Custom messages are used by specific widgets to send events and call methods.  Every message sent has the following form:
 
 ```python
 {
@@ -51,7 +47,9 @@ Every message sent from the back-end to the front-end is of the form
 }
 ```
 
-There are 5 different methods:
+## Back-end to front-end
+
+There are 5 different methods the back-end can send:
 - "display"
 - "update"
 - "add_class"
@@ -104,7 +102,34 @@ Remove DOM class(es) to an element of the widget's views in the front-end.  Opti
 ```
 
 **custom**  
-Custom message to be handle by the widget or any registered listeners.  The message structure follows:
+Custom message to be handled by the widget or any registered listeners.  The message structure follows:
+
+```python
+{
+    method: 'custom',
+    custom_content: dict,
+}
+```
+
+## Front-end to back-end messages
+
+There are 2 different methods that the front-end can send:
+- backbone
+- custom
+
+**backbone**  
+Backbone.js initiated sync.  Update the widget's state or a fragment of the widget's state.  The message structure follows:
+
+```python
+{
+    method: 'backbone',
+    sync_method: unicode, # CREATE, PATCH, or UPDATE - see Backbone.js documentation.
+    sync_data: dict, # State of frament of state.
+}
+```
+
+**custom**  
+Custom message to be handled by the widget or any registered listeners.  The message structure follows:
 
 ```python
 {

@@ -44,9 +44,9 @@ Since the widget architecture is asymetric, the message protocal used by the arc
 ## Back-end to front-end
 Every message sent from the back-end to the front-end is of the form
 
-```json
+```python
 {
-    method: String
+    method: unicode,
     [...]
 }
 ```
@@ -60,55 +60,55 @@ There are 5 different methods:
 
 Each method has a different message structure depending on the contents that need to be sent.
 
-**display**
+**display**  
 Display a view for the model.  Optionally contains a parent, the comm id of the widget that the new view should be displayed as a child of.  The message structure follows:
 
-```json
+```python
 {
-    method: 'display'
-    view_name: unicode
-    parent: unicode /* optional */
+    method: 'display',
+    view_name: unicode,
+    parent: unicode, # optional
 }
 ```
 
 **update**  
 Update the model's state or a frament of the model's state.  The message structure follows:
 
-```json
+```python
 {
-    method: 'update'
-    state: dict /* Either the entire state or a fragment of it. */
+    method: 'update',
+    state: dict, # Either the entire state or a fragment of it.
 }
 ```
 
 **add_class**  
 Add DOM class(es) to an element of the widget's views in the front-end.  Optionally contains a JQuery selector that selects which element(s) the classes will be added too.  The message structure follows:
 
-```json
+```python
 {
-    method: 'add_class'
-    class_list: unicode /* One or more space separated class names. */
-    selector: unicode /* optional */
+    method: 'add_class',
+    class_list: unicode, # One or more space separated class names.
+    selector: unicode, # optional
 }
 ```
 
 **remove_class**  
 Remove DOM class(es) to an element of the widget's views in the front-end.  Optionally contains a JQuery selector that selects which element(s) the classes will be added too.  The message structure follows:
 
-```json
+```python
 {
-    method: 'remove_class'
-    class_list: unicode /* One or more space separated class names. */
-    selector: unicode /* optional */
+    method: 'remove_class',
+    class_list: unicode, # One or more space separated class names.
+    selector: unicode, # optional
 }
 ```
 
 **custom**  
 Custom message to be handle by the widget or any registered listeners.  The message structure follows:
 
-```json
+```python
 {
-    method: 'custom'
-    custom_content: dict
+    method: 'custom',
+    custom_content: dict,
 }
 ```

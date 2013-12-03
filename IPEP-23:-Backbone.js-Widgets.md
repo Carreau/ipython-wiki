@@ -6,18 +6,6 @@
 <tr><td> Implementation </td><td>  <a href="https://github.com/ipython/ipython/pull/4374">#4374</a> </td></tr>
 </table>
 
-
-
------
-
-**! This document is incomplete !** 
-
-Missing:
-- Usage examples  
-- Throttling description  
-
------
-
 # Abstract
 Most scientific computing applications live within a hard-coded graphical user interface (GUI).  Typically the GUI is static.  This IPEP discusses the addition of an API that enables the user to generate and manipulate the GUI of the IPython notebook via *Widgets*.  Prior to the addition of *comms* ([[IPEP 21: Widget Messages]]) this was not possible.
 
@@ -136,4 +124,9 @@ Custom message to be handled by the widget or any registered listeners.  The mes
     custom_content: dict,
 }
 ```
+
 # Message throttling
+To prevent the kernel from flooding, the messages from the front-end to the back-end must be throttled.  Each model is individually throttled.  If three messages were sent and all are still processing, the front-end will not send anymore state messages.  Consequtive state messages will be buffered.  Once one of the three pending messages finished processing, the state buffer will be flushed.
+
+# Examples
+For detailed examples, please see `ipython\examples\widgets`.

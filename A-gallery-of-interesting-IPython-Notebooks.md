@@ -23,6 +23,8 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [An introduction to Compressed Sensing](http://nbviewer.ipython.org/urls/github.com/unpingco/Python-for-Signal-Processing/raw/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](https://github.com/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
+* [2-d rigid-body transformations](http://nbviewer.ipython.org/github/duartexyz/BMC/blob/master/Transformation2D.ipynb). This is part of [Scientific Computing in Biomechanics and Motor Control](https://github.com/duartexyz/BMC), a complete collection of notebooks by [Marcos Duarte](https://github.com/duartexyz).
+
 * [Introduction to Programming (using Python)](http://nbviewer.ipython.org/urls/raw.github.com/ehmatthes/intro_programming/master/notebooks/index.ipynb), an entire introductory Python course written by [Eric Matthes](http://peak5390.wordpress.com/about). [This post](http://peak5390.wordpress.com/2013/09/22/how-ipython-notebook-and-github-have-changed-the-way-i-teach-python/) explains the educational context in an Alaskan high school where Eric is a teacher.
 
 * [Python for Developers](http://ricardoduarte.github.io/python-for-developers), a complete book on Python programming by [Ricardo Duarte](https://github.com/ricardoduarte). Note the book also exists [in Portuguese](http://ricardoduarte.github.io/python-para-desenvolvedores).

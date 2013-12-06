@@ -241,6 +241,8 @@ This section contains academic papers that have been published in the peer-revie
 
 * [Warming Ocean Threatens Sea Life](http://www.scientificamerican.com/article.cfm?id=warming-ocean-threatens-sea-life), an article in Scientific American [backed by a notebook for its main plot](http://nbviewer.ipython.org/urls/raw.github.com/robertodealmeida/notebooks/master/scientific_american/Scientific%2520American%2520graph.ipynb). By [Roberto de Almeida](https://github.com/robertodealmeida) from [MarinExplore](https://marinexplore.com).
 
+* [Extrapolating Weak Selection in Evolutionary Games](http://nbviewer.ipython.org/github/juliangarcia/ews/blob/master/notebook.ipynb), by García, Hauert and Traulsen. [PLOS Comp Bio paper](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003381) and [Figshare link](http://figshare.com/articles/Extrapolating_weak_selection_in_evolutionary_games_source_code/814470).
+
 ## Whimsical notebooks
 
 * [XKCD-styled plots created with Matplotlib](http://nbviewer.ipython.org/url/jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb). Here is the [blog post version](http://jakevdp.github.com/blog/2012/10/07/xkcd-style-plots-in-matplotlib/) with discussion.  By Jake van der Plas.

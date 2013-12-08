@@ -18,7 +18,7 @@ To install :
 Compile and import everything from a Fortran code cell, using f2py.
 
 * [Homepage](https://github.com/mgaitan/fortran_magic)
-* [Documentation](http://nbviewer.ipython.org/urls/raw.github.com/mgaitan/fortran_magic/master/documentation.ipynb)
+* [Documentation](http://nbviewer.ipython.org/github/mgaitan/fortran_magic/blob/master/documentation.ipynb)
 
 To install :
 
@@ -137,8 +137,8 @@ The [Python MATLAB bridge](https://github.com/arokem/python-matlab-bridge)  enab
 
 Examples:
 
-* [pymatbridge](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/pymatbridge.ipynb)
-* [matlab magic](http://nbviewer.ipython.org/urls/raw.github.com/arokem/python-matlab-bridge/master/matlab_magic.ipynb) 
+* [pymatbridge](http://nbviewer.ipython.org/github/arokem/python-matlab-bridge/blob/master/pymatbridge.ipynb)
+* [matlab magic](http://nbviewer.ipython.org/github/arokem/python-matlab-bridge/blob/master/matlab_magic.ipynb) 
 
 ## IDL
 
@@ -200,8 +200,8 @@ Create richly formatted data tables in IPython Notebooks.
 
 Examples:
 
-* [Introduction](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Introduction.ipynb)
-* [Reference Guide](http://nbviewer.ipython.org/urls/raw.github.com/epmoyer/ipy_table/master/ipy_table-Reference.ipynb)
+* [Introduction](http://nbviewer.ipython.org/github/epmoyer/ipy_table/blob/master/ipy_table-Introduction.ipynb)
+* [Reference Guide](http://nbviewer.ipython.org/github/epmoyer/ipy_table/blob/master/ipy_table-Reference.ipynb)
 
 
 ## SQLite magics
@@ -305,7 +305,7 @@ The `%version_information` magic extension displays a table with version informa
 
 [Homepage](https://github.com/jrjohansson/version_information)
 
-[Example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/version_information/master/example.ipynb)
+[Example notebook](http://nbviewer.ipython.org/github/jrjohansson/version_information/blob/master/example.ipynb)
 
 ## Section numbering: `%secnum`
 

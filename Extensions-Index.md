@@ -1,5 +1,17 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## Django ORM magic
+
+Define your django models in a cell and use them on the fly. Let the magic do the boring part.
+
+* [Homepage](https://github.com/mgaitan/django-orm-magic)
+
+Installation:
+
+```
+%install_ext https://raw.github.com/mgaitan/django-orm-magic/master/django_orm_magic.py
+```
+
 ## ipythonPexpect magic
 
 A magic that allows IPython notebooks to interface with other programs via Pexpect (written by Adam Lyon).

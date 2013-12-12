@@ -247,7 +247,7 @@ This section contains academic papers that have been published in the peer-revie
 
 * [Extrapolating Weak Selection in Evolutionary Games](http://nbviewer.ipython.org/github/juliangarcia/ews/blob/master/notebook.ipynb), by Wu, García, Hauert and Traulsen. [PLOS Comp Bio paper](http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003381) and [Figshare link](http://figshare.com/articles/Extrapolating_weak_selection_in_evolutionary_games_source_code/814470).
 
-*[Using neural networks to estimate redshift distributions. An application to CFHTLenS]
+* [Using neural networks to estimate redshift distributions. An application to CFHTLenS]
 (http://nbviewer.ipython.org/urls/bitbucket.org/christopher_bonnett/nn_notebook/raw/5e69b55193a229cb2076a2f18e43b45c56e317e0/T-800.ipynb)
 by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRAS) 
 

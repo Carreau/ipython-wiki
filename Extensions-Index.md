@@ -354,7 +354,7 @@ If for example you want to load/start using extension called `grasp` (described 
     %load_zip_ext grasp
 
 
-## Chris Drake's Graphviz Extensions:
+## Graphviz Extensions:
 
 These magic functions just pipe various input formats to `dot` using the standard library `subprocess` module. They were written for simplistic demonstration of binary decision diagrams in [PyEDA](https://github.com/cjdrake/pyeda).
 

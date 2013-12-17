@@ -1,5 +1,17 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## Asymptote
+
+* [Homepage](https://github.com/jrjohansson/ipython-asymptote)
+
+[Asymptote](http://asymptote.sourceforge.net/) is a powerful vector graphics
+language for generating scientific diagrams. 
+
+This IPython magic extension makes it easy to create and display Asymptote 
+diagrams within an IPython notebook.
+
+See the [example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/ipython-asymptote/master/Asymptote-examples.ipynb) for installation instruction and example of how to use this magic extension.
+
 ## Django ORM magic
 
 Define your django models in a cell and use them on the fly. Let the magic do the boring part.

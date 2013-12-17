@@ -352,3 +352,40 @@ If for example you want to load/start using extension called `grasp` (described 
 
     %install_zip_ext https://pypi.python.org/packages/source/g/grasp/grasp-0.3.2.tar.gz
     %load_zip_ext grasp
+
+
+## Chris Drake's Graphviz Extensions:
+
+These magic functions just pipe various input formats to `dot` using the standard library `subprocess` module. They were written for simplistic demonstration of binary decision diagrams in [PyEDA](https://github.com/cjdrake/pyeda).
+
+* [Homepage](https://github.com/cjdrake/ipython-magic)
+
+To install:
+
+    %install_ext https://raw.github.com/cjdrake/ipython-magic/master/gvmagic.py
+
+To load:
+
+    %load_ext gvmagic
+
+Magics:
+
+* `%dot` - line/cell magic converts raw input to Graphviz `dot` SVG output.
+* `%dotstr` - line magic converts string input to Graphviz `dot` SVG output.
+* `%dotobj` - line magic converts object with `to_dot` method to Graphviz `dot` SVG output.
+* `%dotobjs` - line magic converts sequence of objects with `to_dot` method to Graphviz `dot` SVG output.
+
+Examples:
+
+    %dot digraph G { a -> b; a -> c }
+
+    %dot digraph G {
+        a -> b;
+        b -> c;
+    }
+
+    %dotstr "digraph G { a -> b; a -> c }"
+
+    %dotobj dotobj.to_dot()
+
+    %dotobjs dotojb[0].to_dot(), dotobj[1].to_dot(), ...

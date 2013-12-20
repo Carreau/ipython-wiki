@@ -391,7 +391,7 @@ Examples:
 
     %dot digraph G { a -> b; a -> c }
 
-    %dot digraph G {
+    %%dot digraph G {
         a -> b;
         b -> c;
     }

@@ -251,7 +251,7 @@ This section contains academic papers that have been published in the peer-revie
 (http://nbviewer.ipython.org/urls/bitbucket.org/christopher_bonnett/nn_notebook/raw/5e69b55193a229cb2076a2f18e43b45c56e317e0/T-800.ipynb)
 by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRAS) 
 
-* [Mechanisms for stable, robust, and adaptive development of orientation maps in the primary visual cortex.](http://dx.doi.org/10.1523/JNEUROSCI.1037-13.2013). [Notebook1](http://topographica.org/_static/gcal_notebook.html), [Notebook2](http://topographica.org/_static/stevens_jn13_notebook.html).
+* [Mechanisms for stable, robust, and adaptive development of orientation maps in the primary visual cortex](http://dx.doi.org/10.1523/JNEUROSCI.1037-13.2013) by Jean-Luc R. Stevens, Judith S. Law, Jan Antolik, and James A. Bednar. Journal of Neuroscience, 33:15747-15766, 2013. [Notebook1](http://topographica.org/_static/gcal_notebook.html), [Notebook2](http://topographica.org/_static/stevens_jn13_notebook.html).
 
 ## Whimsical notebooks
 

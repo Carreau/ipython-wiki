@@ -11,3 +11,6 @@
 [Utilities to deploy a IPython parallel cluster on Windows Azure](https://github.com/ogrisel/ipython-azure)
 
 [SaltStack states to setup an IPython cluster](https://github.com/ogrisel/salt-ipcluster)
+
+## Run IPython inside Docker
+https://github.com/mingfang/docker-ipython

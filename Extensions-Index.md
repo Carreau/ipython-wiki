@@ -1,5 +1,18 @@
 Extensions you can install for IPython are listed here. To create a new extension, please refer to the [extension docs](http://ipython.org/ipython-doc/dev/config/extensions/index.html).
 
+## ActiveState Code Recipes magics
+
+Allows querying [ActiveState Code Recipes](http://code.activestate.com/recipes/langs/python)
+
+* [Homepage](https://github.com/debjan/ipython-recipes-magic)
+
+Installation:
+
+```
+%install_ext https://raw.github.com/debjan/ipython-recipes-magic/master/recipes.py
+```
+
+
 ## Asymptote
 
 * [Homepage](https://github.com/jrjohansson/ipython-asymptote)
@@ -401,3 +414,6 @@ Examples:
     %dotobj dotobj.to_dot()
 
     %dotobjs dotojb[0].to_dot(), dotobj[1].to_dot(), ...
+
+
+

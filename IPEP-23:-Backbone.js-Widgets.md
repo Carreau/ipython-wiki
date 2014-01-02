@@ -36,11 +36,9 @@ Since the widget architecture is asymetric, the message protocal used by the arc
 
 ## Back-end to front-end
 
-There are 5 different methods the back-end can send:
+There are 3 different methods the back-end can send:
 - "display"
 - "update"
-- "add_class"
-- "remove_class"
 - "custom"
 
 Each method has a different message structure depending on the contents that need to be sent.
@@ -66,12 +64,26 @@ Update the model's state or a frament of the model's state.  To reduce latency a
 }
 ```
 
+**custom**  
+Custom message to be handled by the widget model, view, or any registered listeners.  The message structure follows: 
+
+```python
+{
+    method: 'custom',
+    custom_content: dict,
+}
+```
+
+### DOMWidget custom messages
+The DOMWidget defines two custom messages.
+
 **add_class**  
 Add DOM class(es) to an element of the widget's views in the front-end.  Optionally contains a JQuery selector that selects which element(s) the classes will be added too.  The message structure follows:
 
 ```python
 {
-    method: 'add_class',
+    method: 'custom',
+    msg_type: 'add_class',
     class_list: unicode, # One or more space separated class names.
     selector: unicode, # optional
 }
@@ -82,22 +94,12 @@ Remove DOM class(es) to an element of the widget's views in the front-end.  Opti
 
 ```python
 {
-    method: 'remove_class',
+    method: 'custom',
+    msg_type: 'remove_class',
     class_list: unicode, # One or more space separated class names.
     selector: unicode, # optional
 }
 ```
-
-**custom**  
-Custom message to be handled by the widget or any registered listeners.  The message structure follows:
-
-```python
-{
-    method: 'custom',
-    custom_content: dict,
-}
-```
-
 ## Front-end to back-end messages
 
 There are 2 different methods that the front-end can send:

@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Jonathan Frederic &lt;jon.freder@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> October 9, 2013</td></tr>
-<tr><td> Updated </td><td> December 3, 2013</td></tr>
+<tr><td> Updated </td><td> January 3, 2013</td></tr>
 <tr><td> Implementation </td><td>  <a href="https://github.com/ipython/ipython/pull/4374">#4374</a> </td></tr>
 </table>
 
@@ -17,12 +17,14 @@ The widget framework was implemented to loosely resemble the *model*, view, cont
 In the front-end, the [Backbone.js](http://backbonejs.org/) library is used to separate the model from the view.  Backbone.js is used because it is lightweight and has a minimalistic impact on coding style.  In the back-end, IPython traitlets are used to represent the properties of the widget.  A comm is used to syncronize the traitlets between the model (front-end) and widget (back-end).  In addition to traits, events and one-way method calls are sent via the same comm.
 
 # Life cycle  
-When a widget is constructed in the back-end, a comm and front-end model **are not** created immediately.  Widgets can exist in the back-end without the fron-end knowing of their existance.  The IPython `display(...)` method is used to display a widget.  Once a widget is displayed, a comm is created and a model is created in the front-end.  If a view_name is specified or a default exists, the front-end will also create a front-end view attached to the model.  If the view type can't be found by name, no view will be created.  If no view is created, the model, comm, and widget will all exist until the user calls `widget.close()` or the garbage collect (GC) collects the widget.
+When a widget is constructed in the back-end, a comm and front-end model are created automatically.  The IPython `display(...)` method is used to display a widget.  Once a widget is displayed, a view is created in the front-end.  The view renders the values stored in the widget's model.  If a view_name is specified, the front-end will create a view of that type instead of the default.  
 
-If a view was displayed, the comm for a widget will exists as long as at least one view exists in the front-end.  Before a notebook cell is executed, the views displayed within that cell's `widget_subarea` are deleted.  When all of the views in the front-end are closed, the comm is also closed and the model is deleted.  When the user `displays` the widget again, a new comm and model are created.  When `widget.close()` is called on a widget that has views in the front-end, all of the views are deleted along with the comm and model.
+The comm and model in the front-end will exists until the user closes the widget from the back-end.  When `widget.close()` is called on a widget that has views in the front-end, all of the views are deleted along with the comm and model.  Before a notebook cell is executed, the views displayed within that cell's `widget_subarea` are deleted.
 
 # Views and output
-One or more views can exist for one model in one or more output areas.  A model can be represented by more than one type of view.  Backbone.js will automatically syncronize all of the views with eachother and the corresponding model.  In the Notebook, new views are appended to the `widget_subarea` associated with the *executing cell* unless specified using the optional `display(..., parent=)` keyword argument.  The executing cell is either the cell that executed the code or the cell associated with the widget that executed the code.  Standard IPython output will always be mapped to the executing cell when available.  The only instance where an executing cell won't exist is when the code is triggered by a widget without any associated views (see Life Cycle section above).  If no executing cell exists, the output will not display.
+One or more views can exist for one model in one or more output areas.  A model can be represented by more than one type of view.  Backbone.js will automatically synchronize all of the views with each other and the corresponding model.  In the Notebook, new views are appended to the `widget_subarea` associated with the *executing cell* unless the model is a child of another model, specified by `parent.children = [child]`.  
+
+The executing cell is either the cell that executed the code or the cell associated with the widget that executed the code.  Standard IPython output will always be mapped to the executing cell when available.  The only instance where an executing cell won't exist is when the code is triggered by a widget without any associated views (see Life Cycle section above).  If no executing cell exists, the output will not display.
 
 # Comm messages
 Since the widget architecture is asymetric, the message protocal used by the architecture is also asymetric.  All messages are sent as JSON.  A symetric API is provided on top of the widgets that allow for custom messages to be sent (see **custom** in the message spec below).  Custom messages are used by specific widgets to send events and call methods.  Every message sent has the following form:

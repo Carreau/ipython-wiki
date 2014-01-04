@@ -415,5 +415,20 @@ Examples:
 
     %dotobjs dotojb[0].to_dot(), dotobj[1].to_dot(), ...
 
+## BeautifulSoup
 
+Pretty HTML rendering and html display of BeautifulSoup queries in the notebook and the qtconsole.
 
+* [Homepage](https://github.com/Psycojoker/ipython-beautifulsoup)
+
+To install:
+
+    pip install "ipython-beautifulsoup[bs4,notebook]"
+
+To load:
+
+    %load_ext soup
+
+Then just use the BeautifulSoup object loading into the current context.
+
+![screenshot](https://raw.github.com/Psycojoker/ipython-beautifulsoup/master/teaser.png)

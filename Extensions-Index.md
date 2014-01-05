@@ -429,6 +429,10 @@ To load:
 
     %load_ext soup
 
+Configure how you want the soup extension to work using configure_ipython_beautifulsoup, for example:
+
+    configure_ipython_beautifulsoup(show_html=True, show_css=True, show_js=False)
+
 Then just use the BeautifulSoup object loading into the current context.
 
 ![screenshot](https://raw.github.com/Psycojoker/ipython-beautifulsoup/master/teaser.png)

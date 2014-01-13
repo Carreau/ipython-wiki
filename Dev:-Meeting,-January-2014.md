@@ -10,3 +10,12 @@
 - nbviewer future plans
 - discovery of running notebook servers
 - kernel registry - and separating config for servers/users/kernels/notebooks
+
+## Design of multiuser server
+
+- pluggable authentication
+- unix user model: what parts of collaboration fit well with this, which ones don't?
+- concept of projects? Is that the sharing unit?
+- separate codebase for server vs. current server code. 
+  * What can be reused? 
+  * Does the multiuser server start single-user ones?

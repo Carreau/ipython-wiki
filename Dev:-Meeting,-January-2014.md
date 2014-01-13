@@ -19,7 +19,3 @@
 - separate codebase for server vs. current server code. 
   * What can be reused? 
   * Does the multiuser server start single-user ones?
-
-## Mystery
-
-[This notebook](http://nbviewer.ipython.org/github/fperez/talk-nips-2013/blob/master/IPython-Interactive-Computing.ipynb) as seen on nbviewer is missing a bunch of cells, run the notebook locally to see the whole thing. After J. Unpingco's book cell, there are a good 10 or more cells (slides, since this is a talk) missing in the html/nbviewer view. Very odd.

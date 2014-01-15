@@ -35,7 +35,7 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Graphical Representations of Linear Models](http://nbviewer.ipython.org/github/mwaskom/seaborn/blob/master/examples/linear_models.ipynb), an illustration of the [Seaborn statistical visualization library](https://github.com/mwaskom/seaborn), that also includes [Visualizing distributions of data](http://nbviewer.ipython.org/github/mwaskom/seaborn/blob/master/examples/plotting_distributions.ipynb) and [Representing variability in timeseries plots](http://nbviewer.ipython.org/github/mwaskom/seaborn/blob/master/examples/timeseries_plots.ipynb). By [Michael Waskom](https://github.com/mwaskom).
 
-* [Understanding model reliability](http://nbviewer.ipython.org/github/mwaskom/Psych216/blob/master/week6_tutorial.ipynb), part of a complete [course on statistics and data analysis for psychologists](https://github.com/mwaskom/Psych216) by [Mike Waskom](https://github.com/mwaskom).
+* [Understanding model reliability](http://nbviewer.ipython.org/github/mwaskom/Psych216/blob/master/week6_tutorial.ipynb), part of a complete [course on statistics and data analysis for psychologists](https://github.com/mwaskom/Psych216) by [Michael Waskom](https://github.com/mwaskom).
 
 * [Neural Networks](http://nbviewer.ipython.org/github/masinoa/machine_learning/blob/master/04_Neural_Networks.ipynb), part of a collection on [machine learning](https://github.com/masinoa/machine_learning) by [Aaron Masino](https://github.com/masinoa).
 

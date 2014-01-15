@@ -330,7 +330,9 @@ https://github.com/ipython-contrib/IPython-notebook-extensions
 
 The AnyBody extension adds an `%%anybody` cell magic to run AnyScript macros directly from the IPython Notebook. The [AnyBody Modeling System](www.anybodytech.com) is a multibody modelling system for musculoskeletal biomechanics.
 
-[Homepage](https://github.com/melund/anybodymagic)
+[Github page](https://github.com/melund/anybodymagic)
+
+Usage: See this [IPython notebook](http://nbviewer.ipython.org/github/melund/anybodymagic/blob/master/demo_anybodymagic.ipynb?create=1)
 
 To install: ``` %install_ext https://raw.github.com/melund/anybodymagic/master/anybodymagic.py ```
 

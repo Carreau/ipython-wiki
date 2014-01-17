@@ -1,5 +1,3 @@
-.. _documenting-ipython:
-
 =====================
  Documenting IPython
 =====================

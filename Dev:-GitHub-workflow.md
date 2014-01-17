@@ -48,7 +48,7 @@ The `doc` and `quickfix` labels are the best places for new contributors to star
 
 * All work is submitted via Pull Requests.
 * Pull Requests can be submitted as soon as there is code worth discussing.  Pull Requests track the branch, so you can continue to work after the PR is submitted.  Review and discussion can begin well before the work is complete, and the more discussion the better.  The worst case is that the PR is closed.
-* Pull Requests that have stalled should be closed (see [[our policy on closing PRs|Dev: Closing Pull Requests]]
+* Pull Requests that have stalled should be closed (see [[our policy on closing PRs|Dev: Closing Pull Requests]])
 * Pull Requests should always be made against master (backporting PRs is described below).
 * Pull Requests should be tested, if feasible:
     - bugfixes should include regression tests

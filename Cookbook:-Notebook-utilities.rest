@@ -1,7 +1,7 @@
 Notebook utilities
 ==================
 
-Here are some useful utilities which currently exist as gists, but which could benefit from being wrapped up and folded into IPython commnadline tools, such as nbconvert.
+Here are some useful utilities which currently exist as gists, but which could benefit from being wrapped up and folded into IPython commandline tools, such as *nbconvert*.
 
 https://gist.github.com/timo/2621679 - For each ipynb file, a kernel is started, all cells are executed in order and exceptions occuring in the cells will show up as failed tests.
 

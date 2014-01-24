@@ -1,5 +1,22 @@
 Here is a brief list of other projects using IPython.  If you know of more, feel free to add them, and if IPython contributes to a publication, please use our [http://ipython.org/citing.html ready-made citation entry].
 
+== List of (some) IPython compatible kernels == 
+
+* [http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb IJulia]
+* [http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/demo/IHaskell.ipynb IHaskell]
+* [http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb IFSharp]
+* [http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb IRuby]
+* [https://github.com/takluyver/igo IGo]
+* [https://github.com/mattpap/IScala IScala ]
+* [http://nbviewer.ipython.org/gist/sn6uv/8381447 IMathics]
+* [https://github.com/mattpap/IAldor IAldor ]
+
+To read to create IPython kernel :
+
+[http://andrew.gibiansky.com/blog/ipython/ipython-kernels/ Ihaskell Creator blog post]
+
+
+
 == Scientific computing projects ==
 
 * The [http://nengo.ca/docs/html/advanced/ipython_notebook.html Nengo] project for simulating large-scale neural systems is the first (that we know of) to integrate with the new IPython notebook.

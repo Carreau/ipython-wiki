@@ -6,7 +6,7 @@ Notes on working with GitHub
 
 * 100% of confirmed Issues should have a milestone
 * An Issue should never be closed without a milestone.
-* All issues closed should be marked with the next release milestone or **None**.
+* All issues closed should be marked with the next release milestone or **noaction**.
 * Open Issues should only lack a milestone if:
     - more clarification is required (label: needs-info)
 * In general, there will be three milestones with open Issues:

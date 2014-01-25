@@ -4,12 +4,12 @@ Notes on working with GitHub
 
 ## Milestones
 
-* 100% of confirmed Issues should have a milestone
-* An Issue should never be closed without a milestone.
+* 100% of confirmed issues should have a milestone
+* An issue should never be closed without a milestone.
 * All issues closed should be marked with the next release milestone or **noaction**.
-* Open Issues should only lack a milestone if:
+* Open issues should only lack a milestone if:
     - more clarification is required (label: `needs-info`)
-* In general, there will be three milestones with open Issues:
+* In general, there will be three milestones with open issues:
     - **next release**. This should be the default milestone of all issues.  As the release approaches, issues can be explicitly bumped to next release + 1.
     - **next release + 1**.  Only issues that we are confident will *not* be included in the next release go here.  This milestone should be mostly empty until relatively close
     - **wishlist**.  This is the milestone for issues that we have no immediate plans to address.
@@ -19,15 +19,15 @@ Notes on working with GitHub
     - Closed because we won't fix it 
     - When an issue is closed with **noaction**, it means that the issue will not be fixed, or it was not an issue at all.
 * When closing an issue, it should always have one of these two milestones:
-    - **next release** because the Issue has been addressed
-    - **noaction** because the Issue *will not* be addressed, or it is a duplicate/non-issue.
+    - **next release** because the issue has been addressed
+    - **noaction** because the issue *will not* be addressed, or it is a duplicate/non-issue.
 
 In general: When in doubt, mark with **next release**.  We can always push back when we have more specific plans for a given release.
 
 
 ## Labels and issues
 
-Issues should always be labeled once they are confirmed (not necessary for issues that are still being clarified, or may be duplicates or not Issues at all).
+Issues should always be labeled once they are confirmed (not necessary for issues that are still being clarified, or may be duplicates or not issues at all).
 
 Some significant labels:
 

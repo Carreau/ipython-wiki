@@ -8,19 +8,19 @@ Notes on working with GitHub
 * An Issue should never be closed without a milestone.
 * All issues closed should be marked with the next release milestone or **noaction**.
 * Open Issues should only lack a milestone if:
-    - more clarification is required (label: needs-info)
+    - more clarification is required (label: `needs-info`)
 * In general, there will be three milestones with open Issues:
     - **next release**. This should be the default milestone of all issues.  As the release approaches, issues can be explicitly bumped to next release + 1.
     - **next release + 1**.  Only issues that we are confident will *not* be included in the next release go here.  This milestone should be mostly empty until relatively close
     - **wishlist**.  This is the milestone for issues that we have no immediate plans to address.
-* The remaining milestone is **None**, which is used for Issues that are closed because they are:
-    - Not actually an Issue (e.g. questions, discussion, etc.)
+* The remaining milestone is **noaction** for open or closed issues that require no action:
+    - Not actually an issue (e.g. questions, discussion, etc.)
     - Duplicate of an existing Issue
-    - closed as 'wontfix' (alternative: 'wontfix' milestone)
-    - When an issue is closed with **None**, it means that the issue will not be fixed, or it was not an issue at all.
+    - Closed because we won't fix it 
+    - When an issue is closed with **noaction**, it means that the issue will not be fixed, or it was not an issue at all.
 * When closing an issue, it should always have one of these two milestones:
     - **next release** because the Issue has been addressed
-    - **None** because the Issue *will not* be addressed, or it is a duplicate/non-issue.
+    - **noaction** because the Issue *will not* be addressed, or it is a duplicate/non-issue.
 
 In general: When in doubt, mark with **next release**.  We can always push back when we have more specific plans for a given release.
 

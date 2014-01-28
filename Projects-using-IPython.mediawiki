@@ -10,6 +10,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 * [https://github.com/mattpap/IScala IScala ]
 * [http://nbviewer.ipython.org/gist/sn6uv/8381447 IMathics]
 * [https://github.com/mattpap/IAldor IAldor ]
+* [http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb Calico Project]
 
 To read to create IPython kernel :
 

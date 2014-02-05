@@ -15,31 +15,18 @@ Q. Running IPython against multiple versions of Python
 ------------------------------------------------------
 
 I would like to know if there is an easy way to install parallel versions of
-ipython ? Actually, I would like to be able to use ipython with python 2.4
-which is the default on my machine, and with python2.5 (compiled by hand); is
-changing the python interpreter in the ipython script the only required change
-? (I was thinking about having ipython with the default interpreter and
-ipython2.5 using the python2.5 interpreter) ?
+ipython? Actually, I would like to be able to use ipython with python 2.7
+which is the default on my machine, and with python3.3 (compiled by hand).
 
-**Answer**: You can install IPython against various interpreters by using the following call::
+**Answer**: The easiest way to do this is with virtual environments::
 
-  $ python2.4 setup.py install --prefix=$HOME/usr
-  $ python2.5 setup.py install --prefix=$HOME/usr
-
-In this case, the second call will overwrite the startup script of the first in
-$HOME/usr/bin, but those are the same. The important point is that each Python
-will find the IPython imports under
-$HOME/usr/lib/python2.X/site-packages/IPython, and assuming you have set up
-your $PYTHONPATH variable accordingly, this will work. The final step is to
-have aliases to call each of the IPython versions quickly, those can be defined
-as (using tcsh syntax)::
-
-  alias ip4 "python2.4 $HOME/usr/bin/ipython"
-  alias ip5 "python2.5 $HOME/usr/bin/ipython"
-
-or you can just have two copies of the ipython startup script named differently
-and with their first line changed to point to the actual interpreter.
-
+    $ mkvirtualenv -p python2.7 py27
+    $ mkvirtualenv -p python3.3 py33
+    $ workon py33
+    $ pip install ipython
+    $ workon py27
+    $ pip install ipython
+ 
 
 Q. Can IPython run under IronPython/PyPy/Jython/other Python interpreters?
 --------------------------------------------------------------------------
@@ -60,39 +47,23 @@ Q. IPython crashes under OS X when using the arrow keys
 -------------------------------------------------------
 Under some circumstances, using the arrow keys to navigate your input history can cause a complete crash of the Python interpreter.
 
-**Answer**: This is due to a bug in the readline library from the official builds. There are a few solutions you can take:
+**Answer**: This is due to a bug in the readline library (libedit) from the official builds. The easiest way to address this is to install readline separately:
 
-1. Use a different Python version from Apple's default (MacPython or Fink have been reported to work)
-2. You can disable in your ipythonrc file the following lines by commenting them out::
+    easy_install -a readline
 
-    readline_parse_and_bind "\e[A": history-search-backward
-    readline_parse_and_bind "\e[B": history-search-forward
-
-   You will lose searching in your history with the arrow keys, but at least Python won't crash.
 
 Q. Does IPython play well with Windows?
 ---------------------------------------
 
-Yes, it most definitely does! See IpythonOnWindows for some things that should be noted, though.
+Yes, it most definitely does!
 
 
 Q. What is the best way to install IPython?
 -------------------------------------------
 
-* The classic ``python setup.py install`` still works, of course, and is
-  recommended for Linux boxes where you have root privileges.
-* On windows you'll probably want to run the .exe installer to get the
-  shortcuts and ipython.py in \python25\scripts.
-* ``easy_install ipython==dev`` is the easiest way to install the SVN trunk version.
-* ``easy_install ipython`` is a quick way to get ipython without downloading or
-  unzipping anything manually, but you'll miss windows shortcuts, and
-  documentation (man pages, pdf...) will not be where it normally is.
-* If you want to run the latest ipython instead of an older version provided
-  with your linux distro, and don't want to remove/mess with the already
-  existing version, don't have root privileges to install ipython, or just want
-  to run multiple ipython versions for some reason, just untar the source
-  distribution somewhere and launch ipython.py.
-
+* ``pip install ipython`` works pretty much everywhere.
+* The classic ``python setup.py install`` still works, of course.
+* ``pip install -e git+https://github.com/ipython/ipython#egg=ipython`` is the quickest way to install from git master.
 
 Q. Why do I get garbage characters when long information is displayed by the pager?
 -----------------------------------------------------------------------------------

@@ -17,3 +17,7 @@ If you are at Berkeley and using IPython for your research, please add yourself 
   This work is currently under review for publication.
   I was also able to easily build HTML reports with nbconvert,
   which I frequently used to discuss results with my advisor, who had moved to a different university.
+
+* Isaac Shivvers - I'm a graduate student in astrophysics, and I use the IPython notebook extensively in my research on the optical spectra of supernovae. I've found it incredibly useful as a lab notebook of sorts, keeping track of my ideas and calculations at the beginning of a new project as I try various approaches and try to understand the results. I've been able to run a parallel notebook cluster on one of the large astronomy computers and then access and run it through my browser on my laptop, which has made very long/difficult calculations much more friendly.
+
+

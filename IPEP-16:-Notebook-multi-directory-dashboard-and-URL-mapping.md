@@ -166,6 +166,7 @@ Creates a new notebook. If a POST, the name will be the first unused name of the
 {
     "name": "Untitled0.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-09-01T09:15:14.12345+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00"
 }
@@ -208,6 +209,7 @@ Example:
 {
     "name": "MyNotebook.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-09-01T09:15:14.12345+00:00",
     "modified": "2013-09-01T09:15:14.12345+00:00"
 }
@@ -248,6 +250,7 @@ Example:
 {
     "name": "MyNotebook-Copy0.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-09-01T09:15:14.12345+00:00"
 }
@@ -318,6 +321,7 @@ Returns the notebook model for a given notebook path, including the full documen
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "modified": "2013-10-02T11:29:27.616675+00:00",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "content":{
@@ -354,6 +358,7 @@ This request renames the notebook and returns the updated model without content.
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-10-04T14:32:19.123456+00:00"
 }
@@ -404,6 +409,7 @@ Example:
 {
     "name": "notebook1.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-10-04T14:32:19.123456+00:00"
 }

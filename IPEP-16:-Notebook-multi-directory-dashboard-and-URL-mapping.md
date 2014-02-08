@@ -101,6 +101,7 @@ This web-service handles all HTTP requests on ".ipynb" files. The full notebook 
 {
     "name": "My Notebook.ipynb",
     "path": "foo/bar",
+    "type": "notebook",
     "created": "2013-10-01T14:22:36.123456+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00",
     "content":{
@@ -137,6 +138,9 @@ these keys are generally omitted from requests as well.
 The one exception being saving an existing notebook to a new location,
 in which case the *new* name and path are given in the model,
 and the current name and path are in the URL.
+
+The `type` field can also be omitted by the client, but will
+always be provided by the servers.
 
 <span id='create_new_notebook'></span>
 #### Create new notebooks
@@ -265,17 +269,39 @@ Returns a list of notebook models in the directory `path`.
     {
         "name": "notebook1.ipynb",
         "path": "foo/bar",
+        "type": "notebook",
         "created": "2013-10-01T12:21:20.123456+00:00",
         "modified": "2013-10-02T11:29:27.616675+00:00"
     },
     {
         "name": "notebook2.ipynb",
         "path": "foo/bar",
+        "type": "notebook",
         "created": "2013-10-01T12:21:20.123456+00:00",
         "modified": "2013-10-02T11:29:27.616675+00:00"
     }
 ]
 ```
+
+**For IPython 2.0 only:** listing notebooks in this release will also return directories
+in the path as well. These models will be removed from the notebook listing for 3.0 once
+we have a proper contents web service. Directories have the following model:
+
+```json
+{
+    "name": "bam",
+    "path": "foo/bar",
+    "type": "directory",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+}
+```
+
+The list of models will be sorted in the following order:
+
+1. `Index.ipynb` if it exists.
+2. All directories in alphabetical order.
+3. All notebooks in alphabetical order.
 
 <span id='open_named_nb'></span>
 #### Open an existing notebook

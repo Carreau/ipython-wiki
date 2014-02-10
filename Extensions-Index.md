@@ -438,3 +438,23 @@ Configure how you want the soup extension to work using configure_ipython_beauti
 Then just use the BeautifulSoup object loading into the current context.
 
 ![screenshot](https://raw.github.com/Psycojoker/ipython-beautifulsoup/master/teaser.png)
+
+
+## Page navigation for IPython Notebook
+
+A Greasemonkey/Tampermonkey user script that adds a few functions to help you move up and down easily in an IPython notebook page.
+
+To install:
+
+     Get Tampermonkey for Chrome or Greasemonkey for Firefox and install the script from http://userscripts.org/scripts/show/180884
+
+What you can do:
+
+     Turbo-Scrolling : Hold [Shift] key while using your mouse wheel to speed up the scrolling about x6.
+
+     [Top] : Scroll to the page top
+     [Bottom] : Scroll to the bottom of page
+     [LastCell] : Scroll back to the selected cell
+
+     [+] : increase font-size of notebook tile
+     [–] : decrease font-size of notebook tile

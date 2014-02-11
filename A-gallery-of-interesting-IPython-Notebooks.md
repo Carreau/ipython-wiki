@@ -49,7 +49,7 @@ Using Python and PyMC](http://camdavidsonpilon.github.io/Probabilistic-Programmi
 
 * [Python for Geosciences](https://github.com/koldunovn/python_for_geosciences), a tutorial series aimed at the Earth Sciences community, by [Nikolay Koldunov](http://earthpy.org/author/nikolay-koldunov.html).
 
-* [Python for Data Science](https://github.com/ResearchComputing/Meetup-Fall-2013), an introductory collection from the [CU Boulder Research Computing Group](https://github.com/ResearchComputing).
+* [Python for Data Analysis](https://github.com/ResearchComputing/Meetup-Fall-2013), an introductory collection from the [CU Boulder Research Computing Group](http://researchcomputing.github.io/).
 
 * [The Kaggle bulldozers competition example](http://danielfrg.github.io/blog/2013/03/07/kaggle-bulldozers-basic-cleaning), one of a set on tutorials on exploratory data analysis with the [copper toolkit](https://github.com/danielfrg/copper#copper) by [Daniel Rodríguez](http://danielfrg.github.io).
 

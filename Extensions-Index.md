@@ -442,12 +442,12 @@ Then just use the BeautifulSoup object loading into the current context.
 
 ## Page navigation for IPython Notebook
 
-A Greasemonkey/Tampermonkey user script that adds a few functions to help you move up and down easily in an IPython notebook page.
+[A Greasemonkey/Tampermonkey user script](http://userscripts.org/scripts/show/180884) that adds a few functions to help you move up and down easily in an IPython notebook page.
 
 To install:
 
      Get Tampermonkey for Chrome or Greasemonkey for Firefox 
-     and install the script from [userscripts.org](http://userscripts.org/scripts/show/180884)
+     and install the script from http://userscripts.org/scripts/show/180884
 
 What you can do:
 

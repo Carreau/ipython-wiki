@@ -139,6 +139,8 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 (http://nbviewer.ipython.org/github/waltherg/notebooks/blob/master/2013-12-03-Crank_Nicolson.ipynb),
 a demonstration of how IPython notebooks can be used to discuss both the theory and implementation of numerical algorithms on one page, by [Georg Walther](https://github.com/waltherg).
 
+* [The Discrete Cosine Transform](http://nbviewer.ipython.org/url/cs.marlboro.edu/courses/spring2014/information/code/dct/dct.ipynb), a brief explanation and illustration of the math behind the DCT and its role in the JPEG image format, by [Jim Mahoney](http://cs.marlboro.edu).
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).

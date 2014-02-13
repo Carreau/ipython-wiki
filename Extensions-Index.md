@@ -446,11 +446,14 @@ A Greasemonkey/Tampermonkey user script that adds a few functions to help you mo
 
 To install:
 
-     Get Tampermonkey for Chrome or Greasemonkey for Firefox and install the script from http://userscripts.org/scripts/show/180884
+     Get Tampermonkey for Chrome or Greasemonkey for Firefox 
+     and install the script from [userscripts.org](http://userscripts.org/scripts/show/180884)
 
 What you can do:
 
-     Turbo-Scrolling : Hold [Shift] key while using your mouse wheel to speed up the scrolling about x6.
+     Turbo-Scrolling : Hold [Shift] key while using your mouse wheel to speed 
+                       up the scrolling about x6. Or, you could also do it 
+                       by hovering near the left side of page (within 50 px)
 
      [Top] : Scroll to the page top
      [Bottom] : Scroll to the bottom of page

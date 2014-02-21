@@ -496,8 +496,7 @@ This webservice manages all running kernels. The kernel model in JSON is shown b
 
 ```json
 {
-    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-    "ws_url": ""
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
 }
 ```
 
@@ -515,12 +514,10 @@ Lists the JSON data for all kernels currently running.
 ```json
 [
     {
-        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-        "ws_url": ""
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
     },
     {
-        "id": "4f567fb0-2455-4bc9-a137-69daac27e9a2",
-        "ws_url": ""
+        "id": "4f567fb0-2455-4bc9-a137-69daac27e9a2"
     }
 ]
 ```
@@ -535,8 +532,7 @@ Lists the JSON data for all kernels currently running.
 
 ```json
 {
-    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-    "ws_url": ""
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
 }
 ```
 
@@ -552,8 +548,7 @@ Start an IPython kernel and create a UUID for the kernel.
 
 ```json
 {
-    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-    "ws_url": ""
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
 }
 ```
 
@@ -590,8 +585,7 @@ Kill and restart a kernel, preserving the ID.
 
 ```json
 {
-    "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-    "ws_url": ""
+    "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
 }
 ```
 
@@ -608,8 +602,7 @@ a session is created and a kernel is started. The model for a session:
         "path": "foo/bar",
     }
     "kernel": {
-        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-        "ws_url": ""
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
     }
 }
 ```
@@ -633,8 +626,7 @@ Returns a list of all currently running sessions.
             "path": "foo/bar",
         }
         "kernel": {
-            "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-            "ws_url": ""
+            "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
         }
     },
     {
@@ -644,8 +636,7 @@ Returns a list of all currently running sessions.
             "path": "foo/bar",
         }
         "kernel": {
-            "id": "4adcb1a3-2e7f-4e82-af2e-d76f5815467a",
-            "ws_url": ""
+            "id": "4adcb1a3-2e7f-4e82-af2e-d76f5815467a"
         }
     }
 ]
@@ -694,8 +685,7 @@ Example:
         "path": "foo/bar",
     },
     "kernel": {
-        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-        "ws_url": ""
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
     }
 }
 ```
@@ -717,8 +707,7 @@ Example:
         "path": "foo/bar",
     },
     "kernel": {
-        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-        "ws_url": ""
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
     }
 }
 ```
@@ -767,8 +756,7 @@ Example:
         "path": "foo/bar",
     },
     "kernel": {
-        "id": "b7e1a137-a434-4598-846e-ee51fb06c306",
-        "ws_url": ""
+        "id": "b7e1a137-a434-4598-846e-ee51fb06c306"
     }
 }
 ```

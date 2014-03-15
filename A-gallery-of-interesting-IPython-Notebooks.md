@@ -95,7 +95,7 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [IPython Parallel Push/Execute/Pull Demo](http://nbviewer.ipython.org/gist/3866987) by Justin Riley.
 
-* [Understanding the design of the R "formula" objects](http://perrin.dynevor.org/exploring_r_formula.html) and the [notebook file](http://perrin.dynevor.org/Users/mb312/dev_trees/perrin-academy/_build/html/glm_intro_evaluated.ipynb).  By Matthew Brett.
+* [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/url/perrin.dynevor.org/exploring_r_formula_evaluated.ipynb).  By Matthew Brett.
 
 * [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](http://nbviewer.ipython.org/github/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
 

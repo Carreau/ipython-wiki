@@ -263,6 +263,28 @@ Run and debug doctest in IPython.
 ```
 
 
+## scd - smart change of directory
+
+[Homepage](https://github.com/pavoljuhas/smart-change-directory#smart-change-directory-scd)
+
+- add `%scd` magic for changing to any directory with a few keystrokes
+- modify `%cd`, `%pushd`, `%popd` magics to record visited directories in
+  `~/.scdhistory`
+
+This plugin is for IPython terminal session on Linux, Mac or other Unix-like
+system only.  Must have [Z shell](http://www.zsh.org) (zsh package) and
+[scd](https://github.com/pavoljuhas/smart-change-directory/blob/master/bin/scd)
+script installed in the PATH.
+For best results activate scd also for the system shell as described on
+the Homepage.
+
+[Installation Details](https://github.com/pavoljuhas/smart-change-directory#installation-as-ipython-extension)
+
+```text
+%install_ext https://raw.github.com/pavoljuhas/smart-change-directory/master/ipython/ipy_scd.py
+```
+
+
 ## Magics for temporary workspace
 
 - `%cdtemp` -- Creates a temporary directory that is magically cleaned up

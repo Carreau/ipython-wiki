@@ -7,7 +7,7 @@
 </table>
 
 # Abstract
-Most scientific computing applications live within a hard-coded graphical user interface (GUI).  Typically the GUI is static.  This IPEP discusses the addition of an API that enables the user to generate and manipulate the GUI of the IPython notebook via *Widgets*.  Prior to the addition of *comms* ([[IPEP 21: Widget Messages]]) this was not possible.
+Most scientific computing applications live within a hard-coded graphical user interface (GUI).  This IPEP discusses the addition of an API that enables the user to generate and manipulate the GUI of the IPython notebook via *Widgets*.  Prior to the addition of *comms* ([[IPEP 21: Widget Messages]]) this was not possible.
 
 # Description  
 The Notebook *widget* is introduced in this IPEP.  widgets are GUI elements in the Notebook *front-end* which are automatically synchronized with equivalent representations in the Notebook *back-end*.  The back-end is where user written code in is executed (traditionally Python, but also Julia, R, etc).  The front-end is where the user enters the code to be executed (the web browser).  Using the special magics `%%javascript` and `%%html`, users can write code that is executed on the front-end.  

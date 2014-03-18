@@ -29,15 +29,16 @@ The executing cell is either the cell that executed the code or the cell associa
 # Implementing widgets in alternative kernels
 This assumes that *comms* ([[IPEP 21: Widget Messages]]) are already implemented.
 
-To create and display a widget:
-1. Open a comm with a `target_name` of `WidgetModel`.  The widget manager watches for comms with the `target_name="WidgetModel"` and creates a widget model
-when that comm is created.  The comm and widget model are automatically connected.
-2. Send a full state update message on the new comm (see the **update**  Back-end to front-end message spec below).  The full state should include the following:
-  `msg_throttle` and `_view_name` 
-  `_css` and `visible` if a DOM widget view is specified for `_view_name`
-  The rest of the of the properties of the corresponding widget, i.e. `disabled`, `value`, `min`, etc...
-3. Send a display message on the comm (see the **display**  Back-end to front-end message spec below).
- NOTE: It's important that the messages sent on the comm are in response to an execution message from the front-end or another widget's comm message.  This is required so the widget framework knows what cell triggered the message and can display the widget in the correct location.
+To create and display a widget:  
+ 1. Open a comm with a `target_name` of `WidgetModel`.  The widget manager watches for comms with the `target_name="WidgetModel"` and creates a widget model
+when that comm is created.  The comm and widget model are automatically connected.  
+ 2. Send a full state update message on the new comm (see the **update**  Back-end to front-end message spec below).  The full state should include the following:  
+  - `msg_throttle` and `_view_name`  
+  - `_css` and `visible` if a DOM widget view is specified for `_view_name`  
+  - The rest of the of the properties of the corresponding widget, i.e. `disabled`, `value`, `min`, etc...  
+ 3. Send a display message on the comm (see the **display**  Back-end to front-end message spec below). 
+
+NOTE: It's important that the messages sent on the comm are in response to an execution message from the front-end or another widget's comm message.  This is required so the widget framework knows what cell triggered the message and can display the widget in the correct location.
 
 # Comm messages
 Since the widget architecture is asymetric, the message protocal used by the architecture is also asymetric.  All messages are sent as JSON.  A symetric API is provided on top of the widgets that allow for custom messages to be sent (see **custom** in the message spec below).  Custom messages are used by specific widgets to send events and call methods.  Every message sent has the following form:

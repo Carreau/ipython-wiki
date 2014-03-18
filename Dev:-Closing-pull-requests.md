@@ -4,6 +4,7 @@ A pull request will be closed when:
 
 * It has been reviewed, but has sat for a month or more waiting for the submitter to commit more code to address the comments.
 * The review process has uncovered larger design or technical issues that extend beyond the details of the specific pull request.
+    * In particular, we do not accept whole large "cleanup" changes which do not address any specific bug. This includes trailing whitespace, PEP8, etc. One of the reasons is that such massive cleanup provide plenty of opportunities to introduce new and subtle bugs.
 
 In general we will not close pull requests because of a lack of review.  If a pull request has sat for a month or more without review, we need to kick ourselves and get to reviewing it.
 

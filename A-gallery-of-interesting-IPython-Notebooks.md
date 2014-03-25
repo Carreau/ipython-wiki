@@ -278,6 +278,8 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Reveal converter mini-tutorial](http://nbviewer.ipython.org/url/www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.ipynb), also available in [blog post form](http://www.damian.oquanta.info/posts/reveal-converter-mini-tutorial.html). Do you want to make static html/css slideshow straight from the IPython notebook? OK, now you can do it with the *reveal* converter (nbconvert). [Demo](http://www.slideviper.oquanta.info/tutorial/slideshow_tutorial_slides.html) by Damián Avila.  
 
+* [Personal IPython Weight Notebook] (http://nbviewer.ipython.org/gist/9769238). Plot your loss of weight with prognosis and motivation features.
+
 ## Videos of IPython being used in the wild
 
 Of course the first thing you might try is searching for videos about IPython (1900 or so by last count on Youtube) but there are demonstrations of other applications using the power of IPython but are not mentioned is the descriptions. Below are a few such:

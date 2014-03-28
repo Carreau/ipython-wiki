@@ -286,7 +286,7 @@ Of course the first thing you might try is searching for videos about IPython (1
 
 * [Video](http://www.youtube.com/watch?v=Nc16qeGBtMU) on how to learn Python featuring IPython as the platform of choice for learning!
 
-* [This video](http://www.youtube.com/watch?v=4ONBVNm3isI) shows IPython being used in the scikit project
+* [This video](http://www.youtube.com/watch?v=4ONBVNm3isI) shows IPython being used in the [scikit-learn](http://scikit-learn.org) project
 
 * He doesn't show IPython in use but his IPython sticker is clear for the entire video: [Planning and Tending the Garden: The Future of Early Childhood Python Education](http://www.youtube.com/watch?v=op61s-QHryk)
 

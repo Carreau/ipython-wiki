@@ -66,6 +66,8 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [Detecting Algorithmically Generated Domains](http://nbviewer.ipython.org/github/ClickSecurity/data_hacking/blob/master/dga_detection/DGA_Domain_Detection.ipynb), part of the [Data Hacking](http://clicksecurity.github.io/data_hacking) collection on security-oriented data analysis with IPython & friends.
 
+* [Workshop on text analysis](http://nbviewer.ipython.org/github/nealcaren/workshop_2014/tree/master/notebooks/) by [Neal Caren](http://nealcaren.web.unc.edu).
+
 ## Scientific computing and data analysis with the SciPy Stack
 
 ### General topics in scientific computing

@@ -82,7 +82,7 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/github/twiecki/CythonGSL/blob/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* A [Plotly demo](http://nbviewer.ipython.org/gist/7576511) on using the [Plotly graphing API](https://plot.ly/api/Python) to make interactive, collaborative, publication-quality graphs, explained more fully by this [talk](https://www.youtube.com/watch?v=zG8FYPFU9n4).
+* A [Plotly](https://plot.ly/api/Python) [Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Plotly%20Quickstart.ipynb) with an interactive Hans Rosling Gapminder bubble chart, NumPy boxes, and a datetime decay graph. 
 
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/gist/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
 
@@ -113,7 +113,7 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [Manipulation and display of chemical structures](http://nbviewer.ipython.org/gist/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
 
-* A [Plotly tutorial](http://nbviewer.ipython.org/gist/7628933) on using the [Plotly graphing API](https://plot.ly/api/Python) to make graphs with multiple axes, subplots, and insets. 
+* [Converting matplotlib figures](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/Plotly%20and%20mpld3.ipynb) into interactive, D3 graphs, with [matplotlylib](https://pypi.python.org/pypi/matplotlylib/0.1.0). 
 
 * [The sound of Hydrogen](http://nbviewer.ipython.org/github/Carreau/posts/blob/master/07-the-sound-of-hydrogen.ipynb), visualizing and listening to the quantum-mechanical spectrum of Hydrogen. By [Matthias Bussonnier](http://github.com/Carreau).
 
@@ -146,6 +146,8 @@ a demonstration of how IPython notebooks can be used to discuss both the theory 
 * [The Discrete Cosine Transform](http://nbviewer.ipython.org/url/cs.marlboro.edu/courses/spring2014/information/code/dct/dct.ipynb), a brief explanation and illustration of the math behind the DCT and its role in the JPEG image format, by [Jim Mahoney](http://cs.marlboro.edu).
 
 * [Visualizing complex-valued functions with Matplotlib and Mayavi](http://nbviewer.ipython.org/github/empet/Math/blob/master/DomainColoring.ipynb), by [Emilia Petrisor](https://github.com/empet).
+
+* [Running MATLAB in an IPython Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/MATLAB_Wrapper_Examples.ipynb), using [pymatbridge](https://pypi.python.org/pypi/pymatbridge).
 
 ### Pandas for data analysis
 
@@ -183,6 +185,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Getting started with GDELT](http://nbviewer.ipython.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.  Another GDELT example from David, that nicely [integrates mapping visualizations](http://nbviewer.ipython.org/github/dmasad/GDELT_Intro/blob/master/GDELT_Mapping.ipynb).
 
+* [Titanic passengers, coal mining disasters, and vessel speed changes](nbviewer.ipython.org/gist/fonnesbeck/8495259), by [Christopher Fonnesbeck](http://biostat.mc.vanderbilt.edu/wiki/Main/ChrisFonnesbeck)
+
 * A geographic analysis of [Indonesian conflicts in 2012](http://nbviewer.ipython.org/github/herrfz/gdelt/blob/master/indn_connection.ipynb) with GDELT, by [herrfz](https://github.com/herrfz).
 
 * [Bioinformatic Approaches to the Computation of Poetic Meter](http://nbviewer.ipython.org/github/asp49/meter/blob/graph/Shared%20Horizons%20Presentation.ipynb), by [A. Sean Pue](https://github.com/asp49), [C. Titus Brown](https://github.com/ctb) and [Tracy Teal](https://github.com/tracyteal).
@@ -217,7 +221,7 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * [The Design Impact of Multiple Dispatch](http://nbviewer.ipython.org/gist/StefanKarpinski/b8fe9dbb36c1427b9f22), a detailed explanation of Julia's multiple dispatch design, by [Stefan Karpinski](https://github.com/StefanKarpinski).
 
-* A [demonstration and tutorial](http://nbviewer.ipython.org/gist/7551139) on making interactive graphs with [Plotly](https://plot.ly/) and Julia.
+* A [tutorial](http://nbviewer.ipython.org/gist/7551139) on making interactive graphs with [Plotly](https://plot.ly/) and Julia.
 
 ## Haskell notebooks
 There exists a Haskell kernel for IPython in the [IHaskell project](https://github.com/gibiansky/ihaskell).
@@ -282,6 +286,8 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Personal IPython Weight Notebook] (http://nbviewer.ipython.org/gist/9769238). Plot your loss of weight with prognosis and motivation features.
 
+* [Streaming Double Pendulum Simulation in IPython NB](http://nbviewer.ipython.org/github/plotly/Streaming-Demos/blob/master/IPython%20examples/Simulation%20-%20Double%20Pendulum.ipynb).
+
 ## Videos of IPython being used in the wild
 
 Of course the first thing you might try is searching for videos about IPython (1900 or so by last count on Youtube) but there are demonstrations of other applications using the power of IPython but are not mentioned is the descriptions. Below are a few such:
@@ -293,3 +299,5 @@ Of course the first thing you might try is searching for videos about IPython (1
 * He doesn't show IPython in use but his IPython sticker is clear for the entire video: [Planning and Tending the Garden: The Future of Early Childhood Python Education](http://www.youtube.com/watch?v=op61s-QHryk)
 
 * [Wes McKinney's speech](http://youtu.be/qbYYamU42Sw?t=5m9s) on Python and data analysis features IPython as does his book [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do)
+
+* [This video](https://www.youtube.com/watch?v=zG8FYPFU9n4) shows Plotly and IPython in use at a Montreal Python meetup.

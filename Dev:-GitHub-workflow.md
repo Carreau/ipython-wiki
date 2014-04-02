@@ -4,22 +4,25 @@ Notes on working with GitHub
 
 ## Milestones
 
-* 100% of confirmed issues should have a milestone
+* 100% of confirmed issues should have a milestone.
 * An issue should never be closed without a milestone.
-* All issues closed should be marked with the next release milestone or **noaction**.
+* All pull requests should have a milestone.
+* All issues closed should be marked with the next release milestone, next backport milestone, or **no action**.
 * Open issues should only lack a milestone if:
     - more clarification is required (label: `needs-info`)
-* In general, there will be three milestones with open issues:
-    - **next release**. This should be the default milestone of all issues.  As the release approaches, issues can be explicitly bumped to next release + 1.
-    - **next release + 1**.  Only issues that we are confident will *not* be included in the next release go here.  This milestone should be mostly empty until relatively close
+* In general, there will be four milestones with open issues:
+    - **next minor release**. This milestone contains issues that should be backported for the next minor release. See [below](#backporting) for information on backporting.
+    - **next major release**. This should be the default milestone of all issues.  As the release approaches, issues can be explicitly bumped to next release + 1.
+    - **next major release + 1**.  Only issues that we are confident will *not* be included in the next release go here.  This milestone should be mostly empty until relatively close to release.
     - **wishlist**.  This is the milestone for issues that we have no immediate plans to address.
-* The remaining milestone is **noaction** for open or closed issues that require no action:
+* The remaining milestone is **no action** for open or closed issues that require no action:
     - Not actually an issue (e.g. questions, discussion, etc.)
     - Duplicate of an existing Issue
     - Closed because we won't fix it 
-    - When an issue is closed with **noaction**, it means that the issue will not be fixed, or it was not an issue at all.
+    - When an issue is closed with **no action**, it means that the issue will not be fixed, or it was not an issue at all.
 * When closing an issue, it should always have one of these two milestones:
-    - **next release** because the issue has been addressed
+    - **next backport release** because the issue has been addressed
+    - **next major release** because the issue has been addressed
     - **noaction** because the issue *will not* be addressed, or it is a duplicate/non-issue.
 
 In general: When in doubt, mark with **next release**.  We can always push back when we have more specific plans for a given release.
@@ -34,14 +37,14 @@ Some significant labels:
 * `needs-info`: issue needs more information from submitter before progress can be made
 * `type-bug`: errors are raised, or unintended behavior occurs
 * `type-enhancement`: improvements that are not bugs
-* `backport-X.Y.Z`: Any fix for this issue should be backported to the maintenance branch.
+* <del>backport-X.Y.Z: Any fix for this issue should be backported to the maintenance branch.<del> backports are expressed with milestones, starting with 2.1.
 * `prio-foo`: a priority level for ranking issues - nonessential, but prio-high/low are useful for explicitly promoting/demoting issues, particularly when nearing release.
 * `ClosedPR`: This issue is a reminder for a PR that was closed for going stale.
 * `quickfix`: Obvious or easy fixes.
 
 All confirmed issues should at least have a `type-foo` label, and be marked with any affected components (e.g `parallel`, `qtconsole`, `htmlnotebook`), or particular sources of error (e.g. `py3k` or `unicode`).
 
-The `doc` and `quickfix` labels are the best places for new contributors to start.
+The `quickfix` label is probably the best place for new contributors to start.
 
 
 ## Pull Requests
@@ -74,8 +77,8 @@ When opening a new issue, please take the following steps:
 
 ## Backporting
 
-* We should maintain an A.B.x maintenance branch for backporting
-* That branch shall be called `A.B.x`, e.g. `0.13.x`, not `0.13.1`. This way, there is only one maintenance branch per release series.
-* When an Issue is determined to be appropriate for backporting, it should be marked with the `backport-X.Y.Z` label.
-* Any Pull Request which addresses a backport issue should also receive the same label.  This is the only case where we use labels for pull requests.
+* We should keep an `A.x` maintenance branch for backporting fixes from master.
+* That branch shall be called `A.x`, e.g. `2.x`, not `2.1`. This way, there is only one maintenance branch per release series.
+* When an Issue is determined to be appropriate for backporting, it should be marked with the `A.B` milestone.
+* Any Pull Request which addresses a backport issue should also receive the same milestone.
 * Patches are backported to the maintenance branch by applying the pull request patch to the maintenance branch (currently with the [backport_pr](https://github.com/ipython/ipython/blob/master/tools/backport_pr.py) script).

@@ -149,6 +149,10 @@ a demonstration of how IPython notebooks can be used to discuss both the theory 
 
 * [Running MATLAB in an IPython Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/MATLAB_Wrapper_Examples.ipynb), using [pymatbridge](https://pypi.python.org/pypi/pymatbridge).
 
+* [Implementing simple sequential feature selection algorithms in Python](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+
+* [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
@@ -214,6 +218,10 @@ Note that in the 'collections' section above there are also pandas-related links
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).
 
 * [Python Descriptors Demystified](http://nbviewer.ipython.org/gist/ChrisBeaumont/5758381/descriptor_writeup.ipynb), an in-depth discussion of the descriptor protocol in Python, by [Chris Beaumont](http://chrisbeaumont.org).
+
+* [Looking at Python's True and False evaluations](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/python_true_false.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+
+* [Short performance comparison of `.format()` and the binary `%` operator for string formatting](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/timeit_test.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
 ## Julia notebooks
 

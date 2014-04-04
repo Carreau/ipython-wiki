@@ -13,7 +13,7 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 * [http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb Calico Project]
 * [https://github.com/neomantra/lua_ipython_kernel Lua Kernel]
 * [https://github.com/dsblank/simple_kernel Simple example kernel]
-
+* [https://github.com/takluyver/IRkernel RKernel]
 To read to create IPython kernel :
 
 [http://andrew.gibiansky.com/blog/ipython/ipython-kernels/ Ihaskell Creator blog post]

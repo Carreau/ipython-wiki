@@ -6,7 +6,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 ## Entire books or other large collections of notebooks on a topic
 
-* First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/notebooks/Part%201%20-%20Running%20Code.ipynb), this is one of IPython's official [notebook example collection](http://nbviewer.ipython.org/github/ipython/ipython/tree/master/examples/notebooks).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/notebooks/Part%205%20-%20Rich%20Display%20System.ipynb).
+* First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Running%20Code.ipynb), this is one of IPython's official [notebook example collection](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Index.ipynb).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Display%20System.ipynb).
 
 * A [great matplotlib tutorial](http://nbviewer.ipython.org/github/jrjohansson/scientific-python-lectures/blob/master/Lecture-4-Matplotlib.ipynb), part of the fantastic [Lectures on Scientific Computing with Python](http://nbviewer.ipython.org/github/jrjohansson/scientific-python-lectures/tree/master) by [J.R. Johansson](https://github.com/jrjohansson).
 

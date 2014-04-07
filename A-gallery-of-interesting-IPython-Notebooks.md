@@ -189,7 +189,7 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Getting started with GDELT](http://nbviewer.ipython.org/github/dmasad/GDELT_Intro/blob/master/Getting_Started_with_GDELT.ipynb), by [David Masad](https://github.com/dmasad). [GDELT](http://eventdata.psu.edu/data.dir/GDELT.html) is a dataset containing more than 200-million geolocated events with global coverage for 1979 to the present.  Another GDELT example from David, that nicely [integrates mapping visualizations](http://nbviewer.ipython.org/github/dmasad/GDELT_Intro/blob/master/GDELT_Mapping.ipynb).
 
-* [Titanic passengers, coal mining disasters, and vessel speed changes](nbviewer.ipython.org/gist/fonnesbeck/8495259), by [Christopher Fonnesbeck](http://biostat.mc.vanderbilt.edu/wiki/Main/ChrisFonnesbeck)
+* [Titanic passengers, coal mining disasters, and vessel speed changes](http://nbviewer.ipython.org/gist/fonnesbeck/8495259), by [Christopher Fonnesbeck](http://biostat.mc.vanderbilt.edu/wiki/Main/ChrisFonnesbeck)
 
 * A geographic analysis of [Indonesian conflicts in 2012](http://nbviewer.ipython.org/github/herrfz/gdelt/blob/master/indn_connection.ipynb) with GDELT, by [herrfz](https://github.com/herrfz).
 

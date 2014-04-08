@@ -176,6 +176,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 ### Social data
 
+* [The Need for Openness in Data Journalism¶](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
+
 * A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/github/jseabold/538model/blob/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).
 
 * [Data about the Sandy Hook massacre in Newtown, Conneticut](http://nbviewer.ipython.org/url/www.brianckeegan.com/data/Shootings/Shootings.ipynb), which accompanies a more detailed [blog post on the subject](http://www.brianckeegan.com/2012/12/sandy-hook-school-massacre/). Here are the [notebook and accompanying data](http://www.brianckeegan.com/data/Shootings/Shootings.ipynb).  By Brian Keegan.

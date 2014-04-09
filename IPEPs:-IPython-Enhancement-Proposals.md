@@ -39,12 +39,13 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 13: Updating the Message Spec]] -- *Active*
 * [[IPEP 14: Notebook Regression Tests]] -- *Active*
 * [[IPEP 15: Autosaving the IPython Notebook]] -- *Implemented*
-* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Accepted*
+* [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Implemented*
 * [[IPEP 17: Notebook format 4]] -- *Active*
 * [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Active*
 * [[IPEP 20: Informal structure of cell metadata]] -- *Active*
-* [[IPEP 21: Widget Messages]] -- *Active*
+* [[IPEP 21: Widget Messages]] -- *Implemented*
 * [[IPEP 22: Notebook, new cell type "Comment"]] -- *Active*
-* [[IPEP 23: Backbone.js Widgets]] -- *Active*
-* [[IPEP 24: Registry of installed kernels]] -- *Active*
+* [[IPEP 23: Backbone.js Widgets]] -- *Implemented*
+* [[IPEP 24: completion and object_info]] -- *Active*
+* [[IPEP 25: Registry of installed kernels]] -- *Active*

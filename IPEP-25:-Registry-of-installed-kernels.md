@@ -25,10 +25,20 @@ The systemwide directory is located in:
 
 #Kernel directories
 
-Each kernel in the registry is represented by a directory in one of the locations described above. The name of this directory is the kernel's name, and is used in the API to list and select the kernel.
+Each kernel in the registry is represented by a directory in one of the locations described above. The name of this directory is the kernel's name, and is used in the API to list and select the kernel. Kernel names should consist solely of ASCII alphanumeric characters and underscores, and should not start with a number (i.e. they should match the regex `[a-zA-Z_][a-zA-Z0-9_]*`). Names are case insensitive.
 
 A number of files should be present in the directory:
 
 * kernel.json: contains important information about the kernel; described below.
 * icons: TBD
 * custom.js, custom.css (optional): JS and CSS to tweak the interactive notebook UI. These are provided so kernels can work around limitations in the UI, but they should be used no more than necessary, and be treated as a stopgap measure while the core UI is improved to better accommodate different languages.
+
+##kernel.json
+
+Should contain an object with the following keys:
+
+* argv: A list of command line arguments used to start the kernel. The text `{connection_file}` in any argument will be replaced with the path to the connection file.
+* display_name: The kernel's name as it should be displayed in the UI. Unlike the kernel name used in the API, this can contain arbitrary unicode characters.
+* language: The programming language which this kernel runs. This will be stored in notebook metadata.
+* codemirror_mode (optional): The codemirror mode to use for code in this language. This need only be provided if it is different from language.
+* (TBD: mimetype? pygments_lexer?)

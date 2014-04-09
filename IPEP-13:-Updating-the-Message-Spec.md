@@ -2,8 +2,8 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 6, 2013</td></tr>
-<tr><td> Updated </td><td> November 13, 2013</td></tr>
-<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3190">PR 3190</a> </td></table>
+<tr><td> Updated </td><td> April 8, 2014</td></tr>
+<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/3190">PR 3190</a>, <a href="https://github.com/ipython/ipython/pull/4536">4536</a> </td></table>
 
 See also: [[IPEP 24: completion and object_info]] for updates to completion and object_info
 
@@ -11,9 +11,11 @@ We've learned a lot in our first 18 months with the message spec,
 and we got a remarkable amount right.
 But we didn't get everything right, and we want to clean some things up prior to 1.0.
 
+## Renamed message types
+
 A few names need to change, because they are Python-specific, and our message spec is not.
 
-**NOTE: Since these names have notebook format implications, they will not be changed until 2.0**
+**NOTE: Since these names have notebook format implications, they will not be changed until 3.0**
 
 - `pyin` will become `execute_input`
 - `pyout` will become `execute_result`
@@ -170,15 +172,6 @@ and adds an *interpretation* of a particular subset of the metadata,
 but these are safely ignored.  In this way, notebook frontends that do not support the metadata
 gracefully degrade, simply losing some layout information, but no data.
 
-## user\_expressions / user\_variables
-
-Since variable names are expressions, user_variables will be removed,
-and only user_expressions remaining.
-
-The `user_expressions` and `user_variables` keys in an `execute_request`
-currently only support plaintext reprs, and have bad custom representations of errors.
-These should simply use the display protocol, and the `status: error` behavior used everywhere else.
-
 ## multiple objects
 
 **Nothing will be done on this issue for this IPEP**
@@ -193,18 +186,128 @@ For all of these cases, the only option is to do the entire HTML rendering kerne
 and use raw HTML-reprs.  This sucks quite a bit, but I don't have a good answer for it.
 </del>
 
-Perhaps the JSON reprs / jsplugins are going to be the only way to do this sort of thing.
+Perhaps JSON reprs / js widgets are going to be the only way to do this sort of thing.
 
-## payload keys
+## getpass
 
-payload keys
-Currently, display payloads list the full object path of the source, which doesn't make any sense.
-It should be a simple identifier, so that moving the implementation does not need to be reflected in the frontend.
+Add a `password` boolean key to `input_request`, to indicate that frontends should not echo input.
 
-## headers
 
-message headers will have the protocol version (5.0 as of IPython 2.0) as a string.
+## Message headers
+
+Message headers will have the protocol version (5.0 as of IPython 3.0) as a string.
+If the message header lacks a version key, it should be assumed to be 4.1,
+the last version before this update.
 
 ## kernel_info
 
-version keys in `kernel_info_reply` messages will be strings, not `version_info`-style lists.
+- version keys in `kernel_info_reply` messages will be strings, not `version_info`-style lists.
+- A `banner` key is added, for the kernel's contribution to console frontend banners.
+- instead of `ipython_version`, `implementation` and `implementation_version` keys are added.
+
+The IPython kernel's kernel_info_reply in IPython 3.0:
+
+```python
+{
+  "protocol_version" : "5.0.0",
+  "implementation" : "ipython",
+  "implementation_version" : "3.0.0",
+  "language" : "python",
+  "language_version" : "3.4.0",
+  "banner" : "Python 3.4.0 (/usr/local/bin/python)\nIPython 3.0.0\n",
+}
+```
+
+## mime-bundles
+
+The mime-type structure used in `display_data` is useful in more contexts than just display messages.
+It will be adopted in other places where representation information is requested, specifically:
+
+- object_info_reply
+- user_expressions
+- pager payload
+
+Adding to what is already in display_data messages,
+an optional `priority` list is added, to allow the producer of the data to express preference
+about display priority.
+
+A mime-bundle takes the form:
+
+```python
+{
+  "status" : "ok",
+  "priority" : ['text/html', 'image/png', 'text/plain'],
+  "data" : {
+    "mime-type" : "mime-type-data",
+  },
+  "metadata" : {
+    "mime-type" : {
+      "metadata" : "about mime-type",
+    }
+  }
+}
+```
+
+- if `status == 'ok'`, then 'data' and 'metadata' must be defined.
+- if `status == 'error'`, then 'ename', 'evalue', and 'etraceback' must be defined,
+  as described in the message spec.
+
+In some contexts, the `status = 'error'` case may not make sense,
+but `status=='ok'` should always be checked before working with `data`.
+
+### object_info_reply
+
+[[IPEP 24: completion and object_info]] describes turning object_info_reply with a mime-bundle message.
+
+### JSON data
+
+The `application/json`` key in a mime bundle stores JSON-serialized data, rather than JSON-able data.
+This results in serializing this data twice, and having to deserialize it twice on the frontend.
+The JSON key will now be unserialized, rather than the serialized form.
+
+## user\_expressions / user\_variables
+
+Since variable names are expressions, user_variables will be removed,
+and only user_expressions remaining.
+
+The `user_expressions` and `user_variables` keys in an `execute_request`
+currently only support plaintext reprs, and have bad custom representations of errors.
+These will be replaced with mime-bundles (like display).
+
+## Payloads
+
+Currently, display payloads list the full object path of the source, which doesn't make any sense.
+It should be a simple identifier, so that moving the implementation does not need to be reflected in the frontend.
+
+### pager mime-bundle
+
+The pager payload will also become a mime-bundle, instead of having just a 'text' key.
+
+An example `execute_reply`:
+
+```python
+{
+  "status" : "ok",
+  "execution_count" : 4,
+  "user_expressions" : {
+    "foo" : {
+      "status": "ok",
+      "data" : {
+        "text/plain" : "5",
+      },
+      "metadata" : {},
+    }
+  },
+  "payloads" : [
+    {
+      "source" : "pager",
+      "status" : "ok",
+      "data" : {
+        "text/plain" : "pager data...",
+      },
+      "metadata" : {},
+    },
+  ]
+}
+```
+

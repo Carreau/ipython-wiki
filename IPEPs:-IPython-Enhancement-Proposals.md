@@ -47,3 +47,4 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 21: Widget Messages]] -- *Active*
 * [[IPEP 22: Notebook, new cell type "Comment"]] -- *Active*
 * [[IPEP 23: Backbone.js Widgets]] -- *Active*
+* [[IPEP 24: Registry of installed kernels]] -- *Active*

@@ -21,7 +21,7 @@ The per-user directory is located in `$IPYTHONSTARTUP/kernels/` (typically `~/.i
 
 The systemwide directory is located in:
 * Unix systems: `/usr/share/ipython/kernels`
-* Windows systems: ???
+* Windows systems: `%PROGRAMDATA%\ipython\kernels`
 
 #Kernel directories
 

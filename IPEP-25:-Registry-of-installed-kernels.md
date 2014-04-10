@@ -49,6 +49,8 @@ The APIs will be in `IPython.kernel`. A new module will provide a `KernelSpec` c
 
 KernelManager will gain a `kernel_spec` attribute, referring to `KernelSpec` instances, and be refactored to use this to launch kernels. It will not be configurable, because a single process may well instantiate multiple `KernelManager`s with different kernels. The configurable `kernel_cmd` will remain for backwards compatibility, and override `kernel_spec` when set, although this will issue a warning.
 
+TBD: Caching?
+
 #The Native Kernel
 
 The kernel named `python2` or `python3`, corresponding to the Python version in the parent process, will be treated specially. It will always be available, even if its kernel directory is removed. Its `argv` will be overridden to use the same Python executable as the parent process; this means that a notebook server started in a virtualenv will start its native kernels in that virtualenv.

@@ -40,7 +40,7 @@ Should contain an object with the following keys:
 * argv: A list of command line arguments used to start the kernel. The text `{connection_file}` in any argument will be replaced with the path to the connection file.
 * display_name: The kernel's name as it should be displayed in the UI. Unlike the kernel name used in the API, this can contain arbitrary unicode characters.
 * language: The programming language which this kernel runs. This will be stored in notebook metadata.
-* codemirror_mode (optional): The codemirror mode to use for code in this language. This need only be provided if it is different from language.
+* codemirror_mode (optional): The codemirror mode to use for code in this language. This can be a string or a dictionary, as passed to [codemirror config](http://codemirror.net/doc/manual.html#config). The string from `language` will be used if this is not provided.
 * (TBD: mimetype? pygments_lexer?)
 
 #New APIs

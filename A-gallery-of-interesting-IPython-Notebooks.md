@@ -76,6 +76,9 @@ A set of IPython Notebooks by [Caleb Madrigal](http://calebmadrigal.com) to expl
 
 * [A gentle introduction to scientific programming in Python, biased towards biologists](http://nbviewer.ipython.org/url/atwallab.cshl.edu/teaching/QBbootcamp3.ipynb), by [Mickey Atwal, Cold Spring Harbor Laboratory](http://atwallab.cshl.edu).
 
+* [Python for Data Science](http://nbviewer.ipython.org/github/gumption/Python_for_Data_Science/blob/master/Python_for_Data_Science_all.ipynb), a self-contained mini-course with exercises, by [
+Joe McCarthy](http://interrelativity.com/joe).
+
 * [First few lectures of the UW/Coursera course on Data Analysis](http://nbviewer.ipython.org/github/fonnesbeck/ComputationalMethodsCourse/blob/master/Lecture%201.ipynb). ([Repo](https://github.com/fonnesbeck/ComputationalMethodsCourse)) by Chris Fonnesbeck.
 
 * [Linear algebra with Cython](http://nbviewer.ipython.org/github/carljv/cython_testing/blob/master/cython_linalg.ipynb).  A tutorial that styles the notebook differently to show that you can produce high-quality typography online with the Notebook.  By Carl Vogel.

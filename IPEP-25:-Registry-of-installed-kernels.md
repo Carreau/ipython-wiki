@@ -30,7 +30,7 @@ Each kernel in the registry is represented by a directory in one of the location
 A number of files should be present in the directory:
 
 * kernel.json: contains important information about the kernel; described below.
-* icons: TBD
+* icon.png, icon-small.png: Icons to display in the user interface for the kernel. TBD: sizes
 * custom.js, custom.css (optional): JS and CSS to tweak the interactive notebook UI. These are provided so kernels can work around limitations in the UI, but they should be used no more than necessary, and be treated as a stopgap measure while the core UI is improved to better accommodate different languages.
 
 ##kernel.json

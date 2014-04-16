@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 This page is a curated collection of IPython notebooks that are notable for some reason.  Feel free to add new content here, but please try to only include links to notebooks that include interesting visual or technical content; this should *not* simply be a dump of a Google search on every ipynb file out there.
 
 **Important contribution instructions:** If you add new content, please ensure that for any notebook you link to, the link is to the rendered version using [nbviewer](http://nbviewer.ipython.org), rather than the raw file.  Simply paste the notebook URL in the nbviewer box and copy the resulting URL of the rendered version.  This will make it much easier for visitors to be able to immediately access the new content.
@@ -28,9 +16,17 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Signal Processing](#signal-processing)
 2. [Scientific computing and data analysis with the SciPy Stack](#scientific-computing-and-data-analysis-with-the-scipy-stack)
   * [General topics in scientific computing](#general-topics-in-scientific-computing)
-  * [Pandas for data analysis](#pandas-for-data-analysis)
   * [Social data](#social-data)
+  * [Psychology and Neuroscience](#psychology-and-neuroscience)
+  * [Machine Learning](#machine-learning)
+  * [Physics, Chemistry and Biology](#physics,-chemistry-and-biology)
+  * [Economics](#economics)
+  * [Earth science and geo-spatial data](#earth-science-and-geo-spatial-data)
+  * [Data visualization and plotting](#data-visualization-and-plotting)
+  * [Mathematics](#mathematics)
+  * [Signal and Sound Processing](#signal-and-sound-processing)
   * [Natural Language Processing](#natural-language-processing)
+  * [Pandas for data analysis](#pandas-for-data-analysis)
 3. [General Python Programming](#general-python-programming)
 4. [Julia notebooks](#julia-notebooks)
 5. [Haskell notebooks](#haskell-notebooks)
@@ -119,7 +115,6 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 * [An introduction to Compressed Sensing](http://nbviewer.ipython.org/github/unpingco/Python-for-Signal-Processing/blob/master/Compressive_Sampling.ipynb), part of [Python for Signal Processing](http://nbviewer.ipython.org/github/unpingco/Python-for-Signal-Processing): an entire book (and [blog](http://python-for-signal-processing.blogspot.com)) on the subject by Jose Unpingco.
 
 ## Scientific computing and data analysis with the SciPy Stack
-
 ### General topics in scientific computing
 
 * [A Crash Course in Python for Scientists](http://nbviewer.ipython.org/gist/5920182), by Sandia's [Rick Muller](http://www.cs.sandia.gov/~rmuller).
@@ -131,18 +126,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [First few lectures of the UW/Coursera course on Data Analysis](http://nbviewer.ipython.org/github/fonnesbeck/ComputationalMethodsCourse/blob/master/Lecture%201.ipynb). ([Repo](https://github.com/fonnesbeck/ComputationalMethodsCourse)) by Chris Fonnesbeck.
 
-* [Linear algebra with Cython](http://nbviewer.ipython.org/github/carljv/cython_testing/blob/master/cython_linalg.ipynb).  A tutorial that styles the notebook differently to show that you can produce high-quality typography online with the Notebook.  By Carl Vogel.
-
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/github/twiecki/CythonGSL/blob/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* A [Plotly](https://plot.ly/api/Python) [Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Plotly%20Quickstart.ipynb) with an interactive Hans Rosling Gapminder bubble chart, NumPy boxes, and a datetime decay graph. 
-
-* [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/gist/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
-
-* [Data and visualization integration via web based resources]
-(http://nbviewer.ipython.org/gist/5678081). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
-
-* [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
 
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/gist/3914904).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/gist/3407544).
 
@@ -152,85 +137,19 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/url/perrin.dynevor.org/exploring_r_formula_evaluated.ipynb).  By Matthew Brett.
 
-* [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](http://nbviewer.ipython.org/github/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
-
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 
-* [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
-
-* [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/gist/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
-
-* [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
-
-* [Face Recognition on a subset of the Labeled Faces in the Wild dataset](http://nbviewer.ipython.org/github/ogrisel/notebooks/blob/master/Labeled%20Faces%20in%20the%20Wild%20recognition.ipynb), by [Olivier Grisel](http://github.com/ogrisel).
-
-* [Manipulation and display of chemical structures](http://nbviewer.ipython.org/gist/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
-
-* [Converting matplotlib figures](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/Plotly%20and%20mpld3.ipynb) into interactive, D3 graphs, with [matplotlylib](https://pypi.python.org/pypi/matplotlylib/0.1.0). 
-
-* [The sound of Hydrogen](http://nbviewer.ipython.org/github/Carreau/posts/blob/master/07-the-sound-of-hydrogen.ipynb), visualizing and listening to the quantum-mechanical spectrum of Hydrogen. By [Matthias Bussonnier](http://github.com/Carreau).
-
-* [Function minimization with iminuit](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/tutorial.ipynb), an introductory companion to their [hard core tutorial](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/hard-core-tutorial.ipynb). By the [iminuit project](http://iminuit.github.io/iminuit).
-
-* [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle/raw/d046b2bcf473503fa356094cfe4cff774d1aaefc/270D.ipynb), by [Greg Surges](http://gregsurges.com).
-
-* [Chebfun in Python](http://nbviewer.ipython.org/gist/6724986), a demo of [PyChebfun](https://github.com/cswiercz/pychebfun), by [Olivier Verdier](http://www.olivierverdier.com). PyChebfun is a pure-python implementation of the celebrated [Chebfun package by Battles and Trefethen](http://people.maths.ox.ac.uk/trefethen/publication/PDF/2004_107.pdf). 
-
-* [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/github/fonnesbeck/multilevel_modeling/blob/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
-
-* [Bayesian data analysis with PyMC3](http://nbviewer.ipython.org/github/twiecki/pymc3_talk/blob/master/bayesian_pymc3.ipynb) by [Thomas Wiecki](https://github.com/twiecki).
-
-* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/github/arokem/teach_optimization/blob/master/optimization.ipynb) by Ariel Rokem.
-
-* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/github/jonasnick/ReceptiveFields/blob/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
 
 * [The Traveling Salesperson Problem](http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb) by [Peter Norvig](http://norvig.com).
 
 * [A git tutorial targeted at scientists](http://nbviewer.ipython.org/github/fperez/reprosw/blob/master/Version%20Control.ipynb) by Fernando Perez.
 
-* Particle physics at the Large Hadron Collider (LHC):  using [ROOT in an LHCb masterclass](http://root.cern.ch/drupal/content/ipython-notebooks-and-root-0):  [Notebook 1](http://nbviewer.ipython.org/github/mazurov/webfest2013/blob/master/notebooks/MasterClassD0-ex1.ipynb) and [Notebook 2](http://nbviewer.ipython.org/github/mazurov/webfest2013/blob/master/notebooks/MasterClassD0-ex2%2Cex3.ipynb) notebooks by Alexander Mazurov and Andrey Ustyuzhanin at CERN.
-
-* [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/Tutorial%20and%20Examples.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).
-
-* [A Reaction-Diffusion Equation Solver in Python with Numpy]
-(http://nbviewer.ipython.org/github/waltherg/notebooks/blob/master/2013-12-03-Crank_Nicolson.ipynb),
-a demonstration of how IPython notebooks can be used to discuss both the theory and implementation of numerical algorithms on one page, by [Georg Walther](https://github.com/waltherg).
-
-* [The Discrete Cosine Transform](http://nbviewer.ipython.org/url/cs.marlboro.edu/courses/spring2014/information/code/dct/dct.ipynb), a brief explanation and illustration of the math behind the DCT and its role in the JPEG image format, by [Jim Mahoney](http://cs.marlboro.edu).
-
-* [Visualizing complex-valued functions with Matplotlib and Mayavi](http://nbviewer.ipython.org/github/empet/Math/blob/master/DomainColoring.ipynb), by [Emilia Petrisor](https://github.com/empet).
-
 * [Running MATLAB in an IPython Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/MATLAB_Wrapper_Examples.ipynb), using [pymatbridge](https://pypi.python.org/pypi/pymatbridge).
 
-* [Implementing simple sequential feature selection algorithms in Python](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
-
-* [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
-
-* [Simulation of Delta Sigma modulators in Python](http://nbviewer.ipython.org/gist/ggventurini/8040189) with [deltasigma](https://github.com/ggventurini/python-deltasigma), Python port of of Richard Schreier's *excellent* 
-[MATLAB Delta Sigma Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox) by [Giuseppe Venturini](https://github.com/ggventurini). Collection of demonstrative notebooks on the package [README](https://github.com/ggventurini/python-deltasigma/blob/master/README.md).
-
-* [Geo-Spatial Data with IPython](http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb). Tutorial by [Kelsey Jordahl](http://kjordahl.net/) from SciPy2013.
-
-
-### Pandas for data analysis
-
-Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
-
-* [A 10-minute whirlwind tour of pandas](http://nbviewer.ipython.org/gist/wesm/4757075/PandasTour.ipynb), this is the notebook accompanying a [video presentation](http://vimeo.com/59324550) by Wes McKinney, author of Pandas and the [Python for Data Analysis](http://www.amazon.com/Python-Data-Analysis-Wes-McKinney/dp/1449319793) book.
-
-* [Time-series analysis with Pandas](http://nbviewer.ipython.org/github/changhiskhan/talks/blob/master/pydata2012/pandas_timeseries.ipynb).
-
-* [Financial data analysis with Pandas](http://nbviewer.ipython.org/gist/3962843).
-
-* [Clustering of smartphone sensor data for human activity detection using pandas and scipy](http://nbviewer.ipython.org/github/herrfz/dataanalysis/blob/master/week4/clustering_example.ipynb), part of Coursera data analysis course, done in Python ([repo](https://github.com/herrfz/dataanalysis)).
-
-* [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
-
-* [Analyzing and visualizing sun spot data with Pandas](http://nbviewer.ipython.org/gist/4569783), by [Josh Hemann](https://github.com/jhemann). An enlightening discussion of how naive plotting choices subtly influence our interpretation of data.
-
-* [Advanced analysis of Apache logs](http://nbviewer.ipython.org/github/koldunovn/nk_public_notebooks/blob/master/Apache_log.ipynb), by [Nikolay Koldunov](https://github.com/koldunovn).
-
 ### Social data
+
+* [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/docs/Survival%20Analysis%20intro.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).
+
 
 * [The Need for Openness in Data Journalism¶](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
 
@@ -256,8 +175,6 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Bioinformatic Approaches to the Computation of Poetic Meter](http://nbviewer.ipython.org/github/asp49/meter/blob/graph/Shared%20Horizons%20Presentation.ipynb), by [A. Sean Pue](https://github.com/asp49), [C. Titus Brown](https://github.com/ctb) and [Tracy Teal](https://github.com/tracyteal).
 
-* [Replication of the highly-contentious analysis of economic growth by Reinhart and Rogoff](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb), by [Vincent Arel-Bundock](http://umich.edu/~varel), [full repo here](https://github.com/vincentarelbundock/Reinhart-Rogoff). This is based on the [widely-publicized critique of the original analysis done by Herndon, Ash, and Pollin](http://www.peri.umass.edu/236/hash/31e2ff374b6377b2ddec04deaa6388b1/publication/566).
-
 * Analyzing the [Vélib dataset from Paris](http://nbviewer.ipython.org/gist/5520933), by [Cyrille Rossant](https://github.com/rossant) (Vélib is Paris' [bicycle-sharing program](http://en.wikipedia.org/wiki/V%C3%A9lib')).
 
 * [Using Python to see how the Times writes about men and women](http://nbviewer.ipython.org/gist/5105037), by [Neal Caren](https://twitter.com/HaphazardSoc).
@@ -270,9 +187,113 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [NYT gender wage gap and US crime by state](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Bubble%20Chart%20Explorer.ipynb).
 
+
+### Psychology and Neuroscience
+
+* [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/github/arokem/teach_optimization/blob/master/optimization.ipynb) by Ariel Rokem.
+
+* [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/github/jonasnick/ReceptiveFields/blob/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
+
+
+### Machine Learning
+
+* [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/gist/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
+
+* [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
+
+* [Face Recognition on a subset of the Labeled Faces in the Wild dataset](http://nbviewer.ipython.org/github/ogrisel/notebooks/blob/master/Labeled%20Faces%20in%20the%20Wild%20recognition.ipynb), by [Olivier Grisel](http://github.com/ogrisel).
+
+* [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/github/fonnesbeck/multilevel_modeling/blob/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
+
+* [Bayesian data analysis with PyMC3](http://nbviewer.ipython.org/github/twiecki/pymc3_talk/blob/master/bayesian_pymc3.ipynb) by [Thomas Wiecki](https://github.com/twiecki).
+
+* [Implementing simple sequential feature selection algorithms in Python](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+
+* [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
+
+
+### Physics, Chemistry and Biology
+
+* [Multibody dynamics and control with Python](http://www.moorepants.info/blog/npendulum.html) and the [notebook file](http://nbviewer.ipython.org/github/gilbertgede/idetc-2013-paper/blob/master/n-pendulum-control.ipynb) by Jason K. Moore.
+
+* [Manipulation and display of chemical structures](http://nbviewer.ipython.org/gist/4316433), by [Greg Landrum](https://github.com/greglandrum), using rdkit.
+
+* [The sound of Hydrogen](http://nbviewer.ipython.org/github/Carreau/posts/blob/master/07-the-sound-of-hydrogen.ipynb), visualizing and listening to the quantum-mechanical spectrum of Hydrogen. By [Matthias Bussonnier](http://github.com/Carreau).
+
+* Particle physics at the Large Hadron Collider (LHC):  using [ROOT in an LHCb masterclass](http://root.cern.ch/drupal/content/ipython-notebooks-and-root-0):  [Notebook 1](http://nbviewer.ipython.org/github/mazurov/webfest2013/blob/master/notebooks/MasterClassD0-ex1.ipynb) and [Notebook 2](http://nbviewer.ipython.org/github/mazurov/webfest2013/blob/master/notebooks/MasterClassD0-ex2%2Cex3.ipynb) notebooks by Alexander Mazurov and Andrey Ustyuzhanin at CERN.
+
+* [A Reaction-Diffusion Equation Solver in Python with Numpy](http://nbviewer.ipython.org/github/waltherg/notebooks/blob/master/2013-12-03-Crank_Nicolson.ipynb), a demonstration of how IPython notebooks can be used to discuss both the theory and implementation of numerical algorithms on one page, by [Georg Walther](https://github.com/waltherg).
+
+* [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
+
+
+### Economics
+
+* [Replication of the highly-contentious analysis of economic growth by Reinhart and Rogoff](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb), by [Vincent Arel-Bundock](http://umich.edu/~varel), [full repo here](https://github.com/vincentarelbundock/Reinhart-Rogoff). This is based on the [widely-publicized critique of the original analysis done by Herndon, Ash, and Pollin](http://www.peri.umass.edu/236/hash/31e2ff374b6377b2ddec04deaa6388b1/publication/566).
+
+
+### Earth science and geo-spatial data
+* [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/gist/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
+
+* [Geo-Spatial Data with IPython](http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb). Tutorial by [Kelsey Jordahl](http://kjordahl.net/) from SciPy2013.
+
+
+### Data visualization and plotting
+
+* A [Plotly](https://plot.ly/api/Python) [Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Plotly%20Quickstart.ipynb) with an interactive Hans Rosling Gapminder bubble chart, NumPy boxes, and a datetime decay graph. 
+
+* [Data and visualization integration via web based resources](http://nbviewer.ipython.org/gist/5678081). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
+
+* [Converting matplotlib figures](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/Plotly%20and%20mpld3.ipynb) into interactive, D3 graphs, with [matplotlylib](https://pypi.python.org/pypi/matplotlylib/0.1.0). 
+
+* [Visualizing complex-valued functions with Matplotlib and Mayavi](http://nbviewer.ipython.org/github/empet/Math/blob/master/DomainColoring.ipynb), by [Emilia Petrisor](https://github.com/empet).
+
+
+### Mathematics
+
+* [Linear algebra with Cython](http://nbviewer.ipython.org/github/carljv/cython_testing/blob/master/cython_linalg.ipynb).  A tutorial that styles the notebook differently to show that you can produce high-quality typography online with the Notebook.  By Carl Vogel.
+
+* [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
+
+* [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
+
+* [Function minimization with iminuit](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/tutorial.ipynb), an introductory companion to their [hard core tutorial](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/hard-core-tutorial.ipynb). By the [iminuit project](http://iminuit.github.io/iminuit).
+
+* [The Discrete Cosine Transform](http://nbviewer.ipython.org/url/cs.marlboro.edu/courses/spring2014/information/code/dct/dct.ipynb), a brief explanation and illustration of the math behind the DCT and its role in the JPEG image format, by [Jim Mahoney](http://cs.marlboro.edu).
+
+* [Chebfun in Python](http://nbviewer.ipython.org/gist/6724986), a demo of [PyChebfun](https://github.com/cswiercz/pychebfun), by [Olivier Verdier](http://www.olivierverdier.com). PyChebfun is a pure-python implementation of the celebrated [Chebfun package by Battles and Trefethen](http://people.maths.ox.ac.uk/trefethen/publication/PDF/2004_107.pdf). 
+
+### Signal and Sound Processing
+
+* [Simulation of Delta Sigma modulators in Python](http://nbviewer.ipython.org/gist/ggventurini/8040189) with [deltasigma](https://github.com/ggventurini/python-deltasigma), Python port of of Richard Schreier's *excellent* [MATLAB Delta Sigma Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox) by [Giuseppe Venturini](https://github.com/ggventurini). Collection of demonstrative notebooks on the package [README](https://github.com/ggventurini/python-deltasigma/blob/master/README.md).
+
+* [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle/raw/d046b2bcf473503fa356094cfe4cff774d1aaefc/270D.ipynb), by [Greg Surges](http://gregsurges.com).
+
+
 ### Natural Language Processing
 
 * [Python Programming for the Humanities](http://fbkarsdorp.github.io/python-course/) by Folgert Karsdorp & Maarten van Gompel.
+
+
+
+
+### Pandas for data analysis
+
+Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).
+
+* [A 10-minute whirlwind tour of pandas](http://nbviewer.ipython.org/gist/wesm/4757075/PandasTour.ipynb), this is the notebook accompanying a [video presentation](http://vimeo.com/59324550) by Wes McKinney, author of Pandas and the [Python for Data Analysis](http://www.amazon.com/Python-Data-Analysis-Wes-McKinney/dp/1449319793) book.
+
+* [Time-series analysis with Pandas](http://nbviewer.ipython.org/github/changhiskhan/talks/blob/master/pydata2012/pandas_timeseries.ipynb).
+
+* [Financial data analysis with Pandas](http://nbviewer.ipython.org/gist/3962843).
+
+* [Clustering of smartphone sensor data for human activity detection using pandas and scipy](http://nbviewer.ipython.org/github/herrfz/dataanalysis/blob/master/week4/clustering_example.ipynb), part of Coursera data analysis course, done in Python ([repo](https://github.com/herrfz/dataanalysis)).
+
+* [Log analysis with Pandas](http://nbviewer.ipython.org/url/taaviburns.ca/presentations/log_analysis_with_pandas/nb/5-Scatterplots.ipynb), part of a [group presented at PyConCa 2012](http://taaviburns.ca/presentations/log_analysis_with_pandas/) by Taavi Burns.
+
+* [Analyzing and visualizing sun spot data with Pandas](http://nbviewer.ipython.org/gist/4569783), by [Josh Hemann](https://github.com/jhemann). An enlightening discussion of how naive plotting choices subtly influence our interpretation of data.
+
+* [Advanced analysis of Apache logs](http://nbviewer.ipython.org/github/koldunovn/nk_public_notebooks/blob/master/Apache_log.ipynb), by [Nikolay Koldunov](https://github.com/koldunovn).
 
 ## General Python Programming
 

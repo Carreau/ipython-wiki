@@ -36,6 +36,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 9. [Whimsical notebooks](#whimsical-notebooks)
 10. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
 
+## Entire books or other large collections of notebooks on a topic
+
 ### Introductory Tutorials
 
 * First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Running%20Code.ipynb), this is one of IPython's official [notebook example collection](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Index.ipynb).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Display%20System.ipynb).

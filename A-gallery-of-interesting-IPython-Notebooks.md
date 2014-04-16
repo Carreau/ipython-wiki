@@ -177,6 +177,9 @@ a demonstration of how IPython notebooks can be used to discuss both the theory 
 * [Simulation of Delta Sigma modulators in Python](http://nbviewer.ipython.org/gist/ggventurini/8040189) with [deltasigma](https://github.com/ggventurini/python-deltasigma), Python port of of Richard Schreier's *excellent* 
 [MATLAB Delta Sigma Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox) by [Giuseppe Venturini](https://github.com/ggventurini). Collection of demonstrative notebooks on the package [README](https://github.com/ggventurini/python-deltasigma/blob/master/README.md).
 
+* [Geo-Spatial Data with IPython](http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb). Tutorial by [Kelsey Jordahl](http://kjordahl.net/) from SciPy2013.
+
+
 ### Pandas for data analysis
 
 Note that in the 'collections' section above there are also pandas-related links, such as the one for an [11-lesson tutorial](https://bitbucket.org/hrojas/learn-pandas).

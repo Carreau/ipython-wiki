@@ -4,6 +4,24 @@ This page is a curated collection of IPython notebooks that are notable for some
 
 Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a set of [bookmarklets and extensions](https://github.com/jiffyclub/open-in-nbviewer) to make it a one-click affair to load a Notebook URL into your browser of choice, directly opening into nbviewer.
 
+# Table of Contents
+
+1. [Entire books or other large collections of notebooks on a topic](#entire-books-or-other-large-collections-of-notebooks-on-a-topic)
+2. [Scientific computing and data analysis with the SciPy Stack](#scientific-computing-and-data-analysis-with-the-scipy-stack)
+  * [General topics in scientific computing](#general-topics-in-scientific-computing)
+  * [Pandas for data analysis](#pandas-for-data-analysis)
+  * [Social data](#social-data)
+  * [Natural Language Processing](#natural-language-processing)
+3. [General Python Programming](#general-python-programming)
+4. [Julia notebooks](#julia-notebooks)
+5. [Haskell notebooks](#haskell-notebooks)
+6. [Ruby notebooks](#ruby-notebooks)
+7. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
+8. [Reproducible academic publications](#reproducible-academic-publications)
+9. [Whimsical notebooks](#whimsical-notebooks)
+10. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
+
+
 ## Entire books or other large collections of notebooks on a topic
 
 * First things first, how to [run code in the IPython Notebook](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Running%20Code.ipynb), this is one of IPython's official [notebook example collection](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Index.ipynb).  Another useful one from this group, an explanation of our [rich display system](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Notebook/Display%20System.ipynb).

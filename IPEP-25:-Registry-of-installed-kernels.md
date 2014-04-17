@@ -41,6 +41,7 @@ Should contain an object with the following keys:
 * display_name: The kernel's name as it should be displayed in the UI. Unlike the kernel name used in the API, this can contain arbitrary unicode characters.
 * language: The programming language which this kernel runs. This will be stored in notebook metadata.
 * codemirror_mode (optional): The codemirror mode to use for code in this language. This can be a string or a dictionary, as passed to [codemirror config](http://codemirror.net/doc/manual.html#config). The string from `language` will be used if this is not provided.
+* env (optional): A dictionary of environment variables to set for the kernel. These will be added to the current environment variables.
 * (TBD: mimetype? pygments_lexer?)
 
 #New APIs

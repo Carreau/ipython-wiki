@@ -3,8 +3,8 @@
 <tr><td> Author </td><td> Thomas Kluyver &lt;thomas@kluyver.me.uk&gt;</td></tr>
 <tr><td> Created </td><td> April 8, 2014</td></tr>
 <tr><td> Updated </td><td> April 9, 2014</td></tr>
-<tr><td> Discussion </td><td> [Issue 5656](https://github.com/ipython/ipython/issues/5656) </td></tr>
-<tr><td> Implementation </td><td> [PR 5598](https://github.com/ipython/ipython/pull/5598) </td></tr>
+<tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/issues/5656">Issue 5656</a> </td></tr>
+<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5598">PR 5598</a> </td></tr>
 </table>
 
 #Abstract

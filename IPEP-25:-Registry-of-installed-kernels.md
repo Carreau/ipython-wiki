@@ -17,7 +17,7 @@ This IPEP describes a way for available kernels to advertise themselves to IPyth
 
 The registry lives in two directories on the filesystem: a per-user directory and a systemwide directory. If both contain a kernel with the same name, the user directory has priority.
 
-The per-user directory is located in `$IPYTHONSTARTUP/kernels/` (typically `~/.ipython/kernels/`)
+The per-user directory is located in `$IPYTHONDIR/kernels/` (typically `~/.ipython/kernels/`)
 
 The systemwide directory is located in:
 * Unix systems: `/usr/share/ipython/kernels`

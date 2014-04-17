@@ -252,6 +252,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Visualizing complex-valued functions with Matplotlib and Mayavi](http://nbviewer.ipython.org/github/empet/Math/blob/master/DomainColoring.ipynb), by [Emilia Petrisor](https://github.com/empet).
 
+* [A D3 Viewer for Matplotlib Visualizations](http://jakevdp.github.io/blog/2013/12/19/a-d3-viewer-for-matplotlib/), different from above by not depending on Plot.ly account.
 
 ### Mathematics
 

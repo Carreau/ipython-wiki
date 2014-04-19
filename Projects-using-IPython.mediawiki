@@ -15,9 +15,11 @@ Here is a brief list of other projects using IPython.  If you know of more, feel
 * [https://github.com/dsblank/simple_kernel Simple example kernel]
 * [https://github.com/takluyver/IRkernel RKernel]
 * [https://github.com/robbielynch/ierlang IErlang]
+* [https://github.com/andrewray/iocaml IOCaml]
+
 To read to create IPython kernel :
 
-[http://andrew.gibiansky.com/blog/ipython/ipython-kernels/ Ihaskell Creator blog post]
+[http://andrew.gibiansky.com/blog/ipython/ipython-kernels/ IHaskell creator blog post]
 
 
 

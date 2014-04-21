@@ -24,15 +24,12 @@ Both requests will have two keys:
 {
     "code" : "multiline\nstring",
 
-    # The line number of the cursor.
-    "lineno" : int,
-
-    # The cursor position within the active line.
-    "col" : int,
+    # The position of the cursor in the code block.
+    "cursor_pos" : int,
 }
 ```
 
-Where `code` is the code context, and The cursor's column and line number are specified as `col` and `lineno`.
+Where `code` is the code context, and The cursor's position (in absolute unicode offset, counting from zero) is `cursor_pos`.
 In the most general case, `code` might be an entire cell in a notebook (or even the entire notebook),
 but it can also be just the line in a line-based interface.
 The important point here is that `code` *may* be a multiline string.
@@ -50,11 +47,8 @@ content = {
     # This is either the line or entire cell in which the completion is being requested.
     "code" : "multiline\nstring",
 
-    # The line number of the cursor.
-    "lineno" : int,
-
-    # The cursor position within the active line.
-    "col" : int,
+    # The position of the cursor in the code block.
+    "cursor_pos" : int,
 }
 ```
 
@@ -70,33 +64,24 @@ the request content would be
 ```python
 {
     "code" : "a = 5\na.is",
-    "col" : 10,
-    "lineno" : 1,
+    "cursor_pos" : 10,
 }
 ```
 
 `complete_reply`:
 
 ```python
-{
-    # A list of matches.
-    # if a dictionary, keys are category strings, such as 'file' or 'attributes'.
-    # The simplest interpretation is just to flatten everything to a single list.
-    'matches' : list,
-
-    # A list of extra information for matches.
-    # Must be either empty or length equal to 'matches'.
-    # It is up to the frontend to interpret these values.
-    # If the frontend doesn't understand a given value, it has no effect.
-    # In the simplest case, these are just strings describing the completion,
-    # e.g. 'attribute' or 'file', which the frontend can use add some visual indicator.
-    'matches_extra' : list,
-
-    # the substring of the matched text
-    # this is typically the common prefix of the matches,
-    # and the text that is already in the block that would be replaced by the full completion.
-    # This would be 'a.is' in the above example.
-    'matched_text' : str,
+content = {
+    # A list of string matches.
+    "matches" : list,
+    
+    # the range to be replaced by 
+    "cursor_start" : int,
+    "cursor_end" : int,
+    
+    # kernels can add extra information to metadata,
+    # for use by GUI extensions to affect the display of completions.
+    "metadata" : dict,
 
     # status should be 'ok' unless an exception was raised during the request,
     # in which case it should be 'error', along with the usual error message content
@@ -109,11 +94,12 @@ the request content would be
 
 - [ ] feedback on matches_extra
 
-## Introspection Messages
+## Inspection Messages
 
-An `object_info_request` message now has the same content as `complete_request`:
+`object_info_request/reply` will be renamed to `inspect_request/reply`.
+An `inspect_request` message now has the same content as `complete_request`:
 
-`object_info_request`:
+`inspect_request`:
 
 ```python
 content = {
@@ -122,36 +108,36 @@ content = {
     # This is either the active line or entire cell.
     "code" : "multiline\nstring",
 
-    # The line number of the cursor.
-    "lineno" : int,
-
-    # The cursor position within the active line.
-    "col" : int,
+    # The position of the cursor in the code block.
+    "cursor_pos" : int,
 
     # The level of detail desired.  The default (0) gets most information about the object.
     # 1 tries to add the source code of the object.
-    # in IPython, level 0 is equivalend to 'x?', 1 is equivalent to 'x??'.
+    # In IPython, level 0 is equivalend to 'x?', 1 is equivalent to 'x??'.
     "detail_level" : int,
+}
 ```
 
 **This is where we still need input from kernel authors**
 
 The `object_info_reply` in 1.x was not just Python specific, but highly *IPython*-specific.
 Since there has been little to no use of the detailed content of the info reply other than simply displaying it,
-and given the complexity of proposing language-agnostic introspection fields,
+and given the complexity of proposing language-agnostic inspection fields,
 we are deferring to the kernel for formatting and changing object_info_reply to
 a mime-bundle message (like display_data).
 
+`inspect_reply`:
 
 ```python
 content = {
+    # status should be 'ok' unless an exception was raised during the request,
+    # or nothing was found to inspect,
+    # in which case it should be 'error', along with the usual error message content
+    # in other messages.
     "status" : "ok",
-    # The name of the object whose info was requested
+    
+    # name is optional, and indicates the name or token that was inspected.
     "name" : str,
-
-    # Boolean flag indicating whether the named object was found or not.
-    # If it's false, no fields below need be defined.
-    "found" : bool,
     
     # the data/metadata keys are interpreted the same as any mime-bundle message
     # (display_data, execute_result, etc.)

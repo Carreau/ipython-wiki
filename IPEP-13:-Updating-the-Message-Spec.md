@@ -227,16 +227,11 @@ It will be adopted in other places where representation information is requested
 - user_expressions
 - pager payload
 
-Adding to what is already in display_data messages,
-an optional `priority` list is added, to allow the producer of the data to express preference
-about display priority.
-
 A mime-bundle takes the form:
 
 ```python
 {
   "status" : "ok",
-  "priority" : ['text/html', 'image/png', 'text/plain'],
   "data" : {
     "mime-type" : "mime-type-data",
   },
@@ -275,6 +270,8 @@ currently only support plaintext reprs, and have bad custom representations of e
 These will be replaced with mime-bundles (like display).
 
 ## Payloads
+
+**The entire Payload model will be revisited in a separate IPEP.**
 
 Currently, display payloads list the full object path of the source, which doesn't make any sense.
 It should be a simple identifier, so that moving the implementation does not need to be reflected in the frontend.

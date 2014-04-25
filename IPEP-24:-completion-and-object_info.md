@@ -131,13 +131,13 @@ a mime-bundle message (like display_data).
 ```python
 content = {
     # status should be 'ok' unless an exception was raised during the request,
-    # or nothing was found to inspect,
     # in which case it should be 'error', along with the usual error message content
     # in other messages.
     "status" : "ok",
     
-    # name is optional, and indicates the name or token that was inspected.
-    "name" : str,
+    # found indicates whether anything was found to inspect.
+    # If True, data and metadata below will be defined.
+    "found" : bool,
     
     # the data/metadata keys are interpreted the same as any mime-bundle message
     # (display_data, execute_result, etc.)

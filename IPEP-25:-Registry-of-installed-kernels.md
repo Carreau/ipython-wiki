@@ -42,6 +42,7 @@ Should contain an object with the following keys:
 * language: The programming language which this kernel runs. This will be stored in notebook metadata.
 * codemirror_mode (optional): The codemirror mode to use for code in this language. This can be a string or a dictionary, as passed to [codemirror config](http://codemirror.net/doc/manual.html#config). The string from `language` will be used if this is not provided.
 * env (optional): A dictionary of environment variables to set for the kernel. These will be added to the current environment variables.
+* help_links (optional): A list of dictionaries, each with keys 'text' and 'url'. These will be displayed in the help menu in the notebook UI.
 * (TBD: mimetype? pygments_lexer?)
 
 #New APIs

@@ -65,7 +65,7 @@ the full test suite.  You can then run the suite with:
 By default, this excludes the relatively slow tests for `IPython.parallel`. To
 run these, use `iptest --all`.
 
-Please note that the iptest tool will run tests against the code imported by the Python interpreter. If the command `python setup.py symlinks` has been previously run then this will always be the test code in the local directory via a symlink. However, if this command has not been run for the version of Python being tested, there is the possibility that iptest will run the tests against an installed version of IPython. 
+Please note that the iptest tool will run tests against the code imported by the Python interpreter. If the command `python setup.py symlink` has been previously run then this will always be the test code in the local directory via a symlink. However, if this command has not been run for the version of Python being tested, there is the possibility that iptest will run the tests against an installed version of IPython. 
 
 Regardless of how you run things, you should eventually see something like:
 

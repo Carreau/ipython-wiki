@@ -188,6 +188,20 @@ To install:
 ```text
 %install_ext https://raw.github.com/ebellm/ipython-idlmagic/master/idlmagic.py
 ```
+## pep8
+
+Allows to check for the pep8 styleguide using the cellmagic `%%pep8`.
+
+[Homepage](https://github.com/SiggyF/notebooks)
+
+To install:
+
+```text
+    %install_ext https://raw.githubusercontent.com/SiggyF/notebooks/master/pep8_magic.py
+```
+
+An example is provided [here](http://nbviewer.ipython.org/github/SiggyF/notebooks/blob/master/styleguide.ipynb).
+
 
 ## py2tex
 

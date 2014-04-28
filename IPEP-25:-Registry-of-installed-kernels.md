@@ -58,3 +58,46 @@ TBD: Caching?
 The kernel named `python2` or `python3`, corresponding to the Python version in the parent process, will be treated specially. It will always be available, even if its kernel directory is removed. Its `argv` will be overridden to use the same Python executable as the parent process; this means that a notebook server started in a virtualenv will start its native kernels in that virtualenv.
 
 The kernel name `python` will be special cased as an alias to the native kernel.
+
+# REST API
+
+Three new REST endpoints will be defined to access this information.
+
+## List available kernels
+
+    GET /api/kernelspecs
+
+### Response
+
+    status: 200 OK
+
+```json
+[
+    {
+        "name": "python3",
+        "display_name": "Python 3"
+    },
+    {
+        "name": "julia",
+        "display_name": "Julia"
+    }
+]
+```
+
+## Get information for a kernel
+
+    GET /api/kernelspecs/[:kernel]
+
+### Response
+
+    status: 200 OK
+
+The response body is the contents of `kernel.json`.
+
+If the kernel is not found, the status will be 404.
+
+## Get a file from a kernel directory
+
+    GET /api/kernelspecs/[:kernel]/[:filename]
+
+The responses follow standard semantics for serving files over HTTP.

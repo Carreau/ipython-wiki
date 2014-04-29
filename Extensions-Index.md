@@ -25,6 +25,11 @@ diagrams within an IPython notebook.
 
 See the [example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjohansson/ipython-asymptote/master/Asymptote-examples.ipynb) for installation instruction and example of how to use this magic extension.
 
+## base16-ipython-matplotlibrc
+Enables matplotlib themes that match base16 [notebook themes](https://github.com/nsonnad/base16-ipython-notebook).
+[Homepage](https://github.com/benjaminaschultz/base16-ipython-matplotlibrc)
+[Example Scrrenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
+
 ## Django ORM magic
 
 Define your django models in a cell and use them on the fly. Let the magic do the boring part.
@@ -88,7 +93,6 @@ To install:
 ```text
 %install_ext https://gist.github.com/z-m-k/6080008/raw/7611cb869b5ff162d00e95856054b887b0b0d095/ipyBibtex.py
 ```
-
 
 ## physics
 

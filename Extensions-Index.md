@@ -30,7 +30,7 @@ Enables matplotlib themes that match base16 [notebook themes](https://github.com
 
 [Homepage](https://github.com/benjaminaschultz/base16-ipython-matplotlibrc)
 
-[Example Scrrenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
+[Example Screenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
 
 ## Django ORM magic
 

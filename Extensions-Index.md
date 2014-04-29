@@ -27,7 +27,9 @@ See the [example notebook](http://nbviewer.ipython.org/urls/raw.github.com/jrjoh
 
 ## base16-ipython-matplotlibrc
 Enables matplotlib themes that match base16 [notebook themes](https://github.com/nsonnad/base16-ipython-notebook).
+
 [Homepage](https://github.com/benjaminaschultz/base16-ipython-matplotlibrc)
+
 [Example Scrrenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
 
 ## Django ORM magic

@@ -272,7 +272,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Simulation of Delta Sigma modulators in Python](http://nbviewer.ipython.org/gist/ggventurini/8040189) with [deltasigma](https://github.com/ggventurini/python-deltasigma), Python port of of Richard Schreier's *excellent* [MATLAB Delta Sigma Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox) by [Giuseppe Venturini](https://github.com/ggventurini). Collection of demonstrative notebooks on the package [README](https://github.com/ggventurini/python-deltasigma/blob/master/README.md).
 
-* [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle/raw/d046b2bcf473503fa356094cfe4cff774d1aaefc/270D.ipynb), by [Greg Surges](http://gregsurges.com).
+* [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle-research-journal/raw/8d5b719bcfb4f194ccabdb5895b17eaa1d140efa/270D.ipynb?create=1), by [Greg Surges](http://gregsurges.com).
 
 
 ### Natural Language Processing

@@ -117,7 +117,7 @@ Development focus for IPython 1.0:
   - The notebook currently fills the width of the screen
   - [PR #3393](https://github.com/ipython/ipython/pull/3393)
 
-## Release 2.0, Winter, 2013/14
+## Release 2.0, April 1, 2014
 
 Development focus for IPython 2.0:
 

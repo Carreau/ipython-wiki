@@ -17,6 +17,8 @@ Videos of prior meetings, in reverse chronological order.
 
 **Note:** some of these may have not been announced in advance but instead happened impromptu after a discussion taking place on our dev chat room needed the bandwidth of face-to-face conversation.  Whenever that happens, if at all possible try to move your chat room conversation to a public hangout and leave a link here afterwards.  That will allow others to catch up on the discussion later on from the video recording.
 
+You can find a list of the videos on the [ipythondev Youtube user page](https://www.youtube.com/user/ipythondev).
+
 ### 2014
 
 * [May 1](http://youtu.be/3_UagCQ23E8)

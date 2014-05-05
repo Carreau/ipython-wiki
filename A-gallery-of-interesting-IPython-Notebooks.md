@@ -308,7 +308,7 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Looking at Python's True and False evaluations](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/python_true_false.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
-* [Short performance comparison of `.format()` and the binary `%` operator for string formatting](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/timeit_test.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+* [Short performance comparison of `.format()` and the binary `%` operator for string formatting](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/benchmarks/timeit_tests.ipynb#str_format_bin), by [Sebastian Raschka](https://github.com/rasbt).
 
 ## Julia notebooks
 

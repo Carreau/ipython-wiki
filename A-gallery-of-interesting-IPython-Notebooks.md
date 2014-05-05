@@ -323,7 +323,7 @@ The IPython protocols to communicate between kernels and clients are language ag
 ## Haskell notebooks
 There exists a Haskell kernel for IPython in the [IHaskell project](https://github.com/gibiansky/ihaskell).
 
-* [IHaskell Demo Notebook](nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
+* [IHaskell Demo Notebook](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
 * [Homophone reduction](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Homophones.ipynb), a solution to a cute problem involving treating English letters as generators of a large group.
 * [Gradient descent typeclass](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Gradient-Descent.ipynb), a look at how arbitrary gradient descent algorithms can be represented with a typeclass.
 

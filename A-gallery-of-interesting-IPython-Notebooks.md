@@ -209,6 +209,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/github/fonnesbeck/multilevel_modeling/blob/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).
 
+* [Introduction to Bayesian Networks](http://nbviewer.ipython.org/github/kuitang/hackny-bayesnet/blob/master/hackNY%20Bayesian%20Network%20Demo.ipynb) by [Kui Tang](https://github.com/kuitang)
+
 * [Bayesian data analysis with PyMC3](http://nbviewer.ipython.org/github/twiecki/pymc3_talk/blob/master/bayesian_pymc3.ipynb) by [Thomas Wiecki](https://github.com/twiecki).
 
 * [Implementing simple sequential feature selection algorithms in Python](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).

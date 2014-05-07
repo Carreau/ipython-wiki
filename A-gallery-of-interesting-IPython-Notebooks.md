@@ -246,11 +246,12 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 ### Data visualization and plotting
 
-* A [Plotly](https://plot.ly/api/Python) [Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Plotly%20Quickstart.ipynb) with an interactive Hans Rosling Gapminder bubble chart, NumPy boxes, and a datetime decay graph. 
+* A [Notebook](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb) with an interactive Hans Rosling Gapminder bubble chart from [Plotly](https://plot.ly/api/Python). 
 
 * [Data and visualization integration via web based resources](http://nbviewer.ipython.org/gist/5678081). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
 
-* [Converting matplotlib figures](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/Plotly%20and%20mpld3.ipynb) into interactive, D3 graphs, with [matplotlylib](https://pypi.python.org/pypi/matplotlylib/0.1.0). 
+* [21 Interactive, D3 Plots from matplotlib, ggplot for Python,
+prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msund/7ac1203ded66fe8134cc). 
 
 * [Visualizing complex-valued functions with Matplotlib and Mayavi](http://nbviewer.ipython.org/github/empet/Math/blob/master/DomainColoring.ipynb), by [Emilia Petrisor](https://github.com/empet).
 
@@ -387,7 +388,7 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Personal IPython Weight Notebook] (http://nbviewer.ipython.org/gist/9769238). Plot your loss of weight with prognosis and motivation features.
 
-* [Streaming Double Pendulum Simulation in IPython NB](http://nbviewer.ipython.org/github/plotly/Streaming-Demos/blob/master/IPython%20examples/Simulation%20-%20Double%20Pendulum.ipynb).
+* [Streaming Double Pendulum Simulation in IPython NB](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb).
 
 ## Videos of IPython being used in the wild
 

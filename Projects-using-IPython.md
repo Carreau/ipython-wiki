@@ -151,6 +151,11 @@ Scientific computing projects
     recordings. An IPython console can be opened in the program to let
     the user perform his own analyses on the data.
 
+-   [Beaker](http://beakernotebook.com/) ([source code](https://github.com/twosigma/beaker-notebook))
+    is a language-agnostic notebook UI that uses IPython kernels to power 
+    several of its backend languages and uses code from IPython's notebook
+    viewer for the backend of its [sharing service](http://sharing.beakernotebook.com/gist/anonymous/11152408).
+
 In teaching
 -----------
 

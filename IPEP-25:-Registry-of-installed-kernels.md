@@ -5,7 +5,8 @@
 <tr><td> Updated </td><td> April 9, 2014</td></tr>
 <tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/issues/5656">Issue 5656</a> </td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5598">PR 5598</a>, 
-<a href="https://github.com/ipython/ipython/pull/5796">PR 5796</a>
+<a href="https://github.com/ipython/ipython/pull/5796">PR 5796</a>,
+<a href="https://github.com/ipython/ipython/pull/5827">PR 5827</a>
 </td></tr>
 </table>
 

@@ -101,6 +101,6 @@ If the kernel is not found, the status will be 404.
 
 ## Get a file from a kernel directory
 
-    GET /api/kernelspecs/[:kernel]/[:filename]
+    GET /kernelspecs/[:kernel]/[:filename]
 
 The responses follow standard semantics for serving files over HTTP.

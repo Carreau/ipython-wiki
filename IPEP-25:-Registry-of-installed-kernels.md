@@ -81,12 +81,12 @@ The returned json includes all fields from `kernel.json` for each kernel, along 
     {
         "name": "python3",
         "display_name": "Python 3"
-        # ... all fields from kernel.json
+        ...
     },
     {
         "name": "julia",
         "display_name": "Julia"
-        # ...
+        ...
     }
 ]
 ```

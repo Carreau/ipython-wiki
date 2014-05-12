@@ -74,15 +74,19 @@ Three new REST endpoints will be defined to access this information.
 
     status: 200 OK
 
+The returned json includes all fields from `kernel.json` for each kernel, along with a `name` key with that kernel's canonical name.
+
 ```json
 [
     {
         "name": "python3",
         "display_name": "Python 3"
+        # ... all fields from kernel.json
     },
     {
         "name": "julia",
         "display_name": "Julia"
+        # ...
     }
 ]
 ```

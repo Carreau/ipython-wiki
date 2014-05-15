@@ -156,6 +156,10 @@ Scientific computing projects
     several of its backend languages and uses code from IPython's notebook
     viewer for the backend of its [sharing service](http://sharing.beakernotebook.com/gist/anonymous/11152408).
 
+-   [QtIPy](http://github.com/mfitzp/qtipy) is a GUI utility to enable automated running of IPython
+    notebooks in response to file or folder changes and timers. Use it to generate automated reports
+    and analysis for experimental data sets, output together with the code that made them.
+
 In teaching
 -----------
 

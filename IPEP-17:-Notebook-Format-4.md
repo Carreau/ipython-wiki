@@ -88,7 +88,7 @@ The specification is being defined using a JSON schema, which notebooks can then
 ## Notebook-level format
 
 * `metadata`: an object containing any top-level notebook metadata. There are three reserved metadata keys which are optional, but if included must follow the following format:
-    * `kernel_info`: an object containing information about the kernel that the notebook should be run with. It should include the following keys:
+    * `kernel_info`: an object containing information about the kernel that the notebook should be run with (see also [IPEP 13](https://github.com/ipython/ipython/wiki/IPEP-13%3A-Updating-the-Message-Spec#kernel_info). It should include the following keys:
         * `name`: the name of the kernel specification
         * `language`: the language that the kernel runs
         * `codemirror_mode`: (optional) the codemirror mode to use when displaying the notebook
@@ -138,7 +138,7 @@ There are four different types of outputs that may be associated with a code cel
 
 All output formats should have the following properties:
 * `output_type`: a string, either "execute_result", "display_data", "stream", or "error"
-* `metadata`: an object containing output metadata. It has no reserved keys.
+* `metadata`: an object containing output metadata. This is mainly used just for `execute_result` and `display_data` outputs, and should include the same mimetype keys as the output itself. See also [IPEP 13](https://github.com/ipython/ipython/wiki/IPEP-13%3A-Updating-the-Message-Spec#display-metadata)
 
 ### Execute result
 

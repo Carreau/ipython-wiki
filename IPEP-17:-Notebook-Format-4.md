@@ -48,14 +48,14 @@ There is no reason for the two cell types to have a different name for their con
 
 Tasks involved in creating nbformat v4:
 
-[ ] thoroughly define the v4 spec
-[ ] update message spec keys (pyout, pyerr, etc.)
-[ ] mime-type keys for output (affects nbconvert, nbformat, javascript)
-[ ] remove worksheets, move cells to top-level list
-[ ] add conversions to nbformat: v3->v2, v4->v3, v3->v4
-[ ] metadata changes
-[ ] widget-related changes (TBD)
-[ ] we will need v4->v4 to track changes to v4 during development. If so, this should probably not be included in release, right?
+- [ ] thoroughly define the v4 spec
+- [ ] update message spec keys (pyout, pyerr, etc.)
+- [ ] mime-type keys for output (affects nbconvert, nbformat, javascript)
+- [ ] remove worksheets, move cells to top-level list
+- [ ] add conversions to nbformat: v3->v2, v4->v3, v3->v4
+- [ ] metadata changes
+- [ ] widget-related changes (TBD)
+- [ ] we will need v4->v4 to track changes to v4 during development. If so, this should probably not be included in release, right?
 
 I think this is the logical order of these tasks:
 

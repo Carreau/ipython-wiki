@@ -88,7 +88,10 @@ The specification is being defined using a JSON schema, which notebooks can then
 ## Notebook-level format
 
 * `metadata`: an object containing any top-level notebook metadata. There are three reserved metadata keys which are optional, but if included must follow the following format:
-    * `kernel_info`: an object containing information about the kernel that the notebook should be run with. It should include keys for `name` (the name of the kernel specification), `language` (the language that the kernel runs), and optionally `codemirror_mode` (the codemirror mode to use when displaying the notebook).
+    * `kernel_info`: an object containing information about the kernel that the notebook should be run with. It should include the following keys:
+        * `name`: the name of the kernel specification
+        * `language`: the language that the kernel runs
+        * `codemirror_mode`: (optional) the codemirror mode to use when displaying the notebook
     * `signature`: a string containing the hash of the notebook, for verification purposes
     * `orig_nbformat`: if the notebook was converted from a different format, this should be an integer indicating the major version of that format
 * `nbformat_minor`: notebook format minor number
@@ -103,7 +106,7 @@ In general, cells should have:
 * `metadata`: an object containing any cell-level metadata. There are two reserved keys, which are optional but if used must conform to the following format (see also [IPEP 20](https://github.com/ipython/ipython/wiki/IPEP-20%3A-Informal-structure-of-cell-metadata))
     * `name`: a non-empty string representing the cell's name
     * `tags`: an array of cell tags, each of which is a string. Tags should not contain commas, and should be unique.
-* `source`: either an array of strings that will be concatenated, or a single string
+* `source`: a "multiline string", which is either an array of strings that will be concatenated, or a single string
 
 ### Raw cell format
 
@@ -122,7 +125,7 @@ Heading cells should have one additional property:
 ### Code cell format
 
 Code cells should have a few additional properties:
-* `outputs`: an array of outputs; see the Output formats section below
+* `outputs`: an array of outputs; see the [Output formats](#output-formats) section below
 * `prompt_number`: the cell's prompt number, which is either an integer value or null
 
 Code cells also have a few additional reserved metadata keys:
@@ -152,7 +155,7 @@ The `display_data` output should have the following additional properties:
 
 The `stream` output should have the following additional properties:
 * `stream`: a string denoting the stream type or destination (e.g. "stdout")
-* `text/plain`: the stream's text output, which may be either a single string, or an array of strings.
+* `text/plain`: the stream's text output, which is a "multiline string" (stored as either a single string, or an array of strings).
 
 ### Error
 

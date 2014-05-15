@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Active </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 29, 2013</td></tr>
-<tr><td> Updated </td><td> September 27, 2013</td></tr>
+<tr><td> Updated </td><td> May 15, 2014</td></tr>
 <tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/pull/5733">5733</a> </td></tr>
 </table>
 

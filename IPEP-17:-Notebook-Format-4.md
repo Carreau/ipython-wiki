@@ -3,6 +3,7 @@
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 29, 2013</td></tr>
 <tr><td> Updated </td><td> September 27, 2013</td></tr>
+<tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/pull/5733">5733</a> </td></tr>
 </table>
 
 There are a few changes we need to make to the notebook that will not be backward compatible.
@@ -79,3 +80,83 @@ Each time a change is made to the in-development v4 spec:
 - update javascript, if affected
 - update nbconvert, if affected
 - **TEST EVERY NEW CHANGE**
+
+# Full v4 Specification
+
+The specification is being defined using a JSON schema, which notebooks can then be validated against. The actual schema document is being developed in [5733](https://github.com/ipython/ipython/pull/5733). Additionally, here is an outline of the specification:
+
+## Notebook-level format
+
+* `metadata`: an object containing any top-level notebook metadata. There are three reserved metadata keys which are optional, but if included must follow the following format:
+    * `kernel_info`: an object containing information about the kernel that the notebook should be run with. It should include keys for `name` (the name of the kernel specification), `language` (the language that the kernel runs), and optionally `codemirror_mode` (the codemirror mode to use when displaying the notebook).
+    * `signature`: a string containing the hash of the notebook, for verification purposes
+    * `orig_nbformat`: if the notebook was converted from a different format, this should be an integer indicating the major version of that format
+* `nbformat_minor`: notebook format minor number
+* `nbformat`: notebook format major number (should be 4)
+* `cells`: an array of cells, which should be of type `raw`, `markdown`, `heading`, or `code`.
+
+## Cell-level formats
+
+In general, cells should have:
+
+* `cell_type`: a string indicating the cell type, one of "raw", "markdown", "heading", or "code"
+* `metadata`: an object containing any cell-level metadata. There are two reserved keys, which are optional but if used must conform to the following format (see also [IPEP 20](https://github.com/ipython/ipython/wiki/IPEP-20%3A-Informal-structure-of-cell-metadata))
+    * `name`: a non-empty string representing the cell's name
+    * `tags`: an array of cell tags, each of which is a string. Tags should not contain commas, and should be unique.
+* `source`: either an array of strings that will be concatenated, or a single string
+
+### Raw cell format
+
+Raw cells have an additional reserved metadata key:
+* `format`: a string indicating the raw cell format for use with nbconvert
+
+### Markdown cell format
+
+Markdown cells have no additional properties.
+
+### Heading cell format
+
+Heading cells should have one additional property:
+* `level`: an integer from 1-6 indicating the heading level
+
+### Code cell format
+
+Code cells should have a few additional properties:
+* `outputs`: an array of outputs; see the Output formats section below
+* `prompt_number`: the cell's prompt number, which is either an integer value or null
+
+Code cells also have a few additional reserved metadata keys:
+* `collapsed`: a boolean indicating whether the cell is collapsed or expanded
+* `autoscroll`: a value indicating whether the cell should be autoscrolled; should be one of `true`, `false`, or "auto"
+
+## Output formats
+
+There are four different types of outputs that may be associated with a code cell: `execute_result` (the result of executing the cell), `display_data` (data that is displayed from the cell), `stream` (text that is printed from a stream, usually standard out), and `error` (the traceback that is produced when an error occurs).
+
+All output formats should have the following properties:
+* `output_type`: a string, either "execute_result", "display_data", "stream", or "error"
+* `metadata`: an object containing output metadata. It has no reserved keys.
+
+### Execute result
+
+The `execute_result` output should have the following additional properties:
+* `prompt_number`: the prompt number of the output (should be the same as the cell's prompt number)
+* mimetype: the key itself should be a valid mimetype (e.g., "text/plain" or "image/png"). The value should be either a string, or an array of strings.
+
+### Display data
+
+The `display_data` output should have the following additional properties:
+* mimetype: the key itself should be a valid mimetype (e.g., "text/plain" or "image/png"). The value should be either a string, or an array of strings.
+
+### Stream
+
+The `stream` output should have the following additional properties:
+* `stream`: a string denoting the stream type or destination (e.g. "stdout")
+* `text/plain`: the stream's text output, which may be either a single string, or an array of strings.
+
+### Error
+
+The `error` output should have the following additional properties:
+* `ename`: the name of the error
+* `evalue`: the value, or message, of the error
+* `traceback`: the error's traceback, represented as an array of strings

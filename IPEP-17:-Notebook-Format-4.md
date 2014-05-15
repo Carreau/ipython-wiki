@@ -24,7 +24,7 @@ These should be restored to proper mimetype values of `image/png` and `applicati
 
 ## Remove python-centric names
 
-Following [IPEP 13](IPEP-13:-Updating-the-Message-Spec), Python-specific keys in the message spec and notebook will be removed. Those affecting the notebook format:
+Following [IPEP 13](https://github.com/ipython/ipython/wiki/IPEP-13%3A-Updating-the-Message-Spec#display-metadata), Python-specific keys in the message spec and notebook will be removed. Those affecting the notebook format:
 
 - `pyout` will become `execute_output`
 - `pyerr` will become `error`
@@ -48,14 +48,14 @@ There is no reason for the two cell types to have a different name for their con
 
 Tasks involved in creating nbformat v4:
 
-- thoroughly define the v4 spec
-- update message spec keys (pyout, pyerr, etc.)
-- mime-type keys for output (affects nbconvert, nbformat, javascript)
-- remove worksheets, move cells to top-level list
-- add conversions to nbformat: v3->v2, v4->v3, v3->v4
-- metadata changes
-- widget-related changes (TBD)
-- we will need v4->v4 to track changes to v4 during development. If so, this should probably not be included in release, right?
+[ ] thoroughly define the v4 spec
+[ ] update message spec keys (pyout, pyerr, etc.)
+[ ] mime-type keys for output (affects nbconvert, nbformat, javascript)
+[ ] remove worksheets, move cells to top-level list
+[ ] add conversions to nbformat: v3->v2, v4->v3, v3->v4
+[ ] metadata changes
+[ ] widget-related changes (TBD)
+[ ] we will need v4->v4 to track changes to v4 during development. If so, this should probably not be included in release, right?
 
 I think this is the logical order of these tasks:
 

@@ -1,3 +1,5 @@
+(we are still writing this IPEP)
+
 ### Motivation
 
 IPython and Bokeh both have object bridges which mirror python objects on the javascript side.  This work doesn't need to be done twice.  In addition creating a full featured standalone object bridge would be of value to the general web development community.  Essentially we could have a [meteor](https://www.meteor.com/) for Python (well, some limitations because you can't just use python code in the browser)

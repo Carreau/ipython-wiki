@@ -49,3 +49,5 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 23: Backbone.js Widgets]] -- *Implemented*
 * [[IPEP 24: completion and object_info]] -- *Active*
 * [[IPEP 25: Registry of installed kernels]] -- *Active*
+* [[IPEP 26: Full Featured python js object bridge]] -- *Active*
+

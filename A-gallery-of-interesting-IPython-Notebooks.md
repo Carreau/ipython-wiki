@@ -10,7 +10,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Introductory Tutorials](#introductory-tutorials)
   * [Programming and Computer Science](#programming-and-computer-science)
   * [Statistics, Machine Learning and Data Science](#statistics-machine-learning-and-data-science)
-  * [Physics, Chemistry, Biology](#physics-chemistry-biology)
+  * [Mathematics, Physics, Chemistry, Biology](#mathematics-physics-chemistry-biology)
   * [Earth Science and Geo-Spatial data](#earth-science-and-geo-spatial-data)
   * [Linguistics and Text Mining](#linguistics-and-text-mining)
   * [Signal Processing](#signal-processing)
@@ -33,8 +33,9 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 6. [Ruby notebooks](#ruby-notebooks)
 7. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
 8. [Reproducible academic publications](#reproducible-academic-publications)
-9. [Whimsical notebooks](#whimsical-notebooks)
-10. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
+9. [Other publications using the Notebook](#other-publications-and-conference-abstracts-that-explicitly-use-the-notebook)
+10. [Whimsical notebooks](#whimsical-notebooks)
+11. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
 
 ## Entire books or other large collections of notebooks on a topic
 

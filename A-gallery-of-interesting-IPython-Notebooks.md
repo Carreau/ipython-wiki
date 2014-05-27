@@ -81,7 +81,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 * [Desperately Seeking Silver](http://nbviewer.ipython.org/github/cs109/content/blob/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
 
-### Physics, Chemistry, Biology
+### Mathematics, Physics, Chemistry, Biology
 
 * A [single-atom laser model](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures/blob/master/Lecture-2B-Single-Atom-Lasing.ipynb). This is one of a complete set of [lectures on quantum mechanics and quantum optics using QuTiP](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures) by [J.R. Johansson](https://github.com/jrjohansson).
 
@@ -93,6 +93,9 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [CFD Python: 12 steps to Navier-Stokes](http://lorenabarba.com/blog/cfd-python-12-steps-to-navier-stokes). A complete set of lectures on Computational Fluid Dynamics, from 1-d linear waves to full 2-d Navier-Stokes, by [Lorena Barba](http://lorenabarba.com).
 
+* [AeroPython: Aerodynamics-Hydrodynamics with Python](https://github.com/barbagroup/AeroPython), a complete course taught at George Mason University by [Lorena Barba](http://lorenabarba.com).
+
+* [HyperPython: a practical introduction to the solution of hyperbolic conservation laws](http://nbviewer.ipython.org/github/ketch/HyperPython/tree/master/), a course by [David Ketcheson](https://github.com/ketch).
 
 ### Earth Science and Geo-Spatial data
 
@@ -352,7 +355,7 @@ Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com
 
 * [Importing IPython Notebooks as Modules](http://nbviewer.ipython.org/gist/6011986) by [Min RK](http://github.com/minrk).
 
-## <a id="reproducible"></a> Reproducible academic publications
+## Reproducible academic publications
 
 This section contains academic papers that have been published in the peer-reviewed literature or pre-print sites such as the [ArXiv](http://arxiv.org) that include one or more notebooks that enable (even if only partially) readers to reproduce the results of the publication.  If you include a publication here, please link to the journal article as well as providing the nbviewer notebook link (and any other relevant resources associated with the paper).
 
@@ -375,6 +378,13 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 * [Mechanisms for stable, robust, and adaptive development of orientation maps in the primary visual cortex](http://dx.doi.org/10.1523/JNEUROSCI.1037-13.2013) by Jean-Luc R. Stevens, Judith S. Law, Jan Antolik, and James A. Bednar. Journal of Neuroscience, 33:15747-15766, 2013. [Notebook1](http://topographica.org/_static/gcal_notebook.html), [Notebook2](http://topographica.org/_static/stevens_jn13_notebook.html).
 
 * [Accelerated Randomized Benchmarking](http://nbviewer.ipython.org/github/cgranade/accelerated-randomized-benchmarking/blob/master/src/model_testing.ipynb), by [Christopher Granade](http://www.cgranade.com/), [Christopher Ferrie](https://sites.google.com/site/csferrie/) and D. G. Cory. [arXiv](http://arxiv.org/abs/1404.5275), [GitHub repo](https://github.com/cgranade/accelerated-randomized-benchmarking).
+
+* [Dynamics and associations of microbial community types across the human body](http://dx.doi.org/10.1038/nature13178), by Tao Ding & Patrick D. Schloss. [Notebook replicating results](http://nbviewer.ipython.org/gist/pschloss/9815766/notebook.ipynb).
+
+## Other publications and conference abstracts that explicitly use the Notebook
+
+* [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.
+
 
 ## Whimsical notebooks
 

@@ -81,6 +81,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Desperately Seeking Silver](http://nbviewer.ipython.org/github/cs109/content/blob/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
+* [Python Notebooks for StatLearning Exercises](https://github.com/sujitpal/statlearning-notebooks), Python implementations of the R labs for the [StatLearning: Statistical Learning](https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about) online course from Stanford University taught by Profs Trevor Hastie and Rob Tibshirani.
 
 ### Mathematics, Physics, Chemistry, Biology
 

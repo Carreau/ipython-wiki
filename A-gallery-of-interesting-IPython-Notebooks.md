@@ -96,7 +96,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [AeroPython: Aerodynamics-Hydrodynamics with Python](https://github.com/barbagroup/AeroPython), a complete course taught at George Mason University by [Lorena Barba](http://lorenabarba.com).
 
-* [HyperPython: a practical introduction to the solution of hyperbolic conservation laws](http://nbviewer.ipython.org/github/ketch/HyperPython/tree/master/), a course by [David Ketcheson](https://github.com/ketch).
+* [HyperPython: a practical introduction to the solution of hyperbolic conservation laws](http://nbviewer.ipython.org/github/ketch/HyperPython/tree/master/), a course by [David Ketcheson](http://davidketcheson.info).
 
 ### Earth Science and Geo-Spatial data
 

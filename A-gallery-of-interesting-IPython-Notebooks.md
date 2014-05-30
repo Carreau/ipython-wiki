@@ -69,6 +69,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [An introduction to Pandas](http://nbviewer.ipython.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/01%20-%20Lesson.ipynb), part of an [11-lesson tutorial on Pandas](https://bitbucket.org/hrojas/learn-pandas), by [Hernán Rojas](https://bitbucket.org/hrojas).
 
+* The [Statsmodels Project](http://statsmodels.sourceforge.net) has two excellent collections of examples: [in their official documentation](http://statsmodels.sourceforge.net/devel/examples/index.html) and [extra ones in their wiki](https://github.com/statsmodels/statsmodels/wiki/Examples#user-contributed-examples). Too many there to directly duplicate here, but they provide great learning materials on statistical modeling with Python.
+
 * [Machine Learning with the Shogun Toolbox](http://cloud.shogun-toolbox.org). This is a complete *service* that includes a ready-to-run IPython instance with a collection of notebooks illustrating the use of the [Shogun Toolbox](http://shogun-toolbox.org).  Just log in and start running the examples.
 
 * [Python for Data Analysis](https://github.com/ResearchComputing/Meetup-Fall-2013), an introductory collection from the [CU Boulder Research Computing Group](http://researchcomputing.github.io/).

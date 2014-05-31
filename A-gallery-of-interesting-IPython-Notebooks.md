@@ -388,6 +388,8 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Dynamics and associations of microbial community types across the human body](http://dx.doi.org/10.1038/nature13178), by Tao Ding & Patrick D. Schloss. [Notebook replicating results](http://nbviewer.ipython.org/gist/pschloss/9815766/notebook.ipynb).
 
+* [Variations in submarine channel sinuosity as a function of latitude and slope](http://nbviewer.ipython.org/gist/zsylvester/6040d0015b9b907bc788), by Sylvester, Z., Pirmez, C., Cantelli, A., & Jobe, Z. R.
+
 ## Other publications and conference abstracts that explicitly use the Notebook
 
 * [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.

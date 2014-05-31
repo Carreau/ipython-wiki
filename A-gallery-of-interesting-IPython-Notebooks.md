@@ -199,6 +199,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [NYT gender wage gap and US crime by state](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Bubble%20Chart%20Explorer.ipynb).
 
 
+* [Predicting usage of the subway system in NYC](http://nbviewer.ipython.org/url/www.asimihsan.com/articles/Intro%20to%20Data%20Science%20-%20Final%20Project.ipynb), a [final project](http://blog.udacity.com/2014/05/intro-to-data-science-tools-to-ask.html) for the Udacity Intro to Data Science Course, by [Asim Ihsan](http://www.asimihsan.com).
+
 ### Psychology and Neuroscience
 
 * [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/github/arokem/teach_optimization/blob/master/optimization.ipynb) by Ariel Rokem.

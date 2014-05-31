@@ -268,6 +268,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 
 * [Bokeh is an interactive web visualization library for Python](http://nbviewer.ipython.org/github/damianavila/bokeh_overview/blob/master/Bokeh%20Overview.ipynb?create=1) (and other languages). It provides d3-like novel graphics, over large datasets, all without requiring any knowledge of Javascript. It also has a Matplotlib compatibility layer.
 
+* [Winner of the 2014 E. Tufte Slope Graphs contest](http://nbviewer.ipython.org/gist/pascal-schetelat/8382651), by [Pascal Schetelat](https://github.com/pascal-schetelat).  The original [contest info on Tufte's site](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk).
+
 ### Mathematics
 
 * [Linear algebra with Cython](http://nbviewer.ipython.org/github/carljv/cython_testing/blob/master/cython_linalg.ipynb).  A tutorial that styles the notebook differently to show that you can produce high-quality typography online with the Notebook.  By Carl Vogel.

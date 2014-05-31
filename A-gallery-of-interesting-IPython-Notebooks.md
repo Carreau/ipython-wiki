@@ -285,6 +285,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 * [The Matrix Exponential]
 (http://nbviewer.ipython.org/github/sdrelton/matrix_function_notebooks/blob/master/TheMatrixExponential.ipynb), an introduction to the matrix exponential, its applications, and a list of available software in Python and MATLAB. By [Sam Relton](http://www.maths.manchester.ac.uk/~srelton/).
 
+* [Fractals, complex numbers, and your imagination](http://nbviewer.ipython.org/github/cfangmeier/ipython_notebooks/blob/master/Imagination.ipynb), by [Caleb Fangmeier](https://github.com/cfangmeier).
+
 ### Signal and Sound Processing
 
 * [Simulation of Delta Sigma modulators in Python](http://nbviewer.ipython.org/github/ggventurini/python-deltasigma/blob/master/examples/dsdemo1.ipynb) with [deltasigma](https://github.com/ggventurini/python-deltasigma), Python port of of Richard Schreier's *excellent* [MATLAB Delta Sigma Toolbox](http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox), by [Giuseppe Venturini](https://github.com/ggventurini). Several demonstrative notebooks on the package [README](https://github.com/ggventurini/python-deltasigma/blob/master/README.md).

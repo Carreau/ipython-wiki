@@ -4,7 +4,7 @@ Welcome to the wiki for the IPython project. This is a community maintained and 
 
 This wiki contains:
 
-* The [[IPython|Cookbook: Index]] [Cookbook](http://www.ebookma.com)
+* The [[IPython Cookbook|Cookbook: Index]]
 * [Development information](wiki/Dev:-Index)
 * [IPython Enhancement Proposals (IPEPs)](wiki/IPEPs:-IPython-Enhancement-Proposals)
 * IPython roadmaps and development plans:

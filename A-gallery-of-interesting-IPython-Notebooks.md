@@ -130,6 +130,10 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 ## Scientific computing and data analysis with the SciPy Stack
 ### General topics in scientific computing
 
+* [Algorithms in IPython notebooks](https://github.com/rasbt/algorithms_in_ipython_notebooks), by [Sebastian Raschka](https://github.com/rasbt)
+
+* [Comparing the performance of Python compilers - Cython vs. Numba vs. Parakeet](_nbs/day4_2_cython_numba_parakeet.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt)
+
 * [A Crash Course in Python for Scientists](http://nbviewer.ipython.org/gist/5920182), by Sandia's [Rick Muller](http://www.cs.sandia.gov/~rmuller).
 
 * [A gentle introduction to scientific programming in Python, biased towards biologists](http://nbviewer.ipython.org/url/atwallab.cshl.edu/teaching/QBbootcamp3.ipynb), by [Mickey Atwal, Cold Spring Harbor Laboratory](http://atwallab.cshl.edu).
@@ -223,8 +227,6 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [Introduction to Bayesian Networks](http://nbviewer.ipython.org/github/kuitang/hackny-bayesnet/blob/master/hackNY%20Bayesian%20Network%20Demo.ipynb) by [Kui Tang](https://github.com/kuitang)
 
 * [Bayesian data analysis with PyMC3](http://nbviewer.ipython.org/github/twiecki/pymc3_talk/blob/master/bayesian_pymc3.ipynb) by [Thomas Wiecki](https://github.com/twiecki).
-
-* [Implementing simple sequential feature selection algorithms in Python](http://nbviewer.ipython.org/github/rasbt/algorithms_in_ipython_notebooks/blob/master/ipython_nbs/sequential_selection_algorithms.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
 * [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
 

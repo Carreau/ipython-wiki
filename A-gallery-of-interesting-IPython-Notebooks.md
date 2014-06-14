@@ -329,9 +329,13 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Python Descriptors Demystified](http://nbviewer.ipython.org/gist/ChrisBeaumont/5758381/descriptor_writeup.ipynb), an in-depth discussion of the descriptor protocol in Python, by [Chris Beaumont](http://chrisbeaumont.org).
 
-* [Looking at Python's True and False evaluations](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/python_true_false.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+* [A collection of not so obvious Python stuff you should know!](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
-* [Short performance comparison of `.format()` and the binary `%` operator for string formatting](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/benchmarks/timeit_tests.ipynb#str_format_bin), by [Sebastian Raschka](https://github.com/rasbt).
+* [Key differences between Python 2.7.x and Python 3.x](Key differences between Python 2.7.x and Python 3.x), by [Sebastian Raschka](https://github.com/rasbt).
+
+* [A beginner's guide to Python's namespaces, scope resolution, and the LEGB rule](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/scope_resolution_legb_rule.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
+
+* [Sorting CSV files using the Python csv module](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/sorting_csvs.ipynb), by [Sebastian Raschka](https://github.com/rasbt).
 
 ## Julia notebooks
 

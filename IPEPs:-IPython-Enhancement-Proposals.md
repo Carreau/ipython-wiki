@@ -23,6 +23,7 @@ Each IPEP should have a table/area at the top with the following information:
 </table>
 
 # Index of IPEPs
+
 * [[IPEP 0: IPEP Template]] -- *Accepted*
 * [[IPEP 1: Cleanup and extension of the Magic system in IPython]] -- *Implemented*
 * [[IPEP 2: Input transformations]] -- *Implemented*
@@ -50,4 +51,5 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 24: completion and object_info]] -- *Active*
 * [[IPEP 25: Registry of installed kernels]] -- *Active*
 * [[IPEP 26: Full Featured python js object bridge]] -- *Active*
+* [[IPEP 27: Contents Service]] -- *Active*
 

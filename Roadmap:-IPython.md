@@ -312,7 +312,7 @@ browser is to use our message channels.  Currently these channels are not suffic
 - Because of security issues are are moving away from the notebook being able to execute dynamically generated JavaScript code.  This removal will actually happen in the 1.0 release (see above), but the full replacement with a JavaScript plugin system won't happen until 2.0.
 - Because of these changes developers who are writing JavaScript widgets that work with the current IPython should expect to rewrite them for the 2.0 release.
 
-## Release 3.0, Summer, 2014
+## Release 3.0, Fall, 2014
 
 Development focus for IPython 3.0:
 

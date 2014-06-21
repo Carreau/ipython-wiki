@@ -14,3 +14,4 @@
 
 ## Run IPython inside Docker
 https://github.com/mingfang/docker-ipython
+https://registry.hub.docker.com/u/parente/ipython/ - Bare-bones IPython 2.0 notebook server image with HTTPS, optional password, and pip for installing additional packages

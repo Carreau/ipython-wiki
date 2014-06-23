@@ -26,7 +26,7 @@ These should be restored to proper mimetype values of `image/png` and `applicati
 
 Following [IPEP 13](https://github.com/ipython/ipython/wiki/IPEP-13%3A-Updating-the-Message-Spec#display-metadata), Python-specific keys in the message spec and notebook will be removed. Those affecting the notebook format:
 
-- `pyout` will become `execute_output`
+- `pyout` will become `execute_result`
 - `pyerr` will become `error`
 
 ## Make cell content key uniform

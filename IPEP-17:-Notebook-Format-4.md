@@ -154,8 +154,8 @@ The `display_data` output should have the following additional properties:
 ### Stream
 
 The `stream` output should have the following additional properties:
-* `stream`: a string denoting the stream type or destination (e.g. "stdout")
-* `text/plain`: the stream's text output, which is a "multiline string" (stored as either a single string, or an array of strings).
+* `name`: a string denoting the stream type or destination (e.g. "stdout")
+* `text`: the stream's text output, which is a "multiline string" (stored as either a single string, or an array of strings).
 
 ### Error
 

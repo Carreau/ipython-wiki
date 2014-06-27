@@ -155,7 +155,7 @@ The `display_data` output should have the following additional properties:
 
 The `stream` output should have the following additional properties:
 * `name`: a string denoting the stream type or destination (e.g. "stdout")
-* `text`: the stream's text output, which is a "multiline string" (stored as either a single string, or an array of strings).
+* `data`: the stream's text output, which is a "multiline string" (stored as either a single string, or an array of strings).
 
 ### Error
 

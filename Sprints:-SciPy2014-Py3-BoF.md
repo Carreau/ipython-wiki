@@ -19,3 +19,5 @@ Everyone is welcome
   - Some university courses (e.g. [Ethan White's](http://programmingforbiologists.org/)) are starting to switch
   - Teaching materials supporting 2&3, or maintain separate copies of materials?
   - Some students will have to go back to Python 2, because of existing code in their lab, or libraries that they need. How best to prepare them for this?
+
+This is a wiki page; please add your questions and ideas here.

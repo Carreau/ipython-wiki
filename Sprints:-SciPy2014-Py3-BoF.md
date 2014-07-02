@@ -7,7 +7,11 @@ Everyone is welcome
 ## Ideas for discussion
 
 - Python 3.5 will have a [matrix multiplication operator](http://legacy.python.org/dev/peps/pep-0465/) (@).
-- What else do we want?
+- What other near-term changes to the interpreter do we want? Given that `@` will already make 3.5 particularly attractive to numerical users, 3.5 is a great target for other numerically-useful changes. Some potential items:
+  - Support for [temporary elision](http://thread.gmane.org/gmane.comp.python.devel/148001/focus=148132). Python-dev seems at least potentially open to this, so next TODO item is probably to experiment with prototyping some implementations in CPython -- there are a few ideas in that thread -- and report back if any seem actually workable.
+  - Memory tracing support for third-party allocators (some notes here: https://github.com/numpy/numpy/issues/4663). We already got support for `calloc` into 3.5, which was the biggest blocker, but it would be nice to have an API like the one sketched out in that bug for future-proofing (to avoid lockin) and for allowing the same tracing infrastructure to also work for other kinds of allocators like GPU allocators, aligned allocators, mmap, etc. Next TODO item is: talk to the CPython developers about this
+  - Overloadable chained comparisons, to make `a < b < c` work on ndarrays. The hiccup here is that to check for overload methods, you have to examine the objects involved, but currently, chained comparisons are short-circuiting (if `a < b` is false, `c` is never evaluated), so we can't check whether `c` has any overload methods. My (njs's) feeling is that we should just write a PEP for overloading that makes chained comparisons *not* overloading, because seriously who writes `a < b < side_effecting_function()`, or even knows how that expression is currently evaluated. Next TODO item is: run an AST matcher over PyPI or something to get some statistics on whether people actually put function calls into the `c` slot. I have a copy of PyPI I downloaded to check against, but haven't written the script.
+  - ...any other ideas? Add them!
 - How to use function annotations?
   - [mypy](http://www.mypy-lang.org/) experimented with optional static typing; integrate that with some kind of compilation?
 - Code blocks

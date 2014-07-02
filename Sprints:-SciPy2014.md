@@ -1,4 +1,4 @@
-- [IPython sprint ideas](./Sprints:-SciPy2014/Sprint-ideas)
+- [IPython sprint ideas](./Sprints:-SciPy2014-sprint-ideas)
 
 Besides actually sprinting, we have some Birds-of-a-Feather sessions (BoFs) at SciPy this year.
 

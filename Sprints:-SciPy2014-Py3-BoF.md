@@ -13,6 +13,7 @@ Everyone is welcome
 - Code blocks
   - Nick is the author of [PEP 3150](http://legacy.python.org/dev/peps/pep-3150/) and [PEP 403](http://legacy.python.org/dev/peps/pep-0403/), two possible new syntaxes for this issue.
   - This is a big topic - we should be careful not to spend the whole BoF talking about it.
+  - A [recent post](http://stupidpythonideas.blogspot.com/2014/06/why-python-or-any-decent-language.html) arguing *against* the need for blocks in Python.
 - Teaching Python 3
   - All of our core Scipy Stack packages support Python 3, though more specific tools still may not.
   - Software Carpentry is [discussing](https://github.com/swcarpentry/bc/issues/107) how and when to switch to Python 3 for their workshops.

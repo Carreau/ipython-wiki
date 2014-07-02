@@ -1,0 +1,8 @@
+- Docs on notebook CSS/HTML customisation
+- Docs on writing a notebook extension with a toolbar button
+- Document IPython architecture overview (finish up [this PR](https://github.com/ipython/ipython/pull/5665))
+- Generic source code display mechanism
+   - Loading from files and URLs
+   - Handling different languages
+   - Syntax highlighting
+- Cell metadata & tagging

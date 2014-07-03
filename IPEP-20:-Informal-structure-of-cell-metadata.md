@@ -32,7 +32,7 @@ that such a description should also be done for the 2 other types of metadata.
 
 # General advice on metadata
 
-IPython notebook file are ment to be cross-language, hence the file format
+IPython notebook file are meant to be cross-language, hence the file format
 shoudl as much as possible help with this.
 
 ## metadata type

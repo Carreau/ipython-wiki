@@ -6,3 +6,4 @@
    - Handling different languages
    - Syntax highlighting
 - Cell metadata & tagging
+- Collecting user data ethically

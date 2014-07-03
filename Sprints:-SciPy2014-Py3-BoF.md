@@ -25,5 +25,7 @@ Everyone is welcome
   - Teaching materials supporting 2&3, or maintain separate copies of materials?
   - Some students will have to go back to Python 2, because of existing code in their lab, or libraries that they need. How best to prepare them for this?
 - How do we get people to switch?
+- Features we need in the scientific Python stack?
+  - Issue of [numpy bytestring vs. unicode arrays](http://mail.scipy.org/pipermail/numpy-discussion/2014-January/068622.html) in Python 3.
 
 This is a wiki page; please add your questions and ideas here.

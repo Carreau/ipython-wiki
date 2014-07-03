@@ -25,7 +25,7 @@ Everyone is welcome
   - A [recent post](http://stupidpythonideas.blogspot.com/2014/06/why-python-or-any-decent-language.html) arguing *against* the need for blocks in Python.
 - Teaching Python 3
   - All of our core Scipy Stack packages support Python 3, though more specific tools still may not.
-  - Missing tools include VTK and Mayavi https://github.com/enthought/mayavi/issues/84 Still doesn't look like Kitware has any python 3 plans.  
+  - Missing tools include VTK and Mayavi https://github.com/enthought/mayavi/issues/84 Still doesn't look like Kitware has any python 3 plans. [Vispy](http://vispy.org) could provide the foundations for a Python 3-compatible replacement in the near future.
   - Software Carpentry is [discussing](https://github.com/swcarpentry/bc/issues/107) how and when to switch to Python 3 for their workshops.
   - Some university courses (e.g. [Ethan White's](http://programmingforbiologists.org/)) are starting to switch
   - Teaching materials supporting 2&3, or maintain separate copies of materials?

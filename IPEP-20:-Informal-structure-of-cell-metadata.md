@@ -33,32 +33,32 @@ that such a description should also be done for the 2 other types of metadata.
 # General advice on metadata
 
 IPython notebook file are meant to be cross-language, hence the file format
-shoudl as much as possible help with this.
+should help with this as much as possible.
 
 ## metadata type
 
-For cross-language compatibility and efficiency it is advised to avoid having
-the same field in the metadata structure beeing able to store data of different
+For cross-language compatibility and efficiency, it is advised to avoid having
+the same field in the metadata structure being able to store data of different
 type.
 
-## metadta value
+## metadata value
 
 For the same reason, it is advised in general to avoid when possible to rely on
 `undefined` or `None` values, as well as value that could be considered as
 such. In particular some languages might not make the distinction between the
-absence of the field and its value beeing set to undefined or fact that empty
+absence of the field and its value being set to undefined or fact that empty
 string `''`, the number `0` (zero) and the boolean `false` might be
 indistinguishable.
 
 ## metadata presence/conservation
 
 Implementation should not make any assumption in the metadata presence or the
-value contained in it.  The metadata filed itself shoudl always be present in
+value contained in it.  The metadata filed itself should always be present in
 the relevant places, but should be set to at least empty dictionary when no
-metadata is present. Application/plugin shoudl try as much as possible to keep
-the structure of metadata they don't know how to handle unless if reqeusted by
+metadata is present. Application/plugin should try as much as possible to keep
+the structure of metadata they don't know how to handle unless if requested by
 user interaction. This encompass both unknown field, as well as known field
-with unknown stucture/type.
+with unknown structure/type.
 
 ## avoid name conflict
 

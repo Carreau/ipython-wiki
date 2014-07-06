@@ -503,3 +503,7 @@ What you can do:
 
      [+] : increase font-size of notebook tile
      [–] : decrease font-size of notebook tile
+
+## Min's IPython extensions
+
+MinRK has [published](github.com/minrk/ipython_extensions) various (both Python and Notebook) extensions for IPython.

@@ -7,3 +7,4 @@
    - Syntax highlighting
 - Cell metadata & tagging
 - Collecting user data ethically
+- UI for selecting heading cell levels, other than having every level as a separate cell type

@@ -159,12 +159,12 @@ A Notebook example can be found [here](https://gist.github.com/3015819). This is
 
 The Bitey extension adds a `%%bitey` cell magic for automatically compiling C (or C++) code into LLVM bitcode and loading the bitcode with [Bitey](https://github.com/dabeaz/bitey).  See also a [sample notebook](http://nbviewer.ipython.org/3458310/Bitey%20Magic.ipynb).
 
-[Homepage](https://raw.github.com/gist/3458310/biteymagic.py)
+[Homepage](https://gist.githubusercontent.com/bfroehle/3458310/raw/biteymagic.py)
 
 To install:
 
 ```text
-    %install_ext https://raw.github.com/gist/3458310/biteymagic.py
+    %install_ext https://gist.githubusercontent.com/bfroehle/3458310/raw/biteymagic.py
 ```
 ## Mathematica
 

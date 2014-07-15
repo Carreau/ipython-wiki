@@ -37,7 +37,7 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 10: Kernel-side filtering of display formats|IPEP-10:-kernel-side-filtering-of-display-formats]] -- *Implemented*
 * [[IPEP 11: Tab-completion system refactor]] -- *Deferred*
 * [[IPEP 12: Splitting KernelManager and KernelClient]] -- *Active*
-* [[IPEP 13: Updating the Message Spec]] -- *Active*
+* [[IPEP 13: Updating the Message Spec]] -- *Implemented*
 * [[IPEP 14: Notebook Regression Tests]] -- *Active*
 * [[IPEP 15: Autosaving the IPython Notebook]] -- *Implemented*
 * [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Implemented*
@@ -46,10 +46,10 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Active*
 * [[IPEP 20: Informal structure of cell metadata]] -- *Active*
 * [[IPEP 21: Widget Messages]] -- *Implemented*
-* [[IPEP 22: Notebook, new cell type "Comment"]] -- *Active*
+* [[IPEP 22: Notebook, new cell type "Comment"]] -- *Deferred*
 * [[IPEP 23: Backbone.js Widgets]] -- *Implemented*
-* [[IPEP 24: completion and object_info]] -- *Active*
-* [[IPEP 25: Registry of installed kernels]] -- *Active*
+* [[IPEP 24: completion and object_info]] -- *Implemented*
+* [[IPEP 25: Registry of installed kernels]] -- *Implemented*
 * [[IPEP 26: Full Featured python js object bridge]] -- *Active*
 * [[IPEP 27: Contents Service]] -- *Active*
 

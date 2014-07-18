@@ -23,6 +23,7 @@ Everyone is welcome
   - Nick is the author of [PEP 3150](http://legacy.python.org/dev/peps/pep-3150/) and [PEP 403](http://legacy.python.org/dev/peps/pep-0403/), two possible new syntaxes for this issue.
   - This is a big topic - we should be careful not to spend the whole BoF talking about it.
   - A [recent post](http://stupidpythonideas.blogspot.com/2014/06/why-python-or-any-decent-language.html) arguing *against* the need for blocks in Python.
+  - [Separate page on these ideas](./Code-blocks-and-other-ideas)
 - Teaching Python 3
   - All of our core Scipy Stack packages support Python 3, though more specific tools still may not.
   - Missing tools include VTK and Mayavi https://github.com/enthought/mayavi/issues/84 Still doesn't look like Kitware has any python 3 plans. [Vispy](http://vispy.org) could provide the foundations for a Python 3-compatible replacement in the near future.

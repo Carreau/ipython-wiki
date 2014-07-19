@@ -87,7 +87,7 @@ for node in ast.walk(foo.__ast__):
     ...
 ```
 
-This only really addresses cases 3 and 5 above. It doesn't allow preserving the AST of simple expressions, only of functions or classes. And it doesn't make it any easier to reorder code as required in case 1.
+This only really addresses case 3 above. It doesn't allow preserving the AST of simple expressions, only of functions or classes. And it doesn't make it any easier to reorder code as required in case 1.
 
 ## Context managers
 

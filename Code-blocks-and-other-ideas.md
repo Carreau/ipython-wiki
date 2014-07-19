@@ -100,6 +100,9 @@ with repeat(10):
 
 This looks neat, but context managers are designed for something very different: running code before and after the indented block. The context manager does not have access to the block to inspect it, or to run it more than once. However, the design of context managers may contain inspiration for this problem.
 
+## Function = signature + code
+
+This is more the germ of an idea at the moment. A function is the combination of a signature, saying what arguments it takes, with a block of code that executes when it's called and possibly returns something. At present, you can only define these together. What would it look like if you could define signatures without code, and code without signatures, and then assemble them later?
 
 # In other languages
 

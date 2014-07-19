@@ -170,5 +170,5 @@ sorted_list = sorted(original, key=*) lambda x:
 Some other links that may be relevant:
 
 * [Mython](http://mython.org/) (adds a "quote" statement to Python syntax)
-* [AST Transformation Hooks](https://mail.python.org/pipermail/python-ideas/2011-April/009765.html)
+* [AST Transformation Hooks](https://mail.python.org/pipermail/python-ideas/2011-April/009765.html) (also see this [alternate suggestion](https://mail.python.org/pipermail/python-ideas/2011-April/009768.html) in that thread)
 * [Suite expressions](http://python-notes.curiousefficiency.org/en/latest/pep_ideas/suite_expr.html)

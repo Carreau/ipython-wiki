@@ -104,6 +104,8 @@ This looks neat, but context managers are designed for something very different:
 
 This is more the germ of an idea at the moment. A function is the combination of a signature, saying what arguments it takes, with a block of code that executes when it's called and possibly returns something. At present, you can only define these together. What would it look like if you could define signatures without code, and code without signatures, and then assemble them later?
 
+In relation to the notion of signatures existing independently of callables, [PEP 362](http://www.python.org/dev/peps/pep-0362/) describes the function signature objects that are now part of the inspect module, and [PEP 457](http://www.python.org/dev/peps/pep-0457/) is a draft covering some additional details related to fulling supporting introspection of functions defined in C with positional only parameters. Also see the [Argument Clinic HOWTO](https://docs.python.org/3/howto/clinic.html) for a key motivating use case.
+
 # In other languages
 
 ## Julia
@@ -162,3 +164,12 @@ sorted_list = sorted(original, key=*) lambda x:
    except NotSortableError:
        return float('inf')
 ```
+
+# Additional resources
+
+Some other links that may be relevant:
+
+* [Mython](http://mython.org/) (adds a "quote" statement to Python syntax)
+* [AST Transformation Hooks](https://mail.python.org/pipermail/python-ideas/2011-April/009765.html)
+* [Suite expressions](http://python-notes.curiousefficiency.org/en/latest/pep_ideas/suite_expr.html)
+* 

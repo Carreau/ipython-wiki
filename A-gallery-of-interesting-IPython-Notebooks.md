@@ -101,6 +101,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [HyperPython: a practical introduction to the solution of hyperbolic conservation laws](http://nbviewer.ipython.org/github/ketch/HyperPython/tree/master/), a course by [David Ketcheson](http://davidketcheson.info).
 
+* [An Introduction to Applied Bioinformatics](http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics): Interactive lessons in bioinformatics, by [Greg Caporaso](http://caporasolab.us).
+
 ### Earth Science and Geo-Spatial data
 
 * [EarthPy](http://earthpy.org), a collection of IPython notebooks with a focus on Earth Sciences, from [whale tracks](http://earthpy.org/analyzing-whale-tracks.html) to the [flow of the Amazon](http://earthpy.org/earthpy-basemap-amazon.html).

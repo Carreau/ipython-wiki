@@ -100,9 +100,13 @@ with repeat(10):
 
 This looks neat, but context managers are designed for something very different: running code before and after the indented block. The context manager does not have access to the block to inspect it, or to run it more than once. However, the design of context managers may contain inspiration for this problem.
 
+It's also worth noting that Guido's original anonymous block proposal in [PEP 340](http://www.python.org/dev/peps/pep-0340/) was strictly more powerful than the more limited form that we ended up implementing as context managers in [PEP 343](http://www.python.org/dev/peps/pep-0340/). Reviewing those two PEPs may help clarify the "One Obvious Way To Do It" needle that we're trying to thread here - PEP 340 failed, not because it wasn't powerful enough, but because it was *too powerful* and provided a second way to write other constructs (like for and while loops), without an obvious reason for preferring the existing constructs over the new one, and without clearly indicating *how* it was being used at the point of use. The deliberately more limited PEP 343 covered resource management and factoring out exception handling, *without* providing a new alternate spelling of the existing loop constructs.
+
 ## Function = signature + code
 
 This is more the germ of an idea at the moment. A function is the combination of a signature, saying what arguments it takes, with a block of code that executes when it's called and possibly returns something. At present, you can only define these together. What would it look like if you could define signatures without code, and code without signatures, and then assemble them later?
+
+In relation to the notion of signatures existing independently of callables, [PEP 362](http://www.python.org/dev/peps/pep-0362/) describes the function signature objects that are now part of the inspect module, and [PEP 457](http://www.python.org/dev/peps/pep-0457/) is a draft covering some additional details related to fulling supporting introspection of functions defined in C with positional only parameters. Also see the [Argument Clinic HOWTO](https://docs.python.org/3/howto/clinic.html) for a key motivating use case.
 
 # In other languages
 
@@ -162,3 +166,11 @@ sorted_list = sorted(original, key=*) lambda x:
    except NotSortableError:
        return float('inf')
 ```
+
+# Additional resources
+
+Some other links that may be relevant:
+
+* [Mython](http://mython.org/) (adds a "quote" statement to Python syntax)
+* [AST Transformation Hooks](https://mail.python.org/pipermail/python-ideas/2011-April/009765.html) (also see this [alternate suggestion](https://mail.python.org/pipermail/python-ideas/2011-April/009768.html) in that thread)
+* [Suite expressions](http://python-notes.curiousefficiency.org/en/latest/pep_ideas/suite_expr.html)

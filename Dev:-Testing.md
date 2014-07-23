@@ -106,13 +106,12 @@ indicators:
    OK (SKIP=7)
 ```
 
-Because the IPython test machinery is based on nose, you can use all nose
-options and syntax, typing `iptest -h` shows all available options.  For
+Because the IPython test machinery is based on nose, you can use all nose syntax.  Options after `--` are passed to nose.  For
 example, this lets you run the specific test `test_rehashx` inside the
 `test_magic` module:
 
 ```bash
-   $ iptest -vv IPython.core.tests.test_magic:test_rehashx
+   $ iptest IPython.core.tests.test_magic:test_rehashx -- -vv
    IPython.core.tests.test_magic.test_rehashx(True,) ... ok
    IPython.core.tests.test_magic.test_rehashx(True,) ... ok
 
@@ -124,7 +123,7 @@ example, this lets you run the specific test `test_rehashx` inside the
 
 When developing, the `--pdb` and `--pdb-failures` of nose are
 particularly useful, these drop you into an interactive pdb session at the
-point of the error or failure respectively.
+point of the error or failure respectively: `iptest mymodule -- --pdb`.
 
 The system information summary printed above is accessible from the top
 level package.  If you encounter a problem with IPython, it's useful to

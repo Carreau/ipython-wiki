@@ -126,7 +126,7 @@ Q. Can IPython run under IronPython?
 - download `IronPython 2.7.4`_
 - add your ``C:/Program Files/IronPython 2.7`` folder into PATH
 - download `modified pyreadline`_ install from source: ``ipy setup.py install``
-- download ipython_ (1.0 or 1.1), install from source: ``ipy setup.py install``
+- download ipython_ (1.0, 1.1 or 1.2.x), install from source: ``ipy setup.py install``
 - replace ``C:/Program Files/IronPython/Lib/site-packages/IPython/external/pexpect/_pyexpect.py`` with one from ``https://github.com/paweljasinski/ipython/blob/ironpython-hack/IPython/external/pexpect/_pexpect.py``
 - make sure you HOME environment variable is set to something reasonable
 - start: ``ipy.exe -X:Frames "c:/Program Files/IronPython 2.7/Scripts/ipython"``

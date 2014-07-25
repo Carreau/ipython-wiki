@@ -263,7 +263,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * A [Notebook](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb) with an interactive Hans Rosling Gapminder bubble chart from [Plotly](https://plot.ly/api/Python). 
 
-* [Data and visualization integration via web based resources](http://nbviewer.ipython.org/gist/5678081). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
+* [Data and visualization integration via web based resources](http://tw.rpi.edu/media/2013/09/25/a48/The_Perfect_Storm_1991.html). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.
 
 * [21 Interactive, D3 Plots from matplotlib, ggplot for Python,
 prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msund/7ac1203ded66fe8134cc). 

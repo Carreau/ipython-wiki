@@ -55,6 +55,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [CS1001.py - Extended Introduction to Computer Science](https://github.com/yoavram/CS1001.py). Recitations from Tel-Aviv University introductory course to computer science, assembled as IPython notebooks by [Yoav Ram](http://www.yoavram.com/).
 
+* [Exploratory computing with Python](http://mbakker7.github.io/exploratory_computing_with_python/), a set of 15 Notebooks to learn how to use Python for exploratory computing, scipting, data analysis, and visualization. No prior knowledge of computer programming is assumed. Each Notebook covers a specific topic and includes a number of exercises that should take less than 4 hours to complete. Developed by Mark Bakker for undergraduate engineering students at the Delft University of Technology.
+
 
 ### Statistics, Machine Learning and Data Science
 

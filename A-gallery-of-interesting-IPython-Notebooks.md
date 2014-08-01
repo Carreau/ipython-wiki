@@ -226,6 +226,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
 
+* [An introduction to Predictive Modeling in Python](http://nbviewer.ipython.org/github/ogrisel/parallel_ml_tutorial/blob/master/solutions/01%20-%20An%20Introduction%20to%20Predictive%20Modeling%20in%20Python.ipynb), by  [Olivier Grisel](https://github.com/ogrisel).
+
 * [Face Recognition on a subset of the Labeled Faces in the Wild dataset](http://nbviewer.ipython.org/github/ogrisel/notebooks/blob/master/Labeled%20Faces%20in%20the%20Wild%20recognition.ipynb), by [Olivier Grisel](http://github.com/ogrisel).
 
 * [An Introduction to Bayesian Methods for Multilevel Modeling](http://nbviewer.ipython.org/github/fonnesbeck/multilevel_modeling/blob/master/multilevel_modeling.ipynb), by [Chris Fonnesbeck](http://github.com/fonnesbeck).

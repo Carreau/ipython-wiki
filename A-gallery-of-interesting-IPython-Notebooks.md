@@ -172,7 +172,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/docs/Survival%20Analysis%20intro.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).
 
 
-* [The Need for Openness in Data Journalism¶](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
+* [The Need for Openness in Data Journalism](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
 
 * A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/github/jseabold/538model/blob/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).
 
@@ -208,8 +208,10 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [NYT gender wage gap and US crime by state](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/Bubble%20Chart%20Explorer.ipynb).
 
-
 * [Predicting usage of the subway system in NYC](http://nbviewer.ipython.org/url/www.asimihsan.com/articles/Intro%20to%20Data%20Science%20-%20Final%20Project.ipynb), a [final project](http://blog.udacity.com/2014/05/intro-to-data-science-tools-to-ask.html) for the Udacity Intro to Data Science Course, by [Asim Ihsan](http://www.asimihsan.com).
+
+* [An exploratory statistical analysis of the 2014 World Cup Final](http://nbviewer.ipython.org/github/rjtavares/football-crunching/blob/master/notebooks/an%20exploratory%20data%20analysis%20of%20the%20world%20cup%20final.ipynb), by [Ricardo Tavares](https://github.com/rjtavares).  Part of a [notebook collection on football (aka soccer) analysis](http://nbviewer.ipython.org/github/rjtavares/football-crunching/tree/master/).
+
 
 ### Psychology and Neuroscience
 

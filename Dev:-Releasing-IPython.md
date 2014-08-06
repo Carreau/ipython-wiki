@@ -106,4 +106,9 @@ the *What's new* section of the documentation.
 
 Post to mailing list, and link from Twitter.
 
-# 9. Celebrate!
+# 9. Update milestones on GitHub
+
+- close the milestone you just released
+- open new milestone for (x, y+1), if it doesn't exist already
+
+# 10. Celebrate!

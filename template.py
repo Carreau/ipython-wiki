@@ -5,17 +5,8 @@ file and provide a short list of the key classes/functions it contains.  This
 is the docstring shown when some does 'import foo;foo?' in IPython, so it
 should be reasonably useful and informative.
 """
-#-----------------------------------------------------------------------------
-# Copyright (c) 2013, the IPython Development Team.
-#
+# Copyright (c) IPython Development Team.
 # Distributed under the terms of the Modified BSD License.
-#
-# The full license is in the file COPYING.txt, distributed with this software.
-#-----------------------------------------------------------------------------
-
-#-----------------------------------------------------------------------------
-# Imports
-#-----------------------------------------------------------------------------
 from __future__ import print_function
 
 # [remove this comment in production]
@@ -24,18 +15,14 @@ from __future__ import print_function
 # For 'import foo', use one import per line.  For 'from foo.bar import a, b, c'
 # it's OK to import multiple items, use the parenthesized syntax 'from foo
 # import (a, b, ...)' if the list needs multiple lines.
-
-# Stdlib imports
-
-# Third-party imports
-
-# Our own imports
+# Separate stdlib, third-party, and IPython imports by a blank line.
 
 
 # [remove this comment in production]
 #
-# Use broad section headers like this one that make it easier to navigate the
-# file, with descriptive titles.  For complex classes, simliar (but indented)
+# If a file is large and has many sections, you may want to use broad section
+# headers like this one that make it easier to navigate the file,
+# with descriptive titles.  For complex classes, simliar (but indented)
 # headers are useful to organize the internal class structure.
 
 #-----------------------------------------------------------------------------
@@ -46,6 +33,3 @@ from __future__ import print_function
 # Local utilities
 #-----------------------------------------------------------------------------
 
-#-----------------------------------------------------------------------------
-# Classes and functions
-#-----------------------------------------------------------------------------

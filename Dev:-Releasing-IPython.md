@@ -22,7 +22,7 @@ Set some env variables to note previous release tag and current release mileston
 
 - update `docs/source/whatsnew/development.rst`, to ensure it covers the major points.
 - move the contents of `development.rst` to `versionX.Y.rst`
-- generate summary of GitHub contributions:
+- generate summary of GitHub contributions, which can be done with:
 
         python tools/github_stats.py --milestone $MILESTONE > stats.rst
 
@@ -32,6 +32,7 @@ Set some env variables to note previous release tag and current release mileston
         git log --format="%aN <%aE>" $PREV_RELEASE... | sort -u -f
 
   to find duplicates and update `.mailmap`.
+  Before generating the GitHub stats, verify that all closed issues and pull requests [have appropriate milestones](https://github.com/ipython/ipython/wiki/Dev%3A-GitHub-workflow#milestones). [This search](https://github.com/ipython/ipython/issues?q=is%3Aclosed+no%3Amilestone+is%3Aissue) should return no results.
 
 # 2. Run the `build_release` script
 

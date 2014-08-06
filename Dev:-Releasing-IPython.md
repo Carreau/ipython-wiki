@@ -7,21 +7,26 @@ the release manager.
 
 # 0. Environment variables
 
-Set some env variables to note previous release tag and current release milestone, version, and git tag:
+You can set some env variables to note previous release tag and current release milestone, version, and git tag:
 
-    export PREV_RELEASE=rel-1.0.0
-    export MILESTONE=1.1
-    export VERSION=1.1.0
-    export TAG="rel-$VERSION"
+   PREV_RELEASE=rel-1.0.0
+   MILESTONE=1.1
+   VERSION=1.1.0
+   TAG="rel-$VERSION"
+   BRANCH=master
+
+These will be used later if you want to copy/paste, or you can just type the appropriate command when the time comes. These variables are not used by scripts (hence no `export`).
 
 # 1. Finish release notes
 
-- merge any pull request notes into what's new:
+- If a major release:
 
-        python tools/update_whatsnew.py
+  - merge any pull request notes into what's new:
 
-- update `docs/source/whatsnew/development.rst`, to ensure it covers the major points.
-- move the contents of `development.rst` to `versionX.Y.rst`
+          python tools/update_whatsnew.py
+
+  - update `docs/source/whatsnew/development.rst`, to ensure it covers the major points.
+  - move the contents of `development.rst` to `versionX.Y.rst`
 - generate summary of GitHub contributions, which can be done with:
 
         python tools/github_stats.py --milestone $MILESTONE > stats.rst
@@ -42,41 +47,57 @@ You may want to also do a test build of the docs.
 
 # 3. Create and push the new tag
 
-Edit `IPython/core/release.py` to have the current version.
+Edit `IPython/core/release.py` to have the current version, and then run `jsversion` to update the value in Javascript:
 
     python setup.py jsversion
-    git commit -a -m "release $VERSION"
-    git tag -a -m "release $VERSION" "$TAG"
-    git push origin master --tags
+
+Commit the changes to release.py and jsversion:
+
+    git commit -am "release $VERSION"
+    git push origin $BRANCH
+
+Create and push the tag:
+
+    git tag -am "release $VERSION" "$TAG"
+    git push origin --tags
+
+Update release.py back to `x.y-dev` or `x.y-maint`, and push:
+
+    python setup.py jsversion
+    git commit -am "back to development"
+    git push origin $BRANCH
 
 # 4. Get a fresh clone of the tag for building the release:
 
     cd /tmp
-    git clone --recursive https://github.com/ipython/ipython.git -b "$TAG"
+    git clone --recursive --depth https://github.com/ipython/ipython.git -b "$TAG" 
 
 # 5. Run the `release` script
+
+    cd tools
 
 This makes the tarballs, zipfiles, and wheels.  It posts them to archive.ipython.org and
 registers the release with PyPI.
 
-This will require that you have current wheel, Python 3.3 and Python 2.7, and an appropriate version of LESS.
+This will require that you have current wheel, Python 3.4 and Python 2.7, and an appropriate version of LESS.
 
 # 6. Publish updated docs
 
 For this we are now using GitHub pages:
 
     cd docs
-    V=[MAJOR_VERSION_ONLY] make gh-pages
+    VERSION=[MAJOR_VERSION_ONLY] make gh-pages
 
-- Update the `stable` symlink to point to the released version.
+
+- (If new major release) Update the `stable` symlink to point to the released version.
 - Check that the output makes sense
 - Run `git push` to update the public version of the docs on gh-pages.
 
 # 7. Update the IPython website
 
-- release announcement
-- update stable and download links
-- update links on the documentation page
+- release announcement (news, announcements)
+- update current version and download links
+- (If major release) update links on the documentation page
 
 # 8. Drafting a short release announcement
 

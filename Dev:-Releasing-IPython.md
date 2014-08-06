@@ -9,11 +9,11 @@ the release manager.
 
 You can set some env variables to note previous release tag and current release milestone, version, and git tag:
 
-   PREV_RELEASE=rel-1.0.0
-   MILESTONE=1.1
-   VERSION=1.1.0
-   TAG="rel-$VERSION"
-   BRANCH=master
+    PREV_RELEASE=rel-1.0.0
+    MILESTONE=1.1
+    VERSION=1.1.0
+    TAG="rel-$VERSION"
+    BRANCH=master
 
 These will be used later if you want to copy/paste, or you can just type the appropriate command when the time comes. These variables are not used by scripts (hence no `export`).
 
@@ -74,7 +74,7 @@ Update release.py back to `x.y-dev` or `x.y-maint`, and push:
 
 # 5. Run the `release` script
 
-    cd tools
+    cd tools && ./release
 
 This makes the tarballs, zipfiles, and wheels.  It posts them to archive.ipython.org and
 registers the release with PyPI.

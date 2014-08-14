@@ -182,7 +182,7 @@ In teaching
 -   [QIIME](http://www.qiime.org) Workshops are taught using tutorials
     written to run using IPython Notebooks.
 
--   The [Spyder]{https://code.google.com/p/spyderlib/} integrates the IPython Qt console, and IPdb for debugging. It also handles the connection to remote kernels.
+-   The [Spyder](https://code.google.com/p/spyderlib/) integrates the IPython Qt console, and IPdb for debugging. It also handles the connection to remote kernels.
 
 Web frameworks and other systems
 --------------------------------

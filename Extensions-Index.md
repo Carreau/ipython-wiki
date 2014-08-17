@@ -506,4 +506,4 @@ What you can do:
 
 ## Min's IPython extensions
 
-MinRK has [published](github.com/minrk/ipython_extensions) various (both Python and Notebook) extensions for IPython.
+MinRK has [published](/minrk/ipython_extensions) various (both Python and Notebook) extensions for IPython.

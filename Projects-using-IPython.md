@@ -22,6 +22,7 @@ List of (some) IPython compatible kernels
 -   [IErlang](https://github.com/robbielynch/ierlang)
 -   [IOCaml](https://github.com/andrewray/iocaml)
 -   [IForth](https://github.com/jdfreder/iforth)
+-   [IPerl](https://metacpan.org/release/Devel-IPerl)
 
 Guide to creating an IPython kernel:
 

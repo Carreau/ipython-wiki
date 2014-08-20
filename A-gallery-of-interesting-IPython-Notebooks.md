@@ -35,7 +35,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 1. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
 1. [Reproducible academic publications](#reproducible-academic-publications)
 1. [Other publications using the Notebook](#other-publications-and-conference-abstracts-that-explicitly-use-the-notebook)
-. Data-driven journalism](#data-driven-journalism)
+1. Data-driven journalism](#data-driven-journalism)
 1. [Whimsical notebooks](#whimsical-notebooks)
 1. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
 

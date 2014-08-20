@@ -173,9 +173,6 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/docs/Survival%20Analysis%20intro.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).
 
-
-* [The Need for Openness in Data Journalism](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
-
 * A reconstruction of [Nate Silver's 538 model for the 2012 US Presidential Election](http://nbviewer.ipython.org/github/jseabold/538model/blob/master/silver_model.ipynb), by Skipper Seabold (complete [repo](https://github.com/jseabold/538model)).
 
 * [Data about the Sandy Hook massacre in Newtown, Conneticut](http://nbviewer.ipython.org/url/www.brianckeegan.com/data/Shootings/Shootings.ipynb), which accompanies a more detailed [blog post on the subject](http://www.brianckeegan.com/2012/12/sandy-hook-school-massacre/). Here are the [notebook and accompanying data](http://www.brianckeegan.com/data/Shootings/Shootings.ipynb).  By Brian Keegan.
@@ -424,6 +421,12 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.
 
+## Data-driven journalism
+
+* [The Need for Openness in Data Journalism](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
+
+
+* [St. Louis County Segregation Analysis](https://github.com/BuzzFeedNews/2014-08-st-louis-county-segregation) , analysis for the article [The Ferguson Area Is Even More Segregated Than You Probably Guessed](http://www.buzzfeed.com/jsvine/the-ferguson-area-is-even-more-segregated-than-you-thought) by [Jeremy Singer-Vine](https://twitter.com/jsvine).
 
 ## Whimsical notebooks
 

@@ -14,7 +14,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Earth Science and Geo-Spatial data](#earth-science-and-geo-spatial-data)
   * [Linguistics and Text Mining](#linguistics-and-text-mining)
   * [Signal Processing](#signal-processing)
-2. [Scientific computing and data analysis with the SciPy Stack](#scientific-computing-and-data-analysis-with-the-scipy-stack)
+1. [Scientific computing and data analysis with the SciPy Stack](#scientific-computing-and-data-analysis-with-the-scipy-stack)
   * [General topics in scientific computing](#general-topics-in-scientific-computing)
   * [Social data](#social-data)
   * [Psychology and Neuroscience](#psychology-and-neuroscience)
@@ -27,15 +27,17 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Signal and Sound Processing](#signal-and-sound-processing)
   * [Natural Language Processing](#natural-language-processing)
   * [Pandas for data analysis](#pandas-for-data-analysis)
-3. [General Python Programming](#general-python-programming)
-4. [Julia notebooks](#julia-notebooks)
-5. [Haskell notebooks](#haskell-notebooks)
-6. [Ruby notebooks](#ruby-notebooks)
-7. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
-8. [Reproducible academic publications](#reproducible-academic-publications)
-9. [Other publications using the Notebook](#other-publications-and-conference-abstracts-that-explicitly-use-the-notebook)
-10. [Whimsical notebooks](#whimsical-notebooks)
-11. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
+1. [General Python Programming](#general-python-programming)
+1. [Notebooks in languages other than Python](#notebooks-in-languages-other-than-python)
+  * [Julia](#julia-notebooks)
+  * [Haskell](#haskell-notebooks)
+  * [Ruby](#ruby-notebooks)
+1. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
+1. [Reproducible academic publications](#reproducible-academic-publications)
+1. [Other publications using the Notebook](#other-publications-and-conference-abstracts-that-explicitly-use-the-notebook)
+. Data-driven journalism](#data-driven-journalism)
+1. [Whimsical notebooks](#whimsical-notebooks)
+1. [Videos of IPython being used in the wild](#videos-of-ipython-being-used-in-the-wild)
 
 ## Entire books or other large collections of notebooks on a topic
 
@@ -346,7 +348,9 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Sorting CSV files using the Python csv module](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/sorting_csvs.ipynb), by [Sebastian Raschka](https://github.com/rasbt).
 
-## Julia notebooks
+## Notebooks in languages other than Python
+
+### Julia
 
 The IPython protocols to communicate between kernels and clients are language agnostic, and other programming language communities have started to build support for this protocol in their language. The Julia team has created [IJulia](https://github.com/JuliaLang/IJulia.jl), and these are some Julia notebooks:
 
@@ -356,14 +360,14 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * A [tutorial](http://nbviewer.ipython.org/gist/7551139) on making interactive graphs with [Plotly](https://plot.ly/) and Julia.
 
-## Haskell notebooks
+### Haskell
 There exists a Haskell kernel for IPython in the [IHaskell project](https://github.com/gibiansky/ihaskell).
 
 * [IHaskell Demo Notebook](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
 * [Homophone reduction](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Homophones.ipynb), a solution to a cute problem involving treating English letters as generators of a large group.
 * [Gradient descent typeclass](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Gradient-Descent.ipynb), a look at how arbitrary gradient descent algorithms can be represented with a typeclass.
 
-## Ruby notebooks
+### Ruby
 
 Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.
 
@@ -424,7 +428,6 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 ## Data-driven journalism
 
 * [The Need for Openness in Data Journalism](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).
-
 
 * [St. Louis County Segregation Analysis](https://github.com/BuzzFeedNews/2014-08-st-louis-county-segregation) , analysis for the article [The Ferguson Area Is Even More Segregated Than You Probably Guessed](http://www.buzzfeed.com/jsvine/the-ferguson-area-is-even-more-segregated-than-you-thought) by [Jeremy Singer-Vine](https://twitter.com/jsvine).
 

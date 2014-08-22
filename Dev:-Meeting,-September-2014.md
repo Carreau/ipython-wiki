@@ -16,6 +16,7 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 * Matthias Bussonnier
 * Kyle Kelley
 * Jason Grout (confirm?)
+* Aaron Culich
 
 ## Agenda
 

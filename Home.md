@@ -12,6 +12,7 @@ This wiki contains:
   - [Roadmap for NBviewer](wiki/Roadmap:-NBviewer)
 * Our [lab meetings on air](wiki/Dev:-Lab-meetings-on-Air)
 * Pages for specific developers sprints
+  - [Summer 2014 development meeting](wiki/Dev:-Meeting,-September-2014)
   - [SciPy 2014](wiki/Sprints:-SciPy2014)
   - [Winter 2014 development meeting](wiki/Dev:-Meeting,-January-2014)
   - [Summer 2013 development meeting](wiki/Dev:-Meeting,-July-2013)

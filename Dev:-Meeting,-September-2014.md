@@ -28,7 +28,7 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
   - Text editor? Terminal? ...
   - Scope limiting exercise on multiuser UX, before we go down the rabbit hole of implementing an entire
     desktop-in-the-browser or the new Django.
-* Security: multiuser server, colaboratory, etc. 
+* Security: multiuser server, colaboratory, remote resources, etc. 
 * Static widgets.
 * Notebooks as files: status/needs on nbconvert; diff & merge, etc.
 * Short brainstorm session on nbviewer.

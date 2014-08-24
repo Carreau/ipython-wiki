@@ -23,11 +23,16 @@ List of (some) IPython compatible kernels
 -   [IOCaml](https://github.com/andrewray/iocaml)
 -   [IForth](https://github.com/jdfreder/iforth)
 -   [IPerl](https://metacpan.org/release/Devel-IPerl)
+-   [IOctave](https://github.com/blink1073/octave_kernel)
+-   [IScilab](https://github.com/blink1073/scilab_kernel)
 
 Guide to creating an IPython kernel:
 
 [IHaskell creator blog
 post](http://andrew.gibiansky.com/blog/ipython/ipython-kernels/)
+
+or, see IPython's docs on [wrapper kernels]
+(http://ipython.org/ipython-doc/dev/development/wrapperkernels.html).
 
 Scientific computing projects
 -----------------------------
@@ -267,4 +272,3 @@ Web frameworks and other systems
 -   [NotebookCloud](https://notebookcloud.appspot.com) is a free and
     open source web service for creating and managing IPython Notebook
     servers on Amazon's EC2.
-

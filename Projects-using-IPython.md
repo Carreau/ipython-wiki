@@ -6,25 +6,25 @@ entry](http://ipython.org/citing.html).
 List of (some) IPython compatible kernels
 -----------------------------------------
 
--   [IJulia](http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb)
--   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/demo/IHaskell.ipynb)
--   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)
--   [IRuby](http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb)
--   [IGo](https://github.com/takluyver/igo)
--   [IScala](https://github.com/mattpap/IScala)
--   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
--   [IAldor](https://github.com/mattpap/IAldor)
--   [Calico
-    Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb)
--   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
--   [Simple example kernel](https://github.com/dsblank/simple_kernel)
--   [RKernel](https://github.com/takluyver/IRkernel)
--   [IErlang](https://github.com/robbielynch/ierlang)
--   [IOCaml](https://github.com/andrewray/iocaml)
--   [IForth](https://github.com/jdfreder/iforth)
--   [IPerl](https://metacpan.org/release/Devel-IPerl)
--   [IOctave](https://github.com/blink1073/octave_kernel)
--   [IScilab](https://github.com/blink1073/scilab_kernel)
+1.   [IJulia](http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb)
+1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/demo/IHaskell.ipynb)
+1.   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)
+1.   [IRuby](http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb)
+1.   [IGo](https://github.com/takluyver/igo)
+1.   [IScala](https://github.com/mattpap/IScala)
+1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
+1.   [IAldor](https://github.com/mattpap/IAldor)
+1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb)
+1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
+1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
+1.   [RKernel](https://github.com/takluyver/IRkernel)
+1.   [IErlang](https://github.com/robbielynch/ierlang)
+1.   [IOCaml](https://github.com/andrewray/iocaml)
+1.   [IForth](https://github.com/jdfreder/iforth)
+1.   [IPerl](https://metacpan.org/release/Devel-IPerl)
+1.   [IOctave](https://github.com/blink1073/octave_kernel)
+1.   [IScilab](https://github.com/blink1073/scilab_kernel)
+
 
 Guide to creating an IPython kernel:
 

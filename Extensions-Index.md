@@ -237,6 +237,18 @@ To install (from the command line):
     pip install duster
 ```
 
+## icypher
+
+Query a Neo4J graph database with Cypher and get back the results in Python data structures.
+
+[Homepage](https://github.com/lebedov/icypher)
+
+To install (from the command line):
+
+```text
+    pip install icypher
+```
+
 ## inumpy
 
 A numpy extension for IPython. Autocomplete recarray.

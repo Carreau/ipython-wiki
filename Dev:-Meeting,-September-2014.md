@@ -15,7 +15,6 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 * Paul Ivanov
 * Matthias Bussonnier
 * Kyle Kelley
-* Jason Grout (confirm?)
 * Aaron Culich
 
 ## Agenda
@@ -41,6 +40,6 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Open House
 
 ### Thursday
-* PROPOSED by @aculich: 3-4:30pm Architecture discussion for possible IPython Notebook/[Berkeley Research Computing](http://research-it.berkeley.edu/brc) integration
+* 3-4:30pm Architecture discussion for possible IPython Notebook/[Berkeley Research Computing](http://research-it.berkeley.edu/brc) integration. Folks from LBL and NERSC may also attend.
 
 ### Friday

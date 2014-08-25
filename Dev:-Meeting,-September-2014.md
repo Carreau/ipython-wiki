@@ -41,5 +41,6 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Open House
 
 ### Thursday
+* PROPOSED by @aculich: 3-4:30pm Architecture discussion for possible IPython Notebook/[Berkeley Research Computing](http://research-it.berkeley.edu/brc) integration
 
 ### Friday

@@ -16,6 +16,7 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 * Matthias Bussonnier
 * Kyle Kelley
 * Aaron Culich
+* LBL, NERSC and Stanford folks for the Thursday afternoon multiuser discussion.
 
 ## Agenda
 
@@ -31,7 +32,7 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Static widgets.
 * Notebooks as files: status/needs on nbconvert; diff & merge, etc.
 * Short brainstorm session on nbviewer.
-
+* Support [Qt5 backend](http://matplotlib.org/1.4.0/users/whats_new.html#qt5-backend) for matplotlib.
 
 ### Tuesday
 

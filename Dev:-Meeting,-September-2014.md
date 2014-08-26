@@ -10,7 +10,7 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 
 * Fernando Perez
 * Brian Granger
-* Min Ragan-Kelley
+* Min Ragan-Kelley (will miss Friday PM)
 * Thomas Kluyver
 * Paul Ivanov
 * Matthias Bussonnier

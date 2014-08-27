@@ -33,6 +33,7 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Notebooks as files: status/needs on nbconvert; diff & merge, etc.
 * Short brainstorm session on nbviewer.
 * Support [Qt5 backend](http://matplotlib.org/1.4.0/users/whats_new.html#qt5-backend) for matplotlib.
+* Documentation. Let's at least sort out our policy moving forward on notebooks, sphinx, JS, etc.  We may not have the resources for a big cleanup right away, but let's not make the holes deeper.
 
 ### Tuesday
 

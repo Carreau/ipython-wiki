@@ -17,6 +17,7 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 * Kyle Kelley
 * Aaron Culich
 * LBL, NERSC and Stanford folks for the Thursday afternoon multiuser discussion.
+* Adrienne Wantulok
 
 ## Agenda
 
@@ -35,6 +36,7 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Support [Qt5 backend](http://matplotlib.org/1.4.0/users/whats_new.html#qt5-backend) for matplotlib.
 * Documentation. Let's at least sort out our policy moving forward on notebooks, sphinx, JS, etc.  We may not have the resources for a big cleanup right away, but let's not make the holes deeper.
 * Easy sharing of requirements and custom JS/CSS... Question appears both in nbviewer public contexts and JupyterHub usage.
+* Logo Design
 
 ### Tuesday
 

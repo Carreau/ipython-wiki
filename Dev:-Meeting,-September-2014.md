@@ -43,6 +43,7 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 * Easy sharing of requirements and custom JS/CSS... Question appears both in nbviewer public contexts and JupyterHub usage.
 * Logo Design
 * PyCon talks?
+* The kernel/client barrier: valid use cases for making it softer? If so, what would be the model?
 
 ### Tuesday
 

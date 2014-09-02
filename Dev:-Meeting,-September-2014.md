@@ -16,7 +16,7 @@ Open House: Wednesday afternoon, 5-6:30pm.  Because of the different location, w
 * Thomas Kluyver (will miss Tuesday)
 * Paul Ivanov
 * Matthias Bussonnier
-* Kyle Kelley
+* Kyle Kelley (will miss Friday PM)
 * Aaron Culich
 * LBL, NERSC and Stanford folks for the Thursday afternoon multiuser discussion.
 * Adrienne Wantulok

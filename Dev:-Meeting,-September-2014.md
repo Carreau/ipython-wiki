@@ -51,8 +51,6 @@ First, a dump of main topics. We'll organize a more detailed breakdown below.
 
 ### Wednesday
 
-* Open House
-
 ### Thursday
 * 3-4:30pm Architecture discussion for possible IPython Notebook/[Berkeley Research Computing](http://research-it.berkeley.edu/brc) integration. Folks from LBL and NERSC may also attend.
 

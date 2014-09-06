@@ -1,5 +1,4 @@
-
-This is deprecated , just go here http://ipython.org/ipython-doc/dev/interactive/reference.html#interactive-use. 
+This is deprecated , just go here http://ipython.org/ipython-doc/dev/interactive/reference.html#defining-your-own-magics . 
 
 
 ---------- 

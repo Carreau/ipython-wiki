@@ -1,0 +1,52 @@
+
+This is deprecated , just go here http://ipython.org/ipython-doc/dev/interactive/reference.html#interactive-use. 
+
+
+---------- 
+
+
+Magic commands are defined by the <code>define_magic</code> function in <code>IPython.core.interactiveshell</code>. Here's how to define your own <code>%impall</code> magic command that import all names from a module (and reloads the module):
+
+ # Get a reference to the InteractiveShell for this session
+ ip = get_ipython()
+ 
+ def doimp(self, arg):
+     self.ex("import %s; reload(%s); from %s import *" % (
+     arg,arg,arg)
+     )
+ 
+ ip.define_magic('impall', doimp)
+
+Just save the text above to e.g. <code>myimport.py</code> and add <code>import myimport</code> to your <code>IPYTHON_DIR/profile_default/ipython_config.py</code>.
+
+----
+The above did not work for me in ipython 0.13, but this alternative did:
+
+=== ipy_startup.py ===
+ from IPython.core.interactiveshell import *
+ 
+ ip = get_ipython()
+ 
+ def foo(self, bar):
+     print bar
+ 
+ ip.define_magic('footest', foo)
+
+=== Run output ===
+
+ > ipython -i ipy_startup.py
+ 
+ In [1]: footest hello world
+ hello world
+
+----
+
+=== <code>%memit</code> - Quick memory usage benchmarking ===
+
+IPython user [https://github.com/vene vene (Vlad Niculae)] posted about custom magic function simplifying [https://github.com/fabianp/memory_profiler memory profiler] interaction within IPython. Additionally [http://code.google.com/p/psutil/ psutil] module is required for speedup on Linux and as necessary requirement on Windows. Script is hosted on [https://gist.github.com/3022718 gist].
+
+Example usage from included docstring:
+
+ In [3]: %memit np.zeros(1e7)
+ best of 3: 76.402344 MB per loop
+ Out[3]: 76.40234375

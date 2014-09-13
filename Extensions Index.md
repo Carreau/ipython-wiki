@@ -33,7 +33,7 @@ Enables matplotlib themes that match base16 [notebook themes](https://github.com
 [Example Screenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
 
 ## Brythonmagic
-Enable the possibility to use Brython in the notebook so you can interact with the notebook or use javascript libraries without having to write [much] javascript.
+Enables the possibility to use Brython in the notebook so you can interact with the notebook or use javascript libraries without having to write [much] javascript.
 
 [Homepage](https://github.com/kikocorreoso/brythonmagic)
 

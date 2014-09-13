@@ -32,6 +32,16 @@ Enables matplotlib themes that match base16 [notebook themes](https://github.com
 
 [Example Screenshot](https://raw.githubusercontent.com/benjaminaschultz/base16-ipython-matplotlibrc/master/eighties_dark.png)
 
+## Brythonmagic
+Enable the possibility to use Brython in the notebook so you can interact with the notebook or use javascript libraries without having to write [much] javascript.
+
+[Homepage](https://github.com/kikocorreoso/brythonmagic)
+
+Some notebooks:
+
+* [General examples](http://nbviewer.ipython.org/github/kikocorreoso/brythonmagic/blob/master/notebooks/Brython%20usage%20in%20the%20IPython%20notebook.ipynb).
+* [A notebook tutorial about the use of Highcharts.js in the notebook](http://nbviewer.ipython.org/github/kikocorreoso/brythonmagic/blob/master/notebooks/Highcharts%20(python)%20tutorial.ipynb).
+
 ## Cassandra (CQL3) integration
 
 Query cassandra directly from ipython.

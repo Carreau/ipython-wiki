@@ -298,6 +298,12 @@ Examples:
 * [Introduction](http://nbviewer.ipython.org/github/epmoyer/ipy_table/blob/master/ipy_table-Introduction.ipynb)
 * [Reference Guide](http://nbviewer.ipython.org/github/epmoyer/ipy_table/blob/master/ipy_table-Reference.ipynb)
 
+## ipy2wp
+Small tool to convert an IPython notebook to html and upload the result to your wordpress blog using XML-RPC.
+
+[Homepage](https://github.com/Pybonacci/ipy2wp).
+
+[Maybe this is not the appropriate place for this but I couldn't find a better place]
 
 ## SQLite magics
 

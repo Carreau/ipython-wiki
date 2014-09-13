@@ -42,6 +42,12 @@ Some notebooks:
 * [General examples](http://nbviewer.ipython.org/github/kikocorreoso/brythonmagic/blob/master/notebooks/Brython%20usage%20in%20the%20IPython%20notebook.ipynb).
 * [A notebook tutorial about the use of Highcharts.js in the notebook](http://nbviewer.ipython.org/github/kikocorreoso/brythonmagic/blob/master/notebooks/Highcharts%20(python)%20tutorial.ipynb).
 
+To install:
+
+```
+%install_ext https://raw.github.com/kikocorreoso/brythonmagic/master/brythonmagic.py
+```
+
 ## Cassandra (CQL3) integration
 
 Query cassandra directly from ipython.

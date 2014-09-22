@@ -24,6 +24,7 @@ List of (some) IPython compatible kernels
 1.   [IPerl](https://metacpan.org/release/Devel-IPerl)
 1.   [IOctave](https://github.com/blink1073/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
+1.   [ICSharp](https://github.com/zabirauf/icsharp)
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

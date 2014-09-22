@@ -10,3 +10,5 @@ A few interesting widgets or experiments with widgets are listed here.
 * [ipython-d3networkx](https://github.com/jdfreder/ipython-d3networkx), integration of NetworkX and D3 force directed graphs using the widget framework.
 * [ipython-d3plot](https://github.com/jdfreder/ipython-d3plot), D3 line and stacked area plots using widgets.
 * [ipython-gridwidget](https://github.com/jdfreder/ipython-gridwidget), widget designed to make grid layouts easy.
+* [cirq](https://github.com/ntezak/cirq), widget for visually editing circuits of various domains.
+* [SVG widgets](https://github.com/nworbmot/svgwidgets), widgets for drawing SVGs.

@@ -20,6 +20,7 @@ This wiki contains:
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
   - [PyData 2012 HackNight](wiki/PyData-2012-HackNight)
 * The IPython [Extensions Index](wiki/Extensions-Index)
+* A list of interesting IPython [widgets](wiki/widgets)
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
 * [[A gallery of interesting IPython Notebooks]]
 * [[Research at UC Berkeley using IPython]]

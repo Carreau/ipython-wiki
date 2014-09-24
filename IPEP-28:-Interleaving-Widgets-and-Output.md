@@ -7,16 +7,14 @@
 <tr><td> Implementation </td><td> n/a </td></tr>
 </table>
 
-# Unification of Widgets and Output
-
 # Main goals
 
 * Ability to interleave widgets and output.
-* Multiple outputs that are addressible (display/print/clear_output)
+* Multiple outputs that are addressable (display/print/clear_output)
 from Python and can be put into widget hierarchies.
 * Kernel authors shouldn't have to implement the comm/widget stuff to
 get output to work.
-* No additional coupling of the frontend to the kernel that we already
+* No additional coupling of the front-end to the kernel that we already
 have (through widgets)
 
 ## Notebook UI
@@ -29,7 +27,7 @@ by calling display(w) from Python.
 * From the UI perspective output will become a widget that can be put
 anywhere in the widget hierarchy.
 * When regular output (stdout, display_data, etc.) arrives in the
-frontend, we will create a "default output widget" in the next slot in
+front-end, we will create a "default output widget" in the next slot in
 the widget area. This output widget will not use the Comm layer but
 will get its output through an adapter layer between the existing part
 of the message spec and the output widget. We will need a Comm-less

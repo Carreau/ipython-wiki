@@ -275,3 +275,6 @@ Web frameworks and other systems
 -   [NotebookCloud](https://notebookcloud.appspot.com) is a free and
     open source web service for creating and managing IPython Notebook
     servers on Amazon's EC2.
+
+-   [INotebook](https://github.com/tartavull/INotebook) is a desktop app
+    for directly opening .ipynb files

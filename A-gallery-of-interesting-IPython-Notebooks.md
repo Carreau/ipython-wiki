@@ -72,7 +72,6 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Neural Networks](http://nbviewer.ipython.org/github/masinoa/machine_learning/blob/master/04_Neural_Networks.ipynb), part of a collection on [machine learning](https://github.com/masinoa/machine_learning) by [Aaron Masino](https://github.com/masinoa).
 
-
 * [An introduction to Pandas](http://nbviewer.ipython.org/urls/bitbucket.org/hrojas/learn-pandas/raw/master/lessons/01%20-%20Lesson.ipynb), part of an [11-lesson tutorial on Pandas](https://bitbucket.org/hrojas/learn-pandas), by [Hernán Rojas](https://bitbucket.org/hrojas).
 
 * The [Statsmodels Project](http://statsmodels.sourceforge.net) has two excellent collections of examples: [in their official documentation](http://statsmodels.sourceforge.net/devel/examples/index.html) and [extra ones in their wiki](https://github.com/statsmodels/statsmodels/wiki/Examples#user-contributed-examples). Too many there to directly duplicate here, but they provide great learning materials on statistical modeling with Python.
@@ -90,6 +89,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 * [Desperately Seeking Silver](http://nbviewer.ipython.org/github/cs109/content/blob/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
 * [Python Notebooks for StatLearning Exercises](https://github.com/sujitpal/statlearning-notebooks), Python implementations of the R labs for the [StatLearning: Statistical Learning](https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about) online course from Stanford University taught by Profs Trevor Hastie and Rob Tibshirani.
+
+* A collection of [four courses in foundations of data science, algorithms and databases](http://nbviewer.ipython.org/github/ledeprogram/courses/tree/master) from multiple faculty at [Columbia University's Lede Program](http://www.journalism.columbia.edu/page/1058-the-lede-program-an-introduction-to-data-practices/906). 
 
 ### Mathematics, Physics, Chemistry, Biology
 

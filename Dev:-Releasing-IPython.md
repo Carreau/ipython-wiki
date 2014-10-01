@@ -39,7 +39,7 @@ These will be used later if you want to copy/paste, or you can just type the app
   to find duplicates and update `.mailmap`.
   Before generating the GitHub stats, verify that all closed issues and pull requests [have appropriate milestones](https://github.com/ipython/ipython/wiki/Dev%3A-GitHub-workflow#milestones). [This search](https://github.com/ipython/ipython/issues?q=is%3Aclosed+no%3Amilestone+is%3Aissue) should return no results.
 
-# 2. Run the `build_release` script
+# 2. Run the `tools/build_release` script
 
 This does all the file checking and building that the real release script will do.
 This will let you do test installations, check that the build procedure runs OK, etc.

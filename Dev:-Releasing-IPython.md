@@ -70,7 +70,7 @@ Update release.py back to `x.y-dev` or `x.y-maint`, and push:
 # 4. Get a fresh clone of the tag for building the release:
 
     cd /tmp
-    git clone --recursive --depth https://github.com/ipython/ipython.git -b "$TAG" 
+    git clone --recursive --depth 1 https://github.com/ipython/ipython.git -b "$TAG" 
 
 # 5. Run the `release` script
 

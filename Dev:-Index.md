@@ -20,5 +20,6 @@ Further development information:
 * Documentation on the [[IPython Sphinx directive|Dev: IPython Sphinx directive]]
 * Information about our [[py3compat|Dev: Py3compat module]] module
 * Information about the [[URL mapping|Dev: URL mapping of IPython notebook]] of the IPython notebook
+* Documentation on [[Javascript events|Dev: Javascript Events]] in the notebook interface
 
 A template for new Python files in IPython: [template.py](./template.py)

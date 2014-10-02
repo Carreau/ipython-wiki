@@ -226,6 +226,11 @@ Web frameworks and other systems
 -   The [Axon Shell](http://kamaelia.sourceforge.net/AxonShell.html) in
     the BBC's Kamaelia project is an embedded IPython instance.
 
+-   Emacs-ipython [emacs-ipython](https://github.com/burakbayramli/emacs-ipython) is an 
+    Emacs extensionuses Pymacs to call an ipython kernel, get results and displays 
+    them in the LaTeX buffer. Automatic rendering of images from plot commands, 
+    even code completion are supported. 
+
 -   As of revision 53 (Oct 11/05), the new [Turbo
     Gears](http://www.turbogears.org/) framework can optionally use
     IPython as its shell. [This
@@ -278,3 +283,4 @@ Web frameworks and other systems
 
 -   [INotebook](https://github.com/tartavull/INotebook) is a desktop app
     for directly opening .ipynb files
+

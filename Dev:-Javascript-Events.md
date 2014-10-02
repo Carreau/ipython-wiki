@@ -6,7 +6,11 @@ This page documents the core set of events, and explains when and why they are t
 
 #### status_started.Kernel
 
-The kernel has been started (either through Kernel or Session but is not necessarily connected yet)
+The kernel has been started, but a connection to it has not necessarily been established yet.
+
+* The kernel has been successfully started through `/api/kernels`
+* The kernel has been successfully restarted through `/api/kernels`
+* The kernel has been successfully started through `/api/sessions`
 
 #### status_connected.Kernel
 

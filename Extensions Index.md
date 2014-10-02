@@ -281,6 +281,18 @@ To install (from the command line):
     pip install icypher
 ```
 
+## idisplay
+
+Magic function for accessing IPython's rich display system without having to explicitly import and call its various classes.
+
+[Homepage](https://github.com/lebedov/idisplay)
+
+To install (from the command line):
+
+```text
+    pip install idisplay
+```
+
 ## inumpy
 
 A numpy extension for IPython. Autocomplete recarray.

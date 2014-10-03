@@ -18,9 +18,9 @@ The kernel has been successfully started or restarted through `/api/kernels`.
 
 The kernel has been successfully started through `/api/sessions`.
 
-#### status_connecting.Kernel
+#### status_reconnecting.Kernel
 
-An attempt is being made to connect (via websockets) to the kernel.
+An attempt is being made to reconnect (via websockets) to the kernel after having been disconnected.
 
 #### status_connected.Kernel
 

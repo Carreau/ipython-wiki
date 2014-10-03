@@ -12,12 +12,11 @@ The kernel has been started, but a connection to it has not necessarily been est
 
 ##### kernel_started.Kernel
 
-* The kernel has been successfully started through `/api/kernels` (triggers "kernel_started.Kernel")
-* The kernel has been successfully restarted through `/api/kernels` (triggers "kernel_started.Kernel")
+The kernel has been successfully started or restarted through `/api/kernels` (triggers "kernel_started.Kernel").
 
 ##### kernel_started.Session
 
-* The kernel has been successfully started through `/api/sessions` (triggers "kernel_started.Session")
+The kernel has been successfully started through `/api/sessions` (triggers "kernel_started.Session").
 
 #### connected.Kernel
 

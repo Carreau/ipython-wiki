@@ -317,14 +317,14 @@ browser is to use our message channels.  Currently these channels are not suffic
 Development focus for IPython 3.0:
 
 - Further develop Interactive widgets and non-Python kernels
-- Initial multi-user notebook
+- Initial multi-user notebook ([JupyterHub](https://github.com/jupyter/jupyterhub))
   - The multi-user IPython Notebook will map 1:1 to a Linux user environment
     with existing, trusted users.
   - The notebook server will be run as root, and kernels run as individual users,
     with the full rights, access, and privileges of those users on the system.
 
 
-## Release 4.0, Winter, 2014
+## Release 4.0, 2015
 
 This marks the end of the Sloan Foundation funding, by which point we should have a
 solid multi-user IPython Notebook server with interactive widgets, and powerful utilities

@@ -1,3 +1,5 @@
+(Note: this page is not currently consistent with IPython master)
+
 Javascript events are used to notify unrelated parts of the notebook interface when something happens. For example, if the kernel is busy executing code, it may send an event announcing as such, which can then be picked up by other services, like the notification area. For details on how the events themselves work, see the [JQuery documentation](http://api.jquery.com/on/).
 
 This page documents the core set of events, and explains when and why they are triggered.
@@ -35,11 +37,11 @@ The kernel is being interrupted. This is triggered at the beginning of a interru
 
 #### status_disconnected.Kernel
 
-There is no connection to the kernel (either it has been lost, or there never was one)
+The connection to the kernel has been lost.
 
-#### early_disconnect.Kernel
+##### status_disconnected.Kernel.error
 
-A connection could not be made to the kernel
+Not only was the connection lost, but it was lost due to an error (i.e., we did not tell the websockets to close).
 
 #### status_dead.Kernel
 

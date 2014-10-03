@@ -14,15 +14,22 @@ The kernel has been started, but a connection to it has not necessarily been est
 
 #### status_connected.Kernel
 
-A connection has been established to the kernel
+A connection has been established to the kernel. This is triggered as soon as all websockets (to the shell, iopub, and stdin channels) have been opened.
 
 #### status_restarting.Kernel
 
-The kernel is restarting
+The kernel is restarting. This is triggered when:
+
+* At the beginning of an restart call to `/api/kernels`
+* If the `Kernel` receives a status message indicating that it is restarting.
+
+#### status_autorestarting.Kernel
+
+The kernel is restarting on its own. This is only triggered if the `Kernel` receives a status message indicating that it is restarting. 
 
 #### status_interrupting.Kernel
 
-The kernel is being interrupted
+The kernel is being interrupted. This is triggered at the beginning of a interrupt call to `/api/kernels`.
 
 #### status_disconnected.Kernel
 

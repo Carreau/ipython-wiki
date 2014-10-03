@@ -1,29 +1,31 @@
-Javascript events are used to notify unrelated parts of the notebook interface when something happens. For example, if the kernel is busy executing code, it may send an event announcing as such, which can then be picked up by other services, like the notification area.
+Javascript events are used to notify unrelated parts of the notebook interface when something happens. For example, if the kernel is busy executing code, it may send an event announcing as such, which can then be picked up by other services, like the notification area. For details on how the events themselves work, see the [JQuery documentation](http://api.jquery.com/on/).
 
 This page documents the core set of events, and explains when and why they are triggered.
 
-## Kernel events
+## Kernel-related events
 
-#### status_started.Kernel
+#### kernel_started
 
 The kernel has been started, but a connection to it has not necessarily been established yet.
 
-* The kernel has been successfully started through `/api/kernels`
-* The kernel has been successfully restarted through `/api/kernels`
-* The kernel has been successfully started through `/api/sessions`
+##### kernel_started.Kernel
 
-#### status_connected.Kernel
+* The kernel has been successfully started through `/api/kernels` (triggers "kernel_started.Kernel")
+* The kernel has been successfully restarted through `/api/kernels` (triggers "kernel_started.Kernel")
 
-A connection has been established to the kernel. This is triggered as soon as all websockets (to the shell, iopub, and stdin channels) have been opened.
+##### kernel_started.Session
+
+* The kernel has been successfully started through `/api/sessions` (triggers "kernel_started.Session")
+
+#### connected.Kernel
+
+A connection has been established to the kernel. This is triggered as soon as all websockets (e.g. to the shell, iopub, and stdin channels) have been opened.
 
 #### status_restarting.Kernel
 
-The kernel is restarting. This is triggered when:
+The kernel is restarting. This is triggered at the beginning of an restart call to `/api/kernels`.
 
-* At the beginning of an restart call to `/api/kernels`
-* If the `Kernel` receives a status message indicating that it is restarting.
-
-#### status_autorestarting.Kernel
+##### status_restarting.Kernel.auto
 
 The kernel is restarting on its own. This is only triggered if the `Kernel` receives a status message indicating that it is restarting. 
 

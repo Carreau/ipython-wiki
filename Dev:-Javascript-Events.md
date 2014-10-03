@@ -18,7 +18,11 @@ The kernel has been successfully started or restarted through `/api/kernels`.
 
 The kernel has been successfully started through `/api/sessions`.
 
-#### connected.Kernel
+#### status_connecting.Kernel
+
+An attempt is being made to connect (via websockets) to the kernel.
+
+#### status_connected.Kernel
 
 A connection has been established to the kernel. This is triggered as soon as all websockets (e.g. to the shell, iopub, and stdin channels) have been opened.
 

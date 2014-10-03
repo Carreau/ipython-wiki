@@ -30,7 +30,7 @@ The kernel is starting. This is triggered once when the kernel process is starti
 
 The kernel is restarting. This is triggered at the beginning of an restart call to `/api/kernels`.
 
-##### status_restarting.Kernel.auto
+#### status_autorestarting.Kernel
 
 The kernel is restarting on its own. This is only triggered if the `Kernel` receives a status message indicating that it is restarting. This probably also means that something happened to cause the kernel to die.
 
@@ -42,7 +42,7 @@ The kernel is being interrupted. This is triggered at the beginning of a interru
 
 The connection to the kernel has been lost.
 
-##### status_disconnected.Kernel.error
+#### connection_failed.Kernel
 
 Not only was the connection lost, but it was lost due to an error (i.e., we did not tell the websockets to close).
 
@@ -54,22 +54,26 @@ The kernel's execution state is 'idle'.
 
 The kernel's execution state is 'busy'.
 
+#### status_killed
+
+The kernel was killed through an API call.
+
+##### status_killed.Kernel
+
+The kernel has been manually killed through `/api/kernels`.
+
+##### status_killed.Session
+
+The kernel has been manually killed through `/api/sessions`.
+
 #### kernel_dead
 
 The kernel is dead (it may have been alive at some point, or it may not).
 
-##### kernel_dead.Kernel.died
+##### kernel_dead.Kernel
 
 This is triggered if the kernel dies, and the kernel manager attempts to restart it, but is unable to. (TODO: in what scenarios would this actually happen?)
 
-##### kernel_dead.Kernel.killed
-
-The kernel has been manually killed through `/api/kernels`.
-
-##### kernel_dead.Session.error
+##### kernel_dead.Session
 
 The kernel could not be started through `/api/sessions`.
-
-##### kernel_dead.Session.killed
-
-The kernel has been manually killed through `/api/sessions`.

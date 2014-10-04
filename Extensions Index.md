@@ -569,3 +569,8 @@ What you can do:
 ## Min's IPython extensions
 
 MinRK has [published](/minrk/ipython_extensions) various (both Python and Notebook) extensions for IPython.
+
+## `py.test` plugin for discovering and running IPython notebook cells as unit tests
+
+* [Github repository](https://github.com/zonca/pytest-ipynb)
+* [Release notes](http://zonca.github.io/2014/09/unit-tests-ipython-notebook.html)

@@ -6,17 +6,17 @@ This page documents the core set of events, and explains when and why they are t
 
 ## Kernel-related events
 
-#### kernel_started
+#### kernel_created
 
-The kernel has been started, but a connection to it has not necessarily been established yet.
+The kernel has been created, but a connection to it has not necessarily been established yet.
 
-##### kernel_started.Kernel
+##### kernel_created.Kernel
 
-The kernel has been successfully started or restarted through `/api/kernels`.
+The kernel has been successfully created or re-created through `/api/kernels`.
 
-##### kernel_started.Session
+##### kernel_created.Session
 
-The kernel has been successfully started through `/api/sessions`.
+The kernel has been successfully created through `/api/sessions`.
 
 #### status_reconnecting.Kernel
 

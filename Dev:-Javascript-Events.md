@@ -28,7 +28,11 @@ A connection has been established to the kernel. This is triggered as soon as al
 
 #### status_starting.Kernel
 
-The kernel is starting. This is triggered once when the kernel process is starting up.
+The kernel is starting. This is triggered once when the kernel process is starting up, and can be sent as a message by the kernel, or may be triggered by the frontend if it knows the kernel is starting (e.g., it created the kernel and is connected to it, but hasn't been able to communicate with it yet).
+
+#### status_ready.Kernel
+
+Like status_idle.Kernel, but triggered after the kernel has fully started up.
 
 #### status_restarting.Kernel
 

@@ -48,17 +48,13 @@ This page documents the core set of events, and explains when and why they are t
 * [status_restarting.Kernel](#status_restartingkernel)
 * [status_starting.Kernel](#status_startingkernel)
 
-#### kernel_created
+#### kernel_created.Kernel
 
-The kernel has been created, but a connection to it has not necessarily been established yet.
+The kernel has been successfully created or re-created through `/api/kernels`, but a connection to it has not necessarily been established yet.
 
-##### kernel_created.Kernel
+#### kernel_created.Session
 
-The kernel has been successfully created or re-created through `/api/kernels`.
-
-##### kernel_created.Session
-
-The kernel has been successfully created through `/api/sessions`.
+The kernel has been successfully created or re-created through `/api/sessions`, but a connection to it has not necessarily been established yet.
 
 #### status_reconnecting.Kernel
 
@@ -66,7 +62,7 @@ An attempt is being made to reconnect (via websockets) to the kernel after havin
 
 #### status_connected.Kernel
 
-A connection has been established to the kernel. This is triggered as soon as all websockets (e.g. to the shell, iopub, and stdin channels) have been opened.
+A connection has been established to the kernel. This is triggered as soon as all websockets (e.g. to the shell, iopub, and stdin channels) have been opened. This does not necessarily mean that the kernel is ready to do anything yet, though.
 
 #### status_starting.Kernel
 
@@ -82,7 +78,12 @@ The kernel is restarting. This is triggered at the beginning of an restart call 
 
 #### status_autorestarting.Kernel
 
-The kernel is restarting on its own. This is only triggered if the `Kernel` receives a status message indicating that it is restarting. This probably also means that something happened to cause the kernel to die.
+The kernel is restarting on its own, which probably also means that something happened to cause the kernel to die. For example, running the following code in the notebook would cause the kernel to autorestart:
+
+```
+import os
+os._exit(1)
+```
 
 #### status_interrupting.Kernel
 
@@ -104,29 +105,29 @@ The kernel's execution state is 'idle'.
 
 The kernel's execution state is 'busy'.
 
-#### status_killed
-
-The kernel was killed through an API call.
-
-##### status_killed.Kernel
+#### status_killed.Kernel
 
 The kernel has been manually killed through `/api/kernels`.
 
-##### status_killed.Session
+#### status_killed.Session
 
 The kernel has been manually killed through `/api/sessions`.
 
-#### kernel_dead
+#### kernel_dead.Kernel
 
-The kernel is dead (it may have been alive at some point, or it may not).
+This is triggered if the kernel dies, and the kernel manager attempts to restart it, but is unable to. For example, the following code run in the notebook will cause the kernel to die and for the kernel manager to be unable to restart it:
 
-##### kernel_dead.Kernel
+```
+import os
+from IPython.kernel.connect import get_connection_file
+with open(get_connection_file(), 'w') as f:
+    f.write("garbage")
+os._exit(1)
+```
 
-This is triggered if the kernel dies, and the kernel manager attempts to restart it, but is unable to. (TODO: in what scenarios would this actually happen?)
+#### kernel_dead.Session
 
-##### kernel_dead.Session
-
-The kernel could not be started through `/api/sessions`.
+The kernel could not be started through `/api/sessions`. This might be because the requested kernel type isn't installed. Another reason for this message is that the kernel died or was killed, but the session wasn't.
 
 ## Notebook-related events
 

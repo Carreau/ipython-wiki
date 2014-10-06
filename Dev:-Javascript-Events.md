@@ -25,28 +25,28 @@ This page documents the core set of events, and explains when and why they are t
 
 ## Kernel-related events
 
-* [connection_failed.Kernel](#connection_failedkernel)
 * [execution_request.Kernel](#execution_requestkernel)
 * [input_reply.Kernel](#input_replykernel)
-* [kernel_created.Session](#kernel_createdsession)
+* [kernel_autorestarting.Kernel](#kernel_autorestartingkernel)
+* [kernel_busy.Kernel](#kernel_busykernel)
+* [kernel_connected.Kernel](#kernel_connectedkernel)
+* [kernel_connection_failed.Kernel](#kernel_connection_failedkernel)
 * [kernel_created.Kernel](#kernel_createdkernel)
-* [kernel_dead.Session](#kernel_deadsession)
+* [kernel_created.Session](#kernel_createdsession)
 * [kernel_dead.Kernel](#kernel_deadkernel)
+* [kernel_dead.Session](#kernel_deadsession)
+* [kernel_disconnected.Kernel](#kernel_disconnectedkernel)
+* [kernel_idle.Kernel](#kernel_idlekernel)
+* [kernel_interrupting.Kernel](#kernel_interruptingkernel)
+* [kernel_killed.Kernel](#kernel_killedkernel)
+* [kernel_killed.Session](#kernel_killedsession)
+* [kernel_ready.Kernel](#kernel_readykernel)
+* [kernel_reconnecting.Kernel](#kernel_reconnectingkernel)
+* [kernel_restarting.Kernel](#kernel_restartingkernel)
+* [kernel_starting.Kernel](#kernel_startingkernel)
 * [send_input_reply.Kernel](#send_input_replykernel)
 * [shell_reply.Kernel](#shell_replykernel)
 * [spec_changed.Kernel](#spec_changedkernel)
-* [status_autorestarting.Kernel](#status_autorestartingkernel)
-* [status_busy.Kernel](#status_busykernel)
-* [status_connected.Kernel](#status_connectedkernel)
-* [status_disconnected.Kernel](#status_disconnectedkernel)
-* [status_idle.Kernel](#status_idlekernel)
-* [status_interrupting.Kernel](#status_interruptingkernel)
-* [status_killed.Session](#status_killedsession)
-* [status_killed.Kernel](#status_killedkernel)
-* [status_ready.Kernel](#status_readykernel)
-* [status_reconnecting.Kernel](#status_reconnectingkernel)
-* [status_restarting.Kernel](#status_restartingkernel)
-* [status_starting.Kernel](#status_startingkernel)
 
 #### kernel_created.Kernel
 
@@ -56,27 +56,27 @@ The kernel has been successfully created or re-created through `/api/kernels`, b
 
 The kernel has been successfully created or re-created through `/api/sessions`, but a connection to it has not necessarily been established yet.
 
-#### status_reconnecting.Kernel
+#### kernel_reconnecting.Kernel
 
 An attempt is being made to reconnect (via websockets) to the kernel after having been disconnected.
 
-#### status_connected.Kernel
+#### kernel_connected.Kernel
 
 A connection has been established to the kernel. This is triggered as soon as all websockets (e.g. to the shell, iopub, and stdin channels) have been opened. This does not necessarily mean that the kernel is ready to do anything yet, though.
 
-#### status_starting.Kernel
+#### kernel_starting.Kernel
 
 The kernel is starting. This is triggered once when the kernel process is starting up, and can be sent as a message by the kernel, or may be triggered by the frontend if it knows the kernel is starting (e.g., it created the kernel and is connected to it, but hasn't been able to communicate with it yet).
 
-#### status_ready.Kernel
+#### kernel_ready.Kernel
 
-Like status_idle.Kernel, but triggered after the kernel has fully started up.
+Like kernel_idle.Kernel, but triggered after the kernel has fully started up.
 
-#### status_restarting.Kernel
+#### kernel_restarting.Kernel
 
 The kernel is restarting. This is triggered at the beginning of an restart call to `/api/kernels`.
 
-#### status_autorestarting.Kernel
+#### kernel_autorestarting.Kernel
 
 The kernel is restarting on its own, which probably also means that something happened to cause the kernel to die. For example, running the following code in the notebook would cause the kernel to autorestart:
 
@@ -85,31 +85,31 @@ import os
 os._exit(1)
 ```
 
-#### status_interrupting.Kernel
+#### kernel_interrupting.Kernel
 
 The kernel is being interrupted. This is triggered at the beginning of a interrupt call to `/api/kernels`.
 
-#### status_disconnected.Kernel
+#### kernel_disconnected.Kernel
 
 The connection to the kernel has been lost.
 
-#### connection_failed.Kernel
+#### kernel_connection_failed.Kernel
 
 Not only was the connection lost, but it was lost due to an error (i.e., we did not tell the websockets to close).
 
-#### status_idle.Kernel
+#### kernel_idle.Kernel
 
 The kernel's execution state is 'idle'.
 
-#### status_busy.Kernel
+#### kernel_busy.Kernel
 
 The kernel's execution state is 'busy'.
 
-#### status_killed.Kernel
+#### kernel_killed.Kernel
 
 The kernel has been manually killed through `/api/kernels`.
 
-#### status_killed.Session
+#### kernel_killed.Session
 
 The kernel has been manually killed through `/api/sessions`.
 

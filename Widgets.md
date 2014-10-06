@@ -13,3 +13,4 @@ A few interesting widgets or experiments with widgets are listed here.
 * [cirq](https://github.com/ntezak/cirq), widget for visually editing circuits of various domains.
 * [SVG widgets](https://github.com/nworbmot/svgwidgets), widgets for drawing SVGs.
 * [cookiecutter-ipython-widget](https://github.com/bollwyvl/cookiecutter-ipython-widget), a [cookiecutter](http://cookiecutter.readthedocs.org/en/latest/) for creating a pip-installable widget
+* [Turtle widget](https://github.com/takluyver/mobilechelonian/tree/require-widgets)

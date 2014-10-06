@@ -25,13 +25,12 @@ This page documents the core set of events, and explains when and why they are t
 
 ## Kernel-related events
 
-* [kernel_created.Session](#kernel_createdsession)
-* [kernel_dead.Session](#kernel_deadsession)
-* [status_killed.Session](#status_killedsession)
 * [connection_failed.Kernel](#connection_failedkernel)
 * [execution_request.Kernel](#execution_requestkernel)
 * [input_reply.Kernel](#input_replykernel)
+* [kernel_created.Session](#kernel_createdsession)
 * [kernel_created.Kernel](#kernel_createdkernel)
+* [kernel_dead.Session](#kernel_deadsession)
 * [kernel_dead.Kernel](#kernel_deadkernel)
 * [send_input_reply.Kernel](#send_input_replykernel)
 * [shell_reply.Kernel](#shell_replykernel)
@@ -42,15 +41,12 @@ This page documents the core set of events, and explains when and why they are t
 * [status_disconnected.Kernel](#status_disconnectedkernel)
 * [status_idle.Kernel](#status_idlekernel)
 * [status_interrupting.Kernel](#status_interruptingkernel)
+* [status_killed.Session](#status_killedsession)
 * [status_killed.Kernel](#status_killedkernel)
 * [status_ready.Kernel](#status_readykernel)
 * [status_reconnecting.Kernel](#status_reconnectingkernel)
 * [status_restarting.Kernel](#status_restartingkernel)
 * [status_starting.Kernel](#status_startingkernel)
-
-kernel_created.Session
-kernel_dead.Session
-status_killed.Session
 
 #### kernel_created
 

@@ -4,7 +4,53 @@ Javascript events are used to notify unrelated parts of the notebook interface w
 
 This page documents the core set of events, and explains when and why they are triggered.
 
+## Cell-related events
+
+* [command_mode.Cell](#command_modecell)
+* [create.Cell](#createcell)
+* [delete.Cell](#deletecell)
+* [edit_mode.Cell](#edit_modecell)
+* [select.Cell](#selectcell)
+* [output_appended.OutputArea](#output_appendedoutputarea)
+
+## CellToolbar-related events
+
+* [preset_activated.CellToolbar](#preset_activatedcelltoolbar)
+* [preset_added.CellToolbar](#preset_addedcelltoolbar)
+
+## Dashboard-related events
+
+* [app_initialized.DashboardApp](#app_initializeddashboardapp)
+* [sessions_loaded.Dashboard](#sessions_loadeddashboard)
+
 ## Kernel-related events
+
+* [kernel_created.Session](#kernel_createdsession)
+* [kernel_dead.Session](#kernel_deadsession)
+* [status_killed.Session](#status_killedsession)
+* [connection_failed.Kernel](#connection_failedkernel)
+* [execution_request.Kernel](#execution_requestkernel)
+* [input_reply.Kernel](#input_replykernel)
+* [kernel_created.Kernel](#kernel_createdkernel)
+* [kernel_dead.Kernel](#kernel_deadkernel)
+* [send_input_reply.Kernel](#send_input_replykernel)
+* [shell_reply.Kernel](#shell_replykernel)
+* [spec_changed.Kernel](#spec_changedkernel)
+* [status_autorestarting.Kernel](#status_autorestartingkernel)
+* [status_busy.Kernel](#status_busykernel)
+* [status_connected.Kernel](#status_connectedkernel)
+* [status_disconnected.Kernel](#status_disconnectedkernel)
+* [status_idle.Kernel](#status_idlekernel)
+* [status_interrupting.Kernel](#status_interruptingkernel)
+* [status_killed.Kernel](#status_killedkernel)
+* [status_ready.Kernel](#status_readykernel)
+* [status_reconnecting.Kernel](#status_reconnectingkernel)
+* [status_restarting.Kernel](#status_restartingkernel)
+* [status_starting.Kernel](#status_startingkernel)
+
+kernel_created.Session
+kernel_dead.Session
+status_killed.Session
 
 #### kernel_created
 
@@ -85,3 +131,38 @@ This is triggered if the kernel dies, and the kernel manager attempts to restart
 ##### kernel_dead.Session
 
 The kernel could not be started through `/api/sessions`.
+
+## Notebook-related events
+
+* [app_initialized.NotebookApp](#app_initializednotebookapp)
+* [autosave_disabled.Notebook](#autosave_disablednotebook)
+* [autosave_enabled.Notebook](#autosave_enablednotebook)
+* [checkpoint_created.Notebook](#checkpoint_creatednotebook)
+* [checkpoint_delete_failed.Notebook](#checkpoint_delete_failednotebook)
+* [checkpoint_deleted.Notebook](#checkpoint_deletednotebook)
+* [checkpoint_failed.Notebook](#checkpoint_failednotebook)
+* [checkpoint_restore_failed.Notebook](#checkpoint_restore_failednotebook)
+* [checkpoint_restored.Notebook](#checkpoint_restorednotebook)
+* [checkpoints_listed.Notebook](#checkpoints_listednotebook)
+* [command_mode.Notebook](#command_modenotebook)
+* [edit_mode.Notebook](#edit_modenotebook)
+* [list_checkpoints_failed.Notebook](#list_checkpoints_failednotebook)
+* [notebook_load_failed.Notebook](#notebook_load_failednotebook)
+* [notebook_loaded.Notebook](#notebook_loadednotebook)
+* [notebook_loading.Notebook](#notebook_loadingnotebook)
+* [notebook_rename_failed.Notebook](#notebook_rename_failednotebook)
+* [notebook_renamed.Notebook](#notebook_renamednotebook)
+* [notebook_restoring.Notebook](#notebook_restoringnotebook)
+* [notebook_save_failed.Notebook](#notebook_save_failednotebook)
+* [notebook_saved.Notebook](#notebook_savednotebook)
+* [notebook_saving.Notebook](#notebook_savingnotebook)
+* [rename_notebook.Notebook](#rename_notebooknotebook)
+* [selected_cell_type_changed.Notebook](#selected_cell_type_changednotebook)
+* [set_dirty.Notebook](#set_dirtynotebook)
+* [set_next_input.Notebook](#set_next_inputnotebook)
+* [trust_changed.Notebook](#trust_changednotebook)
+
+## Other
+
+* [open_with_text.Pager](#open_with_textpager)
+* [rebuild.QuickHelp](#rebuildquickhelp)

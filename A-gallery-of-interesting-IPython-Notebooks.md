@@ -180,6 +180,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Running MATLAB in an IPython Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/MATLAB_Wrapper_Examples.ipynb), using [pymatbridge](https://pypi.python.org/pypi/pymatbridge).
 
+* [Interactive Curve-Fitting](http://nbviewer.ipython.org/gist/danielballan/1c2db3d4f2f7780cf52f) The `lmfit` package provides a widget-based interface to the curve-fitting algorithms in SciPy.
+
 ### Social data
 
 * [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/docs/Survival%20Analysis%20intro.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).

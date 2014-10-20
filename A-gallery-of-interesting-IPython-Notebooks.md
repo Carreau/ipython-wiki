@@ -92,6 +92,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * A collection of [four courses in foundations of data science, algorithms and databases](http://nbviewer.ipython.org/github/ledeprogram/courses/tree/master) from multiple faculty at [Columbia University's Lede Program](http://www.journalism.columbia.edu/page/1058-the-lede-program-an-introduction-to-data-practices/906). 
 
+* [SciPy and OpenCV as an interactive computing environment for computer vision](http://nbviewer.ipython.org/github/thsant/scipy4cv) by [Thiago Santos](http://ttsantos.net), a tutorial presented at [SIBGRAPI 2014](http://emap.fgv.br/sibgrapi-2014/tutorials.html).
+
 ### Mathematics, Physics, Chemistry, Biology
 
 * A [single-atom laser model](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures/blob/master/Lecture-2B-Single-Atom-Lasing.ipynb). This is one of a complete set of [lectures on quantum mechanics and quantum optics using QuTiP](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures) by [J.R. Johansson](https://github.com/jrjohansson).

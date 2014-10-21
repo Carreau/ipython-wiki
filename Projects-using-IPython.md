@@ -26,6 +26,7 @@ List of (some) IPython compatible kernels
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [ICSharp](https://github.com/zabirauf/icsharp)
 1.   [Bash](https://github.com/takluyver/bash_kernel)
+1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

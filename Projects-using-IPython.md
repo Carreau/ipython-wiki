@@ -173,6 +173,17 @@ Scientific computing projects
 
 -   The [Spyder](https://code.google.com/p/spyderlib/) integrates the IPython Qt console, and IPdb for debugging. It also handles the connection to remote kernels.
 
+-   [scikit-bio](http://scikit-bio.org) is an open-source, BSD-licensed, python package providing data 
+    structures, algorithms, and educational resources for bioinformatics. 
+
+-   [EMPeror](http://emperor.colorado.edu) is a WebGL tool for visualizing high-dimensional spaces typically 
+    through techniques like principal coordinates analysis. 
+
+-   [qiita](https://github.com/biocore/qiita/) (canonically pronounced cheetah) the QIIME databasing effort to
+    enable rapid analysis of microbial ecology datasets. The Qiita repository is responsible for defining the data
+    model and the Python API for interacting with a Qiita database. Qiita relies on IPython for parallel compute 
+    support.
+
 In teaching
 -----------
 
@@ -284,4 +295,3 @@ Web frameworks and other systems
 
 -   [INotebook](https://github.com/tartavull/INotebook) is a desktop app
     for directly opening .ipynb files
-

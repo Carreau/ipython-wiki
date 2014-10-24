@@ -53,4 +53,5 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 26: Full Featured python js object bridge]] -- *Active*
 * [[IPEP 27: Contents Service]] -- *Active*
 * [[IPEP 28: Interleaving Widgets and Output]] -- *Active*
+* [[IPEP 29: Project Governance]] -- *Active*
 

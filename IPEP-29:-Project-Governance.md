@@ -106,7 +106,7 @@ An Institutional Partner is free to pursue funding for their work on The Project
 
 To acknowledge institutional contributions there are two level of Institutional Partners, with associated benefits:
 
-Gold = an institution with at least one Institutional Council Member
+**Tier 1** = an institution with at least one Institutional Council Member
 
 -   Acknowledged on the Jupyter/IPython websites, in talks and T-shirts.
 -   Ability to acknowledge their own funding sources on the Jupyter/IPython websites, in talks and T-shirts.
@@ -114,18 +114,19 @@ Gold = an institution with at least one Institutional Council Member
 -   Ability to influence the project through the participation of their Council Member.
 -   Council Members invited to bi-annual Jupyter/IPython Developer Meeting.
 
-Existing Gold level Institutional Partners:
+Existing **Tier 1** level Institutional Partners:
 
 -   UC Berkeley (Fernando Pérez, Min Ragan-Kelley, Thomas Kluyver)
 -   Cal Poly (Brian Granger)
 -   Rackspace (Kyle Kelley)
+-   Continuum Analytics (Damian Avila)
 
-Silver = an institution with at least one Institutional Contributor
+**Tier 2** = an institution with at least one Institutional Contributor
 
--   Same benefits as Gold level Partners, but:
+-   Same benefits as Tier 1 level Partners, but:
 -   Only Institutional Contributors are invited to the Institutional Partners Workshop and bi-annual Jupyter/IPython Developer Meeting.
 
-Existing Silver Partners:
+Existing **Tier 2** Partners:
 
 -   Bloomberg (Jason Grout, Sylvain Corlay)
 -   Google (Kester Tong, Kayur Patel)

@@ -435,7 +435,7 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Variations in submarine channel sinuosity as a function of latitude and slope](http://nbviewer.ipython.org/gist/zsylvester/6040d0015b9b907bc788), by Sylvester, Z., Pirmez, C., Cantelli, A., & Jobe, Z. R.
 
-* [Frontoparietal representations of task context support the flexible control of goal directed cognition](http://www.jneurosci.org/content/34/28/9202), by M.L. Waskom, D. Kumaran, A.M. Gordon, J. Rissman, & A.D. Wagner. [Github repository](https://github.com/WagnerLabPapers/Waskom_JNeurosci_2014) | [Main notebook](http://nbviewer.ipython.org/github/WagnerLabPapers/Waskom_JNeurosci_2014/blob/master/Behavioral_and_Decoding_Analyses.ipynb)
+* [Frontoparietal representations of task context support the flexible control of goal directed cognition](http://www.jneurosci.org/content/34/32/10743.short), by M.L. Waskom, D. Kumaran, A.M. Gordon, J. Rissman, & A.D. Wagner. [Github repository](https://github.com/WagnerLabPapers/Waskom_JNeurosci_2014) | [Main notebook](http://nbviewer.ipython.org/github/WagnerLabPapers/Waskom_JNeurosci_2014/blob/master/Behavioral_and_Decoding_Analyses.ipynb)
 
 * [pyparty: Intuitive Particle Processing in Python](http://openresearchsoftware.metajnl.com/article/view/jors.bh), Adam Hughes [Notebook to Generate the Published Figures](http://nbviewer.ipython.org/github/hugadams/pyparty/blob/master/examples/Notebooks/JORS_data.ipynb?create=1) | Also, check out the [pyparty tutorial notebooks](https://github.com/hugadams/pyparty).
 

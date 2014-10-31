@@ -1,4 +1,4 @@
-The intent of this document is to formalize the governance process that the IPython/Jupyter project has used informally since its inception in 2001. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-for-profit entities.
+The intent of this document is to formalize the governance process that the IPython/Jupyter project has used informally since its inception in 2001. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities.
 
 The Project
 ===========
@@ -100,7 +100,7 @@ The BDFL and Steering Council are the primary leadership for the project. No out
 
 An Institutional Contributor is any individual Project Contributor who contributes to the project as part of their official duties at an Institutional Partner. Likewise, an Institutional Council Member is any Project Steering Council Member who contributes to the project as part of their official duties at an Institutional Partner.
 
-With these definitions, an Institutional Partner is any recognized legal entity in the United States or elsewhere that employs at least 1 Institutional Contributor of Institutional Council Member. Institutional Partners can be for-profit or non-for-profit entities.
+With these definitions, an Institutional Partner is any recognized legal entity in the United States or elsewhere that employs at least 1 Institutional Contributor of Institutional Council Member. Institutional Partners can be for-profit or non-profit entities.
 
 Institutions become eligible to become an Institutional Partner by employing individuals who actively contribute to The Project as part of their official duties. To state this another way, the only way for a Partner to influence the project is by actively contributing to the open development of the project, in equal terms to any other member of the community of Contributors and Council Members. Merely using Jupyter/IPython Software or Services in institutional context do not allow an entity to become an Institutional Partner. Financial gifts do not enable an entity to become an Institutional Partner. Once an institution becomes eligible for Institutional Partnership, the Steering Council must nominate and approve the Partnership.
 

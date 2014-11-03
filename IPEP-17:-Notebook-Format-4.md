@@ -1,8 +1,8 @@
 <table>
-<tr><td> Status </td><td> Accepted </td></tr>
+<tr><td> Status </td><td> Implemented </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> April 29, 2013</td></tr>
-<tr><td> Updated </td><td> Novenber 3, 2014</td></tr>
+<tr><td> Updated </td><td> November 3, 2014</td></tr>
 <tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/pull/5733">5733</a> </td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/6045">6045</a> </td></tr>
 </table>

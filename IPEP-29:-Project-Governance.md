@@ -133,4 +133,4 @@ Existing **Tier 1** level Institutional Partners:
 Existing **Tier 2** Partners:
 
 -   Bloomberg (Jason Grout, Sylvain Corlay)
--   Google (Kester Tong, Kayur Patel)
+-   Google (Kester Tong, Kayur Patel, Mark Sandler)

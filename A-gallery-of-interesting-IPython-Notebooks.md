@@ -124,7 +124,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Logistic models of well switching in Bangladesh](http://nbviewer.ipython.org/github/carljv/Will_it_Python/blob/master/ARM/ch5/arsenic_wells_switching.ipynb), part of the ["Will it Python"](http://slendrmeans.wordpress.com/will-it-python) blog series ([repo](https://github.com/carljv/Will_it_Python)) on Machine Learning and data analysis in Python.  By Carl Vogel.
 
-* [Estimated likelihood of observing a large earthquake on a continental low‐angle normal fault and implications for low‐angle normal fault activity](https://raw.githubusercontent.com/cossatot/lanf_earthquake_likelihood/master/notebooks/lanf_manuscript_notebook.ipynb), an executable version of a paper by Richard Styron and Eric Hetland published in *Geophysical Research Letters*, on earthquake probabilities.
+* [Estimated likelihood of observing a large earthquake on a continental low‐angle normal fault and implications for low‐angle normal fault activity](http://nbviewer.ipython.org/github/cossatot/lanf_earthquake_likelihood/blob/master/notebooks/lanf_manuscript_notebook.ipynb), an executable version of a paper by Richard Styron and Eric Hetland published in *Geophysical Research Letters*, on earthquake probabilities.
 
 ### Linguistics and Text Mining
 

@@ -66,6 +66,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Learn Data Science](http://learnds.com), an entire self-directed course by [Nitin Borwankar](https://github.com/nborwankar).
 
+* [IPython Cookbook](http://ipython-books.github.io/cookbook/) by [Cyrille Rossant](http://cyrille.rossant.net/), a comprehensive guide to Python for Data Science. The code of the 100 recipes is available on [the GitHub repository](https://github.com/ipython-books/cookbook-code).
+
 * [An introduction to machine learning with Python and scikit-learn](http://nbviewer.ipython.org/github/temporaer/tutorial_ml_gkbionics/blob/master/2%20-%20KMeans.ipynb) ([repo and overview](https://github.com/amueller/tutorial_ml_gkbionics)) by [Hannes Schulz](https://github.com/temporaer) and [Andreas Mueller](https://github.com/amueller).
 
 * [Clustering and Regression](http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw2/HW2.ipynb), part of the UC Berkeley 2014 [Introduction to Data Science](http://amplab.github.io/datascience-sp14/) course taught by [Michael Franklin](http://www.cs.berkeley.edu/~franklin/).
@@ -237,6 +239,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/gist/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
 
 * [A tutorial introduction to machine learning with sklearn](http://amueller.github.com/sklearn_tutorial), an IPython-based slide deck by [Andreas Mueller](https://github.com/amueller).
+
+* [Introduction to Machine Learning in Python with scikit-learn](http://ipython-books.github.io/featured-04/) by [Cyrille Rossant](http://cyrille.rossant.net/), a free recipe from the [IPython Cookbook](http://ipython-books.github.io/cookbook/), a comprehensive guide to Python for Data Science.
 
 * [An introduction to Predictive Modeling in Python](http://nbviewer.ipython.org/github/ogrisel/parallel_ml_tutorial/blob/master/solutions/01%20-%20An%20Introduction%20to%20Predictive%20Modeling%20in%20Python.ipynb), by  [Olivier Grisel](https://github.com/ogrisel).
 

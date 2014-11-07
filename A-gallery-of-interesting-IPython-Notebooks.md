@@ -233,6 +233,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Visualizing mathematical models of brain cell connections](http://nbviewer.ipython.org/github/jonasnick/ReceptiveFields/blob/master/receptiveFields.ipynb). The effect of convolution of different receptive field functions and natural images is examined.
 
+* [Python for Vision Research](http://nbviewer.ipython.org/github/gestaltrevision/python_for_visres/blob/master/index.ipynb). A three-day crash course for vision researchers in programming with Python, building experiments with [PsychoPy](http://psychopy.org/) and [psychopy_ext](http://psychopy_ext.klab.lt/), learning the fMRI multi-voxel pattern analysis with [PyMVPA](http://www.pymvpa.org/), and understading image processing in Python.
+
 
 ### Machine Learning
 

@@ -1,7 +1,3 @@
-Welcome to the wiki for the IPython project. This is a community maintained and generated wiki that includes information about the project, its development and broader ecosystem of users and projects.
-
-# Index
-
 This wiki contains:
 
 * The [[IPython Cookbook|Cookbook: Index]]
@@ -20,7 +16,7 @@ This wiki contains:
   - [SciPy 2012](wiki/Sprints:-SciPy2012)
   - [PyData 2012 HackNight](wiki/PyData-2012-HackNight)
 * The IPython [Extensions Index](wiki/Extensions-Index)
-* A list of [IPython kernels for other languages](wiki/kernels)
+* A list of [IPython kernels for other languages](wiki/IPython-kernels-for-other-languages)
 * A list of interesting IPython [widgets](wiki/widgets)
 * A list of [Projects using IPython](wiki/Projects-using-IPython)
 * [[A gallery of interesting IPython Notebooks]]

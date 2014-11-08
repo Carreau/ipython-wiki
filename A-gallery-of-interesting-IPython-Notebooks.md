@@ -59,6 +59,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Exploratory Computing with Python](http://mbakker7.github.io/exploratory_computing_with_python/), a set of 15 Notebooks that cover exploratory computing, data analysis, and visualization. No prior programming knowledge required. Each Notebook includes a number of exercises (with answers) that should take less than 4 hours to complete. Developed by Mark Bakker for undergraduate engineering students at the Delft University of Technology.
 
+* [Understanding evolutionary strategies and covariance matrix adaptation](http://nbviewer.ipython.org/github/lmarti/evolutionary-computation-course/blob/master/AEC.04%20-%20Evolutionary%20Strategies%20and%20Covariance%20Matrix%20Adaptation.ipynb), from the [Advanced Evolutionary Computation: Theory and Practice](http://nbviewer.ipython.org/github/lmarti/evolutionary-computation-course/tree/master/) course by [Luis Martí](http://lmarti.com).
 
 ### Statistics, Machine Learning and Data Science
 

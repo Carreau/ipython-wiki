@@ -473,6 +473,8 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 
 * [Streaming Double Pendulum Simulation in IPython NB](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s7_streaming/s7_streaming.ipynb).
 
+* [Porque Charles Xavier debe cambiar a Cerebro por Python](http://nbviewer.ipython.org/github/mshopper/aurora/blob/master/Aurora.ipynb), a study in data and gender in the Marvel comics universe, by [Mai Giménez](http://twitter.com/adahopper) and [Angela Rivera](http://twitter.com/ghilbrae).
+
 ## Videos of IPython being used in the wild
 
 Of course the first thing you might try is searching for videos about IPython (1900 or so by last count on Youtube) but there are demonstrations of other applications using the power of IPython but are not mentioned is the descriptions. Below are a few such:

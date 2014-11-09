@@ -21,6 +21,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [ICSharp](https://github.com/zabirauf/icsharp)
 1.   [Bash](https://github.com/takluyver/bash_kernel)
 1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
+1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

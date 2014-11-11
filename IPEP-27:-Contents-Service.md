@@ -1,9 +1,8 @@
 <table>
-<tr><td> Status </td><td> Active </td></tr>
+<tr><td> Status </td><td> Implemented </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> May 30, 2014</td></tr>
-<tr><td> Updated </td><td> June 16, 2014</td></tr>
-<!-- <tr><td> Discussion </td><td> <a href="https://github.com/ipython/ipython/issues">Issue TBD</a> </td></tr> -->
+<tr><td> Updated </td><td> Nov 10, 2014</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5938">PR #5938</a>,
 </td></tr>
 </table>
@@ -11,24 +10,25 @@
 ## Abstract
 
 Moving the generic file-handling code (save, load, list, delete) out of the notebook API,
-and into a generic [contents]() API. The only notebook-specific actions are trust and signing.
+and into a generic [contents](#list-contents-root) API. The only notebook-specific actions are trust and signing.
 
-* API
-    * [Create new file](#create_new_file)
-    * [Upload a file](#upload_file)
-    * [Copy a file](#copy_file)
-    * [List contents](#list_dir)
-    * [Get an existing file](#get_file)
-    * [Rename file](#rename_file)
-    * [Save file](#save_file)
-    * [Delete file](#delete_file)
-    * [List checkpoints](#list_cp)
-    * [Create a checkpoint](#create_cp)
-    * [Restore from a checkpoint](#restore_cp)
-    * [Delete a checkpoint](#delete_cp)
+API:
+
+- [Create new file](#create-new-file)
+- [Upload a file](#upload-file)
+- [Copy a file](#copy-file)
+- [List contents](#list-dir)
+- [Get an existing file](#get-file)
+- [Rename file](#rename-file)
+- [Save file](#save-file)
+- [Delete file](#delete-file)
+- [List checkpoints](#list-cp)
+- [Create a checkpoint](#create-cp)
+- [Restore from a checkpoint](#restore-cp)
+- [Delete a checkpoint](#delete-cp)
 
 
-<span id='list_contents_root'></span>
+<span id='list-contents-root'></span>
 
 ### Contents API
 
@@ -38,13 +38,13 @@ A basic contents model:
 
 ```json
 {
-    "name": "My Notebook.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-10-01T14:22:36.123456+00:00",
-    "modified": "2013-10-02T11:29:27.616675+00:00",
-    "content": null,
-    "format": null,
+  "name": "My Notebook.ipynb",
+  "path": "foo/bar/My Notebook.ipynb",
+  "type": "notebook",
+  "created": "2013-10-01T14:22:36.123456+00:00",
+  "modified": "2013-10-02T11:29:27.616675+00:00",
+  "content": null,
+  "format": null,
 }
 ```
 
@@ -59,20 +59,20 @@ If the model does not contain `content`, the `content` and `format` keys will be
 
 If the model includes the file content (e.g. requesting a file with GET),
 then `content` will be defined, and its format described in `format`.
-There are three basic cases:
+There are a few basic cases:
 
 1. `type="directory"`
-  - `content` will be a list containing a model for each item in the directory
-  - `format="json"`
+    - `content` will be a list containing a model for each item in the directory
+    - `format="json"`
 2. `type="file"`, file is UTF-8 text
-  - `content` will be the text of the file as a string
-  - `format="text"`
+    - `content` will be the text of the file as a string
+    - `format="text"`
 3. `type="file"`, file is binary
-  - `content` will be the base64-encoded content of the file as a string
-  - `format="base64"`
+    - `content` will be the base64-encoded content of the file as a string
+    - `format="base64"`
 4. `type="notebook"`
-  - `content` will be the JSON structure of the file (dict)
-  - `format="json"`
+    - `content` will be the JSON structure of the file (dict)
+    - `format="json"`
 
 
 #### Only the server will provide a complete model
@@ -86,35 +86,36 @@ should never contain the timestamp keys (they will be ignored).
 
 Since the `path` and `name` are specified in the URL,
 these keys are generally omitted from requests as well.
-The one exception being saving an existing file to a new location,
-in which case the *new* name and path are given in the model,
+The one exception being moving an existing file to a new location,
+in which case the destination name and path are given in the model,
 and the current name and path are in the URL.
 
-The `type` field can also be omitted by the client, but will
-always be provided by the servers.
-
-<span id='create_new_file'></span>
+<span id='create-new-file'></span>
 #### Create new files
 
-POST always creates a new file. There are a few ways to create file:
-[simple creation](#create_new_file), [uploading](#upload_file),
-and [copying existing files](#copy_file).
+There are a few ways to create file:
+creating empty untitled files, [uploading](#upload-file),
+and [copying existing files](#copy-file).
 In each case, POST requests are always made to a directory URL,
 in which case the server picks the new file's name.
-If you want to specify the new file's name, make a PUT request to the full path URL.
+If you want to upload a file to a specific URL, make a PUT request to the full path URL.
 
-Creates a new file. If a POST, the name will be the first unused name of the form `"Untitled#.ipynb"`, with the first available integer.
+Creates a new file. The name will be the first unused name of the form `"Untitled#.ipynb"`, with the first available integer.
 
     POST /api/contents/[:path]
-    PUT /api/contents/[:path]/[:name.ipynb]
 
 ##### Input
 
-POST requests accept one optional argument, the file extension:
+Creating new untitled files via POST accepts one or two optional arguments:
+
 <dl>
-    <dt>ext</dt>
-    <dd>the file etension. If unspecified, `.ipynb` will be used</dd>
+  <dt>ext</dt>
+  <dd>the file extension (ignored if `type` is `'notebook'`)</dd>
+  <dt>type</dt>
+  <dd>the model type, one of 'file', 'notebook', or 'directory'</dd>
 </dl>
+
+If both of these are unspecified, an empty file with no extension will be created.
 
 
 ##### Response
@@ -124,46 +125,46 @@ POST requests accept one optional argument, the file extension:
 
 ```json
 {
-    "name": "Untitled0.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-09-01T09:15:14.12345+00:00",
-    "modified": "2013-10-02T11:29:27.616675+00:00"
+  "name": "Untitled0.ipynb",
+  "path": "foo/bar/Untitled0.ipynb",
+  "type": "notebook",
+  "created": "2013-09-01T09:15:14.12345+00:00",
+  "modified": "2013-10-02T11:29:27.616675+00:00"
 }
 ```
 
-<span id='upload_file'></span>
+<span id='upload-file'></span>
 #### Upload a file
 
-Uploads a new file to `path`. If a POST, the name will be the first unused name of the form `"Untitled#.ext"`.
+Uploads a new file to `path`, or creates an empty directory at `path`.
 
-    POST /api/contents/[:path]
-    PUT /api/contents/[:path]/[:name.ipynb]
+    PUT /api/contents/[:path]
 
 ##### Input
 
 <dl>
-    <dt>type</dt>
-    <dd>One of file, notebook, or directory</dd>
-    <dt>format</dt>
-    <dd>One of json (notebook), text, or base64 (file)</dd>
-    <dt>content</dt>
-    <dd>The actual file content (json for notebook, text or b64 for file, ignoredc for directory)</dd>
+  <dt>type</dt>
+  <dd>One of file, notebook, or directory</dd>
+  <dt>format</dt>
+  <dd>One of json (notebook), text, or base64 (file). Ignored if type is 'directory'.</dd>
+  <dt>content</dt>
+  <dd>The actual file content (json for notebook, text or b64 for file, ignored for directory)</dd>
 </dl>
 
 Example:
 
 ```json
 {
-    "name": "MyNotebook.ipynb",
-    "type": "notebook",
-    "format": "json",
-    "content": {
-        "metadata":{},
-        "nbformat": 3,
-        "nbformat_minor": 0,
-        "worksheets": []
-    }
+  "path": "/foo/bar/MyNotebook.ipynb",
+  "name": "MyNotebook.ipynb",
+  "type": "notebook",
+  "format": "json",
+  "content": {
+    "metadata":{},
+    "nbformat": 4,
+    "nbformat_minor": 0,
+    "cells": []
+  }
 }
 ```
 
@@ -174,39 +175,38 @@ Example:
 
 ```json
 {
-    "name": "MyNotebook.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-09-01T09:15:14.12345+00:00",
-    "modified": "2013-09-01T09:15:14.12345+00:00"
+  "name": "MyNotebook.ipynb",
+  "path": "foo/bar/MyNotebook.ipynb",
+  "type": "notebook",
+  "created": "2013-09-01T09:15:14.12345+00:00",
+  "modified": "2013-09-01T09:15:14.12345+00:00"
 }
 ```
 
 
-<span id='copy_file'></span>
+<span id='copy-file'></span>
 #### Copy a file
 
 Create a new file from a copy of an existing file.
-If POST, the new file will have a name of the form `{copy_from}-Copy#.{ext}`,
+The new file will have a name of the form `{copy_from}-Copy#.{ext}`,
 with the first available integer.
 
     POST /api/contents/[:path]
-    PUT /api/contents/[:path]/[:name.ipynb]
 
 ##### Input
 
 <dl>
-    <dt>copy_from</dt>
-    <dd>The file name to copy from</dd>
+  <dt>copy_from</dt>
+  <dd>The file name to copy from</dd>
 </dl>
 
 Example:
 
-    POST /appi/contents/foo/bar
+    POST /api/contents/foo/bar/
 
 ```json
 {
-    "copy_from" : "MyNotebook.ipynb"
+  "copy_from" : "/baz/bat/MyNotebook.ipynb"
 }
 ```
 
@@ -217,15 +217,15 @@ Example:
 
 ```json
 {
-    "name": "MyNotebook-Copy0.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-09-01T09:15:14.12345+00:00"
+  "name": "MyNotebook-Copy0.ipynb",
+  "path": "foo/bar/MyNotebook-Copy0.ipynb",
+  "type": "notebook",
+  "created": "2013-10-01T12:21:20.123456+00:00",
+  "modified": "2013-09-01T09:15:14.12345+00:00"
 }
 ```
 
-<span id='list_files'></span>
+<span id='list-files'></span>
 #### List files
 
 GET on a directory returns the directory model.
@@ -247,39 +247,39 @@ of the directory's contents.
   "modified": "2013-10-02T11:29:27.616675+00:00",
   "format": "json",
   "content": [
-    {
-        "name": "notebook1.ipynb",
-        "path": "foo/bar",
-        "type": "notebook",
-        "created": "2013-10-01T12:21:20.123456+00:00",
-        "modified": "2013-10-02T11:29:27.616675+00:00"
-    },
-    {
-        "name": "file.txt",
-        "path": "foo/bar",
-        "type": "file",
-        "created": "2013-10-01T12:21:20.123456+00:00",
-        "modified": "2013-10-02T11:29:27.616675+00:00"
-    },
-    {
-        "name": "subdir",
-        "path": "foo/bar",
-        "type": "directory",
-        "created": "2013-10-01T12:21:20.123456+00:00",
-        "modified": "2013-10-02T11:29:27.616675+00:00"
-    },
+  {
+    "name": "notebook1.ipynb",
+    "path": "foo/bar",
+    "type": "notebook",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+  },
+  {
+    "name": "file.txt",
+    "path": "foo/bar",
+    "type": "file",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+  },
+  {
+    "name": "subdir",
+    "path": "foo/bar",
+    "type": "directory",
+    "created": "2013-10-01T12:21:20.123456+00:00",
+    "modified": "2013-10-02T11:29:27.616675+00:00"
+  },
   ]
 }
 ```
 
 
 
-<span id='get_file'></span>
+<span id='get-file'></span>
 #### Get an existing file
 
 Returns the contents model for a given file path, including the full document content.
 
-    GET /api/contents/[:path]/[:name.ext]
+    GET /api/contents/[:path]
 
 ##### Response
 
@@ -287,35 +287,33 @@ Returns the contents model for a given file path, including the full document co
 
 ```json
 {
-    "name": "notebook1.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "format": "json",
-    "modified": "2013-10-02T11:29:27.616675+00:00",
-    "created": "2013-10-01T12:21:20.123456+00:00",
-    "content":{
-        "metadata": {},
-        "nbformat": 3,
-        "nbformat_minor": 0,
-        "worksheets": []
-    }
+  "name": "notebook1.ipynb",
+  "path": "foo/bar/notebook1.ipynb",
+  "type": "notebook",
+  "format": "json",
+  "modified": "2013-10-02T11:29:27.616675+00:00",
+  "created": "2013-10-01T12:21:20.123456+00:00",
+  "content":{
+    "metadata": {},
+    "nbformat": 4,
+    "nbformat_minor": 0,
+    "cells": []
+  }
 }
 ```
 
-<span id='rename_file'></span>
+<span id='rename-file'></span>
 #### Rename file
 
-This request renames the file and returns the updated model without content.
+This request moves the file and returns the updated model without content.
 
-    PATCH /api/contents/[:path]/[:name.ipynb]
+    PATCH /api/contents/[:path]
 
 ##### Input
 
 <dl>
-    <dt>name</dt>
-    <dd>The new filename (e.g. `notebook.ipynb`)</dd>
     <dt>path</dt>
-    <dd>The new path (e.g. `foo/bar`)</dd>
+    <dd>The new path (e.g. `foo/bar/notebook.ipynb`)</dd>
 </dl>
 
 ##### Response
@@ -325,52 +323,52 @@ This request renames the file and returns the updated model without content.
 
 ```json
 {
-    "name": "notebook1.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-10-04T14:32:19.123456+00:00"
+  "name": "notebook1.ipynb",
+  "path": "foo/bar/notebook1.ipynb",
+  "type": "notebook",
+  "created": "2013-10-01T12:21:20.123456+00:00",
+  "modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
 
-<span id='save_file'></span>
+<span id='save-file'></span>
 #### Save File
 
 Update an existing file in-place. This is how standard saves are performed.
-If the path and/or name of the file are specified in the model,
-the file will be saved to the new location specified in the model.
-After doing this, future PUT requests must use the URL for the new path.
 
 Returns the updated model without content.
 
-    PUT /api/contents/[:path]/[:name.ipynb]
+    PUT /api/contents/[:path]
 
 ##### Input
 <dl>
-    <dt>name</dt>
-    <dd>The new filename (`my notebook.ipynb`), if changed</dd>
-    <dt>path</dt>
-    <dd>The new path for the file, if changed</dd>
-    <dt>type</dt>
-    <dd>One of 'notebook', 'file', or 'directory'</dd>
-    <dt>format</dt>
-    <dd>One of 'json', 'text', or 'base64'</dd>
-    <dt>content</dt>
-    <dd>The actual body of the document (excluding 'type=directory')<dd>
+  <dt>name</dt>
+  <dd>The new filename (`my notebook.ipynb`), if changed</dd>
+  <dt>path</dt>
+  <dd>The new path for the file, if changed</dd>
+  <dt>type</dt>
+  <dd>One of 'notebook', 'file', or 'directory'</dd>
+  <dt>format</dt>
+  <dd>One of 'json', 'text', or 'base64'</dd>
+  <dt>content</dt>
+  <dd>The actual body of the document (excluding 'type=directory')<dd>
 </dl>
 
 Example:
 
+
+    PUT /api/contents/foo/bar/notebook1.ipynb
+
 ```json
 {
-    "name": "notebook1.ipynb",
-    "path": "foo/bar",
-    "content": {
-        "metadata":{},
-        "nbformat": 3,
-        "nbformat_minor": 0,
-        "worksheets": []
-    }
+  "type": "notebook",
+  "format": "json",
+  "content": {
+    "metadata":{},
+    "nbformat": 4,
+    "nbformat_minor": 0,
+    "cells": []
+  }
 }
 ```
 
@@ -380,28 +378,28 @@ Example:
 
 ```json
 {
-    "name": "notebook1.ipynb",
-    "path": "foo/bar",
-    "type": "notebook",
-    "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-10-04T14:32:19.123456+00:00"
+  "name": "notebook1.ipynb",
+  "path": "foo/bar/notebook1.ipynb",
+  "type": "notebook",
+  "created": "2013-10-01T12:21:20.123456+00:00",
+  "modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
-<span id='delete_file'></span>
+<span id='delete-file'></span>
 #### Delete file
 
 Deletes a file from the specified location.
 
-    DELETE /api/contents/[:path]/[:name.ipynb]
+    DELETE /api/contents/[:path]
 
 ##### Response
 
     status: 204 No Content
 
-Will raise 400 if you attempt to delete a non-empty directory
+Will raise 400 if you attempt to delete a non-empty directory.
 
 
-<span id='list_cp'></span>
+<span id='list-cp'></span>
 #### List Checkpoints
 
 List checkpoints for a given file. There will typically be zero or one results.
@@ -414,14 +412,14 @@ List checkpoints for a given file. There will typically be zero or one results.
 
 ```json
 [
-    {
-        "id" : "checkpoint-id",
-        "last_modified" : "2013-10-18T23:54:40+00:00"
-    }
+  {
+    "id" : "checkpoint-id",
+    "last_modified" : "2013-10-18T23:54:40+00:00"
+  }
 ]
 ```
 
-<span id='create_cp'></span>
+<span id='create-cp'></span>
 #### Create a Checkpoint
 
 Create a new checkpoint with the current state of a file.
@@ -436,12 +434,12 @@ so creating new checkpoints clobbers existing ones.
 
 ```json
 {
-    "id" : "checkpoint-id",
-    "last_modified" : "2013-10-18T23:54:40+00:00"
+  "id" : "checkpoint-id",
+  "last_modified" : "2013-10-18T23:54:40+00:00"
 }
 ```
 
-<span id='restore_cp'></span>
+<span id='restore-cp'></span>
 #### Restore to a Checkpoint
 
 Restore a file to a particular checkpointed state.
@@ -453,7 +451,7 @@ Restore a file to a particular checkpointed state.
     status: 204 No Content
 
 
-<span id='delete_cp'></span>
+<span id='delete-cp'></span>
 #### Delete a Checkpoint
 
 Delete a checkpoint.
@@ -475,13 +473,17 @@ This section describes just the changes from the implementation in IPEP 16 / IPy
 The client-visible changes to the REST API
 
 - replace `/api/notebooks/` with `/api/contents`
-- add `type` key to content model (one of `dir`, `file`, `notebook`)
+- add `type` key to content model (one of `directory`, `file`, `notebook`)
 - GET on a directory gives a listing of its contents
 - add `format` key to content model. one of:
   - json (notebooks)
   - text (utf-8 files)
   - base64 (binary files)
-- POST
+- only copy with POST, never PUT
+- only create empty files with POST, never PUT
+- only upload with PUT, never POST
+- `path` key in model is now the full path. `name` is redundant, but kept for convenience.
+
 
 ### Python API changes
 
@@ -494,3 +496,4 @@ The changes in the Python API, relevant to authors of alternative ContentsManage
   - `file_exists`
   - `trust_notebook` left alone
 - `increment_filename` takes and returns a full filename (with ext), not just the base (no ext)
+- separate `path`, `name` arguments are replaced with single `path` argument containing full path

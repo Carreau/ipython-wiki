@@ -49,6 +49,8 @@ A basic contents model:
 ```
 
 All contents models have basic name, path, type, created, and modified keys defined.
+The path field contains the full file path.
+The name field is always equivalent to the last part of the path field.
 `type` will have one of three values:
 
 - `"directory"`
@@ -84,9 +86,8 @@ The timestamps in the file model are read-only.
 A request to the server to update or upload a file model
 should never contain the timestamp keys (they will be ignored).
 
-Since the `path` and `name` are specified in the URL,
-these keys are generally omitted from requests as well.
-The one exception being moving an existing file to a new location,
+Since `path` is specified in the URL, it is generally omitted from requests.
+One exception being [renaming an existing file](#rename-file),
 in which case the destination name and path are given in the model,
 and the current name and path are in the URL.
 
@@ -155,7 +156,7 @@ Example:
 
 ```json
 {
-  "path": "/foo/bar/MyNotebook.ipynb",
+  "path": "foo/bar/MyNotebook.ipynb",
   "name": "MyNotebook.ipynb",
   "type": "notebook",
   "format": "json",
@@ -241,7 +242,7 @@ of the directory's contents.
 ```json
 {
   "name": "bar",
-  "path": "foo",
+  "path": "foo/bar",
   "type": "directory",
   "created": "2013-10-01T12:21:20.123456+00:00",
   "modified": "2013-10-02T11:29:27.616675+00:00",
@@ -249,21 +250,21 @@ of the directory's contents.
   "content": [
   {
     "name": "notebook1.ipynb",
-    "path": "foo/bar",
+    "path": "foo/bar/notebook1.ipynb",
     "type": "notebook",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00"
   },
   {
     "name": "file.txt",
-    "path": "foo/bar",
+    "path": "foo/bar/file.txt",
     "type": "file",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00"
   },
   {
     "name": "subdir",
-    "path": "foo/bar",
+    "path": "foo/bar/subdir",
     "type": "directory",
     "created": "2013-10-01T12:21:20.123456+00:00",
     "modified": "2013-10-02T11:29:27.616675+00:00"
@@ -303,8 +304,9 @@ Returns the contents model for a given file path, including the full document co
 ```
 
 <span id='rename-file'></span>
-#### Rename file
+#### Rename a file
 
+Make a PATCH request with a new `path` in the body to move a file to a new location.
 This request moves the file and returns the updated model without content.
 
     PATCH /api/contents/[:path]

@@ -3,6 +3,12 @@ more, feel free to add them, and if IPython contributes to a
 publication, please use our [ready-made citation
 entry](http://ipython.org/citing.html).
 
+
+List of availlable kernel
+-------------------------
+
+The list has been moved [here](IPython kernels for other languages).
+
 Scientific computing projects
 -----------------------------
 

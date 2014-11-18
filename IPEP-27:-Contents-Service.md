@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Implemented </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> May 30, 2014</td></tr>
-<tr><td> Updated </td><td> Nov 10, 2014</td></tr>
+<tr><td> Updated </td><td> Nov 18, 2014</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5938">PR #5938</a>,
 </td></tr>
 </table>
@@ -41,6 +41,7 @@ A basic contents model:
   "name": "My Notebook.ipynb",
   "path": "foo/bar/My Notebook.ipynb",
   "type": "notebook",
+  "writable": "true",
   "created": "2013-10-01T14:22:36.123456+00:00",
   "modified": "2013-10-02T11:29:27.616675+00:00",
   "content": null,
@@ -48,14 +49,16 @@ A basic contents model:
 }
 ```
 
-All contents models have basic name, path, type, created, and modified keys defined.
-The path field contains the full file path.
-The name field is always equivalent to the last part of the path field.
-`type` will have one of three values:
+All contents models have basic name, path, type, writable, created, and modified keys defined.
 
-- `"directory"`
-- `"file"`
-- `"notebook"`
+- `path` field contains the full file path. It will *not* start with `/`, and it will be `/`-delimited.
+- `name` is always equivalent to the last part of the path field.
+- `writable` indicates whether the requester has permission to edit the file they have requested.
+- `type` will have one of three values:
+
+   - `"directory"`
+   - `"file"`
+   - `"notebook"`
 
 If the model does not contain `content`, the `content` and `format` keys will be `null`.
 
@@ -292,6 +295,7 @@ Returns the contents model for a given file path, including the full document co
   "path": "foo/bar/notebook1.ipynb",
   "type": "notebook",
   "format": "json",
+  "writable": true,
   "modified": "2013-10-02T11:29:27.616675+00:00",
   "created": "2013-10-01T12:21:20.123456+00:00",
   "content":{

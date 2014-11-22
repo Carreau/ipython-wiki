@@ -14,3 +14,8 @@ A few interesting widgets or experiments with widgets are listed here.
 * [SVG widgets](https://github.com/nworbmot/svgwidgets), widgets for drawing SVGs.
 * [cookiecutter-ipython-widget](https://github.com/bollwyvl/cookiecutter-ipython-widget), a [cookiecutter](http://cookiecutter.readthedocs.org/en/latest/) for creating a pip-installable widget
 * [Turtle widget](https://github.com/takluyver/mobilechelonian/tree/require-widgets)
+
+
+## Projects using widgets
+
+* [flotilla](https://github.com/YeoLab/flotilla) Biological data analysis package using widgets

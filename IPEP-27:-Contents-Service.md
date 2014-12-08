@@ -14,18 +14,18 @@ and into a generic [contents](#list-contents-root) API. The only notebook-specif
 
 API:
 
-- [Create new file](#create-new-file)
-- [Upload a file](#upload-file)
-- [Copy a file](#copy-file)
-- [List contents](#list-dir)
-- [Get an existing file](#get-file)
-- [Rename file](#rename-file)
+- [Create new file](#create-new-files)
+- [Upload a file](#upload-a-file)
+- [Copy a file](#copy-a-file)
+- [List contents](#list-files)
+- [Get an existing file](#get-an-existing-file)
+- [Rename a file](#rename-a-file)
 - [Save file](#save-file)
 - [Delete file](#delete-file)
-- [List checkpoints](#list-cp)
-- [Create a checkpoint](#create-cp)
-- [Restore from a checkpoint](#restore-cp)
-- [Delete a checkpoint](#delete-cp)
+- [List checkpoints](#list-checkpoints)
+- [Create a checkpoint](#create-a-checkpoint)
+- [Restore from a checkpoint](#restore-to-a-checkpoint)
+- [Delete a checkpoint](#delete-a-checkpoint)
 
 
 <span id='list-contents-root'></span>

@@ -41,7 +41,7 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 14: Notebook Regression Tests]] -- *Active*
 * [[IPEP 15: Autosaving the IPython Notebook]] -- *Implemented*
 * [[IPEP 16: Notebook multi-directory dashboard and URL mapping]] -- *Implemented*
-* [[IPEP 17: Notebook format 4]] -- *Active*
+* [[IPEP 17: Notebook format 4]] -- *Implemented*
 * [[IPEP 18: Text editor for the Notebook]] -- *Deferred*
 * [[IPEP 19: concurrent.futures (PEP 3148) for IPython.parallel]] -- *Active*
 * [[IPEP 20: Informal structure of cell metadata]] -- *Active*
@@ -51,7 +51,7 @@ Each IPEP should have a table/area at the top with the following information:
 * [[IPEP 24: completion and object_info]] -- *Implemented*
 * [[IPEP 25: Registry of installed kernels]] -- *Implemented*
 * [[IPEP 26: Full Featured python js object bridge]] -- *Active*
-* [[IPEP 27: Contents Service]] -- *Active*
+* [[IPEP 27: Contents Service]] -- *Implemented*
 * [[IPEP 28: Interleaving Widgets and Output]] -- *Active*
 * [[IPEP 29: Project Governance]] -- *Active*
 

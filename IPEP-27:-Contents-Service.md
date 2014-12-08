@@ -44,6 +44,7 @@ A basic contents model:
   "writable": "true",
   "created": "2013-10-01T14:22:36.123456+00:00",
   "modified": "2013-10-02T11:29:27.616675+00:00",
+  "mimetype": null,
   "content": null,
   "format": null,
 }
@@ -60,7 +61,8 @@ All contents models have basic name, path, type, writable, created, and modified
    - `"file"`
    - `"notebook"`
 
-If the model does not contain `content`, the `content` and `format` keys will be `null`.
+If the model does not contain `content`, the `content`, `format`, and `mimetype` keys will be `null`.
+`mimetype` is used to specify the mime-type of `file` model content.
 
 If the model includes the file content (e.g. requesting a file with GET),
 then `content` will be defined, and its format described in `format`.
@@ -72,9 +74,11 @@ There are a few basic cases:
 2. `type="file"`, file is UTF-8 text
     - `content` will be the text of the file as a string
     - `format="text"`
+    - `mimetype="mime/type"` will be the mime-type of the file (text/plain if unknown)
 3. `type="file"`, file is binary
     - `content` will be the base64-encoded content of the file as a string
     - `format="base64"`
+    - `mimetype="mime/type"` will be the mime-type of the file (application/octet-stream if unknown)
 4. `type="notebook"`
     - `content` will be the JSON structure of the file (dict)
     - `format="json"`

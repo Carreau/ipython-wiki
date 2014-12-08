@@ -97,7 +97,7 @@ rerun that group individually.  For example, this tests the
 indicators:
 
 ```/bash
-   $ iptest -v IPython.utils
+   $ iptest IPython.utils -- -v
    ..........................SS..SSS............................S.S...
    .........................................................
    ----------------------------------------------------------------------

@@ -2,7 +2,7 @@
 <tr><td> Status </td><td> Implemented </td></tr>
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> May 30, 2014</td></tr>
-<tr><td> Updated </td><td> Nov 18, 2014</td></tr>
+<tr><td> Updated </td><td> Dec 9, 2014</td></tr>
 <tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5938">PR #5938</a>
 </td></tr>
 </table>
@@ -43,14 +43,14 @@ A basic contents model:
   "type": "notebook",
   "writable": "true",
   "created": "2013-10-01T14:22:36.123456+00:00",
-  "modified": "2013-10-02T11:29:27.616675+00:00",
+  "last_modified": "2013-10-02T11:29:27.616675+00:00",
   "mimetype": null,
   "content": null,
   "format": null,
 }
 ```
 
-All contents models have basic name, path, type, writable, created, and modified keys defined.
+All contents models have basic name, path, type, writable, created, and last_modified keys defined.
 
 - `path` field contains the full file path. It will *not* start with `/`, and it will be `/`-delimited.
 - `name` is always equivalent to the last part of the path field.
@@ -137,7 +137,7 @@ If both of these are unspecified, an empty file with no extension will be create
   "path": "foo/bar/Untitled0.ipynb",
   "type": "notebook",
   "created": "2013-09-01T09:15:14.12345+00:00",
-  "modified": "2013-10-02T11:29:27.616675+00:00"
+  "last_modified": "2013-10-02T11:29:27.616675+00:00"
 }
 ```
 
@@ -187,7 +187,7 @@ Example:
   "path": "foo/bar/MyNotebook.ipynb",
   "type": "notebook",
   "created": "2013-09-01T09:15:14.12345+00:00",
-  "modified": "2013-09-01T09:15:14.12345+00:00"
+  "last_modified": "2013-09-01T09:15:14.12345+00:00"
 }
 ```
 
@@ -229,7 +229,7 @@ Example:
   "path": "foo/bar/MyNotebook-Copy0.ipynb",
   "type": "notebook",
   "created": "2013-10-01T12:21:20.123456+00:00",
-  "modified": "2013-09-01T09:15:14.12345+00:00"
+  "last_modified": "2013-09-01T09:15:14.12345+00:00"
 }
 ```
 
@@ -252,7 +252,7 @@ of the directory's contents.
   "path": "foo/bar",
   "type": "directory",
   "created": "2013-10-01T12:21:20.123456+00:00",
-  "modified": "2013-10-02T11:29:27.616675+00:00",
+  "last_modified": "2013-10-02T11:29:27.616675+00:00",
   "format": "json",
   "content": [
   {
@@ -260,21 +260,21 @@ of the directory's contents.
     "path": "foo/bar/notebook1.ipynb",
     "type": "notebook",
     "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-10-02T11:29:27.616675+00:00"
+    "last_modified": "2013-10-02T11:29:27.616675+00:00"
   },
   {
     "name": "file.txt",
     "path": "foo/bar/file.txt",
     "type": "file",
     "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-10-02T11:29:27.616675+00:00"
+    "last_modified": "2013-10-02T11:29:27.616675+00:00"
   },
   {
     "name": "subdir",
     "path": "foo/bar/subdir",
     "type": "directory",
     "created": "2013-10-01T12:21:20.123456+00:00",
-    "modified": "2013-10-02T11:29:27.616675+00:00"
+    "last_modified": "2013-10-02T11:29:27.616675+00:00"
   },
   ]
 }
@@ -300,7 +300,7 @@ Returns the contents model for a given file path, including the full document co
   "type": "notebook",
   "format": "json",
   "writable": true,
-  "modified": "2013-10-02T11:29:27.616675+00:00",
+  "last_modified": "2013-10-02T11:29:27.616675+00:00",
   "created": "2013-10-01T12:21:20.123456+00:00",
   "content":{
     "metadata": {},
@@ -356,7 +356,7 @@ This request moves the file and returns the updated model without content.
   "path": "foo/bar/notebook1.ipynb",
   "type": "notebook",
   "created": "2013-10-01T12:21:20.123456+00:00",
-  "modified": "2013-10-04T14:32:19.123456+00:00"
+  "last_modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
 
@@ -411,7 +411,7 @@ Example:
   "path": "foo/bar/notebook1.ipynb",
   "type": "notebook",
   "created": "2013-10-01T12:21:20.123456+00:00",
-  "modified": "2013-10-04T14:32:19.123456+00:00"
+  "last_modified": "2013-10-04T14:32:19.123456+00:00"
 }
 ```
 <span id='delete-file'></span>

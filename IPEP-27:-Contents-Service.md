@@ -3,7 +3,7 @@
 <tr><td> Author </td><td> Min RK &lt;benjaminrk@gmail.com&gt;</td></tr>
 <tr><td> Created </td><td> May 30, 2014</td></tr>
 <tr><td> Updated </td><td> Nov 18, 2014</td></tr>
-<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5938">PR #5938</a>,
+<tr><td> Implementation </td><td> <a href="https://github.com/ipython/ipython/pull/5938">PR #5938</a>
 </td></tr>
 </table>
 
@@ -308,6 +308,25 @@ Returns the contents model for a given file path, including the full document co
     "nbformat_minor": 0,
     "cells": []
   }
+}
+```
+
+A client can optionally specify a `type` and/or `format` argument via URL parameter.
+When given, the Contents service shall return a model in the requested type and/or format.
+If the request cannot be satisfied, e.g. `type=text` is requested, but the file is binary,
+then the request shall fail with `400` and have a JSON response containing a 'reason' field,
+with the value 'bad format' or 'bad type', depending on what was requested.
+
+    GET /path/to/file.bin?format=text
+
+##### Response
+
+    status: 400 Bad Request
+
+```json
+{
+  "error": "File is not text",
+  "reason": "bad format"
 }
 ```
 

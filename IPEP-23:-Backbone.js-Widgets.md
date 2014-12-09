@@ -142,4 +142,4 @@ Custom message to be handled by the widget or any registered listeners.  The mes
 To prevent the kernel from flooding, the messages from the front-end to the back-end must be throttled.  Each model is individually throttled.  If three (by default) messages were sent and all are still processing, the front-end will not send anymore state messages.  Consequtive state messages will be buffered.  Once one of the three pending messages finished processing, the state buffer will be flushed.  The number of messages allowed can be configured using the "msg_throttle" property of the model.
 
 # Examples
-For detailed examples, please see `ipython\examples\widgets` in <a href="https://github.com/ipython/ipython/tree/master/examples/widgets">master</a>.
+For detailed examples, please see `ipython\examples\widgets` in <a href="https://github.com/ipython/ipython/tree/master/examples/Interactive%20Widgets">master</a>.

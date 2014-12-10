@@ -576,3 +576,17 @@ Discover and run IPython notebook cells as unit tests
 
 * [Github repository](https://github.com/zonca/pytest-ipynb)
 * [Release notes](http://zonca.github.io/2014/09/unit-tests-ipython-notebook.html)
+
+## `db.py` plugin
+
+ipython db.py shell extension
+
+[Homepage](https://github.com/dongweiming/idb)
+
+[Example Notebook](http://nbviewer.ipython.org/github/dongweiming/idb/blob/master/examples/db-example.ipynb)
+
+To install:
+
+```text
+%install_ext https://raw.githubusercontent.com/dongweiming/idb/master/idb.py
+```

@@ -62,7 +62,7 @@ All contents models have basic name, path, type, writable, created, and last_mod
    - `"notebook"`
 
 If the model does not contain `content`, the `content`, `format`, and `mimetype` keys will be `null`.
-`mimetype` is used to specify the mime-type of `file` model content.
+`mimetype` is used to specify the mime-type of `file` contents, so it is only non-null when `content` is present and `type` is `file`.
 
 If the model includes the file content (e.g. requesting a file with GET),
 then `content` will be defined, and its format described in `format`.

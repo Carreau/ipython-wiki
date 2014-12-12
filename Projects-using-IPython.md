@@ -155,6 +155,8 @@ Scientific computing projects
     model and the Python API for interacting with a Qiita database. Qiita relies on IPython for parallel compute 
     support.
 
+ -  [Woo](http://woodem.eu), environment for Discrete Element Modeling and multi-body dynamics uses IPython for interactive access to all internals of simulations (exposed from c++ via boost::python).
+
 In teaching
 -----------
 

@@ -63,6 +63,15 @@ pip install ipython-cql
 [Example Screenshot](https://www.dropbox.com/s/vkpjhob4gcbp8ho/ipython-cql.png?dl=0)
 
 
+## CSV Magic
+
+Tools for quickly importing and exporting data from CSV files.
+* [Homepage](https://github.com/FrankSalad/ipython-csvmagic)
+
+Installation:
+```
+%install_ext https://raw.githubusercontent.com/FrankSalad/ipython-csvmagic/master/csvtools.py
+```
 
 ## Django ORM magic
 

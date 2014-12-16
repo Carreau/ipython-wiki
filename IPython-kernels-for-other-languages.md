@@ -16,6 +16,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [IOCaml](https://github.com/andrewray/iocaml)
 1.   [IForth](https://github.com/jdfreder/iforth)
 1.   [IPerl](https://metacpan.org/release/Devel-IPerl)
+1.   [IPerl6](https://github.com/timo/iperl6kernel)
 1.   [IOctave](https://github.com/blink1073/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [ICSharp](https://github.com/zabirauf/icsharp)

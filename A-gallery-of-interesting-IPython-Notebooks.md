@@ -480,6 +480,9 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 * [Porque Charles Xavier debe cambiar a Cerebro por Python](http://nbviewer.ipython.org/github/mshopper/aurora/blob/master/Aurora.ipynb), a study in data and gender in the Marvel comics universe, by [Mai Giménez](http://twitter.com/adahopper) and [Angela Rivera](http://twitter.com/ghilbrae).
 
+* [Functional Geometry
+Functional Geometry: a deconstruction of the MC Escher woodcut Square Limit](http://nbviewer.ipython.org/github/shashi/ijulia-notebooks/blob/master/funcgeo/Functional%20Geometry.ipynb), an IJulia notebook by [Shashi Gowda](http://shashi.github.io/).
+
 ## Videos of IPython being used in the wild
 
 Of course the first thing you might try is searching for videos about IPython (1900 or so by last count on Youtube) but there are demonstrations of other applications using the power of IPython but are not mentioned is the descriptions. Below are a few such:

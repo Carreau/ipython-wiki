@@ -480,8 +480,7 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 * [Porque Charles Xavier debe cambiar a Cerebro por Python](http://nbviewer.ipython.org/github/mshopper/aurora/blob/master/Aurora.ipynb), a study in data and gender in the Marvel comics universe, by [Mai Giménez](http://twitter.com/adahopper) and [Angela Rivera](http://twitter.com/ghilbrae).
 
-* [Functional Geometry
-Functional Geometry: a deconstruction of the MC Escher woodcut Square Limit](http://nbviewer.ipython.org/github/shashi/ijulia-notebooks/blob/master/funcgeo/Functional%20Geometry.ipynb), an IJulia notebook by [Shashi Gowda](http://shashi.github.io/).
+* [Functional Geometry: a deconstruction of the MC Escher woodcut Square Limit](http://nbviewer.ipython.org/github/shashi/ijulia-notebooks/blob/master/funcgeo/Functional%20Geometry.ipynb), an IJulia notebook by [Shashi Gowda](http://shashi.github.io/).
 
 ## Videos of IPython being used in the wild
 

@@ -40,9 +40,7 @@ Kernel API
 | ```POST``` | /api/kernels | Start a new kernel with default or given name. |
 | ```DELETE``` | /api/kernels<br>/\<kernel_id\> | Shutdown the given kernel. |
 | ```POST``` | /api/kernels<br>/\<kernel_id\>/\<action\> | Perform action on kernel with given kernel id. Actions can be "interrupt" or "restart". |
-| ```WS``` | /api/kernels<br>/\<kernel_id\>/iopub | Websocket stream |
-| ```WS``` | /api/kernels<br>/\<kernel_id\>/shell | Websocket stream |
-| ```WS``` | /api/kernels<br>/\<kernel_id\>/stdin | Websocket stream |
+| ```WS``` | /api/kernels<br>/\<kernel_id\>/channels | Websocket stream |
 | ```GET``` | /api/kernelspecs | Return a spec model of all available kernels. |
 | ```GET``` | /api/kernelspecs<br>/\<kernel_name\> | Return a spec model of available kernels with given kernel name. |
 

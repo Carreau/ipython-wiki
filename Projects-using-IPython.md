@@ -258,8 +258,8 @@ Web frameworks and other systems
     IPython for its shell control.
 
 -   [WSPPDE](https://github.com/cwsoft/WSPPDE#readme) provides a
-    portable Python 2.7.8 development environment for MS Windows™
-    including IPython 2.2.0, Numpy, Scipy, Matplotlib and Pandas in a
+    portable Python 2.7.9 development environment for MS Windows™
+    including IPython 2.3.1, Numpy, Scipy, Matplotlib and Pandas in a
     one click package.
 
 -   [NotebookCloud](https://notebookcloud.appspot.com) is a free and

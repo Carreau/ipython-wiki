@@ -9,6 +9,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
 1.   [IAldor](https://github.com/mattpap/IAldor)
 1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb)
+1.   [LuaJIT/Torch](https://github.com/facebook/iTorch)
 1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
 1.   [IRKernel](https://github.com/takluyver/IRkernel) (for the R language)

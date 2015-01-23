@@ -64,7 +64,12 @@ Run a container using the new image.   We mount the entire `ipython` source tree
 # change to the root of the git clone
 $ cd ipython
 $ docker run -it --rm -p 8888:8888 --workdir /srv/ipython --name ipython-dev -v `pwd`:/srv/ipython ipython /bin/bash
+```
 
+To list the running container from another shell on the host:
+
+```
+$ $(boot2docker shellinit)
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
 f6065f206519        ipython             "/bin/bash"         1 minutes ago       Up 1 minutes        0.0.0.0:8888->8888/tcp   ipython-dev    

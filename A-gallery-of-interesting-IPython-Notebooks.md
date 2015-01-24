@@ -111,6 +111,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [AeroPython: Aerodynamics-Hydrodynamics with Python](https://github.com/barbagroup/AeroPython), a complete course taught at George Washington University by [Lorena Barba](http://lorenabarba.com).
 
+* [Practical Numerical Methods with Python](https://github.com/numerical-mooc/numerical-mooc), a collection of learning modules (each consisting of several IPython Notebooks) for a course in numerical differential equations  taught  at George Washington University by [Lorena Barba](http://lorenabarba.com). Also offered as a "massive, open online course" (MOOC) on the [GW SEAS Open edX](http://openedx.seas.gwu.edu/courses/GW/MAE6286/2014_fall/about) platform.
+
 * [pyuvvis: tools for explorative spectroscopy](https://github.com/hugadams/pyuvvis), spectroscopy library built for integration ipython notebooks, matplotlib and pandas.
 
 * [HyperPython: a practical introduction to the solution of hyperbolic conservation laws](http://nbviewer.ipython.org/github/ketch/HyperPython/tree/master/), a course by [David Ketcheson](http://davidketcheson.info).

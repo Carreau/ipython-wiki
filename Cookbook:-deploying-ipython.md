@@ -1,3 +1,13 @@
+## Docker Images for IPython
+
+IPython itself has a [base image on Docker hub, called ipython/ipython](https://registry.hub.docker.com/u/ipython/ipython/):
+
+```
+docker pull ipython/ipython
+```
+
+As well as [derivative images](https://github.com/ipython/docker-notebook) that contain the scipystack, just a notebook server, and the notebook server+scipystack.
+
 ## Deploying IPython notebook
 
 [Chef Cookbook for the IPython Notebook](https://github.com/rgbkrk/ipynb-cookbook) - also has simple setup on Vagrant to deploy an IPython notebook via Vagrant.

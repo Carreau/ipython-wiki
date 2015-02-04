@@ -20,7 +20,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [IPerl6](https://github.com/timo/iperl6kernel)
 1.   [IOctave](https://github.com/calysto/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
-1.   [IMatlab)(https://github.com/calysto/matlab_kernel)
+1.   [IMatlab](https://github.com/calysto/matlab_kernel)
 1.   [ICSharp](https://github.com/zabirauf/icsharp)
 1.   [Bash](https://github.com/takluyver/bash_kernel)
 1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)

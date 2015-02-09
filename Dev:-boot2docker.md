@@ -58,7 +58,7 @@ $ docker build --rm -t ipython .
 
 ## Run Docker Container
 
-Run a container using the new image.   We mount the entire `ipython` source tree on the host into the container at `/srv/ipython`.  As a result, any changes we make to the source on the host are immediately reflected in the container.
+Run a container using the new image.   We mount the entire `ipython` source tree on the host into the container at `/srv/ipython` to enable changes we make to the source on the host immediately reflected in the container.
 
 ```
 # change to the root of the git clone
@@ -75,10 +75,24 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 f6065f206519        ipython             "/bin/bash"         1 minutes ago       Up 1 minutes        0.0.0.0:8888->8888/tcp   ipython-dev    
 ```
 
+## Install IPython in Editable Mode
+
+Once in the container, you'll need to uninstall the `ipython` package and re-install in editable mode to enable your dev changes to be reflected in your environment.
+
+```
+container $ pip uninstall ipython
+
+# pip install ipython in editable mode 
+container $ cd /srv
+container $ ls
+ipython
+container $ pip install -e ipython
+```
+
 ## Run Notebook Server
 
 ```
-$ ipython notebook --no-browser --ip=*
+container $ ipython notebook --no-browser --ip=*
 ```
 
 ## Visit Notebook Server

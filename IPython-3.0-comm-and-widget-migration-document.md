@@ -8,7 +8,7 @@ Our solution was to add support for loading widget views and models using requir
 ### Symmetry
 In IPython 3.0, widgets can be instantiated from the front-end ([#6664](https://github.com/ipython/ipython/pull/6664)).  On top of this, a widget persistence API was added ([#7163](https://github.com/ipython/ipython/pull/7163), [#7227](https://github.com/ipython/ipython/pull/7227)).  With the widget persistence API, you can persist your widget instances using Javascript.  This makes it easy to persist your widgets to your notebook document (with a small amount of custom JS).  By default, the widgets are persisted to your web browsers local storage which makes them reappear when your refresh the page.
 
-### Smaller changes
+### Smaller Changes
 - Latex math is supported in widget `description`s ([#5937](https://github.com/ipython/ipython/pull/5937)).
 - Widgets can be display more than once within a single container widget ([#5963](https://github.com/ipython/ipython/pull/5963), [#6990](https://github.com/ipython/ipython/pull/6990)).
 - `FloatRangeSlider` and `IntRangeSlider` were added ([#6050](https://github.com/ipython/ipython/pull/6050)).
@@ -25,7 +25,7 @@ In IPython 3.0, widgets can be instantiated from the front-end ([#6664](https://
 - A class was added to help manage children views ([#6990](https://github.com/ipython/ipython/pull/6990)).  
 - A warning was added that shows on widget import because it's expected that the API will change again by IPython 4.0.  This warning can be supressed ([#7107](https://github.com/ipython/ipython/pull/7107), [#7200](https://github.com/ipython/ipython/pull/7200), [#7201](https://github.com/ipython/ipython/pull/7201), [#7204](https://github.com/ipython/ipython/pull/7204)).
 
-## Comm and widget PR index.
+## Comm and Widget PR Index
 Here is a chronological list of PRs affecting the widget and comm frameworks for IPython 3.0.  Note that later PRs may revert changes made in earlier PRs:  
 - Add placeholder attribute to text widgets [#5652](https://github.com/ipython/ipython/pull/5652)  
 - Add latex support in widget labels, [#5937](https://github.com/ipython/ipython/pull/5937)  

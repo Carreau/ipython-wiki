@@ -23,6 +23,7 @@ This wiki contains:
 * [[Research at UC Berkeley using IPython]]
 * [[Frequently asked questions]]
 * [Supplementary installation information](wiki/Install:-Index)
+* [[IPython 3.0 comm and widget migration document]]
 
 # Editing the wiki
 

@@ -4,7 +4,7 @@ publication, please use our [ready-made citation
 entry](http://ipython.org/citing.html).
 
 
-List of availlable kernel
+List of available kernel
 -------------------------
 
 The list has been moved [here](IPython kernels for other languages).

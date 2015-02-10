@@ -1,0 +1,88 @@
+## Overview
+
+### Asynchronous
+In the IPython 2.x series the only way to register custom widget views and models was to use the registry in the widget manager.  Unfortunately, using this method made packing custom widgets difficult.  The widget maintainer had to either use the rich display framework to push the widget's Javascript to the notebook or instruct the users to install the Javascript by hand in a custom profile.  With the first method, the maintainer would have to be careful about when the Javascript was pushed to the font-end.  If the Javascript was pushed on Python widget `import`, the widgets wouldn't work after page refresh.  This is because refreshing the page does not restart the kernel, and the Python `import` statement only runs once in a given kernel instance (unless you reload the Python modules, which isn't straight forward).  This meant the maintainer would have to have a separate `push_js()` method that the user would have to call after importing the widget's Python code.
+
+Our solution was to add support for loading widget views and models using require.js paths.  Thus the comm and widget frameworks now support lazy loading.  To do so, everything had to be converted to asynchronous code.  HTML5 promises are used to accomplish that ([#6818](https://github.com/ipython/ipython/pull/6818), [#6914](https://github.com/ipython/ipython/pull/6914)).  
+
+### Symmetry
+In IPython 3.0, widgets can be instantiated from the front-end ([#6664](https://github.com/ipython/ipython/pull/6664)).  On top of this, a widget persistence API was added ([#7163](https://github.com/ipython/ipython/pull/7163), [#7227](https://github.com/ipython/ipython/pull/7227)).  With the widget persistence API, you can persist your widget instances using Javascript.  This makes it easy to persist your widgets to your notebook document (with a small amount of custom JS).  By default, the widgets are persisted to your web browsers local storage which makes them reappear when your refresh the page.
+
+### Smaller changes
+- Latex math is supported in widget `description`s ([#5937](https://github.com/ipython/ipython/pull/5937)).
+- Widgets can be display more than once within a single container widget ([#5963](https://github.com/ipython/ipython/pull/5963), [#6990](https://github.com/ipython/ipython/pull/6990)).
+- `FloatRangeSlider` and `IntRangeSlider` were added ([#6050](https://github.com/ipython/ipython/pull/6050)).
+- "Widget" was removed from the ends of all of the widget class names ([#6125](https://github.com/ipython/ipython/pull/6125)).
+- `ContainerWidget` was renamed to `Box` ([#6125](https://github.com/ipython/ipython/pull/6125)).
+- `HBox` and `VBox` widgets were added ([#6125](https://github.com/ipython/ipython/pull/6125)).
+- `add\_class` and `remove\_class` were removed in favor of a `_dom_classes` list ([#6235](https://github.com/ipython/ipython/pull/6235)).
+- `get\_css` and `set\_css` were removed in favor of explicit traits for widget styling ([#6235](https://github.com/ipython/ipython/pull/6235)).
+- `jslink` and `jsdlink` were added ([#6454](https://github.com/ipython/ipython/pull/6454), [#7468](https://github.com/ipython/ipython/pull/7468)).
+- An `Output` widget was added, which allows you to `print` and `display` within widgets ([#6670](https://github.com/ipython/ipython/pull/6670)).
+- `PopupWidget` was removed ([#7341](https://github.com/ipython/ipython/pull/7341)).
+- A visual cue was added for widgets with 'dead' comms ([#7227](https://github.com/ipython/ipython/pull/7227)).
+- A `SelectMultiple` widget was added (a `Select` widget that allows multiple things to be selected at once) ([#6890](https://github.com/ipython/ipython/pull/6890)).
+- A class was added to help manage children views ([#6990](https://github.com/ipython/ipython/pull/6990)).  
+- A warning was added that shows on widget import because it's expected that the API will change again by IPython 4.0.  This warning can be supressed ([#7107](https://github.com/ipython/ipython/pull/7107), [#7200](https://github.com/ipython/ipython/pull/7200), [#7201](https://github.com/ipython/ipython/pull/7201), [#7204](https://github.com/ipython/ipython/pull/7204)).
+
+## Comm and widget PR index.
+Here is a chronological list of PRs affecting the widget and comm frameworks for IPython 3.0.  Note that later PRs may revert changes made in earlier PRs:  
+- Add placeholder attribute to text widgets [#5652](https://github.com/ipython/ipython/pull/5652)  
+- Add latex support in widget labels, [#5937](https://github.com/ipython/ipython/pull/5937)  
+- Allow widgets to display more than once within container widgets. [#5963](https://github.com/ipython/ipython/pull/5963)  
+- use require.js, [#5980](https://github.com/ipython/ipython/pull/5980)  
+- Range widgets [#6050](https://github.com/ipython/ipython/pull/6050)  
+- Interact on_demand option [#6051](https://github.com/ipython/ipython/pull/6051)  
+- Allow text input on slider widgets [#6106](https://github.com/ipython/ipython/pull/6106)  
+- support binary buffers in comm messages [#6110](https://github.com/ipython/ipython/pull/6110)  
+- Embrace the flexible box model in the widgets [#6125](https://github.com/ipython/ipython/pull/6125)  
+- Widget trait serialization [#6128](https://github.com/ipython/ipython/pull/6128)  
+- Make Container widgets take children as the first positional argument [#6153](https://github.com/ipython/ipython/pull/6153)  
+- once-displayed [#6168](https://github.com/ipython/ipython/pull/6168)  
+- Validate slider value, when limits change [#6171](https://github.com/ipython/ipython/pull/6171)  
+- Unregistering comms in Comm Manager [#6216](https://github.com/ipython/ipython/pull/6216)  
+- Add EventfulList and EventfulDict trait types. [#6228](https://github.com/ipython/ipython/pull/6228)  
+- Remove add/remove\_class and set/get\_css. [#6235](https://github.com/ipython/ipython/pull/6235)  
+- avoid unregistering widget model twice [#6250](https://github.com/ipython/ipython/pull/6250)  
+- Widget property lock should compare json states, not python states [#6332](https://github.com/ipython/ipython/pull/6332)  
+- Strip the IPY\_MODEL\_ prefix from widget IDs before referencing them. [#6377](https://github.com/ipython/ipython/pull/6377)  
+- "event" is not defined error in Firefox [#6437](https://github.com/ipython/ipython/pull/6437)  
+- Javascript link [#6454](https://github.com/ipython/ipython/pull/6454)  
+- Bulk update of widget attributes [#6463](https://github.com/ipython/ipython/pull/6463)  
+- Creating a widget registry on the Python side. [#6493](https://github.com/ipython/ipython/pull/6493)  
+- Allow widget views to be loaded from require modules [#6494](https://github.com/ipython/ipython/pull/6494)  
+- Fix Issue #6530 [#6532](https://github.com/ipython/ipython/pull/6532)  
+- Make comm manager (mostly) independent of InteractiveShell [#6540](https://github.com/ipython/ipython/pull/6540)  
+- Add semantic classes to top-level containers for single widgets [#6609](https://github.com/ipython/ipython/pull/6609)  
+- Selection Widgets: forcing 'value' to be in 'values' [#6617](https://github.com/ipython/ipython/pull/6617)  
+- Allow widgets to be constructed from Javascript [#6664](https://github.com/ipython/ipython/pull/6664)  
+- Output widget [#6670](https://github.com/ipython/ipython/pull/6670)  
+- Minor change in widgets.less to fix alignment issue [#6681](https://github.com/ipython/ipython/pull/6681)  
+- Make Selection widgets respect values order. [#6747](https://github.com/ipython/ipython/pull/6747)  
+- Widget persistence API [#6789](https://github.com/ipython/ipython/pull/6789)  
+- Add promises to the widget framework. [#6818](https://github.com/ipython/ipython/pull/6818)  
+- SelectMultiple widget [#6890](https://github.com/ipython/ipython/pull/6890)  
+- Tooltip on toggle button [#6923](https://github.com/ipython/ipython/pull/6923)  
+- Allow empty text box \*while typing\* for numeric widgets [#6943](https://github.com/ipython/ipython/pull/6943)  
+- Ignore failure of widget MathJax typesetting [#6948](https://github.com/ipython/ipython/pull/6948)  
+- Refactor the do_diff and manual child view lists into a separate ViewList object [#6990](https://github.com/ipython/ipython/pull/6990)  
+- Add warning to widget namespace import. [#7107](https://github.com/ipython/ipython/pull/7107)  
+- lazy load widgets [#7120](https://github.com/ipython/ipython/pull/7120)  
+- Fix padding of widgets. [#7139](https://github.com/ipython/ipython/pull/7139)  
+- Persist widgets across page refresh [#7163](https://github.com/ipython/ipython/pull/7163)  
+- Make the widget experimental error a real python warning [#7200](https://github.com/ipython/ipython/pull/7200)  
+- Make the widget error message shorter and more understandable. [#7201](https://github.com/ipython/ipython/pull/7201)  
+- Make the widget warning brief and easy to filter [#7204](https://github.com/ipython/ipython/pull/7204)  
+- Add visual cue for widgets with dead comms [#7227](https://github.com/ipython/ipython/pull/7227)  
+- Widget values as positional arguments [#7260](https://github.com/ipython/ipython/pull/7260)  
+- Remove the popup widget [#7341](https://github.com/ipython/ipython/pull/7341)  
+- document and validate link, dlink [#7468](https://github.com/ipython/ipython/pull/7468)  
+- Document interact 5637 [#7525](https://github.com/ipython/ipython/pull/7525)  
+- Update some broken examples of using widgets [#7547](https://github.com/ipython/ipython/pull/7547)  
+- Use Output widget with Interact [#7554](https://github.com/ipython/ipython/pull/7554)  
+- don't send empty execute_result messages [#7560](https://github.com/ipython/ipython/pull/7560)  
+- Validation on the python side [#7602](https://github.com/ipython/ipython/pull/7602)  
+- only show prompt overlay if there's a prompt [#7661](https://github.com/ipython/ipython/pull/7661)  
+- Allow predictate to be used for comparison in selection widgets [#7674](https://github.com/ipython/ipython/pull/7674)  
+- Fix widget view persistence. [#7680](https://github.com/ipython/ipython/pull/7680)  
+- Revert "Use Output widget with Interact" [#7703](https://github.com/ipython/ipython/pull/7703)  

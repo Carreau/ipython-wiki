@@ -26,6 +26,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
 1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)
 1.   [Redis Kernel](https://github.com/supercoderz/redis_kernel)
+1.   [jove, a kernel for io.js](https://www.npmjs.com/package/jove)
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

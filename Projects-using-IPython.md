@@ -4,10 +4,10 @@ publication, please use our [ready-made citation
 entry](http://ipython.org/citing.html).
 
 
-List of available kernel
+List of available kernels
 -------------------------
 
-The list has been moved [here](IPython kernels for other languages).
+The list of kernels for other languages has been moved [here](IPython kernels for other languages).
 
 Scientific computing projects
 -----------------------------

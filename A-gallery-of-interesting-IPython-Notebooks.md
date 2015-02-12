@@ -375,6 +375,8 @@ Note that in the 'collections' section above there are also pandas-related links
 
 ## Notebooks in languages other than Python
 
+These are notebooks that use [one of the IPython kernels for other languages](IPython kernels for other languages):
+
 ### Julia
 
 The IPython protocols to communicate between kernels and clients are language agnostic, and other programming language communities have started to build support for this protocol in their language. The Julia team has created [IJulia](https://github.com/JuliaLang/IJulia.jl), and these are some Julia notebooks:
@@ -397,6 +399,10 @@ There exists a Haskell kernel for IPython in the [IHaskell project](https://gith
 Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.
 
 * [IRuby Demo Notebook](http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb)
+
+### Perl
+
+* An example showcasing full use of the [display protocol](http://nbviewer.ipython.org/github/zmughal/zmughal-iperl-notebooks/blob/master/IPerl-demos/20150209_IPerl_display_demo.ipynb) with the IPerl kernel.
 
 ## Miscellaneous topics about doing various things *with* the Notebook itself
 

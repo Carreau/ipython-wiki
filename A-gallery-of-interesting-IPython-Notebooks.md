@@ -32,6 +32,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Julia](#julia)
   * [Haskell](#haskell)
   * [Ruby](#ruby)
+  * [Perl](#perl)
 1. [Miscellaneous topics about doing various things *with* the Notebook itself](#miscellaneous-topics-about-doing-various-things-with-the-notebook-itself)
 1. [Reproducible academic publications](#reproducible-academic-publications)
 1. [Other publications using the Notebook](#other-publications-and-conference-abstracts-that-explicitly-use-the-notebook)

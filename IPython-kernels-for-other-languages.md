@@ -40,4 +40,4 @@ Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:acti
 [IHaskell creator blog
 post](http://andrew.gibiansky.com/blog/ipython/ipython-kernels/)
 
-[Test the kernel agains specification (work in progress)](https://github.com/ipython/ipython/pull/7646) 
+[Test the kernel against specification (work in progress)](https://github.com/ipython/ipython/pull/7646) 

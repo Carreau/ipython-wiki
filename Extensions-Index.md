@@ -599,3 +599,9 @@ To install:
 ```text
 %install_ext https://raw.githubusercontent.com/dongweiming/idb/master/idb.py
 ```
+
+## TikZ
+
+IPython magics for generating figures with TikZ. You can select the output format as svg, png or jpg, define the image size, specify a scale factor, load TikZ packages, and save to external files.
+
+* [Homepage](https://github.com/mkrphys/ipython-tikzmagic)

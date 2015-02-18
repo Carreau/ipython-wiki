@@ -31,6 +31,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [Calysto Scheme](https://github.com/Calysto/calysto/tree/master/calysto/language/scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto/tree/master/calysto/language/processing)
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel)
+1.   [Mochi Kernel](https://github.com/Carreau/mochi-kernel) 
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

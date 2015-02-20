@@ -263,6 +263,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
 
+* [Introduction to Linear Regression using Python](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) by [Kevin Markham](https://github.com/justmarkham)
 
 ### Physics, Chemistry and Biology
 

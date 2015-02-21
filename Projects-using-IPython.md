@@ -138,24 +138,32 @@ Scientific computing projects
     several of its backend languages and uses code from IPython's notebook
     viewer for the backend of its [sharing service](http://sharing.beakernotebook.com/gist/anonymous/11152408).
 
--   [QtIPy](http://github.com/mfitzp/qtipy) is a GUI utility to enable automated running of IPython
-    notebooks in response to file or folder changes and timers. Use it to generate automated reports
-    and analysis for experimental data sets, output together with the code that made them.
+-   [QtIPy](http://github.com/mfitzp/qtipy) is a GUI utility to enable
+    automated running of IPython notebooks in response to file or folder
+    changes and timers. Use it to generate automated reports and analysis
+    for experimental data sets, output together with the code that made them.
 
--   The [Spyder](https://code.google.com/p/spyderlib/) integrates the IPython Qt console, and IPdb for debugging. It also handles the connection to remote kernels.
+-   The [Spyder](https://code.google.com/p/spyderlib/) integrates the
+    IPython Qt console, and IPdb for debugging. It also handles the connection
+    to remote kernels.
 
--   [scikit-bio](http://scikit-bio.org) is an open-source, BSD-licensed, python package providing data 
-    structures, algorithms, and educational resources for bioinformatics. 
+-   [scikit-bio](http://scikit-bio.org) is an open-source, BSD-licensed,
+    python package providing data structures, algorithms, and educational
+    resources for bioinformatics. 
 
--   [EMPeror](http://emperor.colorado.edu) is a WebGL tool for visualizing high-dimensional spaces typically 
-    through techniques like principal coordinates analysis. 
+-   [EMPeror](http://emperor.colorado.edu) is a WebGL tool for visualizing
+    high-dimensional spaces typically through techniques like principal
+    coordinates analysis. 
 
--   [qiita](https://github.com/biocore/qiita/) (canonically pronounced cheetah) the QIIME databasing effort to
-    enable rapid analysis of microbial ecology datasets. The Qiita repository is responsible for defining the data
-    model and the Python API for interacting with a Qiita database. Qiita relies on IPython for parallel compute 
-    support.
+-   [qiita](https://github.com/biocore/qiita/) (canonically pronounced cheetah)
+    the QIIME databasing effort to enable rapid analysis of microbial ecology
+    datasets. The Qiita repository is responsible for defining the data
+    model and the Python API for interacting with a Qiita database. Qiita
+    relies on IPython for parallel compute support.
 
--   [WooDEM](http://woodem.eu), environment for Discrete Element Modeling and multi-body dynamic,s uses IPython for interactive access to all internals of simulations (exposed from c++ via boost::python).
+-   [WooDEM](http://woodem.eu), environment for Discrete Element Modeling
+    and multi-body dynamic,s uses IPython for interactive access to all
+    internals of simulations (exposed from c++ via boost::python).
 
 -   [neuropy](http://neuropy.github.io) is a command-line based Python program
     for interactive analysis of sorted neuronal spike data, stimulus data, and

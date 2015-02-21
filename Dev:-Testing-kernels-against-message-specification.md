@@ -8,6 +8,10 @@ The kerneltest tool is part of IPython.testing and is also included in the scrip
 
     kerneltest python test_script.json
 
+You can also pass in an optional message spec version to the command. At the moment only the version 5 is supported, but as newer versions are released this can be used to test the kernel against a specific version of the kernel.
+
+    kerneltest python test_script.json 5
+
 The kernel to be tested needs to be installed and the kernelspec available in the user IPython directory. The tool will instantiate the kernel and send the commands over ZMQ. For each command executed on the kernel, the tool will validate the reply to ensure that it matches the message specification. In some cases the output is also checked, but the reply is always returned and printed out on the console. This can be used to validate that apart from meeting the message spec the kernel also produced the correct output.
 
 # The test script file

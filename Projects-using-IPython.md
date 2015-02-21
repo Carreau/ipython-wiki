@@ -157,6 +157,10 @@ Scientific computing projects
 
 -   [WooDEM](http://woodem.eu), environment for Discrete Element Modeling and multi-body dynamic,s uses IPython for interactive access to all internals of simulations (exposed from c++ via boost::python).
 
+-   [neuropy](http://neuropy.github.io) is a command-line based Python program
+    for interactive analysis of sorted neuronal spike data, stimulus data, and
+    LFP waveforms. neuropy embeds IPython within its main Qt window.
+
 In teaching
 -----------
 

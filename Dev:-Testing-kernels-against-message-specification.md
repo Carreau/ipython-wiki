@@ -2,7 +2,7 @@ IPython makes it very easy to create wrapper kernels using its kernel framework.
 
 The key problem for any kernel implemented by these methods is to ensure that it meets the message specification. The kerneltest command is a means to test the installed kernel against the message spec and validate the results.
 
-# kerneltest.py
+# The kerneltest tool
 
 The kerneltest tool is part of IPython.testing and is also included in the scripts similar to iptest. This takes 2 parameters - the name of the kernel to test and the test script file. The test script file should be in json format as described in the next section.
 

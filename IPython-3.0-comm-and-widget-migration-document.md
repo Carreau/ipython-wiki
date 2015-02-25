@@ -7,6 +7,36 @@
 5. `add_class` and `remove_class` were removed.  More often than not a new attribute exists on the widget that allows you to achieve the same explicitly.  i.e. the `Button` widget now has a `button_style` attribute which you can set to 'primary', 'success', 'info', 'warning', 'danger', or '' instead of using `add_class` to add the bootstrap class.  `VBox` and `HBox` classes (flexible `Box` subclasses) were added that allow you to avoid using `add_class` and `remove_class` to make flexible box model layouts.  As a last resort, if you can't find a built in attribute for the class you want to use, a new `_dom_classes` list trait was added, which combines `add_class` and `remove_class` into one stateful list.
 6. `set_css` and `get_css` were removed in favor of explicit style attributes - `visible`, `width`, `height`, `padding`, `margin`, `color`, `background_color`, `border_color`, `border_width`, `border_radius`, `border_style`, `font_style`, `font_weight`, `font_size`, and `font_family` are a few.  If you can't find a trait to see the css attribute you need, you can, in order of preference, (A) subclass to create your own custom widget, (B) use CSS and the `_dom_classes` trait to set `_dom_classes`, or (C) use the `_css` dictionary to set CSS styling like `set_css` and `get_css`.
 
+## Upgrading Custom Widgets
+### Javascript
+1. If you are distributing your widget and decide to use the deffered loading technique (preffered), you can remove all references to the WidgetManager and the register model/view calls (see the Python section below for more information).
+2. In 2.0 require.js was used incorrectly, that has been fixed and now loading works more like Python's import.  Requiring `widgets/js/widget` doesn't import the `WidgetManager` class, instead it imports a dictionary that exposes the classes within that module:
+```javascript
+{
+    'WidgetModel': WidgetModel,
+    'WidgetView': WidgetView,
+    'DOMWidgetView': DOMWidgetView,
+    'ViewList': ViewList,
+}
+```
+If you decide to continue to use the widget registry (by registering your widgets with the manager), you can import a dictionary with a handle to the WidgetManager class by requiring `widgets/js/manager`.  Doing so will import:
+```javascript
+{'WidgetManager': WidgetManager}
+```
+3. Don't rely on the `IPython` namespace for anything.  To inherit from the DOMWidgetView, WidgetView, or WidgetModel, require `widgets/js/widget` as `widget`.  If you were inheriting from DOMWidgetView, and the code looked like this:
+```javascript
+IPython.DOMWidgetView.extend({...})
+```
+It would become this:
+```javascript
+widget.DOMWidgetView.extend({...})
+```
+4. Custom models are encouragged.  When possible, it's recommended to move your code into a custom model, so actions are performed 1 time, instead of N times where N is the number of displayed views.
+
+
+### Python
+Generally, custom widget Python code can remain unchanged.  If you distribute your custom widget, you may be using `display` and `Javascript` to publish the widget's Javascript to the front-end.  That is no longer the recommended way of distributing widget Javascript.  Instead have the user install the Javascript to his/her nbextension directory or their profile's static directory.  Then use the new `_view_module` and `_model_module` traitlets in combination with `_view_name` and `_model_name` to instruct require.js on how to load the widget's Javascript.  The Javascript is then loaded when the widget is used for the first time.
+
 ## Details
 
 ### Asynchronous

@@ -9,7 +9,7 @@
 
 ## Upgrading Custom Widgets
 ### Javascript
-1. If you are distributing your widget and decide to use the deffered loading technique (preffered), you can remove all references to the WidgetManager and the register model/view calls (see the Python section below for more information).
+1. If you are distributing your widget and decide to use the deferred loading technique (preferred), you can remove all references to the WidgetManager and the register model/view calls (see the Python section below for more information).
 2. In 2.0 require.js was used incorrectly, that has been fixed and now loading works more like Python's import.  Requiring `widgets/js/widget` doesn't import the `WidgetManager` class, instead it imports a dictionary that exposes the classes within that module:
 ```javascript
 {
@@ -31,7 +31,7 @@ It would become this:
 ```javascript
 widget.DOMWidgetView.extend({...})
 ```
-4. Custom models are encouragged.  When possible, it's recommended to move your code into a custom model, so actions are performed 1 time, instead of N times where N is the number of displayed views.
+4. Custom models are encouraged.  When possible, it's recommended to move your code into a custom model, so actions are performed 1 time, instead of N times where N is the number of displayed views.
 
 
 ### Python

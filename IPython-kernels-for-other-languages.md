@@ -37,6 +37,17 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 
+## Jove
+
+Jove seem to be an alternative Jupyter/IPython compatible implementation in Java.
+
+See the github organisation:
+
+    https://github.com/jove-sh
+
+It seem to have a spark and Scala Kernel
+
+
 ## Creating new IPython kernels
 
 [Making kernels for IPython](http://ipython.org/ipython-doc/dev/development/kernels.html) in the documentation.

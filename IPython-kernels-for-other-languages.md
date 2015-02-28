@@ -33,6 +33,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel)
 1.   [Mochi Kernel](https://github.com/Carreau/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
+1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)
 
 Some toy kernels are also available on [PyPi](https://pypi.python.org/pypi?:action=browse&c=586).
 

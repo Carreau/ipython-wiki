@@ -83,6 +83,8 @@ This will require that you have current wheel, Python 3.4 and Python 2.7, and an
 
 # 6. Publish updated docs
 
+Make sure you have all the dependencies, otherwise parts of the API documentation can't be built. Sphinx should warn you if imports fail.
+
 For this we are now using GitHub pages:
 
     cd docs

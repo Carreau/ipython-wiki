@@ -232,6 +232,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [An exploratory statistical analysis of the 2014 World Cup Final](http://nbviewer.ipython.org/github/rjtavares/football-crunching/blob/master/notebooks/an%20exploratory%20data%20analysis%20of%20the%20world%20cup%20final.ipynb), by [Ricardo Tavares](https://github.com/rjtavares).  Part of a [notebook collection on football (aka soccer) analysis](http://nbviewer.ipython.org/github/rjtavares/football-crunching/tree/master/).
 
+* [San Francisco's Drug Geography](http://nbviewer.ipython.org/github/lmart999/GIS/blob/master/SF_GIS_Crime.ipynb), a GIS analysis of public crime data in SF, by [Lance Martin](https://github.com/lmart999).
 
 ### Psychology and Neuroscience
 

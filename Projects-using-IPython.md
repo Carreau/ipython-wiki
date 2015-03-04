@@ -271,7 +271,7 @@ Web frameworks and other systems
 
 -   [WSPPDE](https://github.com/cwsoft/WSPPDE#readme) provides a
     portable Python 2.7.9 development environment for MS Windows™
-    including IPython 2.4.0, Numpy, Scipy, Matplotlib and Pandas in a
+    including IPython 3.0.0, Numpy, Scipy, Matplotlib and Pandas in a
     one click package.
 
 -   [NotebookCloud](https://notebookcloud.appspot.com) is a free and

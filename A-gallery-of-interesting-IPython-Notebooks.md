@@ -94,6 +94,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Python Notebooks for StatLearning Exercises](https://github.com/sujitpal/statlearning-notebooks), Python implementations of the R labs for the [StatLearning: Statistical Learning](https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about) online course from Stanford University taught by Profs Trevor Hastie and Rob Tibshirani.
 
+* [Applied Predictive Modeling with Python](http://nbviewer.ipython.org/github/leig/Applied-Predictive-Modeling-with-Python/tree/master/notebooks/), Python implementations of the examples (originally written in R) from a famous introductory book, [Applied Predictive Modeling](http://appliedpredictivemodeling.com), by Max Kuhn and Kjell Johnson.
+
 * A collection of [four courses in foundations of data science, algorithms and databases](http://nbviewer.ipython.org/github/ledeprogram/courses/tree/master) from multiple faculty at [Columbia University's Lede Program](http://www.journalism.columbia.edu/page/1058-the-lede-program-an-introduction-to-data-practices/906). 
 
 * [SciPy and OpenCV as an interactive computing environment for computer vision](http://nbviewer.ipython.org/github/thsant/scipy4cv) by [Thiago Santos](http://ttsantos.net), a tutorial presented at [SIBGRAPI 2014](http://emap.fgv.br/sibgrapi-2014/tutorials.html).

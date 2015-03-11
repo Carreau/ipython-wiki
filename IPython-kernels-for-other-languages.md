@@ -1,4 +1,4 @@
-These are the kernels we know about which are compatible with IPython/Jupyter:
+## IPython/Jupyter kernels:
 
 1.   [IJulia](http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb)
 1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/demo/IHaskell.ipynb)
@@ -8,7 +8,7 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [IScala](https://github.com/mattpap/IScala)
 1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
 1.   [IAldor](https://github.com/mattpap/IAldor)
-1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb)
+1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb) - kernels implemented in Mono, including Java, IronPython, Boo, Logo, BASIC, and many others
 1.   [LuaJIT/Torch](https://github.com/facebook/iTorch)
 1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
@@ -34,19 +34,15 @@ These are the kernels we know about which are compatible with IPython/Jupyter:
 1.   [Mochi Kernel](https://github.com/Carreau/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
 1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)
+1.   [Skulpt Python Kernel](https://github.com/Calysto/calysto/tree/master/calysto/language/skulpt)
+1.   [MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)
+1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)
 
-Some toy kernels are also available on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
+Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 
-## Jove
+## Additional Related Projects
 
-Jove seem to be an alternative Jupyter/IPython compatible implementation in Java.
-
-See the github organisation:
-
-    https://github.com/jove-sh
-
-It seem to have a spark and Scala Kernel
-
+1.   [Jove](https://github.com/jove-sh) - notebook interface in Java; provides Spark and Scala kernels
 
 ## Creating new IPython kernels
 

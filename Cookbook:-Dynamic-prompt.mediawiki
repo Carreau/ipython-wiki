@@ -11,10 +11,11 @@ First, we change the default ipython_config.py file, adding these lines:
  c.PromptManager.in2_template = ".\D.>>> "
  c.PromptManager.out_template = "[\#]<<< "
 
-Next, we prepare our variable, ensuring it has a <tt>__str__()</tt> method for the prompt formatter to call:
+Next, we prepare our variable, ensuring it has a `&#95;&#95;str__()` method for the prompt formatter to call:
 
-This code goes in a startup file - create a file such as foobar_prompt.py in profile_default/startup/
+This code goes in a startup file. Create a file such as `foobar_prompt.py` in `profile_default/startup/`
 
+```python
  class FoobarPrompt(object):
      var = "foo"
      def __str__(self):
@@ -25,9 +26,10 @@ This code goes in a startup file - create a file such as foobar_prompt.py in pro
  _foobar = FoobarPrompt()
  
  del FoobarPrompt
+```
 
 Expected output:
-<pre>
+```
 $ ipython 
 
 [foo]
@@ -42,16 +44,18 @@ $ ipython
 
 [BAR]
 [4]>>> 
-</pre>
+```
 
-You can also automatically set the state from the <tt>pre_run_code_hook</tt> (gets run every time code is executed) or the <tt>pre_prompt_hook</tt> (gets run just before the prompt is printed).
+You can also automatically set the state from the `pre_run_code_hook` (gets run every time code is executed) or the `pre_prompt_hook` (gets run just before the prompt is printed).
 
+```python
  def update_prompt(self):
      "Switch prompt between 'foo' and 'bar'."
      _foobar = self.user_ns['_foobar']
      _foobar.var = "foo" if (_foobar.var != "foo") else "bar"
  
  get_ipython().set_hook("pre_prompt_hook", update_prompt)
+```
 
 Finally, there are a number of built in prompt variables:
 {| class="wikitable" border="1" cellpadding="2" cellspacing="0" width="90%" style="text-align:center"
@@ -94,7 +98,7 @@ Finally, there are a number of built in prompt variables:
 |}
 
 On terminals supporting ANSI color switching, you can also use the following color variables:
-<pre>
+```
 # attributes of IPython.utils.coloransi.InputTermColors
 {color.Black}           {color.Green}
 {color.BlinkBlack}      {color.LightBlue}
@@ -109,8 +113,8 @@ On terminals supporting ANSI color switching, you can also use the following col
 {color.Brown}           {color.Yellow}
 {color.Cyan}            {color.Normal} (resets to terminal default)
 {color.DarkGray}                       (try {color.normal} if above doesn't work)
-</pre>
-so
+```
+So...
 
  c.PromptManager.in_template = "{color.LightGreen} \T {color.Yellow} \Y2 "
 

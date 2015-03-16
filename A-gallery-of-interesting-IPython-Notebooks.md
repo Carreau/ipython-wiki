@@ -374,11 +374,13 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [A collection of not so obvious Python stuff you should know!](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/not_so_obvious_python_stuff.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
-* [Key differences between Python 2.7.x and Python 3.x](Key differences between Python 2.7.x and Python 3.x), by [Sebastian Raschka](https://github.com/rasbt).
+* [Key differences between Python 2.7.x and Python 3.x](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/key_differences_between_python_2_and_3.ipynb), by [Sebastian Raschka](https://github.com/rasbt).
 
 * [A beginner's guide to Python's namespaces, scope resolution, and the LEGB rule](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/scope_resolution_legb_rule.ipynb?create=1), by [Sebastian Raschka](https://github.com/rasbt).
 
 * [Sorting CSV files using the Python csv module](http://nbviewer.ipython.org/github/rasbt/python_reference/blob/master/tutorials/sorting_csvs.ipynb), by [Sebastian Raschka](https://github.com/rasbt).
+
+* Python 3 OOP series by [Leonardo Giordani](https://github.com/lgiordani): [Part 1: Objects and types](http://nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_1__Objects_and_types.ipynb), [Part 2: Classes and members](http://nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_2__Classes_and_members.ipynb), [Part 3: Delegation - composition and inheritance](http://nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_3__Delegation__composition_and_inheritance.ipynb), [Part 4: Polymorphism](nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_4__Polymorphism.ipynb), [Part 5: Metaclasses](http://nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_5__Metaclasses.ipynb), [Part 6: Abstract Base Classes](http://nbviewer.ipython.org/github/lgiordani/blog_source/blob/master/pelican/content/notebooks/Python_3_OOP_Part_6__Abstract_Base_Classes.ipynb), by
 
 ## Notebooks in languages other than Python
 

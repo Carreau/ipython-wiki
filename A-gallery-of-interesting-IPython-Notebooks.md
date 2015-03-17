@@ -396,6 +396,21 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * A [tutorial](http://nbviewer.ipython.org/gist/7551139) on making interactive graphs with [Plotly](https://plot.ly/) and Julia.
 
+* [Numerical tours in Julia](http://www.numerical-tours.com/julia/)
+
+* [Functional Geometry](http://nbviewer.ipython.org/github/shashi/ijulia-notebooks/blob/master/funcgeo/Functional%20Geometry.ipynb) by [Shashi Gowda](https://github.com/shashi)
+
+* Coursework using IJulia notebooks:
+  - [Métodos Numéricos Avanzados (2015-2)](https://github.com/dpsanders/MetodosNumericosAvanzados), Luis Benet and David P. Sanders
+  - [Métodos Monte Carlo](https://github.com/dpsanders/metodos-monte-carlo), David Sanders
+  - [Linear Partial Differential Equations: Analysis and Numerics](http://math.mit.edu/~stevenj/18.303/), Steven G. Johnson
+  - [Julia tutorial for Computational Molecular Biology](http://cs.brown.edu/courses/csci1810/Julia_Tutorial.html), Younhun Kim and Matthew Reyna
+
+* Other collections of IJulia notebooks:
+  - [Jiahao Chen](http://jiahao.github.io/code/)
+  - [Christoph Ortner](https://homepages.warwick.ac.uk/staff/C.Ortner/index.php?page=julia)
+  - [Crossing Language Barriers with Julia, Scipy, and IPython](https://github.com/stevengj/Julia-EuroSciPy14), presented at EuroSciPy '14 by Steven G. Johnson.
+
 ### Haskell
 There exists a Haskell kernel for IPython in the [IHaskell project](https://github.com/gibiansky/ihaskell).
 

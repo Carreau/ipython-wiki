@@ -473,6 +473,8 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 1. [Indication of family-specific DNA methylation patterns in developing oysters](http://biorxiv.org/content/early/2014/12/16/012831), Claire E. Olson, Steven B. Roberts
 doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the paper](http://nbviewer.ipython.org/github/che625/olson-ms-nb/blob/master/BiGo_dev.ipynb).
 
+1. [Parallel Prefix Polymorphism Permits Parallelization, Presentation & Proof](http://conferences.computer.org/hptcdl/2014/papers/7020a047.pdf), [Jiahao Chen](http://jiahao.github.io) and [Alan Edelman](http://www-math.mit.edu/~edelman/), HPTCDL'14. [Website](http://jiahao.github.io/parallel-prefix) and [notebook](https://github.com/jiahao/ijulia-notebooks/blob/master/2014-08-06-parallel-prefix.ipynb)
+
 ## Other publications and conference abstracts that explicitly use the Notebook
 
 * [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.

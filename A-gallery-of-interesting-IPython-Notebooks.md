@@ -490,6 +490,8 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 1. [Parallel Prefix Polymorphism Permits Parallelization, Presentation & Proof](http://conferences.computer.org/hptcdl/2014/papers/7020a047.pdf), [Jiahao Chen](http://jiahao.github.io) and [Alan Edelman](http://www-math.mit.edu/~edelman/), HPTCDL'14. [Website](http://jiahao.github.io/parallel-prefix) and [notebook](https://github.com/jiahao/ijulia-notebooks/blob/master/2014-08-06-parallel-prefix.ipynb)
 
+1. [Transcriptome Sequencing Reveals Potential Mechanism of Cryptic 3’ Splice Site Selection in *SF3B1*-mutated Cancers](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004105) by [Christopher DeBoever](http://cdeboever3.github.io/) et al. There are several [notebooks](https://github.com/cdeboever3/deboever-sf3b1-2015/tree/master/notebooks) to replicate results and make figures.
+
 ## Other publications and conference abstracts that explicitly use the Notebook
 
 * [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.

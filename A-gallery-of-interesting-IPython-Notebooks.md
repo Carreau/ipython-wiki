@@ -492,7 +492,7 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 1. [Transcriptome Sequencing Reveals Potential Mechanism of Cryptic 3’ Splice Site Selection in *SF3B1*-mutated Cancers](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004105) by [Christopher DeBoever](http://cdeboever3.github.io/) et al. There are several [notebooks](https://github.com/cdeboever3/deboever-sf3b1-2015/tree/master/notebooks) to replicate results and make figures.
 
-## Other publications and conference abstracts that explicitly use the Notebook
+1. [A Workflow for Characterizing Nanoparticle Monolayers for Biosensors: Machine Learning on Real and Artificial SEM Images](https://peerj.com/preprints/671/), Adam Hughes, Zhaowen Liu, Maryam Raftari, Mark. E Reeves.  Notebooks are linked in Table 1 in the text.
 
 * [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.
 

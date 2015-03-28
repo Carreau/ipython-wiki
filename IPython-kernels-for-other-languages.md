@@ -34,7 +34,7 @@
 1.   [Mochi Kernel](https://github.com/Carreau/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
 1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)
-1.   [Skulpt Python Kernel](https://github.com/Calysto/calysto/skulpt_python)
+1.   [Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)
 1.   [MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)
 1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)
 

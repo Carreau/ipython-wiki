@@ -496,9 +496,9 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 1. [A Workflow for Characterizing Nanoparticle Monolayers for Biosensors: Machine Learning on Real and Artificial SEM Images](https://peerj.com/preprints/671/), Adam Hughes, Zhaowen Liu, Maryam Raftari, Mark. E Reeves.  Notebooks are linked in Table 1 in the text.
 
-* [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.
+1. [AtomPy: An Open Atomic Data Curation Environment for Astrophysical Applications](http://www.mdpi.com/2218-2004/2/2/123), by C. Mendoza, J. Boswell, D. Ajoku, M. Bautista.
 
-* [Visualizing 4-Dimensional Asteroids](http://blogs.scientificamerican.com/sa-visual/2014/09/16/visualizing-4-dimensional-asteroids/), in Scientific American (by Jake VanderPlas)
+1. [Visualizing 4-Dimensional Asteroids](http://blogs.scientificamerican.com/sa-visual/2014/09/16/visualizing-4-dimensional-asteroids/), in Scientific American (by Jake VanderPlas)
 
 ## Data-driven journalism
 

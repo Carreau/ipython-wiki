@@ -250,6 +250,19 @@ To install:
 An example is provided [here](http://nbviewer.ipython.org/github/SiggyF/notebooks/blob/master/styleguide.ipynb).
 
 
+## px magic
+
+Executes shell command and returns stdout as a file like object (pipe). This will make it easy to e.g. read tabular output from shell commands to pandas DataFrame:s.
+
+To install:
+
+```text
+    %install_ext https://gist.github.com/kpalin/ec5264445dbb56616d6e/raw/94fe58912752ca2e4b0b20d38674ee8dea69d003/pxmagic.py
+```
+
+An example is provided [here](https://gist.github.com/kpalin/ec5264445dbb56616d6e).
+
+
 ## py2tex
 
 Enables conversion of simple expressions to a nice Tex Representation.

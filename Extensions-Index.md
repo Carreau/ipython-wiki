@@ -618,3 +618,10 @@ To install:
 IPython magics for generating figures with TikZ. You can select the output format as svg, png or jpg, define the image size, specify a scale factor, load TikZ packages, and save to external files.
 
 * [Homepage](https://github.com/mkrphys/ipython-tikzmagic)
+
+## Module Magic
+
+The %%module cell magic for the IPython Notebook. %%module saves the cell as a file and imports it into the session. This is useful for both creating and managing modules within the Notebook, as well as creating sandboxed code - i.e. executing code cells in a separate environment. 
+
+* [Homepage](https://github.com/brazilbean/modulemagic)
+

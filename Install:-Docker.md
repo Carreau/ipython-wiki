@@ -42,7 +42,7 @@ A few ways to install IPython with Docker:
   * https://registry.hub.docker.com/u/ipython/scipyserver/
       * https://github.com/ipython/docker-notebook/blob/master/scipyserver/Dockerfile
 
-## Anaconda / Miniconda + IPython Configurations
+## Anaconda + IPython Configurations
 
 * https://github.com/ContinuumIO/docker-images
 

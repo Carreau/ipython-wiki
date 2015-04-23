@@ -25,21 +25,18 @@ A few ways to install IPython with Docker:
 
 https://registry.hub.docker.com/u/ipython/
 * https://github.com/ipython/docker-notebook
-
 * https://registry.hub.docker.com/u/ipython/ipython
   * **https://github.com/ipython/ipython/blob/master/Dockerfile**
-
 * https://registry.hub.docker.com/u/ipython/scipystack/
   * https://github.com/ipython/docker-notebook/blob/master/scipystack/Dockerfile
     * https://github.com/ipython/docker-notebook/blob/master/scipystack/build_scipy_stack.sh
-
 * https://github.com/ipython/docker-notebook
   * https://github.com/ipython/docker-notebook/blob/master/notebook/Dockerfile
-
 * https://registry.hub.docker.com/u/ipython/scipyserver/
     * https://github.com/ipython/docker-notebook/blob/master/scipyserver/Dockerfile
 
 
+Jupyter / JupyterHub
 
 * https://github.com/jupyter/jupyterhub/
   * https://github.com/jupyter/jupyterhub/blob/master/Dockerfile

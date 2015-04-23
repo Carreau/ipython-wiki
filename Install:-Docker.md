@@ -48,7 +48,4 @@ Jupyter / JupyterHub
   * https://github.com/jupyter/jupyterhub/blob/master/Dockerfile
   * https://registry.hub.docker.com/u/jupyter/
     * https://registry.hub.docker.com/u/jupyter/jupyterhub
-    * https://registry.hub.docker.com/u/jupyter/tmpnb/
-      * https://github.com/jupyter/configurable-http-proxy/blob/master/Dockerfile
-      * https://github.com/jupyter/tmpnb/blob/master/Dockerfile
-      * https://github.com/jupyter/dockerspawner
+      * **https://github.com/jupyter/jupyterhub/wiki/Spawners**

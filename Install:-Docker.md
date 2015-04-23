@@ -40,6 +40,8 @@ A few ways to install IPython with Docker:
   * https://registry.hub.docker.com/u/ipython/scipyserver/
       * https://github.com/ipython/docker-notebook/blob/master/scipyserver/Dockerfile
 
+## Anaconda + IPython Notebook Configurations
+
 ## Links
 
 Jupyter / JupyterHub
@@ -49,3 +51,9 @@ Jupyter / JupyterHub
   * https://registry.hub.docker.com/u/jupyter/
     * https://registry.hub.docker.com/u/jupyter/jupyterhub
       * **https://github.com/jupyter/jupyterhub/wiki/Spawners**
+
+## Notes regarding use of IPython and Docker
+
+* TODO: mount a local filesytem directory for notebooks
+* TODO: (jupyter) (GDrive) storage plugins
+* TODO: about running an init process w/ syslog etc (e.g. phusion/baseimage-docker)

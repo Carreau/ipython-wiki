@@ -18,7 +18,7 @@ A few ways to install IPython with Docker:
   ``docker run -it ipython/ipython``
 
   * https://registry.hub.docker.com/u/ipython/ipython
-  * **https://github.com/ipython/ipython/blob/master/Dockerfile**
+    * **https://github.com/ipython/ipython/blob/master/Dockerfile**
 
 * IPython + SciPy Stack (``ipython/scipystack``):
 
@@ -55,7 +55,8 @@ A few ways to install IPython with Docker:
       * OS: Debian 7.4
       * https://github.com/ContinuumIO/docker-images/blob/master/anaconda/Dockerfile
       * https://github.com/ContinuumIO/docker-images/blob/master/anaconda3/Dockerfile
-    * http://docs.continuum.io/anaconda/pkg-docs.html
+    * Anaconda Scipy Stack Package Versions: http://docs.continuum.io/anaconda/pkg-docs.html
+
 * Anaconda + IPython Notebook
 
   ``docker run -p 8888:8888 -i -t rothnic/anaconda-notebook``
@@ -66,10 +67,10 @@ A few ways to install IPython with Docker:
       * https://github.com/rothnic/anaconda-notebook/blob/master/Dockerfile
 
 ## Links to Jupyter Hub
-* https://github.com/jupyter/jupyterhub/
-  * https://github.com/jupyter/jupyterhub/blob/master/Dockerfile
-  * https://registry.hub.docker.com/u/jupyter/
+* https://registry.hub.docker.com/u/jupyter/
+  * https://github.com/jupyter/jupyterhub/
     * https://registry.hub.docker.com/u/jupyter/jupyterhub
+      * https://github.com/jupyter/jupyterhub/blob/master/Dockerfile
       * **https://github.com/jupyter/jupyterhub/wiki/Spawners**
         * https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/
           * ![Deploying JupyterHub For Education](https://c2a32ff18d23c8f567f0-e44b0df73868b5d567b1e58e01681d15.ssl.cf5.rackcdn.com/2015-03-24-deploying-jupyterhub-for-education/setup-2e74d935ee0c874e66a9b53359493ceb.png)

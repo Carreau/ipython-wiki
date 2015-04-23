@@ -1,8 +1,10 @@
 ## IPython Docker Configurations
 
-IPython Docker Hub Repos: **https://registry.hub.docker.com/u/ipython/**
+ Docker Hub: **https://registry.hub.docker.com/u/ipython/**
 
-Source: https://github.com/ipython/docker-notebook
+ Source: https://github.com/ipython/docker-notebook
+
+ OS: Ubuntu 14.04 Trusty Tahr
 
 A few ways to install IPython with Docker:
 
@@ -40,7 +42,19 @@ A few ways to install IPython with Docker:
   * https://registry.hub.docker.com/u/ipython/scipyserver/
       * https://github.com/ipython/docker-notebook/blob/master/scipyserver/Dockerfile
 
-## Anaconda + IPython Notebook Configurations
+## Anaconda / Miniconda + IPython Configurations
+
+* https://github.com/ContinuumIO/docker-images
+
+  http://docs.continuum.io/anaconda/pkg-docs.html
+
+    ``docker run -it continuumio/anaconda#3``  # NumPy, SciPy
+
+* https://github.com/rothnic/anaconda-notebook
+
+  ``docker run -p 8888:8888 -i -t rothnic/anaconda-notebook``
+
+
 
 ## Links
 
@@ -57,3 +71,4 @@ Jupyter / JupyterHub
 * TODO: mount a local filesytem directory for notebooks
 * TODO: (jupyter) (GDrive) storage plugins
 * TODO: about running an init process w/ syslog etc (e.g. phusion/baseimage-docker)
+* TODO: sysv/upstart/systemd/supervisord/runit config for IPython Notebook

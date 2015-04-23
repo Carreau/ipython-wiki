@@ -6,6 +6,8 @@
 
  OS: Ubuntu 14.04 Trusty Tahr
 
+ Scipy Stack: http://www.scipy.org/stackspec.html
+
 A few ways to install IPython with Docker:
 
     >>> itertools.product(['IPython', 'IPython Notebook'], ['', '+ SciPy Stack'])
@@ -44,13 +46,18 @@ A few ways to install IPython with Docker:
 
 ## Anaconda + IPython Configurations
 
-* https://github.com/ContinuumIO/docker-images
-
-  http://docs.continuum.io/anaconda/pkg-docs.html
+* Anaconda + IPython [Notebook]
 
     ``docker run -it continuumio/anaconda#3``  # NumPy, SciPy
 
-* https://github.com/rothnic/anaconda-notebook
+  * https://registry.hub.docker.com/u/continuumio/anaconda/
+    * https://github.com/ContinuumIO/docker-images
+    * http://docs.continuum.io/anaconda/pkg-docs.html
+
+
+* Anaconda + IPython Notebook
+
+  https://github.com/rothnic/anaconda-notebook
 
   ``docker run -p 8888:8888 -i -t rothnic/anaconda-notebook``
 
@@ -65,6 +72,7 @@ Jupyter / JupyterHub
   * https://registry.hub.docker.com/u/jupyter/
     * https://registry.hub.docker.com/u/jupyter/jupyterhub
       * **https://github.com/jupyter/jupyterhub/wiki/Spawners**
+        * https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/
 
 ## Notes regarding use of IPython and Docker
 

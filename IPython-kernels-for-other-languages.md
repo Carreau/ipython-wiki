@@ -37,6 +37,7 @@
 1.   [Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)
 1.   [MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)
 1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)
+1.   [Brython Kernel](https://github.com/kikocorreoso/brythonmagic)
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 

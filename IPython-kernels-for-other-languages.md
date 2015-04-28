@@ -39,6 +39,7 @@
 1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)
 1.   [Brython Kernel](https://github.com/kikocorreoso/brythonmagic)
 1.   [IVisual VPython Kernel](https://pypi.python.org/pypi/IVisual)
+
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 
 ## Additional Related Projects

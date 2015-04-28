@@ -76,7 +76,7 @@ A few ways to install IPython with Docker:
           * ![Deploying JupyterHub For Education](https://c2a32ff18d23c8f567f0-e44b0df73868b5d567b1e58e01681d15.ssl.cf5.rackcdn.com/2015-03-24-deploying-jupyterhub-for-education/setup-2e74d935ee0c874e66a9b53359493ceb.png)
 
 ## Notes regarding use of IPython and Docker
-* TODO: mount a local filesytem directory for notebooks
-* TODO: (jupyter) (GDrive) storage plugins
-* TODO: about running an init process w/ syslog etc (e.g. phusion/baseimage-docker)
-* TODO: sysv/upstart/systemd/supervisord/runit config for IPython Notebook
+* [ ] TODO: mount a local filesytem directory for notebooks
+* [ ] TODO: (jupyter) (GDrive) storage plugins
+* [ ] TODO: about running an init process w/ syslog etc (e.g. phusion/baseimage-docker)
+* [ ] TODO: sysv/upstart/systemd/supervisord/runit config for IPython Notebook

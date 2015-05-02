@@ -31,7 +31,7 @@
 1.   [Calysto Scheme](https://github.com/Calysto/calysto/tree/master/calysto/language/scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel)
-1.   [Mochi Kernel](https://github.com/Carreau/mochi-kernel) 
+1.   [Mochi Kernel](https://github.com/pya/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
 1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)
 1.   [Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)

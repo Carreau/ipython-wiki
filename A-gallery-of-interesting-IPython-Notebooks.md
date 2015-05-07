@@ -422,6 +422,10 @@ There exists a Haskell kernel for IPython in the [IHaskell project](https://gith
 * [Homophone reduction](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Homophones.ipynb), a solution to a cute problem involving treating English letters as generators of a large group.
 * [Gradient descent typeclass](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/Gradient-Descent.ipynb), a look at how arbitrary gradient descent algorithms can be represented with a typeclass.
 
+### OCaml
+
+[iocaml](https://github.com/andrewray/iocaml) is an OCaml kernel for IPython
+
 ### Ruby
 
 Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.

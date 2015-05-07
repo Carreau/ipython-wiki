@@ -402,6 +402,8 @@ The IPython protocols to communicate between kernels and clients are language ag
 
 * [Functional Geometry](http://nbviewer.ipython.org/github/shashi/ijulia-notebooks/blob/master/funcgeo/Functional%20Geometry.ipynb) by [Shashi Gowda](https://github.com/shashi)
 
+* [JuliaOpt notebooks](http://nbviewer.ipython.org/github/JuliaOpt/juliaopt-notebooks/tree/master/notebooks/), a collection of optimization-related notebooks.
+
 * Coursework using IJulia notebooks:
   - [Métodos Numéricos Avanzados (2015-2)](https://github.com/dpsanders/MetodosNumericosAvanzados), Luis Benet and David P. Sanders
   - [Métodos Monte Carlo](https://github.com/dpsanders/metodos-monte-carlo), David Sanders

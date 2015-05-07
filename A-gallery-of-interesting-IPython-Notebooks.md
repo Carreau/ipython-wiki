@@ -426,6 +426,8 @@ There exists a Haskell kernel for IPython in the [IHaskell project](https://gith
 
 [iocaml](https://github.com/andrewray/iocaml) is an OCaml kernel for IPython
 
+* [H.261 Video Decoding in OCaml](https://andrewray.github.io/iocamljs/oh261.html)
+
 ### Ruby
 
 Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.

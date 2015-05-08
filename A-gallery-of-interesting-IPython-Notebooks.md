@@ -126,6 +126,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [An Introduction to Applied Bioinformatics](http://caporasolab.us/An-Introduction-To-Applied-Bioinformatics): Interactive lessons in bioinformatics, by [Greg Caporaso](http://caporasolab.us).
 
+* Colour science computations with [colour](https://github.com/colour-science/colour), a Python package implementing a comprehensive number of colour theory transformations and algorithms supported by a [dedicated collection of IPython Notebooks](http://nbviewer.ipython.org/github/colour-science/colour-ipython/blob/master/notebooks/colour.ipynb). More colour science related [IPython Notebooks](http://nbviewer.ipython.org/github/colour-science/colour-website/tree/master/ipython/) are available on [colour-science.org](http://colour-science.org/).
+
 ### Earth Science and Geo-Spatial data
 
 * [EarthPy](http://earthpy.org), a collection of IPython notebooks with a focus on Earth Sciences, from [whale tracks](http://earthpy.org/analyzing-whale-tracks.html) to the [flow of the Amazon](http://earthpy.org/earthpy-basemap-amazon.html).

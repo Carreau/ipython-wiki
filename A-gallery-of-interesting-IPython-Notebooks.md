@@ -427,6 +427,7 @@ There exists a Haskell kernel for IPython in the [IHaskell project](https://gith
 [iocaml](https://github.com/andrewray/iocaml) is an OCaml kernel for IPython
 
 * [H.261 Video Decoding in OCaml](https://andrewray.github.io/iocamljs/oh261.html)
+* [OCaml implementation of the 2048 game](http://gazagnaire.org/fuconf14/)
 
 ### Ruby
 

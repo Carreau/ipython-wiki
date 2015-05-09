@@ -625,3 +625,26 @@ The %%module cell magic for the IPython Notebook. %%module saves the cell as a f
 
 * [Homepage](https://github.com/brazilbean/modulemagic)
 
+## Giphy Magic
+
+An IPython magic to embed random GIFs from giphy.com
+
+* [Homepage](https://github.com/AustinRochford/giphy-ipython-magic)
+
+To install:
+
+```text
+%install_ext https://raw.githubusercontent.com/AustinRochford/giphy-ipython-magic/master/giphy_magic.py
+```
+
+## S3 Image Magic
+
+A set of magics that will display images stored in Amazon S3 and save matplotlib figures to S3.
+
+* [Homepage](https://github.com/AustinRochford/s3img-ipython-magic)
+
+To install:
+
+```text
+%install_ext https://github.com/AustinRochford/s3img-ipython-magic/blob/master/s3img_magic.py
+```

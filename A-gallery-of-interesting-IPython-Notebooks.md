@@ -19,7 +19,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Social data](#social-data)
   * [Psychology and Neuroscience](#psychology-and-neuroscience)
   * [Machine Learning](#machine-learning)
-  * [Physics, Chemistry and Biology](#physics,-chemistry-and-biology)
+  * [Physics, Chemistry and Biology](#physics-chemistry-and-biology)
   * [Economics](#economics)
   * [Earth science and geo-spatial data](#earth-science-and-geo-spatial-data)
   * [Data visualization and plotting](#data-visualization-and-plotting)

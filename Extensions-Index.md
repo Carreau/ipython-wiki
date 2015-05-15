@@ -18,9 +18,9 @@ Installation:
 * [Homepage](https://github.com/jrjohansson/ipython-asymptote)
 
 [Asymptote](http://asymptote.sourceforge.net/) is a powerful vector graphics
-language for generating scientific diagrams. 
+language for generating scientific diagrams.
 
-This IPython magic extension makes it easy to create and display Asymptote 
+This IPython magic extension makes it easy to create and display Asymptote
 diagrams within an IPython notebook.
 
 See the [example notebook](http://nbviewer.ipython.org/github/jrjohansson/ipython-asymptote/blob/master/examples/asymptote_magic_examples.ipynb) for installation instruction and example of how to use this magic extension.
@@ -88,7 +88,7 @@ Installation:
 ## ipythonPexpect magic
 
 A magic that allows IPython notebooks to interface with other programs via Pexpect (written by Adam Lyon).
- 
+
 * [Example notebook](http://nbviewer.ipython.org/url/home.fnal.gov/~lyon/ipython_ext/ipythonPexpect_example.ipynb) - including interfacing with bash, R, and CERN's ROOT system.
 
 To install :
@@ -149,7 +149,7 @@ To install:
     %install_ext https://bitbucket.org/birkenfeld/ipython-physics/raw/default/physics.py
 ```
 
-Note: In the latest version, quantities with uncertainties are supported if the 
+Note: In the latest version, quantities with uncertainties are supported if the
 `uncertainties` module is installed.
 
 ## `%hierarchy` and `%%dot` magics
@@ -213,16 +213,16 @@ Mathematica can be integrated into notebooks using the `IPython-mathematicamagic
 
 [Homepage](https://github.com/bjedwards/IPython-mathematicamagic-extension)
 
-## Matlab 
+## Matlab
 
-The [Python MATLAB bridge](https://github.com/arokem/python-matlab-bridge)  enables calling of MATLAB code and functions from an IPython session and adds a `%%matlab` cell magic, which allows embedding matlab code in IPython notebooks. 
+The [Python MATLAB bridge](https://github.com/arokem/python-matlab-bridge)  enables calling of MATLAB code and functions from an IPython session and adds a `%%matlab` cell magic, which allows embedding matlab code in IPython notebooks.
 
 [Homepage](https://github.com/arokem/python-matlab-bridge)
 
 Examples:
 
 * [pymatbridge](http://nbviewer.ipython.org/github/arokem/python-matlab-bridge/blob/master/pymatbridge.ipynb)
-* [matlab magic](http://nbviewer.ipython.org/github/arokem/python-matlab-bridge/blob/master/matlab_magic.ipynb) 
+* [matlab magic](http://nbviewer.ipython.org/github/arokem/python-matlab-bridge/blob/master/matlab_magic.ipynb)
 
 ## IDL
 
@@ -500,7 +500,7 @@ To install:
     %install_ext https://raw.github.com/mksenzov/ipython_zip_extensions/master/zip_extensions.py
 
 If for example you want to load/start using extension called `grasp` (described above) without using pip do:
-    
+
     %load_ext zip_extensions
 
     %install_zip_ext https://pypi.python.org/packages/source/g/grasp/grasp-0.3.2.tar.gz
@@ -572,13 +572,13 @@ Then just use the BeautifulSoup object loading into the current context.
 
 To install:
 
-     Get Tampermonkey for Chrome or Greasemonkey for Firefox 
+     Get Tampermonkey for Chrome or Greasemonkey for Firefox
      and install the script from http://userscripts.org/scripts/show/180884
 
 What you can do:
 
-     Turbo-Scrolling : Hold [Shift] key while using your mouse wheel to speed 
-                       up the scrolling about x6. Or, you could also do it 
+     Turbo-Scrolling : Hold [Shift] key while using your mouse wheel to speed
+                       up the scrolling about x6. Or, you could also do it
                        by hovering near the left side of page (within 50 px)
 
      [Top] : Scroll to the page top
@@ -619,9 +619,31 @@ IPython magics for generating figures with TikZ. You can select the output forma
 
 * [Homepage](https://github.com/mkrphys/ipython-tikzmagic)
 
+## trepanmagic
+
+IPython extension for using the [python trepan](https://pypi.python.org/pypi?:action=display&name=trepan debugger.
+
+* [Homepage](https://github.com/rocky/ipython-trepan)
+
+### Installation
+
+To install execute the the following code snippet in an IPython shell or IPython notebook cell:
+
+```
+    %install_ext https://raw.github.com/rocky/ipython-trepan/master/trepanmagic.py
+    %load_ext trepanmagic
+```
+
+or put *trepanmagic.py* in `$HOME/.python/profile_default/startup`:
+
+```
+    cd `$HOME/.python/profile_default/startup`:
+    wget https://raw.github.com/rocky/ipython-trepan/master/trepanmagic.py
+```
+
 ## Module Magic
 
-The %%module cell magic for the IPython Notebook. %%module saves the cell as a file and imports it into the session. This is useful for both creating and managing modules within the Notebook, as well as creating sandboxed code - i.e. executing code cells in a separate environment. 
+The %%module cell magic for the IPython Notebook. %%module saves the cell as a file and imports it into the session. This is useful for both creating and managing modules within the Notebook, as well as creating sandboxed code - i.e. executing code cells in a separate environment.
 
 * [Homepage](https://github.com/brazilbean/modulemagic)
 

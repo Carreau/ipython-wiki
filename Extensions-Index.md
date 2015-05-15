@@ -621,7 +621,7 @@ IPython magics for generating figures with TikZ. You can select the output forma
 
 ## trepanmagic
 
-IPython extension for using the [python trepan](https://pypi.python.org/pypi?:action=display&name=trepan debugger.
+IPython extension for using the [python trepan](https://pypi.python.org/pypi?:action=display&name=trepan) debugger.
 
 * [Homepage](https://github.com/rocky/ipython-trepan)
 

@@ -69,7 +69,7 @@ Now you need to tunnel slightly differently, because you want local ports on cli
 Use the same information to get the connection info, but this time use `--ssh login`.
 
     [client] $ scp server:/Users/you/.ipython/profile_default/security/kernel-4321.json ./
-    [client] $ ip qtconsole --existing ./kernel-4321.json --ssh login
+    [client] $ ipython qtconsole --existing ./kernel-4321.json --ssh login
 
 Again, you can set up manual tunnels, but they will be slightly different:
 

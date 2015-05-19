@@ -349,6 +349,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 
 * [PyOracle: Automatic analysis of musical structure](http://nbviewer.ipython.org/urls/bitbucket.org/pucktronix/pyoracle-research-journal/raw/80a120b35a6daaec484feb5e3837deab58837766/270D.ipynb?create=1), by [Greg Surges](http://gregsurges.com).
 
+* [A Gallery of SciPy's Window Functions for quick visual inspection and comparison] (http://nbviewer.ipython.org/urls/gist.githubusercontent.com/jaidevd/b7d865f7f4b237ab5181/raw/30bc8f998bf8f924b56b32ce10acce125656ed7c/scipy_window_gallery.ipynb)
+ by [Jaidev Deshpande](http://twitter.com/jaidevd)
 
 ### Natural Language Processing
 

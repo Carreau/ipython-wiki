@@ -14,6 +14,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Earth Science and Geo-Spatial data](#earth-science-and-geo-spatial-data)
   * [Linguistics and Text Mining](#linguistics-and-text-mining)
   * [Signal Processing](#signal-processing)
+  * [Engineering Education](#engineering-education)
 1. [Scientific computing and data analysis with the SciPy Stack](#scientific-computing-and-data-analysis-with-the-scipy-stack)
   * [General topics in scientific computing](#general-topics-in-scientific-computing)
   * [Social data](#social-data)
@@ -157,6 +158,10 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 * [Kalman and Bayesian Filters in Python](http://nbviewer.ipython.org/github/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/table_of_contents.ipynb). A textbook and accompanying filtering library on the topic of Kalman filtering and other related Bayesian filtering techniques.
 
 * [Classify human movements using Dynamic Time Warping & K Nearest Neighbors:](http://nbviewer.ipython.org/github/markdregan/K-Nearest-Neighbors-with-Dynamic-Time-Warping/blob/master/K_Nearest_Neighbor_Dynamic_Time_Warping.ipynb) Signals from a smart phone gyroscope and accelerometer are used to classify if the person is running, walking, sitting standing etc. This IPython notebook contains a python implementation of DTW and KNN algorithms along with explanations and a practical application.
+
+### Engineering Education
+
+* [Introduction to Chemical Engineering Analysis](http://jckantor.github.io/CBE20255/) by [Jeff Kantor](http://jckantor.github.io/). A collection of IPython notebooks illustrating topics in introductory chemical engineering analysis, including stoichiometry, generation-consumption analysis, mass and energy balances.
 
 ## Scientific computing and data analysis with the SciPy Stack
 ### General topics in scientific computing

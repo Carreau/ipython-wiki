@@ -446,6 +446,11 @@ Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com
 
 * [IRuby Demo Notebook](http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb)
 
+The interactive plotting library [Nyaplot](https://github.com/domitry/nyaplot) has some case studies using IRuby:
+
+* [War expenditure per GDP](http://nbviewer.ipython.org/github/domitry/nyaplot/blob/master/examples/notebook/Mapnya.ipynb#Case2-:Fill-countries-in-different-colors)
+* [Finding shape consensus among multiple geometrical polygons](http://nbviewer.ipython.org/gist/mgiraldo/a68b53175ce5892531bc)
+
 ### Perl
 
 * An example showcasing full use of the [display protocol](http://nbviewer.ipython.org/github/zmughal/zmughal-iperl-notebooks/blob/master/IPerl-demos/20150209_IPerl_display_demo.ipynb) with the IPerl kernel.

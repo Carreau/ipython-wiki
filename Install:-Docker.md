@@ -71,6 +71,7 @@ A few ways to install IPython with Docker:
   * https://github.com/jupyter/jupyterhub/
     * https://registry.hub.docker.com/u/jupyter/jupyterhub
       * https://github.com/jupyter/jupyterhub/blob/master/Dockerfile
+      * https://github.com/jupyter/notebook/blob/master/Dockerfile
       * **https://github.com/jupyter/jupyterhub/wiki/Spawners**
         * https://developer.rackspace.com/blog/deploying-jupyterhub-for-education/
           * ![Deploying JupyterHub For Education](https://c2a32ff18d23c8f567f0-e44b0df73868b5d567b1e58e01681d15.ssl.cf5.rackcdn.com/2015-03-24-deploying-jupyterhub-for-education/setup-2e74d935ee0c874e66a9b53359493ceb.png)

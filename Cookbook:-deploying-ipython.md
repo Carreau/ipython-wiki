@@ -1,3 +1,7 @@
+## Running a notebook server
+
+http://ipython.org/ipython-doc/3/notebook/public_server.html
+
 ## Docker Images for IPython
 
 IPython itself has a [base image on Docker hub, called ipython/ipython](https://registry.hub.docker.com/u/ipython/ipython/):

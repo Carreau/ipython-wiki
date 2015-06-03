@@ -442,9 +442,10 @@ There exists a Haskell kernel for IPython in the [IHaskell project](https://gith
 
 ### Ruby
 
-Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/minad/iruby) for IPython.
+Similar to the Julia kernel there exists also a [Ruby kernel](https://github.com/SciRuby/iruby) for IPython.
 
-* [IRuby Demo Notebook](http://nbviewer.ipython.org/github/minad/iruby/blob/master/IRuby-Example.ipynb)
+* [IRuby Demo Notebook](http://nbviewer.ipython.org/github/SciRuby/sciruby-notebooks/blob/master/getting_started.ipynb)
+* [SciRuby Notebooks](https://github.com/SciRuby/sciruby-notebooks)
 
 The interactive plotting library [Nyaplot](https://github.com/domitry/nyaplot) has some case studies using IRuby:
 

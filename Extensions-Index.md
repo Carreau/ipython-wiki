@@ -267,12 +267,13 @@ An example is provided [here](https://gist.github.com/kpalin/ec5264445dbb56616d6
 
 Enables conversion of simple expressions to a nice Tex Representation.
 
-[Homepage](https://gist.github.com/4032651)
+- [Gist](https://gist.github.com/4032651)
+- [Repository](https://github.com/BekeJ/py2tex)
 
 To install:
 
 ```text
-    %install_ext https://raw.github.com/gist/4032651/c33b92cade4e899c81d03e1573a6f8107c7d470f/py2tex.py
+    %install_ext https://raw.githubusercontent.com/BekeJ/py2tex/master/py2tex.py
 ```
 
 An example is provided [here](http://nbviewer.ipython.org/urls/gist.github.com/raw/4040388/ee224a8e0875fad241cea4492b4408f1f72a1d8d/Example_py2tex.ipynb).

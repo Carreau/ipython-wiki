@@ -671,3 +671,15 @@ To install:
 ```text
 %install_ext https://github.com/AustinRochford/s3img-ipython-magic/blob/master/s3img_magic.py
 ```
+
+## Autotime
+
+Times every command.
+
+* [Homepage](https://github.com/cpcloud/ipython-autotime)
+
+Installation:
+
+```
+%install_ext https://raw.github.com/cpcloud/ipython-autotime/master/autotime.py
+```

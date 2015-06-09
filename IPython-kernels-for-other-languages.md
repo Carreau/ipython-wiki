@@ -42,6 +42,7 @@
 1.   [Brainfuck Kernel (IBrainfuck)](https://github.com/robbielynch/ibrainfuck)
 1.   [KDB+/Q Kernel (IKdbQ)](https://github.com/jvictorchen/IKdbQ)
 1.   [ICryptol](https://github.com/GaloisInc/ICryptol)
+1.   [C++ (cling)](https://github.com/minrk/clingkernel)
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 

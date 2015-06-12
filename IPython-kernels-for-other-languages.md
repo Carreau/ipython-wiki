@@ -18,6 +18,7 @@
 1.   [IForth](https://github.com/jdfreder/iforth)
 1.   [IPerl](https://metacpan.org/release/Devel-IPerl)
 1.   [IPerl6](https://github.com/timo/iperl6kernel)
+1.   [IPHP](https://github.com/dawehner/ipython-php)
 1.   [IOctave](https://github.com/calysto/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [IMatlab](https://github.com/calysto/matlab_kernel)

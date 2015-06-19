@@ -15,6 +15,7 @@ A few interesting widgets or experiments with widgets are listed here.
 * [cookiecutter-ipython-widget](https://github.com/bollwyvl/cookiecutter-ipython-widget), a [cookiecutter](http://cookiecutter.readthedocs.org/en/latest/) for creating a pip-installable widget
 * [Turtle widget](https://github.com/takluyver/mobilechelonian/tree/require-widgets)
 * [ipython-flightwidgets](https://github.com/jdfreder/ipython-flightwidgets), widgets that can be used with flight control notebooks, simulators, or other flight related applications.
+* [gamepad](https://github.com/sylvaincorlay/gamepad), support for the browser API to gamepads and joysticks. 
 
 
 ## Projects using widgets

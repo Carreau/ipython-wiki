@@ -17,6 +17,6 @@ https://gist.github.com/minrk/3869182 - Example configuration file for using the
 
 https://gist.github.com/minrk/1935808 - Downgrade v3 .ipynb files to v2 (for use with older versions of IPython)
 
-https://github.com/ipython/ipython-in-depth/blob/master/tools/nbmerge.py - Concatenate multiple notebooks into a new one.
+https://gist.github.com/fperez/e2bbc0a208e82e450f69 - Concatenate multiple notebooks into a new one.
 
 https://github.com/davidbrai/ipythonnb-s3 - Seamlessly save and load notebook files to and from AWS S3 buckets.

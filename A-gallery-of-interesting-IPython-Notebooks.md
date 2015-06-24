@@ -188,7 +188,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [IPython Parallel Push/Execute/Pull Demo](http://nbviewer.ipython.org/gist/3866987) by Justin Riley.
 
-* [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/url/perrin.dynevor.org/exploring_r_formula_evaluated.ipynb).  By Matthew Brett.
+* [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/url/perrin.dynevor.org/exploring_r_formula.ipynb) by Matthew Brett.
 
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 

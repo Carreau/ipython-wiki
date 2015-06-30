@@ -526,6 +526,8 @@ doi: http://dx.doi.org/10.1101/012831. [Notebook to generate results in the pape
 
 1. [Visualizing 4-Dimensional Asteroids](http://blogs.scientificamerican.com/sa-visual/2014/09/16/visualizing-4-dimensional-asteroids/), in Scientific American (by Jake VanderPlas)
 
+1. [Challenges and opportunities in understanding microbial communities with metagenome assembly](http://journal.frontiersin.org/article/10.3389/fmicb.2015.00678/abstract), [accompanied by IPython Notebook tutorial](http://nbviewer.ipython.org/github/germs-lab/frontiers-review-2015/blob/master/frontiers-nb-2015.ipynb), by [Adina Howe](http://germslab.org) and  Patrick Chain.
+
 ## Data-driven journalism
 
 * [The Need for Openness in Data Journalism](http://nbviewer.ipython.org/github/brianckeegan/Bechdel/blob/master/Bechdel_test.ipynb), by [Brian Keegan](http://www.brianckeegan.com).

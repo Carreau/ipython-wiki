@@ -105,6 +105,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Kalman and Bayesian Filters in Python](http://nbviewer.ipython.org/github/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/table_of_contents.ipynb), by [Roger Labbe](https://github.com/rlabbe).
 
+* [Machine learning in Python](http://nbviewer.ipython.org/github/jdwittenauer/ipython-notebooks/blob/master/ML-Exercise1.ipynb), a series based on Andrew Ng's Coursera class on machine learning.  Part of a [larger collection of data science notebooks](https://github.com/jdwittenauer/ipython-notebooks) by [John Wittenauer](https://github.com/jdwittenauer).
+
 ### Mathematics, Physics, Chemistry, Biology
 
 * A [single-atom laser model](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures/blob/master/Lecture-2B-Single-Atom-Lasing.ipynb). This is one of a complete set of [lectures on quantum mechanics and quantum optics using QuTiP](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures) by [J.R. Johansson](https://github.com/jrjohansson).
@@ -278,6 +280,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [A collection of examples for solving pattern classification problems](https://github.com/rasbt/pattern_classification), by [Sebastian Raschka](https://github.com/rasbt).
 
 * [Introduction to Linear Regression using Python](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) by [Kevin Markham](https://github.com/justmarkham)
+
+* [Machine learning in Python](http://nbviewer.ipython.org/github/jdwittenauer/ipython-notebooks/blob/master/ML-Exercise1.ipynb), a series based on Andrew Ng's Coursera class on machine learning.  Part of a [larger collection of data science notebooks](https://github.com/jdwittenauer/ipython-notebooks) by [John Wittenauer](https://github.com/jdwittenauer).
 
 ### Physics, Chemistry and Biology
 

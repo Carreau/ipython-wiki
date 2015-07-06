@@ -2,15 +2,15 @@ You can write your own completer e.g. to make using your favourite command line 
 
 You can look at [https://github.com/ipython/ipython/blob/0.10.2/IPython/Extensions/ipy_completers.py ipy_completers.py] for examples on how to build your own completer. The key is writing a function like
 
- def apt_completers(self, event):
-     """ This should return a list of strings with possible completions.
+    def apt_completers(self, event):
+        """ This should return a list of strings with possible completions.
      
-     Note that all the included strings that don't start with event.symbol
-     are removed, in order to not confuse readline.
+        Note that all the included strings that don't start with event.symbol
+        are removed, in order to not confuse readline.
      
-     """
+        """
  
-     return ['update', 'upgrade', 'install', 'remove']
+        return ['update', 'upgrade', 'install', 'remove']
 
 Where you can examine event.line (whole line), event.symbol (the symbol under completion right now) and event.command (the first word in line, for convenience).
 

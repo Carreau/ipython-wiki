@@ -44,6 +44,7 @@
 *   [KDB+/Q Kernel (IKdbQ)](https://github.com/jvictorchen/IKdbQ)
 *   [ICryptol](https://github.com/GaloisInc/ICryptol)
 *   [C++ (cling)](https://github.com/minrk/clingkernel)
+*   [Xonsh](https://github.com/calysto/xonsh_kernel)
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 

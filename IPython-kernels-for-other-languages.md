@@ -1,6 +1,6 @@
 ## IPython/Jupyter kernels:
 
-1.   [IJulia](http://nbviewer.ipython.org/url/jdj.mit.edu/~stevenj/IJulia%20Preview.ipynb)
+1.   [IJulia](https://github.com/JuliaLang/IJulia.jl)
 1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
 1.   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)
 1.   [IRuby](https://github.com/SciRuby/iruby)

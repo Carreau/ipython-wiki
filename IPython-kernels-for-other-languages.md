@@ -46,7 +46,7 @@
 1.   [C++ (cling)](https://github.com/minrk/clingkernel)
 1.   [Xonsh](https://github.com/calysto/xonsh_kernel)
 1.   [Prolog](https://github.com/Calysto/calysto_prolog)
-1.   [Little Computer - LC3 Assembly Language](https://github.com/Calysto/calysto_littlecomputer)
+
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

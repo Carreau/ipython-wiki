@@ -46,6 +46,7 @@
 1.   [C++ (cling)](https://github.com/minrk/clingkernel)
 1.   [Xonsh](https://github.com/calysto/xonsh_kernel)
 1.   [Prolog](https://github.com/Calysto/calysto_prolog)
+1.   [Fishbowl (Common Lisp) Kernel](https://github.com/fredokun/fishbowl-repl/blob/master/AboutFishbowl.ipynb)
 
 
 

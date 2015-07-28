@@ -14,6 +14,7 @@
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
 1.   [IRKernel](https://github.com/takluyver/IRkernel) (for the R language)
 1.   [IErlang](https://github.com/robbielynch/ierlang)
+1.   [IElixir](https://github.com/pprzetacznik/IElixir)
 1.   [IOCaml](https://github.com/andrewray/iocaml)
 1.   [IForth](https://github.com/jdfreder/iforth)
 1.   [IPerl](https://metacpan.org/release/Devel-IPerl)

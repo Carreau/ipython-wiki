@@ -169,6 +169,10 @@ Scientific computing projects
     for interactive analysis of sorted neuronal spike data, stimulus data, and
     LFP waveforms. neuropy embeds IPython within its main Qt window.
 
+-   [TheVirtualBrain](http://thevirtualbrain.org) ships IPython as its advanced /
+    programmable interface, along with notebooks as documentation, e.g the 
+    [tutorial on modeling epilepsy propagation](https://github.com/the-virtual-brain/tvb-documentation/blob/master/tutorials/tutorial_3_ModelingEpilepsy.ipynb).
+
 In teaching
 -----------
 

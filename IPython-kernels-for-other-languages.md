@@ -48,7 +48,7 @@
 1.   [Xonsh](https://github.com/calysto/xonsh_kernel)
 1.   [Prolog](https://github.com/Calysto/calysto_prolog)
 1.   [Fishbowl (Common Lisp) Kernel](https://github.com/fredokun/fishbowl-repl/blob/master/AboutFishbowl.ipynb)
-
+1.   [Maxima-Fishbowl](https://github.com/robert-dodier/maxima-fishbowl)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

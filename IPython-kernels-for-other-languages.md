@@ -30,7 +30,7 @@
 1.   [Redis Kernel](https://github.com/supercoderz/redis_kernel)
 1.   [jove, a kernel for io.js](https://www.npmjs.com/package/jove)
 1.   [IJavascript](https://www.npmjs.com/package/ijavascript)
-1.   [Calysto Scheme](https://github.com/Calysto/calysto/tree/master/calysto/language/scheme)
+1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel)
 1.   [Mochi Kernel](https://github.com/pya/mochi-kernel) 

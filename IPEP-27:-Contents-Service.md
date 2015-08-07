@@ -315,7 +315,7 @@ A client can optionally specify a `type` and/or `format` argument via URL parame
 When given, the Contents service shall return a model in the requested type and/or format.
 If the request cannot be satisfied, e.g. `type=text` is requested, but the file is binary,
 then the request shall fail with `400` and have a JSON response containing a 'reason' field,
-with the value 'bad format' or 'bad type', depending on what was requested.
+with the value 'bad format' or 'bad type', depending on what was requested.  A client can also optionally specify a `content` argument via URL parameter.  If `content=1` is requested (the default), the full contents of the document are returned.  If `content=0` is requested, the `content` field is empty.
 
     GET /path/to/file.bin?format=text
 
@@ -460,6 +460,7 @@ so creating new checkpoints clobbers existing ones.
 ##### Response
 
     status: 201 Created
+    Location: /api/contents/foo/bar/Untitled0.ipynb/checkpoints/[checkpoint_id]
 
 ```json
 {

@@ -49,6 +49,7 @@
 1.   [Prolog](https://github.com/Calysto/calysto_prolog)
 1.   [cl-jupyter (Common Lisp) Kernel](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)
 1.   [Maxima-Fishbowl](https://github.com/robert-dodier/maxima-fishbowl)
+1.   [Calysto LC3](https://github.com/Calysto/calysto_lc3) - Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

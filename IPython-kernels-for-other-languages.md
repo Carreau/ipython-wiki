@@ -1,5 +1,7 @@
 ## IPython/Jupyter kernels:
 
+The Kernel Zero, is of course [IPython](https://ipython.org), which you can get though [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
+
 1.   [IJulia](https://github.com/JuliaLang/IJulia.jl)
 1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
 1.   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)

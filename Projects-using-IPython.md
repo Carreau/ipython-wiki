@@ -284,3 +284,5 @@ Web frameworks and other systems
 
 -   [INotebook](https://github.com/tartavull/INotebook) is a desktop app
     for directly opening .ipynb files
+
+-   [Quantopian](https://www.quantopian.com/) is an online algorithm trading platform, using many things inherited from Ipython Notebook.

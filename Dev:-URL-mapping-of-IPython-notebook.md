@@ -27,7 +27,7 @@ Notebook contents API.
 | ```POST``` | /api/contents<br>/\<path\>/\<file\> | Create a new file or directory in the specified path. POST creates new files or directories. The server always decides on the name. POST /api/contents/path New untitled notebook in path. If content specified, upload a notebook, otherwise start empty. POST /api/contents/path with body {"copy_from" : "OtherNotebook.ipynb"} New copy of OtherNotebook in path |
 | ```DELETE``` | /api/contents<br>/\<path\>/\<file\> | delete a file in the given path | 
 | ```GET``` | /api/contents<br>/\<path\>/\<file\><br>/checkpoints | get lists checkpoints for a file. |
-| ```GET``` | /api/contents<br>/\<path\>/\<file\><br>/checkpoints | post creates a new checkpoint. |
+| ```POST``` | /api/contents<br>/\<path\>/\<file\><br>/checkpoints | post creates a new checkpoint. |
 | ```POST``` | /api/contents<br>/\<path\>/\<file\><br>/checkpoints/\<checkpoint_id\> | post restores a file from a checkpoint. |
 | ```DELETE``` | /api/contents<br>/\<path\>/\<file\><br>/checkpoints/\<checkpoint_id\> | delete clears a checkpoint for a given file. |
 

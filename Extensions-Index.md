@@ -328,6 +328,18 @@ To install:
     %install_ext https://raw.github.com/piti118/inumpy/master/inumpy.py
 ```
 
+## iorient
+
+Query OrientDB via IPython using OrientDB SQL or Gremlin.
+
+[Homepage](https://github.com/lebedov/iorient)
+
+To install:
+
+```text
+    pip install iorient
+```
+
 ##ipy_table
 
 Create richly formatted data tables in IPython Notebooks.

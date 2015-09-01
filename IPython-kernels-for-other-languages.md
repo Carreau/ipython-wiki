@@ -34,7 +34,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 1.   [IJavascript](https://www.npmjs.com/package/ijavascript)
 1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
-1.   [idl_kernel](https://github.com/lstagner/idl_kernel)
+1.   [idl_kernel](https://github.com/lstagner/idl_kernel) IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5 
 1.   [Mochi Kernel](https://github.com/pya/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
 1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)

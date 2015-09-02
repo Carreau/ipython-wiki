@@ -1,4 +1,4 @@
-**As of 9/2/2015 this document is no longer being maintained in this location. Please see the new Project Jupyter Governance repo at https://github.com/jupyter/governance**
+**As of 9/2/2015 this document is no longer being maintained in this location. Please see the new Project Jupyter Governance repo at: https://github.com/jupyter/governance**.
 
 The intent of this document is to formalize the governance process that the IPython/Jupyter project has used informally since its inception in 2001. This document clarifies how decisions are made and how the various elements of our community interact, including the relationship between open source collaborative development and work that may be funded by for-profit or non-profit entities.
 

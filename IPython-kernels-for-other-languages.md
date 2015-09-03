@@ -25,7 +25,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 1.   [IOctave](https://github.com/calysto/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [IMatlab](https://github.com/calysto/matlab_kernel)
-1.   [ICSharp](https://github.com/zabirauf/icsharp)
+1.   [ICSharp](https://github.com/zabirauf/icsharp) - NOTE: UN-MAINTAINED, ALPHA VERSION!
 1.   [Bash](https://github.com/takluyver/bash_kernel)
 1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
 1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)

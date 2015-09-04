@@ -52,6 +52,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 1.   [cl-jupyter (Common Lisp) Kernel](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)
 1.   [Maxima-Jupyter](https://github.com/robert-dodier/maxima-jupyter)
 1.   [Calysto LC3](https://github.com/Calysto/calysto_lc3) - Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)
+1.   [SageMath](http://www.sagemath.org/)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

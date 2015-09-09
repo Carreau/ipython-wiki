@@ -2,6 +2,12 @@
 
 The Kernel Zero, is of course [IPython](https://ipython.org), which you can get though [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
 
+|Name| Link | Jupyter/IPython Version | Language(s) Version | 3rd party dependencies |
+|----|------|-------------------------|---------------------|------------------------|
+|ICSharp|https://github.com/zabirauf/icsharp|IPython 2.0|C# 4.0+|scriptcs|
+
+Add your project to table above:
+
 1.   [IJulia](https://github.com/JuliaLang/IJulia.jl)
 1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
 1.   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)
@@ -25,7 +31,6 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 1.   [IOctave](https://github.com/calysto/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [IMatlab](https://github.com/calysto/matlab_kernel)
-1.   [ICSharp](https://github.com/zabirauf/icsharp) - NOTE: MIGRATION IN PROGRESS!
 1.   [Bash](https://github.com/takluyver/bash_kernel)
 1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
 1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)

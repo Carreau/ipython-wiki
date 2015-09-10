@@ -20,12 +20,12 @@ Notes on working with GitHub
     - Duplicate of an existing Issue
     - Closed because we won't fix it 
     - When an issue is closed with **no action**, it means that the issue will not be fixed, or it was not an issue at all.
-* When closing an issue, it should always have one of these two milestones:
-    - **next backport release** because the issue has been addressed
+* When closing an issue, it should always have one of these milestones:
+    - **next minor release** because the issue has been addressed
     - **next major release** because the issue has been addressed
-    - **noaction** because the issue *will not* be addressed, or it is a duplicate/non-issue.
+    - **no action** because the issue *will not* be addressed, or it is a duplicate/non-issue.
 
-In general: When in doubt, mark with **next release**.  We can always push back when we have more specific plans for a given release.
+In general: When in doubt, mark with **next release**.  We can always push back when we get closer to a given release.
 
 
 ## Labels and issues
@@ -35,16 +35,16 @@ Issues should always be labeled once they are confirmed (not necessary for issue
 Some significant labels:
 
 * `needs-info`: issue needs more information from submitter before progress can be made
-* `type-bug`: errors are raised, or unintended behavior occurs
-* `type-enhancement`: improvements that are not bugs
+* `bug`: errors are raised, or unintended behavior occurs
+* `enhancement`: improvements that are not bugs
 * <del>backport-X.Y.Z: Any fix for this issue should be backported to the maintenance branch.<del> backports are expressed with milestones, starting with 2.1.
 * `prio-foo`: a priority level for ranking issues - nonessential, but prio-high/low are useful for explicitly promoting/demoting issues, particularly when nearing release.
 * `ClosedPR`: This issue is a reminder for a PR that was closed for going stale.
-* `quickfix`: Obvious or easy fixes.
+* `sprint-friendly`: Obvious or easy fixes, where
 
-All confirmed issues should at least have a `type-foo` label, and be marked with any affected components (e.g `parallel`, `qtconsole`, `htmlnotebook`), or particular sources of error (e.g. `py3k` or `unicode`).
+All confirmed issues should at least have a `bug` or `enhancement` label, and be marked with any affected components (e.g `parallel`, `qtconsole`, `htmlnotebook`), or particular sources of error (e.g. `py3k` or `unicode`) if we have appropriate labels.
 
-The `quickfix` label is probably the best place for new contributors to start.
+The `sprint-friendly` label is probably the best place for new contributors to start.
 
 
 ## Pull Requests

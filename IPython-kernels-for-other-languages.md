@@ -5,8 +5,9 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |Name| Link | Jupyter/IPython Version | Language(s) Version | 3rd party dependencies |
 |----|------|-------------------------|---------------------|------------------------|
 |ICSharp|https://github.com/zabirauf/icsharp|IPython 2.0|C# 4.0+|scriptcs|
+|IRKernel|https://github.com/IRkernel/IRkernel|IPython 3.0|R 3.2|rzmq|
 
-Add your project to table above:
+Add your project to the table above:
 
 1.   [IJulia](https://github.com/JuliaLang/IJulia.jl)
 1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
@@ -20,7 +21,6 @@ Add your project to table above:
 1.   [LuaJIT/Torch](https://github.com/facebook/iTorch)
 1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
-1.   [IRKernel](https://github.com/takluyver/IRkernel) (for the R language)
 1.   [IErlang](https://github.com/robbielynch/ierlang)
 1.   [IElixir](https://github.com/pprzetacznik/IElixir)
 1.   [IOCaml](https://github.com/andrewray/iocaml)

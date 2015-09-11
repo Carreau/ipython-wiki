@@ -6,6 +6,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |----|------|-------------------------|---------------------|------------------------|
 |ICSharp|https://github.com/zabirauf/icsharp|IPython 2.0|C# 4.0+|scriptcs|
 |IRKernel|http://irkernel.github.io/|IPython 3.0|R 3.2|rzmq|
+|SageMath|http://www.sagemath.org/|IPython 3.2|Any|many|
 
 Add your project to the table above:
 
@@ -57,7 +58,6 @@ Add your project to the table above:
 1.   [cl-jupyter (Common Lisp) Kernel](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)
 1.   [Maxima-Jupyter](https://github.com/robert-dodier/maxima-jupyter)
 1.   [Calysto LC3](https://github.com/Calysto/calysto_lc3) - Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)
-1.   [SageMath](http://www.sagemath.org/)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

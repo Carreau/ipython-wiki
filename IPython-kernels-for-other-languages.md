@@ -4,7 +4,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 
 |Name| Link | Jupyter/IPython Version | Language(s) Version | 3rd party dependencies |
 |----|------|-------------------------|---------------------|------------------------|
-|ICSharp|https://github.com/zabirauf/icsharp|IPython 2.0|C# 4.0+|scriptcs|
+|ICSharp|https://github.com/zabirauf/icsharp|Jupyter 4.0|C# 4.0+|scriptcs|
 |IRKernel|http://irkernel.github.io/|IPython 3.0|R 3.2|rzmq|
 |SageMath|http://www.sagemath.org/|IPython 3.2|Any|many|
 

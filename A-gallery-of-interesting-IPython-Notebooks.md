@@ -509,7 +509,7 @@ by Christopher Bonnett [paper](http://arxiv.org/abs/1312.1287)(submitted to MNRA
 1. [Mechanisms for stable, robust, and adaptive development of orientation maps in the primary visual cortex](http://dx.doi.org/10.1523/JNEUROSCI.1037-13.2013) by Jean-Luc R. Stevens, Judith S. Law, Jan Antolik, and James A. Bednar. Journal of Neuroscience, 33:15747-15766, 2013. [Notebook1]
 (https://ioam.github.io/topographica/_static/gcal_notebook.html), [Notebook2](https://ioam.github.io/topographica/_static/stevens_jn13_notebook.html).
 
-1. [Accelerated Randomized Benchmarking](http://nbviewer.ipython.org/github/cgranade/accelerated-randomized-benchmarking/blob/master/src/model_testing.ipynb), by [Christopher Granade](http://www.cgranade.com/), [Christopher Ferrie](https://sites.google.com/site/csferrie/) and D. G. Cory. [arXiv](http://arxiv.org/abs/1404.5275), [GitHub repo](https://github.com/cgranade/accelerated-randomized-benchmarking).
+1. [Accelerated Randomized Benchmarking](http://nbviewer.ipython.org/github/cgranade/accelerated-randomized-benchmarking/blob/master/src/model_testing.ipynb), by [Christopher Granade](http://www.cgranade.com/), [Christopher Ferrie](https://sites.google.com/site/csferrie/) and D. G. Cory. [New Journal of Physics **17** 013042 (2015)](http://iopscience.iop.org/article/10.1088/1367-2630/17/1/013042/meta;jsessionid=1F48CDD7C7D7849B0777C495ED1551CC.c1), [arXiv](http://arxiv.org/abs/1404.5275), [GitHub repo](https://github.com/cgranade/accelerated-randomized-benchmarking).
 
 1. [Dynamics and associations of microbial community types across the human body](http://dx.doi.org/10.1038/nature13178), by Tao Ding & Patrick D. Schloss. [Notebook replicating results](http://nbviewer.ipython.org/gist/pschloss/9815766/notebook.ipynb).
 

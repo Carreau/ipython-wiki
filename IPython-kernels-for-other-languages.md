@@ -38,6 +38,8 @@ Add your project to the table above:
 1.   [Redis Kernel](https://github.com/supercoderz/redis_kernel)
 1.   [jove, a kernel for io.js](https://www.npmjs.com/package/jove)
 1.   [IJavascript](https://www.npmjs.com/package/ijavascript)
+1.   [jp-CoffeeScript](https://www.npmjs.com/package/jp-coffeescript)
+1.   [jp-babel](https://www.npmjs.com/package/jp-babel)
 1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel) IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5 

@@ -51,6 +51,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * The code of the [IPython mini-book](https://github.com/rossant/ipython-minibook) by C. Rossant, introducing IPython, NumPy, SciPy, Pandas and matplotlib for interactive computing and data visualization.
 
+* [Python Tutorial](https://github.com/rajathkumarmp/Python-Lectures) by [Rajath Kumar M P](https://github.com/rajathkumarmp) 
+
 ### Programming and Computer Science
 
 * [Introduction to Programming (using Python)](http://nbviewer.ipython.org/github/ehmatthes/intro_programming/blob/master/notebooks/index.ipynb), an entire introductory Python course written by [Eric Matthes](http://peak5390.wordpress.com/about). [This post](http://peak5390.wordpress.com/2013/09/22/how-ipython-notebook-and-github-have-changed-the-way-i-teach-python/) explains the educational context in an Alaskan high school where Eric is a teacher.

@@ -20,7 +20,7 @@ Add your project to the table above:
 1.   [IAldor](https://github.com/mattpap/IAldor)
 1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb) - kernels implemented in Mono, including Java, IronPython, Boo, Logo, BASIC, and many others
 1.   [LuaJIT/Torch](https://github.com/facebook/iTorch)
-1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)
+1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel) abandoned, forked as [IPyLua](https://github.com/pakozm/IPyLua)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
 1.   [IErlang](https://github.com/robbielynch/ierlang)
 1.   [IElixir](https://github.com/pprzetacznik/IElixir)

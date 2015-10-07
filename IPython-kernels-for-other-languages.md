@@ -69,13 +69,13 @@ Many kernels are available for installation on [PyPI](https://pypi.python.org/py
 
 *   [Jove](https://github.com/jove-sh) - notebook interface in Java; provides Spark and Scala kernels
 
-## Creating new IPython kernels
+## Creating new Jupyter kernels
 
-[Making kernels for IPython](http://ipython.org/ipython-doc/dev/development/kernels.html) in the documentation.
+[Making kernels for Jupyter](http://jupyter-client.readthedocs.org/en/latest/kernels.html) in the documentation.
 
 [IHaskell creator blog
 post](http://andrew.gibiansky.com/blog/ipython/ipython-kernels/)
 
 [Testing kernels against message specification (work in progress)](https://github.com/ipython/ipython/wiki/Dev:-Testing-kernels-against-message-specification)
 
-[Pull request for tool to test the kernel against specification (work in progress)](https://github.com/ipython/ipython/pull/7646) 
+[Tool to test a kernel against specification (work in progress)](https://github.com/jupyter/jupyter_kernel_test) 

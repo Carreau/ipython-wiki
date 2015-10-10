@@ -19,7 +19,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [General topics in scientific computing](#general-topics-in-scientific-computing)
   * [Social data](#social-data)
   * [Psychology and Neuroscience](#psychology-and-neuroscience)
-  * [Machine Learning](#machine-learning)
+  * [Machine Learning, Statistics and Probability](#machine-learning-statistics-and-probability)
   * [Physics, Chemistry and Biology](#physics-chemistry-and-biology)
   * [Economics](#economics)
   * [Earth science and geo-spatial data](#earth-science-and-geo-spatial-data)
@@ -265,7 +265,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Loading and visualizing fMRI data](http://nbviewer.ipython.org/github/GaelVaroquaux/nilearn_course/blob/master/rendered_notebooks/1_Introduction.ipynb), part of the [Functional connectivity with NiLearn course](https://github.com/GaelVaroquaux/nilearn_course) by [Gaël Varoquaux](http://gael-varoquaux.info).
 
-### Machine Learning
+### Machine Learning, Statistics and Probability
 
 * [An introduction to parallel machine learning with sklearn, joblib and IPython.parallel](http://nbviewer.ipython.org/gist/5115540/Model%20Selection%20for%20the%20Nystroem%20Method.ipynb), a notebook that accompanies this [slide deck](https://speakerdeck.com/ogrisel/parallel-and-large-scale-machine-learning-with-scikit-learn) by [Olivier Grisel](https://github.com/ogrisel).
 
@@ -288,6 +288,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [Introduction to Linear Regression using Python](http://nbviewer.ipython.org/github/justmarkham/DAT4/blob/master/notebooks/08_linear_regression.ipynb) by [Kevin Markham](https://github.com/justmarkham)
 
 * [Machine learning in Python](http://nbviewer.ipython.org/github/jdwittenauer/ipython-notebooks/blob/master/ML-Exercise1.ipynb), a series based on Andrew Ng's Coursera class on machine learning.  Part of a [larger collection of data science notebooks](https://github.com/jdwittenauer/ipython-notebooks) by [John Wittenauer](https://github.com/jdwittenauer).
+
+* [Probability, Paradox, and the Reasonable Person Principle](http://nbviewer.ipython.org/url/norvig.com/ipython/Probability.ipynb), by Peter Norvig.
 
 ### Physics, Chemistry and Biology
 

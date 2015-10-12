@@ -16,7 +16,7 @@ A few interesting widgets or experiments with widgets are listed here.
 * [cookiecutter-ipython-widget](https://github.com/bollwyvl/cookiecutter-ipython-widget), a [cookiecutter](http://cookiecutter.readthedocs.org/en/latest/) for creating a pip-installable widget
 * [Turtle widget](https://github.com/takluyver/mobilechelonian/tree/require-widgets)
 * [ipython-flightwidgets](https://github.com/jdfreder/ipython-flightwidgets), widgets that can be used with flight control notebooks, simulators, or other flight related applications.
-* [gamepad](https://github.com/jovyan/gamepad), support for the browser API to gamepads and joysticks. (This was recently integrated in the core ipywidgets library.)
+* [gamepad](https://github.com/jovyan/gamepad), support for the browser API to gamepads and joysticks (*This was recently integrated in the core ipywidgets library*).
 * [static, persistent widgets](https://gist.github.com/danielballan/63c98b8df34a418774f2) an experiment with static, persistent widgets backed by a sqlite db. Save states explicitly, and then scroll the slider to restore history
 
 ## Projects using widgets

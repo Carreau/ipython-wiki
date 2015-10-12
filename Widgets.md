@@ -17,6 +17,7 @@ A few interesting widgets or experiments with widgets are listed here.
 * [ipython-flightwidgets](https://github.com/jdfreder/ipython-flightwidgets), widgets that can be used with flight control notebooks, simulators, or other flight related applications.
 * [gamepad](https://github.com/jovyan/gamepad), support for the browser API to gamepads and joysticks. (This was recently integrated in the core ipywidgets library.)
 * [static, persistent widgets](https://gist.github.com/danielballan/63c98b8df34a418774f2) an experiment with static, persistent widgets backed by a sqlite db. Save states explicitly, and then scroll the slider to restore history
+* [bqplot](https://github.com/bloomberg/bqplot) a plotting system for the Jupyter notebook based on ipywidgets and d3.js
 
 ## Projects using widgets
 

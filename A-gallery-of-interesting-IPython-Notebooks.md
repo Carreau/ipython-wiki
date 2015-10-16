@@ -149,6 +149,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Estimated likelihood of observing a large earthquake on a continental low‐angle normal fault and implications for low‐angle normal fault activity](http://nbviewer.ipython.org/github/cossatot/lanf_earthquake_likelihood/blob/master/notebooks/lanf_manuscript_notebook.ipynb), an executable version of a paper by Richard Styron and Eric Hetland published in *Geophysical Research Letters*, on earthquake probabilities.
 
+* [python4oceanographers](https://ocefpaf.github.io/python4oceanographers/), a blog demonstrating analyses in physical oceanography from [resource-demanding numerical computations with functions in compiled languages](https://ocefpaf.github.io/python4oceanographers/blog/2015/10/05/isosurfaces/) to specialized [tidal analysis](https://ocefpaf.github.io/python4oceanographers/blog/2015/02/16/utide/) to [visualization of various geo data using fancy things like interactive maps](https://ocefpaf.github.io/python4oceanographers/blog/2015/07/13/interactive_geo/).
+
 ### Linguistics and Text Mining
 
 * [Workshop on text analysis](http://nbviewer.ipython.org/github/nealcaren/workshop_2014/tree/master/notebooks/) by [Neal Caren](http://nealcaren.web.unc.edu).

@@ -14,7 +14,9 @@ Which is now listening on localhost by default.
 
 Now we need to get that connection file to `client`:
 
-    [client] $ scp server:/Users/you/.ipython/profile_default/security/kernel-1234.json ./
+    [client] $ scp server:/Users/you/.local/share/jupyter/runtime/kernel-1234.json ./
+
+(*NOTE:* In previous versions it may be in `/Users/you/.ipython/profile_default/security/kernel-1234.json`.)
 
 and the next time we start a frontend (`ipython console`, `qtconsole`, etc.), just add `--ssh server`:
 

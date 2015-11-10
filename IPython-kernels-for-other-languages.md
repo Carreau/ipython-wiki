@@ -6,7 +6,8 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |----|------|-------------------------|---------------------|------------------------|
 |ICSharp|https://github.com/zabirauf/icsharp|Jupyter 4.0|C# 4.0+|scriptcs|
 |IRKernel|http://irkernel.github.io/|IPython 3.0|R 3.2|rzmq|
-|SageMath|http://www.sagemath.org/|IPython 3.2|Any|many|
+|SageMath|http://www.sagemath.org/|Jupyter 4|Any|many|
+|pari_jupyter|https://github.com/jdemeyer/pari_jupyter|Jupyter 4|2.8|Cython|
 
 Add your project to the table above:
 

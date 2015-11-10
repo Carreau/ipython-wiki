@@ -62,6 +62,7 @@ Add your project to the table above:
 1.   [Calysto LC3](https://github.com/Calysto/calysto_lc3) - Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)
 1.   [Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)
 1.   [Yacas](https://github.com/grzegorzmazur/yacas_kernel)
+1.   [IJython](https://github.com/suvarchal/IJython)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).

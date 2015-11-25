@@ -21,7 +21,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Psychology and Neuroscience](#psychology-and-neuroscience)
   * [Machine Learning, Statistics and Probability](#machine-learning-statistics-and-probability)
   * [Physics, Chemistry and Biology](#physics-chemistry-and-biology)
-  * [Economics](#economics)
+  * [Economics and Finance](#economics-and-finance)
   * [Earth science and geo-spatial data](#earth-science-and-geo-spatial-data)
   * [Data visualization and plotting](#data-visualization-and-plotting)
   * [Mathematics](#mathematics)
@@ -307,10 +307,11 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 
-### Economics
+### Economics and Finance
 
 * [Replication of the highly-contentious analysis of economic growth by Reinhart and Rogoff](http://nbviewer.ipython.org/github/vincentarelbundock/Reinhart-Rogoff/blob/master/reinhart-rogoff.ipynb), by [Vincent Arel-Bundock](http://umich.edu/~varel), [full repo here](https://github.com/vincentarelbundock/Reinhart-Rogoff). This is based on the [widely-publicized critique of the original analysis done by Herndon, Ash, and Pollin](http://www.peri.umass.edu/236/hash/31e2ff374b6377b2ddec04deaa6388b1/publication/566).
 
+* [fecon235 for Financial Economics](https://github.com/rsvp/fecon235) series of notebooks which examines time-series data for economics and finance. Easy API to freely access data from the Federal Reserve, SEC, CFTC, stock and futures exchanges. Thus research from older notebooks can be replicated, and updated using the most current data. For example, this notebook forecasts likely Fed policy for setting the [Fed Funds rate](https://git.io/fedfunds), but market sentiment across major asset classes is observable from the [CFTC Commitment of Traders Report](https://git.io/cotr). Major economics indicators are renormalized: for example, various measures of [inflation](https://git.io/infl), optionally with the forward-looking break-even rates derived from U.S. Treasury bonds. Other notebooks examine international markets: especially, gold and foreign exchange. 
 
 ### Earth science and geo-spatial data
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/gist/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.

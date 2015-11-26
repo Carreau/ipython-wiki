@@ -173,6 +173,17 @@ Scientific computing projects
     programmable interface, along with notebooks as documentation, e.g the 
     [tutorial on modeling epilepsy propagation](https://github.com/the-virtual-brain/tvb-documentation/blob/master/tutorials/tutorial_3_ModelingEpilepsy.ipynb).
 
+
+Projects in economics and finance
+---------------------------------
+
+-   [fecon235](https://github.com/rsvp/fecon235) is a project for computational data 
+    tools in **financial economics**. As of 2015, we have an easy API to freely access 
+    data from the U.S. Treasury, Federal Reserve, SEC, CFTC, stock and futures exchanges. 
+    Such data is integrated together using *pandas*, and we have developed tools 
+    for time-series analysis. Open development is ongoing in the area of international 
+    markets, especially: oil, gold, and foreign exchange. 
+
 In teaching
 -----------
 

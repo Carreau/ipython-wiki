@@ -64,6 +64,7 @@ Add your project to the table above:
 1.   [Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)
 1.   [Yacas](https://github.com/grzegorzmazur/yacas_kernel)
 1.   [IJython](https://github.com/suvarchal/IJython)
+1.   [ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT)
 
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
@@ -82,4 +83,3 @@ post](http://andrew.gibiansky.com/blog/ipython/ipython-kernels/)
 [Testing kernels against message specification (work in progress)](https://github.com/ipython/ipython/wiki/Dev:-Testing-kernels-against-message-specification)
 
 [Tool to test a kernel against specification (work in progress)](https://github.com/jupyter/jupyter_kernel_test)
- 

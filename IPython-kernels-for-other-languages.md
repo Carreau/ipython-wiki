@@ -81,4 +81,5 @@ post](http://andrew.gibiansky.com/blog/ipython/ipython-kernels/)
 
 [Testing kernels against message specification (work in progress)](https://github.com/ipython/ipython/wiki/Dev:-Testing-kernels-against-message-specification)
 
-[Tool to test a kernel against specification (work in progress)](https://github.com/jupyter/jupyter_kernel_test) 
+[Tool to test a kernel against specification (work in progress)](https://github.com/jupyter/jupyter_kernel_test)
+ 

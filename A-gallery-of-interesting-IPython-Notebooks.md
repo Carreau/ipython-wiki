@@ -97,6 +97,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Desperately Seeking Silver](http://nbviewer.ipython.org/github/cs109/content/blob/master/HW2.ipynb), one of the homework sets for Harvard's [CS 109 Data Science course](http://cs109.org).
 
+* [IPython Notebooks for 'An Introduction to Statistical Learning with Applications in R'](https://github.com/JWarmenhoven/ISLR-python), Python code for a selection of tables, figures and LAB sections from the book by James, Witten, Hastie, Tibshirani (2013).
+
 * [Python Notebooks for StatLearning Exercises](https://github.com/sujitpal/statlearning-notebooks), Python implementations of the R labs for the [StatLearning: Statistical Learning](https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about) online course from Stanford University taught by Profs Trevor Hastie and Rob Tibshirani.
 
 * [Applied Predictive Modeling with Python](http://nbviewer.ipython.org/github/leig/Applied-Predictive-Modeling-with-Python/tree/master/notebooks/), Python implementations of the examples (originally written in R) from a famous introductory book, [Applied Predictive Modeling](http://appliedpredictivemodeling.com), by Max Kuhn and Kjell Johnson.

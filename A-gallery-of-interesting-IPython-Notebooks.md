@@ -193,7 +193,6 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/github/twiecki/CythonGSL/blob/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/gist/3914904).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/gist/3407544).
 
 * [Numpy performance tricks](http://nbviewer.ipython.org/gist/4645217), and [blog post](http://cyrille.rossant.net/numpy-performance-tricks/), by [Cyrille Rossant](http://cyrille.rossant.net/).
@@ -203,7 +202,6 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [Understanding the design of the R "formula" objects](http://nbviewer.ipython.org/url/perrin.dynevor.org/exploring_r_formula.ipynb) by Matthew Brett.
 
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
-
 
 * [The Traveling Salesperson Problem](http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb) by [Peter Norvig](http://norvig.com).
 
@@ -320,7 +318,6 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Geo-Spatial Data with IPython](http://nbviewer.ipython.org/github/mqlaql/geospatial-data/blob/master/Geospatial-Data-with-Python.ipynb). Tutorial by [Kelsey Jordahl](http://kjordahl.net/) from SciPy2013.
 
-
 ### Data visualization and plotting
 
 * A [Notebook](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb) with an interactive Hans Rosling Gapminder bubble chart from [Plotly](https://plot.ly/api/Python). 
@@ -358,6 +355,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 (http://nbviewer.ipython.org/github/sdrelton/matrix_function_notebooks/blob/master/TheMatrixExponential.ipynb), an introduction to the matrix exponential, its applications, and a list of available software in Python and MATLAB. By [Sam Relton](http://www.maths.manchester.ac.uk/~srelton/).
 
 * [Fractals, complex numbers, and your imagination](http://nbviewer.ipython.org/github/cfangmeier/ipython_notebooks/blob/master/Imagination.ipynb), by [Caleb Fangmeier](https://github.com/cfangmeier).
+
+* [A SymPy tutorial](http://nbviewer.ipython.org/url/www.inp.nsk.su/~grozin/python/sympy.ipynb), by [Andrey Grozin](http://www.inp.nsk.su/~grozin/).
 
 ### Signal and Sound Processing
 

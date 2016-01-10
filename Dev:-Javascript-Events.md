@@ -23,6 +23,11 @@ This page documents the core set of events, and explains when and why they are t
 * [app_initialized.DashboardApp](#app_initializeddashboardapp)
 * [sessions_loaded.Dashboard](#sessions_loadeddashboard)
 
+#### app_initialized.DashboardApp
+
+When the iPython Notebook browser window opens for the first time and initializes the Dashboard App. The Dashboard App lists the files and notebooks in the current directory. Additionally, it lets you create and open new iPython Notebooks.
+
+
 ## Kernel-related events
 
 * [execution_request.Kernel](#execution_requestkernel)

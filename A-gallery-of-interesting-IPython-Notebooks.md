@@ -258,7 +258,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 * [San Francisco's Drug Geography](http://nbviewer.ipython.org/github/lmart999/GIS/blob/master/SF_GIS_Crime.ipynb), a GIS analysis of public crime data in SF, by [Lance Martin](https://github.com/lmart999).
 
 ### Psychology and Neuroscience
-* [Cue Combination with Neural Populations](http://nbviewer.ipython.org/github/wtadler/cue-combination-with-neurons/blob/master/Cue%20Combination%20with%20Neural%20Populations.ipynb) by [Will Adler](http://www.wtadler.com). Intuition and simulation for the theory (Ma *et al.*, 2006) that through probabilistic population codes, neurons can perform optimal cue combination with simple linear operations. Demonstrates that variance in cortical activity, rather than impairing sensory systems, is an adaptive mechanism to encode uncertainty in sensory measurements.
+* [Cue Combination with Neural Populations](http://nbviewer.ipython.org/github/wtadler/cue-combination-with-neurons/blob/master/neural_cue_combination.ipynb) by [Will Adler](http://www.wtadler.com). Intuition and simulation for the theory (Ma *et al.*, 2006) that through probabilistic population codes, neurons can perform optimal cue combination with simple linear operations. Demonstrates that variance in cortical activity, rather than impairing sensory systems, is an adaptive mechanism to encode uncertainty in sensory measurements.
 
 * [Modeling psychophysical data with non-linear functions](http://nbviewer.ipython.org/github/arokem/teach_optimization/blob/master/optimization.ipynb) by Ariel Rokem.
 

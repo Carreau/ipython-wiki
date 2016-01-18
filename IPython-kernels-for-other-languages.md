@@ -46,7 +46,7 @@ Add your project to the table above:
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel) IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5 
 1.   [Mochi Kernel](https://github.com/pya/mochi-kernel) 
 1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
-1.   [Spark Kernel](https://github.com/ibm-et/spark-kernel)
+1.   [Spark Kernel](https://github.com/apache/incubator-toree)
 1.   [Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)
 1.   [MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)
 1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)

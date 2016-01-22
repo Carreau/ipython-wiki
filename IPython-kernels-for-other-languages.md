@@ -2,34 +2,37 @@
 
 The Kernel Zero, is of course [IPython](https://ipython.org), which you can get though [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
 
-|Name| Link | Jupyter/IPython Version | Language(s) Version | 3rd party dependencies |
-|----|------|-------------------------|---------------------|------------------------|
-|ICSharp|https://github.com/zabirauf/icsharp|Jupyter 4.0|C# 4.0+|scriptcs|
-|IRKernel|http://irkernel.github.io/|IPython 3.0|R 3.2|rzmq|
-|SageMath|http://www.sagemath.org/|Jupyter 4|Any|many|
-|pari_jupyter|https://github.com/jdemeyer/pari_jupyter|Jupyter 4|2.8|Cython|
+|Name| Jupyter/IPython Version | Language(s) Version | 3rd party dependencies | Example Notebooks | Notes |
+|----|-------------------------|---------------------|------------------------|-------------------|-------|
+|[IPyKernel](https://github.com/ipython/ipykernel)|Jupyter 4.0|python 2.7, >= 3.3|pyzmq|||
+|[IJulia](https://github.com/JuliaLang/IJulia.jl)||julia >= 0.3||||
+|[IHaskell](https://github.com/gibiansky/IHaskell)||ghc >= 7.6||||
+|[IRuby](https://github.com/SciRuby/iruby)||ruby >= 2.1||||
+|[IJavascript](https://github.com/n-riesco/ijavascript)||nodejs >= 0.10||||
+|[jpCoffeescript](https://github.com/n-riesco/jp-coffeescript)||coffeescript >= 1.7||||
+|[ICSharp](https://github.com/zabirauf/icsharp)|Jupyter 4.0|C# 4.0+|scriptcs|||
+|[IRKernel](http://irkernel.github.io/)|IPython 3.0|R 3.2|rzmq|||
+|[SageMath](http://www.sagemath.org/)|Jupyter 4|Any|many|||
+|[pari_jupyter](https://github.com/jdemeyer/pari_jupyter)|Jupyter 4|2.8|Cython|||
+|[IFSharp](https://github.com/fsprojects/IfSharp)|IPython 2.0|F#||[Features](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)||
+|[IGo](https://github.com/takluyver/igo)||Go >= 1.4||||
+|[IScala](https://github.com/mattpap/IScala)||Scala||||
+|[IErlang](https://github.com/robbielynch/ierlang)|IPython 2.3|Erlang|rebar|||
+|[ITorch](https://github.com/facebook/iTorch)|IPython >= 2.2|Torch 7 (LuaJIT)||||
+|[IElixir](https://github.com/pprzetacznik/IElixir)|Jupyter|Elixir||||
+|[IAldor](https://github.com/mattpap/IAldor)|IPython >= 1|Aldor||||
+|[IOCaml](https://github.com/andrewray/iocaml)|IPython >= 1.1|OCaml >= 4.01|opam|||
+|[IForth](https://github.com/jdfreder/iforth)|IPython >= 3|Forth||||
+|[IPerl](https://metacpan.org/release/Devel-IPerl)||Perl 5||||
+|[IPerl6](https://github.com/timo/iperl6kernel)||Perl 6||||
+|[IPHP](https://github.com/dawehner/ipython-php)|IPython >= 2|PHP >= 5.4|composer|||
 
 Add your project to the table above:
 
-1.   [IJulia](https://github.com/JuliaLang/IJulia.jl)
-1.   [IHaskell](http://nbviewer.ipython.org/github/gibiansky/IHaskell/blob/master/notebooks/IHaskell.ipynb)
-1.   [IFSharp](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)
-1.   [IRuby](https://github.com/SciRuby/iruby)
-1.   [IGo](https://github.com/takluyver/igo)
-1.   [IScala](https://github.com/mattpap/IScala)
 1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
-1.   [IAldor](https://github.com/mattpap/IAldor)
 1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb) - kernels implemented in Mono, including Java, IronPython, Boo, Logo, BASIC, and many others
-1.   [LuaJIT/Torch](https://github.com/facebook/iTorch)
 1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel) abandoned, forked as [IPyLua](https://github.com/pakozm/IPyLua)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
-1.   [IErlang](https://github.com/robbielynch/ierlang)
-1.   [IElixir](https://github.com/pprzetacznik/IElixir)
-1.   [IOCaml](https://github.com/andrewray/iocaml)
-1.   [IForth](https://github.com/jdfreder/iforth)
-1.   [IPerl](https://metacpan.org/release/Devel-IPerl)
-1.   [IPerl6](https://github.com/timo/iperl6kernel)
-1.   [IPHP](https://github.com/dawehner/ipython-php)
 1.   [IOctave](https://github.com/calysto/octave_kernel)
 1.   [IScilab](https://github.com/blink1073/scilab_kernel)
 1.   [IMatlab](https://github.com/calysto/matlab_kernel)
@@ -38,8 +41,6 @@ Add your project to the table above:
 1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)
 1.   [Redis Kernel](https://github.com/supercoderz/redis_kernel)
 1.   [jove, a kernel for io.js](https://www.npmjs.com/package/jove)
-1.   [IJavascript](https://www.npmjs.com/package/ijavascript)
-1.   [jp-CoffeeScript](https://www.npmjs.com/package/jp-coffeescript)
 1.   [jp-babel](https://www.npmjs.com/package/jp-babel)
 1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)

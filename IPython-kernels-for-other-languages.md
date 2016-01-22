@@ -67,8 +67,26 @@ Add your project to the table above:
 1.   [ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT) - Data Analysis Framework (C++ and Python)
 1.   [Gnuplot Kernel](https://github.com/has2k1/gnuplot_kernel)
 
-
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
+
+### Repository
+
+Several of these kernels are available in a PPA for Ubuntu 15.10 (wily)/16.04 (xenial). Add it with:
+
+    sudo add-apt-repository ppa:chronitis/jupyter
+    sudo apt update
+    sudo apt install <kernelname>
+
+The following kernel packages are available (along with their dependencies):
+
+ * `ihaskell` (errata as of 2016-01-16: `hlint` integration doesn't work, disable with `:opt no-hlint`)
+ * `ijulia`
+ * `ijavascript`
+ * `jp-coffeescript`
+ * `irkernel`
+ * `iruby`
+
+(The repository doesn't contain ipython/jupyter - you'll still need to install it with `pip`)
 
 ## Additional Related Projects
 

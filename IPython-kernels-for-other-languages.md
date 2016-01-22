@@ -2,8 +2,8 @@
 
 The Kernel Zero, is of course [IPython](https://ipython.org), which you can get though [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
 
-|#|Name| Jupyter/IPython Version | Language(s) Version | 3rd party dependencies | Example Notebooks | Notes |
-|-|----|-------------------------|---------------------|------------------------|-------------------|-------|
+|Number|Name| Jupyter/IPython Version | Language(s) Version | 3rd party dependencies | Example Notebooks | Notes |
+|------|----|-------------------------|---------------------|------------------------|-------------------|-------|
 |1|[IPyKernel](https://github.com/ipython/ipykernel)|Jupyter 4.0|python 2.7, >= 3.3|pyzmq|||
 |2|[IJulia](https://github.com/JuliaLang/IJulia.jl)||julia >= 0.3||||
 |3|[IHaskell](https://github.com/gibiansky/IHaskell)||ghc >= 7.6||||

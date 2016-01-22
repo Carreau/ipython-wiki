@@ -26,22 +26,22 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[IPerl](https://metacpan.org/release/Devel-IPerl)||Perl 5||||
 |[IPerl6](https://github.com/timo/iperl6kernel)||Perl 6||||
 |[IPHP](https://github.com/dawehner/ipython-php)|IPython >= 2|PHP >= 5.4|composer|||
+|[IOctave](https://github.com/calysto/octave_kernel)|Jupyter|Octave||[Example](http://nbviewer.jupyter.org/github/Calysto/octave_kernel/blob/master/octave_kernel.ipynb)|MetaKernel|
+|[IScilab](https://github.com/blink1073/scilab_kernel)|Jupyter|Scilab|scilab2py||Wrapper|
+|[IMatlab](https://github.com/calysto/matlab_kernel)|Jupyter|Matlab|pymatbridge|[Example](http://nbviewer.ipython.org/github/Calysto/matlab_kernel/blob/master/matlab_kernel.ipynb)|Wrapper|
+|[Bash](https://github.com/takluyver/bash_kernel)|IPython >= 3|bash|||Wrapper|
+|[CloJupyter](https://github.com/roryk/clojupyter)|Jupyter|Clojure >= 1.7||||
+|[Hy Kernel](https://github.com/bollwyvl/hy_kernel/)|Jupyter|Hy||[Tutorial](http://nbviewer.ipython.org/github/bollwyvl/hy_kernel/blob/master/notebooks/Tutorial.ipynb)||
+|[Redis Kernel](https://github.com/supercoderz/redis_kernel)|IPython >= 3|redis|||Wrapper|
+|[jove](https://www.npmjs.com/package/jove)||io.js||||
+|[jp-babel](https://www.npmjs.com/package/jp-babel)|Jupyter|Babel||||
+|[ICalico](http://calicoproject.org/ICalico)|IPython >= 2|*multiple*||[Index](http://nbviewer.jupyter.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Index.ipynb)||
 
 Add your project to the table above:
 
 1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
-1.   [Calico Project](http://nbviewer.ipython.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Calico%20Overview.ipynb) - kernels implemented in Mono, including Java, IronPython, Boo, Logo, BASIC, and many others
 1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel) abandoned, forked as [IPyLua](https://github.com/pakozm/IPyLua)
 1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
-1.   [IOctave](https://github.com/calysto/octave_kernel)
-1.   [IScilab](https://github.com/blink1073/scilab_kernel)
-1.   [IMatlab](https://github.com/calysto/matlab_kernel)
-1.   [Bash](https://github.com/takluyver/bash_kernel)
-1.   [Clojure Kernel](https://github.com/roryk/ipython-clojure)
-1.   [Hy Kernel](https://github.com/bollwyvl/hy_kernel/)
-1.   [Redis Kernel](https://github.com/supercoderz/redis_kernel)
-1.   [jove, a kernel for io.js](https://www.npmjs.com/package/jove)
-1.   [jp-babel](https://www.npmjs.com/package/jp-babel)
 1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
 1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
 1.   [idl_kernel](https://github.com/lstagner/idl_kernel) IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5 

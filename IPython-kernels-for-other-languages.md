@@ -36,39 +36,38 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[jove](https://www.npmjs.com/package/jove)||io.js||||
 |[jp-babel](https://www.npmjs.com/package/jp-babel)|Jupyter|Babel||||
 |[ICalico](http://calicoproject.org/ICalico)|IPython >= 2|*multiple*||[Index](http://nbviewer.jupyter.org/urls/bitbucket.org/ipre/calico/raw/master/notebooks/Index.ipynb)||
-
-Add your project to the table above:
-
-1.   [IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)
-1.   [Lua Kernel](https://github.com/neomantra/lua_ipython_kernel) abandoned, forked as [IPyLua](https://github.com/pakozm/IPyLua)
-1.   [Simple example kernel](https://github.com/dsblank/simple_kernel)
-1.   [Calysto Scheme](https://github.com/Calysto/calysto_scheme)
-1.   [Calysto Processing](https://github.com/Calysto/calysto_processing)
-1.   [idl_kernel](https://github.com/lstagner/idl_kernel) IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5 
-1.   [Mochi Kernel](https://github.com/pya/mochi-kernel) 
-1.   [Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)
-1.   [Spark Kernel](https://github.com/apache/incubator-toree)
-1.   [Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)
-1.   [MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)
-1.   [MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)
-1.   [Brython Kernel](https://github.com/kikocorreoso/brythonmagic)
-1.   [IVisual VPython Kernel](https://pypi.python.org/pypi/IVisual)
-1.   [Brainfuck Kernel (IBrainfuck)](https://github.com/robbielynch/ibrainfuck)
-1.   [KDB+/Q Kernel (IKdbQ)](https://github.com/jvictorchen/IKdbQ)
-1.   [ICryptol](https://github.com/GaloisInc/ICryptol)
-1.   [C++ (cling)](https://github.com/minrk/clingkernel)
-1.   [Xonsh](https://github.com/calysto/xonsh_kernel)
-1.   [Prolog](https://github.com/Calysto/calysto_prolog)
-1.   [cl-jupyter (Common Lisp) Kernel](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)
-1.   [Maxima-Jupyter](https://github.com/robert-dodier/maxima-jupyter)
-1.   [Calysto LC3](https://github.com/Calysto/calysto_lc3) - Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)
-1.   [Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)
-1.   [Yacas](https://github.com/grzegorzmazur/yacas_kernel)
-1.   [IJython](https://github.com/suvarchal/IJython)
-1.   [ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT) - Data Analysis Framework (C++ and Python)
-1.   [Gnuplot Kernel](https://github.com/has2k1/gnuplot_kernel)
+|[IMathics](http://nbviewer.ipython.org/gist/sn6uv/8381447)||Mathics||||
+|[Lua Kernel](https://github.com/neomantra/lua_ipython_kernel)||Lua||||
+|[IPyLua](https://github.com/pakozm/IPyLua)||Lua|||Fork of *Lua Kernel*|
+|[Simple example kernel](https://github.com/dsblank/simple_kernel)||||||
+|[Calysto Scheme](https://github.com/Calysto/calysto_scheme)||Scheme|||MetaKernel|
+|[Calysto Processing](https://github.com/Calysto/calysto_processing)||Processing.js >= 2|||MetaKernel|
+|[idl_kernel](https://github.com/lstagner/idl_kernel)||IDL|||IDL seem to have a [built-in kernel](http://www.exelisvis.com/docs/idl_kernel.html) starting with version 8.5|
+|[Mochi Kernel](https://github.com/pya/mochi-kernel)||Mochi||||
+|[Lua (used in Splash)](https://github.com/scrapinghub/splash/tree/master/splash/kernel)||Lua||||
+|[Spark Kernel](https://github.com/apache/incubator-toree)|Jupyter|Scala, Python, R|Spark >= 1.5|||
+|[Skulpt Python Kernel](https://github.com/Calysto/skulpt_python)||Skulpt Python||[Examples](http://jupyter.cs.brynmawr.edu/hub/dblank/public/Examples/Skulpt%20Python%20Examples.ipynb)|MetaKernel|
+|[MetaKernel Bash](https://github.com/Calysto/metakernel/tree/master/metakernel_bash)||bash|||MetaKernel|
+|[MetaKernel Python](https://github.com/Calysto/metakernel/tree/master/metakernel_python)||python|||MetaKernel|
+|[IVisual](https://pypi.python.org/pypi/IVisual)||VPython||[Ball-in-Box](http://nbviewer.jupyter.org/url/dl.dropboxusercontent.com/u/5095342/visual/Ball-in-Box.ipynb)||
+|[IBrainfuck](https://github.com/robbielynch/ibrainfuck)||Brainfuck||[Demo](http://nbviewer.jupyter.org/gist/robbielynch/e611442ca2d056f3b78f)|Wrapper|
+|[KDB+/Q Kernel (IKdbQ)](https://github.com/jvictorchen/IKdbQ)|IPython >= 3.1|Q|qzmq, qcrypt|||
+|[ICryptol](https://github.com/GaloisInc/ICryptol)||Cryptol|CVC4|||
+|[C++ (cling)](https://github.com/minrk/clingkernel)||||||
+|[Xonsh](https://github.com/calysto/xonsh_kernel)||Xonsh||[Example](http://nbviewer.ipython.org/github/Calysto/xonsh_kernel/blob/master/xonsh_kernel.ipynb)|MetaKernel|
+|[Prolog](https://github.com/Calysto/calysto_prolog)||Prolog|||MetaKernel|
+|[cl-jupyter](https://github.com/fredokun/cl-jupyter)|Jupyter|Common Lisp|Quicklisp|[About](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)||
+|[Maxima-Jupyter](https://github.com/robert-dodier/maxima-jupyter)|Jupyter|Maxima|Quicklisp|||
+|[Calysto LC3](https://github.com/Calysto/calysto_lc3)|||||Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)|
+|[Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)||Java >= 9||||
+|[Yacas](https://github.com/grzegorzmazur/yacas_kernel)||YACAS||||
+|[IJython](https://github.com/suvarchal/IJython)||Jython 2.5||||
+|[ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT)|Jupyter|C++/python|ROOT >= 6.05|||
+|[Gnuplot Kernel](https://github.com/has2k1/gnuplot_kernel)||Gnuplot||[Example](https://github.com/has2k1/gnuplot_kernel/tree/master/examples)|MetaKernel|
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
+
+[Brython Magics](https://github.com/kikocorreoso/brythonmagic)
 
 ### Repository
 

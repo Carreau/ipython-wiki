@@ -344,7 +344,7 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 
 * [Exploring how smooth-looking functions can have very surprising derivatives even at low orders](http://nbviewer.ipython.org/url/finiterank.com/cuadernos/suavesylocas.ipynb), combining SymPy and matplotlib.  By [Javier Moreno](http://finiterank.com).
 
-* [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2013/02/uygulamali-matematik-ve-yapay-ogrenim.html) (in Turkish). By Burak Bayramli.
+* [A Collection of Applied Mathematics and Machine Learning Tutorials](http://sayilarvekuramlar.blogspot.co.uk/2015/12/matematik-ders-notlari.html) (in Turkish). By Burak Bayramli.
 
 * [Function minimization with iminuit](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/tutorial.ipynb), an introductory companion to their [hard core tutorial](http://nbviewer.ipython.org/github/iminuit/iminuit/blob/master/tutorial/hard-core-tutorial.ipynb). By the [iminuit project](http://iminuit.github.io/iminuit).
 

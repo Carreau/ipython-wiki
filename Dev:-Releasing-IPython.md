@@ -47,9 +47,7 @@ You may want to also do a test build of the docs.
 
 # 3. Create and push the new tag
 
-Edit `IPython/core/release.py` to have the current version, and then run `jsversion` to update the value in Javascript:
-
-    python setup.py jsversion
+Edit `IPython/core/release.py` to have the current version.
 
 Commit the changes to release.py and jsversion:
 
@@ -63,14 +61,13 @@ Create and push the tag:
 
 Update release.py back to `x.y-dev` or `x.y-maint`, and push:
 
-    python setup.py jsversion
     git commit -am "back to development"
     git push origin $BRANCH
 
 # 4. Get a fresh clone of the tag for building the release:
 
     cd /tmp
-    git clone --recursive --depth 1 https://github.com/ipython/ipython.git -b "$TAG" 
+    git clone --depth 1 https://github.com/ipython/ipython.git -b "$TAG" 
 
 # 5. Run the `release` script
 
@@ -79,21 +76,7 @@ Update release.py back to `x.y-dev` or `x.y-maint`, and push:
 This makes the tarballs, zipfiles, and wheels.  It posts them to archive.ipython.org and
 registers the release with PyPI.
 
-This will require that you have current wheel, Python 3.4 and Python 2.7, and an appropriate version of LESS.
-
-# 6. Publish updated docs
-
-Make sure you have all the dependencies, otherwise parts of the API documentation can't be built. Sphinx should warn you if imports fail.
-
-For this we are now using GitHub pages:
-
-    cd docs
-    VERSION=[MAJOR_VERSION_ONLY] make gh-pages
-
-
-- (If new major release) Update the `stable` symlink to point to the released version.
-- Check that the output makes sense
-- Run `git push` to update the public version of the docs on gh-pages.
+This will require that you have current wheel, Python 3.4 and Python 2.7.
 
 # 7. Update the IPython website
 

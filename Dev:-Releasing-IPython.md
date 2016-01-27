@@ -26,12 +26,12 @@ These will be used later if you want to copy/paste, or you can just type the app
           python tools/update_whatsnew.py
 
   - update `docs/source/whatsnew/development.rst`, to ensure it covers the major points.
-  - move the contents of `development.rst` to `versionX.Y.rst`
+  - move the contents of `development.rst` to `versionX.rst`
 - generate summary of GitHub contributions, which can be done with:
 
         python tools/github_stats.py --milestone $MILESTONE > stats.rst
 
-  which may need some manual cleanup. Add the cleaned up result and add it to `docs/source/whatsnew/github-stats-X.Y.rst` (make a new file, or add it to the top, depending on whether it is a major release).
+  which may need some manual cleanup. Add the cleaned up result and add it to `docs/source/whatsnew/github-stats-X.rst` (make a new file, or add it to the top, depending on whether it is a major release).
   You can use:
 
         git log --format="%aN <%aE>" $PREV_RELEASE... | sort -u -f

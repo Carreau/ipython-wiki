@@ -171,6 +171,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Classify human movements using Dynamic Time Warping & K Nearest Neighbors:](http://nbviewer.ipython.org/github/markdregan/K-Nearest-Neighbors-with-Dynamic-Time-Warping/blob/master/K_Nearest_Neighbor_Dynamic_Time_Warping.ipynb) Signals from a smart phone gyroscope and accelerometer are used to classify if the person is running, walking, sitting standing etc. This IPython notebook contains a python implementation of DTW and KNN algorithms along with explanations and a practical application.
 
+* [Digital Signal Processing](https://github.com/spatialaudio/digital-signal-processing-lecture) A collection of notebooks that accompanies a masters course on the topic.
+
 ### Engineering Education
 
 * [Introduction to Chemical Engineering Analysis](http://jckantor.github.io/CBE20255/) by [Jeff Kantor](http://jckantor.github.io/). A collection of IPython notebooks illustrating topics in introductory chemical engineering analysis, including stoichiometry, generation-consumption analysis, mass and energy balances.

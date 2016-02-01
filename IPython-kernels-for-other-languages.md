@@ -15,6 +15,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[SageMath](http://www.sagemath.org/)|Jupyter 4|Any|many|||
 |[pari_jupyter](https://github.com/jdemeyer/pari_jupyter)|Jupyter 4|2.8|Cython|||
 |[IFSharp](https://github.com/fsprojects/IfSharp)|IPython 2.0|F#||[Features](http://nbviewer.ipython.org/github/BayardRock/IfSharp/blob/master/Feature%20Notebook.ipynb)||
+|[Gophernotes](https://github.com/gophergala2016/gophernotes)|Jupyter 4|Go >= 1.4|zeromq 2.2.x|[examples](https://github.com/gophergala2016/gophernotes/tree/master/examples)|[docker image](https://hub.docker.com/r/dwhitena/gophernotes/)|
 |[IGo](https://github.com/takluyver/igo)||Go >= 1.4||||
 |[IScala](https://github.com/mattpap/IScala)||Scala||||
 |[IErlang](https://github.com/robbielynch/ierlang)|IPython 2.3|Erlang|rebar|||

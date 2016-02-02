@@ -64,7 +64,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[IJython](https://github.com/suvarchal/IJython)||Jython 2.5||||
 |[ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT)|Jupyter|C++/python|ROOT >= 6.05|||
 |[Gnuplot Kernel](https://github.com/has2k1/gnuplot_kernel)||Gnuplot||[Example](https://github.com/has2k1/gnuplot_kernel/tree/master/examples)|MetaKernel|
-|[Tcl](https://github.com/ryanpepper/tcl_kernel)|Jupyter|Tcl 8.5||Based on Bash Kernel|
+|[Tcl](https://github.com/ryanpepper/tcl_kernel)|Jupyter|Tcl 8.5|||Based on Bash Kernel|
 
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 

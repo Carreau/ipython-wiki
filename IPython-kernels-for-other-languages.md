@@ -79,12 +79,13 @@ Several of these kernels are available in a PPA for Ubuntu 15.10 (wily)/16.04 (x
 
 The following kernel packages are available (along with their dependencies):
 
- * `ihaskell` (errata as of 2016-01-16: `hlint` integration doesn't work, disable with `:opt no-hlint`)
+ * `ihaskell` (errata as of 2016-01-16: `hlint` integration doesn't work, disable with `:opt no-lint`)
  * `ijulia`
  * `ijavascript`
  * `jp-coffeescript`
  * `irkernel`
  * `iruby`
+ * `gophernotes` (xenial only)
 
 (The repository doesn't contain ipython/jupyter - you'll still need to install it with `pip`)
 

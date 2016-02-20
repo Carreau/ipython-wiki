@@ -1,6 +1,6 @@
 ## IPython/Jupyter kernels:
 
-The Kernel Zero, is of course [IPython](https://ipython.org), which you can get though [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
+The Kernel Zero, is of course [IPython](https://ipython.org), which you can get through [ipykernel](https://pypi.python.org/pypi/ipykernel), and still comes (for now) as a dependency of [jupyter](https://jupyter.org). The IPython kernel can be thought as a reference implementation, here are other available kernels:
 
 |Name| Jupyter/IPython Version | Language(s) Version | 3rd party dependencies | Example Notebooks | Notes |
 |----|-------------------------|---------------------|------------------------|-------------------|-------|

@@ -18,7 +18,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[Gophernotes](https://github.com/gophergala2016/gophernotes)|Jupyter 4|Go >= 1.4|zeromq 2.2.x|[examples](https://github.com/gophergala2016/gophernotes/tree/master/examples)|[docker image](https://hub.docker.com/r/dwhitena/gophernotes/)|
 |[IGo](https://github.com/takluyver/igo)||Go >= 1.4||||
 |[IScala](https://github.com/mattpap/IScala)||Scala||||
-|[Jupyter-scala](https://github.com/alexarchambault/jupyter-scala)|IPython>=3.0|Scala>=2.10||||
+|[Jupyter-scala](https://github.com/alexarchambault/jupyter-scala)|IPython>=3.0|Scala>=2.10||[example](https://github.com/alexarchambault/jupyter-scala/blob/master/examples/tutorials/Macrology.ipynb)||
 |[IErlang](https://github.com/robbielynch/ierlang)|IPython 2.3|Erlang|rebar|||
 |[ITorch](https://github.com/facebook/iTorch)|IPython >= 2.2|Torch 7 (LuaJIT)||||
 |[IElixir](https://github.com/pprzetacznik/IElixir)|Jupyter|Elixir||||

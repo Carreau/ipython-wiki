@@ -113,6 +113,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [An example machine learning notebook](http://nbviewer.jupyter.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects/blob/master/example-data-science-notebook/Example%20Machine%20Learning%20Notebook.ipynb), by [Randal. S. Olson](http://www.randalolson.com/), part of a [collection in Data Analysis and Machine Learning](http://nbviewer.jupyter.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects).
 
+* [Pandas .head() to .tail()](https://github.com/TomAugspurger/PyDataSeattle), an in-depth tutorial on Pandas by [Tom Augspurger](https://github.com/TomAugspurger).
+
 ### Mathematics, Physics, Chemistry, Biology
 
 * A [single-atom laser model](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures/blob/master/Lecture-2B-Single-Atom-Lasing.ipynb). This is one of a complete set of [lectures on quantum mechanics and quantum optics using QuTiP](http://nbviewer.ipython.org/github/jrjohansson/qutip-lectures) by [J.R. Johansson](https://github.com/jrjohansson).

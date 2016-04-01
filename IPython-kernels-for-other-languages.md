@@ -4,6 +4,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 
 |Name| Jupyter/IPython Version | Language(s) Version | 3rd party dependencies | Example Notebooks | Notes |
 |----|-------------------------|---------------------|------------------------|-------------------|-------|
+|[sas_kernel](https://github.com/sassoftware/sas_kernel)|Jupyter 4.0|python >= 3.3|SAS 9.4 or higher|||
 |[IPyKernel](https://github.com/ipython/ipykernel)|Jupyter 4.0|python 2.7, >= 3.3|pyzmq|||
 |[IJulia](https://github.com/JuliaLang/IJulia.jl)||julia >= 0.3||||
 |[IHaskell](https://github.com/gibiansky/IHaskell)||ghc >= 7.6||||

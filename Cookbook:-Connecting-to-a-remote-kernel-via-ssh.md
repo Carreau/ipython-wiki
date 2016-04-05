@@ -4,8 +4,8 @@ This recipe explains how to set up a kernel on a remote machine (server), and in
 
 Start a kernel on machine `server`, using either `ipython kernel` or `ipython qtconsole`:
 
-    [server] $ ipython locate profile
-    /Users/you/.ipython/profile_default
+    [server] $ jupyter --runtime-dir
+    /run/user/1000/jupyter
     [server] $ ipython kernel
     [IPKernelApp] To connect another client to this kernel, use:
     [IPKernelApp] --existing kernel-1234.json
@@ -14,7 +14,7 @@ Which is now listening on localhost by default.
 
 Now we need to get that connection file to `client`:
 
-    [client] $ scp server:/Users/you/.local/share/jupyter/runtime/kernel-1234.json ./
+    [client] $ scp server:/run/user/1000/jupyter/kernel-1234.json ./
 
 (*NOTE:* In previous versions it may be in `/Users/you/.ipython/profile_default/security/kernel-1234.json`.)
 

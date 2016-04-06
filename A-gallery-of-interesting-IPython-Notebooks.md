@@ -325,6 +325,10 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 ### Data visualization and plotting
 
+* [Plotting pitfalls](https://anaconda.org/jbednar/plotting_pitfalls/notebook): common problems when plotting large datasets, and how to avoid them. By James A. Bednar.
+
+* [US Census data](https://anaconda.org/jbednar/census/notebook) and [NYC Taxi data](https://anaconda.org/jbednar/nyc_taxi/notebook) visualized using [datashader](https://github.com/bokeh/datashader).
+
 * A [Notebook](http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/s3_bubble-charts/s3_bubble-charts.ipynb) with an interactive Hans Rosling Gapminder bubble chart from [Plotly](https://plot.ly/api/Python). 
 
 * [Data and visualization integration via web based resources](http://tw.rpi.edu/media/2013/09/25/a48/The_Perfect_Storm_1991.html). Using NetCDF, Matplotlib, IPython Parallel and ffmpeg to generate video animation from time series of gridded data. By Massimo Di Stefano.

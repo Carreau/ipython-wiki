@@ -342,6 +342,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 
 * [Bokeh is an interactive web visualization library for Python](http://nbviewer.ipython.org/github/damianavila/bokeh_overview/blob/master/Bokeh%20Overview.ipynb?create=1) (and other languages). It provides d3-like novel graphics, over large datasets, all without requiring any knowledge of Javascript. It also has a Matplotlib compatibility layer.
 
+* [HoloViews](http://holoviews.org/Tutorials/Showcase.html) lets you construct visualizations very concisely in the notebook.
+
 * [Winner of the 2014 E. Tufte Slope Graphs contest](http://nbviewer.ipython.org/gist/pascal-schetelat/8382651), by [Pascal Schetelat](https://github.com/pascal-schetelat).  The original [contest info on Tufte's site](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003nk).
 
 * [matta, d3.js-based visualizations in the IPython Notebook](http://nbviewer.ipython.org/github/carnby/matta/blob/master/examples/Basic%20Examples.ipynb), by [Eduardo Graells-Garrido](http://carnby.github.io/).

@@ -57,7 +57,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[IBrainfuck](https://github.com/robbielynch/ibrainfuck)||Brainfuck||[Demo](http://nbviewer.jupyter.org/gist/robbielynch/e611442ca2d056f3b78f)|Wrapper|
 |[KDB+/Q Kernel (IKdbQ)](https://github.com/jvictorchen/IKdbQ)|IPython >= 3.1|Q|qzmq, qcrypt|||
 |[ICryptol](https://github.com/GaloisInc/ICryptol)||Cryptol|CVC4|||
-|[C++ (cling)](https://github.com/root-mirror/cling)||||||
+|[cling](https://github.com/root-mirror/cling)|Jupyter 4|C++||[Example](https://github.com/root-mirror/cling/blob/master/tools/Jupyter/kernel/cling.ipynb)||
 |[Xonsh](https://github.com/calysto/xonsh_kernel)||Xonsh||[Example](http://nbviewer.ipython.org/github/Calysto/xonsh_kernel/blob/master/xonsh_kernel.ipynb)|MetaKernel|
 |[Prolog](https://github.com/Calysto/calysto_prolog)||Prolog|||MetaKernel|
 |[cl-jupyter](https://github.com/fredokun/cl-jupyter)|Jupyter|Common Lisp|Quicklisp|[About](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)||

@@ -72,7 +72,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[J](https://github.com/martin-saurer/jkernel)|Jupyter|J 804||||
 |[Jython](https://github.com/fiber-space/jupyter-kernel-jsr223)|Jupyter>=4.0|Jython>=2.7.0|Java>=7||Java based JSR223 compliant||
 |[Clojure](https://github.com/fiber-space/jupyter-kernel-jsr223)|Jupyter>=4.0|Clojure 1.8|[clojure-jrs223](https://github.com/ato/clojure-jsr223), Java>=7||Java based JSR223 compliant||
-
+|[C](https://github.com/brendan-rius/jupyter-c-kernel)|Jupyter|C|`gcc`||||
 Many kernels are available for installation on [PyPI](https://pypi.python.org/pypi?:action=browse&c=586).
 
 ### Repository

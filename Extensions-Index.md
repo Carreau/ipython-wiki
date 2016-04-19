@@ -340,6 +340,18 @@ To install:
     pip install iorient
 ```
 
+## PlantUML integration
+
+Generate inline, [PlantUML](http://plantuml.com/)-based SVG UML diagrams. 
+
+* [Homepage](https://github.com/jbn/IPlantUML)
+
+Installation:
+
+```
+pip install iplantuml
+```
+
 ##ipy_table
 
 Create richly formatted data tables in IPython Notebooks.

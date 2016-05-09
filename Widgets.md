@@ -17,8 +17,9 @@ A few interesting widgets or experiments with widgets are listed here.
 * [Turtle widget](https://github.com/takluyver/mobilechelonian/tree/require-widgets)
 * [ipython-flightwidgets](https://github.com/jdfreder/ipython-flightwidgets), widgets that can be used with flight control notebooks, simulators, or other flight related applications.
 * [gamepad](https://github.com/jovyan/gamepad), support for the browser API to gamepads and joysticks (*This was recently integrated in the core ipywidgets library*).
-* [static, persistent widgets](https://gist.github.com/danielballan/63c98b8df34a418774f2) an experiment with static, persistent widgets backed by a sqlite db. Save states explicitly, and then scroll the slider to restore history
-* [NGLView](https://github.com/arose/nglview) IPython widget to interactively view molecular structures and trajectories
+* [static, persistent widgets](https://gist.github.com/danielballan/63c98b8df34a418774f2) an experiment with static, persistent widgets backed by a sqlite db. Save states explicitly, and then scroll the slider to restore history.
+* [NGLView](https://github.com/arose/nglview) IPython widget to interactively view molecular structures and trajectories.
+
 ## Projects using widgets
 
 * [flotilla](https://github.com/YeoLab/flotilla) Biological data analysis package using widgets

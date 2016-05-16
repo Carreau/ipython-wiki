@@ -318,6 +318,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [fecon235 for Financial Economics](https://github.com/rsvp/fecon235) series of notebooks which examines time-series data for economics and finance. Easy API to freely access data from the Federal Reserve, SEC, CFTC, stock and futures exchanges. Thus research from older notebooks can be replicated, and updated using the most current data. For example, this notebook forecasts likely Fed policy for setting the [Fed Funds rate](https://git.io/fedfunds), but market sentiment across major asset classes is observable from the [CFTC Commitment of Traders Report](https://git.io/cotr). Major economics indicators are renormalized: for example, various measures of [inflation](https://git.io/infl), optionally with the forward-looking break-even rates derived from U.S. Treasury bonds. Other notebooks examine international markets: especially, gold and foreign exchange. 
 
+* [Fixed Income: A Structured Bond- Interactive scenarios ](http://nbviewer.jupyter.org/github/MatsGustavsson/finance-jupyter/blob/2b5c1458b0e9b9c299fe25590566814e92287a1c/SequentialStructure.ipynb), Sequential repayment of a bond using interactive widgets and Python in Jupyter, by [Mats Gustavsson](https://github.com/MatsGustavsson).
+
 ### Earth science and geo-spatial data
 * [Exploring seafloor habitats: geographic analysis using IPython Notebook with GRASS & R](http://nbviewer.ipython.org/gist/7598354). This embeds a slideshow and a Web Spinning Globe (Cesium) in the notebook.  By Massimo Di Stefano.
 

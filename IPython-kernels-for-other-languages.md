@@ -69,7 +69,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT)|Jupyter|C++/python|ROOT >= 6.05|||
 |[Gnuplot Kernel](https://github.com/has2k1/gnuplot_kernel)||Gnuplot||[Example](https://github.com/has2k1/gnuplot_kernel/tree/master/examples)|MetaKernel|
 |[Tcl](https://github.com/ryanpepper/tcl_kernel)|Jupyter|Tcl 8.5|||Based on Bash Kernel|
-|[J](https://github.com/martin-saurer/jkernel)|Jupyter|J 804||||
+|[J](https://github.com/martin-saurer/jkernel)|Jupyter|J 804||[Examples](https://github.com/martin-saurer/jkernel/tree/master/examples)||
 |[Jython](https://github.com/fiber-space/jupyter-kernel-jsr223)|Jupyter>=4.0|Jython>=2.7.0|Java>=7||Java based JSR223 compliant||
 |[Clojure](https://github.com/fiber-space/jupyter-kernel-jsr223)|Jupyter>=4.0|Clojure 1.8|[clojure-jrs223](https://github.com/ato/clojure-jsr223), Java>=7||Java based JSR223 compliant||
 |[C](https://github.com/brendan-rius/jupyter-c-kernel)|Jupyter|C|`gcc`||||

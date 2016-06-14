@@ -25,7 +25,7 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
   * [Earth science and geo-spatial data](#earth-science-and-geo-spatial-data)
   * [Data visualization and plotting](#data-visualization-and-plotting)
   * [Mathematics](#mathematics)
-  * [Signal and Sound Processing](#signal-and-sound-processing)
+  * [Signal, Sound and Image Processing](#signal-and-sound-processing)
   * [Natural Language Processing](#natural-language-processing)
   * [Pandas for data analysis](#pandas-for-data-analysis)
 1. [General Python Programming](#general-python-programming)
@@ -381,6 +381,8 @@ prettyplotlib, Stack Overflow, and seaborn](http://nbviewer.ipython.org/gist/msu
 
 * [A Gallery of SciPy's Window Functions for quick visual inspection and comparison] (http://nbviewer.ipython.org/urls/gist.githubusercontent.com/jaidevd/b7d865f7f4b237ab5181/raw/30bc8f998bf8f924b56b32ce10acce125656ed7c/scipy_window_gallery.ipynb)
  by [Jaidev Deshpande](http://twitter.com/jaidevd)
+
+* [Poisson Image Editing | Seamless Cloning] (http://nbviewer.jupyter.org/github/riddhishb/ipython-notebooks/blob/master/Poisson%20Editing/Seamless_Cloning.ipynb) by [Dhruv Ilesh Shah](https://github.com/PrieureDeSion) is a notebook that achieves Seamless Image Cloning by employing the Poisson Solver in the iterative form.
 
 ### Natural Language Processing
 

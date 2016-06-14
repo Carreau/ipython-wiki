@@ -141,6 +141,8 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * The [notebooks](https://github.com/tiagoantao/bioinf-python/blob/master/notebooks/Welcome.ipynb) from the Book [Bioinformatics with Python Cookbook](http://www.amazon.com/Bioinformatics-Python-Cookbook-Tiago-Antao/dp/1782175113), covering several fields like Next-Generation Sequencing, Population Genetics, Phylogenetics, Genomics, Proteomics and Geo-referenced information.
 
+* [Learning Population Genetics in an RNA world](https://github.com/gocarli/RNA-Popgen-Notebook) is interactive notebook that explains basic population genetics tools and techniques by building an in silico evolutionary model of RNA molecules.
+
 ### Earth Science and Geo-Spatial data
 
 * [EarthPy](http://earthpy.org), a collection of IPython notebooks with a focus on Earth Sciences, from [whale tracks](http://earthpy.org/analyzing-whale-tracks.html) to the [flow of the Amazon](http://earthpy.org/earthpy-basemap-amazon.html).

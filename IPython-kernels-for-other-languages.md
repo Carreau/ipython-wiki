@@ -63,7 +63,7 @@ The Kernel Zero, is of course [IPython](https://ipython.org), which you can get 
 |[cl-jupyter](https://github.com/fredokun/cl-jupyter)|Jupyter|Common Lisp|Quicklisp|[About](https://github.com/fredokun/cl-jupyter/blob/master/about-cl-jupyter.ipynb)||
 |[Maxima-Jupyter](https://github.com/robert-dodier/maxima-jupyter)|Jupyter|Maxima|Quicklisp|||
 |[Calysto LC3](https://github.com/Calysto/calysto_lc3)|||||Assembly Language for the [Little Computer 3](https://en.wikipedia.org/wiki/LC-3)|
-|[Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)||Java >= 9||||
+|[Java 9 Kernel](https://github.com/Bachmann1234/java9_kernel)||Java >= 9|||[Broken :-(]|
 |[Yacas](https://github.com/grzegorzmazur/yacas_kernel)||YACAS||||
 |[IJython](https://github.com/suvarchal/IJython)||Jython 2.5||||
 |[ROOT](https://github.com/root-mirror/root/tree/master/bindings/pyroot/JupyROOT)|Jupyter|C++/python|ROOT >= 6.05|||

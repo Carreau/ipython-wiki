@@ -111,6 +111,9 @@ Note that [Matt Davis](https://github.com/jiffyclub) has conveniently written a 
 
 * [Machine learning in Python](http://nbviewer.ipython.org/github/jdwittenauer/ipython-notebooks/blob/master/ML-Exercise1.ipynb), a series based on Andrew Ng's Coursera class on machine learning.  Part of a [larger collection of data science notebooks](https://github.com/jdwittenauer/ipython-notebooks) by [John Wittenauer](https://github.com/jdwittenauer).
 
+* [Adaboost for digit classification](https://nbviewer.jupyter.org/github/riddhishb/ipython-notebooks/blob/master/Adaboost/Adaboost_Final%20note.ipynb
+), by [Shashwat Shukla](https://github.com/ShashShukla). A complete implementation of Adaboost in Python, with code for digit recognition. 
+
 * [An example machine learning notebook](http://nbviewer.jupyter.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects/blob/master/example-data-science-notebook/Example%20Machine%20Learning%20Notebook.ipynb), by [Randal. S. Olson](http://www.randalolson.com/), part of a [collection in Data Analysis and Machine Learning](http://nbviewer.jupyter.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects).
 
 * [Pandas .head() to .tail()](https://github.com/TomAugspurger/PyDataSeattle), an in-depth tutorial on Pandas by [Tom Augspurger](https://github.com/TomAugspurger).

@@ -82,8 +82,8 @@ Many kernels are available for installation on [PyPI](https://pypi.python.org/py
 Several of these kernels are available in a PPA for Ubuntu 15.10 (wily)/16.04 (xenial). Add it with:
 
     sudo add-apt-repository ppa:chronitis/jupyter
-    sudo apt update
-    sudo apt install <kernelname>
+    sudo apt-get update
+    sudo apt-get install <kernelname>
 
 The following kernel packages are available (along with their dependencies):
 

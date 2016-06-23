@@ -222,6 +222,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [A visual guide to the Python Spark API for distributed computing](http://nbviewer.ipython.org/github/jkthompson/pyspark-pictures/blob/master/pyspark-pictures.ipynb) by Jeff Thompson
 
+* [CodeCombat gridmancer solver](http://nbviewer.jupyter.org/github/Arn-O/py-gridmancer/blob/master/gridmancer.ipynb) by [Arn-O](https://github.com/Arn-O). This notebook explains how to improve a recursive tree search with an heuristic function and to find the minimum solution to the gridmancer.
+
 ### Social data
 
 * [Survival Analysis](http://nbviewer.ipython.org/github/CamDavidsonPilon/lifelines/blob/master/docs/Survival%20Analysis%20intro.ipynb), an illustration of the [lifelines library](https://github.com/CamDavidsonPilon/lifelines), by [Cam Davidson Pilon](https://github.com/CamDavidsonPilon).

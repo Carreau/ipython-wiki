@@ -212,7 +212,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [Comparing different approaches to evolutionary simulations](http://nbviewer.ipython.org/url/www.slideviper.oquanta.info/test/simulation%20frameworks.ipynb). Also available [here](http://slideviewer.herokuapp.com/urls/github.com/yoavram/ipython-notebooks/raw/master/simulation%20frameworks.ipynb) to better visualization. The notebook was converted to a HTML presentation using an old nbconvert with the first developing implementation of `reveal` converter. By Yoav Ram.
 
-* [The Traveling Salesperson Problem](http://nbviewer.ipython.org/url/norvig.com/ipython/TSPv3.ipynb) by [Peter Norvig](http://norvig.com).
+* [The Traveling Salesperson Problem](http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb) by [Peter Norvig](http://norvig.com).
 
 * [A git tutorial targeted at scientists](http://nbviewer.ipython.org/github/fperez/reprosw/blob/master/Version%20Control.ipynb) by Fernando Perez.
 

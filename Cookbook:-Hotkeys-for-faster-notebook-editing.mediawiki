@@ -1,5 +1,5 @@
 
-When working with the HMTL notebook, it is hard to quickly navigate when editing a cell, as Page up/down Pos1 and End keys
+When working with the HTML notebook, it is hard to quickly navigate when editing a cell, as Page up/down Pos1 and End keys
 only work inside the current cell. Jumping between cells requires the mouse. This can be especially annoying, because outside of code cells (no cell selected or a markdown cell), the keys work as is usual in the
 browser.
 

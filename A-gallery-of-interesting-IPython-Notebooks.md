@@ -202,6 +202,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/github/twiecki/CythonGSL/blob/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
+* [Introduction to numerical computing with numpy](http://nbviewer.jupyter.org/github/phelps-sg/ipynb-numerical/blob/master/numerical-slides.ipynb) by [Steve Phelps](http://sphelps.net).
+
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/gist/3914904).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/gist/3407544).
 
 * [Numpy performance tricks](http://nbviewer.ipython.org/gist/4645217), and [blog post](http://cyrille.rossant.net/numpy-performance-tricks/), by [Cyrille Rossant](http://cyrille.rossant.net/).

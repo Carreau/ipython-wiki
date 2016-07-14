@@ -204,7 +204,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [CythonGSL: a Cython interface for the GNU Scientific Library (GSL)](http://nbviewer.ipython.org/github/twiecki/CythonGSL/blob/master/examples/cython_gsl_ipythonnb.ipynb) ([Project repo](https://github.com/twiecki/CythonGSL), by Thomas Wiecki.
 
-* [Introduction to numerical computing with numpy](http://nbviewer.jupyter.org/github/phelps-sg/ipynb-numerical/blob/master/numerical-slides.ipynb) by [Steve Phelps](http://sphelps.net).
+* [Introduction to numerical computing with numpy](http://nbviewer.jupyter.org/github/phelps-sg/python-bigdata/blob/master/src/main/ipynb/numerical-slides.ipynb) by [Steve Phelps](http://sphelps.net).
 
 * [Using Numba to speed up numerical codes](http://nbviewer.ipython.org/gist/3914904).  And another Numba example: [self-organizing maps](http://nbviewer.ipython.org/gist/3407544).
 
@@ -226,7 +226,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [A visual guide to the Python Spark API for distributed computing](http://nbviewer.ipython.org/github/jkthompson/pyspark-pictures/blob/master/pyspark-pictures.ipynb) by Jeff Thompson
 
-* [A tutorial on Map-Reduce programming with Apache Spark and Python](http://nbviewer.jupyter.org/github/phelps-sg/ipynb-mapreduce/blob/master/spark-mapreduce.ipynb) by [Steve Phelps](http://sphelps.net).
+* [A tutorial on Map-Reduce programming with Apache Spark and Python](http://nbviewer.jupyter.org/github/phelps-sg/python-bigdata/blob/master/src/main/ipynb/spark-mapreduce.ipynb) by [Steve Phelps](http://sphelps.net).
 
 * [CodeCombat gridmancer solver](http://nbviewer.jupyter.org/github/Arn-O/py-gridmancer/blob/master/gridmancer.ipynb) by [Arn-O](https://github.com/Arn-O). This notebook explains how to improve a recursive tree search with an heuristic function and to find the minimum solution to the gridmancer.
 
@@ -426,7 +426,7 @@ Note that in the 'collections' section above there are also pandas-related links
 
 * [Learning to code with Python](http://nbviewer.ipython.org/urls/bitbucket.org/amjoconn/watpy-learning-to-code-with-python/raw/3441274a54c7ff6ff3e37285aafcbbd8cb4774f0/notebook/Learn%20to%20Code%20with%20Python.ipynb), part of an [introduction to Python](https://bitbucket.org/amjoconn/watpy-learning-to-code-with-python/src) from the [Waterloo Python users group](http://watpy.ca/blog/post/learn-code-python-review-feb-2013).
 
-* [Introduction to Python for Data Scientists](http://nbviewer.jupyter.org/github/phelps-sg/ipynb-python/blob/master/intro-python.ipynb) by [Steve Phelps](http://sphelps.net).
+* [Introduction to Python for Data Scientists](http://nbviewer.jupyter.org/github/phelps-sg/python-bigdata/blob/master/src/main/ipynb/intro-python.ipynb) by [Steve Phelps](http://sphelps.net) (part of a larger collection on [Data Science and Big Data](https://github.com/phelps-sg/python-bigdata)).
 
 * [Python Descriptors Demystified](http://nbviewer.ipython.org/gist/ChrisBeaumont/5758381/descriptor_writeup.ipynb), an in-depth discussion of the descriptor protocol in Python, by [Chris Beaumont](http://chrisbeaumont.org).
 

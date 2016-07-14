@@ -222,6 +222,8 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [A visual guide to the Python Spark API for distributed computing](http://nbviewer.ipython.org/github/jkthompson/pyspark-pictures/blob/master/pyspark-pictures.ipynb) by Jeff Thompson
 
+* [A tutorial on Map-Reduce programming with Apache Spark and Python](http://nbviewer.jupyter.org/github/phelps-sg/ipynb-mapreduce/blob/master/spark-mapreduce.ipynb) by [Steve Phelps](http://sphelps.net).
+
 * [CodeCombat gridmancer solver](http://nbviewer.jupyter.org/github/Arn-O/py-gridmancer/blob/master/gridmancer.ipynb) by [Arn-O](https://github.com/Arn-O). This notebook explains how to improve a recursive tree search with an heuristic function and to find the minimum solution to the gridmancer.
 
 ### Social data

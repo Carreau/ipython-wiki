@@ -218,7 +218,7 @@ Joe McCarthy](http://interrelativity.com/joe).
 
 * [The Traveling Salesperson Problem](http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb) by [Peter Norvig](http://norvig.com).
 
-* [A git tutorial targeted at scientists](http://nbviewer.ipython.org/github/fperez/reprosw/blob/master/Version%20Control.ipynb) by Fernando Perez.
+* [A git tutorial targeted at scientists](https://nbviewer.org/github/fperez/reprosw/blob/master/Version%20Control.ipynb) by Fernando Perez.
 
 * [Running MATLAB in an IPython Notebook](http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/MATLAB_Wrapper_Examples.ipynb), using [pymatbridge](https://pypi.python.org/pypi/pymatbridge).
 
